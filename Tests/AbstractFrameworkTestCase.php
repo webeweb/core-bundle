@@ -27,7 +27,7 @@ use Twig_Environment;
 use Twig_LoaderInterface;
 
 /**
- * Abstract Bootstrap framework test case.
+ * Abstract Core framework test case.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests
