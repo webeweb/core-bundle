@@ -1,7 +1,7 @@
 core-bundle
 ================
 
-[![Build Status](https://travis-ci.com/webeweb/core-bundle.svg?branch=master)](https://travis-ci.org/webeweb/core-bundle)
+[![Build Status](https://travis-ci.com/webeweb/core-bundle.svg?branch=master)](https://travis-ci.com/webeweb/core-bundle)
 [![Coverage Status](https://coveralls.io/repos/github/webeweb/core-bundle/badge.svg?branch=master)](https://coveralls.io/github/webeweb/core-bundle?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/webeweb/core-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/webeweb/core-bundle/?branch=master)
 [![Latest Stable Version](https://poser.pugx.org/webeweb/core-bundle/v/stable)](https://packagist.org/packages/webeweb/core-bundle)
