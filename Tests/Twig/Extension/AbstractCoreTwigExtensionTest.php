@@ -30,6 +30,8 @@ final class AbstractCoreTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testConstructor() {
 
+        new TestTwigExtension();
+
         $this->assertEquals("&nbsp;", TestTwigExtension::DEFAULT_CONTENT);
         $this->assertEquals("javascript:void(0);", TestTwigExtension::DEFAULT_HREF);
     }
