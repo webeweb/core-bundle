@@ -19,9 +19,8 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Twig\Extension\TestTwigExtension;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Twig\Extension
- * @final
  */
-final class AbstractCoreTwigExtensionTest extends AbstractFrameworkTestCase {
+class AbstractCoreTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
