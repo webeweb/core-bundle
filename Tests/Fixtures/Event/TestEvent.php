@@ -18,9 +18,8 @@ use WBW\Bundle\CoreBundle\Event\AbstractEvent;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Event
- * @final
  */
-final class TestEvent extends AbstractEvent {
+class TestEvent extends AbstractEvent {
 
     /**
      * Constructor.

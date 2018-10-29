@@ -19,9 +19,8 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Event\TestEvent;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Event
- * @final
  */
-final class AbstractEventTest extends AbstractFrameworkTestCase {
+class AbstractEventTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests __construct() method.
