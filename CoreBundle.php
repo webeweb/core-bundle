@@ -19,6 +19,34 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle
  */
-class BootstrapBundle extends Bundle {
+class CoreBundle extends Bundle {
+
+    /**
+     * Core "Danger".
+     *
+     * @var string
+     */
+    const CORE_DANGER = "danger";
+
+    /**
+     * Core "Info".
+     *
+     * @var string
+     */
+    const CORE_INFO = "info";
+
+    /**
+     * Core "Success".
+     *
+     * @var string
+     */
+    const CORE_SUCCESS = "success";
+
+    /**
+     * Core "Warning".
+     *
+     * @var string
+     */
+    const CORE_WARNING = "warning";
 
 }
