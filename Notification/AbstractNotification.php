@@ -62,7 +62,7 @@ abstract class AbstractNotification implements NotificationInterface {
     /**
      * Set the content.
      *
-     * @param type $content The content.
+     * @param string $content The content.
      * @return NotificcationInterface Returns this notification.
      */
     protected function setContent($content) {
