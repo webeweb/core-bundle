@@ -21,9 +21,8 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Model\Navigation
- * @final
  */
-final class NavigationNodeTest extends AbstractFrameworkTestCase {
+class NavigationNodeTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
