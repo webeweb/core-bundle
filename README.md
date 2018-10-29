@@ -15,6 +15,10 @@ Core bundle for Symfony 2 and more.
 > done without prior notice to consumers of this package. Of course this code
 > will become stable at a certain point, but for now, use at your own risk.
 
+Includes:
+
+- [jQuery 3.2.1](http://jquery.com/)
+
 ---
 
 ## Compatibility
