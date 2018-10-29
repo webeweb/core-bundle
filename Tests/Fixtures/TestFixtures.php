@@ -21,9 +21,8 @@ use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures
- * @final
  */
-final class TestFixtures {
+class TestFixtures {
 
     /**
      * Get a navigation tree.
