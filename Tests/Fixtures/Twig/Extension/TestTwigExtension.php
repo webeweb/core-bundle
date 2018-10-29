@@ -18,9 +18,8 @@ use WBW\Bundle\CoreBundle\Twig\Extension\AbstractCoreTwigExtension;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Twi\Extension
- * @final
  */
-final class TestTwigExtension extends AbstractCoreTwigExtension {
+class TestTwigExtension extends AbstractCoreTwigExtension {
 
     /**
      * Constructor.
