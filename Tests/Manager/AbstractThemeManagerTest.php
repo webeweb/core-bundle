@@ -76,4 +76,24 @@ class AbstractThemeManagerTest extends AbstractFrameworkTestCase {
         $this->assertSame($provider, $obj->getProvider(ThemeProviderInterface::class));
     }
 
+    /**
+     * Tests the setProvider() method.
+     *
+     * @return void
+     */
+    public function testSetProviderWithOverwrite() {
+
+        // Set a Theme provider mock.
+        $provider1 = $this->getMockBuilder(ThemeProviderInterface::class)->getMock();
+        $provider2 = $this->getMockBuilder(ThemeProviderInterface::class)->getMock();
+
+        $obj = new TestThemeManager($this->twigEnvironment);
+
+        $obj->setProvider(ThemeProviderInterface::class, $provider1);
+        $this->assertSame($provider1, $obj->getProvider(ThemeProviderInterface::class));
+
+        $obj->setProvider(ThemeProviderInterface::class, $provider2);
+        $this->assertSame($provider2, $obj->getProvider(ThemeProviderInterface::class));
+    }
+
 }
