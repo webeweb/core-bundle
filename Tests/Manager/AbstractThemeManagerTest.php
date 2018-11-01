@@ -1,0 +1,56 @@
+<?php
+
+/**
+ * This file is part of the core-bundle package.
+ *
+ * (c) 2018 WEBEWEB
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace WBW\Bundle\CoreBundle\Tests\Manager;
+
+use WBW\Bundle\CoreBundle\Provider\ThemeProviderInterface;
+use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\TestThemeManager;
+
+/**
+ * Abstract theme manager test.
+ *
+ * @author webeweb <https://github.com/webeweb/>
+ * @package WBW\Bundle\CoreBundle\Tests\Manager
+ */
+class AbstractThemeManagerTest extends AbstractFrameworkTestCase {
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $obj = new TestThemeManager($this->twigEnvironment);
+
+        $this->assertNull($obj->getProvider(ThemeProviderInterface::class));
+        $this->assertCount(0, $obj->getProviders());
+        $this->assertSame($this->twigEnvironment, $obj->getTwig());
+    }
+
+    /**
+     * Tests the setProvider() method.
+     *
+     * @return void
+     */
+    public function testSetProvider() {
+
+        // Set a Theme provider mock.
+        $provider = $this->getMockBuilder(ThemeProviderInterface::class)->getMock();
+
+        $obj = new TestThemeManager($this->twigEnvironment);
+
+        $obj->setProvider(ThemeProviderInterface::class, $provider);
+        $this->assertSame($provider, $obj->getProvider(ThemeProviderInterface::class));
+    }
+
+}
