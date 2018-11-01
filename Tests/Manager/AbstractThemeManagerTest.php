@@ -61,6 +61,22 @@ class AbstractThemeManagerTest extends AbstractFrameworkTestCase {
     }
 
     /**
+     * Tests the addGlobal() method.
+     *
+     * @return void
+     */
+    public function testAddGlobalWithNull() {
+
+        $obj = new TestThemeManager($this->twigEnvironment);
+
+        $obj->addGlobal();
+
+        $res = $this->twigEnvironment->getGlobals();
+
+        $this->assertCount(0, $res);
+    }
+
+    /**
      * Tests the setProvider() method.
      *
      * @return void
