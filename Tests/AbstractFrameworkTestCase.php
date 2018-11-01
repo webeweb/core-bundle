@@ -96,7 +96,7 @@ abstract class AbstractFrameworkTestCase extends TestCase {
      *
      * @var Twig_Environment
      */
-    protected $twigEnvironnement;
+    protected $twigEnvironment;
 
     /**
      * Twig globals.
