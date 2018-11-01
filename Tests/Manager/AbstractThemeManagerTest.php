@@ -38,6 +38,29 @@ class AbstractThemeManagerTest extends AbstractFrameworkTestCase {
     }
 
     /**
+     * Tests the addGlobal() method.
+     *
+     * @return void
+     */
+    public function testAddGlobal() {
+
+        // Set a Theme provider mock.
+        $provider = $this->getMockBuilder(ThemeProviderInterface::class)->getMock();
+
+        $obj = new TestThemeManager($this->twigEnvironment);
+        $obj->setProvider(ThemeProviderInterface::class, $provider);
+
+        $obj->addGlobal();
+
+        $res = $this->twigEnvironment->getGlobals();
+
+        $this->assertCount(1, $res);
+
+        $this->assertArrayHasKey("ThemeProvider", $res);
+        $this->assertInstanceOf(ThemeProviderInterface::class, $res["ThemeProvider"]);
+    }
+
+    /**
      * Tests the setProvider() method.
      *
      * @return void
