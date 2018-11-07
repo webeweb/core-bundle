@@ -1,0 +1,74 @@
+<?php
+
+/**
+ * This file is part of the core-bundle package.
+ *
+ * (c) 2018 WEBEWEB
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Controller;
+
+use WBW\Bundle\CoreBundle\Controller\AbstractController;
+use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
+
+/**
+ * Test controller.
+ *
+ * @author webeweb <https://github.com/webeweb/>
+ * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Controller
+ */
+class TestController extends AbstractController {
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getEventDispatcher() {
+        return parent::getEventDispatcher();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getLogger() {
+        return parent::getLogger();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getRouter() {
+        return parent::getRouter();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getSession() {
+        return parent::getSession();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getTranslator() {
+        return parent::getTranslator();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function hasRolesOrRedirect(array $roles, $or, $redirect) {
+        return parent::hasRolesOrRedirect($roles, $or, $redirect);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function notify($eventName, NotificationInterface $notification) {
+        return parent::notify($eventName, $notification);
+    }
+
+}
