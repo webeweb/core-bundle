@@ -16,6 +16,7 @@ use PHPUnit\Framework\TestCase;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
+use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\Routing\RouterInterface;
@@ -41,6 +42,13 @@ abstract class AbstractFrameworkTestCase extends TestCase {
      * @var ContainerBuilder
      */
     protected $containerBuilder;
+
+    /**
+     * Event dispatcher.
+     *
+     * @var EventDispatcherInterface
+     */
+    protected $eventDispatcher;
 
     /**
      * Kernel.
@@ -131,6 +139,9 @@ abstract class AbstractFrameworkTestCase extends TestCase {
      */
     protected function setUp() {
 
+        // Set an Event dispatcher mock.
+        $this->eventDispatcher = $this->getMockBuilder(EventDispatcherInterface::class)->getMock();
+
         // Set a Kernel mock.
         $this->kernel = $this->getMockBuilder(KernelInterface::class)->getMock();
 
@@ -179,7 +190,9 @@ abstract class AbstractFrameworkTestCase extends TestCase {
 
         // We set a container builder with only the necessary.
         $this->containerBuilder = new ContainerBuilder($parameterBag);
+        $this->containerBuilder->set("event_dispatcher", $this->eventDispatcher);
         $this->containerBuilder->set("kernel", $this->kernel);
+        $this->containerBuilder->set("logger", $this->logger);
         $this->containerBuilder->set("router", $this->router);
         $this->containerBuilder->set("session", $this->session);
         $this->containerBuilder->set("security.token_storage", $this->tokenStorage);
