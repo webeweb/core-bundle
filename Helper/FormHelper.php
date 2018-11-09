@@ -26,7 +26,7 @@ class FormHelper {
     /**
      * On post handle request with collection.
      *
-     * @param Collection $oldCollection The old colection.
+     * @param Collection $oldCollection The old collection.
      * @param Collection $newCollection The new collection.
      * @param ObjectManager $manager The entities manager.
      * @return void
