@@ -15,12 +15,12 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Twig\Extension\TestTwigExtension;
 
 /**
- * Abstract Core Twig extension test.
+ * Abstract Twig extension test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Twig\Extension
  */
-class AbstractCoreTwigExtensionTest extends AbstractFrameworkTestCase {
+class AbstractTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the __construct() method.

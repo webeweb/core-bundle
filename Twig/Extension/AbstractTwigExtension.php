@@ -16,13 +16,13 @@ use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 use WBW\Library\Core\Argument\StringHelper;
 
 /**
- * Abstract Core Twig extension.
+ * Abstract Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Twig\Extension
  * @abstract
  */
-abstract class AbstractCoreTwigExtension extends Twig_Extension {
+abstract class AbstractTwigExtension extends Twig_Extension {
 
     /**
      * Default content.

@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Twig\Extension;
 
-use WBW\Bundle\CoreBundle\Twig\Extension\AbstractCoreTwigExtension;
+use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
 
 /**
  * Test Twig extension.
@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\AbstractCoreTwigExtension;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Twi\Extension
  */
-class TestTwigExtension extends AbstractCoreTwigExtension {
+class TestTwigExtension extends AbstractTwigExtension {
 
     /**
      * Constructor.
