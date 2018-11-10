@@ -61,7 +61,7 @@ abstract class AbstractTwigExtension extends Twig_Extension {
      * @param string $element The object.
      * @param string $content The content.
      * @param array $attrs The attributes.
-     * @return string Returns the Bootstrap HTML element.
+     * @return string Returns the HTML element.
      */
     public static function coreHTMLElement($element, $content, array $attrs = []) {
 
