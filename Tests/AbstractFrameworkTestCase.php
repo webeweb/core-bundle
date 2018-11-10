@@ -26,6 +26,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Translation\TranslatorInterface;
 use Twig_Environment;
 use Twig_LoaderInterface;
+use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 
 /**
  * Abstract Core framework test case.
@@ -56,6 +57,13 @@ abstract class AbstractFrameworkTestCase extends TestCase {
      * @var KernelInterface
      */
     protected $kernel;
+
+    /**
+     * Kernel event listener.
+     *
+     * @var KernelEventListener
+     */
+    protected $kernelEventListener;
 
     /**
      * Logger.
@@ -145,6 +153,9 @@ abstract class AbstractFrameworkTestCase extends TestCase {
         // Set a Kernel mock.
         $this->kernel = $this->getMockBuilder(KernelInterface::class)->getMock();
 
+        // Set a Kernel event listener mock.
+        $this->kernelEventListener = $this->getMockBuilder(KernelEventListener::class)->disableOriginalConstructor()->getMock();
+
         // Set a Logger mock.
         $this->logger = $this->getMockBuilder(LoggerInterface::class)->getMock();
 
@@ -192,6 +203,7 @@ abstract class AbstractFrameworkTestCase extends TestCase {
         $this->containerBuilder = new ContainerBuilder($parameterBag);
         $this->containerBuilder->set("event_dispatcher", $this->eventDispatcher);
         $this->containerBuilder->set("kernel", $this->kernel);
+        $this->containerBuilder->set(KernelEventListener::SERVICE_NAME, $this->kernelEventListener);
         $this->containerBuilder->set("logger", $this->logger);
         $this->containerBuilder->set("router", $this->router);
         $this->containerBuilder->set("session", $this->session);
