@@ -11,13 +11,16 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Controller;
 
+use Exception;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\RouterInterface;
+use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Translation\TranslatorInterface;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
+use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
 use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Controller\TestController;
@@ -29,6 +32,26 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Controller\TestController;
  * @package WBW\Bundle\CoreBundle\Tests\Controller
  */
 class AbstractControllerTest extends AbstractFrameworkTestCase {
+
+    /**
+     * Kernel event listener.
+     *
+     * @var KernelEventListener
+     */
+    private $kernelEventListener;
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function setUp() {
+        parent::setUp();
+
+        // Set a Kernel event listener mock.
+        $this->kernelEventListener = $this->getMockBuilder(KernelEventListener::class)->disableOriginalConstructor()->getMock();
+
+        // Set the COntainer builder mock.
+        $this->containerBuilder->set(KernelEventListener::SERVICE_NAME, $this->kernelEventListener);
+    }
 
     /**
      * Tests the getEventDispatcher() method.
@@ -118,6 +141,47 @@ class AbstractControllerTest extends AbstractFrameworkTestCase {
         $res = $obj->getTranslator();
         $this->assertInstanceOf(TranslatorInterface::class, $res);
         $this->assertSame($this->translator, $res);
+    }
+
+    /**
+     * Tests the hasRoleOrRedirect() method.
+     *
+     * @return void
+     */
+    public function testHasRoleOrRedirect() {
+
+        // Set the User mock.
+        $this->user = $this->getMockBuilder(UserInterface::class)->getMock();
+        $this->user->expects($this->any())->method("getRoles")->willReturn(["ROLE_GITHUB"]);
+
+        // Set the Kernel event listener mock.
+        $this->kernelEventListener->expects($this->any())->method("getUser")->willReturn($this->user);
+
+        $obj = new TestController();
+        $obj->setContainer($this->containerBuilder);
+
+        $res = $obj->hasRolesOrRedirect(["ROLE_GITHUB"], false, "redirect");
+        $this->assertTrue($res);
+    }
+
+    /**
+     * Tests the hasRoleOrRedirect() method.
+     *
+     * @return void
+     */
+    public function testHasRoleOrRedirectWithBadUserRoleException() {
+
+        $obj = new TestController();
+        $obj->setContainer($this->containerBuilder);
+
+        try {
+
+            $obj->hasRolesOrRedirect(["ROLE_GITHUB"], false, "redirect");
+        } catch (Exception $ex) {
+
+            $this->assertInstanceOf(BadUserRoleException::class, $ex);
+            $this->assertEquals("User \"anonymous\" is not allowed to access to \"\" with roles [ROLE_GITHUB]", $ex->getMessage());
+        }
     }
 
     /**
