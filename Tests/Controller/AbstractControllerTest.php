@@ -17,6 +17,7 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Translation\TranslatorInterface;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
+use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Controller\TestController;
@@ -42,6 +43,21 @@ class AbstractControllerTest extends AbstractFrameworkTestCase {
         $res = $obj->getEventDispatcher();
         $this->assertInstanceOf(EventDispatcherInterface::class, $res);
         $this->assertSame($this->eventDispatcher, $res);
+    }
+
+    /**
+     * Tests the getKernelEventListener() method.
+     *
+     * @return void
+     */
+    public function testGetKernelEventListener() {
+
+        $obj = new TestController();
+        $obj->setContainer($this->containerBuilder);
+
+        $res = $obj->getKernelEventListener();
+        $this->assertInstanceOf(KernelEventListener::class, $res);
+        $this->assertSame($this->kernelEventListener, $res);
     }
 
     /**
@@ -113,6 +129,9 @@ class AbstractControllerTest extends AbstractFrameworkTestCase {
 
         // Set a Notification mock.
         $notification = $this->getMockBuilder(NotificationInterface::class)->getMock();
+
+        // Set the Event dispatcher mock.
+        $this->eventDispatcher->expects($this->any())->method("hasListeners")->willReturn(false);
 
         $obj = new TestController();
         $obj->setContainer($this->containerBuilder);
