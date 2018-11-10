@@ -47,7 +47,7 @@ class KernelEventListener {
      *
      * @var Request
      */
-    private static $request;
+    protected static $request;
 
     /**
      * Token storage.
