@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Provider\Bootstrap\Theme;
+namespace WBW\Bundle\CoreBundle\Tests\Theme;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
 use WBW\Bundle\CoreBundle\Theme\DefaultHookDropDownThemeProvider;
@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Theme\DefaultHookDropDownThemeProvider;
  * Default hook drop down theme provider test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Provider\Bootstrap\Theme
+ * @package WBW\Bundle\CoreBundle\Tests\Theme
  */
 class DefaultHookDropDownThemeProviderTest extends AbstractFrameworkTestCase {
 
