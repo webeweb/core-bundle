@@ -32,6 +32,13 @@ class TestController extends AbstractController {
     /**
      * {@inheritdoc}
      */
+    public function getKernelEventListener() {
+        return parent::getKernelEventListener();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getLogger() {
         return parent::getLogger();
     }

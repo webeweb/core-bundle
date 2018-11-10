@@ -19,6 +19,8 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Translation\TranslatorInterface;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
+use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
+use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
 use WBW\Bundle\CoreBundle\Helper\UserHelper;
 use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
 
@@ -38,6 +40,15 @@ abstract class AbstractController extends Controller {
      */
     protected function getEventDispatcher() {
         return $this->get("event_dispatcher");
+    }
+
+    /**
+     * Get the kernel event listener.
+     *
+     * @return KernelEventListener Returns the kernel event listener.
+     */
+    protected function getKernelEventListener() {
+        return $this->get(KernelEventListener::SERVICE_NAME);
     }
 
     /**
