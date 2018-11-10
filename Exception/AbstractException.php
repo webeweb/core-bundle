@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Exception;
 use WBW\Library\Core\Exception\AbstractCoreException;
 
 /**
- * Abstract Core exception.
+ * Abstract exception.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Exception
