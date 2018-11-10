@@ -67,10 +67,10 @@ class KernelEventListener {
      * Constructor.
      *
      * @param TokenStorageInterface $tokenStorage The token storage.
-     * @param ThemeManager $providersManager The providers manager.
+     * @param ThemeManager $themeManager The theme manager.
      */
-    public function __construct(TokenStorageInterface $tokenStorage, ThemeManager $providersManager) {
-        $this->setThemeManager($providersManager);
+    public function __construct(TokenStorageInterface $tokenStorage, ThemeManager $themeManager) {
+        $this->setThemeManager($themeManager);
         $this->setTokenStorage($tokenStorage);
     }
 
@@ -158,7 +158,7 @@ class KernelEventListener {
     }
 
     /**
-     * Set the providers manager.
+     * Set the theme manager.
      *
      * @param ThemeManager $themeManager The theme manager.
      * @return KernelEventListener Returns this kernel event listener.
