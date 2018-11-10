@@ -26,7 +26,7 @@ use WBW\Bundle\CoreBundle\Helper\UserHelper;
 use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
 
 /**
- * Abstract Core controller.
+ * Abstract controller.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Controller
