@@ -29,10 +29,11 @@ class AbstractTwigExtensionTest extends AbstractFrameworkTestCase {
      */
     public function testConstructor() {
 
-        new TestTwigExtension();
+        $obj = new TestTwigExtension($this->twigEnvironment);
 
         $this->assertEquals("&nbsp;", TestTwigExtension::DEFAULT_CONTENT);
         $this->assertEquals("javascript:void(0);", TestTwigExtension::DEFAULT_HREF);
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 
     /**

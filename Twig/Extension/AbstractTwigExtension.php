@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Twig\Extension;
 
+use Twig_Environment;
 use Twig_Extension;
 use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 use WBW\Library\Core\Argument\StringHelper;
@@ -39,10 +40,19 @@ abstract class AbstractTwigExtension extends Twig_Extension {
     const DEFAULT_HREF = NavigationInterface::NAVIGATION_HREF_DEFAULT;
 
     /**
-     * Constructor.
+     * Twig environment.
+     *
+     * @var Twig_Environment
      */
-    protected function __construct() {
-        // NOTHING TO DO.
+    private $twigEnvironment;
+
+    /**
+     * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The twig environment.
+     */
+    protected function __construct(Twig_Environment $twigEnvironment) {
+        $this->setTwigEnvironment($twigEnvironment);
     }
 
     /**
@@ -69,6 +79,26 @@ abstract class AbstractTwigExtension extends Twig_Extension {
 
         // Return the HTML.
         return StringHelper::replace($template, ["%element%", "%attributes%", "%innerHTML%"], [trim($element), $attributes, $innerHTML]);
+    }
+
+    /**
+     * Get the twig environment.
+     *
+     * @return Twig_Environment Returns the twig environment.
+     */
+    public function getTwigEnvironment() {
+        return $this->twigEnvironment;
+    }
+
+    /**
+     * Set the twig.
+     *
+     * @param Twig_Environment $twigEnvironment The twig environment.
+     * @return AbstractTwigExtension Returns this twig extension.
+     */
+    protected function setTwigEnvironment(Twig_Environment $twigEnvironment) {
+        $this->twigEnvironment = $twigEnvironment;
+        return $this;
     }
 
 }
