@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Twig\Extension;
+namespace WBW\Bundle\CoreBundle\Renderer;
 
 /**
  * Icon renderer interface.
