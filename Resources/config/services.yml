@@ -1,1 +1,39 @@
 # Resources/config/services.yml
+services:
+
+    logger:
+        alias: "monolog.logger"
+        public: true
+
+    webeweb.core.eventlistener.kernel:
+        class:     WBW\Bundle\CoreBundle\EventListener\KernelEventListener
+        arguments: ["@security.token_storage", "@webeweb.core.manager.theme"]
+        public:    true
+        tags:
+            - { name: "kernel.event_listener", event: "kernel.exception", method: "onKernelException" }
+            - { name: "kernel.event_listener", event: "kernel.request",   method: "onKernelRequest" }
+
+    webeweb.core.eventlistener.notification:
+        class:     WBW\Bundle\CoreBundle\EventListener\NotificationEventListener
+        arguments: ["@session"]
+        public:    true
+        tags:
+            - { name: "kernel.event_listener", event: "webeweb.core.event.notification.danger",  method: "onNotify" }
+            - { name: "kernel.event_listener", event: "webeweb.core.event.notification.info",    method: "onNotify" }
+            - { name: "kernel.event_listener", event: "webeweb.core.event.notification.success", method: "onNotify" }
+            - { name: "kernel.event_listener", event: "webeweb.core.event.notification.warning", method: "onNotify" }
+
+    webeweb.core.manager.theme:
+        class:     WBW\Bundle\CoreBundle\Manager\ThemeManager
+        arguments: ["@twig"]
+        public:    true
+        calls:
+            - ["setApplicationThemeProvider",           ["@?webeweb.core.provider.theme.application"]]
+            - ["setBreadcrumbsThemeProvider",           ["@?webeweb.core.provider.theme.breadcrumbs"]]
+            - ["setDropDownHookThemeProvider",          ["@?webeweb.core.provider.theme.dropdownhook"]]
+            - ["setDropDownNotificationsThemeProvider", ["@?webeweb.core.provider.theme.dropdownnotifications"]]
+            - ["setDropDownTasksThemeProvider",         ["@?webeweb.core.provider.theme.dropdowntasks"]]
+            - ["setFooterThemeProvider",                ["@?webeweb.core.provider.theme.footer"]]
+            - ["setNavigationThemeProvider",            ["@?webeweb.core.provider.theme.navigation"]]
+            - ["setSearchThemeProvider",                ["@?webeweb.core.provider.theme.search"]]
+            - ["setUserInfoThemeProvider",              ["@?webeweb.core.provider.theme.userinfo"]]

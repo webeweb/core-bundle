@@ -12,6 +12,9 @@
 namespace WBW\Bundle\CoreBundle\Tests\DependencyInjection;
 
 use WBW\Bundle\CoreBundle\DependencyInjection\CoreExtension;
+use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
+use WBW\Bundle\CoreBundle\EventListener\NotificationEventListener;
+use WBW\Bundle\CoreBundle\Manager\ThemeManager;
 use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
 
 /**
@@ -32,6 +35,13 @@ class CoreExtensionTest extends AbstractFrameworkTestCase {
         $obj = new CoreExtension();
 
         $this->assertNull($obj->load([], $this->containerBuilder));
+
+        // Event listeners
+        $this->assertInstanceOf(KernelEventListener::class, $this->containerBuilder->get(KernelEventListener::SERVICE_NAME));
+        $this->assertInstanceOf(NotificationEventListener::class, $this->containerBuilder->get(NotificationEventListener::SERVICE_NAME));
+
+        // Managers
+        $this->assertInstanceOf(ThemeManager::class, $this->containerBuilder->get(ThemeManager::SERVICE_NAME));
     }
 
 }
