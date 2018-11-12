@@ -26,7 +26,7 @@ interface TasksDropDownThemeProviderInterface extends ThemeProviderInterface {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.core.provider.theme.tasksdropdown";
+    const SERVICE_NAME = "webeweb.core.provider.theme.tasks_drop_down";
 
     /**
      * Get the tasks.

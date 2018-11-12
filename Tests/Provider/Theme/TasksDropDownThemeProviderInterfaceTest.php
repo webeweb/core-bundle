@@ -29,7 +29,7 @@ class TasksDropDownThemeProviderInterfaceTest extends AbstractFrameworkTestCase 
      */
     public function testConstruct() {
 
-        $this->assertEquals("webeweb.core.provider.theme.tasksdropdown", TasksDropDownThemeProviderInterface::SERVICE_NAME);
+        $this->assertEquals("webeweb.core.provider.theme.tasks_drop_down", TasksDropDownThemeProviderInterface::SERVICE_NAME);
     }
 
 }
