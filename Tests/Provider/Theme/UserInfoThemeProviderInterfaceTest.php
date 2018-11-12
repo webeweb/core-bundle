@@ -29,7 +29,7 @@ class UserInfoThemeProviderInterfaceTest extends AbstractFrameworkTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("webeweb.core.provider.theme.userinfo", UserInfoThemeProviderInterface::SERVICE_NAME);
+        $this->assertEquals("webeweb.core.provider.theme.user_info", UserInfoThemeProviderInterface::SERVICE_NAME);
     }
 
 }

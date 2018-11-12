@@ -26,7 +26,7 @@ interface UserInfoThemeProviderInterface extends ThemeProviderInterface {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.core.provider.theme.userinfo";
+    const SERVICE_NAME = "webeweb.core.provider.theme.user_info";
 
     /**
      * Provides a register link.
