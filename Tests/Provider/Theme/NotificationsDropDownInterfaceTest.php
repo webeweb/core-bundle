@@ -29,7 +29,7 @@ class NotificationsDropDownThemeProviderInterfaceTest extends AbstractFrameworkT
      */
     public function testConstruct() {
 
-        $this->assertEquals("webeweb.core.provider.theme.notificationsdropdown", NotificationsDropDownThemeProviderInterface::SERVICE_NAME);
+        $this->assertEquals("webeweb.core.provider.theme.notifications_drop_down", NotificationsDropDownThemeProviderInterface::SERVICE_NAME);
     }
 
 }
