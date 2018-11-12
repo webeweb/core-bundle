@@ -1,0 +1,76 @@
+<?php
+
+/**
+ * This file is part of the core-bundle package.
+ *
+ * (c) 2018 WEBEWEB
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension;
+
+use Twig_Node;
+use Twig_SimpleFilter;
+use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension;
+
+/**
+ * Renderer Twig extension test.
+ *
+ * @author webeweb <https://github.com/webeweb/>
+ * @package WBW\Bundle\CoreBundle\Tests\Twig\Extension
+ */
+class RendererTwigExtensionTest extends AbstractFrameworkTestCase {
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $obj = new RendererTwigExtension($this->twigEnvironment);
+
+        $this->assertEquals("webeweb.core.twig.extension.renderer", RendererTwigExtension::SERVICE_NAME);
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+    }
+
+    /**
+     * Tests the getFilters() method.
+     *
+     * @return void
+     */
+    public function testGetFilters() {
+
+        $obj = new RendererTwigExtension($this->twigEnvironment);
+
+        $res = $obj->getFilters();
+
+        $this->assertCount(1, $res);
+
+        $this->assertInstanceOf(Twig_SimpleFilter::class, $res[0]);
+        $this->assertEquals("coreScript", $res[0]->getName());
+        $this->assertEquals([$obj, "coreScriptFilter"], $res[0]->getCallable());
+        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+    }
+
+    /**
+     * Tests the coreScriptFilter() method.
+     *
+     * @return void
+     */
+    public function testCoreScriptFilter() {
+
+        $obj = new RendererTwigExtension($this->twigEnvironment);
+
+        $res = <<<'EOT'
+<script type="text/javascript">
+content
+</script>
+EOT;
+        $this->assertEquals($res, $obj->coreScriptFilter("content"));
+    }
+
+}
