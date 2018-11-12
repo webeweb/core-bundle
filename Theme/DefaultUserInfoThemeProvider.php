@@ -31,6 +31,13 @@ class DefaultUserInfoThemeProvider implements UserInfoThemeProviderInterface {
     /**
      * {@inheritdoc}
      */
+    public function getView() {
+        return null;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function provideRegisterLink() {
         return false;
     }
@@ -40,13 +47,6 @@ class DefaultUserInfoThemeProvider implements UserInfoThemeProviderInterface {
      */
     public function provideResettingLink() {
         return false;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getView() {
-        return null;
     }
 
 }
