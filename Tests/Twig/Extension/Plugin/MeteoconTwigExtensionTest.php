@@ -25,6 +25,19 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MeteoconsTwigExtension;
 class MeteoconsTwigExtensionTest extends AbstractFrameworkTestCase {
 
     /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $obj = new MeteoconsTwigExtension($this->twigEnvironment);
+
+        $this->assertEquals("webeweb.core.twig.extension.plugin.meteocons", MeteoconsTwigExtension::SERVICE_NAME);
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+    }
+
+    /**
      * Tests the getFunctions() method.
      *
      * @return void
