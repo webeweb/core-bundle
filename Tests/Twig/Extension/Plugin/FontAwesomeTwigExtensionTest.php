@@ -91,41 +91,144 @@ class FontAwesomeTwigExtensionTest extends AbstractFrameworkTestCase {
 
         $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
 
-        $arg0 = [];
-        $res0 = '<i class="fa fa-home"></i>';
-        $this->assertEquals($res0, $obj->fontAwesomeIconFunction($arg0));
+        $arg = ["font" => "s", "name" => "camera-retro", "size" => "lg", "fixedWidth" => true, "bordered" => true, "pull" => "left", "animated" => "spin"];
+        $res = '<i class="fas fa-camera-retro fa-lg fa-fw fa-border fa-pull-left fa-spin"></i>';
+        $this->assertEquals($res, $obj->fontAwesomeIconFunction($arg));
+    }
 
-        $arg1 = ["font" => "s"];
-        $res1 = '<i class="fas fa-home"></i>';
-        $this->assertEquals($res1, $obj->fontAwesomeIconFunction($arg1));
+    /**
+     * Tests the fontAwesomeIconFunction() method.
+     *
+     * @return void
+     * @depends testGetFunctions
+     */
+    public function testFontAwesomeIconFunctionWithAnimated() {
 
-        $arg2 = ["name" => "camera-retro"];
-        $res2 = '<i class="fa fa-camera-retro"></i>';
-        $this->assertEquals($res2, $obj->fontAwesomeIconFunction($arg2));
+        $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
 
-        $arg3 = ["size" => "xs"];
-        $res3 = '<i class="fa fa-home fa-xs"></i>';
-        $this->assertEquals($res3, $obj->fontAwesomeIconFunction($arg3));
+        $arg = ["animated" => "pulse"];
+        $res = '<i class="fa fa-home fa-pulse"></i>';
+        $this->assertEquals($res, $obj->fontAwesomeIconFunction($arg));
+    }
 
-        $arg4 = ["fixedWidth" => true];
-        $res4 = '<i class="fa fa-home fa-fw"></i>';
-        $this->assertEquals($res4, $obj->fontAwesomeIconFunction($arg4));
+    /**
+     * Tests the fontAwesomeIconFunction() method.
+     *
+     * @return void
+     * @depends testGetFunctions
+     */
+    public function testFontAwesomeIconFunctionWithBordered() {
 
-        $arg5 = ["bordered" => true];
-        $res5 = '<i class="fa fa-home fa-border"></i>';
-        $this->assertEquals($res5, $obj->fontAwesomeIconFunction($arg5));
+        $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
 
-        $arg6 = ["pull" => "right"];
-        $res6 = '<i class="fa fa-home fa-pull-right"></i>';
-        $this->assertEquals($res6, $obj->fontAwesomeIconFunction($arg6));
+        $arg = ["bordered" => true];
+        $res = '<i class="fa fa-home fa-border"></i>';
+        $this->assertEquals($res, $obj->fontAwesomeIconFunction($arg));
+    }
 
-        $arg7 = ["animated" => "pulse"];
-        $res7 = '<i class="fa fa-home fa-pulse"></i>';
-        $this->assertEquals($res7, $obj->fontAwesomeIconFunction($arg7));
+    /**
+     * Tests the fontAwesomeIconFunction() method.
+     *
+     * @return void
+     * @depends testGetFunctions
+     */
+    public function testFontAwesomeIconFunctionWithFixedWidth() {
 
-        $arg9 = ["font" => "s", "name" => "camera-retro", "size" => "lg", "fixedWidth" => true, "bordered" => true, "pull" => "left", "animated" => "spin"];
-        $res9 = '<i class="fas fa-camera-retro fa-lg fa-fw fa-border fa-pull-left fa-spin"></i>';
-        $this->assertEquals($res9, $obj->fontAwesomeIconFunction($arg9));
+        $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
+
+        $arg = ["fixedWidth" => true];
+        $res = '<i class="fa fa-home fa-fw"></i>';
+        $this->assertEquals($res, $obj->fontAwesomeIconFunction($arg));
+    }
+
+    /**
+     * Tests the fontAwesomeIconFunction() method.
+     *
+     * @return void
+     * @depends testGetFunctions
+     */
+    public function testFontAwesomeIconFunctionWithFont() {
+
+        $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
+
+        $arg = ["font" => "s"];
+        $res = '<i class="fas fa-home"></i>';
+        $this->assertEquals($res, $obj->fontAwesomeIconFunction($arg));
+    }
+
+    /**
+     * Tests the fontAwesomeIconFunction() method.
+     *
+     * @return void
+     * @depends testGetFunctions
+     */
+    public function testFontAwesomeIconFunctionWithName() {
+
+        $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
+
+        $arg = ["name" => "camera-retro"];
+        $res = '<i class="fa fa-camera-retro"></i>';
+        $this->assertEquals($res, $obj->fontAwesomeIconFunction($arg));
+    }
+
+    /**
+     * Tests the fontAwesomeIconFunction() method.
+     *
+     * @return void
+     * @depends testGetFunctions
+     */
+    public function testFontAwesomeIconFunctionWithPull() {
+
+        $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
+
+        $arg = ["pull" => "right"];
+        $res = '<i class="fa fa-home fa-pull-right"></i>';
+        $this->assertEquals($res, $obj->fontAwesomeIconFunction($arg));
+    }
+
+    /**
+     * Tests the fontAwesomeIconFunction() method.
+     *
+     * @return void
+     * @depends testGetFunctions
+     */
+    public function testFontAwesomeIconFunctionWithSize() {
+
+        $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
+
+        $arg = ["size" => "xs"];
+        $res = '<i class="fa fa-home fa-xs"></i>';
+        $this->assertEquals($res, $obj->fontAwesomeIconFunction($arg));
+    }
+
+    /**
+     * Tests the fontAwesomeIconFunction() method.
+     *
+     * @return void
+     * @depends testGetFunctions
+     */
+    public function testFontAwesomeIconFunctionWithStyle() {
+
+        $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
+
+        $arg = ["style" => "color: #FFFFFF;"];
+        $res = '<i class="fa fa-home" style="color: #FFFFFF;"></i>';
+        $this->assertEquals($res, $obj->fontAwesomeIconFunction($arg));
+    }
+
+    /**
+     * Tests the fontAwesomeIconFunction() method.
+     *
+     * @return void
+     * @depends testGetFunctions
+     */
+    public function testFontAwesomeIconFunctionWithoutArguments() {
+
+        $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = '<i class="fa fa-home"></i>';
+        $this->assertEquals($res, $obj->fontAwesomeIconFunction($arg));
     }
 
     /**
@@ -141,8 +244,8 @@ class FontAwesomeTwigExtensionTest extends AbstractFrameworkTestCase {
 
         $arg = $obj->fontAwesomeListIconFilter($obj->fontAwesomeIconFunction([]), "content");
 
-        $res9 = '<ul class="fa-ul"><li><span class="fa-li"><i class="fa fa-home"></i></span>content</li></ul>';
-        $this->assertEquals($res9, $obj->fontAwesomeListFilter($arg));
+        $res = '<ul class="fa-ul"><li><span class="fa-li"><i class="fa fa-home"></i></span>content</li></ul>';
+        $this->assertEquals($res, $obj->fontAwesomeListFilter($arg));
     }
 
     /**
@@ -158,11 +261,39 @@ class FontAwesomeTwigExtensionTest extends AbstractFrameworkTestCase {
 
         $arg = $obj->fontAwesomeIconFunction([]);
 
-        $res0 = '<li><span class="fa-li"><i class="fa fa-home"></i></span></li>';
-        $this->assertEquals($res0, $obj->fontAwesomeListIconFilter($arg, null));
+        $res = '<li><span class="fa-li"><i class="fa fa-home"></i></span></li>';
+        $this->assertEquals($res, $obj->fontAwesomeListIconFilter($arg, null));
+    }
 
-        $res9 = '<li><span class="fa-li"><i class="fa fa-home"></i></span>content</li>';
-        $this->assertEquals($res9, $obj->fontAwesomeListIconFilter($arg, "content"));
+    /**
+     * Tests the fontAwesomeListIconFilter() method.
+     *
+     * @return void
+     * @depends testGetFilters
+     * @depends testFontAwesomeIconFunction
+     */
+    public function testFontAwesomeListIconFilterWithContent() {
+
+        $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
+
+        $arg = $obj->fontAwesomeIconFunction([]);
+
+        $res = '<li><span class="fa-li"><i class="fa fa-home"></i></span>content</li>';
+        $this->assertEquals($res, $obj->fontAwesomeListIconFilter($arg, "content"));
+    }
+
+    /**
+     * Tests the renderIcon() method.
+     *
+     * @return void
+     * @depends testGetFunctions
+     */
+    public function testRenderIcon() {
+
+        $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
+
+        $res = '<i class="fa fa-camera-retro" style="color: #FFFFFF;"></i>';
+        $this->assertEquals($res, $obj->renderIcon("camera-retro", "color: #FFFFFF;"));
     }
 
 }
