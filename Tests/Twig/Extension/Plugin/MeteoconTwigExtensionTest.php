@@ -116,4 +116,18 @@ class MeteoconsTwigExtensionTest extends AbstractFrameworkTestCase {
         $this->assertEquals($res, $obj->meteoconsIconFunction($arg));
     }
 
+    /**
+     * Tests the renderIcon() method.
+     *
+     * @return void
+     * @depends testGetFunctions
+     */
+    public function testRenderIcon() {
+
+        $obj = new MeteoconsTwigExtension($this->twigEnvironment);
+
+        $res = '<i class="meteocons" data-meteocons="B" style="color: #FFFFFF;"></i>';
+        $this->assertEquals($res, $obj->renderIcon("B", "color: #FFFFFF;"));
+    }
+
 }
