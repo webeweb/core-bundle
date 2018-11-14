@@ -12,6 +12,8 @@
 namespace WBW\Bundle\CoreBundle\Exception;
 
 use Symfony\Component\Security\Core\User\UserInterface;
+use WBW\Bundle\CoreBundle\Model\OriginUrlTrait;
+use WBW\Bundle\CoreBundle\Model\RedirectUrlTrait;
 use WBW\Library\Core\Network\HTTP\HTTPInterface;
 
 /**
@@ -22,12 +24,8 @@ use WBW\Library\Core\Network\HTTP\HTTPInterface;
  */
 class BadUserRoleException extends AbstractException {
 
-    /**
-     * Redirect.
-     *
-     * @var string
-     */
-    private $redirect;
+    use OriginUrlTrait,
+        RedirectUrlTrait;
 
     /**
      * Roles.
@@ -35,13 +33,6 @@ class BadUserRoleException extends AbstractException {
      * @var array
      */
     private $roles;
-
-    /**
-     * Route.
-     *
-     * @var string
-     */
-    private $route;
 
     /**
      * User.
@@ -55,24 +46,15 @@ class BadUserRoleException extends AbstractException {
      *
      * @param UserInterface $user The user.
      * @param array $roles The roles.
-     * @param string $route The route.
-     * @param string $redirect The redirect.
+     * @param string $redirectUrl The redirect.
+     * @param string $originUrl The route.
      */
-    public function __construct(UserInterface $user, array $roles, $route, $redirect) {
-        parent::__construct(sprintf("User \"%s\" is not allowed to access to \"%s\" with roles [%s]", $user->getUsername(), $route, implode(",", $roles)), HTTPInterface::HTTP_STATUS_FORBIDDEN);
-        $this->setRedirect($redirect);
+    public function __construct(UserInterface $user, array $roles, $redirectUrl, $originUrl) {
+        parent::__construct(sprintf("User \"%s\" is not allowed to access to \"%s\" with roles [%s]", $user->getUsername(), $originUrl, implode(",", $roles)), HTTPInterface::HTTP_STATUS_FORBIDDEN);
+        $this->setOriginUrl($originUrl);
+        $this->setRedirectUrl($redirectUrl);
         $this->setRoles($roles);
-        $this->setRoute($route);
         $this->setUser($user);
-    }
-
-    /**
-     * Get the redirect.
-     *
-     * @return string Returns the redirect.
-     */
-    public function getRedirect() {
-        return $this->redirect;
     }
 
     /**
@@ -85,15 +67,6 @@ class BadUserRoleException extends AbstractException {
     }
 
     /**
-     * Get the route.
-     *
-     * @return string Returns the route.
-     */
-    public function getRoute() {
-        return $this->route;
-    }
-
-    /**
      * Get the user.
      *
      * @return UserInterface Returns the user.
@@ -103,35 +76,13 @@ class BadUserRoleException extends AbstractException {
     }
 
     /**
-     * Set the redirect.
-     *
-     * @param string $redirect The redirect.
-     * @return BadUserRoleException Returns this bad user role exception.
-     */
-    protected function setRedirect($redirect) {
-        $this->redirect = $redirect;
-        return $this;
-    }
-
-    /**
      * Set the roles;
      *
      * @param array $roles The roles.
      * @return BadUserRoleException Returns this bad user role exception.
      */
-    public function setRoles(array $roles) {
+    protected function setRoles(array $roles) {
         $this->roles = $roles;
-        return $this;
-    }
-
-    /**
-     * Set the route.
-     *
-     * @param string $route The route.
-     * @return BadUserRoleException Returns this bad user role exception.
-     */
-    protected function setRoute($route) {
-        $this->route = $route;
         return $this;
     }
 

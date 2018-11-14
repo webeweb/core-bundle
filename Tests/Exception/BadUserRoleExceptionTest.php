@@ -30,19 +30,19 @@ class BadUserRoleExceptionTest extends AbstractFrameworkTestCase {
      */
     public function testConstruct() {
 
-        $user     = new User("anonymous", "empty");
-        $roles    = ["ROLE_ADMIN", "ROLE_USER"];
-        $route    = "https://github.com/webeweb";
-        $redirect = "https://github.com";
+        $user        = new User("anonymous", "empty");
+        $roles       = ["ROLE_ADMIN", "ROLE_USER"];
+        $originUrl   = "https://github.com/webeweb";
+        $redirectUrl = "https://github.com";
 
-        $ex = new BadUserRoleException($user, $roles, $route, $redirect);
+        $ex = new BadUserRoleException($user, $roles, $redirectUrl, $originUrl);
 
         $this->assertEquals("User \"anonymous\" is not allowed to access to \"https://github.com/webeweb\" with roles [ROLE_ADMIN,ROLE_USER]", $ex->getMessage());
 
-        $this->assertSame($user, $ex->getUser());
+        $this->assertEquals($originUrl, $ex->getOriginUrl());
+        $this->assertEquals($redirectUrl, $ex->getRedirectUrl());
         $this->assertEquals($roles, $ex->getRoles());
-        $this->assertEquals($route, $ex->getRoute());
-        $this->assertEquals($redirect, $ex->getRedirect());
+        $this->assertSame($user, $ex->getUser());
     }
 
 }
