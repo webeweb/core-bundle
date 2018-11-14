@@ -93,11 +93,12 @@ abstract class AbstractController extends Controller {
      *
      * @param array $roles The roles.
      * @param bool $or OR ?
-     * @param string $redirect The redirect.
+     * @param string $redirectUrl The redirect URL.
+     * @param string $originUrl The origin URL.
      * @return bool Returns true.
      * @throws BadUserRoleException Throws a bad user role exception.
      */
-    protected function hasRolesOrRedirect(array $roles, $or, $redirect) {
+    protected function hasRolesOrRedirect(array $roles, $or, $redirectUrl, $originUrl = "") {
 
         // Get the user.
         $user = $this->getKernelEventListener()->getUser();
@@ -107,7 +108,7 @@ abstract class AbstractController extends Controller {
 
             // Throw a bad user role exception with an anonymous user if user is null.
             $user = null !== $user ? $user : new User("anonymous", "");
-            throw new BadUserRoleException($user, $roles, "", $redirect);
+            throw new BadUserRoleException($user, $roles, $redirectUrl, $originUrl);
         }
 
         // Return

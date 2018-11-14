@@ -176,7 +176,7 @@ class AbstractControllerTest extends AbstractFrameworkTestCase {
 
         try {
 
-            $obj->hasRolesOrRedirect(["ROLE_GITHUB"], false, "redirect");
+            $obj->hasRolesOrRedirect(["ROLE_GITHUB"], false, "redirectUrl");
         } catch (Exception $ex) {
 
             $this->assertInstanceOf(BadUserRoleException::class, $ex);
