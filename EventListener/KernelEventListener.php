@@ -18,6 +18,7 @@ use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
+use WBW\Bundle\CoreBundle\Exception\RedirectResponseException;
 use WBW\Bundle\CoreBundle\Manager\ThemeManager;
 
 /**
@@ -36,18 +37,18 @@ class KernelEventListener {
     const SERVICE_NAME = "webeweb.core.eventlistener.kernel";
 
     /**
-     * Theme manager.
-     *
-     * @var ThemeManager
-     */
-    private $themeManager;
-
-    /**
      * Request.
      *
      * @var Request
      */
     protected static $request;
+
+    /**
+     * Theme manager.
+     *
+     * @var ThemeManager
+     */
+    private $themeManager;
 
     /**
      * Token storage.
@@ -89,7 +90,7 @@ class KernelEventListener {
      * @return Request Returns the request.
      */
     public function getRequest() {
-        return static::$request;
+        return self::$request;
     }
 
     /**
@@ -121,6 +122,34 @@ class KernelEventListener {
     }
 
     /**
+     * Handle a bad user role exception.
+     *
+     * @param GetResponseForExceptionEvent $event The event.
+     * @param BadUserRoleException $ex The exception.
+     * @return GetResponseForExceptionEvent Return the event.
+     */
+    protected function handleBadUserRoleException(GetResponseForExceptionEvent $event, BadUserRoleException $ex) {
+        if (null !== $ex->getRedirectUrl()) {
+            $event->setResponse(new RedirectResponse($ex->getRedirectUrl()));
+        }
+        return $event;
+    }
+
+    /**
+     * Handle a redirect response exception.
+     *
+     * @param GetResponseForExceptionEvent $event The event.
+     * @param RedirectResponseException $ex The exception.
+     * @return GetResponseForExceptionEvent Return the event.
+     */
+    protected function handleRedirectResponseException(GetResponseForExceptionEvent $event, RedirectResponseException $ex) {
+        if (null !== $ex->getRedirectUrl()) {
+            $event->setResponse(new RedirectResponse($ex->getRedirectUrl()));
+        }
+        return $event;
+    }
+
+    /**
      * On kernel exception.
      *
      * @param GetResponseForExceptionEvent $event The event.
@@ -131,11 +160,12 @@ class KernelEventListener {
         // Get the exception.
         $ex = $event->getException();
 
-        // Check the exception.
-        if (true === ($ex instanceOf BadUserRoleException) && null !== $ex->getRedirect()) {
-
-            // Set the response.
-            $event->setResponse(new RedirectResponse($ex->getRedirect()));
+        // Handle the exception.
+        if (true === ($ex instanceOf BadUserRoleException)) {
+            $this->handleBadUserRoleException($event, $ex);
+        }
+        if (true === ($ex instanceOf RedirectResponseException)) {
+            $this->handleRedirectResponseException($event, $ex);
         }
 
         // Return the event.

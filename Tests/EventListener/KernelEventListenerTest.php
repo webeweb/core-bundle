@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\EventListener;
 
 use Exception;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
@@ -19,6 +20,7 @@ use Symfony\Component\HttpKernel\HttpKernelInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
+use WBW\Bundle\CoreBundle\Exception\RedirectResponseException;
 use WBW\Bundle\CoreBundle\Manager\ThemeManager;
 use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
 
@@ -31,9 +33,9 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
 class KernelEventListenerTest extends AbstractFrameworkTestCase {
 
     /**
-     * Providers manager.
+     * Theme manager.
      *
-     * @var ProviderManager
+     * @var ThemeManager
      */
     private $themeManager;
 
@@ -98,13 +100,36 @@ class KernelEventListenerTest extends AbstractFrameworkTestCase {
      */
     public function testOnKernelExceptionWithBadUserRoleException() {
 
-        $obj = new KernelEventListener($this->tokenStorage, $this->themeManager);
-
-        // Set an User modk.
+        // Set an User mock.
         $this->user = $this->getMockBuilder(UserInterface::class)->getMock();
 
-        $arg = new GetResponseForExceptionEvent($this->kernel, new Request(), HttpKernelInterface::MASTER_REQUEST, new BadUserRoleException($this->user, [], "route", "/"));
+        // Set a Bad user role exception mock.
+        $ex = new BadUserRoleException($this->user, [], "redirectUrl", "originUrl");
+
+        $obj = new KernelEventListener($this->tokenStorage, $this->themeManager);
+
+        $arg = new GetResponseForExceptionEvent($this->kernel, new Request(), HttpKernelInterface::MASTER_REQUEST, $ex);
         $this->assertSame($arg, $obj->onKernelException($arg));
+        $this->assertInstanceOf(RedirectResponse::class, $arg->getResponse());
+        $this->assertEquals("redirectUrl", $arg->getResponse()->getTargetUrl());
+    }
+
+    /**
+     * Tests the onKernelException() method.
+     *
+     * @return void
+     */
+    public function testOnKernelExceptionWithRedirectResponseException() {
+
+        // Set a Redirect response exception mock.
+        $ex = new RedirectResponseException("redirectUrl", "originUrl");
+
+        $obj = new KernelEventListener($this->tokenStorage, $this->themeManager);
+
+        $arg = new GetResponseForExceptionEvent($this->kernel, new Request(), HttpKernelInterface::MASTER_REQUEST, $ex);
+        $this->assertSame($arg, $obj->onKernelException($arg));
+        $this->assertInstanceOf(RedirectResponse::class, $arg->getResponse());
+        $this->assertEquals("redirectUrl", $arg->getResponse()->getTargetUrl());
     }
 
     /**
