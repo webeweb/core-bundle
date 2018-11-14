@@ -64,9 +64,12 @@ class NavigationTreeHelperTest extends AbstractFrameworkTestCase {
         $this->assertFalse($this->tree->getNodeAt(0)->getNodeAt(9)->getActive());
         $this->assertFalse($this->tree->getNodeAt(0)->getNodeAt(10)->getActive());
         $this->assertFalse($this->tree->getNodeAt(0)->getNodeAt(11)->getActive());
-        //$this->assertFalse($this->tree->getNodeAt(0)->getNodeAt(12)->getActive());
+        $this->assertFalse($this->tree->getNodeAt(0)->getNodeAt(12)->getActive());
         $this->assertFalse($this->tree->getNodeAt(0)->getNodeAt(13)->getActive());
-        $this->assertFalse($this->tree->getNodeAt(0)->getNodeAt(14)->getActive());
+        //$this->assertFalse($this->tree->getNodeAt(0)->getNodeAt(14)->getActive());
+        $this->assertFalse($this->tree->getNodeAt(0)->getNodeAt(15)->getActive());
+        $this->assertFalse($this->tree->getNodeAt(0)->getNodeAt(16)->getActive());
+        $this->assertFalse($this->tree->getNodeAt(0)->getNodeAt(17)->getActive());
     }
 
     /**
