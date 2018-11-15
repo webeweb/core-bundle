@@ -195,26 +195,6 @@ class AbstractControllerTest extends AbstractFrameworkTestCase {
         $notification = $this->getMockBuilder(NotificationInterface::class)->getMock();
 
         // Set the Event dispatcher mock.
-        $this->eventDispatcher->expects($this->any())->method("hasListeners")->willReturn(false);
-
-        $obj = new TestController();
-        $obj->setContainer($this->containerBuilder);
-
-        $res = $obj->notify("eventName", $notification);
-        $this->assertNull($res);
-    }
-
-    /**
-     * Tests the notify() method.
-     *
-     * @return void
-     */
-    public function testNotifyWithListener() {
-
-        // Set a Notification mock.
-        $notification = $this->getMockBuilder(NotificationInterface::class)->getMock();
-
-        // Set the Event dispatcher mock.
         $this->eventDispatcher->expects($this->any())->method("hasListeners")->willReturn(true);
         $this->eventDispatcher->expects($this->any())->method("dispatch")->willReturn(new NotificationEvent("eventName", $notification));
 
@@ -223,6 +203,26 @@ class AbstractControllerTest extends AbstractFrameworkTestCase {
 
         $res = $obj->notify("eventName", $notification);
         $this->assertNotNull($res);
+    }
+
+    /**
+     * Tests the notify() method.
+     *
+     * @return void
+     */
+    public function testNotifyWithoutListener() {
+
+        // Set a Notification mock.
+        $notification = $this->getMockBuilder(NotificationInterface::class)->getMock();
+
+        // Set the Event dispatcher mock.
+        $this->eventDispatcher->expects($this->any())->method("hasListeners")->willReturn(false);
+
+        $obj = new TestController();
+        $obj->setContainer($this->containerBuilder);
+
+        $res = $obj->notify("eventName", $notification);
+        $this->assertNull($res);
     }
 
 }
