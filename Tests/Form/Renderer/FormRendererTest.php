@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Form\Renderer;
 
-use WBW\Bundle\CoreBundle\Form\Renderer\ChoiceRendererInterface;
 use WBW\Bundle\CoreBundle\Form\Renderer\FormRenderer;
-use WBW\Bundle\CoreBundle\Form\Renderer\TranslatedChoiceRendererInterface;
+use WBW\Bundle\CoreBundle\Renderer\ChoiceRendererInterface;
+use WBW\Bundle\CoreBundle\Renderer\TranslatedChoiceRendererInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
 use WBW\Library\Core\Sorting\AlphabeticalTreeNodeInterface;
 
