@@ -13,6 +13,7 @@ namespace WBW\Bundle\CoreBundle\EventListener;
 
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
+use WBW\Bundle\CoreBundle\Service\SessionTrait;
 
 /**
  * Notification event listener.
@@ -22,19 +23,14 @@ use WBW\Bundle\CoreBundle\Event\NotificationEvent;
  */
 class NotificationEventListener {
 
+    use SessionTrait;
+
     /**
      * Service name.
      *
      * @var string
      */
     const SERVICE_NAME = "webeweb.core.event_listener.notification";
-
-    /**
-     * Session.
-     *
-     * @var SessionInterface
-     */
-    private $session;
 
     /**
      * Constructor.
@@ -46,15 +42,6 @@ class NotificationEventListener {
     }
 
     /**
-     * Get the session.
-     *
-     * @return SessionInterface Returns the session.
-     */
-    public function getSession() {
-        return $this->session;
-    }
-
-    /**
      * On notify.
      *
      * @param NotificationEvent $event The notification event.
@@ -62,17 +49,6 @@ class NotificationEventListener {
      */
     public function onNotify(NotificationEvent $event) {
         $this->getSession()->getFlashBag()->add($event->getNotification()->getType(), $event->getNotification()->getContent());
-    }
-
-    /**
-     * Set the session.
-     *
-     * @param SessionInterface $session The session.
-     * @return NotificationEventListener Returns this notification event listener.
-     */
-    protected function setSession(SessionInterface $session) {
-        $this->session = $session;
-        return $this;
     }
 
 }
