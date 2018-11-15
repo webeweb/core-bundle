@@ -20,6 +20,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
 use WBW\Bundle\CoreBundle\Exception\RedirectResponseException;
 use WBW\Bundle\CoreBundle\Manager\ThemeManager;
+use WBW\Bundle\CoreBundle\Service\TokenStorageTrait;
 
 /**
  * Kernel event listener.
@@ -28,6 +29,8 @@ use WBW\Bundle\CoreBundle\Manager\ThemeManager;
  * @package WBW\Bundle\CoreBundle\EventListener
  */
 class KernelEventListener {
+
+    use TokenStorageTrait;
 
     /**
      * Service name.
@@ -49,13 +52,6 @@ class KernelEventListener {
      * @var ThemeManager
      */
     private $themeManager;
-
-    /**
-     * Token storage.
-     *
-     * @var TokenStorageInterface
-     */
-    private $tokenStorage;
 
     /**
      * User.
@@ -91,15 +87,6 @@ class KernelEventListener {
      */
     public function getRequest() {
         return self::$request;
-    }
-
-    /**
-     * Get the token storage.
-     *
-     * @return TokenStorageInterface Returns the token storage.
-     */
-    public function getTokenStorage() {
-        return $this->tokenStorage;
     }
 
     /**
@@ -206,17 +193,6 @@ class KernelEventListener {
      */
     protected function setRequest(Request $request) {
         self::$request = $request;
-        return $this;
-    }
-
-    /**
-     * Set the token storage.
-     *
-     * @param TokenStorageInterface $tokenStorage The token storage.
-     * @return KernelEventListener Returns this kernel event listener.
-     */
-    protected function setTokenStorage(TokenStorageInterface $tokenStorage) {
-        $this->tokenStorage = $tokenStorage;
         return $this;
     }
 
