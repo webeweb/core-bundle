@@ -11,22 +11,27 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Form\Type;
 
-use WBW\Bundle\CoreBundle\Form\Type\DateTypeInterface;
+use WBW\Bundle\CoreBundle\Form\Type\DateTimeTypeInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
 
 /**
- * Date tyype interface test.
+ * Date/time type interface test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Form\Type
  */
-class DateTypeInterfaceTest extends AbstractFrameworkTestCase {
+class DateTimeTypeInterfaceTest extends AbstractFrameworkTestCase {
 
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
     public function testConstruct() {
 
-        $this->assertEquals("dd/MM/yyyy", DateTypeInterface::FORMAT_DATE);
-        $this->assertEquals("HH:mm", DateTypeInterface::FORMAT_TIME);
-        $this->assertEquals("dd/MM/yyyy HH:mm", DateTypeInterface::FORMAT_DATETIME);
+        $this->assertEquals("dd/MM/yyyy", DateTimeTypeInterface::FORMAT_DATE);
+        $this->assertEquals("HH:mm", DateTimeTypeInterface::FORMAT_TIME);
+        $this->assertEquals("dd/MM/yyyy HH:mm", DateTimeTypeInterface::FORMAT_DATETIME);
     }
 
 }
