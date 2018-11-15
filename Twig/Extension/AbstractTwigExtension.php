@@ -26,6 +26,8 @@ use WBW\Library\Core\Argument\StringHelper;
  */
 abstract class AbstractTwigExtension extends Twig_Extension {
 
+    use TwigEnvironmentTrait;
+
     /**
      * Default content.
      *
@@ -39,8 +41,6 @@ abstract class AbstractTwigExtension extends Twig_Extension {
      * @var string
      */
     const DEFAULT_HREF = NavigationInterface::NAVIGATION_HREF_DEFAULT;
-
-    use TwigEnvironmentTrait;
 
     /**
      * Constructor.
