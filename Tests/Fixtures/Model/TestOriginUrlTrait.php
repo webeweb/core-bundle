@@ -21,9 +21,6 @@ use WBW\Bundle\CoreBundle\Model\OriginUrlTrait;
  */
 class TestOriginUrlTrait {
 
-    /**
-     * @var OriginUrlTrait
-     */
     use OriginUrlTrait {
         setOriginUrl as public;
     }

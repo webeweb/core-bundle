@@ -21,9 +21,6 @@ use WBW\Bundle\CoreBundle\Model\RedirectUrlTrait;
  */
 class TestRedirectUrlTrait {
 
-    /**
-     * @var RedirectUrlTrait
-     */
     use RedirectUrlTrait {
         setRedirectUrl as public;
     }
