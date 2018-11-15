@@ -49,7 +49,7 @@ class AbstractControllerTest extends AbstractFrameworkTestCase {
         // Set a Kernel event listener mock.
         $this->kernelEventListener = $this->getMockBuilder(KernelEventListener::class)->disableOriginalConstructor()->getMock();
 
-        // Set the COntainer builder mock.
+        // Set the Container builder mock.
         $this->containerBuilder->set(KernelEventListener::SERVICE_NAME, $this->kernelEventListener);
     }
 
