@@ -20,6 +20,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
 use WBW\Bundle\CoreBundle\Exception\RedirectResponseException;
 use WBW\Bundle\CoreBundle\Manager\ThemeManager;
+use WBW\Bundle\CoreBundle\Model\UserTrait;
 use WBW\Bundle\CoreBundle\Service\TokenStorageTrait;
 
 /**
@@ -31,6 +32,7 @@ use WBW\Bundle\CoreBundle\Service\TokenStorageTrait;
 class KernelEventListener {
 
     use TokenStorageTrait;
+    use UserTrait;
 
     /**
      * Service name.
@@ -52,13 +54,6 @@ class KernelEventListener {
      * @var ThemeManager
      */
     private $themeManager;
-
-    /**
-     * User.
-     *
-     * @var UserInterface
-     */
-    private $user;
 
     /**
      * Constructor.
