@@ -34,7 +34,7 @@ class AbstractThemeManagerTest extends AbstractFrameworkTestCase {
 
         $this->assertNull($obj->getProvider(ThemeProviderInterface::class));
         $this->assertCount(0, $obj->getProviders());
-        $this->assertSame($this->twigEnvironment, $obj->getTwig());
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 
     /**

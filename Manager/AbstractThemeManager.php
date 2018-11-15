@@ -15,6 +15,7 @@ use Twig_Environment;
 use WBW\Bundle\CoreBundle\Manager\AbstractManager;
 use WBW\Bundle\CoreBundle\Manager\ManagerInterface;
 use WBW\Bundle\CoreBundle\Provider\ThemeProviderInterface;
+use WBW\Bundle\CoreBundle\Service\TwigEnvironmentTrait;
 use WBW\Library\Core\Argument\ObjectHelper;
 
 /**
@@ -26,6 +27,8 @@ use WBW\Library\Core\Argument\ObjectHelper;
  */
 abstract class AbstractThemeManager extends AbstractManager {
 
+    use TwigEnvironmentTrait;
+
     /**
      * Index.
      *
@@ -34,21 +37,14 @@ abstract class AbstractThemeManager extends AbstractManager {
     private $index;
 
     /**
-     * Twig service.
-     *
-     * @var Twig_Environment
-     */
-    private $twig;
-
-    /**
      * Constructor.
      *
-     * @param Twig_Environment $twig The Twig service.
+     * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    public function __construct(Twig_Environment $twig) {
+    public function __construct(Twig_Environment $twigEnvironment) {
         parent::__construct();
         $this->setIndex($this->initIndex());
-        $this->setTwig($twig);
+        $this->setTwigEnvironment($twigEnvironment);
     }
 
     /**
@@ -61,7 +57,7 @@ abstract class AbstractThemeManager extends AbstractManager {
             if (null === $v) {
                 continue;
             }
-            $this->getTwig()->addGlobal(str_replace("Interface", "", $k), $this->getProviders()[$v]);
+            $this->getTwigEnvironment()->addGlobal(str_replace("Interface", "", $k), $this->getProviders()[$v]);
         }
     }
 
@@ -87,15 +83,6 @@ abstract class AbstractThemeManager extends AbstractManager {
             return null;
         }
         return $this->getProviders()[$v];
-    }
-
-    /**
-     * Get the Twig.
-     *
-     * @return Twig_Environment Returns the Twig.
-     */
-    public function getTwig() {
-        return $this->twig;
     }
 
     /**
@@ -132,17 +119,6 @@ abstract class AbstractThemeManager extends AbstractManager {
         }
         $this->index[$k] = count($this->getProviders());
         return $this->registerProvider($provider);
-    }
-
-    /**
-     * Set the Twig.
-     *
-     * @param Twig_Environment $twig The Twig.
-     * @return ManagerInterface Returns this manager.
-     */
-    protected function setTwig(Twig_Environment $twig) {
-        $this->twig = $twig;
-        return $this;
     }
 
 }
