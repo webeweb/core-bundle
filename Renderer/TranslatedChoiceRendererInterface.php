@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Form\Renderer;
+namespace WBW\Bundle\CoreBundle\Renderer;
 
 use Symfony\Component\Translation\TranslatorInterface;
 
@@ -17,7 +17,7 @@ use Symfony\Component\Translation\TranslatorInterface;
  * Translated choice renderer.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Form\Renderer
+ * @package WBW\Bundle\CoreBundle\Renderer
  */
 interface TranslatedChoiceRendererInterface {
 
