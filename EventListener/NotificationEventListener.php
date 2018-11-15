@@ -27,7 +27,7 @@ class NotificationEventListener {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.core.eventlistener.notification";
+    const SERVICE_NAME = "webeweb.core.event_listener.notification";
 
     /**
      * Session.

@@ -34,7 +34,7 @@ class KernelEventListener {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.core.eventlistener.kernel";
+    const SERVICE_NAME = "webeweb.core.event_listener.kernel";
 
     /**
      * Request.
