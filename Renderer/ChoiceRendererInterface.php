@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Form\Renderer;
+namespace WBW\Bundle\CoreBundle\Renderer;
 
 /**
  * Choice renderer interface.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Form\Renderer
+ * @package WBW\Bundle\CoreBundle\Renderer
  */
 interface ChoiceRendererInterface {
 
