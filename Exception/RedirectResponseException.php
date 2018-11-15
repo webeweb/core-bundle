@@ -23,8 +23,8 @@ use WBW\Library\Core\Network\HTTP\HTTPInterface;
  */
 class RedirectResponseException extends AbstractException {
 
-    use OriginUrlTrait,
-        RedirectUrlTrait;
+    use OriginUrlTrait;
+    use RedirectUrlTrait;
 
     /**
      * Constructor.
