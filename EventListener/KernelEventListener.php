@@ -62,6 +62,8 @@ class KernelEventListener {
      * @param ThemeManager $themeManager The theme manager.
      */
     public function __construct(TokenStorageInterface $tokenStorage, ThemeManager $themeManager) {
+        self::$request = null;
+
         $this->setThemeManager($themeManager);
         $this->setTokenStorage($tokenStorage);
     }

@@ -59,7 +59,7 @@ class KernelEventListenerTest extends AbstractFrameworkTestCase {
         $obj = new KernelEventListener($this->tokenStorage, $this->themeManager);
 
         $this->assertEquals("webeweb.core.event_listener.kernel", KernelEventListener::SERVICE_NAME);
-        $this->assertNotNull($obj->getRequest());
+        $this->assertNull($obj->getRequest());
         $this->assertNull($obj->getUser());
     }
 
