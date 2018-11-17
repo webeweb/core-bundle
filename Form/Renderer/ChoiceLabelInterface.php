@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Renderer;
+namespace WBW\Bundle\CoreBundle\Form\Renderer;
 
 /**
- * Choice renderer interface.
+ * Choice label interface.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Renderer
+ * @package WBW\Bundle\CoreBundle\Form\Renderer
  */
-interface ChoiceRendererInterface {
+interface ChoiceLabelInterface {
 
     /**
      * Get the choice label.

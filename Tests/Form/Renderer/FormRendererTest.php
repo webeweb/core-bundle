@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Form\Renderer;
 
+use WBW\Bundle\CoreBundle\Form\Renderer\ChoiceLabelInterface;
 use WBW\Bundle\CoreBundle\Form\Renderer\FormRenderer;
-use WBW\Bundle\CoreBundle\Renderer\ChoiceRendererInterface;
 use WBW\Bundle\CoreBundle\Renderer\TranslatedChoiceRendererInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
 use WBW\Library\Core\Sorting\AlphabeticalTreeNodeInterface;
@@ -41,7 +41,7 @@ class FormRendererTest extends AbstractFrameworkTestCase {
         $this->args = [
             null,
             $this->getMockBuilder(AlphabeticalTreeNodeInterface::class)->getMock(),
-            $this->getMockBuilder(ChoiceRendererInterface::class)->getMock(),
+            $this->getMockBuilder(ChoiceLabelInterface::class)->getMock(),
             $this->getMockBuilder(TranslatedChoiceRendererInterface::class)->getMock(),
             $this,
         ];
