@@ -15,12 +15,12 @@ use WBW\Bundle\CoreBundle\Controller\AbstractController;
 use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
 
 /**
- * Test controller.
+ * Test abstract controller.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Controller
  */
-class TestController extends AbstractController {
+class TestAbstractController extends AbstractController {
 
     /**
      * {@inheritdoc}

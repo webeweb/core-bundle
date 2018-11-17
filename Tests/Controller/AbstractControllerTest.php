@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
 use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Controller\TestController;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Controller\TestAbstractController;
 
 /**
  * Abstract controller test.
@@ -60,7 +60,7 @@ class AbstractControllerTest extends AbstractFrameworkTestCase {
      */
     public function testGetEventDispatcher() {
 
-        $obj = new TestController();
+        $obj = new TestAbstractController();
         $obj->setContainer($this->containerBuilder);
 
         $res = $obj->getEventDispatcher();
@@ -75,7 +75,7 @@ class AbstractControllerTest extends AbstractFrameworkTestCase {
      */
     public function testGetKernelEventListener() {
 
-        $obj = new TestController();
+        $obj = new TestAbstractController();
         $obj->setContainer($this->containerBuilder);
 
         $res = $obj->getKernelEventListener();
@@ -90,7 +90,7 @@ class AbstractControllerTest extends AbstractFrameworkTestCase {
      */
     public function testGetLogger() {
 
-        $obj = new TestController();
+        $obj = new TestAbstractController();
         $obj->setContainer($this->containerBuilder);
 
         $res = $obj->getLogger();
@@ -105,7 +105,7 @@ class AbstractControllerTest extends AbstractFrameworkTestCase {
      */
     public function testGetRouter() {
 
-        $obj = new TestController();
+        $obj = new TestAbstractController();
         $obj->setContainer($this->containerBuilder);
 
         $res = $obj->getRouter();
@@ -120,7 +120,7 @@ class AbstractControllerTest extends AbstractFrameworkTestCase {
      */
     public function testGetSession() {
 
-        $obj = new TestController();
+        $obj = new TestAbstractController();
         $obj->setContainer($this->containerBuilder);
 
         $res = $obj->getSession();
@@ -135,7 +135,7 @@ class AbstractControllerTest extends AbstractFrameworkTestCase {
      */
     public function testGetTranslator() {
 
-        $obj = new TestController();
+        $obj = new TestAbstractController();
         $obj->setContainer($this->containerBuilder);
 
         $res = $obj->getTranslator();
@@ -157,7 +157,7 @@ class AbstractControllerTest extends AbstractFrameworkTestCase {
         // Set the Kernel event listener mock.
         $this->kernelEventListener->expects($this->any())->method("getUser")->willReturn($this->user);
 
-        $obj = new TestController();
+        $obj = new TestAbstractController();
         $obj->setContainer($this->containerBuilder);
 
         $res = $obj->hasRolesOrRedirect(["ROLE_GITHUB"], false, "redirect");
@@ -171,7 +171,7 @@ class AbstractControllerTest extends AbstractFrameworkTestCase {
      */
     public function testHasRoleOrRedirectWithBadUserRoleException() {
 
-        $obj = new TestController();
+        $obj = new TestAbstractController();
         $obj->setContainer($this->containerBuilder);
 
         try {
@@ -198,7 +198,7 @@ class AbstractControllerTest extends AbstractFrameworkTestCase {
         $this->eventDispatcher->expects($this->any())->method("hasListeners")->willReturn(true);
         $this->eventDispatcher->expects($this->any())->method("dispatch")->willReturn(new NotificationEvent("eventName", $notification));
 
-        $obj = new TestController();
+        $obj = new TestAbstractController();
         $obj->setContainer($this->containerBuilder);
 
         $res = $obj->notify("eventName", $notification);
@@ -218,7 +218,7 @@ class AbstractControllerTest extends AbstractFrameworkTestCase {
         // Set the Event dispatcher mock.
         $this->eventDispatcher->expects($this->any())->method("hasListeners")->willReturn(false);
 
-        $obj = new TestController();
+        $obj = new TestAbstractController();
         $obj->setContainer($this->containerBuilder);
 
         $res = $obj->notify("eventName", $notification);
