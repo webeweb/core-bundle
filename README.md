@@ -11,7 +11,8 @@ core-bundle
 
 Core bundle for Symfony 2 and more.
 
-`core-bundle` provides some useful classes to build another bundles.
+`core-bundle` provides some useful classes to build another bundles. We use it
+into all our bundles and Symfony applications.
 
 Includes:
 
