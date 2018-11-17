@@ -1,1 +1,5 @@
 # Tests/Fixtures/app/config/routing_test.yml
+core_email_action:
+    path:     "/email"
+    defaults: { _controller: "WBW\\Bundle\\CoreBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::emailAction" }
+    methods:  ["GET"]
