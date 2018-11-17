@@ -24,11 +24,11 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
 class FormFactoryTest extends AbstractFrameworkTestCase {
 
     /**
-     * Tests the createChoiceType() method.
+     * Tests the newChoiceType() method.
      *
      * @return void
      */
-    public function testCreateChoiceType() {
+    public function testNewChoiceType() {
 
         $obj = [
             0 => "0",
@@ -37,15 +37,15 @@ class FormFactoryTest extends AbstractFrameworkTestCase {
         ];
 
         $res = ["choices" => ["0" => 0, "1" => 1, "2" => 2]];
-        $this->assertEquals($res, FormFactory::createChoiceType($obj));
+        $this->assertEquals($res, FormFactory::newChoiceType($obj));
     }
 
     /**
-     * Tests the createEntityType method.
+     * Tests the newEntityType method.
      *
      * @return void
      */
-    public function testCreateEntityType() {
+    public function testNewEntityType() {
 
         $obj = [
             new NavigationNode("id1"),
@@ -53,24 +53,21 @@ class FormFactoryTest extends AbstractFrameworkTestCase {
             new NavigationNode("id3"),
         ];
 
-        $res = FormFactory::createEntityType(NavigationNode::class, $obj);
+        $res = FormFactory::newEntityType(NavigationNode::class, $obj);
         $this->assertEquals(NavigationNode::class, $res["class"]);
         $this->assertCount(3, $res["choices"]);
         $this->assertSame($obj[0], $res["choices"][0]);
         $this->assertSame($obj[1], $res["choices"][1]);
         $this->assertSame($obj[2], $res["choices"][2]);
         $this->assertTrue(is_callable($res["choice_label"]));
-        $this->assertEquals("─ FormRendererInterface not implemented by this object", $res["choice_label"]($res["choices"][0]));
-        $this->assertEquals("─ FormRendererInterface not implemented by this object", $res["choice_label"]($res["choices"][1]));
-        $this->assertEquals("─ FormRendererInterface not implemented by this object", $res["choice_label"]($res["choices"][2]));
     }
 
     /**
-     * Tests the createEntityType method.
+     * Tests the newEntityType method.
      *
      * @return void
      */
-    public function testCreateEntityTypeWithEmpty() {
+    public function testNewEntityTypeWithEmpty() {
 
         $obj = [
             new NavigationNode("id1"),
@@ -78,7 +75,7 @@ class FormFactoryTest extends AbstractFrameworkTestCase {
             new NavigationNode("id3"),
         ];
 
-        $res = FormFactory::createEntityType(NavigationNode::class, $obj, ["empty" => true]);
+        $res = FormFactory::newEntityType(NavigationNode::class, $obj, ["empty" => true]);
         $this->assertEquals(NavigationNode::class, $res["class"]);
         $this->assertCount(4, $res["choices"]);
         $this->assertNull($res["choices"][0]);
@@ -86,10 +83,6 @@ class FormFactoryTest extends AbstractFrameworkTestCase {
         $this->assertSame($obj[1], $res["choices"][2]);
         $this->assertSame($obj[2], $res["choices"][3]);
         $this->assertTrue(is_callable($res["choice_label"]));
-        $this->assertEquals("Empty selection", $res["choice_label"]($res["choices"][0]));
-        $this->assertEquals("─ FormRendererInterface not implemented by this object", $res["choice_label"]($res["choices"][1]));
-        $this->assertEquals("─ FormRendererInterface not implemented by this object", $res["choice_label"]($res["choices"][2]));
-        $this->assertEquals("─ FormRendererInterface not implemented by this object", $res["choice_label"]($res["choices"][3]));
     }
 
 }

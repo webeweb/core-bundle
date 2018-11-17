@@ -27,7 +27,7 @@ class FormFactory {
      * @param array $choices The choices.
      * @return array Returns the choice type.
      */
-    public static function createChoiceType(array $choices = []) {
+    public static function newChoiceType(array $choices = []) {
         return [
             "choices" => array_flip($choices)
         ];
@@ -41,7 +41,7 @@ class FormFactory {
      * @param array $options The options.
      * @return array $choices Returns the entity type.
      */
-    public static function createEntityType($class, array $choices = [], array $options = []) {
+    public static function newEntityType($class, array $choices = [], array $options = []) {
 
         // Check the options.
         if (false === array_key_exists("empty", $options)) {
