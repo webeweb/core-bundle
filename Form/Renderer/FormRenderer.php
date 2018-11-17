@@ -45,7 +45,7 @@ class FormRenderer {
         } else if (true === ($option instanceof ChoiceLabelInterface)) {
             $output = $option->getChoiceLabel();
         } else {
-            $output = "[Translated]ChoiceLabelInterface not implemented by this object";
+            $output = "This option must implements [Translated]ChoiceLabelInterface";
         }
 
         if (true === ($option instanceof AlphabeticalTreeNodeInterface)) {

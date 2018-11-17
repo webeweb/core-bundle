@@ -32,7 +32,7 @@ class FormRendererTest extends AbstractFrameworkTestCase {
      */
     public function testRenderOption() {
 
-        $this->assertEquals("[Translated]ChoiceLabelInterface not implemented by this object", FormRenderer::renderOption($this));
+        $this->assertEquals("This option must implements [Translated]ChoiceLabelInterface", FormRenderer::renderOption($this));
     }
 
     /**
@@ -84,7 +84,7 @@ class FormRendererTest extends AbstractFrameworkTestCase {
         $arg = $this->getMockBuilder(AlphabeticalTreeNodeInterface::class)->getMock();
         $arg->expects($this->any())->method("getAlphabeticalTreeNodeParent")->willReturn(null);
 
-        $this->assertEquals("─ [Translated]ChoiceLabelInterface not implemented by this object", FormRenderer::renderOption($arg));
+        $this->assertEquals("─ This option must implements [Translated]ChoiceLabelInterface", FormRenderer::renderOption($arg));
     }
 
 }
