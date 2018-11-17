@@ -1,0 +1,6 @@
+# Resources/translations/CoreBundle.en.yml
+label:
+    account_settings:  "Profil utilisateur"
+    support:           "Support"
+    unsubscribe:       "Se désinscrire"
+    with_best_regards: "Cordialement"
