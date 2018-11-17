@@ -1,0 +1,6 @@
+# Resources/translations/CoreBundle.en.yml
+label:
+    account_settings:  "Account settings"
+    support:           "Support"
+    unsubscribe:       "Unsubscribe"
+    with_best_regards: "With best regards"
