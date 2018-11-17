@@ -30,14 +30,14 @@ class FormFactoryTest extends AbstractFrameworkTestCase {
      */
     public function testNewChoiceType() {
 
-        $obj = [
+        $arg = [
             0 => "0",
             1 => "1",
             2 => "2",
         ];
 
         $res = ["choices" => ["0" => 0, "1" => 1, "2" => 2]];
-        $this->assertEquals($res, FormFactory::newChoiceType($obj));
+        $this->assertEquals($res, FormFactory::newChoiceType($arg));
     }
 
     /**
@@ -47,19 +47,23 @@ class FormFactoryTest extends AbstractFrameworkTestCase {
      */
     public function testNewEntityType() {
 
-        $obj = [
+        $arg = [
             new NavigationNode("id1"),
             new NavigationNode("id2"),
             new NavigationNode("id3"),
         ];
 
-        $res = FormFactory::newEntityType(NavigationNode::class, $obj);
+        $res = FormFactory::newEntityType(NavigationNode::class, $arg);
         $this->assertEquals(NavigationNode::class, $res["class"]);
         $this->assertCount(3, $res["choices"]);
-        $this->assertSame($obj[0], $res["choices"][0]);
-        $this->assertSame($obj[1], $res["choices"][1]);
-        $this->assertSame($obj[2], $res["choices"][2]);
+        $this->assertSame($arg[0], $res["choices"][0]);
+        $this->assertSame($arg[1], $res["choices"][1]);
+        $this->assertSame($arg[2], $res["choices"][2]);
         $this->assertTrue(is_callable($res["choice_label"]));
+
+        $this->assertEquals("─ This option must implements [Translated]ChoiceLabelInterface", $res["choice_label"]($res["choices"][0]));
+        $this->assertEquals("─ This option must implements [Translated]ChoiceLabelInterface", $res["choice_label"]($res["choices"][1]));
+        $this->assertEquals("─ This option must implements [Translated]ChoiceLabelInterface", $res["choice_label"]($res["choices"][2]));
     }
 
     /**
@@ -69,20 +73,25 @@ class FormFactoryTest extends AbstractFrameworkTestCase {
      */
     public function testNewEntityTypeWithEmpty() {
 
-        $obj = [
+        $arg = [
             new NavigationNode("id1"),
             new NavigationNode("id2"),
             new NavigationNode("id3"),
         ];
 
-        $res = FormFactory::newEntityType(NavigationNode::class, $obj, ["empty" => true]);
+        $res = FormFactory::newEntityType(NavigationNode::class, $arg, ["empty" => true]);
         $this->assertEquals(NavigationNode::class, $res["class"]);
         $this->assertCount(4, $res["choices"]);
         $this->assertNull($res["choices"][0]);
-        $this->assertSame($obj[0], $res["choices"][1]);
-        $this->assertSame($obj[1], $res["choices"][2]);
-        $this->assertSame($obj[2], $res["choices"][3]);
+        $this->assertSame($arg[0], $res["choices"][1]);
+        $this->assertSame($arg[1], $res["choices"][2]);
+        $this->assertSame($arg[2], $res["choices"][3]);
         $this->assertTrue(is_callable($res["choice_label"]));
+
+        $this->assertEquals("Empty selection", $res["choice_label"]($res["choices"][0]));
+        $this->assertEquals("─ This option must implements [Translated]ChoiceLabelInterface", $res["choice_label"]($res["choices"][1]));
+        $this->assertEquals("─ This option must implements [Translated]ChoiceLabelInterface", $res["choice_label"]($res["choices"][2]));
+        $this->assertEquals("─ This option must implements [Translated]ChoiceLabelInterface", $res["choice_label"]($res["choices"][3]));
     }
 
 }
