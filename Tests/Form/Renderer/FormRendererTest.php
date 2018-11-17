@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Form\Renderer;
 
-use WBW\Bundle\CoreBundle\Form\Renderer\ChoiceLabelInterface;
+use WBW\Bundle\CoreBundle\Entity\ChoiceLabelInterface;
+use WBW\Bundle\CoreBundle\Entity\TranslatedChoiceLabelInterface;
 use WBW\Bundle\CoreBundle\Form\Renderer\FormRenderer;
-use WBW\Bundle\CoreBundle\Renderer\TranslatedChoiceRendererInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
 use WBW\Library\Core\Sorting\AlphabeticalTreeNodeInterface;
 
@@ -26,43 +26,65 @@ use WBW\Library\Core\Sorting\AlphabeticalTreeNodeInterface;
 class FormRendererTest extends AbstractFrameworkTestCase {
 
     /**
-     * Arguments.
-     *
-     * @var array
-     */
-    private $args;
-
-    /**
-     * {@inheritdoc}
-     */
-    protected function setUp() {
-
-        // Set the mocks.
-        $this->args = [
-            null,
-            $this->getMockBuilder(AlphabeticalTreeNodeInterface::class)->getMock(),
-            $this->getMockBuilder(ChoiceLabelInterface::class)->getMock(),
-            $this->getMockBuilder(TranslatedChoiceRendererInterface::class)->getMock(),
-            $this,
-        ];
-
-        $this->args[1]->expects($this->any())->method("getAlphabeticalTreeNodeParent")->willReturn(null);
-        $this->args[2]->expects($this->any())->method("getChoiceLabel")->willReturn("choiceLabel");
-        $this->args[3]->expects($this->any())->method("getTranslatedChoiceLabel")->willReturn("translatedChoiceLabel");
-    }
-
-    /**
-     * Tests the render() method.
+     * Tests the renderOption() method.
      *
      * @return void
      */
-    public function testRender() {
+    public function testRenderOption() {
 
-        $this->assertEquals("Empty selection", FormRenderer::renderOption($this->args[0]));
-        $this->assertEquals("─ FormRendererInterface not implemented by this object", FormRenderer::renderOption($this->args[1]));
-        $this->assertEquals("choiceLabel", FormRenderer::renderOption($this->args[2]));
-        $this->assertEquals("translatedChoiceLabel", FormRenderer::renderOption($this->args[3]));
-        $this->assertEquals("FormRendererInterface not implemented by this object", FormRenderer::renderOption($this->args[4]));
+        $this->assertEquals("[Translated]ChoiceLabelInterface not implemented by this object", FormRenderer::renderOption($this));
+    }
+
+    /**
+     * Tests the renderOption() method.
+     *
+     * @return void
+     */
+    public function testRenderWithNull() {
+
+        $this->assertEquals("Empty selection", FormRenderer::renderOption(null));
+    }
+
+    /**
+     * Tests the renderOption() method.
+     *
+     * @return void
+     */
+    public function testRenderWithTranslatedChoiceInterface() {
+
+        // Set a Translated choice label mock.
+        $arg = $this->getMockBuilder(TranslatedChoiceLabelInterface::class)->getMock();
+        $arg->expects($this->any())->method("getTranslatedChoiceLabel")->willReturn("translatedChoiceLabel");
+
+        $this->assertEquals("translatedChoiceLabel", FormRenderer::renderOption($arg));
+    }
+
+    /**
+     * Tests the renderOption() method.
+     *
+     * @return void
+     */
+    public function testRenderWithChoiceInterface() {
+
+        // Set a Choice label mock.
+        $arg = $this->getMockBuilder(ChoiceLabelInterface::class)->getMock();
+        $arg->expects($this->any())->method("getChoiceLabel")->willReturn("choiceLabel");
+
+        $this->assertEquals("choiceLabel", FormRenderer::renderOption($arg));
+    }
+
+    /**
+     * Tests the renderOption() method.
+     *
+     * @return void
+     */
+    public function testRenderWithAlphabeticalTreeNodeInterface() {
+
+        // Set a Alphabetical tree node mock.
+        $arg = $this->getMockBuilder(AlphabeticalTreeNodeInterface::class)->getMock();
+        $arg->expects($this->any())->method("getAlphabeticalTreeNodeParent")->willReturn(null);
+
+        $this->assertEquals("─ [Translated]ChoiceLabelInterface not implemented by this object", FormRenderer::renderOption($arg));
     }
 
 }

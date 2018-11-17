@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Renderer;
+namespace WBW\Bundle\CoreBundle\Entity;
 
 use Symfony\Component\Translation\TranslatorInterface;
 
@@ -17,9 +17,9 @@ use Symfony\Component\Translation\TranslatorInterface;
  * Translated choice renderer.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Renderer
+ * @package WBW\Bundle\CoreBundle\Entity
  */
-interface TranslatedChoiceRendererInterface {
+interface TranslatedChoiceLabelInterface {
 
     /**
      * Get the translated choice label.

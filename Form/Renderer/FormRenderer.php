@@ -12,7 +12,8 @@
 namespace WBW\Bundle\CoreBundle\Form\Renderer;
 
 use Symfony\Component\Translation\TranslatorInterface;
-use WBW\Bundle\CoreBundle\Renderer\TranslatedChoiceRendererInterface;
+use WBW\Bundle\CoreBundle\Entity\ChoiceLabelInterface;
+use WBW\Bundle\CoreBundle\Entity\TranslatedChoiceLabelInterface;
 use WBW\Library\Core\Sorting\AlphabeticalTreeNodeHelper;
 use WBW\Library\Core\Sorting\AlphabeticalTreeNodeInterface;
 
@@ -39,12 +40,12 @@ class FormRenderer {
         }
 
         // Check the implementation.
-        if (true === ($option instanceof ChoiceLabelInterface)) {
-            $output = $option->getChoiceLabel();
-        } else if (true === ($option instanceof TranslatedChoiceRendererInterface)) {
+        if (true === ($option instanceof TranslatedChoiceLabelInterface)) {
             $output = $option->getTranslatedChoiceLabel($translator);
+        } else if (true === ($option instanceof ChoiceLabelInterface)) {
+            $output = $option->getChoiceLabel();
         } else {
-            $output = "FormRendererInterface not implemented by this object";
+            $output = "[Translated]ChoiceLabelInterface not implemented by this object";
         }
 
         if (true === ($option instanceof AlphabeticalTreeNodeInterface)) {
