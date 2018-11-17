@@ -1,5 +1,5 @@
 core-bundle
-================
+===========
 
 [![Build Status](https://travis-ci.com/webeweb/core-bundle.svg?branch=master)](https://travis-ci.com/webeweb/core-bundle)
 [![Coverage Status](https://coveralls.io/repos/github/webeweb/core-bundle/badge.svg?branch=master)](https://coveralls.io/github/webeweb/core-bundle?branch=master)
@@ -11,9 +11,7 @@ core-bundle
 
 Core bundle for Symfony 2 and more.
 
-> IMPORTANT NOTICE: This package is still under development. Any changes will be
-> done without prior notice to consumers of this package. Of course this code
-> will become stable at a certain point, but for now, use at your own risk.
+`core-bundle` provides some useful classes to build another bundles.
 
 Includes:
 
