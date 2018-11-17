@@ -1,0 +1,220 @@
+{# Resources/views/include/email/style.html.twig #}
+<style type="text/css">
+    body {
+        mso-line-height-rule: exactly;
+        margin: 0;
+        min-width: 100%;
+        padding: 0;
+    }
+    .wrapper {
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        display: table;
+        table-layout: fixed;
+        min-width: 620px;
+        width: 100%;
+    }
+    body, .wrapper {
+        background-color: #ffffff;
+    }
+
+    /* Basic */
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    table.center {
+        margin: 0 auto;
+        width: 602px;
+    }
+    td {
+        padding: 0;
+        vertical-align: top;
+    }
+
+    .spacer,
+    .border {
+        font-size: 1px;
+        line-height: 1px;
+    }
+    .spacer {
+        line-height: 16px;
+        width: 100%;
+    }
+    .border {
+        background-color: #e0e0e0;
+        width: 1px;
+    }
+
+    .padded {
+        padding: 0 24px;
+    }
+    img {
+        -ms-interpolation-mode: bicubic;
+        border: 0;
+    }
+    .image {
+        font-size: 12px;
+    }
+    .image img {
+        display: block;
+    }
+    strong, .strong {
+        font-weight: 700;
+    }
+    h1,
+    h2,
+    h3,
+    p,
+    ol,
+    ul,
+    li {
+        margin-top: 0;
+    }
+    ol,
+    ul,
+    li {
+        padding-left: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: #616161;
+    }
+    .btn {
+        -webkit-text-size-adjust:none;
+        background-color:#2196F3;
+        border:1px solid #2196F3;
+        border-radius:2px;
+        color:#ffffff;
+        display:inline-block;
+        font-family:Roboto, Helvetica, sans-serif;
+        height: 36px;
+        line-height:36px;
+        font-size:14px;
+        font-weight:400;
+        margin: 0;
+        mso-hide:all;
+        outline: 0;
+        outline-offset: 0;
+        padding: 0 8px;
+        text-align:center;
+        text-decoration:none;
+        text-transform:uppercase;
+        width:200px;
+    }
+
+    /* Top panel */
+    .title {
+        text-align: left;
+    }
+
+    .subject {
+        text-align: right;
+    }
+
+    .title, .subject {
+        color: #616161;
+        font-family: Roboto, Helvetica, sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        padding: 8px 0;
+        width: 300px;
+    }
+
+    /* Header */
+    .logo {
+        padding: 16px 0;
+    }
+
+    /* Logo */
+    .logo-image {
+
+    }
+
+    /* Main */
+    .main {
+        -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+        -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+    }
+
+    /* Content */
+    .columns {
+        background-color: #ffffff;
+        font-size: 14px;
+        margin: 0 auto;
+        width: 600px;
+    }
+
+    .column {
+        background-color: #ffffff;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .column-top {
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .column-bottom {
+        font-size: 8px;
+        line-height: 8px;
+    }
+
+    .content h1 {
+        color: #212121;
+        font-family: Roboto, Helvetica, sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        margin-bottom: 16px;
+        margin-top: 0;
+    }
+
+    .content p {
+        color: #212121;
+        font-family: Roboto, Helvetica, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        margin-bottom: 16px;
+        margin-top: 0;
+    }
+    .content .caption {
+        color: #616161;
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    /* Footer */
+    .signature, .subscription {
+        margin-bottom: 16px;
+        padding-top: 8px;
+        vertical-align: bottom;
+        width: 300px;
+    }
+
+    .signature {
+        text-align: left;
+    }
+    .subscription {
+        text-align: right;
+    }
+
+    .signature p, .subscription p {
+        color: #616161;
+        font-family: Roboto, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        margin-bottom: 8px;
+        margin-top: 0;
+    }
+</style>
