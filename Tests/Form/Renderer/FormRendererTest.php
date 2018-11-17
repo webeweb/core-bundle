@@ -58,11 +58,11 @@ class FormRendererTest extends AbstractFrameworkTestCase {
      */
     public function testRender() {
 
-        $this->assertEquals("Empty selection", FormRenderer::render($this->args[0]));
-        $this->assertEquals("─ FormRendererInterface not implemented by this object", FormRenderer::render($this->args[1]));
-        $this->assertEquals("choiceLabel", FormRenderer::render($this->args[2]));
-        $this->assertEquals("translatedChoiceLabel", FormRenderer::render($this->args[3]));
-        $this->assertEquals("FormRendererInterface not implemented by this object", FormRenderer::render($this->args[4]));
+        $this->assertEquals("Empty selection", FormRenderer::renderOption($this->args[0]));
+        $this->assertEquals("─ FormRendererInterface not implemented by this object", FormRenderer::renderOption($this->args[1]));
+        $this->assertEquals("choiceLabel", FormRenderer::renderOption($this->args[2]));
+        $this->assertEquals("translatedChoiceLabel", FormRenderer::renderOption($this->args[3]));
+        $this->assertEquals("FormRendererInterface not implemented by this object", FormRenderer::renderOption($this->args[4]));
     }
 
 }

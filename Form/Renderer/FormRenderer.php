@@ -26,13 +26,13 @@ use WBW\Library\Core\Sorting\AlphabeticalTreeNodeInterface;
 class FormRenderer {
 
     /**
-     * Render a select option.
+     * Render an option.
      *
      * @param mixed $option The option.
      * @param TranslatorInterface $translator The translator service.
-     * @return string Returns the label.
+     * @return string Returns the rendered option.
      */
-    public static function render($option, TranslatorInterface $translator = null) {
+    public static function renderOption($option, TranslatorInterface $translator = null) {
 
         // Check the option.
         if (null === $option) {

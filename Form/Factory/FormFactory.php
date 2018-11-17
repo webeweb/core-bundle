@@ -28,7 +28,9 @@ class FormFactory {
      * @return array Returns the choice type.
      */
     public static function createChoiceType(array $choices = []) {
-        return ["choices" => array_flip($choices)];
+        return [
+            "choices" => array_flip($choices)
+        ];
     }
 
     /**
@@ -54,7 +56,7 @@ class FormFactory {
             "class"        => $class,
             "choices"      => [],
             "choice_label" => function($entity) use($options) {
-                return FormRenderer::render($entity, $options["translator"]);
+                return FormRenderer::renderOption($entity, $options["translator"]);
             },
         ];
 
