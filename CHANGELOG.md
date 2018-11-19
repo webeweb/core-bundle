@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Add Notification factory
+
 ### 1.0.1 (2018-11-19)
 
 - Fix resource paths
