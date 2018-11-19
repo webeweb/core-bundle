@@ -3,13 +3,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        {% include "@Core/include/email/style.html.twig" %}
-        {% block CoreEmailStyles %}
+        {% include "@Core/include/email/stylesheet.html.twig" %}
+        {% block coreEmailStylesheets %}
         {% endblock %}
     </head>
     <body>
         <center class="wrapper">
-            {% block CoreEmailHeader %}
+            {% block coreEmailHeader %}
                 <table class="top-panel center" width="602" border="0" cellspacing="0" cellpadding="0">
                     <tbody>
                         <tr>
@@ -27,13 +27,13 @@
                 </table>
             {% endblock %}
             <div class="spacer">&nbsp;</div>
-            {% block CoreEmailBody %}
+            {% block coreEmailBody %}
                 <table class="main center" width="602" border="0" cellspacing="0" cellpadding="0">
                     <tbody>
                         <tr>
                             <td class="column">
                                 <div class="column-top">&nbsp;</div>
-                                {% block bootstrapEmailContent %}
+                                {% block coreEmailContent %}
                                     <table class="content" border="0" cellspacing="0" cellpadding="0">
                                         <tbody>
                                             <tr>
@@ -60,7 +60,7 @@
                 </table>
             {% endblock %}
             <div class="spacer">&nbsp;</div>
-            {% block CoreEmailFooter %}
+            {% block coreEmailFooter %}
                 <table class="footer center" width="602" border="0" cellspacing="0" cellpadding="0">
                     <tbody>
                         <tr>
