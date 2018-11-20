@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Navigation\MaterialDesignIconicFont;
+namespace WBW\Bundle\CoreBundle\Tests\Model\Navigation\MaterialDesignIconicFont;
 
-use WBW\Bundle\CoreBundle\Navigation\MaterialDesignIconicFont\NavigationNodeActionNewUserGroup;
+use WBW\Bundle\CoreBundle\Navigation\MaterialDesignIconicFont\BreadcrumbNodeActionNewUsersGroup;
 use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
 
 /**
- * Navigation node action "New user group" test.
+ * Breadcrumb node action "New users group" test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Navigation\MaterialDesignIconicFont
+ * @package WBW\Bundle\CoreBundle\Tests\Model\Navigation\MaterialDesignIconicFont
  */
-class NavigationNodeActionNewUserGroupTest extends AbstractFrameworkTestCase {
+class BreadcrumbNodeActionNewUsersGroupTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
@@ -30,7 +30,7 @@ class NavigationNodeActionNewUserGroupTest extends AbstractFrameworkTestCase {
      */
     public function testConstruct() {
 
-        $obj = new NavigationNodeActionNewUserGroup("route");
+        $obj = new BreadcrumbNodeActionNewUsersGroup("route");
 
         $this->assertEquals("navigation.node.action.new", $obj->getId());
         $this->assertEquals("zmdi:accounts-add", $obj->getIcon());

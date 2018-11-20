@@ -11,15 +11,15 @@
 
 namespace WBW\Bundle\CoreBundle\Navigation\MaterialDesignIconicFont;
 
-use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
+use WBW\Bundle\CoreBundle\Navigation\BreadcrumbNode;
 
 /**
- * Navigation node action "New user group".
+ * Breadcrumb node action "New users group".
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Navigation\MaterialDesignIconicFont
  */
-class NavigationNodeActionNewUserGroup extends NavigationNode {
+class BreadcrumbNodeActionNewUsersGroup extends BreadcrumbNode {
 
     /**
      * Constructor.
