@@ -11,12 +11,12 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Model\Navigation\FontAwesome;
 
-use WBW\Bundle\CoreBundle\Navigation\FontAwesome\BreadcrumbNodeActionNewUserGroup;
+use WBW\Bundle\CoreBundle\Navigation\FontAwesome\BreadcrumbNodeActionNewUsersGroup;
 use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
 
 /**
- * Breadcrumb node action "New user group" test.
+ * Breadcrumb node action "New users group" test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Model\Navigation\FontAwesome
@@ -30,7 +30,7 @@ class BreadcrumbNodeActionNewUserGroupTest extends AbstractFrameworkTestCase {
      */
     public function testConstruct() {
 
-        $obj = new BreadcrumbNodeActionNewUserGroup("route");
+        $obj = new BreadcrumbNodeActionNewUsersGroup("route");
 
         $this->assertEquals("navigation.node.action.new", $obj->getId());
         $this->assertEquals("fa:plus", $obj->getIcon());

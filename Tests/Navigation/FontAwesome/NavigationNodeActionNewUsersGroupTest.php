@@ -11,17 +11,17 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Navigation\FontAwesome;
 
-use WBW\Bundle\CoreBundle\Navigation\FontAwesome\NavigationNodeActionNewUserGroup;
+use WBW\Bundle\CoreBundle\Navigation\FontAwesome\NavigationNodeActionNewUsersGroup;
 use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
 
 /**
- * Navigation node action "New user group" test.
+ * Navigation node action "New users group" test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Navigation\FontAwesome
  */
-class NavigationNodeActionNewUserGroupTest extends AbstractFrameworkTestCase {
+class NavigationNodeActionNewUsersGroupTest extends AbstractFrameworkTestCase {
 
     /**
      * Tests the __construct() method.
@@ -30,7 +30,7 @@ class NavigationNodeActionNewUserGroupTest extends AbstractFrameworkTestCase {
      */
     public function testConstruct() {
 
-        $obj = new NavigationNodeActionNewUserGroup("route");
+        $obj = new NavigationNodeActionNewUsersGroup("route");
 
         $this->assertEquals("navigation.node.action.new", $obj->getId());
         $this->assertEquals("fa:plus", $obj->getIcon());

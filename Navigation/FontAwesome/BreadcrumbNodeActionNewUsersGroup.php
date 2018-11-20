@@ -14,12 +14,12 @@ namespace WBW\Bundle\CoreBundle\Navigation\FontAwesome;
 use WBW\Bundle\CoreBundle\Navigation\BreadcrumbNode;
 
 /**
- * Breadcrumb node action "New user group".
+ * Breadcrumb node action "New users group".
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Navigation\FontAwesome
  */
-class BreadcrumbNodeActionNewUserGroup extends BreadcrumbNode {
+class BreadcrumbNodeActionNewUsersGroup extends BreadcrumbNode {
 
     /**
      * Constructor.

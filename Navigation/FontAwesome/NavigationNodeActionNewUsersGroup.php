@@ -14,12 +14,12 @@ namespace WBW\Bundle\CoreBundle\Navigation\FontAwesome;
 use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
 
 /**
- * Navigation node action "New user group".
+ * Navigation node action "New users group".
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Navigation\FontAwesome
  */
-class NavigationNodeActionNewUserGroup extends NavigationNode {
+class NavigationNodeActionNewUsersGroup extends NavigationNode {
 
     /**
      * Constructor.
