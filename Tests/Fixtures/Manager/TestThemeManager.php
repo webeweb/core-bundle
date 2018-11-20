@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Manager;
 
+use Twig_Environment;
 use WBW\Bundle\CoreBundle\Manager\AbstractThemeManager;
 use WBW\Bundle\CoreBundle\Provider\ThemeProviderInterface;
 use WBW\Library\Core\Argument\ObjectHelper;
@@ -22,6 +23,15 @@ use WBW\Library\Core\Argument\ObjectHelper;
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Manager
  */
 class TestThemeManager extends AbstractThemeManager {
+
+    /**
+     * Constructor.
+     *
+     * @param Twig_Environment $twigEnvironment The Twig environment.
+     */
+    public function __construct(Twig_Environment $twigEnvironment) {
+        parent::__construct($twigEnvironment);
+    }
 
     /**
      * {@inheritdoc}
