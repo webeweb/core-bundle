@@ -32,7 +32,7 @@ abstract class AbstractManager implements ManagerInterface {
     /**
      * Constructor.
      */
-    public function __construct() {
+    protected function __construct() {
         $this->setProviders([]);
     }
 
