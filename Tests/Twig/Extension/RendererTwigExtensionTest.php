@@ -73,4 +73,47 @@ EOT;
         $this->assertEquals($res, $obj->coreScriptFilter("content"));
     }
 
+    /**
+     * Tests the renderIcon() method.
+     *
+     * @return void
+     */
+    public function testRenderIcon() {
+
+        $res = "";
+        $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "::"));
+    }
+
+    /**
+     * Tests the renderIcon() method.
+     *
+     * @return void
+     */
+    public function testRenderIconWithFontAwesome() {
+
+        $res = '<i class="fa fa-home"></i>';
+        $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "fa:home"));
+    }
+
+    /**
+     * Tests the renderIcon() method.
+     *
+     * @return void
+     */
+    public function testRenderIconWithMeteocons() {
+
+        $res = '<i class="meteocons" data-meteocons="A"></i>';
+        $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "mc:A"));
+    }
+
+    /**
+     * Tests the renderIcon() method.
+     *
+     * @return void
+     */
+    public function testRenderIconWithMaterialDesignIconicFont() {
+        $res = '<i class="zmdi zmdi-home"></i>';
+        $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "zmdi:home"));
+    }
+
 }

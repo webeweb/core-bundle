@@ -13,6 +13,9 @@ namespace WBW\Bundle\CoreBundle\Twig\Extension;
 
 use Twig_Environment;
 use Twig_SimpleFilter;
+use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\FontAwesomeTwigExtension;
+use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MaterialDesignIconicFontTwigExtension;
+use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MeteoconsTwigExtension;
 
 /**
  * Renderer Twig extension.
@@ -52,7 +55,7 @@ class RendererTwigExtension extends AbstractTwigExtension {
         $attributes["type"] = "text/javascript";
 
         // Initialize the parameters.
-        $innerHTML = null !== $content ? "\n" . $content . "\n" : "";
+        $innerHTML = null !== $content ? implode("", ["\n", $content, "\n"]) : "";
 
         // Return the HTML.
         return static::coreHTMLElement("script", $innerHTML, $attributes);
@@ -67,6 +70,48 @@ class RendererTwigExtension extends AbstractTwigExtension {
         return [
             new Twig_SimpleFilter("coreScript", [$this, "coreScriptFilter"], ["is_safe" => ["html"]]),
         ];
+    }
+
+    /**
+     * Render an icon.
+     *
+     * @param Twig_Environment $twigEnvironment The twig environment.
+     * @param string $name The name.
+     * @param string $style The style.
+     * @return string Returns the rendered icon.
+     */
+    public static function renderIcon(Twig_Environment $twigEnvironment, $name, $style = null) {
+
+        // Determines the handler.
+        $handler = explode(":", $name);
+
+        // Get and check the parse count.
+        $parseNb = count($handler);
+        if (2 !== $parseNb) {
+            return "";
+        }
+
+        // Initialize the output.
+        $output = "";
+
+        // Swith into handler.
+        switch ($handler[0]) {
+
+            case "fa": // Font Awesome
+                $output = (new FontAwesomeTwigExtension($twigEnvironment))->renderIcon($handler[1], $style);
+                break;
+
+            case "mc": // Meteocons
+                $output = (new MeteoconsTwigExtension($twigEnvironment))->renderIcon($handler[1], $style);
+                break;
+
+            case "zmdi": // Material Design Iconic Font
+                $output = (new MaterialDesignIconicFontTwigExtension($twigEnvironment))->renderIcon($handler[1], $style);
+                break;
+        }
+
+        // Return the output.
+        return $output;
     }
 
 }
