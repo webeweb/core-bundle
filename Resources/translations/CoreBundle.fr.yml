@@ -4,3 +4,18 @@ label:
     support:           "Support"
     unsubscribe:       "Se désinscrire"
     with_best_regards: "Cordialement"
+
+navigation:
+    node:
+        action:
+            edit:   "Editer"
+            export: "Exporter"
+            import: "Importer"
+            index:  "Lister"
+            new:    "Nouveau"
+        dashboard:   "Tableau de bord"
+        events:      "Evènements"
+        parameters:  "Paramètres"
+        settings:    "Réglages"
+        users:       "Utilisateurs"
+        usersGroups: "Groupes d'utilisateurs"
