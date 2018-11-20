@@ -37,8 +37,8 @@ class NavigationNodeTest extends AbstractFrameworkTestCase {
         $this->assertFalse($obj->getEnable());
         $this->assertNull($obj->getIcon());
         $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
-        $this->assertNull($obj->getRoute());
         $this->assertNull($obj->getTarget());
+        $this->assertNull($obj->getURI());
         $this->assertTrue($obj->getVisible());
     }
 
@@ -119,20 +119,6 @@ class NavigationNodeTest extends AbstractFrameworkTestCase {
     }
 
     /**
-     * Tests the setRoute() method.
-     *
-     * @return void
-     * @depends testConstruct
-     */
-    public function testSetRoute() {
-
-        $obj = new NavigationNode("id");
-
-        $obj->setRoute("route");
-        $this->assertEquals("route", $obj->getRoute());
-    }
-
-    /**
      * Tests the setTarget() method.
      *
      * @return void
@@ -144,6 +130,20 @@ class NavigationNodeTest extends AbstractFrameworkTestCase {
 
         $obj->setTarget("_blank");
         $this->assertEquals("_blank", $obj->getTarget());
+    }
+
+    /**
+     * Tests the setURI() method.
+     *
+     * @return void
+     * @depends testConstruct
+     */
+    public function testSetURI() {
+
+        $obj = new NavigationNode("id");
+
+        $obj->setURI("route");
+        $this->assertEquals("route", $obj->getURI());
     }
 
 }

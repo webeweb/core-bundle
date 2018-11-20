@@ -51,18 +51,18 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
     private $matcher;
 
     /**
-     * Route.
-     *
-     * @var string
-     */
-    private $route;
-
-    /**
      * Target.
      *
      * @var string
      */
     private $target;
+
+    /**
+     * URI.
+     *
+     * @var string
+     */
+    private $uri;
 
     /**
      * Visible ?
@@ -76,17 +76,17 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
      *
      * @param string $name The name.
      * @param string $icon The icon.
-     * @param string $route The route.
+     * @param string $uri The URI.
      * @param string $matcher The matcher.
      */
-    protected function __construct($name, $icon = null, $route = self::NAVIGATION_HREF_DEFAULT, $matcher = self::NAVIGATION_MATCHER_URL) {
+    protected function __construct($name, $icon = null, $uri = self::NAVIGATION_HREF_DEFAULT, $matcher = self::NAVIGATION_MATCHER_URL) {
         parent::__construct($name);
         $this->setActive(false);
         $this->setEnable(false);
         $this->setIcon($icon);
         $this->setMatcher($matcher);
-        $this->setRoute($route);
         $this->setTarget(null);
+        $this->setUri($uri);
         $this->setVisible(true);
     }
 
@@ -127,21 +127,21 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
     }
 
     /**
-     * Get the route.
-     *
-     * @return string Returns the route.
-     */
-    public function getRoute() {
-        return $this->route;
-    }
-
-    /**
      * Get the target.
      *
      * @return string Returns the target.
      */
     public function getTarget() {
         return $this->target;
+    }
+
+    /**
+     * Get the URI.
+     *
+     * @return string Returns the URI.
+     */
+    public function getUri() {
+        return $this->uri;
     }
 
     /**
@@ -219,17 +219,6 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
     }
 
     /**
-     * Set the route.
-     *
-     * @param string $route The route.
-     * @return NavigationNode Returns the navigation node.
-     */
-    public function setRoute($route) {
-        $this->route = $route;
-        return $this;
-    }
-
-    /**
      * Set the target.
      *
      * @param string $target The target.
@@ -237,6 +226,17 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
      */
     public function setTarget($target) {
         $this->target = $target;
+        return $this;
+    }
+
+    /**
+     * Set the uri.
+     *
+     * @param string $uri The URI.
+     * @return NavigationNode Returns the navigation node.
+     */
+    public function setUri($uri) {
+        $this->uri = $uri;
         return $this;
     }
 

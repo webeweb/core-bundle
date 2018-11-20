@@ -36,7 +36,7 @@ class BreadcrumbNodeTest extends AbstractFrameworkTestCase {
         $this->assertFalse($obj->getEnable());
         $this->assertNull($obj->getIcon());
         $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
-        $this->assertNull($obj->getRoute());
+        $this->assertNull($obj->getURI());
         $this->assertFalse($obj->getVisible());
     }
 

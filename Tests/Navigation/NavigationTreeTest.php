@@ -35,7 +35,7 @@ class NavigationTreeTest extends AbstractFrameworkTestCase {
         $this->assertFalse($obj->getActive());
         $this->assertFalse($obj->getEnable());
         $this->assertNull($obj->getIcon());
-        $this->assertEquals(NavigationInterface::NAVIGATION_HREF_DEFAULT, $obj->getRoute());
+        $this->assertEquals(NavigationInterface::NAVIGATION_HREF_DEFAULT, $obj->getUri());
         $this->assertTrue($obj->getVisible());
     }
 
