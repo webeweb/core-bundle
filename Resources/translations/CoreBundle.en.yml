@@ -4,3 +4,18 @@ label:
     support:           "Support"
     unsubscribe:       "Unsubscribe"
     with_best_regards: "With best regards"
+
+navigation:
+    node:
+        action:
+            edit:   "Edit"
+            export: "Export"
+            import: "Import"
+            index:  "Index"
+            new:    "New"
+        dashboard:   "Dashboard"
+        events:      "Events"
+        parameters:  "Parameters"
+        settings:    "Settings"
+        users:       "Users"
+        usersGroups: "Users groups"
