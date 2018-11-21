@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Model\Navigation\FontAwesome;
+namespace WBW\Bundle\CoreBundle\Tests\Navigation\FontAwesome;
 
 use WBW\Bundle\CoreBundle\Navigation\FontAwesome\BreadcrumbNodeActionNewUser;
 use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
  * Breadcrumb node action "New user" test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Model\Navigation\FontAwesome
+ * @package WBW\Bundle\CoreBundle\Tests\Navigation\FontAwesome
  */
 class BreadcrumbNodeActionNewUserTest extends AbstractFrameworkTestCase {
 
