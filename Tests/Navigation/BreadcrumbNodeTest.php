@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Model\Navigation;
+namespace WBW\Bundle\CoreBundle\Tests\Navigation;
 
 use WBW\Bundle\CoreBundle\Navigation\BreadcrumbNode;
 use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
  * Breadcrumb node test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Model\Navigation
+ * @package WBW\Bundle\CoreBundle\Tests\Navigation
  */
 class BreadcrumbNodeTest extends AbstractFrameworkTestCase {
 
@@ -36,7 +36,7 @@ class BreadcrumbNodeTest extends AbstractFrameworkTestCase {
         $this->assertFalse($obj->getEnable());
         $this->assertNull($obj->getIcon());
         $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
-        $this->assertNull($obj->getURI());
+        $this->assertNull($obj->getUri());
         $this->assertFalse($obj->getVisible());
     }
 
