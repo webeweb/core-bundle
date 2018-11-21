@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of the adminbsb-material-design-bundle package.
+ * This file is part of the core-bundle package.
  *
  * (c) 2018 WEBEWEB
  *
