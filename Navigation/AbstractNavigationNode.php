@@ -79,7 +79,7 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
      * @param string $uri The URI.
      * @param string $matcher The matcher.
      */
-    protected function __construct($name, $icon = null, $uri = self::NAVIGATION_HREF_DEFAULT, $matcher = self::NAVIGATION_MATCHER_URL) {
+    protected function __construct($name, $icon = null, $uri = null, $matcher = self::NAVIGATION_MATCHER_URL) {
         parent::__construct($name);
         $this->setActive(false);
         $this->setEnable(false);
