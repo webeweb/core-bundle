@@ -9,9 +9,8 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Model\Navigation;
+namespace WBW\Bundle\CoreBundle\Tests\Navigation;
 
-use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
 use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
 
@@ -19,7 +18,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
  * Navigation tree test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Model\Navigation
+ * @package WBW\Bundle\CoreBundle\Tests\Navigation
  */
 class NavigationTreeTest extends AbstractFrameworkTestCase {
 
@@ -35,7 +34,7 @@ class NavigationTreeTest extends AbstractFrameworkTestCase {
         $this->assertFalse($obj->getActive());
         $this->assertFalse($obj->getEnable());
         $this->assertNull($obj->getIcon());
-        $this->assertEquals(NavigationInterface::NAVIGATION_HREF_DEFAULT, $obj->getUri());
+        $this->assertNull($obj->getUri());
         $this->assertTrue($obj->getVisible());
     }
 
