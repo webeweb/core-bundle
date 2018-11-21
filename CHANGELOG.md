@@ -3,6 +3,7 @@ CHANGELOG
 
 ### master
 
+- Improve unit tests
 - Add Navigation nodes with predefined icons (Font Awesome and Material Design Iconic font)
 - Rename $route into $uri in Navigation classes
 - Add Notification factory
