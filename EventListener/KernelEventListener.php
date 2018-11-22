@@ -12,7 +12,6 @@
 namespace WBW\Bundle\CoreBundle\EventListener;
 
 use Symfony\Component\HttpFoundation\RedirectResponse;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
@@ -20,7 +19,9 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
 use WBW\Bundle\CoreBundle\Exception\RedirectResponseException;
 use WBW\Bundle\CoreBundle\Manager\ThemeManager;
+use WBW\Bundle\CoreBundle\Model\RequestTrait;
 use WBW\Bundle\CoreBundle\Model\UserTrait;
+use WBW\Bundle\CoreBundle\Service\ThemeManagerTrait;
 use WBW\Bundle\CoreBundle\Service\TokenStorageTrait;
 
 /**
@@ -31,6 +32,8 @@ use WBW\Bundle\CoreBundle\Service\TokenStorageTrait;
  */
 class KernelEventListener {
 
+    use RequestTrait;
+    use ThemeManagerTrait;
     use TokenStorageTrait;
     use UserTrait;
 
@@ -42,48 +45,14 @@ class KernelEventListener {
     const SERVICE_NAME = "webeweb.core.event_listener.kernel";
 
     /**
-     * Request.
-     *
-     * @var Request
-     */
-    protected static $request;
-
-    /**
-     * Theme manager.
-     *
-     * @var ThemeManager
-     */
-    private $themeManager;
-
-    /**
      * Constructor.
      *
      * @param TokenStorageInterface $tokenStorage The token storage.
      * @param ThemeManager $themeManager The theme manager.
      */
     public function __construct(TokenStorageInterface $tokenStorage, ThemeManager $themeManager) {
-        self::$request = null;
-
         $this->setThemeManager($themeManager);
         $this->setTokenStorage($tokenStorage);
-    }
-
-    /**
-     * Get the theme manager.
-     *
-     * @return ThemeManager Returns the theme manager.
-     */
-    public function getThemeManager() {
-        return $this->themeManager;
-    }
-
-    /**
-     * Get the request.
-     *
-     * @return Request Returns the request.
-     */
-    public function getRequest() {
-        return self::$request;
     }
 
     /**
@@ -167,30 +136,8 @@ class KernelEventListener {
         // Initialize the request.
         $this->setRequest($event->getRequest());
 
-        // Register the providers.
+        // Register the theme providers.
         $this->getThemeManager()->addGlobal();
-    }
-
-    /**
-     * Set the theme manager.
-     *
-     * @param ThemeManager $themeManager The theme manager.
-     * @return KernelEventListener Returns this kernel event listener.
-     */
-    protected function setThemeManager(ThemeManager $themeManager) {
-        $this->themeManager = $themeManager;
-        return $this;
-    }
-
-    /**
-     * Set the request.
-     *
-     * @param Request $request The request.
-     * @return KernelEventListener Returns this kernel event listener.
-     */
-    protected function setRequest(Request $request) {
-        self::$request = $request;
-        return $this;
     }
 
 }
