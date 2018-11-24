@@ -57,19 +57,20 @@ class AssetsHelperTest extends AbstractFrameworkTestCase {
     public function testListAssets() {
 
         $res = TestAssetsHelper::listAssets($this->directoryAssets);
-        $this->assertCount(11, $res);
+        $this->assertCount(12, $res);
 
         $this->assertRegexp("/animate\.css\-.*\.zip$/", $res[0]);
         $this->assertRegexp("/fontawesome\-.*\.zip$/", $res[1]);
         $this->assertRegexp("/jquery\-.*\.zip$/", $res[2]);
         $this->assertRegexp("/jquery\-easyautocomplete\-.*\.zip$/", $res[3]);
-        $this->assertRegexp("/jquery\-select2\-.*\.zip$/", $res[4]);
-        $this->assertRegexp("/material\-design\-color\-palette\-.*\.zip$/", $res[5]);
-        $this->assertRegexp("/material\-design\-hierarchical\-display\-.*\.zip$/", $res[6]);
-        $this->assertRegexp("/material\-design\-iconic\-font\-.*\.zip$/", $res[7]);
-        $this->assertRegexp("/meteocons\.zip$/", $res[8]);
-        $this->assertRegexp("/sweetalert\-.*\.zip$/", $res[9]);
-        $this->assertRegexp("/waitme\-.*\.zip$/", $res[10]);
+        $this->assertRegexp("/jquery\-inputmask\-.*\.zip$/", $res[4]);
+        $this->assertRegexp("/jquery\-select2\-.*\.zip$/", $res[5]);
+        $this->assertRegexp("/material\-design\-color\-palette\-.*\.zip$/", $res[6]);
+        $this->assertRegexp("/material\-design\-hierarchical\-display\-.*\.zip$/", $res[7]);
+        $this->assertRegexp("/material\-design\-iconic\-font\-.*\.zip$/", $res[8]);
+        $this->assertRegexp("/meteocons\.zip$/", $res[9]);
+        $this->assertRegexp("/sweetalert\-.*\.zip$/", $res[10]);
+        $this->assertRegexp("/waitme\-.*\.zip$/", $res[11]);
     }
 
     /**
@@ -100,7 +101,7 @@ class AssetsHelperTest extends AbstractFrameworkTestCase {
     public function testUnzipAssets() {
 
         $res = TestAssetsHelper::unzipAssets($this->directoryAssets, $this->directoryPublic);
-        $this->assertCount(11, $res);
+        $this->assertCount(12, $res);
 
         foreach ($res as $k => $v) {
             $this->assertDirectoryExists(str_replace([$this->directoryAssets, ".zip"], [$this->directoryPublic, ""], $k));
