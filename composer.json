@@ -30,17 +30,6 @@
         "symfony/templating": "^2.6|^3.0|^4.0",
         "symfony/twig-bundle": "^2.6|^3.0|^4.0"
     },
-    "scripts": {
-        "webeweb-core-scripts": [
-            "WBW\\Bundle\\CoreBundle\\Composer\\ScriptHandler::unzipAssets"
-        ],
-        "post-package-install": [
-            "@webeweb-core-scripts"
-        ],
-        "post-package-update": [
-            "@webeweb-core-scripts"
-        ]
-    },
     "support": {
         "issues": "https://github.com/webeweb/core-bundle/issues"
     },
