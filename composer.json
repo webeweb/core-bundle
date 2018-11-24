@@ -13,6 +13,7 @@
     ],
     "require": {
         "php": "^5.6|^7.0",
+        "composer/composer": "^1.0",
         "doctrine/common": "^2.0",
         "symfony/framework-bundle": "^2.6|^3.0|^4.0",
         "symfony/security-core": "^2.6|^3.0|^4.0",
@@ -28,6 +29,17 @@
         "symfony/security-bundle": "^2.6|^3.0|^4.0",
         "symfony/templating": "^2.6|^3.0|^4.0",
         "symfony/twig-bundle": "^2.6|^3.0|^4.0"
+    },
+    "scripts": {
+        "webeweb-core-scripts": [
+            "WBW\\Bundle\\CoreBundle\\Composer\\ScriptHandler::unzipAssets"
+        ],
+        "post-install-cmd": [
+            "@webeweb-core-scripts"
+        ],
+        "post-update-cmd": [
+            "@webeweb-core-scripts"
+        ]
     },
     "support": {
         "issues": "https://github.com/webeweb/core-bundle/issues"
