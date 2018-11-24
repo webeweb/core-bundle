@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Composer;
 
-use Composer\Script\Event;
+use Composer\Script\PackageEvent;
 use WBW\Bundle\CoreBundle\Composer\ScriptHandler;
 
 /**
@@ -25,7 +25,7 @@ class TestScriptHandler extends ScriptHandler {
     /**
      * {@inheritdoc}
      */
-    public static function getInstallPath(Event $event) {
+    public static function getInstallPath(PackageEvent $event) {
         return parent::getInstallPath($event);
     }
 

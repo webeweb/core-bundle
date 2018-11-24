@@ -34,10 +34,10 @@
         "webeweb-core-scripts": [
             "WBW\\Bundle\\CoreBundle\\Composer\\ScriptHandler::unzipAssets"
         ],
-        "post-install-cmd": [
+        "post-package-install": [
             "@webeweb-core-scripts"
         ],
-        "post-update-cmd": [
+        "post-package-update": [
             "@webeweb-core-scripts"
         ]
     },

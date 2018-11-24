@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Composer;
 use Composer\Composer;
 use Composer\Installer\InstallationManager;
 use Composer\Package\PackageInterface;
-use Composer\Script\Event;
+use Composer\Script\PackageEvent;
 use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Composer\TestScriptHandler;
 
@@ -43,7 +43,7 @@ class ScriptHandlerTest extends AbstractFrameworkTestCase {
     /**
      * Event.
      *
-     * @var Event
+     * @var PackageEvent
      */
     private $event;
 
@@ -73,7 +73,7 @@ class ScriptHandlerTest extends AbstractFrameworkTestCase {
         $composer->expects($this->any())->method("getPackage")->willReturn($package);
 
         // Set an Event mock.
-        $this->event = $this->getMockBuilder(Event::class)->disableOriginalCOnstructor()->getMock();
+        $this->event = $this->getMockBuilder(PackageEvent::class)->disableOriginalConstructor()->getMock();
         $this->event->expects($this->any())->method("getComposer")->willReturn($composer);
     }
 

@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Composer;
 
-use Composer\Script\Event;
+use Composer\Script\PackageEvent;
 use WBW\Bundle\CoreBundle\Helper\AssetsHelper;
 
 /**
@@ -22,7 +22,13 @@ use WBW\Bundle\CoreBundle\Helper\AssetsHelper;
  */
 class ScriptHandler {
 
-    protected static function getInstallPath(Event $event) {
+    /**
+     * Get the install path.
+     *
+     * @param PackageEvent $event The event.
+     * @return string Returns the install path.
+     */
+    protected static function getInstallPath(PackageEvent $event) {
 
         // Get the current package.
         $package = $event->getComposer()->getPackage();
@@ -44,10 +50,10 @@ class ScriptHandler {
     /**
      * Unzip all assets.
      *
-     * @param Event $event The event.
+     * @param PackageEvent $event The event.
      * @return array Returns the assets.
      */
-    public static function unzipAssets(Event $event) {
+    public static function unzipAssets(PackageEvent $event) {
 
         // Get the install path.
         $installPath = self::getInstallPath($event);
