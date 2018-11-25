@@ -65,11 +65,17 @@ class AssetsHelper {
      * @param string $src The source directory.
      * @param string $dst The destination directory.
      * @return array Returns the assets.
+     * @throws IllegalArgumentException Throw an illegal argument exception if a directory is not a directory.
      */
     public static function unzipAssets($src, $dst) {
 
         // List all assets.
         $assets = static::listAssets($src);
+
+        // Check the directory.
+        if (false === is_dir($dst)) {
+            throw new IllegalArgumentException(sprintf("\"%s\" is not a directory", $dst));
+        }
 
         // Initialize the results.
         $result = [];

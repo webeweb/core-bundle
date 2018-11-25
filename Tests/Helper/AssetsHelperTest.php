@@ -32,6 +32,13 @@ class AssetsHelperTest extends AbstractFrameworkTestCase {
     private $directoryAssets;
 
     /**
+     * Directory "illegal".
+     *
+     * @var string
+     */
+    private $directoryIllegal;
+
+    /**
      * Directory "public".
      *
      * @var string
@@ -45,8 +52,9 @@ class AssetsHelperTest extends AbstractFrameworkTestCase {
         parent::setUp();
 
         // Set the directories.
-        $this->directoryAssets = getcwd() . "/Resources/assets";
-        $this->directoryPublic = getcwd() . "/Resources/public";
+        $this->directoryAssets  = getcwd() . "/Resources/assets";
+        $this->directoryIllegal = getcwd() . "/composer.json";
+        $this->directoryPublic  = getcwd() . "/Resources/public";
     }
 
     /**
@@ -80,16 +88,13 @@ class AssetsHelperTest extends AbstractFrameworkTestCase {
      */
     public function testListAssetsWithIllegalArgumentException() {
 
-        // Set a Directory mock.
-        $directory = getcwd() . "/composer.jon";
-
         try {
 
-            TestAssetsHelper::listAssets($directory);
+            TestAssetsHelper::listAssets($this->directoryIllegal);
         } catch (Exception $ex) {
 
             $this->assertInstanceOf(IllegalArgumentException::class, $ex);
-            $this->assertEquals("\"" . $directory . "\" is not a directory", $ex->getMessage());
+            $this->assertEquals("\"" . $this->directoryIllegal . "\" is not a directory", $ex->getMessage());
         }
     }
 
@@ -106,6 +111,23 @@ class AssetsHelperTest extends AbstractFrameworkTestCase {
         foreach ($res as $k => $v) {
             $this->assertDirectoryExists(str_replace([$this->directoryAssets, ".zip"], [$this->directoryPublic, ""], $k));
             $this->assertTrue($v);
+        }
+    }
+
+    /**
+     * Tests the unzipAssets() method.
+     *
+     * @return void
+     */
+    public function testUnzipAssetsWithIllegalArgumentException() {
+
+        try {
+
+            TestAssetsHelper::unzipAssets($this->directoryAssets, $this->directoryIllegal);
+        } catch (Exception $ex) {
+
+            $this->assertInstanceOf(IllegalArgumentException::class, $ex);
+            $this->assertEquals("\"" . $this->directoryIllegal . "\" is not a directory", $ex->getMessage());
         }
     }
 
