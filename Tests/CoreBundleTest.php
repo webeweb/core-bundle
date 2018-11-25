@@ -34,4 +34,17 @@ class CoreBundleTest extends AbstractFrameworkTestCase {
         $this->assertEquals("warning", CoreBundle::CORE_WARNING);
     }
 
+    /**
+     * Tests the getAssetsDirectory() method.
+     *
+     * @return void
+     */
+    public function testGetAssetsDirectory() {
+
+        $obj = new CoreBundle();
+
+        $res = $obj->getAssetsDirectory();
+        $this->assertEquals("/Resources/assets", $res);
+    }
+
 }

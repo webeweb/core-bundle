@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
+use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
 
 /**
  * Core bundle.
@@ -19,7 +20,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle
  */
-class CoreBundle extends Bundle {
+class CoreBundle extends Bundle implements AssetsProviderInterface {
 
     /**
      * Core "Danger".
@@ -48,5 +49,12 @@ class CoreBundle extends Bundle {
      * @var string
      */
     const CORE_WARNING = "warning";
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getAssetsDirectory() {
+        return "/Resources/assets";
+    }
 
 }
