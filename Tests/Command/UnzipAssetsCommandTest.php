@@ -33,6 +33,7 @@ class UnzipAssetsCommandTest extends AbstractFrameworkTestCase {
 
         $this->assertEquals("Unzip assets under a public directory", $obj->getDescription());
         $this->assertEquals("", $obj->getHelp());
+        $this->assertEquals("wbw:core:unzip-assets", $obj->getName());
     }
 
 }

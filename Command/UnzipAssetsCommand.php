@@ -27,6 +27,7 @@ class UnzipAssetsCommand extends Command {
     protected function configure() {
 
         $this
+            ->setName("wbw:core:unzip-assets")
             ->setDescription("Unzip assets under a public directory")
             ->setHelp("");
     }
