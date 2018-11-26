@@ -47,7 +47,6 @@ class AbstractNavigationNodeTest extends AbstractFrameworkTestCase {
      * Tests the isDisplayable() method.
      *
      * @return void
-     * @depends testConstruct
      */
     public function testIsDisplayable() {
 
@@ -67,7 +66,6 @@ class AbstractNavigationNodeTest extends AbstractFrameworkTestCase {
      * Tests the setActive() method.
      *
      * @return void
-     * @depends testConstruct
      */
     public function testSetActive() {
 
@@ -81,7 +79,6 @@ class AbstractNavigationNodeTest extends AbstractFrameworkTestCase {
      * Tests the setEnable() method.
      *
      * @return void
-     * @depends testConstruct
      */
     public function testSetEnable() {
 
@@ -95,7 +92,6 @@ class AbstractNavigationNodeTest extends AbstractFrameworkTestCase {
      * Tests the setIcon() method.
      *
      * @return void
-     * @depends testConstruct
      */
     public function testSetIcon() {
 
@@ -109,7 +105,6 @@ class AbstractNavigationNodeTest extends AbstractFrameworkTestCase {
      * Tests the setMatcher() method.
      *
      * @return void
-     * @depends testConstruct
      */
     public function testSetMatcher() {
 
@@ -123,7 +118,6 @@ class AbstractNavigationNodeTest extends AbstractFrameworkTestCase {
      * Tests the setTarget() method.
      *
      * @return void
-     * @depends testConstruct
      */
     public function testSetTarget() {
 
@@ -137,7 +131,6 @@ class AbstractNavigationNodeTest extends AbstractFrameworkTestCase {
      * Tests the setURI() method.
      *
      * @return void
-     * @depends testConstruct
      */
     public function testSetURI() {
 
