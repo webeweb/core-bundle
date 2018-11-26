@@ -159,18 +159,4 @@ class UnzipAssetsCommandTest extends AbstractFrameworkTestCase {
         $this->assertEquals(1, $obj->displayResult($this->style, $arg));
     }
 
-    /**
-     * Tests the newStyle() method.
-     *
-     * @return void
-     */
-    public function testNewStyle() {
-
-        $obj = new TestUnzipAssetsCommand();
-
-        $res = $obj->newStyle($this->input, $this->output);
-        $this->assertNotNull($res);
-        $this->assertInstanceOf(StyleInterface::class, $res);
-    }
-
 }

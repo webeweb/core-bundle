@@ -11,11 +11,9 @@
 
 namespace WBW\Bundle\CoreBundle\Command;
 
-use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\StyleInterface;
-use Symfony\Component\Console\Style\SymfonyStyle;
 use WBW\Bundle\CoreBundle\Helper\AssetsHelper;
 use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
 
@@ -25,7 +23,7 @@ use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Command
  */
-class UnzipAssetsCommand extends Command {
+class UnzipAssetsCommand extends AbstractCommand {
 
     /**
      * Command help.
@@ -161,17 +159,6 @@ EOT;
 
         // Return the exit code.
         return $exitCode;
-    }
-
-    /**
-     * Create a style.
-     *
-     * @param InputInterface $input The input.
-     * @param OutputInterface $output The ouptut.
-     * @return StyleInterface Returns the style.
-     */
-    protected function newStyle(InputInterface $input, OutputInterface $output) {
-        return new SymfonyStyle($input, $output);
     }
 
 }

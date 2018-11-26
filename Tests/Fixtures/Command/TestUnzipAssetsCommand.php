@@ -11,8 +11,6 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Command;
 
-use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\StyleInterface;
 use WBW\Bundle\CoreBundle\Command\UnzipAssetsCommand;
 
@@ -43,13 +41,6 @@ class TestUnzipAssetsCommand extends UnzipAssetsCommand {
      */
     public function displayResult(StyleInterface $io, array $results) {
         return parent::displayResult($io, $results);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function newStyle(InputInterface $input, OutputInterface $output) {
-        return parent::newStyle($input, $output);
     }
 
 }
