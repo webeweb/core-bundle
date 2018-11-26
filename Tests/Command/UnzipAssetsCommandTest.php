@@ -66,9 +66,9 @@ class UnzipAssetsCommandTest extends AbstractFrameworkTestCase {
 
         // Set a Symfony style mock.
         if (20700 < Kernel::VERSION_ID) {
-            $this->symfonyStyle = $this->getMockBuilder(SymfonyStyle::class)->getMock();
-        } else {
             $this->symfonyStyle = $this->getMockBuilder(SymfonyStyle::class)->setConstructorArgs([$this->input, $this->output])->getMock();
+        } else {
+            $this->symfonyStyle = $this->getMockBuilder(SymfonyStyle::class)->getMock();
         }
     }
 
