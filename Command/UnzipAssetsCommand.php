@@ -14,6 +14,7 @@ namespace WBW\Bundle\CoreBundle\Command;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\Style\StyleInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use WBW\Bundle\CoreBundle\Helper\AssetsHelper;
 use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
@@ -52,12 +53,12 @@ EOT;
     /**
      * Display the footer.
      *
-     * @param SymfonyStyle $io The I/O.
+     * @param StyleInterface $io The I/O.
      * @param int $exitCode The exit code.
      * @param int $count The count.
      * @return void
      */
-    protected function displayFooter(SymfonyStyle $io, $exitCode, $count) {
+    protected function displayFooter(StyleInterface $io, $exitCode, $count) {
         if (0 < $exitCode) {
             $io->error("Some errors occurred while unzipping assets");
             return;
@@ -71,10 +72,10 @@ EOT;
     /**
      * Displays the header.
      *
-     * @param SymfonyStyle $io The I/O.
+     * @param StyleInterface $io The I/O.
      * @return void
      */
-    protected function displayHeader(SymfonyStyle $io) {
+    protected function displayHeader(StyleInterface $io) {
         $io->newLine();
         $io->text("Trying to unzip assets");
         $io->newLine();
@@ -83,11 +84,11 @@ EOT;
     /**
      * Displays the result.
      *
-     * @param SymfonyStyle $io The I/O.
+     * @param StyleInterface $io The I/O.
      * @param array $results The results.
      * @return int Returns the exit code.
      */
-    protected function displayResult(SymfonyStyle $io, array $results) {
+    protected function displayResult(StyleInterface $io, array $results) {
 
         // Initialize.
         $success = sprintf("<fg=green;options=bold>%s</>", "\\" === DIRECTORY_SEPARATOR ? "OK" : "\xE2\x9C\x94");
@@ -124,7 +125,7 @@ EOT;
     protected function execute(InputInterface $input, OutputInterface $output) {
 
         // Create an I/O.
-        $io = $this->newSymfonyStyle($input, $output);
+        $io = $this->newStyle($input, $output);
         $this->displayHeader($io);
 
         // Initialize the results.
@@ -163,13 +164,13 @@ EOT;
     }
 
     /**
-     * Create a Symfony style.
+     * Create a style.
      *
      * @param InputInterface $input The input.
      * @param OutputInterface $output The ouptut.
-     * @return SymfonyStyle Returns the Symfony style.
+     * @return StyleInterface Returns the style.
      */
-    protected function newSymfonyStyle(InputInterface $input, OutputInterface $output) {
+    protected function newStyle(InputInterface $input, OutputInterface $output) {
         return new SymfonyStyle($input, $output);
     }
 

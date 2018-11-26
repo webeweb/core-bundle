@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Command;
 use Symfony\Component\Console\Formatter\OutputFormatterInterface;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\Console\Style\SymfonyStyle;
+use Symfony\Component\Console\Style\StyleInterface;
 use Symfony\Component\HttpKernel\Kernel;
 use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Command\TestUnzipAssetsCommand;
@@ -42,11 +42,11 @@ class UnzipAssetsCommandTest extends AbstractFrameworkTestCase {
     private $output;
 
     /**
-     * SYmfony style.
+     * Style.
      *
-     * @var SymfonyStyle
+     * @var StyleInterface
      */
-    private $symfonyStyle;
+    private $style;
 
     /**
      * {@inheritdoc}
@@ -66,9 +66,9 @@ class UnzipAssetsCommandTest extends AbstractFrameworkTestCase {
 
         // Set a Symfony style mock.
         if (20700 < Kernel::VERSION_ID) {
-            $this->symfonyStyle = $this->getMockBuilder(SymfonyStyle::class)->setConstructorArgs([$this->input, $this->output])->getMock();
+            $this->style = $this->getMockBuilder(StyleInterface::class)->setConstructorArgs([$this->input, $this->output])->getMock();
         } else {
-            $this->symfonyStyle = $this->getMockBuilder(SymfonyStyle::class)->getMock();
+            $this->style = $this->getMockBuilder(StyleInterface::class)->getMock();
         }
     }
 
@@ -95,7 +95,7 @@ class UnzipAssetsCommandTest extends AbstractFrameworkTestCase {
 
         $obj = new TestUnzipAssetsCommand();
 
-        $this->assertNull($obj->displayFooter($this->symfonyStyle, 0, 1));
+        $this->assertNull($obj->displayFooter($this->style, 0, 1));
     }
 
     /**
@@ -107,7 +107,7 @@ class UnzipAssetsCommandTest extends AbstractFrameworkTestCase {
 
         $obj = new TestUnzipAssetsCommand();
 
-        $this->assertNull($obj->displayFooter($this->symfonyStyle, 0, 0));
+        $this->assertNull($obj->displayFooter($this->style, 0, 0));
     }
 
     /**
@@ -119,7 +119,7 @@ class UnzipAssetsCommandTest extends AbstractFrameworkTestCase {
 
         $obj = new TestUnzipAssetsCommand();
 
-        $this->assertNull($obj->displayFooter($this->symfonyStyle, 1, 0));
+        $this->assertNull($obj->displayFooter($this->style, 1, 0));
     }
 
     /**
@@ -131,7 +131,7 @@ class UnzipAssetsCommandTest extends AbstractFrameworkTestCase {
 
         $obj = new TestUnzipAssetsCommand();
 
-        $this->assertNull($obj->displayHeader($this->symfonyStyle));
+        $this->assertNull($obj->displayHeader($this->style));
     }
 
     /**
@@ -144,7 +144,7 @@ class UnzipAssetsCommandTest extends AbstractFrameworkTestCase {
         $obj = new TestUnzipAssetsCommand();
 
         $arg = [];
-        $this->assertEquals(0, $obj->displayResult($this->symfonyStyle, $arg));
+        $this->assertEquals(0, $obj->displayResult($this->style, $arg));
     }
 
     /**
@@ -161,21 +161,21 @@ class UnzipAssetsCommandTest extends AbstractFrameworkTestCase {
                 "animate.css-3.5.2.zip" => false,
             ],
         ];
-        $this->assertEquals(1, $obj->displayResult($this->symfonyStyle, $arg));
+        $this->assertEquals(1, $obj->displayResult($this->style, $arg));
     }
 
     /**
-     * Tests the newSymfonyStyle() method.
+     * Tests the newStyle() method.
      *
      * @return void
      */
-    public function testNewSymfonyStyle() {
+    public function testNewStyle() {
 
         $obj = new TestUnzipAssetsCommand();
 
-        $res = $obj->newSymfonyStyle($this->input, $this->output);
+        $res = $obj->newStyle($this->input, $this->output);
         $this->assertNotNull($res);
-        $this->assertInstanceOf(SymfonyStyle::class, $res);
+        $this->assertInstanceOf(StyleInterface::class, $res);
     }
 
 }
