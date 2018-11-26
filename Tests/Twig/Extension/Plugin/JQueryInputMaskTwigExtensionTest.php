@@ -65,7 +65,6 @@ class JQueryInputMaskTwigExtensionTest extends AbstractFrameworkTestCase {
         $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->renderer);
 
         $res = $obj->getFunctions();
-
         $this->assertCount(7, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
@@ -108,27 +107,34 @@ class JQueryInputMaskTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the jQueryInputMaskFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testJQueryInputMaskFunction() {
 
         $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->renderer);
 
-        $arg0 = ["selector" => "#selector"];
-        $res0 = "$('#selector').inputmask(\"\",[]);";
-        $this->assertEquals($res0, $obj->jQueryInputMaskFunction($arg0));
-
-        $arg9 = ["selector" => "#selector", "mask" => "+33 9 99 99 99 99", "scriptTag" => true, "opts" => ["placeholder" => "+__ _ __ __ __ __"]];
-        $res9 = "<script type=\"text/javascript\">\n$('#selector').inputmask(\"+33 9 99 99 99 99\",{\"placeholder\":\"+__ _ __ __ __ __\"});\n</script>";
-        $this->assertEquals($res9, $obj->jQueryInputMaskFunction($arg9));
+        $arg = ["selector" => "#selector", "mask" => "+33 9 99 99 99 99", "scriptTag" => true, "opts" => ["placeholder" => "+__ _ __ __ __ __"]];
+        $res = "<script type=\"text/javascript\">\n$('#selector').inputmask(\"+33 9 99 99 99 99\",{\"placeholder\":\"+__ _ __ __ __ __\"});\n</script>";
+        $this->assertEquals($res, $obj->jQueryInputMaskFunction($arg));
     }
 
     /**
-      /**
+     * Tests the jQueryInputMaskFunction() method.
+     *
+     * @return void
+     */
+    public function testJQueryInputMaskFunctionWithoutOptions() {
+
+        $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->renderer);
+
+        $arg = ["selector" => "#selector"];
+        $res = "$('#selector').inputmask(\"\",[]);";
+        $this->assertEquals($res, $obj->jQueryInputMaskFunction($arg));
+    }
+
+    /**
      * Tests the jQueryInputMaskPhoneNumberFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testJQueryInputMaskPhoneNumberFunction() {
 
@@ -143,7 +149,6 @@ class JQueryInputMaskTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the jQueryInputMaskSIRETNumberFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testJQueryInputMaskSIRETNumberFunction() {
 
@@ -158,7 +163,6 @@ class JQueryInputMaskTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the jQueryInputMaskTime12Function() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testJQueryInputMaskTime12Function() {
 
@@ -173,7 +177,6 @@ class JQueryInputMaskTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the jQueryInputMaskTime24Function() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testJQueryInputMaskTime24Function() {
 
@@ -188,7 +191,6 @@ class JQueryInputMaskTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the jQueryInputMaskSocialSecurityNumberFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testJQueryInputMaskSocialSecurityNumberFunction() {
 
@@ -203,7 +205,6 @@ class JQueryInputMaskTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the jQueryInputMaskVATNumberFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testJQueryInputMaskVATNumberFunction() {
 
