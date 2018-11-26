@@ -42,7 +42,7 @@ trait RouterTrait {
      *
      * @param RouterInterface $router The router.
      */
-    protected function setRouter(RouterInterface $router) {
+    protected function setRouter(RouterInterface $router = null) {
         $this->router = $router;
         return $this;
     }
