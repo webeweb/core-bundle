@@ -62,7 +62,6 @@ class ThemeManagerTest extends AbstractFrameworkTestCase {
      * Tests the addGlobal() method.
      *
      * @return void
-     * @depends testConstruct
      */
     public function testAddGlobal() {
 
@@ -132,7 +131,6 @@ class ThemeManagerTest extends AbstractFrameworkTestCase {
      * Tests the setApplicationThemeProvider() method.
      *
      * @return void
-     * @depends testConstruct
      */
     public function testSetApplicationThemeProvider() {
 
@@ -152,7 +150,6 @@ class ThemeManagerTest extends AbstractFrameworkTestCase {
      * Tests the setBreadcrumbsThemeProvider() method.
      *
      * @return void
-     * @depends testConstruct
      */
     public function testSetBreadcrumbsThemeProvider() {
 
@@ -169,7 +166,6 @@ class ThemeManagerTest extends AbstractFrameworkTestCase {
      * Tests the setFooterThemeProvider() method.
      *
      * @return void
-     * @depends testConstruct
      */
     public function testSetFooterThemeProvider() {
 
@@ -186,7 +182,6 @@ class ThemeManagerTest extends AbstractFrameworkTestCase {
      * Tests the setHookDropDownThemeProvider() method.
      *
      * @return void
-     * @depends testConstruct
      */
     public function testSetHookDropDownThemeProvider() {
 
@@ -203,7 +198,6 @@ class ThemeManagerTest extends AbstractFrameworkTestCase {
      * Tests the setNavigationThemeProvider() method.
      *
      * @return void
-     * @depends testConstruct
      */
     public function testSetNavigationThemeProvider() {
 
@@ -220,7 +214,6 @@ class ThemeManagerTest extends AbstractFrameworkTestCase {
      * Tests the setNotificationsDropDownThemeProvider() method.
      *
      * @return void
-     * @depends testConstruct
      */
     public function testSetNotificationsDropDownThemeProvider() {
 
@@ -237,7 +230,6 @@ class ThemeManagerTest extends AbstractFrameworkTestCase {
      * Tests the setSearchThemeProvider() method.
      *
      * @return void
-     * @depends testConstruct
      */
     public function testSetSearchThemeProvider() {
 
@@ -254,7 +246,6 @@ class ThemeManagerTest extends AbstractFrameworkTestCase {
      * Tests the setTasksDropDownThemeProvider() method.
      *
      * @return void
-     * @depends testConstruct
      */
     public function testSetTasksDropDownThemeProvider() {
 
@@ -271,7 +262,6 @@ class ThemeManagerTest extends AbstractFrameworkTestCase {
      * Tests the setUserInfoThemeProvider() method.
      *
      * @return void
-     * @depends testConstruct
      */
     public function testSetUserInfoThemeProvider() {
 
