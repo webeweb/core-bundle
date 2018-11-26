@@ -48,7 +48,6 @@ class AbstractTwigExtensionTest extends AbstractFrameworkTestCase {
     $(document).ready(function() {});
 </script>
 EOT;
-
         $this->assertEquals($res, TestTwigExtension::coreHTMLElement("script", "\n    $(document).ready(function() {});\n", ["type" => "text/javascript"]));
     }
 
