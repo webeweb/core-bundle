@@ -48,7 +48,6 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractFrameworkTestCas
         $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFilters();
-
         $this->assertCount(2, $res);
 
         $this->assertInstanceOf(Twig_SimpleFilter::class, $res[0]);
@@ -72,7 +71,6 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractFrameworkTestCas
         $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
@@ -85,7 +83,6 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractFrameworkTestCas
      * Tests the materialDesignIconicFontIconFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testMaterialDesignIconicFontIconFunction() {
 
@@ -100,7 +97,6 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractFrameworkTestCas
      * Tests the materialDesignIconicFontIconFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testMaterialDesignIconicFontIconFunctionWithBorder() {
 
@@ -115,7 +111,6 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractFrameworkTestCas
      * Tests the materialDesignIconicFontIconFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testMaterialDesignIconicFontIconFunctionWithFixedWidth() {
 
@@ -130,7 +125,6 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractFrameworkTestCas
      * Tests the materialDesignIconicFontIconFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testMaterialDesignIconicFontIconFunctionWithFlip() {
 
@@ -145,7 +139,6 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractFrameworkTestCas
      * Tests the materialDesignIconicFontIconFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testMaterialDesignIconicFontIconFunctionWithName() {
 
@@ -160,7 +153,6 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractFrameworkTestCas
      * Tests the materialDesignIconicFontIconFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testMaterialDesignIconicFontIconFunctionWithPull() {
 
@@ -175,7 +167,6 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractFrameworkTestCas
      * Tests the materialDesignIconicFontIconFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testMaterialDesignIconicFontIconFunctionWithRotate() {
 
@@ -190,7 +181,6 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractFrameworkTestCas
      * Tests the materialDesignIconicFontIconFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testMaterialDesignIconicFontIconFunctionWithSize() {
 
@@ -205,7 +195,6 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractFrameworkTestCas
      * Tests the materialDesignIconicFontIconFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testMaterialDesignIconicFontIconFunctionWithSpin() {
 
@@ -220,7 +209,6 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractFrameworkTestCas
      * Tests the materialDesignIconicFontIconFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testMaterialDesignIconicFontIconFunctionWithStyle() {
 
@@ -235,7 +223,6 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractFrameworkTestCas
      * Tests the materialDesignIconicFontIconFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testMaterialDesignIconicFontIconFunctionWithoutArguments() {
 
@@ -250,15 +237,12 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractFrameworkTestCas
      * Tests the materialDesignIconicFontListFilter() method.
      *
      * @return void
-     * @depends testGetFilters
-     * @depends testMaterialDesignIconicFontIconFunction
      */
     public function testMaterialDesignIconicFontListFilter() {
 
         $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
 
         $arg = $obj->materialDesignIconicFontListIconFilter($obj->materialDesignIconicFontIconFunction([]), "content");
-
         $res = '<ul class="zmdi-hc-ul"><li><i class="zmdi-hc-li zmdi zmdi-home"></i>content</li></ul>';
         $this->assertEquals($res, $obj->materialDesignIconicFontListFilter($arg));
     }
@@ -267,15 +251,12 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractFrameworkTestCas
      * Tests the materialDesignIconicFontListIconFilter() method.
      *
      * @return void
-     * @depends testGetFilters
-     * @depends testMaterialDesignIconicFontIconFunction
      */
     public function testMaterialDesignIconicFontListIconFilter() {
 
         $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
 
         $arg = $obj->materialDesignIconicFontIconFunction([]);
-
         $res = '<li><i class="zmdi-hc-li zmdi zmdi-home"></i></li>';
         $this->assertEquals($res, $obj->materialDesignIconicFontListIconFilter($arg, null));
     }
@@ -284,15 +265,12 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractFrameworkTestCas
      * Tests the materialDesignIconicFontListIconFilter() method.
      *
      * @return void
-     * @depends testGetFilters
-     * @depends testMaterialDesignIconicFontIconFunction
      */
     public function testMaterialDesignIconicFontListIconFilterWithContent() {
 
         $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
 
         $arg = $obj->materialDesignIconicFontIconFunction([]);
-
         $res = '<li><i class="zmdi-hc-li zmdi zmdi-home"></i>content</li>';
         $this->assertEquals($res, $obj->materialDesignIconicFontListIconFilter($arg, "content"));
     }
@@ -301,7 +279,6 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractFrameworkTestCas
      * Tests the renderIcon() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testRenderIcon() {
 
