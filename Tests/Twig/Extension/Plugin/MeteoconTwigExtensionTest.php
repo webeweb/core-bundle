@@ -47,7 +47,6 @@ class MeteoconsTwigExtensionTest extends AbstractFrameworkTestCase {
         $obj = new MeteoconsTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
@@ -60,7 +59,6 @@ class MeteoconsTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the meteoconsIconFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testMeteoconsIconFunction() {
 
@@ -75,7 +73,6 @@ class MeteoconsTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the meteoconsIconFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testMeteoconsIconFunctionWithoutArguments() {
 
@@ -90,7 +87,6 @@ class MeteoconsTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the meteoconsIconFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testMeteoconsIconFunctionWithName() {
 
@@ -105,7 +101,6 @@ class MeteoconsTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the meteoconsIconFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testMeteoconsIconFunctionWithStyle() {
 
@@ -120,7 +115,6 @@ class MeteoconsTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the renderIcon() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testRenderIcon() {
 
