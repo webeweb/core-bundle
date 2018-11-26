@@ -47,7 +47,6 @@ class RendererTwigExtensionTest extends AbstractFrameworkTestCase {
         $obj = new RendererTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFilters();
-
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFilter::class, $res[0]);
