@@ -42,7 +42,7 @@ trait TwigEnvironmentTrait {
      *
      * @param Twig_Environment $twigEnvironment The Twig environment.
      */
-    protected function setTwigEnvironment(Twig_Environment $twigEnvironment) {
+    protected function setTwigEnvironment(Twig_Environment $twigEnvironment = null) {
         $this->twigEnvironment = $twigEnvironment;
         return $this;
     }
