@@ -76,14 +76,12 @@ class NavigationTreeHelperTest extends AbstractFrameworkTestCase {
      * Tests the getBreadcrumbs() method.
      *
      * @return void
-     * @depends testActiveTree
      */
     public function testGetBreadcrumbs() {
 
         NavigationTreeHelper::activeTree($this->tree, Request::create("https://github.com/webeweb/core-bundle"));
 
         $res = NavigationTreeHelper::getBreadcrumbs($this->tree);
-
         $this->assertCount(2, $res);
 
         $this->assertEquals("GitHub", $res[0]->getId());
