@@ -42,7 +42,7 @@ trait SessionTrait {
      *
      * @param SessionInterface $session The session.
      */
-    protected function setSession(SessionInterface $session) {
+    protected function setSession(SessionInterface $session = null) {
         $this->session = $session;
         return $this;
     }
