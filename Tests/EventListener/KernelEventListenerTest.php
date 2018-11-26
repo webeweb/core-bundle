@@ -67,7 +67,6 @@ class KernelEventListenerTest extends AbstractFrameworkTestCase {
      * Tests the getUser() method.
      *
      * @return void
-     * @depends testConstruct
      */
     public function testGetUser() {
 
@@ -136,7 +135,6 @@ class KernelEventListenerTest extends AbstractFrameworkTestCase {
      * Tests the onKernelRequest() method.
      *
      * @return void
-     * @depends testConstruct
      */
     public function testOnKernelRequest() {
 
