@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Service;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Manager;
 
-use WBW\Bundle\CoreBundle\Service\ThemeManagerTrait;
+use WBW\Bundle\CoreBundle\Manager\ThemeManagerTrait;
 
 /**
  * Test theme manager trait.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Service
+ * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Manager
  */
 class TestThemeManagerTrait {
 

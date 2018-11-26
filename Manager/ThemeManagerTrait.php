@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Service;
+namespace WBW\Bundle\CoreBundle\Manager;
 
 use WBW\Bundle\CoreBundle\Manager\ThemeManager;
 
@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Manager\ThemeManager;
  * Theme manager trait.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Service
+ * @package WBW\Bundle\CoreBundle\Manager
  */
 trait ThemeManagerTrait {
 

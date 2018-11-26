@@ -19,9 +19,9 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
 use WBW\Bundle\CoreBundle\Exception\RedirectResponseException;
 use WBW\Bundle\CoreBundle\Manager\ThemeManager;
+use WBW\Bundle\CoreBundle\Manager\ThemeManagerTrait;
 use WBW\Bundle\CoreBundle\Model\RequestTrait;
 use WBW\Bundle\CoreBundle\Model\UserTrait;
-use WBW\Bundle\CoreBundle\Service\ThemeManagerTrait;
 use WBW\Bundle\CoreBundle\Service\TokenStorageTrait;
 
 /**

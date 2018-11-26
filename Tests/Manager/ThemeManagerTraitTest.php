@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Service;
+namespace WBW\Bundle\CoreBundle\Tests\Manager;
 
 use WBW\Bundle\CoreBundle\Manager\ThemeManager;
 use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Service\TestThemeManagerTrait;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\TestThemeManagerTrait;
 
 /**
  * Theme manager trait test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Service
+ * @package WBW\Bundle\CoreBundle\Tests\Manager
  */
 class ThemeManagerTraitTest extends AbstractFrameworkTestCase {
 
