@@ -63,7 +63,6 @@ class FormHelperTest extends AbstractFrameworkTestCase {
      * Tests the onPostHandleRequestWithCollection() method.
      *
      * @return void
-     * @depends testOnPreHandleRequestWithCollection
      */
     public function testOnPostRequestWithCollection() {
 
