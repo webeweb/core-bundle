@@ -41,7 +41,7 @@ class AssetsHelper {
         $assets = [];
 
         // Handle each file.
-        foreach (new DirectoryIterator($directory) as $current) {
+        foreach (new DirectoryIterator(realpath($directory)) as $current) {
 
             // Check the filename and his extension.
             if (true === in_array($current->getFilename(), [".", ".."]) || 0 === preg_match("/\.zip$/", $current->getFilename())) {
@@ -84,7 +84,7 @@ class AssetsHelper {
         foreach ($assets as $current) {
             $zip = new ZipArchive();
             if (true === $zip->open($current)) {
-                $result[$current] = $zip->extractTo($dst);
+                $result[$current] = $zip->extractTo(realpath($dst));
                 $zip->close();
             }
         }
