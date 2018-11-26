@@ -48,7 +48,6 @@ class FontAwesomeTwigExtensionTest extends AbstractFrameworkTestCase {
         $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFilters();
-
         $this->assertCount(2, $res);
 
         $this->assertInstanceOf(Twig_SimpleFilter::class, $res[0]);
@@ -72,7 +71,6 @@ class FontAwesomeTwigExtensionTest extends AbstractFrameworkTestCase {
         $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
@@ -85,7 +83,6 @@ class FontAwesomeTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the fontAwesomeIconFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testFontAwesomeIconFunction() {
 
@@ -100,7 +97,6 @@ class FontAwesomeTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the fontAwesomeIconFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testFontAwesomeIconFunctionWithAnimated() {
 
@@ -115,7 +111,6 @@ class FontAwesomeTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the fontAwesomeIconFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testFontAwesomeIconFunctionWithBordered() {
 
@@ -130,7 +125,6 @@ class FontAwesomeTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the fontAwesomeIconFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testFontAwesomeIconFunctionWithFixedWidth() {
 
@@ -145,7 +139,6 @@ class FontAwesomeTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the fontAwesomeIconFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testFontAwesomeIconFunctionWithFont() {
 
@@ -160,7 +153,6 @@ class FontAwesomeTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the fontAwesomeIconFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testFontAwesomeIconFunctionWithName() {
 
@@ -175,7 +167,6 @@ class FontAwesomeTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the fontAwesomeIconFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testFontAwesomeIconFunctionWithPull() {
 
@@ -190,7 +181,6 @@ class FontAwesomeTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the fontAwesomeIconFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testFontAwesomeIconFunctionWithSize() {
 
@@ -205,7 +195,6 @@ class FontAwesomeTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the fontAwesomeIconFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testFontAwesomeIconFunctionWithStyle() {
 
@@ -220,7 +209,6 @@ class FontAwesomeTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the fontAwesomeIconFunction() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testFontAwesomeIconFunctionWithoutArguments() {
 
@@ -235,15 +223,12 @@ class FontAwesomeTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the fontAwesomeListFilter() method.
      *
      * @return void
-     * @depends testGetFilters
-     * @depends testFontAwesomeIconFunction
      */
     public function testFontAwesomeListFilter() {
 
         $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
 
         $arg = $obj->fontAwesomeListIconFilter($obj->fontAwesomeIconFunction([]), "content");
-
         $res = '<ul class="fa-ul"><li><span class="fa-li"><i class="fa fa-home"></i></span>content</li></ul>';
         $this->assertEquals($res, $obj->fontAwesomeListFilter($arg));
     }
@@ -252,15 +237,12 @@ class FontAwesomeTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the fontAwesomeListIconFilter() method.
      *
      * @return void
-     * @depends testGetFilters
-     * @depends testFontAwesomeIconFunction
      */
     public function testFontAwesomeListIconFilter() {
 
         $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
 
         $arg = $obj->fontAwesomeIconFunction([]);
-
         $res = '<li><span class="fa-li"><i class="fa fa-home"></i></span></li>';
         $this->assertEquals($res, $obj->fontAwesomeListIconFilter($arg, null));
     }
@@ -269,15 +251,12 @@ class FontAwesomeTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the fontAwesomeListIconFilter() method.
      *
      * @return void
-     * @depends testGetFilters
-     * @depends testFontAwesomeIconFunction
      */
     public function testFontAwesomeListIconFilterWithContent() {
 
         $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
 
         $arg = $obj->fontAwesomeIconFunction([]);
-
         $res = '<li><span class="fa-li"><i class="fa fa-home"></i></span>content</li>';
         $this->assertEquals($res, $obj->fontAwesomeListIconFilter($arg, "content"));
     }
@@ -286,7 +265,6 @@ class FontAwesomeTwigExtensionTest extends AbstractFrameworkTestCase {
      * Tests the renderIcon() method.
      *
      * @return void
-     * @depends testGetFunctions
      */
     public function testRenderIcon() {
 
