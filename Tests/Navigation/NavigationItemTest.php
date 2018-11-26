@@ -41,7 +41,6 @@ class NavigationItemTest extends AbstractFrameworkTestCase {
      * Tests the setHref() method.
      *
      * @return void
-     * @depends testConstruct
      */
     public function testSetHref() {
 
@@ -55,7 +54,6 @@ class NavigationItemTest extends AbstractFrameworkTestCase {
      * Tests the setIcon() method.
      *
      * @return void
-     * @depends testConstruct
      */
     public function testSetIcon() {
 
@@ -69,7 +67,6 @@ class NavigationItemTest extends AbstractFrameworkTestCase {
      * Tests the toArray() method.
      *
      * @return void
-     * @depends testConstruct
      */
     public function testToArray() {
 
