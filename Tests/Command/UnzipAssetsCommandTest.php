@@ -15,7 +15,6 @@ use Symfony\Component\Console\Formatter\OutputFormatterInterface;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\StyleInterface;
-use Symfony\Component\HttpKernel\Kernel;
 use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Command\TestUnzipAssetsCommand;
 
@@ -65,11 +64,7 @@ class UnzipAssetsCommandTest extends AbstractFrameworkTestCase {
         $this->output->expects($this->any())->method("getFormatter")->willReturn($outputFormatter);
 
         // Set a Symfony style mock.
-        if (20700 < Kernel::VERSION_ID) {
-            $this->style = $this->getMockBuilder(StyleInterface::class)->setConstructorArgs([$this->input, $this->output])->getMock();
-        } else {
-            $this->style = $this->getMockBuilder(StyleInterface::class)->getMock();
-        }
+        $this->style = $this->getMockBuilder(StyleInterface::class)->setConstructorArgs([$this->input, $this->output])->getMock();
     }
 
     /**
