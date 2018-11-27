@@ -22,14 +22,14 @@ trait KernelEventListenerTrait {
     /**
      * Kernel event listener.
      *
-     * @var KernelEventListner
+     * @var KernelEventListener
      */
     private $KernelEventListener;
 
     /**
      * Get the kernel event listener.
      *
-     * @return KernelEventListner Returns the kernel event listener.
+     * @return KernelEventListener Returns the kernel event listener.
      */
     public function getKernelEventListener() {
         return $this->KernelEventListener;

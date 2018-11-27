@@ -22,14 +22,14 @@ trait NotificationEventListenerTrait {
     /**
      * Notification event listener.
      *
-     * @var NotificationEventListner
+     * @var NotificationEventListener
      */
     private $notificationEventListener;
 
     /**
      * Get the Notification event listener.
      *
-     * @return NotificationEventListner Returns the notification event listener.
+     * @return NotificationEventListener Returns the notification event listener.
      */
     public function getNotificationEventListener() {
         return $this->notificationEventListener;
