@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\BootstrapBundle\Tests\Helper;
+namespace WBW\Bundle\CoreBundle\Tests\Helper;
 
 use Exception;
 use WBW\Bundle\CoreBundle\Helper\Select2Helper;
