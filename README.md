@@ -70,6 +70,7 @@ in the `app/AppKernel.php` file of your project:
 Once the bundle is added then do:
 
 ```bash
+$ php bin/console wbw:core:unzip-assets
 $ php bin/console assets:install
 ```
 
