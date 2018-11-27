@@ -26,6 +26,13 @@ class TestAbstractCommand extends AbstractCommand {
     /**
      * {@inheritdoc}
      */
+    public function getName() {
+        return "wbw:core:abstract";
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function newStyle(InputInterface $input, OutputInterface $output) {
         return parent::newStyle($input, $output);
     }
