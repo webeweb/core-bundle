@@ -89,8 +89,8 @@ EOT;
     protected function displayResult(StyleInterface $io, array $results) {
 
         // Initialize.
-        $success = sprintf("<fg=green;options=bold>%s</>", "\\" === DIRECTORY_SEPARATOR ? "OK" : "\xE2\x9C\x94");
-        $warning = sprintf("<fg=yellow;options=bold>%s</>", "\\" === DIRECTORY_SEPARATOR ? "KO" : "!");
+        $success = $this->getCheckbox(true);
+        $warning = $this->getCheckbox(false);
 
         $rows = [];
 

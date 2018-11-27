@@ -26,8 +26,15 @@ class TestAbstractCommand extends AbstractCommand {
     /**
      * {@inheritdoc}
      */
-    public function getName() {
-        return "wbw:core:abstract";
+    protected function configure() {
+        $this->setName("wbw:core:abstract");
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getCheckbox($checked) {
+        return parent::getCheckbox($checked);
     }
 
     /**

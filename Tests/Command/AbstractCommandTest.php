@@ -58,6 +58,27 @@ class AbstractCommandTest extends AbstractFrameworkTestCase {
     }
 
     /**
+     * Tests the getCheckbox() method.
+     *
+     * @return void
+     */
+    public function testGetCheckbox() {
+
+        $obj = new TestAbstractCommand();
+
+        // Determines the operating system.
+        if ("\\" !== DIRECTORY_SEPARATOR) {
+
+            $this->assertEquals("<fg=green;options=bold>\xE2\x9C\x94</>", $obj->getCheckbox(true));
+            $this->assertEquals("<fg=yellow;options=bold>!</>", $obj->getCheckbox(false));
+        } else {
+
+            $this->assertEquals("<fg=green;options=bold>OK</>", $obj->getCheckbox(true));
+            $this->assertEquals("<fg=yellow;options=bold>WARNING</>", $obj->getCheckbox(false));
+        }
+    }
+
+    /**
      * Tests the newStyle() method.
      *
      * @return void
