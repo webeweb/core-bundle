@@ -1,0 +1,72 @@
+<?php
+
+/**
+ * This file is part of the core-bundle package.
+ *
+ * (c) 2018 WEBEWEB
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace WBW\Bundle\CoreBundle\Tests\EventListener;
+
+use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
+use WBW\Bundle\CoreBundle\Manager\ThemeManager;
+use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\EventListener\TestKernelEventListenerTrait;
+
+/**
+ * Kernel event listener trait test.
+ *
+ * @author webeweb <https://github.com/webeweb/>
+ * @package WBW\Bundle\CoreBundle\Tests\EventListener
+ */
+class EventDispatcherTraitTest extends AbstractFrameworkTestCase {
+
+    /**
+     * Theme manager.
+     *
+     * @var ThemeManager
+     */
+    private $themeManager;
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function setUp() {
+        parent::setUp();
+
+        // Set a Theme manager mock.
+        $this->themeManager = new ThemeManager($this->twigEnvironment);
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
+
+        $obj = new TestKernelEventListenerTrait();
+
+        $this->assertNull($obj->getKernelEventListener());
+    }
+
+    /**
+     * Tests the setEventDispatcher() method.
+     *
+     * @return void
+     */
+    public function testSetEventDispatcher() {
+
+        // Set a Kernel event listener mock.
+        $kernelEventListener = new KernelEventListener($this->tokenStorage, $this->themeManager);
+
+        $obj = new TestKernelEventListenerTrait();
+
+        $obj->setKernelEventListener($kernelEventListener);
+        $this->assertSame($kernelEventListener, $obj->getKernelEventListener());
+    }
+
+}
