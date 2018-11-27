@@ -63,8 +63,9 @@ EOT;
         }
         if (0 === $count) {
             $io->success("No assets were provided by any bundle");
+            return;
         }
-        $io->success("All assets were succefully unzipped");
+        $io->success("All assets were successfully unzipped");
     }
 
     /**
