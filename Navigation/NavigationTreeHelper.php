@@ -38,7 +38,7 @@ class NavigationTreeHelper {
         foreach ($nodes as $n) {
 
             // Check the node.
-            if (false === ($n instanceOf AbstractNavigationNode)) {
+            if (false === ($n instanceof AbstractNavigationNode)) {
                 continue;
             }
 

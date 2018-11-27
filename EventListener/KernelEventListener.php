@@ -114,10 +114,10 @@ class KernelEventListener {
         $ex = $event->getException();
 
         // Handle the exception.
-        if (true === ($ex instanceOf BadUserRoleException)) {
+        if (true === ($ex instanceof BadUserRoleException)) {
             $this->handleBadUserRoleException($event, $ex);
         }
-        if (true === ($ex instanceOf RedirectResponseException)) {
+        if (true === ($ex instanceof RedirectResponseException)) {
             $this->handleRedirectResponseException($event, $ex);
         }
 
