@@ -3,6 +3,20 @@ CHANGELOG
 
 ### master
 
+- Add Swift mailer trait
+- Add Notification event listener trait
+- Add Kernel event listener trait
+- Add Event dispatcher trait
+- Add Command helper
+- Remove Symfony 2.6 support
+- Allow null into service traits (Logger, Object manager, Router, Session, Token storage, Translator, Twig environment, ...)
+- Add Unzip assets command
+- Move public resources
+- Add Assets helper
+- Add Theme manager trait
+- Add Request trait
+- Add Environment trait
+- Fix namespaces
 - Improve unit tests
 - Add Navigation nodes with predefined icons (Font Awesome and Material Design Iconic font)
 - Rename $route into $uri in Navigation classes
