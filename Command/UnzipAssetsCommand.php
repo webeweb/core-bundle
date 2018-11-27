@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Command;
 
+use Symfony\Bundle\FrameworkBundle\Console\Application;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\StyleInterface;
@@ -123,7 +124,12 @@ EOT;
      */
     protected function execute(InputInterface $input, OutputInterface $output) {
 
-        // Create an I/O.
+        // Check the application.
+        if (false === ($this->getApplication() instanceof Application)) {
+            return -1;
+        }
+
+        // Create an I/O and display.
         $io = $this->newStyle($input, $output);
         $this->displayHeader($io);
 
@@ -137,7 +143,7 @@ EOT;
         foreach ($bundles as $current) {
 
             // Check the bundle.
-            if (false === ($current instanceOf AssetsProviderInterface)) {
+            if (false === ($current instanceof AssetsProviderInterface)) {
                 continue;
             }
 
@@ -152,13 +158,11 @@ EOT;
             $results[$current->getName()] = AssetsHelper::unzipAssets($assetsDirectory, $publicDirectory);
         }
 
-        // Display the result.
+        // Display.
         $exitCode = $this->displayResult($io, $results);
-
-        // Display the footer.
         $this->displayFooter($io, $exitCode, count($results));
 
-        // Return the exit code.
+        // Return.
         return $exitCode;
     }
 
