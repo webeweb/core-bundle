@@ -67,7 +67,7 @@ class TestFixtures {
         $tree->getLastNode()->addNode(new NavigationNode("FTP library", null, "https://github.com/webeweb/ftp-library"));
         $tree->getLastNode()->addNode(new NavigationItem("fPDF library", null, "https://github.com/webeweb/fpdf-library"));
         $tree->getLastNode()->addNode(new NavigationNode("HaveIBeenPwnd library", null, "https://github.com/webeweb/haveibeenpwned-library"));
-        $tree->getLastNode()->addNode(new NavigationNode("SkiData library", null, "https:\/\/github.com\/webeweb\/skidata-library", NavigationInterface::NAVIGATION_MATCHER_REGEXP));
+        $tree->getLastNode()->addNode(new NavigationNode("SkiData library", null, "https:\/\/github\.com\/webeweb\/skidata-library", NavigationInterface::NAVIGATION_MATCHER_REGEXP));
         $tree->getLastNode()->addNode(new NavigationNode("sMsmode library", null, "https://github.com/webeweb/smsmode-library", NavigationInterface::NAVIGATION_MATCHER_ROUTER));
 
         // Return the tree.
