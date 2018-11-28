@@ -32,13 +32,6 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class ThemeManagerTest extends AbstractTestCase {
 
     /**
-     * {@inheritdoc}
-     */
-    protected function setUp() {
-        parent::setUp();
-    }
-
-    /**
      * Tests the __construct() method.
      *
      * @return void
