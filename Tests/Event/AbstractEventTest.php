@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Event;
 
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Event\TestEvent;
 
 /**
@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Event\TestEvent;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Event
  */
-class AbstractEventTest extends AbstractFrameworkTestCase {
+class AbstractEventTest extends AbstractTestCase {
 
     /**
      * Tests __construct() method.

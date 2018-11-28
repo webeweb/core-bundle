@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Navigation\MaterialDesignIconicFont;
 
 use WBW\Bundle\CoreBundle\Navigation\MaterialDesignIconicFont\BreadcrumbNodeActionNewUser;
 use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Breadcrumb node action "New user" test.
@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Navigation\MaterialDesignIconicFont
  */
-class BreadcrumbNodeActionNewUserTest extends AbstractFrameworkTestCase {
+class BreadcrumbNodeActionNewUserTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

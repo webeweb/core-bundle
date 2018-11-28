@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Form\Renderer;
 use WBW\Bundle\CoreBundle\Entity\ChoiceLabelInterface;
 use WBW\Bundle\CoreBundle\Entity\TranslatedChoiceLabelInterface;
 use WBW\Bundle\CoreBundle\Form\Renderer\FormRenderer;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Library\Core\Sorting\AlphabeticalTreeNodeInterface;
 
 /**
@@ -23,7 +23,7 @@ use WBW\Library\Core\Sorting\AlphabeticalTreeNodeInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Form\Renderer
  */
-class FormRendererTest extends AbstractFrameworkTestCase {
+class FormRendererTest extends AbstractTestCase {
 
     /**
      * Tests the renderOption() method.

@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Notification;
 
 use WBW\Bundle\CoreBundle\Notification\DefaultNotification;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * DefaultNotificationTest.
@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Notification
  */
-class DefaultNotificationTest extends AbstractFrameworkTestCase {
+class DefaultNotificationTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

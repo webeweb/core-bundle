@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Model;
 
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUserTrait;
 
 /**
@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUserTrait;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Model
  */
-class UserTraitTest extends AbstractFrameworkTestCase {
+class UserTraitTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

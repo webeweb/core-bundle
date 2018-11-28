@@ -28,13 +28,13 @@ use Twig_Environment;
 use Twig_LoaderInterface;
 
 /**
- * Abstract Core framework test case.
+ * Abstract test case.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests
  * @abstract
  */
-abstract class AbstractFrameworkTestCase extends TestCase {
+abstract class AbstractTestCase extends TestCase {
 
     /**
      * Container builder.

@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Navigation\MaterialDesignIconicFont;
 
 use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Navigation\MaterialDesignIconicFont\NavigationNodeUsersGroups;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Navigation node "Users groups" test.
@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Navigation\MaterialDesignIconicFont
  */
-class NavigationNodeUsersGroupsTest extends AbstractFrameworkTestCase {
+class NavigationNodeUsersGroupsTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

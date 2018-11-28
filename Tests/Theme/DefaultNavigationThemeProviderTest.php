@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Theme;
 
 use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Theme\DefaultNavigationThemeProvider;
 
 /**
@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Theme\DefaultNavigationThemeProvider;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Theme
  */
-class DefaultNavigationThemeProviderTest extends AbstractFrameworkTestCase {
+class DefaultNavigationThemeProviderTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

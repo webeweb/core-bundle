@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Helper;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use WBW\Bundle\CoreBundle\Helper\FormHelper;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Form helper test.
@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Helper
  */
-class FormHelperTest extends AbstractFrameworkTestCase {
+class FormHelperTest extends AbstractTestCase {
 
     /**
      * Collection.

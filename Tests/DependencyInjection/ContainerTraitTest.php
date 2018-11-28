@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\DependencyInjection;
 
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\DependencyInjection\TestContainerTrait;
 
 /**
@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\DependencyInjection\TestContainerTrait;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\DependencyInjection
  */
-class ContainerTraitTest extends AbstractFrameworkTestCase {
+class ContainerTraitTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

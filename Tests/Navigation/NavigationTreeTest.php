@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Navigation;
 
 use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Navigation tree test.
@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Navigation
  */
-class NavigationTreeTest extends AbstractFrameworkTestCase {
+class NavigationTreeTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

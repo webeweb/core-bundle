@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Helper;
 
 use Exception;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Helper\TestAssetsHelper;
 use WBW\Library\Core\Exception\Argument\IllegalArgumentException;
 
@@ -22,7 +22,7 @@ use WBW\Library\Core\Exception\Argument\IllegalArgumentException;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Helper
  */
-class AssetsHelperTest extends AbstractFrameworkTestCase {
+class AssetsHelperTest extends AbstractTestCase {
 
     /**
      * Directory "assets".

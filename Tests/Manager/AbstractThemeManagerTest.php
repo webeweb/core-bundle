@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Manager;
 
 use WBW\Bundle\CoreBundle\Provider\ThemeProviderInterface;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\TestThemeManager;
 
 /**
@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\TestThemeManager;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Manager
  */
-class AbstractThemeManagerTest extends AbstractFrameworkTestCase {
+class AbstractThemeManagerTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

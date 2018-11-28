@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Navigation;
 
 use Symfony\Component\HttpFoundation\Request;
 use WBW\Bundle\CoreBundle\Navigation\NavigationTreeHelper;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\TestFixtures;
 
 /**
@@ -22,7 +22,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\TestFixtures;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Navigation
  */
-class NavigationTreeHelperTest extends AbstractFrameworkTestCase {
+class NavigationTreeHelperTest extends AbstractTestCase {
 
     /**
      * Navigation tree

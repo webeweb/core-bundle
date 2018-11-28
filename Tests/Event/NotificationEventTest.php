@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Event;
 
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Notification event test.
@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Event
  */
-class NotificationEventTest extends AbstractFrameworkTestCase {
+class NotificationEventTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

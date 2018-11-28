@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Navigation\MaterialDesignIconicFont;
 
 use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Navigation\MaterialDesignIconicFont\NavigationNodeParameters;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Navigation node "Parameters" test.
@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Navigation\MaterialDesignIconicFont
  */
-class NavigationNodeParametersTest extends AbstractFrameworkTestCase {
+class NavigationNodeParametersTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Navigation;
 
 use WBW\Bundle\CoreBundle\Navigation\BreadcrumbNode;
 use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Breadcrumb node test.
@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Navigation
  */
-class BreadcrumbNodeTest extends AbstractFrameworkTestCase {
+class BreadcrumbNodeTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

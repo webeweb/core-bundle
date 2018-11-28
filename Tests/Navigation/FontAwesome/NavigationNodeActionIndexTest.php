@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Navigation\FontAwesome;
 
 use WBW\Bundle\CoreBundle\Navigation\FontAwesome\NavigationNodeActionIndex;
 use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Navigation node action "Index" test.
@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Navigation\FontAwesome
  */
-class NavigationNodeActionIndexTest extends AbstractFrameworkTestCase {
+class NavigationNodeActionIndexTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Navigation\FontAwesome;
 
 use WBW\Bundle\CoreBundle\Navigation\FontAwesome\NavigationNodeActionImport;
 use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Navigation node action "Import" test.
@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Navigation\FontAwesome
  */
-class NavigationNodeActionImportTest extends AbstractFrameworkTestCase {
+class NavigationNodeActionImportTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

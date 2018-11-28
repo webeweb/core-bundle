@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Form\Type;
 
 use WBW\Bundle\CoreBundle\Form\Type\DateTimeTypeInterface;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Date/time type interface test.
@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Form\Type
  */
-class DateTimeTypeInterfaceTest extends AbstractFrameworkTestCase {
+class DateTimeTypeInterfaceTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

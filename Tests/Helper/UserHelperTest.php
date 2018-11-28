@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Helper;
 
 use Symfony\Component\Security\Core\User\User;
 use WBW\Bundle\CoreBundle\Helper\UserHelper;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * User helper test.
@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Helper
  */
-class UserHelperTest extends AbstractFrameworkTestCase {
+class UserHelperTest extends AbstractTestCase {
 
     /**
      * Tests the hasRoles() method.

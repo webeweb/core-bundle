@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Model;
 
 use Symfony\Component\HttpFoundation\Request;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestRequestTrait;
 
 /**
@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestRequestTrait;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Model
  */
-class RequestTraitTest extends AbstractFrameworkTestCase {
+class RequestTraitTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

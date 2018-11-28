@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Service;
 
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Service\TestSessionTrait;
 
 /**
@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Service\TestSessionTrait;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Service
  */
-class SessionTraitTest extends AbstractFrameworkTestCase {
+class SessionTraitTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

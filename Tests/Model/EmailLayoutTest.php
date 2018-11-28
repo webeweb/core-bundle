@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Model;
 
 use WBW\Bundle\CoreBundle\Model\EmailLayout;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Email layout test.
@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Model
  */
-class EmailLayoutTest extends AbstractFrameworkTestCase {
+class EmailLayoutTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

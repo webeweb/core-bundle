@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension\Plugin;
 
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MeteoconsTwigExtension;
 
 /**
@@ -22,7 +22,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MeteoconsTwigExtension;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Twig\Extension\Plugin
  */
-class MeteoconsTwigExtensionTest extends AbstractFrameworkTestCase {
+class MeteoconsTwigExtensionTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

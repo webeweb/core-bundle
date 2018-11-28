@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension;
 
 use Twig_Node;
 use Twig_SimpleFilter;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension;
 
 /**
@@ -22,7 +22,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Twig\Extension
  */
-class RendererTwigExtensionTest extends AbstractFrameworkTestCase {
+class RendererTwigExtensionTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

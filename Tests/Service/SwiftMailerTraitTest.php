@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Service;
 
 use Swift_Mailer;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Service\TestSwiftMailerTrait;
 
 /**
@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Service\TestSwiftMailerTrait;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Service
  */
-class SwiftMailerTraitTest extends AbstractFrameworkTestCase {
+class SwiftMailerTraitTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

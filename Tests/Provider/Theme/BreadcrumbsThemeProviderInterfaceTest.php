@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Provider\Theme;
 
 use WBW\Bundle\CoreBundle\Provider\Theme\BreadcrumbsThemeProviderInterface;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Breadcrumbs theme provider interface test.
@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Provider\Theme
  */
-class BreadcrumbsThemeProviderInterfaceTest extends AbstractFrameworkTestCase {
+class BreadcrumbsThemeProviderInterfaceTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

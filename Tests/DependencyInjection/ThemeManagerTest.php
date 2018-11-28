@@ -31,7 +31,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
 class ThemeManagerTest extends AbstractWebTestCase {
 
     /**
-     * Tests the dependencyInjection.
+     * Tests the dependency injection.
      *
      * @return void
      */

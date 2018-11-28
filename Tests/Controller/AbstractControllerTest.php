@@ -22,7 +22,7 @@ use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
 use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Controller\TestAbstractController;
 
 /**
@@ -31,7 +31,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Controller\TestAbstractController;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Controller
  */
-class AbstractControllerTest extends AbstractFrameworkTestCase {
+class AbstractControllerTest extends AbstractTestCase {
 
     /**
      * Kernel event listener.

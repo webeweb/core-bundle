@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Theme;
 
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Theme\DefaultHookDropDownThemeProvider;
 
 /**
@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Theme\DefaultHookDropDownThemeProvider;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Theme
  */
-class DefaultHookDropDownThemeProviderTest extends AbstractFrameworkTestCase {
+class DefaultHookDropDownThemeProviderTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

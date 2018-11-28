@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension\Plugin;
 use Twig_Node;
 use Twig_SimpleFilter;
 use Twig_SimpleFunction;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MaterialDesignIconicFontTwigExtension;
 
 /**
@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MaterialDesignIconicFontTwigExte
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Twig\Extension\Plugin
  */
-class MaterialDesignIconicFontTwigExtensionTest extends AbstractFrameworkTestCase {
+class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

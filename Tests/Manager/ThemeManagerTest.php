@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Provider\Theme\NotificationsDropDownThemeProviderInter
 use WBW\Bundle\CoreBundle\Provider\Theme\SearchThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\Theme\TasksDropDownThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\Theme\UserInfoThemeProviderInterface;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Theme manager test.
@@ -29,7 +29,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Manager
  */
-class ThemeManagerTest extends AbstractFrameworkTestCase {
+class ThemeManagerTest extends AbstractTestCase {
 
     /**
      * {@inheritdoc}

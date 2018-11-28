@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Provider\Theme;
 
 use WBW\Bundle\CoreBundle\Provider\Theme\SearchThemeProviderInterface;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Search theme provider interface test.
@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Provider\Theme
  */
-class SearchThemeProviderInterfaceTest extends AbstractFrameworkTestCase {
+class SearchThemeProviderInterfaceTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Model;
 
 use WBW\Bundle\CoreBundle\Model\WikiView;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Wiki view model test.
@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Model
  */
-class WikiViewTest extends AbstractFrameworkTestCase {
+class WikiViewTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

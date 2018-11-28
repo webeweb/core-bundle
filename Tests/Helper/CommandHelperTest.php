@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Helper;
 
 use WBW\Bundle\CoreBundle\Helper\CommandHelper;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Command helper test.
@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Helper
  */
-class CommandHelperTest extends AbstractFrameworkTestCase {
+class CommandHelperTest extends AbstractTestCase {
 
     /**
      * Tests the getCheckbox() method.

@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\CoreBundle;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests
  */
-class CoreBundleTest extends AbstractFrameworkTestCase {
+class CoreBundleTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

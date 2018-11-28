@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Factory;
 
 use WBW\Bundle\CoreBundle\Factory\NotificationFactory;
 use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Notifcation factory test.
@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Factory
  */
-class NotifcationFactoryTest extends AbstractFrameworkTestCase {
+class NotifcationFactoryTest extends AbstractTestCase {
 
     /**
      * Tests the newDangerNotification() method.

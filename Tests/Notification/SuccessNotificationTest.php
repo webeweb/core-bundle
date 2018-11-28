@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Notification;
 
 use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
 use WBW\Bundle\CoreBundle\Notification\SuccessNotification;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Success notification test.
@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Notification
  */
-class SuccessNotificationTest extends AbstractFrameworkTestCase {
+class SuccessNotificationTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

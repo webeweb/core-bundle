@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Form\Factory;
 
 use WBW\Bundle\CoreBundle\Form\Factory\FormFactory;
 use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Form factory test
@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Form\Factory
  */
-class FormFactoryTest extends AbstractFrameworkTestCase {
+class FormFactoryTest extends AbstractTestCase {
 
     /**
      * Tests the newChoiceType() method.

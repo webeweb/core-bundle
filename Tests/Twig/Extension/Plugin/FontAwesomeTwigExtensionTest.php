@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension\Plugin;
 use Twig_Node;
 use Twig_SimpleFilter;
 use Twig_SimpleFunction;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\FontAwesomeTwigExtension;
 
 /**
@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\FontAwesomeTwigExtension;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Twig\Extension\Plugin
  */
-class FontAwesomeTwigExtensionTest extends AbstractFrameworkTestCase {
+class FontAwesomeTwigExtensionTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

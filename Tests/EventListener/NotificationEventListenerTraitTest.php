@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Service;
 
 use WBW\Bundle\CoreBundle\EventListener\NotificationEventListener;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\EventListener\TestNotificationEventListenerTrait;
 
 /**
@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\EventListener\TestNotificationEventList
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Service
  */
-class NotificationEventListenerTraitTest extends AbstractFrameworkTestCase {
+class NotificationEventListenerTraitTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

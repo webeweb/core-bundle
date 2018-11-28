@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Notification;
 
 use WBW\Bundle\CoreBundle\Notification\InfoNotification;
 use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Info notification test.
@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Notification
  */
-class InfoNotificationTest extends AbstractFrameworkTestCase {
+class InfoNotificationTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

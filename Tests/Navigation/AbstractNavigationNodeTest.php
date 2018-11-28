@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Navigation;
 use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Navigation\NavigationItem;
 use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Navigation\TestAbstractNavigationNode;
 
 /**
@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Navigation\TestAbstractNavigationNode;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Navigation
  */
-class AbstractNavigationNodeTest extends AbstractFrameworkTestCase {
+class AbstractNavigationNodeTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

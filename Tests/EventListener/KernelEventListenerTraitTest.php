@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\EventListener;
 
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Manager\ThemeManager;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\EventListener\TestKernelEventListenerTrait;
 
 /**
@@ -22,7 +22,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\EventListener\TestKernelEventListenerTr
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\EventListener
  */
-class EventDispatcherTraitTest extends AbstractFrameworkTestCase {
+class EventDispatcherTraitTest extends AbstractTestCase {
 
     /**
      * Theme manager.

@@ -16,7 +16,7 @@ use Symfony\Component\HttpFoundation\Session\Session;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\EventListener\NotificationEventListener;
 use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Notification event listener.
@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\EventListener
  */
-class NotificationEventListenerTest extends AbstractFrameworkTestCase {
+class NotificationEventListenerTest extends AbstractTestCase {
 
     /**
      * {@inheritdoc}

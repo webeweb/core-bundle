@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Notification;
 
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Notification\TestNotification;
 
 /**
@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Notification\TestNotification;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Notification
  */
-class AbstractNotificationTest extends AbstractFrameworkTestCase {
+class AbstractNotificationTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

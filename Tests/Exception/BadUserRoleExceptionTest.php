@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Exception;
 
 use Symfony\Component\Security\Core\User\User;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
-use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Bad user role exception test.
@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFrameworkTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Exception
  */
-class BadUserRoleExceptionTest extends AbstractFrameworkTestCase {
+class BadUserRoleExceptionTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.
