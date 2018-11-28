@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\DependencyInjection;
+namespace WBW\Bundle\CoreBundle\Tests\Manager;
 
 use WBW\Bundle\CoreBundle\Manager\ThemeManager;
 use WBW\Bundle\CoreBundle\Provider\Theme\ApplicationThemeProviderInterface;
@@ -26,9 +26,9 @@ use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
  * Theme manager test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\DependencyInjection
+ * @package WBW\Bundle\CoreBundle\Tests\Manager
  */
-class ThemeManagerTest extends AbstractWebTestCase {
+class ThemeManagerWebTest extends AbstractWebTestCase {
 
     /**
      * Tests the dependency injection.
