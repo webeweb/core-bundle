@@ -64,7 +64,7 @@ class RendererTwigExtensionTest extends AbstractTestCase {
 
         $obj = new RendererTwigExtension($this->twigEnvironment);
 
-        $res = <<<'EOT'
+        $res = <<< EOT
 <script type="text/javascript">
 content
 </script>

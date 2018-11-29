@@ -43,7 +43,7 @@ class AbstractTwigExtensionTest extends AbstractTestCase {
      */
     public function testCoreHTMLElement() {
 
-        $res = <<<'EOT'
+        $res = <<< EOT
 <script type="text/javascript">
     $(document).ready(function() {});
 </script>
