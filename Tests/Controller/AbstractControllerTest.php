@@ -13,6 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Controller;
 
 use Exception;
 use Psr\Log\LoggerInterface;
+use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\RouterInterface;
@@ -51,6 +52,21 @@ class AbstractControllerTest extends AbstractTestCase {
 
         // Set the Container builder mock.
         $this->containerBuilder->set(KernelEventListener::SERVICE_NAME, $this->kernelEventListener);
+    }
+
+    /**
+     * Tests the getContainer() method.
+     *
+     * @return void
+     */
+    public function testGetContainer() {
+
+        $obj = new TestAbstractController();
+        $obj->setContainer($this->containerBuilder);
+
+        $res = $obj->getContainer();
+        $this->assertInstanceOf(Container::class, $res);
+        $this->assertSame($this->containerBuilder, $res);
     }
 
     /**

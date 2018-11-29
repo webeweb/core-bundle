@@ -25,6 +25,13 @@ class TestAbstractController extends AbstractController {
     /**
      * {@inheritdoc}
      */
+    public function getContainer() {
+        return parent::getContainer();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getEventDispatcher() {
         return parent::getEventDispatcher();
     }

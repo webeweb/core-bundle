@@ -13,6 +13,7 @@ namespace WBW\Bundle\CoreBundle\Controller;
 
 use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
@@ -33,6 +34,15 @@ use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
  * @abstract
  */
 abstract class AbstractController extends Controller {
+
+    /**
+     * Get the container.
+     *
+     * @return Container Returns the container.
+     */
+    protected function getContainer() {
+        return $this->get("service_container");
+    }
 
     /**
      * Get the event dispatcher.
