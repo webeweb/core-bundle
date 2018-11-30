@@ -151,7 +151,7 @@ EOT;
             $bundlePath = $current->getPath();
 
             // Initialize the directories.
-            $assetsDirectory = $bundlePath . $current->getAssetsDirectory();
+            $assetsDirectory = $bundlePath . $current->getAssetsRelativeDirectory();
             $publicDirectory = $bundlePath . "/Resources/public";
 
             // Unzip the assets.

@@ -20,9 +20,9 @@ namespace WBW\Bundle\CoreBundle\Provider;
 interface AssetsProviderInterface extends ProviderInterface {
 
     /**
-     * Get the assets directory.
+     * Get the assets relative directory.
      *
-     * @return string Returns the assets directory.
+     * @return string Returns the assets relative directory.
      */
-    public function getAssetsDirectory();
+    public function getAssetsRelativeDirectory();
 }

@@ -53,7 +53,7 @@ class CoreBundle extends Bundle implements AssetsProviderInterface {
     /**
      * {@inheritdoc}
      */
-    public function getAssetsDirectory() {
+    public function getAssetsRelativeDirectory() {
         return "/Resources/assets";
     }
 
