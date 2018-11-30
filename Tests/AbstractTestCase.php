@@ -159,6 +159,9 @@ abstract class AbstractTestCase extends TestCase {
 
         // Set a Translator mock.
         $this->translator = $this->getMockBuilder(TranslatorInterface::class)->getMock();
+        $this->translator->expects($this->any())->method("trans")->willReturnCallback(function($id, array $parameters = [], $domain = null, $locale = null) {
+            return $id;
+        });
 
         // Set a Token mock.
         $this->token = $this->getMockBuilder(TokenInterface::class)->getMock();
