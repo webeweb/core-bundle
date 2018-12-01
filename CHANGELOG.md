@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### master
+### 1.1.0 (2018-12-01)
 
 - Add Swift mailer trait
 - Add Notification event listener trait
