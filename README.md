@@ -85,7 +85,7 @@ stable version of this package:
 ```bash
 $ mkdir core-bundle
 $ cd core-bundle
-$ git clone git@github.com:webeweb/core-bundle.git .
+$ git clone https://github.com/webeweb/core-bundle.git .
 $ composer install
 ```
 
