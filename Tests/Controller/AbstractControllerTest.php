@@ -14,6 +14,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Controller;
 use Exception;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\DependencyInjection\Container;
+use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\RouterInterface;
@@ -212,13 +213,19 @@ class AbstractControllerTest extends AbstractTestCase {
 
         // Set the Event dispatcher mock.
         $this->eventDispatcher->expects($this->any())->method("hasListeners")->willReturn(true);
-        $this->eventDispatcher->expects($this->any())->method("dispatch")->willReturn(new NotificationEvent("eventName", $notification));
+        $this->eventDispatcher->expects($this->any())->method("dispatch")->willReturnCallback(function($eventName, Event $event) {
+            return $event;
+        });
 
         $obj = new TestAbstractController();
         $obj->setContainer($this->containerBuilder);
 
         $res = $obj->notify("eventName", $notification);
         $this->assertNotNull($res);
+
+        $this->assertInstanceOf(NotificationEvent::class, $res);
+        $this->assertEquals("eventName", $res->getEventName());
+        $this->assertSame($notification, $res->getNotification());
     }
 
     /**

@@ -29,7 +29,7 @@ class TestLayoutController extends AbstractController {
     public function emailAction() {
 
         // Return the response.
-        return $this->render("@Core/email.html.twig");
+        return $this->render("@Core/email/layout.html.twig");
     }
 
 }

@@ -1,0 +1,25 @@
+{# Resources/views/email.html.twig #}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        {% include "@Core/email/stylesheet.html.twig" %}
+        {% block coreEmailStylesheets %}
+        {% endblock %}
+    </head>
+    <body>
+        <center class="wrapper">
+            {% block coreEmailHeader %}
+                {% include "@Core/email/header.html.twig" %}
+            {% endblock %}
+            <div class="spacer">&nbsp;</div>
+            {% block coreEmailContent %}
+                {% include "@Core/email/content.html.twig" %}
+            {% endblock %}
+            <div class="spacer">&nbsp;</div>
+            {% block coreEmailFooter %}
+                {% include "@Core/email/footer.html.twig" %}
+            {% endblock %}
+        </center>
+    </body>
+</html>
