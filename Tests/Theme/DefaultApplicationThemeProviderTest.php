@@ -38,7 +38,7 @@ class DefaultApplicationThemeProviderTest extends AbstractTestCase {
         $this->assertEquals("Core bundle", $obj->getTitle());
         $this->assertEquals("dev-master", $obj->getVersion());
         $this->assertEquals(null, $obj->getView());
-        $this->assertEquals("2018", $obj->getYear());
+        $this->assertContains("2018", $obj->getYear());
     }
 
 }
