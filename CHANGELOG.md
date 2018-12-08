@@ -3,6 +3,7 @@ CHANGELOG
 
 ### 1.2.0 (2018-12-08)
 
+- Improve layout functional tests
 - Reorganize views
 
 ### 1.1.0 (2018-12-01)
