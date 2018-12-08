@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### 1.2.0 (2018-12-08)
+
+- Reorganize views
+
 ### 1.1.0 (2018-12-01)
 
 - Add Swift mailer trait
