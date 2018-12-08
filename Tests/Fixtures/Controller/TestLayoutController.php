@@ -22,7 +22,7 @@ use WBW\Bundle\CoreBundle\Controller\AbstractController;
 class TestLayoutController extends AbstractController {
 
     /**
-     * Displays an email.
+     * Displays an email template.
      *
      * @return Response Returns the response.
      */
@@ -30,6 +30,28 @@ class TestLayoutController extends AbstractController {
 
         // Return the response.
         return $this->render("@Core/email/layout.html.twig");
+    }
+
+    /**
+     * Displays a javascripts template.
+     *
+     * @return Response Returns the response.
+     */
+    public function javascriptsAction() {
+
+        // Return the response.
+        return $this->render("@Core/layout/javascripts.html.twig");
+    }
+
+    /**
+     * Displays a stylesheets template.
+     *
+     * @return Response Returns the response.
+     */
+    public function stylesheetsAction() {
+
+        // Return the response.
+        return $this->render("@Core/layout/stylesheets.html.twig");
     }
 
 }

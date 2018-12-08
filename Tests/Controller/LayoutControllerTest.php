@@ -36,4 +36,34 @@ class LayoutControllerTest extends AbstractWebTestCase {
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
 
+    /**
+     * Tests the javascriptsAction() method.
+     *
+     * @return void
+     */
+    public function testJavascriptsAction() {
+
+        // Create a client.
+        $client = static::createClient();
+
+        // Make a GET request.
+        $client->request("GET", "/javascripts");
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    }
+
+    /**
+     * Tests the stylesheetsAction() method.
+     *
+     * @return void
+     */
+    public function testStylesheetsAction() {
+
+        // Create a client.
+        $client = static::createClient();
+
+        // Make a GET request.
+        $client->request("GET", "/stylesheets");
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    }
+
 }

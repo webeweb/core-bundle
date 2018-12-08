@@ -3,3 +3,13 @@ core_email_action:
     path:     "/email"
     defaults: { _controller: "WBW\\Bundle\\CoreBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::emailAction" }
     methods:  ["GET"]
+
+core_javascripts_action:
+    path:     "/javascripts"
+    defaults: { _controller: "WBW\\Bundle\\CoreBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::javascriptsAction" }
+    methods:  ["GET"]
+
+core_stylesheets_action:
+    path:     "/stylesheets"
+    defaults: { _controller: "WBW\\Bundle\\CoreBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::stylesheetsAction" }
+    methods:  ["GET"]
