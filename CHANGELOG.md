@@ -1,8 +1,10 @@
 CHANGELOG
 =========
 
-### master
+### 1.3.0 (2018-12-xx)
 
+- Add removeProvider() into Manager interface
+- Remove registerProvider() into Manager interface
 - Add size() into Manager interface
 
 ### 1.2.0 (2018-12-08)
