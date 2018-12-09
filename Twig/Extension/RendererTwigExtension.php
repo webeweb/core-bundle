@@ -85,9 +85,8 @@ class RendererTwigExtension extends AbstractTwigExtension {
         // Determines the handler.
         $handler = explode(":", $name);
 
-        // Get and check the parse count.
-        $parseNb = count($handler);
-        if (2 !== $parseNb) {
+        // Check the handler.
+        if (2 !== count($handler)) {
             return "";
         }
 
