@@ -84,8 +84,6 @@ class RendererTwigExtension extends AbstractTwigExtension {
 
         // Determines the handler.
         $handler = explode(":", $name);
-
-        // Check the handler.
         if (2 !== count($handler)) {
             return "";
         }
