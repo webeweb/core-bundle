@@ -37,10 +37,7 @@ abstract class AbstractManager implements ManagerInterface {
     }
 
     /**
-     * Add a provider.
-     *
-     * @param ProviderInterface $provider The provider.
-     * @return ManagerInterface Returns this manager.
+     * {@inheritdoc}
      */
     public function addProvider(ProviderInterface $provider) {
         $this->providers[] = $provider;
@@ -66,8 +63,14 @@ abstract class AbstractManager implements ManagerInterface {
     /**
      * {@inheritdoc}
      */
-    public function registerProvider(ProviderInterface $provider) {
-        return $this->addProvider($provider);
+    public function removeProvider(ProviderInterface $provider) {
+        for ($i = count($this->providers) - 1; 0 <= $i; --$i) {
+            if ($provider !== $this->providers[$i]) {
+                continue;
+            }
+            unset($this->providers[$i]);
+        }
+        return $this;
     }
 
     /**

@@ -72,20 +72,22 @@ class AbstractManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the registerProvider() method.
+     * Tests the removeProvider() method.
      *
      * @return void
      */
-    public function testRegisterProvider() {
+    public function testRemoveProvider() {
 
         // Set a Provider mock.
         $provider = $this->getMockBuilder(ProviderInterface::class)->getMock();
 
         $obj = new TestManager();
 
-        $obj->registerProvider($provider);
-        $this->assertSame($provider, $obj->getProviders()[0]);
+        $obj->addProvider($provider);
         $this->assertEquals(1, $obj->size());
+
+        $obj->removeProvider($provider);
+        $this->assertEquals(0, $obj->size());
     }
 
 }

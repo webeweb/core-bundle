@@ -118,7 +118,7 @@ abstract class AbstractThemeManager extends AbstractManager {
             return $this;
         }
         $this->index[$k] = count($this->getProviders());
-        return $this->registerProvider($provider);
+        return $this->addProvider($provider);
     }
 
 }

@@ -22,6 +22,14 @@ use WBW\Bundle\CoreBundle\Provider\ProviderInterface;
 interface ManagerInterface {
 
     /**
+     * Add a provider.
+     *
+     * @param ProviderInterface $provider The provider.
+     * @return ManagerInterface Returns this manager.
+     */
+    public function addProvider(ProviderInterface $provider);
+
+    /**
      * Determines if this manager contains providers.
      *
      * @return bool Returns true in case of success, false otherwise.
@@ -29,12 +37,12 @@ interface ManagerInterface {
     public function hasProviders();
 
     /**
-     * Register a provider.
+     * Remove a provider.
      *
      * @param ProviderInterface $provider The provider
      * @return ManagerInterface Returns this manager.
      */
-    public function registerProvider(ProviderInterface $provider);
+    public function removeProvider(ProviderInterface $provider);
 
     /**
      * Size.
