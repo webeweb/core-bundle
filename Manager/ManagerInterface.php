@@ -35,4 +35,11 @@ interface ManagerInterface {
      * @return ManagerInterface Returns this manager.
      */
     public function registerProvider(ProviderInterface $provider);
+
+    /**
+     * Size.
+     *
+     * @return int Returns the providers count
+     */
+    public function size();
 }
