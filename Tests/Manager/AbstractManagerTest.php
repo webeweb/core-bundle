@@ -32,7 +32,8 @@ class AbstractManagerTest extends AbstractTestCase {
 
         $obj = new TestManager();
 
-        $this->assertCount(0, $obj->getProviders());
+        $this->assertEquals([], $obj->getProviders());
+        $this->assertEquals(0, $obj->size());
     }
 
     /**
@@ -48,7 +49,8 @@ class AbstractManagerTest extends AbstractTestCase {
         $obj = new TestManager();
 
         $obj->addProvider($provider);
-        $this->assertCount(1, $obj->getProviders());
+        $this->assertSame($provider, $obj->getProviders()[0]);
+        $this->assertEquals(1, $obj->size());
     }
 
     /**
@@ -82,7 +84,8 @@ class AbstractManagerTest extends AbstractTestCase {
         $obj = new TestManager();
 
         $obj->registerProvider($provider);
-        $this->assertCount(1, $obj->getProviders());
+        $this->assertSame($provider, $obj->getProviders()[0]);
+        $this->assertEquals(1, $obj->size());
     }
 
 }

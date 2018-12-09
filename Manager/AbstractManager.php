@@ -81,4 +81,11 @@ abstract class AbstractManager implements ManagerInterface {
         return $this;
     }
 
+    /**
+     * {@inheritdoc}
+     */
+    public function size() {
+        return count($this->providers);
+    }
+
 }
