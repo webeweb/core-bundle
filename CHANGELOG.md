@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Add size() into Manager interface
+
 ### 1.2.0 (2018-12-08)
 
 - Improve layout functional tests
