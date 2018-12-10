@@ -31,7 +31,7 @@ class DefaultSearchThemeProviderTest extends AbstractTestCase {
 
         $obj = new DefaultSearchThemeProvider();
 
-        $this->assertEquals(null, $obj->getView());
+        $this->assertNull($obj->getView());
     }
 
 }
