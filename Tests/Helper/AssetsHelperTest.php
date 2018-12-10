@@ -67,18 +67,18 @@ class AssetsHelperTest extends AbstractTestCase {
         $res = TestAssetsHelper::listAssets($this->directoryAssets);
         $this->assertCount(12, $res);
 
-        $this->assertRegexp("/animate\.css\-.*\.zip$/", $res[0]);
-        $this->assertRegexp("/fontawesome\-.*\.zip$/", $res[1]);
-        $this->assertRegexp("/jquery\-.*\.zip$/", $res[2]);
-        $this->assertRegexp("/jquery\-easyautocomplete\-.*\.zip$/", $res[3]);
-        $this->assertRegexp("/jquery\-inputmask\-.*\.zip$/", $res[4]);
-        $this->assertRegexp("/jquery\-select2\-.*\.zip$/", $res[5]);
-        $this->assertRegexp("/material\-design\-color\-palette\-.*\.zip$/", $res[6]);
-        $this->assertRegexp("/material\-design\-hierarchical\-display\-.*\.zip$/", $res[7]);
-        $this->assertRegexp("/material\-design\-iconic\-font\-.*\.zip$/", $res[8]);
-        $this->assertRegexp("/meteocons\.zip$/", $res[9]);
-        $this->assertRegexp("/sweetalert\-.*\.zip$/", $res[10]);
-        $this->assertRegexp("/waitme\-.*\.zip$/", $res[11]);
+        $this->assertRegExp("/animate\.css\-.*\.zip$/", $res[0]);
+        $this->assertRegExp("/fontawesome\-.*\.zip$/", $res[1]);
+        $this->assertRegExp("/jquery\-.*\.zip$/", $res[2]);
+        $this->assertRegExp("/jquery\-easyautocomplete\-.*\.zip$/", $res[3]);
+        $this->assertRegExp("/jquery\-inputmask\-.*\.zip$/", $res[4]);
+        $this->assertRegExp("/jquery\-select2\-.*\.zip$/", $res[5]);
+        $this->assertRegExp("/material\-design\-color\-palette\-.*\.zip$/", $res[6]);
+        $this->assertRegExp("/material\-design\-hierarchical\-display\-.*\.zip$/", $res[7]);
+        $this->assertRegExp("/material\-design\-iconic\-font\-.*\.zip$/", $res[8]);
+        $this->assertRegExp("/meteocons\.zip$/", $res[9]);
+        $this->assertRegExp("/sweetalert\-.*\.zip$/", $res[10]);
+        $this->assertRegExp("/waitme\-.*\.zip$/", $res[11]);
     }
 
     /**
