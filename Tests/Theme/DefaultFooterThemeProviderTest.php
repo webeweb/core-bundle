@@ -31,7 +31,7 @@ class DefaultFooterThemeProviderTest extends AbstractTestCase {
 
         $obj = new DefaultFooterThemeProvider();
 
-        $this->assertEquals(null, $obj->getView());
+        $this->assertNull($obj->getView());
     }
 
 }
