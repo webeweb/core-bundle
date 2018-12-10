@@ -31,7 +31,7 @@ class DefaultUserInfoThemeProviderTest extends AbstractTestCase {
 
         $obj = new DefaultUserInfoThemeProvider();
 
-        $this->assertEquals(null, $obj->getView());
+        $this->assertNull($obj->getView());
         $this->assertFalse($obj->provideRegisterLink());
         $this->assertFalse($obj->provideResettingLink());
     }
