@@ -31,7 +31,7 @@ class DefaultBreadcrumbsThemeProviderTest extends AbstractTestCase {
 
         $obj = new DefaultBreadcrumbsThemeProvider();
 
-        $this->assertEquals(null, $obj->getView());
+        $this->assertNull($obj->getView());
     }
 
 }
