@@ -32,7 +32,7 @@ class DefaultTasksDropDownThemeProviderTest extends AbstractTestCase {
         $obj = new DefaultTasksDropDownThemeProvider();
 
         $this->assertEquals([], $obj->getTasks());
-        $this->assertEquals(null, $obj->getView());
+        $this->assertNull($obj->getView());
     }
 
 }
