@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### 1.4.1 (2018-12-13)
+
+- Improve unit tests
+
 ### 1.4.0 (2018-12-13)
 
 - Add Renderer Twig extension trait
