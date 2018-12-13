@@ -53,6 +53,20 @@ class WikiViewTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the find() method.
+     *
+     * @return void
+     */
+    public function testFindWithReturnNull() {
+
+        // Set a Wiki view mock.
+        $wikiView = new WikiView("category", "package", "page", "title");
+
+        $res = WikiView::find([$wikiView], "Category", "Package", "Title");
+        $this->assertNull($res);
+    }
+
+    /**
      * Tests the getView() method.
      *
      * @return void
