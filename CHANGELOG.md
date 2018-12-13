@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### 1.3.0 (2018-12-xx)
+### 1.3.0 (2018-12-13)
 
 - Add find() and getView() into WikiView model
 - Improve unit tests
