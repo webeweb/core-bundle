@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### 1.4.0 (2018-12-xx)
+### 1.4.0 (2018-12-13)
 
 - Add Renderer Twig extension trait
 
