@@ -39,6 +39,33 @@ class WikiViewTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the find() method.
+     *
+     * @return void
+     */
+    public function testFind() {
+
+        // Set a Wiki view mock.
+        $wikiView = new WikiView("category", "package", "page", "title");
+
+        $res = WikiView::find([$wikiView], "category", "package", "title");
+        $this->assertSame($wikiView, $res);
+    }
+
+    /**
+     * Tests the getView() method.
+     *
+     * @return void
+     */
+    public function testGetView() {
+
+        $obj = new WikiView("Category", "Package", "Page", "Title");
+
+        $res = "@Core/Wiki/category/package/page.html.twig";
+        $this->assertEquals($res, $obj->getView());
+    }
+
+    /**
      * Tests the setBundle() method.
      *
      * @return void

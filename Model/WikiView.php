@@ -71,6 +71,27 @@ class WikiView {
     }
 
     /**
+     * Find.
+     *
+     * @param WikiView[] $wikiViews The wiki views.
+     * @param type $category The category.
+     * @param type $package The package.
+     * @param type $page The page.
+     * @return WikiView Returns the wiki view in case of success, null otherwise.
+     */
+    public static function find(array $wikiViews, $category, $package, $page) {
+        $wikiView = null;
+        foreach ($wikiViews as $current) {
+            if ($category !== $current->getCategory() && $package !== $current->getPackage() && $page !== $current->getPage()) {
+                continue;
+            }
+            $wikiView = $current;
+            break;
+        }
+        return $wikiView;
+    }
+
+    /**
      * Get the bundle.
      *
      * @return string Returns the bundle.
@@ -113,6 +134,22 @@ class WikiView {
      */
     public function getTitle() {
         return $this->title;
+    }
+
+    /**
+     * Get a view.
+     *
+     * @return string Returns the view.
+     */
+    public function getView() {
+        $paths = [
+            "@" . $this->getBundle(),
+            "Wiki",
+            strtolower($this->getCategory()),
+            strtolower($this->getPackage()),
+            strtolower($this->getPage()) . ".html.twig",
+        ];
+        return implode("/", $paths);
     }
 
     /**

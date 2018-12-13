@@ -3,6 +3,7 @@ CHANGELOG
 
 ### 1.3.0 (2018-12-xx)
 
+- Add find() and getView() into WikiView model
 - Add removeProvider() into Manager interface
 - Remove registerProvider() into Manager interface
 - Add size() into Manager interface
