@@ -74,9 +74,9 @@ class WikiView {
      * Find.
      *
      * @param WikiView[] $wikiViews The wiki views.
-     * @param type $category The category.
-     * @param type $package The package.
-     * @param type $page The page.
+     * @param string $category The category.
+     * @param string $package The package.
+     * @param string $page The page.
      * @return WikiView Returns the wiki view in case of success, null otherwise.
      */
     public static function find(array $wikiViews, $category, $package, $page) {
