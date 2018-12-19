@@ -48,7 +48,7 @@ class WikiViewTest extends AbstractTestCase {
         // Set a Wiki view mock.
         $wikiView = new WikiView("category", "package", "page", "title");
 
-        $res = WikiView::find([$wikiView], "category", "package", "title");
+        $res = WikiView::find([$wikiView], "category", "package", "page");
         $this->assertSame($wikiView, $res);
     }
 
@@ -62,7 +62,7 @@ class WikiViewTest extends AbstractTestCase {
         // Set a Wiki view mock.
         $wikiView = new WikiView("category", "package", "page", "title");
 
-        $res = WikiView::find([$wikiView], "Category", "Package", "Title");
+        $res = WikiView::find([$wikiView], "Category", "Package", "Page");
         $this->assertNull($res);
     }
 

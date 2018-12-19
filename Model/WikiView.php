@@ -82,7 +82,7 @@ class WikiView {
     public static function find(array $wikiViews, $category, $package, $page) {
         $wikiView = null;
         foreach ($wikiViews as $current) {
-            if ($category !== $current->getCategory() && $package !== $current->getPackage() && $page !== $current->getPage()) {
+            if ($category !== $current->getCategory() || $package !== $current->getPackage() || $page !== $current->getPage()) {
                 continue;
             }
             $wikiView = $current;
