@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### 1.4.2 (2018-12-19)
+
+- Fix unclosed script tag into layout templates
+
 ### 1.4.1 (2018-12-13)
 
 - Improve unit tests
