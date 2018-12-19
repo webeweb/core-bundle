@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### 1.5.0 (2018-12-19)
+
+- Add OS helper (to determines the operating system)
+
 ### 1.4.3 (2018-12-19)
 
 - Fix find() method into WikiView model
