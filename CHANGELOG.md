@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### 1.4.3 (2018-12-19)
+
+- Fix find() method into WikiView model
+
 ### 1.4.2 (2018-12-19)
 
 - Fix unclosed script tag into layout templates
