@@ -27,9 +27,9 @@ class CommandHelper {
      */
     public static function getCheckbox($checked) {
         if (true === $checked) {
-            return sprintf("<fg=green;options=bold>%s</>", "\\" === DIRECTORY_SEPARATOR ? "OK" : "\xE2\x9C\x94");
+            return sprintf("<fg=green;options=bold>%s</>", OSHelper::isWindows() ? "OK" : "\xE2\x9C\x94");
         }
-        return sprintf("<fg=yellow;options=bold>%s</>", "\\" === DIRECTORY_SEPARATOR ? "KO" : "!");
+        return sprintf("<fg=yellow;options=bold>%s</>", OSHelper::isWindows() ? "KO" : "!");
     }
 
 }
