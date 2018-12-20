@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Helper;
 use WBW\Bundle\CoreBundle\Helper\AssetsHelper;
 
 /**
- * Test assests helper.
+ * Test assets helper.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Helper
