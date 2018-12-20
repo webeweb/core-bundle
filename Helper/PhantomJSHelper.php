@@ -27,37 +27,46 @@ class PhantomJSHelper {
     const SERVICE_NAME = "webeweb.core.helper.phantomjs";
 
     /**
-     * Base.
+     * Binary path.
      *
      * @var string
      */
-    private $base;
+    private $binaryPath;
 
     /**
-     * Path.
+     * OutputPath.
      *
      * @var string
      */
-    private $path;
+    private $outputPath;
+
+    /**
+     * ScriptsPath.
+     *
+     * @var string
+     */
+    private $scriptsPath;
 
     /**
      * Constructor.
      *
-     * @param string $path The path.
-     * @param string $base The base.
+     * @param string $binaryPath The binary path.
+     * @param string $scriptsPath The scripts path.
+     * @param string $outputPath The output path.
      */
-    public function __construct($path, $base) {
-        $this->setBase($base);
-        $this->setPath($path);
+    public function __construct($binaryPath, $scriptsPath, $outputPath = null) {
+        $this->setBinaryPath($binaryPath);
+        $this->setScriptsPath($scriptsPath);
+        $this->setOutputPath($outputPath);
     }
 
     /**
-     * Get the base.
+     * Get the binary path.
      *
-     * @return string Returns the base.
+     * @return string Returns the binary path.
      */
-    public function getBase() {
-        return $this->base;
+    public function getBinaryPath() {
+        return $this->binaryPath;
     }
 
     /**
@@ -68,48 +77,65 @@ class PhantomJSHelper {
     public function getCommand() {
 
         // Initialize the command.
-        $command = [
-            $this->getPath(),
-            $this->getBase(),
-        ];
+        $command = $this->getBinaryPath();
 
         // Check the operating system.
         if (true === OSHelper::isWindows()) {
-            $command[] = array_pop($command) . ".exe";
+            $command .= ".exe";
         }
 
         // Return the command.
-        return realpath(implode("/", $command));
+        return realpath($command);
     }
 
     /**
-     * Get the path.
+     * Get the output path.
      *
-     * @return string Returns the path.
+     * @return string Returns the output path.
      */
-    public function getPath() {
-        return $this->path;
+    public function getOutputPath() {
+        return $this->outputPath;
     }
 
     /**
-     * Set the base.
+     * Get the scriptsPath.
      *
-     * @param string $base The base.
-     * @return PhantomJSHelper Returns this phantomJS helper.
+     * @return string Returns the scriptsPath.
      */
-    protected function setBase($base) {
-        $this->base = $base;
+    public function getScriptsPath() {
+        return $this->scriptsPath;
+    }
+
+    /**
+     * Set the binary path.
+     *
+     * @param string $binaryPath The binary path.
+     * @return PhantomJSHelper Returns this PhantomJS helper.
+     */
+    protected function setBinaryPath($binaryPath) {
+        $this->binaryPath = $binaryPath;
         return $this;
     }
 
     /**
-     * Set the path.
+     * Set the output path.
      *
-     * @param string $path The path.
-     * @return PhantomJSHelper Returns this phantomJS helper.
+     * @param string $outputPath The output path.
+     * @return PhantomJSHelper Returns this PhantomJS helper.
      */
-    protected function setPath($path) {
-        $this->path = $path;
+    protected function setOutputPath($outputPath) {
+        $this->outputPath = $outputPath;
+        return $this;
+    }
+
+    /**
+     * Set the scripts path.
+     *
+     * @param string $scriptsPath The scripts path.
+     * @return PhantomJSHelper Returns this PhantomJS helper.
+     */
+    protected function setScriptsPath($scriptsPath) {
+        $this->scriptsPath = $scriptsPath;
         return $this;
     }
 

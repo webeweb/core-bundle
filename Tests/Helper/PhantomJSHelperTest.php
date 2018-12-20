@@ -27,18 +27,25 @@ function realpath($path) {
 class PhantomJSHelperTest extends AbstractTestCase {
 
     /**
-     * Base.
+     * Binary path.
      *
      * @var string
      */
-    private $base;
+    private $binaryPath;
 
     /**
-     * Path.
+     * Output path.
      *
      * @var string
      */
-    private $path;
+    private $outputPath;
+
+    /**
+     * Scripts path.
+     *
+     * @var string
+     */
+    private $scriptsPath;
 
     /**
      * {@inheritdoc}
@@ -46,11 +53,14 @@ class PhantomJSHelperTest extends AbstractTestCase {
     protected function setUp() {
         parent::setUp();
 
-        // Set a Base mock.
-        $this->base = "phantomjs";
+        // Set a Binary path mock.
+        $this->binaryPath = getcwd() . "/Tests/Fixtures/bin/phantomjs";
 
-        // Set a Path mock.
-        $this->path = getcwd() . "/Tests/Fixtures/bin";
+        // Set an Output path mock.
+        $this->outputPath = getcwd() . "/Tests/Fixtures/app/var/phantomjs/output";
+
+        // Set a Scripts path mock.
+        $this->scriptsPath = getcwd() . "/Tests/Fixtures/app/var/phantomjs/scripts";
     }
 
     /**
@@ -60,10 +70,11 @@ class PhantomJSHelperTest extends AbstractTestCase {
      */
     public function testConstructor() {
 
-        $obj = new PhantomJSHelper($this->path, $this->base);
+        $obj = new PhantomJSHelper($this->binaryPath, $this->scriptsPath, $this->outputPath);
 
-        $this->assertEquals($this->base, $obj->getBase());
-        $this->assertEquals($this->path, $obj->getPath());
+        $this->assertEquals($this->binaryPath, $obj->getBinaryPath());
+        $this->assertEquals($this->outputPath, $obj->getOutputPath());
+        $this->assertEquals($this->scriptsPath, $obj->getScriptsPath());
     }
 
     /**
@@ -73,9 +84,9 @@ class PhantomJSHelperTest extends AbstractTestCase {
      */
     public function testGetCommand() {
 
-        $obj = new PhantomJSHelper($this->path, $this->base);
+        $obj = new PhantomJSHelper($this->binaryPath, $this->scriptsPath, $this->outputPath);
 
-        $res = $this->path . "/" . $this->base;
+        $res = $this->binaryPath;
         if ("\\" === DIRECTORY_SEPARATOR) {
             $res .= ".exe";
         }
