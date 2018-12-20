@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Controller;
 
 use Psr\Log\LoggerInterface;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController as BaseController;
 use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
@@ -33,7 +33,7 @@ use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
  * @package WBW\Bundle\CoreBundle\Controller
  * @abstract
  */
-abstract class AbstractController extends Controller {
+abstract class AbstractController extends BaseController {
 
     /**
      * Get the container.
