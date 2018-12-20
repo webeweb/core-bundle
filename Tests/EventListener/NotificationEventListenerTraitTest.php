@@ -36,11 +36,11 @@ class NotificationEventListenerTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setNotificationEVentListener() method.
+     * Tests the setNotificationEventListener() method.
      *
      * @return void
      */
-    public function testSetNotificationEVentListener() {
+    public function testSetNotificationEventListener() {
 
         // Set a Notification event listener mock.
         $notificationEventListener = new NotificationEventListener($this->session);
