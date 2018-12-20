@@ -1,6 +1,19 @@
 CHANGELOG
 =========
 
+### master
+
+- Add User info theme provider trait
+- Add Tasks drop down theme provider trait
+- Add Search theme provider trait
+- Add Notifications drop down theme provider trait
+- Add Navigation theme provider trait
+- Add Hook drop down theme provider trait
+- Add Footer theme provider trait
+- Add Breadcrumbs theme provider trait
+- Add Application theme provider trait
+- Add PhantomJS helper
+
 ### 1.5.0 (2018-12-19)
 
 - Add OS helper (to determines the operating system)
