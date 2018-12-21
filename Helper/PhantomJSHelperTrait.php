@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Helper;
 
 /**
- * PhantomJSHelperTrait.
+ * PhantomJS helper trait.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Helper
