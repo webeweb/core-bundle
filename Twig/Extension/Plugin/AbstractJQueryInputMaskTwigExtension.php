@@ -14,6 +14,7 @@ namespace WBW\Bundle\CoreBundle\Twig\Extension\Plugin;
 use Twig_Environment;
 use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension;
+use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtensionTrait;
 use WBW\Library\Core\Argument\StringHelper;
 
 /**
@@ -25,31 +26,17 @@ use WBW\Library\Core\Argument\StringHelper;
  */
 abstract class AbstractJQueryInputMaskTwigExtension extends AbstractTwigExtension {
 
-    /**
-     * Renderer.
-     *
-     * @var RendererTwigExtension
-     */
-    private $renderer;
+    use RendererTwigExtensionTrait;
 
     /**
      * Constructor.
      *
      * @param Twig_Environment $twigEnvironment The twig environment.
-     * @param RendererTwigExtension $renderer The renderer.
+     * @param RendererTwigExtension $rendererTwigExtension The renderer Twig extension.
      */
-    protected function __construct(Twig_Environment $twigEnvironment, RendererTwigExtension $renderer) {
+    protected function __construct(Twig_Environment $twigEnvironment, RendererTwigExtension $rendererTwigExtension) {
         parent::__construct($twigEnvironment);
-        $this->setRenderer($renderer);
-    }
-
-    /**
-     * Get the renderer.
-     *
-     * @return RendererTwigExtension Returns the renderer.
-     */
-    public function getRenderer() {
-        return $this->renderer;
+        $this->setRendererTwigExtension($rendererTwigExtension);
     }
 
     /**
@@ -71,20 +58,9 @@ abstract class AbstractJQueryInputMaskTwigExtension extends AbstractTwigExtensio
 
         // Return the HTML
         if (true === $scriptTag) {
-            return $this->getRenderer()->coreScriptFilter($innerHTML);
+            return $this->getRendererTwigExtension()->coreScriptFilter($innerHTML);
         }
         return $innerHTML;
-    }
-
-    /**
-     * Set the renderer.
-     *
-     * @param RendererTwigExtension $renderer The renderer.
-     * @return AbstractJQueryInputMaskTwigExtension Returns this jQuery Twig extension.
-     */
-    protected function setRenderer(RendererTwigExtension $renderer) {
-        $this->renderer = $renderer;
-        return $this;
     }
 
 }

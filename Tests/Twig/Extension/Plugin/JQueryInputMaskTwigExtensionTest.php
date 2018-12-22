@@ -26,11 +26,11 @@ use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension;
 class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Renderer.
+     * Renderer Twig extension.
      *
      * @var RendererTwigExtension
      */
-    private $renderer;
+    private $rendererTwigExtension;
 
     /**
      * {@inheritdoc}
@@ -38,8 +38,8 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
     protected function setUp() {
         parent::setUp();
 
-        // Set a Boostrap renderer mock.
-        $this->renderer = new RendererTwigExtension($this->twigEnvironment);
+        // Set a Renderer Twig extension mock.
+        $this->rendererTwigExtension = new RendererTwigExtension($this->twigEnvironment);
     }
 
     /**
@@ -49,10 +49,11 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->renderer);
+        $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->rendererTwigExtension);
 
         $this->assertEquals("webeweb.core.twig.extension.plugin.jquery_inputmask", JQueryInputMaskTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+        $this->assertSame($this->rendererTwigExtension, $obj->getRendererTwigExtension());
     }
 
     /**
@@ -62,7 +63,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
      */
     public function testGetFunctions() {
 
-        $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->renderer);
+        $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->rendererTwigExtension);
 
         $res = $obj->getFunctions();
         $this->assertCount(7, $res);
@@ -110,7 +111,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
      */
     public function testJQueryInputMaskFunction() {
 
-        $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->renderer);
+        $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->rendererTwigExtension);
 
         $arg = ["selector" => "#selector", "mask" => "+33 9 99 99 99 99", "scriptTag" => true, "opts" => ["placeholder" => "+__ _ __ __ __ __"]];
         $res = "<script type=\"text/javascript\">\n$('#selector').inputmask(\"+33 9 99 99 99 99\",{\"placeholder\":\"+__ _ __ __ __ __\"});\n</script>";
@@ -124,7 +125,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
      */
     public function testJQueryInputMaskFunctionWithoutOptions() {
 
-        $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->renderer);
+        $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->rendererTwigExtension);
 
         $arg = ["selector" => "#selector"];
         $res = "$('#selector').inputmask(\"\",[]);";
@@ -138,7 +139,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
      */
     public function testJQueryInputMaskPhoneNumberFunction() {
 
-        $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->renderer);
+        $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->rendererTwigExtension);
 
         $arg = ["selector" => "#selector"];
         $res = "$('#selector').inputmask(\"99 99 99 99 99\",{\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"placeholder\":\"__ __ __ __ __\"});";
@@ -152,7 +153,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
      */
     public function testJQueryInputMaskSIRETNumberFunction() {
 
-        $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->renderer);
+        $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->rendererTwigExtension);
 
         $arg = ["selector" => "#selector"];
         $res = "$('#selector').inputmask(\"999 999 999 99999\",{\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"placeholder\":\"___ ___ ___ _____\"});";
@@ -166,7 +167,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
      */
     public function testJQueryInputMaskTime12Function() {
 
-        $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->renderer);
+        $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->rendererTwigExtension);
 
         $arg = ["selector" => "#selector"];
         $res = "$('#selector').inputmask(\"hh:mm t\",{\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"hourFormat\":\"12\",\"placeholder\":\"__:__ _m\"});";
@@ -180,7 +181,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
      */
     public function testJQueryInputMaskTime24Function() {
 
-        $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->renderer);
+        $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->rendererTwigExtension);
 
         $arg = ["selector" => "#selector"];
         $res = "$('#selector').inputmask(\"hh:mm\",{\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"hourFormat\":\"24\",\"placeholder\":\"__:__\"});";
@@ -194,7 +195,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
      */
     public function testJQueryInputMaskSocialSecurityNumberFunction() {
 
-        $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->renderer);
+        $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->rendererTwigExtension);
 
         $arg = ["selector" => "#selector"];
         $res = "$('#selector').inputmask(\"9 99 99 99 999 999 99\",{\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"placeholder\":\"_ __ __ __ ___ ___ __\"});";
@@ -208,7 +209,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
      */
     public function testJQueryInputMaskVATNumberFunction() {
 
-        $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->renderer);
+        $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->rendererTwigExtension);
 
         $arg = ["selector" => "#selector"];
         $res = "$('#selector').inputmask(\"**999 999 999 99\",{\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"placeholder\":\"_____ ___ ___ __\"});";
