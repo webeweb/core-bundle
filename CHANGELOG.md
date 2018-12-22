@@ -3,6 +3,7 @@ CHANGELOG
 
 ### master
 
+- Improve unit tests
 - Add User info theme provider trait
 - Add Tasks drop down theme provider trait
 - Add Search theme provider trait
