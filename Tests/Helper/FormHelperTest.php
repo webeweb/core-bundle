@@ -44,6 +44,20 @@ class FormHelperTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the onPostHandleRequestWithCollection() method.
+     *
+     * @return void
+     */
+    public function testOnPostRequestWithCollection() {
+
+        $oldCollection = $this->collection;
+        $newCollection = FormHelper::onPreHandleRequestWithCollection($oldCollection);
+        $newCollection->removeElement("element1");
+
+        $this->assertNull(FormHelper::onPostHandleRequestWithCollection($oldCollection, $newCollection, $this->objectManager));
+    }
+
+    /**
      * Tests the onPreHandleRequestWithCollection() method.
      *
      * @return void
@@ -57,20 +71,6 @@ class FormHelperTest extends AbstractTestCase {
         for ($i = 0; $i < 10; ++$i) {
             $this->assertEquals("element" . $i, $res->get($i));
         }
-    }
-
-    /**
-     * Tests the onPostHandleRequestWithCollection() method.
-     *
-     * @return void
-     */
-    public function testOnPostRequestWithCollection() {
-
-        $oldCollection = $this->collection;
-        $newCollection = FormHelper::onPreHandleRequestWithCollection($oldCollection);
-        $newCollection->removeElement("element1");
-
-        $this->assertNull(FormHelper::onPostHandleRequestWithCollection($oldCollection, $newCollection, $this->objectManager));
     }
 
 }
