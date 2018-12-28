@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Navigation\FontAwesome;
 
-use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Navigation\FontAwesome\NavigationNodeUsers;
+use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
