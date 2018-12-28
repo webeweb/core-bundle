@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Navigation\MaterialDesignIconicFont;
 
-use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Navigation\MaterialDesignIconicFont\NavigationNodeSettings;
+use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
