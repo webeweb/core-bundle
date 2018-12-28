@@ -161,6 +161,20 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the jQueryInputMaskSocialSecurityNumberFunction() method.
+     *
+     * @return void
+     */
+    public function testJQueryInputMaskSocialSecurityNumberFunction() {
+
+        $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->rendererTwigExtension);
+
+        $arg = ["selector" => "#selector"];
+        $res = "$('#selector').inputmask(\"9 99 99 99 999 999 99\",{\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"placeholder\":\"_ __ __ __ ___ ___ __\"});";
+        $this->assertEquals($res, $obj->jQueryInputMaskSocialSecurityNumberFunction($arg));
+    }
+
+    /**
      * Tests the jQueryInputMaskTime12Function() method.
      *
      * @return void
@@ -186,20 +200,6 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
         $arg = ["selector" => "#selector"];
         $res = "$('#selector').inputmask(\"hh:mm\",{\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"hourFormat\":\"24\",\"placeholder\":\"__:__\"});";
         $this->assertEquals($res, $obj->jQueryInputMaskTime24Function($arg));
-    }
-
-    /**
-     * Tests the jQueryInputMaskSocialSecurityNumberFunction() method.
-     *
-     * @return void
-     */
-    public function testJQueryInputMaskSocialSecurityNumberFunction() {
-
-        $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->rendererTwigExtension);
-
-        $arg = ["selector" => "#selector"];
-        $res = "$('#selector').inputmask(\"9 99 99 99 999 999 99\",{\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"placeholder\":\"_ __ __ __ ___ ___ __\"});";
-        $this->assertEquals($res, $obj->jQueryInputMaskSocialSecurityNumberFunction($arg));
     }
 
     /**
