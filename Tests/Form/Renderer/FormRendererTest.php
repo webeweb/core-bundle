@@ -40,23 +40,13 @@ class FormRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderWithNull() {
+    public function testRenderWithAlphabeticalTreeNodeInterface() {
 
-        $this->assertEquals("Empty selection", FormRenderer::renderOption(null));
-    }
+        // Set a Alphabetical tree node mock.
+        $arg = $this->getMockBuilder(AlphabeticalTreeNodeInterface::class)->getMock();
+        $arg->expects($this->any())->method("getAlphabeticalTreeNodeParent")->willReturn(null);
 
-    /**
-     * Tests the renderOption() method.
-     *
-     * @return void
-     */
-    public function testRenderWithTranslatedChoiceInterface() {
-
-        // Set a Translated choice label mock.
-        $arg = $this->getMockBuilder(TranslatedChoiceLabelInterface::class)->getMock();
-        $arg->expects($this->any())->method("getTranslatedChoiceLabel")->willReturn("translatedChoiceLabel");
-
-        $this->assertEquals("translatedChoiceLabel", FormRenderer::renderOption($arg));
+        $this->assertEquals("─ This option must implements [Translated]ChoiceLabelInterface", FormRenderer::renderOption($arg));
     }
 
     /**
@@ -78,13 +68,23 @@ class FormRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderWithAlphabeticalTreeNodeInterface() {
+    public function testRenderWithNull() {
 
-        // Set a Alphabetical tree node mock.
-        $arg = $this->getMockBuilder(AlphabeticalTreeNodeInterface::class)->getMock();
-        $arg->expects($this->any())->method("getAlphabeticalTreeNodeParent")->willReturn(null);
+        $this->assertEquals("Empty selection", FormRenderer::renderOption(null));
+    }
 
-        $this->assertEquals("─ This option must implements [Translated]ChoiceLabelInterface", FormRenderer::renderOption($arg));
+    /**
+     * Tests the renderOption() method.
+     *
+     * @return void
+     */
+    public function testRenderWithTranslatedChoiceInterface() {
+
+        // Set a Translated choice label mock.
+        $arg = $this->getMockBuilder(TranslatedChoiceLabelInterface::class)->getMock();
+        $arg->expects($this->any())->method("getTranslatedChoiceLabel")->willReturn("translatedChoiceLabel");
+
+        $this->assertEquals("translatedChoiceLabel", FormRenderer::renderOption($arg));
     }
 
 }
