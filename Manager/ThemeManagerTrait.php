@@ -11,8 +11,6 @@
 
 namespace WBW\Bundle\CoreBundle\Manager;
 
-use WBW\Bundle\CoreBundle\Manager\ThemeManager;
-
 /**
  * Theme manager trait.
  *

@@ -12,8 +12,6 @@
 namespace WBW\Bundle\CoreBundle\Manager;
 
 use Twig_Environment;
-use WBW\Bundle\CoreBundle\Manager\AbstractManager;
-use WBW\Bundle\CoreBundle\Manager\ManagerInterface;
 use WBW\Bundle\CoreBundle\Provider\ThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Service\TwigEnvironmentTrait;
 use WBW\Library\Core\Argument\ObjectHelper;
