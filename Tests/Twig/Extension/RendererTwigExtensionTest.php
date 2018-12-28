@@ -38,6 +38,23 @@ class RendererTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the coreScriptFilter() method.
+     *
+     * @return void
+     */
+    public function testCoreScriptFilter() {
+
+        $obj = new RendererTwigExtension($this->twigEnvironment);
+
+        $res = <<< EOT
+<script type="text/javascript">
+content
+</script>
+EOT;
+        $this->assertEquals($res, $obj->coreScriptFilter("content"));
+    }
+
+    /**
      * Tests the getFilters() method.
      *
      * @return void
@@ -53,23 +70,6 @@ class RendererTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("coreScript", $res[0]->getName());
         $this->assertEquals([$obj, "coreScriptFilter"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
-    }
-
-    /**
-     * Tests the coreScriptFilter() method.
-     *
-     * @return void
-     */
-    public function testCoreScriptFilter() {
-
-        $obj = new RendererTwigExtension($this->twigEnvironment);
-
-        $res = <<< EOT
-<script type="text/javascript">
-content
-</script>
-EOT;
-        $this->assertEquals($res, $obj->coreScriptFilter("content"));
     }
 
     /**
@@ -99,10 +99,9 @@ EOT;
      *
      * @return void
      */
-    public function testRenderIconWithMeteocons() {
-
-        $res = '<i class="meteocons" data-meteocons="A"></i>';
-        $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "mc:A"));
+    public function testRenderIconWithMaterialDesignIconicFont() {
+        $res = '<i class="zmdi zmdi-home"></i>';
+        $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "zmdi:home"));
     }
 
     /**
@@ -110,9 +109,10 @@ EOT;
      *
      * @return void
      */
-    public function testRenderIconWithMaterialDesignIconicFont() {
-        $res = '<i class="zmdi zmdi-home"></i>';
-        $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "zmdi:home"));
+    public function testRenderIconWithMeteocons() {
+
+        $res = '<i class="meteocons" data-meteocons="A"></i>';
+        $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "mc:A"));
     }
 
 }
