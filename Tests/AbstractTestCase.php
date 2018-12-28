@@ -93,6 +93,13 @@ abstract class AbstractTestCase extends TestCase {
     protected $token;
 
     /**
+     * Token storage.
+     *
+     * @var TokenStorageInterface
+     */
+    protected $tokenStorage;
+
+    /**
      * Translator.
      *
      * @var TranslatorInterface
@@ -119,13 +126,6 @@ abstract class AbstractTestCase extends TestCase {
      * @var Twig_LoaderInterface
      */
     protected $twigLoader;
-
-    /**
-     * Token storage.
-     *
-     * @var TokenStorageInterface
-     */
-    protected $tokenStorage;
 
     /**
      * User.
@@ -188,7 +188,7 @@ abstract class AbstractTestCase extends TestCase {
         // Set a Parameter bag mock.
         $parameterBag = new ParameterBag([
             "kernel.environment" => "dev",
-            "kernel.root_dir"    => getcwd() . "/Fixtures/app"
+            "kernel.root_dir"    => getcwd() . "/Fixtures/app",
         ]);
 
         // We set a container builder with only the necessary.
