@@ -29,7 +29,7 @@ class FormFactory {
      */
     public static function newChoiceType(array $choices = []) {
         return [
-            "choices" => array_flip($choices)
+            "choices" => array_flip($choices),
         ];
     }
 
@@ -55,7 +55,7 @@ class FormFactory {
         $output = [
             "class"        => $class,
             "choices"      => [],
-            "choice_label" => function($entity) use($options) {
+            "choice_label" => function($entity) use ($options) {
                 return FormRenderer::renderOption($entity, $options["translator"]);
             },
         ];
