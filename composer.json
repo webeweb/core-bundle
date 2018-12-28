@@ -2,7 +2,12 @@
     "name": "webeweb/core-bundle",
     "type": "symfony-bundle",
     "description": "Core bundle for Symfony 2 and more",
-    "keywords": ["webeweb", "bundle", "symfony", "core"],
+    "keywords": [
+        "core",
+        "bundle",
+        "symfony",
+        "webeweb"
+    ],
     "homepage": "https://github.com/webeweb/core-bundle",
     "license": "LGPL-3.0-only",
     "authors": [
