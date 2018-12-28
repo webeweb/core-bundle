@@ -15,7 +15,6 @@ use Twig_Environment;
 use Twig_SimpleFilter;
 use Twig_SimpleFunction;
 use WBW\Bundle\CoreBundle\Renderer\IconRendererInterface;
-use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\AbstractMaterialDesignIconicFontTwigExtension;
 use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
