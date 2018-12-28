@@ -42,6 +42,23 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
     }
 
     /**
+     * Get the Twig functions.
+     *
+     * @return array Returns the Twig functions.
+     */
+    public function getFunctions() {
+        return [
+            new Twig_SimpleFunction("jQueryInputMask", [$this, "jQueryInputMaskFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("jQueryInputMaskPhoneNumber", [$this, "jQueryInputMaskPhoneNumberFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("jQueryInputMaskSIRETNumber", [$this, "jQueryInputMaskSIRETNumberFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("jQueryInputMaskSocialSecurityNumber", [$this, "jQueryInputMaskSocialSecurityNumberFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("jQueryInputMaskTime12", [$this, "jQueryInputMaskTime12Function"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("jQueryInputMaskTime24", [$this, "jQueryInputMaskTime24Function"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("jQueryInputMaskVATNumber", [$this, "jQueryInputMaskVATNumberFunction"], ["is_safe" => ["html"]]),
+        ];
+    }
+
+    /**
      * Displays a jQuery input mask.
      *
      * @param array $args The arguments.
@@ -115,23 +132,6 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
     public function jQueryInputMaskVATNumberFunction(array $args = []) {
         $defaultMask = "**999 999 999 99";
         return $this->jQueryInputMask(ArrayHelper::get($args, "selector"), $defaultMask, $this->prepareOptions($args, $defaultMask), ArrayHelper::get($args, "scriptTag", false));
-    }
-
-    /**
-     * Get the Twig functions.
-     *
-     * @return array Returns the Twig functions.
-     */
-    public function getFunctions() {
-        return [
-            new Twig_SimpleFunction("jQueryInputMask", [$this, "jQueryInputMaskFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("jQueryInputMaskPhoneNumber", [$this, "jQueryInputMaskPhoneNumberFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("jQueryInputMaskSIRETNumber", [$this, "jQueryInputMaskSIRETNumberFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("jQueryInputMaskSocialSecurityNumber", [$this, "jQueryInputMaskSocialSecurityNumberFunction"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("jQueryInputMaskTime12", [$this, "jQueryInputMaskTime12Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("jQueryInputMaskTime24", [$this, "jQueryInputMaskTime24Function"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("jQueryInputMaskVATNumber", [$this, "jQueryInputMaskVATNumberFunction"], ["is_safe" => ["html"]]),
-        ];
     }
 
     /**
