@@ -32,26 +32,6 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class ThemeManagerTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new ThemeManager($this->twigEnvironment);
-
-        $this->assertNull($obj->getApplicationThemeProvider());
-        $this->assertNull($obj->getBreadcrumbsThemeProvider());
-        $this->assertNull($obj->getFooterThemeProvider());
-        $this->assertNull($obj->getHookDropDownThemeProvider());
-        $this->assertNull($obj->getNavigationThemeProvider());
-        $this->assertNull($obj->getNotificationsDropDownThemeProvider());
-        $this->assertNull($obj->getSearchThemeProvider());
-        $this->assertNull($obj->getTasksDropDownThemeProvider());
-        $this->assertNull($obj->getUserInfoThemeProvider());
-    }
-
-    /**
      * Tests the addGlobal() method.
      *
      * @return void
@@ -74,7 +54,6 @@ class ThemeManagerTest extends AbstractTestCase {
         $obj->addGlobal();
 
         $res = $this->twigEnvironment->getGlobals();
-
         $this->assertCount(9, $res);
 
         $this->assertArrayHasKey("ApplicationThemeProvider", $res);
@@ -103,6 +82,26 @@ class ThemeManagerTest extends AbstractTestCase {
 
         $this->assertArrayHasKey("UserInfoThemeProvider", $res);
         $this->assertInstanceOf(UserInfoThemeProviderInterface::class, $res["UserInfoThemeProvider"]);
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $obj = new ThemeManager($this->twigEnvironment);
+
+        $this->assertNull($obj->getApplicationThemeProvider());
+        $this->assertNull($obj->getBreadcrumbsThemeProvider());
+        $this->assertNull($obj->getFooterThemeProvider());
+        $this->assertNull($obj->getHookDropDownThemeProvider());
+        $this->assertNull($obj->getNavigationThemeProvider());
+        $this->assertNull($obj->getNotificationsDropDownThemeProvider());
+        $this->assertNull($obj->getSearchThemeProvider());
+        $this->assertNull($obj->getTasksDropDownThemeProvider());
+        $this->assertNull($obj->getUserInfoThemeProvider());
     }
 
     /**

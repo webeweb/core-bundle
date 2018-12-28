@@ -24,19 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\TestManager;
 class AbstractManagerTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestManager();
-
-        $this->assertEquals([], $obj->getProviders());
-        $this->assertEquals(0, $obj->size());
-    }
-
-    /**
      * Tests the addProvider() method.
      *
      * @return void
@@ -51,6 +38,19 @@ class AbstractManagerTest extends AbstractTestCase {
         $obj->addProvider($provider);
         $this->assertSame($provider, $obj->getProviders()[0]);
         $this->assertEquals(1, $obj->size());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $obj = new TestManager();
+
+        $this->assertEquals([], $obj->getProviders());
+        $this->assertEquals(0, $obj->size());
     }
 
     /**

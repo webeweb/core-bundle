@@ -24,20 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\TestThemeManager;
 class AbstractThemeManagerTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestThemeManager($this->twigEnvironment);
-
-        $this->assertNull($obj->getProvider(ThemeProviderInterface::class));
-        $this->assertCount(0, $obj->getProviders());
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-
-    /**
      * Tests the addGlobal() method.
      *
      * @return void
@@ -74,6 +60,20 @@ class AbstractThemeManagerTest extends AbstractTestCase {
         $res = $this->twigEnvironment->getGlobals();
 
         $this->assertCount(0, $res);
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $obj = new TestThemeManager($this->twigEnvironment);
+
+        $this->assertNull($obj->getProvider(ThemeProviderInterface::class));
+        $this->assertCount(0, $obj->getProviders());
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 
     /**
