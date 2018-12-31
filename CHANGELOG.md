@@ -71,6 +71,7 @@ CHANGELOG
 - Add Yellow color interface
 - Add Yellow color provider
 - Add Yellow color provider trait
+- Improve PHPDoc
 - Improve unit tests
 
 ### 1.5.0 (2018-12-19)
