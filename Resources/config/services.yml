@@ -38,6 +38,120 @@ services:
             - ["setTasksDropDownThemeProvider",         ["@?webeweb.core.provider.theme.tasks_drop_down"]]
             - ["setUserInfoThemeProvider",              ["@?webeweb.core.provider.theme.user_info"]]
 
+    webeweb.core.provider.color.amber:
+        class:     WBW\Bundle\CoreBundle\Color\AmberColorProvider
+        public:    true
+        tags:
+            - { name: "webeweb.core.provider.color" }
+
+    webeweb.core.provider.color.blue:
+        class:     WBW\Bundle\CoreBundle\Color\BlueColorProvider
+        public:    true
+        tags:
+            - { name: "webeweb.core.provider.color" }
+
+    webeweb.core.provider.color.blue_grey:
+        class:     WBW\Bundle\CoreBundle\Color\BlueGreyColorProvider
+        public:    true
+        tags:
+            - { name: "webeweb.core.provider.color" }
+
+    webeweb.core.provider.color.brown:
+        class:     WBW\Bundle\CoreBundle\Color\BrownColorProvider
+        public:    true
+        tags:
+            - { name: "webeweb.core.provider.color" }
+
+    webeweb.core.provider.color.cyan:
+        class:     WBW\Bundle\CoreBundle\Color\CyanColorProvider
+        public:    true
+        tags:
+            - { name: "webeweb.core.provider.color" }
+
+    webeweb.core.provider.color.deep_orange:
+        class:     WBW\Bundle\CoreBundle\Color\DeepOrangeColorProvider
+        public:    true
+        tags:
+            - { name: "webeweb.core.provider.color" }
+
+    webeweb.core.provider.color.deep_purple:
+        class:     WBW\Bundle\CoreBundle\Color\DeepPurpleColorProvider
+        public:    true
+        tags:
+            - { name: "webeweb.core.provider.color" }
+
+    webeweb.core.provider.color.green:
+        class:     WBW\Bundle\CoreBundle\Color\GreenColorProvider
+        public:    true
+        tags:
+            - { name: "webeweb.core.provider.color" }
+
+    webeweb.core.provider.color.grey:
+        class:     WBW\Bundle\CoreBundle\Color\GreyColorProvider
+        public:    true
+        tags:
+            - { name: "webeweb.core.provider.color" }
+
+    webeweb.core.provider.color.indigo:
+        class:     WBW\Bundle\CoreBundle\Color\IndigoColorProvider
+        public:    true
+        tags:
+            - { name: "webeweb.core.provider.color" }
+
+    webeweb.core.provider.color.light_blue:
+        class:     WBW\Bundle\CoreBundle\Color\LightBlueColorProvider
+        public:    true
+        tags:
+            - { name: "webeweb.core.provider.color" }
+
+    webeweb.core.provider.color.light_green:
+        class:     WBW\Bundle\CoreBundle\Color\LightGreenColorProvider
+        public:    true
+        tags:
+            - { name: "webeweb.core.provider.color" }
+
+    webeweb.core.provider.color.lime:
+        class:     WBW\Bundle\CoreBundle\Color\LimeColorProvider
+        public:    true
+        tags:
+            - { name: "webeweb.core.provider.color" }
+
+    webeweb.core.provider.color.orange:
+        class:     WBW\Bundle\CoreBundle\Color\OrangeColorProvider
+        public:    true
+        tags:
+            - { name: "webeweb.core.provider.color" }
+
+    webeweb.core.provider.color.pink:
+        class:     WBW\Bundle\CoreBundle\Color\PinkColorProvider
+        public:    true
+        tags:
+            - { name: "webeweb.core.provider.color" }
+
+    webeweb.core.provider.color.purple:
+        class:     WBW\Bundle\CoreBundle\Color\PurpleColorProvider
+        public:    true
+        tags:
+            - { name: "webeweb.core.provider.color" }
+
+    webeweb.core.provider.color.red:
+        class:     WBW\Bundle\CoreBundle\Color\RedColorProvider
+        public:    true
+        tags:
+            - { name: "webeweb.core.provider.color" }
+
+    webeweb.core.provider.color.teal:
+        class:     WBW\Bundle\CoreBundle\Color\TealColorProvider
+        public:    true
+        tags:
+            - { name: "webeweb.core.provider.color" }
+
+    webeweb.core.provider.color.yellow:
+        class:     WBW\Bundle\CoreBundle\Color\YellowColorProvider
+        public:    true
+        tags:
+            - { name: "webeweb.core.provider.color" }
+
     webeweb.core.twig.extension.plugin.font_awesome:
         class:     WBW\Bundle\CoreBundle\Twig\Extension\Plugin\FontAwesomeTwigExtension
         arguments: ["@twig"]

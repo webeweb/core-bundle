@@ -11,6 +11,25 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\DependencyInjection;
 
+use WBW\Bundle\CoreBundle\Color\AmberColorProvider;
+use WBW\Bundle\CoreBundle\Color\BlueColorProvider;
+use WBW\Bundle\CoreBundle\Color\BlueGreyColorProvider;
+use WBW\Bundle\CoreBundle\Color\BrownColorProvider;
+use WBW\Bundle\CoreBundle\Color\CyanColorProvider;
+use WBW\Bundle\CoreBundle\Color\DeepOrangeColorProvider;
+use WBW\Bundle\CoreBundle\Color\DeepPurpleColorProvider;
+use WBW\Bundle\CoreBundle\Color\GreenColorProvider;
+use WBW\Bundle\CoreBundle\Color\GreyColorProvider;
+use WBW\Bundle\CoreBundle\Color\IndigoColorProvider;
+use WBW\Bundle\CoreBundle\Color\LightBlueColorProvider;
+use WBW\Bundle\CoreBundle\Color\LightGreenColorProvider;
+use WBW\Bundle\CoreBundle\Color\LimeColorProvider;
+use WBW\Bundle\CoreBundle\Color\OrangeColorProvider;
+use WBW\Bundle\CoreBundle\Color\PinkColorProvider;
+use WBW\Bundle\CoreBundle\Color\PurpleColorProvider;
+use WBW\Bundle\CoreBundle\Color\RedColorProvider;
+use WBW\Bundle\CoreBundle\Color\TealColorProvider;
+use WBW\Bundle\CoreBundle\Color\YellowColorProvider;
 use WBW\Bundle\CoreBundle\DependencyInjection\CoreExtension;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\EventListener\NotificationEventListener;
@@ -47,6 +66,27 @@ class CoreExtensionTest extends AbstractTestCase {
 
         // Managers
         $this->assertInstanceOf(ThemeManager::class, $this->containerBuilder->get(ThemeManager::SERVICE_NAME));
+
+        // Providers
+        $this->assertInstanceOf(AmberColorProvider::class, $this->containerBuilder->get(AmberColorProvider::SERVICE_NAME));
+        $this->assertInstanceOf(BlueColorProvider::class, $this->containerBuilder->get(BlueColorProvider::SERVICE_NAME));
+        $this->assertInstanceOf(BlueGreyColorProvider::class, $this->containerBuilder->get(BlueGreyColorProvider::SERVICE_NAME));
+        $this->assertInstanceOf(BrownColorProvider::class, $this->containerBuilder->get(BrownColorProvider::SERVICE_NAME));
+        $this->assertInstanceOf(CyanColorProvider::class, $this->containerBuilder->get(CyanColorProvider::SERVICE_NAME));
+        $this->assertInstanceOf(DeepOrangeColorProvider::class, $this->containerBuilder->get(DeepOrangeColorProvider::SERVICE_NAME));
+        $this->assertInstanceOf(DeepPurpleColorProvider::class, $this->containerBuilder->get(DeepPurpleColorProvider::SERVICE_NAME));
+        $this->assertInstanceOf(GreenColorProvider::class, $this->containerBuilder->get(GreenColorProvider::SERVICE_NAME));
+        $this->assertInstanceOf(GreyColorProvider::class, $this->containerBuilder->get(GreyColorProvider::SERVICE_NAME));
+        $this->assertInstanceOf(IndigoColorProvider::class, $this->containerBuilder->get(IndigoColorProvider::SERVICE_NAME));
+        $this->assertInstanceOf(LightBlueColorProvider::class, $this->containerBuilder->get(LightBlueColorProvider::SERVICE_NAME));
+        $this->assertInstanceOf(LightGreenColorProvider::class, $this->containerBuilder->get(LightGreenColorProvider::SERVICE_NAME));
+        $this->assertInstanceOf(LimeColorProvider::class, $this->containerBuilder->get(LimeColorProvider::SERVICE_NAME));
+        $this->assertInstanceOf(OrangeColorProvider::class, $this->containerBuilder->get(OrangeColorProvider::SERVICE_NAME));
+        $this->assertInstanceOf(PinkColorProvider::class, $this->containerBuilder->get(PinkColorProvider::SERVICE_NAME));
+        $this->assertInstanceOf(PurpleColorProvider::class, $this->containerBuilder->get(PurpleColorProvider::SERVICE_NAME));
+        $this->assertInstanceOf(RedColorProvider::class, $this->containerBuilder->get(RedColorProvider::SERVICE_NAME));
+        $this->assertInstanceOf(TealColorProvider::class, $this->containerBuilder->get(TealColorProvider::SERVICE_NAME));
+        $this->assertInstanceOf(YellowColorProvider::class, $this->containerBuilder->get(YellowColorProvider::SERVICE_NAME));
 
         // Twig extensions Plug-ins
         $this->assertInstanceOf(FontAwesomeTwigExtension::class, $this->containerBuilder->get(FontAwesomeTwigExtension::SERVICE_NAME));
