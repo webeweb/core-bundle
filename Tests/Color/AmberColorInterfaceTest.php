@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Color;
 
 use WBW\Bundle\CoreBundle\Color\AmberColorInterface;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Amber color interface test.
