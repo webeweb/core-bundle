@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Color;
 
 use WBW\Bundle\CoreBundle\Color\BlueGreyColorInterface;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Blue grey color interface test.
