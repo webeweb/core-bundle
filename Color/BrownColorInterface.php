@@ -1,0 +1,71 @@
+<?php
+
+/*
+ * This file is part of the core-bundle package.
+ *
+ * (c) 2018 WEBEWEB
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace WBW\Bundle\CoreBundle\Color;
+
+/**
+ * Brown color interface.
+ *
+ * @author webeweb <https://github.com/webeweb/>
+ * @package WBW\Bundle\CoreBundle\Color
+ */
+interface BrownColorInterface {
+
+    /**
+     * Color brown "50"
+     */
+    const COLOR_BROWN_50 = "#EFEBE9";
+
+    /**
+     * Color brown "100"
+     */
+    const COLOR_BROWN_100 = "#D7CCC8";
+
+    /**
+     * Color brown "200"
+     */
+    const COLOR_BROWN_200 = "#BCAAA4";
+
+    /**
+     * Color brown "300"
+     */
+    const COLOR_BROWN_300 = "#A1887F";
+
+    /**
+     * Color brown "400"
+     */
+    const COLOR_BROWN_400 = "#8D6E63";
+
+    /**
+     * Color brown "500"
+     */
+    const COLOR_BROWN_500 = "#795548";
+
+    /**
+     * Color brown "600"
+     */
+    const COLOR_BROWN_600 = "#6D4C41";
+
+    /**
+     * Color brown "700"
+     */
+    const COLOR_BROWN_700 = "#5D4037";
+
+    /**
+     * Color brown "800"
+     */
+    const COLOR_BROWN_800 = "#4E342E";
+
+    /**
+     * Color brown "900"
+     */
+    const COLOR_BROWN_900 = "#3E2723";
+}
