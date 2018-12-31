@@ -12,8 +12,8 @@
 namespace WBW\Bundle\CoreBundle\Tests\Color;
 
 use WBW\Bundle\CoreBundle\Color\ColorInterface;
-use WBW\Bundle\CoreBundle\Color\PinkColorInterface;
 use WBW\Bundle\CoreBundle\Color\PinkColorProvider;
+use WBW\Bundle\CoreBundle\Provider\Color\PinkColorProviderInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
@@ -49,19 +49,19 @@ class PinkColorProviderTest extends AbstractTestCase {
         $this->assertArrayHasKey(ColorInterface::COLOR_A400, $res);
         $this->assertArrayHasKey(ColorInterface::COLOR_A700, $res);
 
-        $this->assertEquals(PinkColorInterface::COLOR_PINK_50, $res[ColorInterface::COLOR_50]);
-        $this->assertEquals(PinkColorInterface::COLOR_PINK_100, $res[ColorInterface::COLOR_100]);
-        $this->assertEquals(PinkColorInterface::COLOR_PINK_200, $res[ColorInterface::COLOR_200]);
-        $this->assertEquals(PinkColorInterface::COLOR_PINK_300, $res[ColorInterface::COLOR_300]);
-        $this->assertEquals(PinkColorInterface::COLOR_PINK_400, $res[ColorInterface::COLOR_400]);
-        $this->assertEquals(PinkColorInterface::COLOR_PINK_500, $res[ColorInterface::COLOR_500]);
-        $this->assertEquals(PinkColorInterface::COLOR_PINK_500, $res[ColorInterface::COLOR_500]);
-        $this->assertEquals(PinkColorInterface::COLOR_PINK_600, $res[ColorInterface::COLOR_600]);
-        $this->assertEquals(PinkColorInterface::COLOR_PINK_700, $res[ColorInterface::COLOR_700]);
-        $this->assertEquals(PinkColorInterface::COLOR_PINK_A100, $res[ColorInterface::COLOR_A100]);
-        $this->assertEquals(PinkColorInterface::COLOR_PINK_A200, $res[ColorInterface::COLOR_A200]);
-        $this->assertEquals(PinkColorInterface::COLOR_PINK_A400, $res[ColorInterface::COLOR_A400]);
-        $this->assertEquals(PinkColorInterface::COLOR_PINK_A700, $res[ColorInterface::COLOR_A700]);
+        $this->assertEquals(PinkColorProviderInterface::COLOR_PINK_50, $res[ColorInterface::COLOR_50]);
+        $this->assertEquals(PinkColorProviderInterface::COLOR_PINK_100, $res[ColorInterface::COLOR_100]);
+        $this->assertEquals(PinkColorProviderInterface::COLOR_PINK_200, $res[ColorInterface::COLOR_200]);
+        $this->assertEquals(PinkColorProviderInterface::COLOR_PINK_300, $res[ColorInterface::COLOR_300]);
+        $this->assertEquals(PinkColorProviderInterface::COLOR_PINK_400, $res[ColorInterface::COLOR_400]);
+        $this->assertEquals(PinkColorProviderInterface::COLOR_PINK_500, $res[ColorInterface::COLOR_500]);
+        $this->assertEquals(PinkColorProviderInterface::COLOR_PINK_500, $res[ColorInterface::COLOR_500]);
+        $this->assertEquals(PinkColorProviderInterface::COLOR_PINK_600, $res[ColorInterface::COLOR_600]);
+        $this->assertEquals(PinkColorProviderInterface::COLOR_PINK_700, $res[ColorInterface::COLOR_700]);
+        $this->assertEquals(PinkColorProviderInterface::COLOR_PINK_A100, $res[ColorInterface::COLOR_A100]);
+        $this->assertEquals(PinkColorProviderInterface::COLOR_PINK_A200, $res[ColorInterface::COLOR_A200]);
+        $this->assertEquals(PinkColorProviderInterface::COLOR_PINK_A400, $res[ColorInterface::COLOR_A400]);
+        $this->assertEquals(PinkColorProviderInterface::COLOR_PINK_A700, $res[ColorInterface::COLOR_A700]);
     }
 
     /**
