@@ -3,37 +3,37 @@ CHANGELOG
 
 ### master
 
-- Add Color interface
-- Add Yellow color interface
-- Add Teal color interface
-- Add Red color interface
-- Add Purple color interface
-- Add Pink color interface
-- Add Orange color interface
-- Add Lime color interface
-- Add Light green color interface
-- Add Light blue color interface
-- Add Indigo color interface
-- Add Grey color interface
-- Add Green color interface
-- Add Deep purple color interface
-- Add Deep orange color interface
-- Add Cyan color interface
-- Add Brown color interface
-- Add Blue grey color interface
-- Add Blue color interface
 - Add Amber color interface
-- Improve unit tests
-- Add User info theme provider trait
-- Add Tasks drop down theme provider trait
-- Add Search theme provider trait
-- Add Notifications drop down theme provider trait
-- Add Navigation theme provider trait
-- Add Hook drop down theme provider trait
-- Add Footer theme provider trait
-- Add Breadcrumbs theme provider trait
 - Add Application theme provider trait
+- Add Blue color interface
+- Add Blue grey color interface
+- Add Breadcrumbs theme provider trait
+- Add Brown color interface
+- Add Color interface
+- Add Cyan color interface
+- Add Deep orange color interface
+- Add Deep purple color interface
+- Add Footer theme provider trait
+- Add Green color interface
+- Add Grey color interface
+- Add Hook drop down theme provider trait
+- Add Indigo color interface
+- Add Light blue color interface
+- Add Light green color interface
+- Add Lime color interface
+- Add Navigation theme provider trait
+- Add Notifications drop down theme provider trait
+- Add Orange color interface
 - Add PhantomJS helper
+- Add Pink color interface
+- Add Purple color interface
+- Add Red color interface
+- Add Search theme provider trait
+- Add Tasks drop down theme provider trait
+- Add Teal color interface
+- Add User info theme provider trait
+- Add Yellow color interface
+- Improve unit tests
 
 ### 1.5.0 (2018-12-19)
 
@@ -58,10 +58,10 @@ CHANGELOG
 ### 1.3.0 (2018-12-13)
 
 - Add find() and getView() into WikiView model
-- Improve unit tests
 - Add removeProvider() into Manager interface
-- Remove registerProvider() into Manager interface
 - Add size() into Manager interface
+- Improve unit tests
+- Remove registerProvider() into Manager interface
 
 ### 1.2.0 (2018-12-08)
 
@@ -70,29 +70,29 @@ CHANGELOG
 
 ### 1.1.0 (2018-12-01)
 
-- Add Swift mailer trait
-- Add Notification event listener trait
-- Add Kernel event listener trait
-- Add Event dispatcher trait
-- Add Command helper
-- Remove Symfony 2.6 support
-- Allow null into service traits (Logger, Object manager, Router, Session, Token storage, Translator, Twig environment, ...)
-- Add Unzip assets command
-- Move public resources
 - Add Assets helper
-- Add Theme manager trait
-- Add Request trait
+- Add Command helper
 - Add Environment trait
+- Add Event dispatcher trait
+- Add Kernel event listener trait
+- Add Navigation nodes with predefined icons (Font Awesome and Material Design Iconic font)
+- Add Notification event listener trait
+- Add Notification factory
+- Add Request trait
+- Add Swift mailer trait
+- Add Theme manager trait
+- Add Unzip assets command
+- Allow null into service traits (Logger, Object manager, Router, Session, Token storage, Translator, Twig environment, ...)
 - Fix namespaces
 - Improve unit tests
-- Add Navigation nodes with predefined icons (Font Awesome and Material Design Iconic font)
+- Move public resources
+- Remove Symfony 2.6 support
 - Rename $route into $uri in Navigation classes
-- Add Notification factory
 
 ### 1.0.1 (2018-11-19)
 
-- Fix resource paths
 - Fix email layout block names
+- Fix resource paths
 
 ### 1.0.0 (2018-11-17)
 
