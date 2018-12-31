@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Color;
 
-use WBW\Bundle\CoreBundle\Color\BrownColorInterface;
 use WBW\Bundle\CoreBundle\Color\BrownColorProvider;
 use WBW\Bundle\CoreBundle\Color\ColorInterface;
+use WBW\Bundle\CoreBundle\Provider\Color\BrownColorProviderInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
@@ -45,15 +45,15 @@ class BrownColorProviderTest extends AbstractTestCase {
         $this->assertArrayHasKey(ColorInterface::COLOR_600, $res);
         $this->assertArrayHasKey(ColorInterface::COLOR_700, $res);
 
-        $this->assertEquals(BrownColorInterface::COLOR_BROWN_50, $res[ColorInterface::COLOR_50]);
-        $this->assertEquals(BrownColorInterface::COLOR_BROWN_100, $res[ColorInterface::COLOR_100]);
-        $this->assertEquals(BrownColorInterface::COLOR_BROWN_200, $res[ColorInterface::COLOR_200]);
-        $this->assertEquals(BrownColorInterface::COLOR_BROWN_300, $res[ColorInterface::COLOR_300]);
-        $this->assertEquals(BrownColorInterface::COLOR_BROWN_400, $res[ColorInterface::COLOR_400]);
-        $this->assertEquals(BrownColorInterface::COLOR_BROWN_500, $res[ColorInterface::COLOR_500]);
-        $this->assertEquals(BrownColorInterface::COLOR_BROWN_500, $res[ColorInterface::COLOR_500]);
-        $this->assertEquals(BrownColorInterface::COLOR_BROWN_600, $res[ColorInterface::COLOR_600]);
-        $this->assertEquals(BrownColorInterface::COLOR_BROWN_700, $res[ColorInterface::COLOR_700]);
+        $this->assertEquals(BrownColorProviderInterface::COLOR_BROWN_50, $res[ColorInterface::COLOR_50]);
+        $this->assertEquals(BrownColorProviderInterface::COLOR_BROWN_100, $res[ColorInterface::COLOR_100]);
+        $this->assertEquals(BrownColorProviderInterface::COLOR_BROWN_200, $res[ColorInterface::COLOR_200]);
+        $this->assertEquals(BrownColorProviderInterface::COLOR_BROWN_300, $res[ColorInterface::COLOR_300]);
+        $this->assertEquals(BrownColorProviderInterface::COLOR_BROWN_400, $res[ColorInterface::COLOR_400]);
+        $this->assertEquals(BrownColorProviderInterface::COLOR_BROWN_500, $res[ColorInterface::COLOR_500]);
+        $this->assertEquals(BrownColorProviderInterface::COLOR_BROWN_500, $res[ColorInterface::COLOR_500]);
+        $this->assertEquals(BrownColorProviderInterface::COLOR_BROWN_600, $res[ColorInterface::COLOR_600]);
+        $this->assertEquals(BrownColorProviderInterface::COLOR_BROWN_700, $res[ColorInterface::COLOR_700]);
     }
 
     /**
