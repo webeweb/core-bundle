@@ -9,15 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Color;
+namespace WBW\Bundle\CoreBundle\Provider\Color;
+
+use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 
 /**
- * Deep orange color interface.
+ * Deep orange color provider interface.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Color
+ * @package WBW\Bundle\CoreBundle\Provider\Color
  */
-interface DeepOrangeColorInterface extends ColorInterface {
+interface DeepOrangeColorProviderInterface extends ColorProviderInterface {
 
     /**
      * Color deep orange "50"
