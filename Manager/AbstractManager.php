@@ -76,7 +76,7 @@ abstract class AbstractManager implements ManagerInterface {
     /**
      * Set the providers.
      *
-     * @param ProviderInterface $providers The providers.
+     * @param ProviderInterface[] $providers The providers.
      * @return ManagerInterface Returns this manager.
      */
     protected function setProviders(array $providers) {
