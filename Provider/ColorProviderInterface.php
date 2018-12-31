@@ -20,6 +20,13 @@ namespace WBW\Bundle\CoreBundle\Provider;
 interface ColorProviderInterface extends ProviderInterface {
 
     /**
+     * Tag name.
+     *
+     * @var string
+     */
+    const TAG_NAME = "webeweb.core.provider.color";
+
+    /**
      * Get the colors.
      *
      * @return array Returns the colors.
