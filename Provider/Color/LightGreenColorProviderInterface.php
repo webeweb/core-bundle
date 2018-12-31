@@ -9,15 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Color;
+namespace WBW\Bundle\CoreBundle\Provider\Color;
+
+use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 
 /**
- * Light green color interface.
+ * Light green color provider interface.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Color
+ * @package WBW\Bundle\CoreBundle\Provider\Color
  */
-interface LightGreenColorInterface extends ColorInterface {
+interface LightGreenColorProviderInterface extends ColorProviderInterface {
 
     /**
      * Color light green "50"
