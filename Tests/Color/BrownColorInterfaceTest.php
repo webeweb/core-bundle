@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Color;
 
 use WBW\Bundle\CoreBundle\Color\BrownColorInterface;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Brown color interface test.
