@@ -17,7 +17,7 @@ namespace WBW\Bundle\CoreBundle\Color;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Color
  */
-interface TealColorInterface {
+interface TealColorInterface extends ColorInterface {
 
     /**
      * Color teal "50"
