@@ -16,7 +16,7 @@ namespace WBW\Bundle\CoreBundle\Color;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Color
  */
-interface BlueColorInterface {
+interface BlueColorInterface extends ColorInterface {
 
     /**
      * Color blue "50"
