@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Color;
 
-use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Color\DeepPurpleColorProviderInterface;
 
 /**
  * Deep purple color provider.
@@ -19,7 +19,14 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Color
  */
-class DeepPurpleColorProvider implements DeepPurpleColorInterface, ColorProviderInterface {
+class DeepPurpleColorProvider implements DeepPurpleColorProviderInterface, ColorInterface {
+
+    /**
+     * Service name.
+     *
+     * @var string
+     */
+    const SERVICE_NAME = "webeweb.core.provider.color.deep_purple";
 
     /**
      * Constructor.
