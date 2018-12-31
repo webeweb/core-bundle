@@ -12,7 +12,6 @@
 namespace WBW\Bundle\CoreBundle\Tests\Color;
 
 use WBW\Bundle\CoreBundle\Color\ColorInterface;
-
 use WBW\Bundle\CoreBundle\Color\CyanColorProvider;
 use WBW\Bundle\CoreBundle\Provider\Color\CyanColorProviderInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
@@ -24,6 +23,16 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
  * @package WBW\Bundle\CoreBundle\Tests\Color
  */
 class CyanColorProviderTest extends AbstractTestCase {
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $this->assertEquals("webeweb.core.provider.color.cyan", CyanColorProvider::SERVICE_NAME);
+    }
 
     /**
      * Tests the getColors() method.

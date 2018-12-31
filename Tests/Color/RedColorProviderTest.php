@@ -25,6 +25,16 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class RedColorProviderTest extends AbstractTestCase {
 
     /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $this->assertEquals("webeweb.core.provider.color.red", RedColorProvider::SERVICE_NAME);
+    }
+
+    /**
      * Tests the getColors() method.
      *
      * @return void

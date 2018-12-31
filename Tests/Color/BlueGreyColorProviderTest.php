@@ -25,6 +25,16 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class BlueGreyColorProviderTest extends AbstractTestCase {
 
     /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $this->assertEquals("webeweb.core.provider.color.blue_grey", BlueGreyColorProvider::SERVICE_NAME);
+    }
+
+    /**
      * Tests the getColors() method.
      *
      * @return void

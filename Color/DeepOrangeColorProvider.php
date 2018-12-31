@@ -26,7 +26,7 @@ class DeepOrangeColorProvider implements DeepOrangeColorProviderInterface, Color
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.core.provider.color.depp_orange";
+    const SERVICE_NAME = "webeweb.core.provider.color.deep_orange";
 
     /**
      * Constructor.

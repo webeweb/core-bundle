@@ -25,6 +25,16 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class IndigoColorProviderTest extends AbstractTestCase {
 
     /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $this->assertEquals("webeweb.core.provider.color.indigo", IndigoColorProvider::SERVICE_NAME);
+    }
+
+    /**
      * Tests the getColors() method.
      *
      * @return void
