@@ -3,6 +3,25 @@ CHANGELOG
 
 ### master
 
+- Add Yellow color interface
+- Add Teal color interface
+- Add Red color interface
+- Add Purple color interface
+- Add Pink color interface
+- Add Orange color interface
+- Add Lime color interface
+- Add Light green color interface
+- Add Light blue color interface
+- Add Indigo color interface
+- Add Grey color interface
+- Add Green color interface
+- Add Deep purple color interface
+- Add Deep orange color interface
+- Add Cyan color interface
+- Add Brown color interface
+- Add Blue grey color interface
+- Add Blue color interface
+- Add Amber color interface
 - Improve unit tests
 - Add User info theme provider trait
 - Add Tasks drop down theme provider trait
