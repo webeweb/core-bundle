@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Color;
 
-use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Color\RedColorProviderInterface;
 
 /**
  * Red color provider.
@@ -19,7 +19,14 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Color
  */
-class RedColorProvider implements RedColorInterface, ColorProviderInterface {
+class RedColorProvider implements RedColorProviderInterface, ColorInterface {
+
+    /**
+     * Service name.
+     *
+     * @var string
+     */
+    const SERVICE_NAME = "webeweb.core.provider.color.red";
 
     /**
      * Constructor.

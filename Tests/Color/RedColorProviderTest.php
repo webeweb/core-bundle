@@ -12,8 +12,8 @@
 namespace WBW\Bundle\CoreBundle\Tests\Color;
 
 use WBW\Bundle\CoreBundle\Color\ColorInterface;
-use WBW\Bundle\CoreBundle\Color\RedColorInterface;
 use WBW\Bundle\CoreBundle\Color\RedColorProvider;
+use WBW\Bundle\CoreBundle\Provider\Color\RedColorProviderInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
@@ -49,19 +49,19 @@ class RedColorProviderTest extends AbstractTestCase {
         $this->assertArrayHasKey(ColorInterface::COLOR_A400, $res);
         $this->assertArrayHasKey(ColorInterface::COLOR_A700, $res);
 
-        $this->assertEquals(RedColorInterface::COLOR_RED_50, $res[ColorInterface::COLOR_50]);
-        $this->assertEquals(RedColorInterface::COLOR_RED_100, $res[ColorInterface::COLOR_100]);
-        $this->assertEquals(RedColorInterface::COLOR_RED_200, $res[ColorInterface::COLOR_200]);
-        $this->assertEquals(RedColorInterface::COLOR_RED_300, $res[ColorInterface::COLOR_300]);
-        $this->assertEquals(RedColorInterface::COLOR_RED_400, $res[ColorInterface::COLOR_400]);
-        $this->assertEquals(RedColorInterface::COLOR_RED_500, $res[ColorInterface::COLOR_500]);
-        $this->assertEquals(RedColorInterface::COLOR_RED_500, $res[ColorInterface::COLOR_500]);
-        $this->assertEquals(RedColorInterface::COLOR_RED_600, $res[ColorInterface::COLOR_600]);
-        $this->assertEquals(RedColorInterface::COLOR_RED_700, $res[ColorInterface::COLOR_700]);
-        $this->assertEquals(RedColorInterface::COLOR_RED_A100, $res[ColorInterface::COLOR_A100]);
-        $this->assertEquals(RedColorInterface::COLOR_RED_A200, $res[ColorInterface::COLOR_A200]);
-        $this->assertEquals(RedColorInterface::COLOR_RED_A400, $res[ColorInterface::COLOR_A400]);
-        $this->assertEquals(RedColorInterface::COLOR_RED_A700, $res[ColorInterface::COLOR_A700]);
+        $this->assertEquals(RedColorProviderInterface::COLOR_RED_50, $res[ColorInterface::COLOR_50]);
+        $this->assertEquals(RedColorProviderInterface::COLOR_RED_100, $res[ColorInterface::COLOR_100]);
+        $this->assertEquals(RedColorProviderInterface::COLOR_RED_200, $res[ColorInterface::COLOR_200]);
+        $this->assertEquals(RedColorProviderInterface::COLOR_RED_300, $res[ColorInterface::COLOR_300]);
+        $this->assertEquals(RedColorProviderInterface::COLOR_RED_400, $res[ColorInterface::COLOR_400]);
+        $this->assertEquals(RedColorProviderInterface::COLOR_RED_500, $res[ColorInterface::COLOR_500]);
+        $this->assertEquals(RedColorProviderInterface::COLOR_RED_500, $res[ColorInterface::COLOR_500]);
+        $this->assertEquals(RedColorProviderInterface::COLOR_RED_600, $res[ColorInterface::COLOR_600]);
+        $this->assertEquals(RedColorProviderInterface::COLOR_RED_700, $res[ColorInterface::COLOR_700]);
+        $this->assertEquals(RedColorProviderInterface::COLOR_RED_A100, $res[ColorInterface::COLOR_A100]);
+        $this->assertEquals(RedColorProviderInterface::COLOR_RED_A200, $res[ColorInterface::COLOR_A200]);
+        $this->assertEquals(RedColorProviderInterface::COLOR_RED_A400, $res[ColorInterface::COLOR_A400]);
+        $this->assertEquals(RedColorProviderInterface::COLOR_RED_A700, $res[ColorInterface::COLOR_A700]);
     }
 
     /**
