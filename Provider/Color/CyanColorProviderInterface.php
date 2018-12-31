@@ -9,15 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Color;
+namespace WBW\Bundle\CoreBundle\Provider\Color;
+
+use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 
 /**
- * Cyan color interface.
+ * Cyan color provider interface.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Color
+ * @package WBW\Bundle\CoreBundle\Provider\Color
  */
-interface CyanColorInterface extends ColorInterface {
+interface CyanColorProviderInterface extends ColorProviderInterface {
 
     /**
      * Color cyan "50"
