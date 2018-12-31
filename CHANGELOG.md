@@ -3,6 +3,7 @@ CHANGELOG
 
 ### master
 
+- Add Color interface
 - Add Yellow color interface
 - Add Teal color interface
 - Add Red color interface
