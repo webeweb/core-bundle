@@ -5,53 +5,72 @@ CHANGELOG
 
 - Add Amber color interface
 - Add Amber color provider
+- Add Amber color provider trait
 - Add Application theme provider trait
 - Add Blue color interface
 - Add Blue color provider
+- Add Blue color provider trait
 - Add Blue grey color interface
 - Add Blue grey color provider
+- Add Blue grey color provider trait
 - Add Breadcrumbs theme provider trait
 - Add Brown color interface
 - Add Brown color provider
+- Add Brown color provider trait
 - Add Color interface
 - Add Cyan color interface
 - Add Cyan color provider
+- Add Cyan color provider trait
 - Add Deep orange color interface
 - Add Deep orange color provider
+- Add Deep orange color provider trait
 - Add Deep purple color interface
 - Add Deep purple color provider
+- Add Deep purple color provider trait
 - Add Footer theme provider trait
 - Add Green color interface
 - Add Green color provider
+- Add Green color provider trait
 - Add Grey color interface
 - Add Grey color provider
+- Add Grey color provider trait
 - Add Hook drop down theme provider trait
 - Add Indigo color interface
 - Add Indigo color provider
+- Add Indigo color provider trait
 - Add Light blue color interface
 - Add Light blue color provider
+- Add Light blue color provider trait
 - Add Light green color interface
 - Add Light green color provider
+- Add Light green color provider trait
 - Add Lime color interface
 - Add Lime color provider
+- Add Lime color provider trait
 - Add Navigation theme provider trait
 - Add Notifications drop down theme provider trait
 - Add Orange color interface
 - Add Orange color provider
+- Add Orange color provider trait
 - Add PhantomJS helper
 - Add Pink color interface
 - Add Pink color provider
+- Add Pink color provider trait
 - Add Purple color interface
 - Add Purple color provider
+- Add Purple color provider trait
 - Add Red color interface
 - Add Red color provider
+- Add Red color provider trait
 - Add Search theme provider trait
 - Add Tasks drop down theme provider trait
 - Add Teal color interface
 - Add Teal color provider
+- Add Teal color provider trait
 - Add User info theme provider trait
 - Add Yellow color interface
 - Add Yellow color provider
+- Add Yellow color provider trait
 - Improve unit tests
 
 ### 1.5.0 (2018-12-19)
