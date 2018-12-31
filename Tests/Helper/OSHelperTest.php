@@ -29,12 +29,12 @@ class OSHelperTest {
     public function testIsLinux() {
 
         // Determines the operating system.
-        if ("\\" !== DIRECTORY_SEPARATOR) {
-
-            $this->assertTrue(OSHelper::isLinux());
-        } else {
+        if ("\\" === DIRECTORY_SEPARATOR) {
 
             $this->assertFalse(OSHelper::isLinux());
+        } else {
+
+            $this->assertTrue(OSHelper::isLinux());
         }
     }
 
@@ -46,9 +46,9 @@ class OSHelperTest {
     public function testIsWindows() {
 
         // Determines the operating system.
-        if ("\\" !== DIRECTORY_SEPARATOR) {
+        if ("\\" === DIRECTORY_SEPARATOR) {
 
-            $this->assertFalse(OSHelper::isWindows());
+            $this->assertTrue(OSHelper::isWindows());
         } else {
 
             $this->assertFalse(OSHelper::isWindows());
