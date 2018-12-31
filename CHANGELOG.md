@@ -4,35 +4,54 @@ CHANGELOG
 ### master
 
 - Add Amber color interface
+- Add Amber color provider
 - Add Application theme provider trait
 - Add Blue color interface
+- Add Blue color provider
 - Add Blue grey color interface
+- Add Blue grey color provider
 - Add Breadcrumbs theme provider trait
 - Add Brown color interface
+- Add Brown color provider
 - Add Color interface
 - Add Cyan color interface
+- Add Cyan color provider
 - Add Deep orange color interface
+- Add Deep orange color provider
 - Add Deep purple color interface
+- Add Deep purple color provider
 - Add Footer theme provider trait
 - Add Green color interface
+- Add Green color provider
 - Add Grey color interface
+- Add Grey color provider
 - Add Hook drop down theme provider trait
 - Add Indigo color interface
+- Add Indigo color provider
 - Add Light blue color interface
+- Add Light blue color provider
 - Add Light green color interface
+- Add Light green color provider
 - Add Lime color interface
+- Add Lime color provider
 - Add Navigation theme provider trait
 - Add Notifications drop down theme provider trait
 - Add Orange color interface
+- Add Orange color provider
 - Add PhantomJS helper
 - Add Pink color interface
+- Add Pink color provider
 - Add Purple color interface
+- Add Purple color provider
 - Add Red color interface
+- Add Red color provider
 - Add Search theme provider trait
 - Add Tasks drop down theme provider trait
 - Add Teal color interface
+- Add Teal color provider
 - Add User info theme provider trait
 - Add Yellow color interface
+- Add Yellow color provider
 - Improve unit tests
 
 ### 1.5.0 (2018-12-19)
