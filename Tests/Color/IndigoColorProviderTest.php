@@ -12,8 +12,8 @@
 namespace WBW\Bundle\CoreBundle\Tests\Color;
 
 use WBW\Bundle\CoreBundle\Color\ColorInterface;
-use WBW\Bundle\CoreBundle\Color\IndigoColorInterface;
 use WBW\Bundle\CoreBundle\Color\IndigoColorProvider;
+use WBW\Bundle\CoreBundle\Provider\Color\IndigoColorProviderInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
@@ -49,19 +49,19 @@ class IndigoColorProviderTest extends AbstractTestCase {
         $this->assertArrayHasKey(ColorInterface::COLOR_A400, $res);
         $this->assertArrayHasKey(ColorInterface::COLOR_A700, $res);
 
-        $this->assertEquals(IndigoColorInterface::COLOR_INDIGO_50, $res[ColorInterface::COLOR_50]);
-        $this->assertEquals(IndigoColorInterface::COLOR_INDIGO_100, $res[ColorInterface::COLOR_100]);
-        $this->assertEquals(IndigoColorInterface::COLOR_INDIGO_200, $res[ColorInterface::COLOR_200]);
-        $this->assertEquals(IndigoColorInterface::COLOR_INDIGO_300, $res[ColorInterface::COLOR_300]);
-        $this->assertEquals(IndigoColorInterface::COLOR_INDIGO_400, $res[ColorInterface::COLOR_400]);
-        $this->assertEquals(IndigoColorInterface::COLOR_INDIGO_500, $res[ColorInterface::COLOR_500]);
-        $this->assertEquals(IndigoColorInterface::COLOR_INDIGO_500, $res[ColorInterface::COLOR_500]);
-        $this->assertEquals(IndigoColorInterface::COLOR_INDIGO_600, $res[ColorInterface::COLOR_600]);
-        $this->assertEquals(IndigoColorInterface::COLOR_INDIGO_700, $res[ColorInterface::COLOR_700]);
-        $this->assertEquals(IndigoColorInterface::COLOR_INDIGO_A100, $res[ColorInterface::COLOR_A100]);
-        $this->assertEquals(IndigoColorInterface::COLOR_INDIGO_A200, $res[ColorInterface::COLOR_A200]);
-        $this->assertEquals(IndigoColorInterface::COLOR_INDIGO_A400, $res[ColorInterface::COLOR_A400]);
-        $this->assertEquals(IndigoColorInterface::COLOR_INDIGO_A700, $res[ColorInterface::COLOR_A700]);
+        $this->assertEquals(IndigoColorProviderInterface::COLOR_INDIGO_50, $res[ColorInterface::COLOR_50]);
+        $this->assertEquals(IndigoColorProviderInterface::COLOR_INDIGO_100, $res[ColorInterface::COLOR_100]);
+        $this->assertEquals(IndigoColorProviderInterface::COLOR_INDIGO_200, $res[ColorInterface::COLOR_200]);
+        $this->assertEquals(IndigoColorProviderInterface::COLOR_INDIGO_300, $res[ColorInterface::COLOR_300]);
+        $this->assertEquals(IndigoColorProviderInterface::COLOR_INDIGO_400, $res[ColorInterface::COLOR_400]);
+        $this->assertEquals(IndigoColorProviderInterface::COLOR_INDIGO_500, $res[ColorInterface::COLOR_500]);
+        $this->assertEquals(IndigoColorProviderInterface::COLOR_INDIGO_500, $res[ColorInterface::COLOR_500]);
+        $this->assertEquals(IndigoColorProviderInterface::COLOR_INDIGO_600, $res[ColorInterface::COLOR_600]);
+        $this->assertEquals(IndigoColorProviderInterface::COLOR_INDIGO_700, $res[ColorInterface::COLOR_700]);
+        $this->assertEquals(IndigoColorProviderInterface::COLOR_INDIGO_A100, $res[ColorInterface::COLOR_A100]);
+        $this->assertEquals(IndigoColorProviderInterface::COLOR_INDIGO_A200, $res[ColorInterface::COLOR_A200]);
+        $this->assertEquals(IndigoColorProviderInterface::COLOR_INDIGO_A400, $res[ColorInterface::COLOR_A400]);
+        $this->assertEquals(IndigoColorProviderInterface::COLOR_INDIGO_A700, $res[ColorInterface::COLOR_A700]);
     }
 
     /**
