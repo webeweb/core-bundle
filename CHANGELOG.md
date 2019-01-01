@@ -71,6 +71,7 @@ CHANGELOG
 - Add Yellow color interface
 - Add Yellow color provider
 - Add Yellow color provider trait
+- Fix OS helper unit tests
 - Improve PHPDoc
 - Improve unit tests
 
