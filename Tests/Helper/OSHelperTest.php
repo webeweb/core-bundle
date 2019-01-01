@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Helper;
 
 use WBW\Bundle\CoreBundle\Helper\OSHelper;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * OS helper test.
@@ -19,7 +20,7 @@ use WBW\Bundle\CoreBundle\Helper\OSHelper;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Helper
  */
-class OSHelperTest {
+class OSHelperTest extends AbstractTestCase {
 
     /**
      * Tests the isLinux() method.
@@ -29,12 +30,12 @@ class OSHelperTest {
     public function testIsLinux() {
 
         // Determines the operating system.
-        if ("\\" === DIRECTORY_SEPARATOR) {
-
-            $this->assertFalse(OSHelper::isLinux());
-        } else {
+        if ("\\" !== DIRECTORY_SEPARATOR) {
 
             $this->assertTrue(OSHelper::isLinux());
+        } else {
+
+            $this->assertFalse(OSHelper::isLinux());
         }
     }
 
@@ -46,12 +47,12 @@ class OSHelperTest {
     public function testIsWindows() {
 
         // Determines the operating system.
-        if ("\\" === DIRECTORY_SEPARATOR) {
-
-            $this->assertTrue(OSHelper::isWindows());
-        } else {
+        if ("\\" !== DIRECTORY_SEPARATOR) {
 
             $this->assertFalse(OSHelper::isWindows());
+        } else {
+
+            $this->assertTrue(OSHelper::isWindows());
         }
     }
 
