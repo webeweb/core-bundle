@@ -30,11 +30,27 @@ interface ManagerInterface {
     public function addProvider(ProviderInterface $provider);
 
     /**
+     * Determines if this manager contains a provider.
+     *
+     * @param ProviderInterface $provider The provider.
+     * @return bool Returns true in case of success, false otherwise.
+     */
+    public function contains(ProviderInterface $provider);
+
+    /**
      * Determines if this manager contains providers.
      *
      * @return bool Returns true in case of success, false otherwise.
      */
     public function hasProviders();
+
+    /**
+     * Index of a provider.
+     *
+     * @param ProviderInterface $provider The provider.
+     * @return int Returns the index of in case of success, -1 otherwise.
+     */
+    public function indexOf(ProviderInterface $provider);
 
     /**
      * Remove a provider.

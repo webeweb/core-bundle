@@ -54,6 +54,24 @@ class AbstractManagerTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the contains() method.
+     *
+     * @return void
+     */
+    public function testContains() {
+
+        // Set a Provider mock.
+        $provider = $this->getMockBuilder(ProviderInterface::class)->getMock();
+
+        $obj = new TestManager();
+
+        $this->assertFalse($obj->contains($provider));
+
+        $obj->addProvider($provider);
+        $this->assertTrue($obj->contains($provider));
+    }
+
+    /**
      * Tests the hasProviders() method.
      *
      * @return void
@@ -69,6 +87,24 @@ class AbstractManagerTest extends AbstractTestCase {
 
         $obj->addProvider($provider);
         $this->assertTrue($obj->hasProviders());
+    }
+
+    /**
+     * Tests the indexOf() method.
+     *
+     * @return void
+     */
+    public function testIndexOf() {
+
+        // Set a Provider mock.
+        $provider = $this->getMockBuilder(ProviderInterface::class)->getMock();
+
+        $obj = new TestManager();
+
+        $this->assertEquals(-1, $obj->indexOf($provider));
+
+        $obj->addProvider($provider);
+        $this->assertEquals(0, $obj->indexOf($provider));
     }
 
     /**
