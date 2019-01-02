@@ -22,101 +22,108 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface AmberColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Color amber "50"
+     * Amber color.
      *
      * @var string
      */
-    const COLOR_AMBER_50 = "#FFF8E1";
+    const AMBER_COLOR = "amber";
 
     /**
-     * Color amber "100"
+     * Amber color "50"
      *
      * @var string
      */
-    const COLOR_AMBER_100 = "#FFECB3";
+    const AMBER_COLOR_50 = "#FFF8E1";
 
     /**
-     * Color amber "200"
+     * Amber color "100"
      *
      * @var string
      */
-    const COLOR_AMBER_200 = "#FFE082";
+    const AMBER_COLOR_100 = "#FFECB3";
 
     /**
-     * Color amber "300"
+     * Amber color "200"
      *
      * @var string
      */
-    const COLOR_AMBER_300 = "#FFD54F";
+    const AMBER_COLOR_200 = "#FFE082";
 
     /**
-     * Color amber "400"
+     * Amber color "300"
      *
      * @var string
      */
-    const COLOR_AMBER_400 = "#FFCA28";
+    const AMBER_COLOR_300 = "#FFD54F";
 
     /**
-     * Color amber "500"
+     * Amber color "400"
      *
      * @var string
      */
-    const COLOR_AMBER_500 = "#FFC107";
+    const AMBER_COLOR_400 = "#FFCA28";
 
     /**
-     * Color amber "600"
+     * Amber color "500"
      *
      * @var string
      */
-    const COLOR_AMBER_600 = "#FFB300";
+    const AMBER_COLOR_500 = "#FFC107";
 
     /**
-     * Color amber "700"
+     * Amber color "600"
      *
      * @var string
      */
-    const COLOR_AMBER_700 = "#FFA000";
+    const AMBER_COLOR_600 = "#FFB300";
 
     /**
-     * Color amber "800"
+     * Amber color "700"
      *
      * @var string
      */
-    const COLOR_AMBER_800 = "#FF8F00";
+    const AMBER_COLOR_700 = "#FFA000";
 
     /**
-     * Color amber "900"
+     * Amber color "800"
      *
      * @var string
      */
-    const COLOR_AMBER_900 = "#FF6F00";
+    const AMBER_COLOR_800 = "#FF8F00";
 
     /**
-     * Color amber "A100"
+     * Amber color "900"
      *
      * @var string
      */
-    const COLOR_AMBER_A100 = "#FFE57F";
+    const AMBER_COLOR_900 = "#FF6F00";
 
     /**
-     * Color amber "A200"
+     * Amber color "A100"
      *
      * @var string
      */
-    const COLOR_AMBER_A200 = "#FFD740";
+    const AMBER_COLOR_A100 = "#FFE57F";
 
     /**
-     * Color amber "A400"
+     * Amber color "A200"
      *
      * @var string
      */
-    const COLOR_AMBER_A400 = "#FFC400";
+    const AMBER_COLOR_A200 = "#FFD740";
 
     /**
-     * Color amber "A700"
+     * Amber color "A400"
      *
      * @var string
      */
-    const COLOR_AMBER_A700 = "#FFAB00";
+    const AMBER_COLOR_A400 = "#FFC400";
+
+    /**
+     * Amber color "A700"
+     *
+     * @var string
+     */
+    const AMBER_COLOR_A700 = "#FFAB00";
 
 }

@@ -59,19 +59,19 @@ class LightGreenColorProviderTest extends AbstractTestCase {
         $this->assertArrayHasKey(ColorInterface::COLOR_A400, $res);
         $this->assertArrayHasKey(ColorInterface::COLOR_A700, $res);
 
-        $this->assertEquals(LightGreenColorProviderInterface::COLOR_LIGHT_GREEN_50, $res[ColorInterface::COLOR_50]);
-        $this->assertEquals(LightGreenColorProviderInterface::COLOR_LIGHT_GREEN_100, $res[ColorInterface::COLOR_100]);
-        $this->assertEquals(LightGreenColorProviderInterface::COLOR_LIGHT_GREEN_200, $res[ColorInterface::COLOR_200]);
-        $this->assertEquals(LightGreenColorProviderInterface::COLOR_LIGHT_GREEN_300, $res[ColorInterface::COLOR_300]);
-        $this->assertEquals(LightGreenColorProviderInterface::COLOR_LIGHT_GREEN_400, $res[ColorInterface::COLOR_400]);
-        $this->assertEquals(LightGreenColorProviderInterface::COLOR_LIGHT_GREEN_500, $res[ColorInterface::COLOR_500]);
-        $this->assertEquals(LightGreenColorProviderInterface::COLOR_LIGHT_GREEN_500, $res[ColorInterface::COLOR_500]);
-        $this->assertEquals(LightGreenColorProviderInterface::COLOR_LIGHT_GREEN_600, $res[ColorInterface::COLOR_600]);
-        $this->assertEquals(LightGreenColorProviderInterface::COLOR_LIGHT_GREEN_700, $res[ColorInterface::COLOR_700]);
-        $this->assertEquals(LightGreenColorProviderInterface::COLOR_LIGHT_GREEN_A100, $res[ColorInterface::COLOR_A100]);
-        $this->assertEquals(LightGreenColorProviderInterface::COLOR_LIGHT_GREEN_A200, $res[ColorInterface::COLOR_A200]);
-        $this->assertEquals(LightGreenColorProviderInterface::COLOR_LIGHT_GREEN_A400, $res[ColorInterface::COLOR_A400]);
-        $this->assertEquals(LightGreenColorProviderInterface::COLOR_LIGHT_GREEN_A700, $res[ColorInterface::COLOR_A700]);
+        $this->assertEquals(LightGreenColorProviderInterface::LIGHT_GREEN_COLOR_50, $res[ColorInterface::COLOR_50]);
+        $this->assertEquals(LightGreenColorProviderInterface::LIGHT_GREEN_COLOR_100, $res[ColorInterface::COLOR_100]);
+        $this->assertEquals(LightGreenColorProviderInterface::LIGHT_GREEN_COLOR_200, $res[ColorInterface::COLOR_200]);
+        $this->assertEquals(LightGreenColorProviderInterface::LIGHT_GREEN_COLOR_300, $res[ColorInterface::COLOR_300]);
+        $this->assertEquals(LightGreenColorProviderInterface::LIGHT_GREEN_COLOR_400, $res[ColorInterface::COLOR_400]);
+        $this->assertEquals(LightGreenColorProviderInterface::LIGHT_GREEN_COLOR_500, $res[ColorInterface::COLOR_500]);
+        $this->assertEquals(LightGreenColorProviderInterface::LIGHT_GREEN_COLOR_500, $res[ColorInterface::COLOR_500]);
+        $this->assertEquals(LightGreenColorProviderInterface::LIGHT_GREEN_COLOR_600, $res[ColorInterface::COLOR_600]);
+        $this->assertEquals(LightGreenColorProviderInterface::LIGHT_GREEN_COLOR_700, $res[ColorInterface::COLOR_700]);
+        $this->assertEquals(LightGreenColorProviderInterface::LIGHT_GREEN_COLOR_A100, $res[ColorInterface::COLOR_A100]);
+        $this->assertEquals(LightGreenColorProviderInterface::LIGHT_GREEN_COLOR_A200, $res[ColorInterface::COLOR_A200]);
+        $this->assertEquals(LightGreenColorProviderInterface::LIGHT_GREEN_COLOR_A400, $res[ColorInterface::COLOR_A400]);
+        $this->assertEquals(LightGreenColorProviderInterface::LIGHT_GREEN_COLOR_A700, $res[ColorInterface::COLOR_A700]);
     }
 
     /**
@@ -83,7 +83,7 @@ class LightGreenColorProviderTest extends AbstractTestCase {
 
         $obj = new LightGreenColorProvider();
 
-        $res = ColorInterface::COLOR_LIGHT_GREEN;
+        $res = LightGreenColorProviderInterface::LIGHT_GREEN_COLOR;
         $this->assertEquals($res, $obj->getName());
     }
 

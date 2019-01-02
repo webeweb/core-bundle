@@ -59,19 +59,19 @@ class IndigoColorProviderTest extends AbstractTestCase {
         $this->assertArrayHasKey(ColorInterface::COLOR_A400, $res);
         $this->assertArrayHasKey(ColorInterface::COLOR_A700, $res);
 
-        $this->assertEquals(IndigoColorProviderInterface::COLOR_INDIGO_50, $res[ColorInterface::COLOR_50]);
-        $this->assertEquals(IndigoColorProviderInterface::COLOR_INDIGO_100, $res[ColorInterface::COLOR_100]);
-        $this->assertEquals(IndigoColorProviderInterface::COLOR_INDIGO_200, $res[ColorInterface::COLOR_200]);
-        $this->assertEquals(IndigoColorProviderInterface::COLOR_INDIGO_300, $res[ColorInterface::COLOR_300]);
-        $this->assertEquals(IndigoColorProviderInterface::COLOR_INDIGO_400, $res[ColorInterface::COLOR_400]);
-        $this->assertEquals(IndigoColorProviderInterface::COLOR_INDIGO_500, $res[ColorInterface::COLOR_500]);
-        $this->assertEquals(IndigoColorProviderInterface::COLOR_INDIGO_500, $res[ColorInterface::COLOR_500]);
-        $this->assertEquals(IndigoColorProviderInterface::COLOR_INDIGO_600, $res[ColorInterface::COLOR_600]);
-        $this->assertEquals(IndigoColorProviderInterface::COLOR_INDIGO_700, $res[ColorInterface::COLOR_700]);
-        $this->assertEquals(IndigoColorProviderInterface::COLOR_INDIGO_A100, $res[ColorInterface::COLOR_A100]);
-        $this->assertEquals(IndigoColorProviderInterface::COLOR_INDIGO_A200, $res[ColorInterface::COLOR_A200]);
-        $this->assertEquals(IndigoColorProviderInterface::COLOR_INDIGO_A400, $res[ColorInterface::COLOR_A400]);
-        $this->assertEquals(IndigoColorProviderInterface::COLOR_INDIGO_A700, $res[ColorInterface::COLOR_A700]);
+        $this->assertEquals(IndigoColorProviderInterface::INDIGO_COLOR_50, $res[ColorInterface::COLOR_50]);
+        $this->assertEquals(IndigoColorProviderInterface::INDIGO_COLOR_100, $res[ColorInterface::COLOR_100]);
+        $this->assertEquals(IndigoColorProviderInterface::INDIGO_COLOR_200, $res[ColorInterface::COLOR_200]);
+        $this->assertEquals(IndigoColorProviderInterface::INDIGO_COLOR_300, $res[ColorInterface::COLOR_300]);
+        $this->assertEquals(IndigoColorProviderInterface::INDIGO_COLOR_400, $res[ColorInterface::COLOR_400]);
+        $this->assertEquals(IndigoColorProviderInterface::INDIGO_COLOR_500, $res[ColorInterface::COLOR_500]);
+        $this->assertEquals(IndigoColorProviderInterface::INDIGO_COLOR_500, $res[ColorInterface::COLOR_500]);
+        $this->assertEquals(IndigoColorProviderInterface::INDIGO_COLOR_600, $res[ColorInterface::COLOR_600]);
+        $this->assertEquals(IndigoColorProviderInterface::INDIGO_COLOR_700, $res[ColorInterface::COLOR_700]);
+        $this->assertEquals(IndigoColorProviderInterface::INDIGO_COLOR_A100, $res[ColorInterface::COLOR_A100]);
+        $this->assertEquals(IndigoColorProviderInterface::INDIGO_COLOR_A200, $res[ColorInterface::COLOR_A200]);
+        $this->assertEquals(IndigoColorProviderInterface::INDIGO_COLOR_A400, $res[ColorInterface::COLOR_A400]);
+        $this->assertEquals(IndigoColorProviderInterface::INDIGO_COLOR_A700, $res[ColorInterface::COLOR_A700]);
     }
 
     /**
@@ -83,7 +83,7 @@ class IndigoColorProviderTest extends AbstractTestCase {
 
         $obj = new IndigoColorProvider();
 
-        $res = ColorInterface::COLOR_INDIGO;
+        $res = IndigoColorProviderInterface::INDIGO_COLOR;
         $this->assertEquals($res, $obj->getName());
     }
 

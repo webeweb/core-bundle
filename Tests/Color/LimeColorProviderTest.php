@@ -59,19 +59,19 @@ class LimeColorProviderTest extends AbstractTestCase {
         $this->assertArrayHasKey(ColorInterface::COLOR_A400, $res);
         $this->assertArrayHasKey(ColorInterface::COLOR_A700, $res);
 
-        $this->assertEquals(LimeColorProviderInterface::COLOR_LIME_50, $res[ColorInterface::COLOR_50]);
-        $this->assertEquals(LimeColorProviderInterface::COLOR_LIME_100, $res[ColorInterface::COLOR_100]);
-        $this->assertEquals(LimeColorProviderInterface::COLOR_LIME_200, $res[ColorInterface::COLOR_200]);
-        $this->assertEquals(LimeColorProviderInterface::COLOR_LIME_300, $res[ColorInterface::COLOR_300]);
-        $this->assertEquals(LimeColorProviderInterface::COLOR_LIME_400, $res[ColorInterface::COLOR_400]);
-        $this->assertEquals(LimeColorProviderInterface::COLOR_LIME_500, $res[ColorInterface::COLOR_500]);
-        $this->assertEquals(LimeColorProviderInterface::COLOR_LIME_500, $res[ColorInterface::COLOR_500]);
-        $this->assertEquals(LimeColorProviderInterface::COLOR_LIME_600, $res[ColorInterface::COLOR_600]);
-        $this->assertEquals(LimeColorProviderInterface::COLOR_LIME_700, $res[ColorInterface::COLOR_700]);
-        $this->assertEquals(LimeColorProviderInterface::COLOR_LIME_A100, $res[ColorInterface::COLOR_A100]);
-        $this->assertEquals(LimeColorProviderInterface::COLOR_LIME_A200, $res[ColorInterface::COLOR_A200]);
-        $this->assertEquals(LimeColorProviderInterface::COLOR_LIME_A400, $res[ColorInterface::COLOR_A400]);
-        $this->assertEquals(LimeColorProviderInterface::COLOR_LIME_A700, $res[ColorInterface::COLOR_A700]);
+        $this->assertEquals(LimeColorProviderInterface::LIME_COLOR_50, $res[ColorInterface::COLOR_50]);
+        $this->assertEquals(LimeColorProviderInterface::LIME_COLOR_100, $res[ColorInterface::COLOR_100]);
+        $this->assertEquals(LimeColorProviderInterface::LIME_COLOR_200, $res[ColorInterface::COLOR_200]);
+        $this->assertEquals(LimeColorProviderInterface::LIME_COLOR_300, $res[ColorInterface::COLOR_300]);
+        $this->assertEquals(LimeColorProviderInterface::LIME_COLOR_400, $res[ColorInterface::COLOR_400]);
+        $this->assertEquals(LimeColorProviderInterface::LIME_COLOR_500, $res[ColorInterface::COLOR_500]);
+        $this->assertEquals(LimeColorProviderInterface::LIME_COLOR_500, $res[ColorInterface::COLOR_500]);
+        $this->assertEquals(LimeColorProviderInterface::LIME_COLOR_600, $res[ColorInterface::COLOR_600]);
+        $this->assertEquals(LimeColorProviderInterface::LIME_COLOR_700, $res[ColorInterface::COLOR_700]);
+        $this->assertEquals(LimeColorProviderInterface::LIME_COLOR_A100, $res[ColorInterface::COLOR_A100]);
+        $this->assertEquals(LimeColorProviderInterface::LIME_COLOR_A200, $res[ColorInterface::COLOR_A200]);
+        $this->assertEquals(LimeColorProviderInterface::LIME_COLOR_A400, $res[ColorInterface::COLOR_A400]);
+        $this->assertEquals(LimeColorProviderInterface::LIME_COLOR_A700, $res[ColorInterface::COLOR_A700]);
     }
 
     /**
@@ -83,7 +83,7 @@ class LimeColorProviderTest extends AbstractTestCase {
 
         $obj = new LimeColorProvider();
 
-        $res = ColorInterface::COLOR_LIME;
+        $res = LimeColorProviderInterface::LIME_COLOR;
         $this->assertEquals($res, $obj->getName());
     }
 

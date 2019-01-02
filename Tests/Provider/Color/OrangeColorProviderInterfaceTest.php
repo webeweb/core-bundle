@@ -29,20 +29,22 @@ class OrangeColorProviderInterfaceTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("#FFF3E0", OrangeColorProviderInterface::COLOR_ORANGE_50);
-        $this->assertEquals("#FFE0B2", OrangeColorProviderInterface::COLOR_ORANGE_100);
-        $this->assertEquals("#FFCC80", OrangeColorProviderInterface::COLOR_ORANGE_200);
-        $this->assertEquals("#FFB74D", OrangeColorProviderInterface::COLOR_ORANGE_300);
-        $this->assertEquals("#FFA726", OrangeColorProviderInterface::COLOR_ORANGE_400);
-        $this->assertEquals("#FF9800", OrangeColorProviderInterface::COLOR_ORANGE_500);
-        $this->assertEquals("#FB8C00", OrangeColorProviderInterface::COLOR_ORANGE_600);
-        $this->assertEquals("#F57C00", OrangeColorProviderInterface::COLOR_ORANGE_700);
-        $this->assertEquals("#EF6C00", OrangeColorProviderInterface::COLOR_ORANGE_800);
-        $this->assertEquals("#E65100", OrangeColorProviderInterface::COLOR_ORANGE_900);
-        $this->assertEquals("#FFD180", OrangeColorProviderInterface::COLOR_ORANGE_A100);
-        $this->assertEquals("#FFAB40", OrangeColorProviderInterface::COLOR_ORANGE_A200);
-        $this->assertEquals("#FF9100", OrangeColorProviderInterface::COLOR_ORANGE_A400);
-        $this->assertEquals("#FF6D00", OrangeColorProviderInterface::COLOR_ORANGE_A700);
+        $this->assertEquals("orange", OrangeColorProviderInterface::ORANGE_COLOR);
+
+        $this->assertEquals("#FFF3E0", OrangeColorProviderInterface::ORANGE_COLOR_50);
+        $this->assertEquals("#FFE0B2", OrangeColorProviderInterface::ORANGE_COLOR_100);
+        $this->assertEquals("#FFCC80", OrangeColorProviderInterface::ORANGE_COLOR_200);
+        $this->assertEquals("#FFB74D", OrangeColorProviderInterface::ORANGE_COLOR_300);
+        $this->assertEquals("#FFA726", OrangeColorProviderInterface::ORANGE_COLOR_400);
+        $this->assertEquals("#FF9800", OrangeColorProviderInterface::ORANGE_COLOR_500);
+        $this->assertEquals("#FB8C00", OrangeColorProviderInterface::ORANGE_COLOR_600);
+        $this->assertEquals("#F57C00", OrangeColorProviderInterface::ORANGE_COLOR_700);
+        $this->assertEquals("#EF6C00", OrangeColorProviderInterface::ORANGE_COLOR_800);
+        $this->assertEquals("#E65100", OrangeColorProviderInterface::ORANGE_COLOR_900);
+        $this->assertEquals("#FFD180", OrangeColorProviderInterface::ORANGE_COLOR_A100);
+        $this->assertEquals("#FFAB40", OrangeColorProviderInterface::ORANGE_COLOR_A200);
+        $this->assertEquals("#FF9100", OrangeColorProviderInterface::ORANGE_COLOR_A400);
+        $this->assertEquals("#FF6D00", OrangeColorProviderInterface::ORANGE_COLOR_A700);
     }
 
 }

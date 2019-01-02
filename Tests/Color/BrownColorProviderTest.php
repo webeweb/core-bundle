@@ -55,15 +55,15 @@ class BrownColorProviderTest extends AbstractTestCase {
         $this->assertArrayHasKey(ColorInterface::COLOR_600, $res);
         $this->assertArrayHasKey(ColorInterface::COLOR_700, $res);
 
-        $this->assertEquals(BrownColorProviderInterface::COLOR_BROWN_50, $res[ColorInterface::COLOR_50]);
-        $this->assertEquals(BrownColorProviderInterface::COLOR_BROWN_100, $res[ColorInterface::COLOR_100]);
-        $this->assertEquals(BrownColorProviderInterface::COLOR_BROWN_200, $res[ColorInterface::COLOR_200]);
-        $this->assertEquals(BrownColorProviderInterface::COLOR_BROWN_300, $res[ColorInterface::COLOR_300]);
-        $this->assertEquals(BrownColorProviderInterface::COLOR_BROWN_400, $res[ColorInterface::COLOR_400]);
-        $this->assertEquals(BrownColorProviderInterface::COLOR_BROWN_500, $res[ColorInterface::COLOR_500]);
-        $this->assertEquals(BrownColorProviderInterface::COLOR_BROWN_500, $res[ColorInterface::COLOR_500]);
-        $this->assertEquals(BrownColorProviderInterface::COLOR_BROWN_600, $res[ColorInterface::COLOR_600]);
-        $this->assertEquals(BrownColorProviderInterface::COLOR_BROWN_700, $res[ColorInterface::COLOR_700]);
+        $this->assertEquals(BrownColorProviderInterface::BROWN_COLOR_50, $res[ColorInterface::COLOR_50]);
+        $this->assertEquals(BrownColorProviderInterface::BROWN_COLOR_100, $res[ColorInterface::COLOR_100]);
+        $this->assertEquals(BrownColorProviderInterface::BROWN_COLOR_200, $res[ColorInterface::COLOR_200]);
+        $this->assertEquals(BrownColorProviderInterface::BROWN_COLOR_300, $res[ColorInterface::COLOR_300]);
+        $this->assertEquals(BrownColorProviderInterface::BROWN_COLOR_400, $res[ColorInterface::COLOR_400]);
+        $this->assertEquals(BrownColorProviderInterface::BROWN_COLOR_500, $res[ColorInterface::COLOR_500]);
+        $this->assertEquals(BrownColorProviderInterface::BROWN_COLOR_500, $res[ColorInterface::COLOR_500]);
+        $this->assertEquals(BrownColorProviderInterface::BROWN_COLOR_600, $res[ColorInterface::COLOR_600]);
+        $this->assertEquals(BrownColorProviderInterface::BROWN_COLOR_700, $res[ColorInterface::COLOR_700]);
     }
 
     /**
@@ -75,7 +75,7 @@ class BrownColorProviderTest extends AbstractTestCase {
 
         $obj = new BrownColorProvider();
 
-        $res = ColorInterface::COLOR_BROWN;
+        $res = BrownColorProviderInterface::BROWN_COLOR;
         $this->assertEquals($res, $obj->getName());
     }
 

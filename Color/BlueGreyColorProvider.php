@@ -40,14 +40,14 @@ class BlueGreyColorProvider implements BlueGreyColorProviderInterface, ColorInte
      */
     public function getColors() {
         return [
-            self::COLOR_50  => self::COLOR_BLUE_GREY_50,
-            self::COLOR_100 => self::COLOR_BLUE_GREY_100,
-            self::COLOR_200 => self::COLOR_BLUE_GREY_200,
-            self::COLOR_300 => self::COLOR_BLUE_GREY_300,
-            self::COLOR_400 => self::COLOR_BLUE_GREY_400,
-            self::COLOR_500 => self::COLOR_BLUE_GREY_500,
-            self::COLOR_600 => self::COLOR_BLUE_GREY_600,
-            self::COLOR_700 => self::COLOR_BLUE_GREY_700,
+            self::COLOR_50  => self::BLUE_GREY_COLOR_50,
+            self::COLOR_100 => self::BLUE_GREY_COLOR_100,
+            self::COLOR_200 => self::BLUE_GREY_COLOR_200,
+            self::COLOR_300 => self::BLUE_GREY_COLOR_300,
+            self::COLOR_400 => self::BLUE_GREY_COLOR_400,
+            self::COLOR_500 => self::BLUE_GREY_COLOR_500,
+            self::COLOR_600 => self::BLUE_GREY_COLOR_600,
+            self::COLOR_700 => self::BLUE_GREY_COLOR_700,
         ];
     }
 
@@ -55,7 +55,7 @@ class BlueGreyColorProvider implements BlueGreyColorProviderInterface, ColorInte
      *{@inheritdoc}
      */
     public function getName() {
-        return self::COLOR_BLUE_GREY;
+        return self::BLUE_GREY_COLOR;
     }
 
 }

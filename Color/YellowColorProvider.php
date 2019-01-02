@@ -40,18 +40,18 @@ class YellowColorProvider implements YellowColorProviderInterface, ColorInterfac
      */
     public function getColors() {
         return [
-            self::COLOR_50   => self::COLOR_YELLOW_50,
-            self::COLOR_100  => self::COLOR_YELLOW_100,
-            self::COLOR_200  => self::COLOR_YELLOW_200,
-            self::COLOR_300  => self::COLOR_YELLOW_300,
-            self::COLOR_400  => self::COLOR_YELLOW_400,
-            self::COLOR_500  => self::COLOR_YELLOW_500,
-            self::COLOR_600  => self::COLOR_YELLOW_600,
-            self::COLOR_700  => self::COLOR_YELLOW_700,
-            self::COLOR_A100 => self::COLOR_YELLOW_A100,
-            self::COLOR_A200 => self::COLOR_YELLOW_A200,
-            self::COLOR_A400 => self::COLOR_YELLOW_A400,
-            self::COLOR_A700 => self::COLOR_YELLOW_A700,
+            self::COLOR_50   => self::YELLOW_COLOR_50,
+            self::COLOR_100  => self::YELLOW_COLOR_100,
+            self::COLOR_200  => self::YELLOW_COLOR_200,
+            self::COLOR_300  => self::YELLOW_COLOR_300,
+            self::COLOR_400  => self::YELLOW_COLOR_400,
+            self::COLOR_500  => self::YELLOW_COLOR_500,
+            self::COLOR_600  => self::YELLOW_COLOR_600,
+            self::COLOR_700  => self::YELLOW_COLOR_700,
+            self::COLOR_A100 => self::YELLOW_COLOR_A100,
+            self::COLOR_A200 => self::YELLOW_COLOR_A200,
+            self::COLOR_A400 => self::YELLOW_COLOR_A400,
+            self::COLOR_A700 => self::YELLOW_COLOR_A700,
         ];
     }
 
@@ -59,7 +59,7 @@ class YellowColorProvider implements YellowColorProviderInterface, ColorInterfac
      *{@inheritdoc}
      */
     public function getName() {
-        return self::COLOR_YELLOW;
+        return self::YELLOW_COLOR;
     }
 
 }

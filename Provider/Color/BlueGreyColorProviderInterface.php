@@ -22,73 +22,80 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface BlueGreyColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Color blue grey "50"
+     * Blue grey color.
      *
      * @var string
      */
-    const COLOR_BLUE_GREY_50 = "#ECEFF1";
+    const BLUE_GREY_COLOR = "blue-grey";
 
     /**
-     * Color blue grey "100"
+     * Blue grey color "50"
      *
      * @var string
      */
-    const COLOR_BLUE_GREY_100 = "#CFD8DC";
+    const BLUE_GREY_COLOR_50 = "#ECEFF1";
 
     /**
-     * Color blue grey "200"
+     * Blue grey color "100"
      *
      * @var string
      */
-    const COLOR_BLUE_GREY_200 = "#B0BEC5";
+    const BLUE_GREY_COLOR_100 = "#CFD8DC";
 
     /**
-     * Color blue grey "300"
+     * Blue grey color "200"
      *
      * @var string
      */
-    const COLOR_BLUE_GREY_300 = "#90A4AE";
+    const BLUE_GREY_COLOR_200 = "#B0BEC5";
 
     /**
-     * Color blue grey "400"
+     * Blue grey color "300"
      *
      * @var string
      */
-    const COLOR_BLUE_GREY_400 = "#78909C";
+    const BLUE_GREY_COLOR_300 = "#90A4AE";
 
     /**
-     * Color blue grey "500"
+     * Blue grey color "400"
      *
      * @var string
      */
-    const COLOR_BLUE_GREY_500 = "#607D8B";
+    const BLUE_GREY_COLOR_400 = "#78909C";
 
     /**
-     * Color blue grey "600"
+     * Blue grey color "500"
      *
      * @var string
      */
-    const COLOR_BLUE_GREY_600 = "#546E7A";
+    const BLUE_GREY_COLOR_500 = "#607D8B";
 
     /**
-     * Color blue grey "700"
+     * Blue grey color "600"
      *
      * @var string
      */
-    const COLOR_BLUE_GREY_700 = "#455A64";
+    const BLUE_GREY_COLOR_600 = "#546E7A";
 
     /**
-     * Color blue grey "800"
+     * Blue grey color "700"
      *
      * @var string
      */
-    const COLOR_BLUE_GREY_800 = "#37474F";
+    const BLUE_GREY_COLOR_700 = "#455A64";
 
     /**
-     * Color blue grey "900"
+     * Blue grey color "800"
      *
      * @var string
      */
-    const COLOR_BLUE_GREY_900 = "#263238";
+    const BLUE_GREY_COLOR_800 = "#37474F";
+
+    /**
+     * Blue grey color "900"
+     *
+     * @var string
+     */
+    const BLUE_GREY_COLOR_900 = "#263238";
 
 }

@@ -40,14 +40,14 @@ class BrownColorProvider implements BrownColorProviderInterface, ColorInterface 
      */
     public function getColors() {
         return [
-            self::COLOR_50  => self::COLOR_BROWN_50,
-            self::COLOR_100 => self::COLOR_BROWN_100,
-            self::COLOR_200 => self::COLOR_BROWN_200,
-            self::COLOR_300 => self::COLOR_BROWN_300,
-            self::COLOR_400 => self::COLOR_BROWN_400,
-            self::COLOR_500 => self::COLOR_BROWN_500,
-            self::COLOR_600 => self::COLOR_BROWN_600,
-            self::COLOR_700 => self::COLOR_BROWN_700,
+            self::COLOR_50  => self::BROWN_COLOR_50,
+            self::COLOR_100 => self::BROWN_COLOR_100,
+            self::COLOR_200 => self::BROWN_COLOR_200,
+            self::COLOR_300 => self::BROWN_COLOR_300,
+            self::COLOR_400 => self::BROWN_COLOR_400,
+            self::COLOR_500 => self::BROWN_COLOR_500,
+            self::COLOR_600 => self::BROWN_COLOR_600,
+            self::COLOR_700 => self::BROWN_COLOR_700,
         ];
     }
 
@@ -55,7 +55,7 @@ class BrownColorProvider implements BrownColorProviderInterface, ColorInterface 
      *{@inheritdoc}
      */
     public function getName() {
-        return self::COLOR_BROWN;
+        return self::BROWN_COLOR;
     }
 
 }

@@ -40,18 +40,18 @@ class AmberColorProvider implements AmberColorProviderInterface, ColorInterface 
      */
     public function getColors() {
         return [
-            self::COLOR_50   => self::COLOR_AMBER_50,
-            self::COLOR_100  => self::COLOR_AMBER_100,
-            self::COLOR_200  => self::COLOR_AMBER_200,
-            self::COLOR_300  => self::COLOR_AMBER_300,
-            self::COLOR_400  => self::COLOR_AMBER_400,
-            self::COLOR_500  => self::COLOR_AMBER_500,
-            self::COLOR_600  => self::COLOR_AMBER_600,
-            self::COLOR_700  => self::COLOR_AMBER_700,
-            self::COLOR_A100 => self::COLOR_AMBER_A100,
-            self::COLOR_A200 => self::COLOR_AMBER_A200,
-            self::COLOR_A400 => self::COLOR_AMBER_A400,
-            self::COLOR_A700 => self::COLOR_AMBER_A700,
+            self::COLOR_50   => self::AMBER_COLOR_50,
+            self::COLOR_100  => self::AMBER_COLOR_100,
+            self::COLOR_200  => self::AMBER_COLOR_200,
+            self::COLOR_300  => self::AMBER_COLOR_300,
+            self::COLOR_400  => self::AMBER_COLOR_400,
+            self::COLOR_500  => self::AMBER_COLOR_500,
+            self::COLOR_600  => self::AMBER_COLOR_600,
+            self::COLOR_700  => self::AMBER_COLOR_700,
+            self::COLOR_A100 => self::AMBER_COLOR_A100,
+            self::COLOR_A200 => self::AMBER_COLOR_A200,
+            self::COLOR_A400 => self::AMBER_COLOR_A400,
+            self::COLOR_A700 => self::AMBER_COLOR_A700,
         ];
     }
 
@@ -59,7 +59,7 @@ class AmberColorProvider implements AmberColorProviderInterface, ColorInterface 
      *{@inheritdoc}
      */
     public function getName() {
-        return self::COLOR_AMBER;
+        return self::AMBER_COLOR;
     }
 
 }

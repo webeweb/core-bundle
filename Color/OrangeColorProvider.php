@@ -40,18 +40,18 @@ class OrangeColorProvider implements OrangeColorProviderInterface, ColorInterfac
      */
     public function getColors() {
         return [
-            self::COLOR_50   => self::COLOR_ORANGE_50,
-            self::COLOR_100  => self::COLOR_ORANGE_100,
-            self::COLOR_200  => self::COLOR_ORANGE_200,
-            self::COLOR_300  => self::COLOR_ORANGE_300,
-            self::COLOR_400  => self::COLOR_ORANGE_400,
-            self::COLOR_500  => self::COLOR_ORANGE_500,
-            self::COLOR_600  => self::COLOR_ORANGE_600,
-            self::COLOR_700  => self::COLOR_ORANGE_700,
-            self::COLOR_A100 => self::COLOR_ORANGE_A100,
-            self::COLOR_A200 => self::COLOR_ORANGE_A200,
-            self::COLOR_A400 => self::COLOR_ORANGE_A400,
-            self::COLOR_A700 => self::COLOR_ORANGE_A700,
+            self::COLOR_50   => self::ORANGE_COLOR_50,
+            self::COLOR_100  => self::ORANGE_COLOR_100,
+            self::COLOR_200  => self::ORANGE_COLOR_200,
+            self::COLOR_300  => self::ORANGE_COLOR_300,
+            self::COLOR_400  => self::ORANGE_COLOR_400,
+            self::COLOR_500  => self::ORANGE_COLOR_500,
+            self::COLOR_600  => self::ORANGE_COLOR_600,
+            self::COLOR_700  => self::ORANGE_COLOR_700,
+            self::COLOR_A100 => self::ORANGE_COLOR_A100,
+            self::COLOR_A200 => self::ORANGE_COLOR_A200,
+            self::COLOR_A400 => self::ORANGE_COLOR_A400,
+            self::COLOR_A700 => self::ORANGE_COLOR_A700,
         ];
     }
 
@@ -59,7 +59,7 @@ class OrangeColorProvider implements OrangeColorProviderInterface, ColorInterfac
      *{@inheritdoc}
      */
     public function getName() {
-        return self::COLOR_ORANGE;
+        return self::ORANGE_COLOR;
     }
 
 }

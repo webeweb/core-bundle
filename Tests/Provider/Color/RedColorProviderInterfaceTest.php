@@ -29,20 +29,22 @@ class RedColorProviderInterfaceTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("#FFEBEE", RedColorProviderInterface::COLOR_RED_50);
-        $this->assertEquals("#FFCDD2", RedColorProviderInterface::COLOR_RED_100);
-        $this->assertEquals("#EF9A9A", RedColorProviderInterface::COLOR_RED_200);
-        $this->assertEquals("#E57373", RedColorProviderInterface::COLOR_RED_300);
-        $this->assertEquals("#EF5350", RedColorProviderInterface::COLOR_RED_400);
-        $this->assertEquals("#F44336", RedColorProviderInterface::COLOR_RED_500);
-        $this->assertEquals("#E53935", RedColorProviderInterface::COLOR_RED_600);
-        $this->assertEquals("#D32F2F", RedColorProviderInterface::COLOR_RED_700);
-        $this->assertEquals("#C62828", RedColorProviderInterface::COLOR_RED_800);
-        $this->assertEquals("#B71C1C", RedColorProviderInterface::COLOR_RED_900);
-        $this->assertEquals("#FF8A80", RedColorProviderInterface::COLOR_RED_A100);
-        $this->assertEquals("#FF5252", RedColorProviderInterface::COLOR_RED_A200);
-        $this->assertEquals("#FF1744", RedColorProviderInterface::COLOR_RED_A400);
-        $this->assertEquals("#D50000", RedColorProviderInterface::COLOR_RED_A700);
+        $this->assertEquals("red", RedColorProviderInterface::RED_COLOR);
+
+        $this->assertEquals("#FFEBEE", RedColorProviderInterface::RED_COLOR_50);
+        $this->assertEquals("#FFCDD2", RedColorProviderInterface::RED_COLOR_100);
+        $this->assertEquals("#EF9A9A", RedColorProviderInterface::RED_COLOR_200);
+        $this->assertEquals("#E57373", RedColorProviderInterface::RED_COLOR_300);
+        $this->assertEquals("#EF5350", RedColorProviderInterface::RED_COLOR_400);
+        $this->assertEquals("#F44336", RedColorProviderInterface::RED_COLOR_500);
+        $this->assertEquals("#E53935", RedColorProviderInterface::RED_COLOR_600);
+        $this->assertEquals("#D32F2F", RedColorProviderInterface::RED_COLOR_700);
+        $this->assertEquals("#C62828", RedColorProviderInterface::RED_COLOR_800);
+        $this->assertEquals("#B71C1C", RedColorProviderInterface::RED_COLOR_900);
+        $this->assertEquals("#FF8A80", RedColorProviderInterface::RED_COLOR_A100);
+        $this->assertEquals("#FF5252", RedColorProviderInterface::RED_COLOR_A200);
+        $this->assertEquals("#FF1744", RedColorProviderInterface::RED_COLOR_A400);
+        $this->assertEquals("#D50000", RedColorProviderInterface::RED_COLOR_A700);
     }
 
 }

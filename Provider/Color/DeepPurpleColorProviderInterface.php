@@ -22,101 +22,108 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface DeepPurpleColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Color deep purple" 50"
+     * Deep purpple color.
      *
      * @var string
      */
-    const COLOR_DEEP_PURPLE_50 = "#EDE7F6";
+    const DEEP_PURPLE_COLOR = "deep-purple";
 
     /**
-     * Color deep purple" 100"
+     * Deep purple color "50"
      *
      * @var string
      */
-    const COLOR_DEEP_PURPLE_100 = "#D1C4E9";
+    const DEEP_PURPLE_COLOR_50 = "#EDE7F6";
 
     /**
-     * Color deep purple" 200"
+     * Deep purple color "100"
      *
      * @var string
      */
-    const COLOR_DEEP_PURPLE_200 = "#B39DDB";
+    const DEEP_PURPLE_COLOR_100 = "#D1C4E9";
 
     /**
-     * Color deep purple" 300"
+     * Deep purple color "200"
      *
      * @var string
      */
-    const COLOR_DEEP_PURPLE_300 = "#9575CD";
+    const DEEP_PURPLE_COLOR_200 = "#B39DDB";
 
     /**
-     * Color deep purple" 400"
+     * Deep purple color "300"
      *
      * @var string
      */
-    const COLOR_DEEP_PURPLE_400 = "#7E57C2";
+    const DEEP_PURPLE_COLOR_300 = "#9575CD";
 
     /**
-     * Color deep purple" 500"
+     * Deep purple color "400"
      *
      * @var string
      */
-    const COLOR_DEEP_PURPLE_500 = "#673AB7";
+    const DEEP_PURPLE_COLOR_400 = "#7E57C2";
 
     /**
-     * Color deep purple" 600"
+     * Deep purple color "500"
      *
      * @var string
      */
-    const COLOR_DEEP_PURPLE_600 = "#5E35B1";
+    const DEEP_PURPLE_COLOR_500 = "#673AB7";
 
     /**
-     * Color deep purple" 700"
+     * Deep purple color "600"
      *
      * @var string
      */
-    const COLOR_DEEP_PURPLE_700 = "#512DA8";
+    const DEEP_PURPLE_COLOR_600 = "#5E35B1";
 
     /**
-     * Color deep purple" 800"
+     * Deep purple color "700"
      *
      * @var string
      */
-    const COLOR_DEEP_PURPLE_800 = "#4527A0";
+    const DEEP_PURPLE_COLOR_700 = "#512DA8";
 
     /**
-     * Color deep purple" 900"
+     * Deep purple color "800"
      *
      * @var string
      */
-    const COLOR_DEEP_PURPLE_900 = "#311B92";
+    const DEEP_PURPLE_COLOR_800 = "#4527A0";
 
     /**
-     * Color deep purple" A100"
+     * Deep purple color "900"
      *
      * @var string
      */
-    const COLOR_DEEP_PURPLE_A100 = "#B388FF";
+    const DEEP_PURPLE_COLOR_900 = "#311B92";
 
     /**
-     * Color deep purple" A200"
+     * Deep purple color "A100"
      *
      * @var string
      */
-    const COLOR_DEEP_PURPLE_A200 = "#7C4DFF";
+    const DEEP_PURPLE_COLOR_A100 = "#B388FF";
 
     /**
-     * Color deep purple" A400"
+     * Deep purple color "A200"
      *
      * @var string
      */
-    const COLOR_DEEP_PURPLE_A400 = "#651FFF";
+    const DEEP_PURPLE_COLOR_A200 = "#7C4DFF";
 
     /**
-     * Color deep purple" A700"
+     * Deep purple color "A400"
      *
      * @var string
      */
-    const COLOR_DEEP_PURPLE_A700 = "#6200EA";
+    const DEEP_PURPLE_COLOR_A400 = "#651FFF";
+
+    /**
+     * Deep purple color "A700"
+     *
+     * @var string
+     */
+    const DEEP_PURPLE_COLOR_A700 = "#6200EA";
 
 }

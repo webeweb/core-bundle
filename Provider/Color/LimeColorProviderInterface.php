@@ -22,101 +22,108 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface LimeColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Color lime "50"
+     * Lime color.
      *
      * @var string
      */
-    const COLOR_LIME_50 = "#F9FBE7";
+    const LIME_COLOR = "lime";
 
     /**
-     * Color lime "100"
+     * Lime color "50"
      *
      * @var string
      */
-    const COLOR_LIME_100 = "#F0F4C3";
+    const LIME_COLOR_50 = "#F9FBE7";
 
     /**
-     * Color lime "200"
+     * Lime color "100"
      *
      * @var string
      */
-    const COLOR_LIME_200 = "#E6EE9C";
+    const LIME_COLOR_100 = "#F0F4C3";
 
     /**
-     * Color lime "300"
+     * Lime color "200"
      *
      * @var string
      */
-    const COLOR_LIME_300 = "#DCE775";
+    const LIME_COLOR_200 = "#E6EE9C";
 
     /**
-     * Color lime "400"
+     * Lime color "300"
      *
      * @var string
      */
-    const COLOR_LIME_400 = "#D4E157";
+    const LIME_COLOR_300 = "#DCE775";
 
     /**
-     * Color lime "500"
+     * Lime color "400"
      *
      * @var string
      */
-    const COLOR_LIME_500 = "#CDDC39";
+    const LIME_COLOR_400 = "#D4E157";
 
     /**
-     * Color lime "600"
+     * Lime color "500"
      *
      * @var string
      */
-    const COLOR_LIME_600 = "#C0CA33";
+    const LIME_COLOR_500 = "#CDDC39";
 
     /**
-     * Color lime "700"
+     * Lime color "600"
      *
      * @var string
      */
-    const COLOR_LIME_700 = "#AFB42B";
+    const LIME_COLOR_600 = "#C0CA33";
 
     /**
-     * Color lime "800"
+     * Lime color "700"
      *
      * @var string
      */
-    const COLOR_LIME_800 = "#9E9D24";
+    const LIME_COLOR_700 = "#AFB42B";
 
     /**
-     * Color lime "900"
+     * Lime color "800"
      *
      * @var string
      */
-    const COLOR_LIME_900 = "#827717";
+    const LIME_COLOR_800 = "#9E9D24";
 
     /**
-     * Color lime "A100"
+     * Lime color "900"
      *
      * @var string
      */
-    const COLOR_LIME_A100 = "#F4FF81";
+    const LIME_COLOR_900 = "#827717";
 
     /**
-     * Color lime "A200"
+     * Lime color "A100"
      *
      * @var string
      */
-    const COLOR_LIME_A200 = "#EEFF41";
+    const LIME_COLOR_A100 = "#F4FF81";
 
     /**
-     * Color lime "A400"
+     * Lime color "A200"
      *
      * @var string
      */
-    const COLOR_LIME_A400 = "#C6FF00";
+    const LIME_COLOR_A200 = "#EEFF41";
 
     /**
-     * Color lime "A700"
+     * Lime color "A400"
      *
      * @var string
      */
-    const COLOR_LIME_A700 = "#AEEA00";
+    const LIME_COLOR_A400 = "#C6FF00";
+
+    /**
+     * Lime color "A700"
+     *
+     * @var string
+     */
+    const LIME_COLOR_A700 = "#AEEA00";
 
 }

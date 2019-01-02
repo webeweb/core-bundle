@@ -29,16 +29,18 @@ class BlueGreyColorProviderInterfaceTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("#ECEFF1", BlueGreyColorProviderInterface::COLOR_BLUE_GREY_50);
-        $this->assertEquals("#CFD8DC", BlueGreyColorProviderInterface::COLOR_BLUE_GREY_100);
-        $this->assertEquals("#B0BEC5", BlueGreyColorProviderInterface::COLOR_BLUE_GREY_200);
-        $this->assertEquals("#90A4AE", BlueGreyColorProviderInterface::COLOR_BLUE_GREY_300);
-        $this->assertEquals("#78909C", BlueGreyColorProviderInterface::COLOR_BLUE_GREY_400);
-        $this->assertEquals("#607D8B", BlueGreyColorProviderInterface::COLOR_BLUE_GREY_500);
-        $this->assertEquals("#546E7A", BlueGreyColorProviderInterface::COLOR_BLUE_GREY_600);
-        $this->assertEquals("#455A64", BlueGreyColorProviderInterface::COLOR_BLUE_GREY_700);
-        $this->assertEquals("#37474F", BlueGreyColorProviderInterface::COLOR_BLUE_GREY_800);
-        $this->assertEquals("#263238", BlueGreyColorProviderInterface::COLOR_BLUE_GREY_900);
+        $this->assertEquals("blue-grey", BlueGreyColorProviderInterface::BLUE_GREY_COLOR);
+
+        $this->assertEquals("#ECEFF1", BlueGreyColorProviderInterface::BLUE_GREY_COLOR_50);
+        $this->assertEquals("#CFD8DC", BlueGreyColorProviderInterface::BLUE_GREY_COLOR_100);
+        $this->assertEquals("#B0BEC5", BlueGreyColorProviderInterface::BLUE_GREY_COLOR_200);
+        $this->assertEquals("#90A4AE", BlueGreyColorProviderInterface::BLUE_GREY_COLOR_300);
+        $this->assertEquals("#78909C", BlueGreyColorProviderInterface::BLUE_GREY_COLOR_400);
+        $this->assertEquals("#607D8B", BlueGreyColorProviderInterface::BLUE_GREY_COLOR_500);
+        $this->assertEquals("#546E7A", BlueGreyColorProviderInterface::BLUE_GREY_COLOR_600);
+        $this->assertEquals("#455A64", BlueGreyColorProviderInterface::BLUE_GREY_COLOR_700);
+        $this->assertEquals("#37474F", BlueGreyColorProviderInterface::BLUE_GREY_COLOR_800);
+        $this->assertEquals("#263238", BlueGreyColorProviderInterface::BLUE_GREY_COLOR_900);
     }
 
 }

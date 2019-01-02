@@ -29,16 +29,18 @@ class BrownColorProviderInterfaceTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("#EFEBE9", BrownColorProviderInterface::COLOR_BROWN_50);
-        $this->assertEquals("#D7CCC8", BrownColorProviderInterface::COLOR_BROWN_100);
-        $this->assertEquals("#BCAAA4", BrownColorProviderInterface::COLOR_BROWN_200);
-        $this->assertEquals("#A1887F", BrownColorProviderInterface::COLOR_BROWN_300);
-        $this->assertEquals("#8D6E63", BrownColorProviderInterface::COLOR_BROWN_400);
-        $this->assertEquals("#795548", BrownColorProviderInterface::COLOR_BROWN_500);
-        $this->assertEquals("#6D4C41", BrownColorProviderInterface::COLOR_BROWN_600);
-        $this->assertEquals("#5D4037", BrownColorProviderInterface::COLOR_BROWN_700);
-        $this->assertEquals("#4E342E", BrownColorProviderInterface::COLOR_BROWN_800);
-        $this->assertEquals("#3E2723", BrownColorProviderInterface::COLOR_BROWN_900);
+        $this->assertEquals("brown", BrownColorProviderInterface::BROWN_COLOR);
+
+        $this->assertEquals("#EFEBE9", BrownColorProviderInterface::BROWN_COLOR_50);
+        $this->assertEquals("#D7CCC8", BrownColorProviderInterface::BROWN_COLOR_100);
+        $this->assertEquals("#BCAAA4", BrownColorProviderInterface::BROWN_COLOR_200);
+        $this->assertEquals("#A1887F", BrownColorProviderInterface::BROWN_COLOR_300);
+        $this->assertEquals("#8D6E63", BrownColorProviderInterface::BROWN_COLOR_400);
+        $this->assertEquals("#795548", BrownColorProviderInterface::BROWN_COLOR_500);
+        $this->assertEquals("#6D4C41", BrownColorProviderInterface::BROWN_COLOR_600);
+        $this->assertEquals("#5D4037", BrownColorProviderInterface::BROWN_COLOR_700);
+        $this->assertEquals("#4E342E", BrownColorProviderInterface::BROWN_COLOR_800);
+        $this->assertEquals("#3E2723", BrownColorProviderInterface::BROWN_COLOR_900);
     }
 
 }

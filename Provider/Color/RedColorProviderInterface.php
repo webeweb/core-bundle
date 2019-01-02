@@ -22,101 +22,108 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface RedColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Color red "50"
+     * Red color.
      *
      * @var string
      */
-    const COLOR_RED_50 = "#FFEBEE";
+    const RED_COLOR = "red";
 
     /**
-     * Color red "100"
+     * Red color "50"
      *
      * @var string
      */
-    const COLOR_RED_100 = "#FFCDD2";
+    const RED_COLOR_50 = "#FFEBEE";
 
     /**
-     * Color red "200"
+     * Red color "100"
      *
      * @var string
      */
-    const COLOR_RED_200 = "#EF9A9A";
+    const RED_COLOR_100 = "#FFCDD2";
 
     /**
-     * Color red "300"
+     * Red color "200"
      *
      * @var string
      */
-    const COLOR_RED_300 = "#E57373";
+    const RED_COLOR_200 = "#EF9A9A";
 
     /**
-     * Color red "400"
+     * Red color "300"
      *
      * @var string
      */
-    const COLOR_RED_400 = "#EF5350";
+    const RED_COLOR_300 = "#E57373";
 
     /**
-     * Color red "500"
+     * Red color "400"
      *
      * @var string
      */
-    const COLOR_RED_500 = "#F44336";
+    const RED_COLOR_400 = "#EF5350";
 
     /**
-     * Color red "600"
+     * Red color "500"
      *
      * @var string
      */
-    const COLOR_RED_600 = "#E53935";
+    const RED_COLOR_500 = "#F44336";
 
     /**
-     * Color red "700"
+     * Red color "600"
      *
      * @var string
      */
-    const COLOR_RED_700 = "#D32F2F";
+    const RED_COLOR_600 = "#E53935";
 
     /**
-     * Color red "800"
+     * Red color "700"
      *
      * @var string
      */
-    const COLOR_RED_800 = "#C62828";
+    const RED_COLOR_700 = "#D32F2F";
 
     /**
-     * Color red "900"
+     * Red color "800"
      *
      * @var string
      */
-    const COLOR_RED_900 = "#B71C1C";
+    const RED_COLOR_800 = "#C62828";
 
     /**
-     * Color red "A100"
+     * Red color "900"
      *
      * @var string
      */
-    const COLOR_RED_A100 = "#FF8A80";
+    const RED_COLOR_900 = "#B71C1C";
 
     /**
-     * Color red "A200"
+     * Red color "A100"
      *
      * @var string
      */
-    const COLOR_RED_A200 = "#FF5252";
+    const RED_COLOR_A100 = "#FF8A80";
 
     /**
-     * Color red "A400"
+     * Red color "A200"
      *
      * @var string
      */
-    const COLOR_RED_A400 = "#FF1744";
+    const RED_COLOR_A200 = "#FF5252";
 
     /**
-     * Color red "A700"
+     * Red color "A400"
      *
      * @var string
      */
-    const COLOR_RED_A700 = "#D50000";
+    const RED_COLOR_A400 = "#FF1744";
+
+    /**
+     * Red color "A700"
+     *
+     * @var string
+     */
+    const RED_COLOR_A700 = "#D50000";
 
 }

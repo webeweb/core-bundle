@@ -59,19 +59,19 @@ class TealColorProviderTest extends AbstractTestCase {
         $this->assertArrayHasKey(ColorInterface::COLOR_A400, $res);
         $this->assertArrayHasKey(ColorInterface::COLOR_A700, $res);
 
-        $this->assertEquals(TealColorProviderInterface::COLOR_TEAL_50, $res[ColorInterface::COLOR_50]);
-        $this->assertEquals(TealColorProviderInterface::COLOR_TEAL_100, $res[ColorInterface::COLOR_100]);
-        $this->assertEquals(TealColorProviderInterface::COLOR_TEAL_200, $res[ColorInterface::COLOR_200]);
-        $this->assertEquals(TealColorProviderInterface::COLOR_TEAL_300, $res[ColorInterface::COLOR_300]);
-        $this->assertEquals(TealColorProviderInterface::COLOR_TEAL_400, $res[ColorInterface::COLOR_400]);
-        $this->assertEquals(TealColorProviderInterface::COLOR_TEAL_500, $res[ColorInterface::COLOR_500]);
-        $this->assertEquals(TealColorProviderInterface::COLOR_TEAL_500, $res[ColorInterface::COLOR_500]);
-        $this->assertEquals(TealColorProviderInterface::COLOR_TEAL_600, $res[ColorInterface::COLOR_600]);
-        $this->assertEquals(TealColorProviderInterface::COLOR_TEAL_700, $res[ColorInterface::COLOR_700]);
-        $this->assertEquals(TealColorProviderInterface::COLOR_TEAL_A100, $res[ColorInterface::COLOR_A100]);
-        $this->assertEquals(TealColorProviderInterface::COLOR_TEAL_A200, $res[ColorInterface::COLOR_A200]);
-        $this->assertEquals(TealColorProviderInterface::COLOR_TEAL_A400, $res[ColorInterface::COLOR_A400]);
-        $this->assertEquals(TealColorProviderInterface::COLOR_TEAL_A700, $res[ColorInterface::COLOR_A700]);
+        $this->assertEquals(TealColorProviderInterface::TEAL_COLOR_50, $res[ColorInterface::COLOR_50]);
+        $this->assertEquals(TealColorProviderInterface::TEAL_COLOR_100, $res[ColorInterface::COLOR_100]);
+        $this->assertEquals(TealColorProviderInterface::TEAL_COLOR_200, $res[ColorInterface::COLOR_200]);
+        $this->assertEquals(TealColorProviderInterface::TEAL_COLOR_300, $res[ColorInterface::COLOR_300]);
+        $this->assertEquals(TealColorProviderInterface::TEAL_COLOR_400, $res[ColorInterface::COLOR_400]);
+        $this->assertEquals(TealColorProviderInterface::TEAL_COLOR_500, $res[ColorInterface::COLOR_500]);
+        $this->assertEquals(TealColorProviderInterface::TEAL_COLOR_500, $res[ColorInterface::COLOR_500]);
+        $this->assertEquals(TealColorProviderInterface::TEAL_COLOR_600, $res[ColorInterface::COLOR_600]);
+        $this->assertEquals(TealColorProviderInterface::TEAL_COLOR_700, $res[ColorInterface::COLOR_700]);
+        $this->assertEquals(TealColorProviderInterface::TEAL_COLOR_A100, $res[ColorInterface::COLOR_A100]);
+        $this->assertEquals(TealColorProviderInterface::TEAL_COLOR_A200, $res[ColorInterface::COLOR_A200]);
+        $this->assertEquals(TealColorProviderInterface::TEAL_COLOR_A400, $res[ColorInterface::COLOR_A400]);
+        $this->assertEquals(TealColorProviderInterface::TEAL_COLOR_A700, $res[ColorInterface::COLOR_A700]);
     }
 
     /**
@@ -83,7 +83,7 @@ class TealColorProviderTest extends AbstractTestCase {
 
         $obj = new TealColorProvider();
 
-        $res = ColorInterface::COLOR_TEAL;
+        $res = TealColorProviderInterface::TEAL_COLOR;
         $this->assertEquals($res, $obj->getName());
     }
 

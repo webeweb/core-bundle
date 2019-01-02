@@ -22,101 +22,108 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface TealColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Color teal "50"
+     * Teal color.
      *
      * @var string
      */
-    const COLOR_TEAL_50 = "#E0F2F1";
+    const TEAL_COLOR = "teal";
 
     /**
-     * Color teal "100"
+     * Teal color "50"
      *
      * @var string
      */
-    const COLOR_TEAL_100 = "#B2DFDB";
+    const TEAL_COLOR_50 = "#E0F2F1";
 
     /**
-     * Color teal "200"
+     * Teal color "100"
      *
      * @var string
      */
-    const COLOR_TEAL_200 = "#80CBC4";
+    const TEAL_COLOR_100 = "#B2DFDB";
 
     /**
-     * Color teal "300"
+     * Teal color "200"
      *
      * @var string
      */
-    const COLOR_TEAL_300 = "#4DB6AC";
+    const TEAL_COLOR_200 = "#80CBC4";
 
     /**
-     * Color teal "400"
+     * Teal color "300"
      *
      * @var string
      */
-    const COLOR_TEAL_400 = "#26A69A";
+    const TEAL_COLOR_300 = "#4DB6AC";
 
     /**
-     * Color teal "500"
+     * Teal color "400"
      *
      * @var string
      */
-    const COLOR_TEAL_500 = "#009688";
+    const TEAL_COLOR_400 = "#26A69A";
 
     /**
-     * Color teal "600"
+     * Teal color "500"
      *
      * @var string
      */
-    const COLOR_TEAL_600 = "#00897B";
+    const TEAL_COLOR_500 = "#009688";
 
     /**
-     * Color teal "700"
+     * Teal color "600"
      *
      * @var string
      */
-    const COLOR_TEAL_700 = "#00796B";
+    const TEAL_COLOR_600 = "#00897B";
 
     /**
-     * Color teal "800"
+     * Teal color "700"
      *
      * @var string
      */
-    const COLOR_TEAL_800 = "#00695C";
+    const TEAL_COLOR_700 = "#00796B";
 
     /**
-     * Color teal "900"
+     * Teal color "800"
      *
      * @var string
      */
-    const COLOR_TEAL_900 = "#004D40";
+    const TEAL_COLOR_800 = "#00695C";
 
     /**
-     * Color teal "A100"
+     * Teal color "900"
      *
      * @var string
      */
-    const COLOR_TEAL_A100 = "#A7FFEB";
+    const TEAL_COLOR_900 = "#004D40";
 
     /**
-     * Color teal "A200"
+     * Teal color "A100"
      *
      * @var string
      */
-    const COLOR_TEAL_A200 = "#64FFDA";
+    const TEAL_COLOR_A100 = "#A7FFEB";
 
     /**
-     * Color teal "A400"
+     * Teal color "A200"
      *
      * @var string
      */
-    const COLOR_TEAL_A400 = "#1DE9B6";
+    const TEAL_COLOR_A200 = "#64FFDA";
 
     /**
-     * Color teal "A700"
+     * Teal color "A400"
      *
      * @var string
      */
-    const COLOR_TEAL_A700 = "#00BFA5";
+    const TEAL_COLOR_A400 = "#1DE9B6";
+
+    /**
+     * Teal color "A700"
+     *
+     * @var string
+     */
+    const TEAL_COLOR_A700 = "#00BFA5";
 
 }

@@ -22,101 +22,108 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface IndigoColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Color indigo "50"
+     * Indigo color.
      *
      * @var string
      */
-    const COLOR_INDIGO_50 = "#E8EAF6";
+    const INDIGO_COLOR = "indigo";
 
     /**
-     * Color indigo "100"
+     * Indigo color "50"
      *
      * @var string
      */
-    const COLOR_INDIGO_100 = "#C5CAE9";
+    const INDIGO_COLOR_50 = "#E8EAF6";
 
     /**
-     * Color indigo "200"
+     * Indigo color "100"
      *
      * @var string
      */
-    const COLOR_INDIGO_200 = "#9FA8DA";
+    const INDIGO_COLOR_100 = "#C5CAE9";
 
     /**
-     * Color indigo "300"
+     * Indigo color "200"
      *
      * @var string
      */
-    const COLOR_INDIGO_300 = "#7986CB";
+    const INDIGO_COLOR_200 = "#9FA8DA";
 
     /**
-     * Color indigo "400"
+     * Indigo color "300"
      *
      * @var string
      */
-    const COLOR_INDIGO_400 = "#5C6BC0";
+    const INDIGO_COLOR_300 = "#7986CB";
 
     /**
-     * Color indigo "500"
+     * Indigo color "400"
      *
      * @var string
      */
-    const COLOR_INDIGO_500 = "#3F51B5";
+    const INDIGO_COLOR_400 = "#5C6BC0";
 
     /**
-     * Color indigo "600"
+     * Indigo color "500"
      *
      * @var string
      */
-    const COLOR_INDIGO_600 = "#3949AB";
+    const INDIGO_COLOR_500 = "#3F51B5";
 
     /**
-     * Color indigo "700"
+     * Indigo color "600"
      *
      * @var string
      */
-    const COLOR_INDIGO_700 = "#303F9F";
+    const INDIGO_COLOR_600 = "#3949AB";
 
     /**
-     * Color indigo "800"
+     * Indigo color "700"
      *
      * @var string
      */
-    const COLOR_INDIGO_800 = "#283593";
+    const INDIGO_COLOR_700 = "#303F9F";
 
     /**
-     * Color indigo "900"
+     * Indigo color "800"
      *
      * @var string
      */
-    const COLOR_INDIGO_900 = "#1A237E";
+    const INDIGO_COLOR_800 = "#283593";
 
     /**
-     * Color indigo "A100"
+     * Indigo color "900"
      *
      * @var string
      */
-    const COLOR_INDIGO_A100 = "#8C9EFF";
+    const INDIGO_COLOR_900 = "#1A237E";
 
     /**
-     * Color indigo "A200"
+     * Indigo color "A100"
      *
      * @var string
      */
-    const COLOR_INDIGO_A200 = "#536DFE";
+    const INDIGO_COLOR_A100 = "#8C9EFF";
 
     /**
-     * Color indigo "A400"
+     * Indigo color "A200"
      *
      * @var string
      */
-    const COLOR_INDIGO_A400 = "#3D5AFE";
+    const INDIGO_COLOR_A200 = "#536DFE";
 
     /**
-     * Color indigo "A700"
+     * Indigo color "A400"
      *
      * @var string
      */
-    const COLOR_INDIGO_A700 = "#304FFE";
+    const INDIGO_COLOR_A400 = "#3D5AFE";
+
+    /**
+     * Indigo color "A700"
+     *
+     * @var string
+     */
+    const INDIGO_COLOR_A700 = "#304FFE";
 
 }

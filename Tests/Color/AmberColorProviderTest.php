@@ -59,19 +59,19 @@ class AmberColorProviderTest extends AbstractTestCase {
         $this->assertArrayHasKey(ColorInterface::COLOR_A400, $res);
         $this->assertArrayHasKey(ColorInterface::COLOR_A700, $res);
 
-        $this->assertEquals(AmberColorProviderInterface::COLOR_AMBER_50, $res[ColorInterface::COLOR_50]);
-        $this->assertEquals(AmberColorProviderInterface::COLOR_AMBER_100, $res[ColorInterface::COLOR_100]);
-        $this->assertEquals(AmberColorProviderInterface::COLOR_AMBER_200, $res[ColorInterface::COLOR_200]);
-        $this->assertEquals(AmberColorProviderInterface::COLOR_AMBER_300, $res[ColorInterface::COLOR_300]);
-        $this->assertEquals(AmberColorProviderInterface::COLOR_AMBER_400, $res[ColorInterface::COLOR_400]);
-        $this->assertEquals(AmberColorProviderInterface::COLOR_AMBER_500, $res[ColorInterface::COLOR_500]);
-        $this->assertEquals(AmberColorProviderInterface::COLOR_AMBER_500, $res[ColorInterface::COLOR_500]);
-        $this->assertEquals(AmberColorProviderInterface::COLOR_AMBER_600, $res[ColorInterface::COLOR_600]);
-        $this->assertEquals(AmberColorProviderInterface::COLOR_AMBER_700, $res[ColorInterface::COLOR_700]);
-        $this->assertEquals(AmberColorProviderInterface::COLOR_AMBER_A100, $res[ColorInterface::COLOR_A100]);
-        $this->assertEquals(AmberColorProviderInterface::COLOR_AMBER_A200, $res[ColorInterface::COLOR_A200]);
-        $this->assertEquals(AmberColorProviderInterface::COLOR_AMBER_A400, $res[ColorInterface::COLOR_A400]);
-        $this->assertEquals(AmberColorProviderInterface::COLOR_AMBER_A700, $res[ColorInterface::COLOR_A700]);
+        $this->assertEquals(AmberColorProviderInterface::AMBER_COLOR_50, $res[ColorInterface::COLOR_50]);
+        $this->assertEquals(AmberColorProviderInterface::AMBER_COLOR_100, $res[ColorInterface::COLOR_100]);
+        $this->assertEquals(AmberColorProviderInterface::AMBER_COLOR_200, $res[ColorInterface::COLOR_200]);
+        $this->assertEquals(AmberColorProviderInterface::AMBER_COLOR_300, $res[ColorInterface::COLOR_300]);
+        $this->assertEquals(AmberColorProviderInterface::AMBER_COLOR_400, $res[ColorInterface::COLOR_400]);
+        $this->assertEquals(AmberColorProviderInterface::AMBER_COLOR_500, $res[ColorInterface::COLOR_500]);
+        $this->assertEquals(AmberColorProviderInterface::AMBER_COLOR_500, $res[ColorInterface::COLOR_500]);
+        $this->assertEquals(AmberColorProviderInterface::AMBER_COLOR_600, $res[ColorInterface::COLOR_600]);
+        $this->assertEquals(AmberColorProviderInterface::AMBER_COLOR_700, $res[ColorInterface::COLOR_700]);
+        $this->assertEquals(AmberColorProviderInterface::AMBER_COLOR_A100, $res[ColorInterface::COLOR_A100]);
+        $this->assertEquals(AmberColorProviderInterface::AMBER_COLOR_A200, $res[ColorInterface::COLOR_A200]);
+        $this->assertEquals(AmberColorProviderInterface::AMBER_COLOR_A400, $res[ColorInterface::COLOR_A400]);
+        $this->assertEquals(AmberColorProviderInterface::AMBER_COLOR_A700, $res[ColorInterface::COLOR_A700]);
     }
 
     /**
@@ -83,7 +83,7 @@ class AmberColorProviderTest extends AbstractTestCase {
 
         $obj = new AmberColorProvider();
 
-        $res = ColorInterface::COLOR_AMBER;
+        $res = AmberColorProviderInterface::AMBER_COLOR;
         $this->assertEquals($res, $obj->getName());
     }
 

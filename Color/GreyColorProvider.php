@@ -40,14 +40,14 @@ class GreyColorProvider implements GreyColorProviderInterface, ColorInterface {
      */
     public function getColors() {
         return [
-            self::COLOR_50  => self::COLOR_GREY_50,
-            self::COLOR_100 => self::COLOR_GREY_100,
-            self::COLOR_200 => self::COLOR_GREY_200,
-            self::COLOR_300 => self::COLOR_GREY_300,
-            self::COLOR_400 => self::COLOR_GREY_400,
-            self::COLOR_500 => self::COLOR_GREY_500,
-            self::COLOR_600 => self::COLOR_GREY_600,
-            self::COLOR_700 => self::COLOR_GREY_700,
+            self::COLOR_50  => self::GREY_COLOR_50,
+            self::COLOR_100 => self::GREY_COLOR_100,
+            self::COLOR_200 => self::GREY_COLOR_200,
+            self::COLOR_300 => self::GREY_COLOR_300,
+            self::COLOR_400 => self::GREY_COLOR_400,
+            self::COLOR_500 => self::GREY_COLOR_500,
+            self::COLOR_600 => self::GREY_COLOR_600,
+            self::COLOR_700 => self::GREY_COLOR_700,
         ];
     }
 
@@ -55,7 +55,7 @@ class GreyColorProvider implements GreyColorProviderInterface, ColorInterface {
      *{@inheritdoc}
      */
     public function getName() {
-        return self::COLOR_GREY;
+        return self::GREY_COLOR;
     }
 
 }

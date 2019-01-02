@@ -22,101 +22,108 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface GreenColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Color green "50"
+     * Green color.
      *
      * @var string
      */
-    const COLOR_GREEN_50 = "#E8F5E9";
+    const GREEN_COLOR = "green";
 
     /**
-     * Color green "100"
+     * Green color "50"
      *
      * @var string
      */
-    const COLOR_GREEN_100 = "#C8E6C9";
+    const GREEN_COLOR_50 = "#E8F5E9";
 
     /**
-     * Color green "200"
+     * Green color "100"
      *
      * @var string
      */
-    const COLOR_GREEN_200 = "#A5D6A7";
+    const GREEN_COLOR_100 = "#C8E6C9";
 
     /**
-     * Color green "300"
+     * Green color "200"
      *
      * @var string
      */
-    const COLOR_GREEN_300 = "#81C784";
+    const GREEN_COLOR_200 = "#A5D6A7";
 
     /**
-     * Color green "400"
+     * Green color "300"
      *
      * @var string
      */
-    const COLOR_GREEN_400 = "#66BB6A";
+    const GREEN_COLOR_300 = "#81C784";
 
     /**
-     * Color green "500"
+     * Green color "400"
      *
      * @var string
      */
-    const COLOR_GREEN_500 = "#4CAF50";
+    const GREEN_COLOR_400 = "#66BB6A";
 
     /**
-     * Color green "600"
+     * Green color "500"
      *
      * @var string
      */
-    const COLOR_GREEN_600 = "#43A047";
+    const GREEN_COLOR_500 = "#4CAF50";
 
     /**
-     * Color green "700"
+     * Green color "600"
      *
      * @var string
      */
-    const COLOR_GREEN_700 = "#388E3C";
+    const GREEN_COLOR_600 = "#43A047";
 
     /**
-     * Color green "800"
+     * Green color "700"
      *
      * @var string
      */
-    const COLOR_GREEN_800 = "#2E7D32";
+    const GREEN_COLOR_700 = "#388E3C";
 
     /**
-     * Color green "900"
+     * Green color "800"
      *
      * @var string
      */
-    const COLOR_GREEN_900 = "#1B5E20";
+    const GREEN_COLOR_800 = "#2E7D32";
 
     /**
-     * Color green "A100"
+     * Green color "900"
      *
      * @var string
      */
-    const COLOR_GREEN_A100 = "#B9F6CA";
+    const GREEN_COLOR_900 = "#1B5E20";
 
     /**
-     * Color green "A200"
+     * Green color "A100"
      *
      * @var string
      */
-    const COLOR_GREEN_A200 = "#69F0AE";
+    const GREEN_COLOR_A100 = "#B9F6CA";
 
     /**
-     * Color green "A400"
+     * Green color "A200"
      *
      * @var string
      */
-    const COLOR_GREEN_A400 = "#00E676";
+    const GREEN_COLOR_A200 = "#69F0AE";
 
     /**
-     * Color green "A700"
+     * Green color "A400"
      *
      * @var string
      */
-    const COLOR_GREEN_A700 = "#00C853";
+    const GREEN_COLOR_A400 = "#00E676";
+
+    /**
+     * Green color "A700"
+     *
+     * @var string
+     */
+    const GREEN_COLOR_A700 = "#00C853";
 
 }

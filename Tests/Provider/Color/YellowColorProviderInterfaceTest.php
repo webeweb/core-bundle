@@ -29,20 +29,22 @@ class YellowColorProviderInterfaceTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("#FFFDE7", YellowColorProviderInterface::COLOR_YELLOW_50);
-        $this->assertEquals("#FFF9C4", YellowColorProviderInterface::COLOR_YELLOW_100);
-        $this->assertEquals("#FFF59D", YellowColorProviderInterface::COLOR_YELLOW_200);
-        $this->assertEquals("#FFF176", YellowColorProviderInterface::COLOR_YELLOW_300);
-        $this->assertEquals("#FFEE58", YellowColorProviderInterface::COLOR_YELLOW_400);
-        $this->assertEquals("#FFEB3B", YellowColorProviderInterface::COLOR_YELLOW_500);
-        $this->assertEquals("#FDD835", YellowColorProviderInterface::COLOR_YELLOW_600);
-        $this->assertEquals("#FBC02D", YellowColorProviderInterface::COLOR_YELLOW_700);
-        $this->assertEquals("#F9A825", YellowColorProviderInterface::COLOR_YELLOW_800);
-        $this->assertEquals("#F57F17", YellowColorProviderInterface::COLOR_YELLOW_900);
-        $this->assertEquals("#FFFF8D", YellowColorProviderInterface::COLOR_YELLOW_A100);
-        $this->assertEquals("#FFFF00", YellowColorProviderInterface::COLOR_YELLOW_A200);
-        $this->assertEquals("#FFEA00", YellowColorProviderInterface::COLOR_YELLOW_A400);
-        $this->assertEquals("#FFD600", YellowColorProviderInterface::COLOR_YELLOW_A700);
+        $this->assertEquals("yellow", YellowColorProviderInterface::YELLOW_COLOR);
+
+        $this->assertEquals("#FFFDE7", YellowColorProviderInterface::YELLOW_COLOR_50);
+        $this->assertEquals("#FFF9C4", YellowColorProviderInterface::YELLOW_COLOR_100);
+        $this->assertEquals("#FFF59D", YellowColorProviderInterface::YELLOW_COLOR_200);
+        $this->assertEquals("#FFF176", YellowColorProviderInterface::YELLOW_COLOR_300);
+        $this->assertEquals("#FFEE58", YellowColorProviderInterface::YELLOW_COLOR_400);
+        $this->assertEquals("#FFEB3B", YellowColorProviderInterface::YELLOW_COLOR_500);
+        $this->assertEquals("#FDD835", YellowColorProviderInterface::YELLOW_COLOR_600);
+        $this->assertEquals("#FBC02D", YellowColorProviderInterface::YELLOW_COLOR_700);
+        $this->assertEquals("#F9A825", YellowColorProviderInterface::YELLOW_COLOR_800);
+        $this->assertEquals("#F57F17", YellowColorProviderInterface::YELLOW_COLOR_900);
+        $this->assertEquals("#FFFF8D", YellowColorProviderInterface::YELLOW_COLOR_A100);
+        $this->assertEquals("#FFFF00", YellowColorProviderInterface::YELLOW_COLOR_A200);
+        $this->assertEquals("#FFEA00", YellowColorProviderInterface::YELLOW_COLOR_A400);
+        $this->assertEquals("#FFD600", YellowColorProviderInterface::YELLOW_COLOR_A700);
     }
 
 }

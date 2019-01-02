@@ -40,18 +40,18 @@ class PinkColorProvider implements PinkColorProviderInterface, ColorInterface {
      */
     public function getColors() {
         return [
-            self::COLOR_50   => self::COLOR_PINK_50,
-            self::COLOR_100  => self::COLOR_PINK_100,
-            self::COLOR_200  => self::COLOR_PINK_200,
-            self::COLOR_300  => self::COLOR_PINK_300,
-            self::COLOR_400  => self::COLOR_PINK_400,
-            self::COLOR_500  => self::COLOR_PINK_500,
-            self::COLOR_600  => self::COLOR_PINK_600,
-            self::COLOR_700  => self::COLOR_PINK_700,
-            self::COLOR_A100 => self::COLOR_PINK_A100,
-            self::COLOR_A200 => self::COLOR_PINK_A200,
-            self::COLOR_A400 => self::COLOR_PINK_A400,
-            self::COLOR_A700 => self::COLOR_PINK_A700,
+            self::COLOR_50   => self::PINK_COLOR_50,
+            self::COLOR_100  => self::PINK_COLOR_100,
+            self::COLOR_200  => self::PINK_COLOR_200,
+            self::COLOR_300  => self::PINK_COLOR_300,
+            self::COLOR_400  => self::PINK_COLOR_400,
+            self::COLOR_500  => self::PINK_COLOR_500,
+            self::COLOR_600  => self::PINK_COLOR_600,
+            self::COLOR_700  => self::PINK_COLOR_700,
+            self::COLOR_A100 => self::PINK_COLOR_A100,
+            self::COLOR_A200 => self::PINK_COLOR_A200,
+            self::COLOR_A400 => self::PINK_COLOR_A400,
+            self::COLOR_A700 => self::PINK_COLOR_A700,
         ];
     }
 
@@ -59,7 +59,7 @@ class PinkColorProvider implements PinkColorProviderInterface, ColorInterface {
      *{@inheritdoc}
      */
     public function getName() {
-        return self::COLOR_PINK;
+        return self::PINK_COLOR;
     }
 
 }

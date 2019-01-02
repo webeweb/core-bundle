@@ -29,20 +29,22 @@ class TealColorProviderInterfaceTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("#E0F2F1", TealColorProviderInterface::COLOR_TEAL_50);
-        $this->assertEquals("#B2DFDB", TealColorProviderInterface::COLOR_TEAL_100);
-        $this->assertEquals("#80CBC4", TealColorProviderInterface::COLOR_TEAL_200);
-        $this->assertEquals("#4DB6AC", TealColorProviderInterface::COLOR_TEAL_300);
-        $this->assertEquals("#26A69A", TealColorProviderInterface::COLOR_TEAL_400);
-        $this->assertEquals("#009688", TealColorProviderInterface::COLOR_TEAL_500);
-        $this->assertEquals("#00897B", TealColorProviderInterface::COLOR_TEAL_600);
-        $this->assertEquals("#00796B", TealColorProviderInterface::COLOR_TEAL_700);
-        $this->assertEquals("#00695C", TealColorProviderInterface::COLOR_TEAL_800);
-        $this->assertEquals("#004D40", TealColorProviderInterface::COLOR_TEAL_900);
-        $this->assertEquals("#A7FFEB", TealColorProviderInterface::COLOR_TEAL_A100);
-        $this->assertEquals("#64FFDA", TealColorProviderInterface::COLOR_TEAL_A200);
-        $this->assertEquals("#1DE9B6", TealColorProviderInterface::COLOR_TEAL_A400);
-        $this->assertEquals("#00BFA5", TealColorProviderInterface::COLOR_TEAL_A700);
+        $this->assertEquals("teal", TealColorProviderInterface::TEAL_COLOR);
+
+        $this->assertEquals("#E0F2F1", TealColorProviderInterface::TEAL_COLOR_50);
+        $this->assertEquals("#B2DFDB", TealColorProviderInterface::TEAL_COLOR_100);
+        $this->assertEquals("#80CBC4", TealColorProviderInterface::TEAL_COLOR_200);
+        $this->assertEquals("#4DB6AC", TealColorProviderInterface::TEAL_COLOR_300);
+        $this->assertEquals("#26A69A", TealColorProviderInterface::TEAL_COLOR_400);
+        $this->assertEquals("#009688", TealColorProviderInterface::TEAL_COLOR_500);
+        $this->assertEquals("#00897B", TealColorProviderInterface::TEAL_COLOR_600);
+        $this->assertEquals("#00796B", TealColorProviderInterface::TEAL_COLOR_700);
+        $this->assertEquals("#00695C", TealColorProviderInterface::TEAL_COLOR_800);
+        $this->assertEquals("#004D40", TealColorProviderInterface::TEAL_COLOR_900);
+        $this->assertEquals("#A7FFEB", TealColorProviderInterface::TEAL_COLOR_A100);
+        $this->assertEquals("#64FFDA", TealColorProviderInterface::TEAL_COLOR_A200);
+        $this->assertEquals("#1DE9B6", TealColorProviderInterface::TEAL_COLOR_A400);
+        $this->assertEquals("#00BFA5", TealColorProviderInterface::TEAL_COLOR_A700);
     }
 
 }

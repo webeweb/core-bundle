@@ -22,101 +22,108 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface LightBlueColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Color light blue "50"
+     * Light blue color.
      *
      * @var string
      */
-    const COLOR_LIGHT_BLUE_50 = "#E1F5FE";
+    const LIGHT_BLUE_COLOR = "light-blue";
 
     /**
-     * Color light blue "100"
+     * Light blue color "50"
      *
      * @var string
      */
-    const COLOR_LIGHT_BLUE_100 = "#B3E5FC";
+    const LIGHT_BLUE_COLOR_50 = "#E1F5FE";
 
     /**
-     * Color light blue "200"
+     * Light blue color "100"
      *
      * @var string
      */
-    const COLOR_LIGHT_BLUE_200 = "#81D4FA";
+    const LIGHT_BLUE_COLOR_100 = "#B3E5FC";
 
     /**
-     * Color light blue "300"
+     * Light blue color "200"
      *
      * @var string
      */
-    const COLOR_LIGHT_BLUE_300 = "#4FC3F7";
+    const LIGHT_BLUE_COLOR_200 = "#81D4FA";
 
     /**
-     * Color light blue "400"
+     * Light blue color "300"
      *
      * @var string
      */
-    const COLOR_LIGHT_BLUE_400 = "#29B6F6";
+    const LIGHT_BLUE_COLOR_300 = "#4FC3F7";
 
     /**
-     * Color light blue "500"
+     * Light blue color "400"
      *
      * @var string
      */
-    const COLOR_LIGHT_BLUE_500 = "#03A9F4";
+    const LIGHT_BLUE_COLOR_400 = "#29B6F6";
 
     /**
-     * Color light blue "600"
+     * Light blue color "500"
      *
      * @var string
      */
-    const COLOR_LIGHT_BLUE_600 = "#039BE5";
+    const LIGHT_BLUE_COLOR_500 = "#03A9F4";
 
     /**
-     * Color light blue "700"
+     * Light blue color "600"
      *
      * @var string
      */
-    const COLOR_LIGHT_BLUE_700 = "#0288D1";
+    const LIGHT_BLUE_COLOR_600 = "#039BE5";
 
     /**
-     * Color light blue "800"
+     * Light blue color "700"
      *
      * @var string
      */
-    const COLOR_LIGHT_BLUE_800 = "#0277BD";
+    const LIGHT_BLUE_COLOR_700 = "#0288D1";
 
     /**
-     * Color light blue "900"
+     * Light blue color "800"
      *
      * @var string
      */
-    const COLOR_LIGHT_BLUE_900 = "#01579B";
+    const LIGHT_BLUE_COLOR_800 = "#0277BD";
 
     /**
-     * Color light blue "A100"
+     * Light blue color "900"
      *
      * @var string
      */
-    const COLOR_LIGHT_BLUE_A100 = "#80D8FF";
+    const LIGHT_BLUE_COLOR_900 = "#01579B";
 
     /**
-     * Color light blue "A200"
+     * Light blue color "A100"
      *
      * @var string
      */
-    const COLOR_LIGHT_BLUE_A200 = "#40C4FF";
+    const LIGHT_BLUE_COLOR_A100 = "#80D8FF";
 
     /**
-     * Color light blue "A400"
+     * Light blue color "A200"
      *
      * @var string
      */
-    const COLOR_LIGHT_BLUE_A400 = "#00B0FF";
+    const LIGHT_BLUE_COLOR_A200 = "#40C4FF";
 
     /**
-     * Color light blue "A700"
+     * Light blue color "A400"
      *
      * @var string
      */
-    const COLOR_LIGHT_BLUE_A700 = "#0091EA";
+    const LIGHT_BLUE_COLOR_A400 = "#00B0FF";
+
+    /**
+     * Light blue color "A700"
+     *
+     * @var string
+     */
+    const LIGHT_BLUE_COLOR_A700 = "#0091EA";
 
 }

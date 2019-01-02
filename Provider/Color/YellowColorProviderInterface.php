@@ -22,101 +22,108 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface YellowColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Color yellow "50"
+     * Yellow color.
      *
      * @var string
      */
-    const COLOR_YELLOW_50 = "#FFFDE7";
+    const YELLOW_COLOR = "yellow";
 
     /**
-     * Color yellow "100"
+     * Yellow color "50"
      *
      * @var string
      */
-    const COLOR_YELLOW_100 = "#FFF9C4";
+    const YELLOW_COLOR_50 = "#FFFDE7";
 
     /**
-     * Color yellow "200"
+     * Yellow color "100"
      *
      * @var string
      */
-    const COLOR_YELLOW_200 = "#FFF59D";
+    const YELLOW_COLOR_100 = "#FFF9C4";
 
     /**
-     * Color yellow "300"
+     * Yellow color "200"
      *
      * @var string
      */
-    const COLOR_YELLOW_300 = "#FFF176";
+    const YELLOW_COLOR_200 = "#FFF59D";
 
     /**
-     * Color yellow "400"
+     * Yellow color "300"
      *
      * @var string
      */
-    const COLOR_YELLOW_400 = "#FFEE58";
+    const YELLOW_COLOR_300 = "#FFF176";
 
     /**
-     * Color yellow "500"
+     * Yellow color "400"
      *
      * @var string
      */
-    const COLOR_YELLOW_500 = "#FFEB3B";
+    const YELLOW_COLOR_400 = "#FFEE58";
 
     /**
-     * Color yellow "600"
+     * Yellow color "500"
      *
      * @var string
      */
-    const COLOR_YELLOW_600 = "#FDD835";
+    const YELLOW_COLOR_500 = "#FFEB3B";
 
     /**
-     * Color yellow "700"
+     * Yellow color "600"
      *
      * @var string
      */
-    const COLOR_YELLOW_700 = "#FBC02D";
+    const YELLOW_COLOR_600 = "#FDD835";
 
     /**
-     * Color yellow "800"
+     * Yellow color "700"
      *
      * @var string
      */
-    const COLOR_YELLOW_800 = "#F9A825";
+    const YELLOW_COLOR_700 = "#FBC02D";
 
     /**
-     * Color yellow "900"
+     * Yellow color "800"
      *
      * @var string
      */
-    const COLOR_YELLOW_900 = "#F57F17";
+    const YELLOW_COLOR_800 = "#F9A825";
 
     /**
-     * Color yellow "A100"
+     * Yellow color "900"
      *
      * @var string
      */
-    const COLOR_YELLOW_A100 = "#FFFF8D";
+    const YELLOW_COLOR_900 = "#F57F17";
 
     /**
-     * Color yellow "A200"
+     * Yellow color "A100"
      *
      * @var string
      */
-    const COLOR_YELLOW_A200 = "#FFFF00";
+    const YELLOW_COLOR_A100 = "#FFFF8D";
 
     /**
-     * Color yellow "A400"
+     * Yellow color "A200"
      *
      * @var string
      */
-    const COLOR_YELLOW_A400 = "#FFEA00";
+    const YELLOW_COLOR_A200 = "#FFFF00";
 
     /**
-     * Color yellow "A700"
+     * Yellow color "A400"
      *
      * @var string
      */
-    const COLOR_YELLOW_A700 = "#FFD600";
+    const YELLOW_COLOR_A400 = "#FFEA00";
+
+    /**
+     * Yellow color "A700"
+     *
+     * @var string
+     */
+    const YELLOW_COLOR_A700 = "#FFD600";
 
 }

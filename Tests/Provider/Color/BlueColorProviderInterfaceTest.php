@@ -29,20 +29,22 @@ class BlueColorProviderInterfaceTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("#E3F2FD", BlueColorProviderInterface::COLOR_BLUE_50);
-        $this->assertEquals("#BBDEFB", BlueColorProviderInterface::COLOR_BLUE_100);
-        $this->assertEquals("#90CAF9", BlueColorProviderInterface::COLOR_BLUE_200);
-        $this->assertEquals("#64B5F6", BlueColorProviderInterface::COLOR_BLUE_300);
-        $this->assertEquals("#42A5F5", BlueColorProviderInterface::COLOR_BLUE_400);
-        $this->assertEquals("#2196F3", BlueColorProviderInterface::COLOR_BLUE_500);
-        $this->assertEquals("#1E88E5", BlueColorProviderInterface::COLOR_BLUE_600);
-        $this->assertEquals("#1976D2", BlueColorProviderInterface::COLOR_BLUE_700);
-        $this->assertEquals("#1565C0", BlueColorProviderInterface::COLOR_BLUE_800);
-        $this->assertEquals("#0D47A1", BlueColorProviderInterface::COLOR_BLUE_900);
-        $this->assertEquals("#82B1FF", BlueColorProviderInterface::COLOR_BLUE_A100);
-        $this->assertEquals("#448AFF", BlueColorProviderInterface::COLOR_BLUE_A200);
-        $this->assertEquals("#2979FF", BlueColorProviderInterface::COLOR_BLUE_A400);
-        $this->assertEquals("#2962FF", BlueColorProviderInterface::COLOR_BLUE_A700);
+        $this->assertEquals("blue", BlueColorProviderInterface::BLUE_COLOR);
+
+        $this->assertEquals("#E3F2FD", BlueColorProviderInterface::BLUE_COLOR_50);
+        $this->assertEquals("#BBDEFB", BlueColorProviderInterface::BLUE_COLOR_100);
+        $this->assertEquals("#90CAF9", BlueColorProviderInterface::BLUE_COLOR_200);
+        $this->assertEquals("#64B5F6", BlueColorProviderInterface::BLUE_COLOR_300);
+        $this->assertEquals("#42A5F5", BlueColorProviderInterface::BLUE_COLOR_400);
+        $this->assertEquals("#2196F3", BlueColorProviderInterface::BLUE_COLOR_500);
+        $this->assertEquals("#1E88E5", BlueColorProviderInterface::BLUE_COLOR_600);
+        $this->assertEquals("#1976D2", BlueColorProviderInterface::BLUE_COLOR_700);
+        $this->assertEquals("#1565C0", BlueColorProviderInterface::BLUE_COLOR_800);
+        $this->assertEquals("#0D47A1", BlueColorProviderInterface::BLUE_COLOR_900);
+        $this->assertEquals("#82B1FF", BlueColorProviderInterface::BLUE_COLOR_A100);
+        $this->assertEquals("#448AFF", BlueColorProviderInterface::BLUE_COLOR_A200);
+        $this->assertEquals("#2979FF", BlueColorProviderInterface::BLUE_COLOR_A400);
+        $this->assertEquals("#2962FF", BlueColorProviderInterface::BLUE_COLOR_A700);
     }
 
 }

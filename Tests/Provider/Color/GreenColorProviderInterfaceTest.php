@@ -29,20 +29,22 @@ class GreenColorProviderInterfaceTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("#E8F5E9", GreenColorProviderInterface::COLOR_GREEN_50);
-        $this->assertEquals("#C8E6C9", GreenColorProviderInterface::COLOR_GREEN_100);
-        $this->assertEquals("#A5D6A7", GreenColorProviderInterface::COLOR_GREEN_200);
-        $this->assertEquals("#81C784", GreenColorProviderInterface::COLOR_GREEN_300);
-        $this->assertEquals("#66BB6A", GreenColorProviderInterface::COLOR_GREEN_400);
-        $this->assertEquals("#4CAF50", GreenColorProviderInterface::COLOR_GREEN_500);
-        $this->assertEquals("#43A047", GreenColorProviderInterface::COLOR_GREEN_600);
-        $this->assertEquals("#388E3C", GreenColorProviderInterface::COLOR_GREEN_700);
-        $this->assertEquals("#2E7D32", GreenColorProviderInterface::COLOR_GREEN_800);
-        $this->assertEquals("#1B5E20", GreenColorProviderInterface::COLOR_GREEN_900);
-        $this->assertEquals("#B9F6CA", GreenColorProviderInterface::COLOR_GREEN_A100);
-        $this->assertEquals("#69F0AE", GreenColorProviderInterface::COLOR_GREEN_A200);
-        $this->assertEquals("#00E676", GreenColorProviderInterface::COLOR_GREEN_A400);
-        $this->assertEquals("#00C853", GreenColorProviderInterface::COLOR_GREEN_A700);
+        $this->assertEquals("green", GreenColorProviderInterface::GREEN_COLOR);
+
+        $this->assertEquals("#E8F5E9", GreenColorProviderInterface::GREEN_COLOR_50);
+        $this->assertEquals("#C8E6C9", GreenColorProviderInterface::GREEN_COLOR_100);
+        $this->assertEquals("#A5D6A7", GreenColorProviderInterface::GREEN_COLOR_200);
+        $this->assertEquals("#81C784", GreenColorProviderInterface::GREEN_COLOR_300);
+        $this->assertEquals("#66BB6A", GreenColorProviderInterface::GREEN_COLOR_400);
+        $this->assertEquals("#4CAF50", GreenColorProviderInterface::GREEN_COLOR_500);
+        $this->assertEquals("#43A047", GreenColorProviderInterface::GREEN_COLOR_600);
+        $this->assertEquals("#388E3C", GreenColorProviderInterface::GREEN_COLOR_700);
+        $this->assertEquals("#2E7D32", GreenColorProviderInterface::GREEN_COLOR_800);
+        $this->assertEquals("#1B5E20", GreenColorProviderInterface::GREEN_COLOR_900);
+        $this->assertEquals("#B9F6CA", GreenColorProviderInterface::GREEN_COLOR_A100);
+        $this->assertEquals("#69F0AE", GreenColorProviderInterface::GREEN_COLOR_A200);
+        $this->assertEquals("#00E676", GreenColorProviderInterface::GREEN_COLOR_A400);
+        $this->assertEquals("#00C853", GreenColorProviderInterface::GREEN_COLOR_A700);
     }
 
 }

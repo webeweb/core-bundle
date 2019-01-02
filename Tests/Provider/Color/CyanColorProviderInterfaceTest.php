@@ -29,20 +29,22 @@ class CyanColorProviderInterfaceTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("#E0F7FA", CyanColorProviderInterface::COLOR_CYAN_50);
-        $this->assertEquals("#B2EBF2", CyanColorProviderInterface::COLOR_CYAN_100);
-        $this->assertEquals("#80DEEA", CyanColorProviderInterface::COLOR_CYAN_200);
-        $this->assertEquals("#4DD0E1", CyanColorProviderInterface::COLOR_CYAN_300);
-        $this->assertEquals("#26C6DA", CyanColorProviderInterface::COLOR_CYAN_400);
-        $this->assertEquals("#00BCD4", CyanColorProviderInterface::COLOR_CYAN_500);
-        $this->assertEquals("#00ACC1", CyanColorProviderInterface::COLOR_CYAN_600);
-        $this->assertEquals("#0097A7", CyanColorProviderInterface::COLOR_CYAN_700);
-        $this->assertEquals("#00838F", CyanColorProviderInterface::COLOR_CYAN_800);
-        $this->assertEquals("#006064", CyanColorProviderInterface::COLOR_CYAN_900);
-        $this->assertEquals("#84FFFF", CyanColorProviderInterface::COLOR_CYAN_A100);
-        $this->assertEquals("#18FFFF", CyanColorProviderInterface::COLOR_CYAN_A200);
-        $this->assertEquals("#00E5FF", CyanColorProviderInterface::COLOR_CYAN_A400);
-        $this->assertEquals("#00B8D4", CyanColorProviderInterface::COLOR_CYAN_A700);
+        $this->assertEquals("cyan", CyanColorProviderInterface::CYAN_COLOR);
+
+        $this->assertEquals("#E0F7FA", CyanColorProviderInterface::CYAN_COLOR_50);
+        $this->assertEquals("#B2EBF2", CyanColorProviderInterface::CYAN_COLOR_100);
+        $this->assertEquals("#80DEEA", CyanColorProviderInterface::CYAN_COLOR_200);
+        $this->assertEquals("#4DD0E1", CyanColorProviderInterface::CYAN_COLOR_300);
+        $this->assertEquals("#26C6DA", CyanColorProviderInterface::CYAN_COLOR_400);
+        $this->assertEquals("#00BCD4", CyanColorProviderInterface::CYAN_COLOR_500);
+        $this->assertEquals("#00ACC1", CyanColorProviderInterface::CYAN_COLOR_600);
+        $this->assertEquals("#0097A7", CyanColorProviderInterface::CYAN_COLOR_700);
+        $this->assertEquals("#00838F", CyanColorProviderInterface::CYAN_COLOR_800);
+        $this->assertEquals("#006064", CyanColorProviderInterface::CYAN_COLOR_900);
+        $this->assertEquals("#84FFFF", CyanColorProviderInterface::CYAN_COLOR_A100);
+        $this->assertEquals("#18FFFF", CyanColorProviderInterface::CYAN_COLOR_A200);
+        $this->assertEquals("#00E5FF", CyanColorProviderInterface::CYAN_COLOR_A400);
+        $this->assertEquals("#00B8D4", CyanColorProviderInterface::CYAN_COLOR_A700);
     }
 
 }

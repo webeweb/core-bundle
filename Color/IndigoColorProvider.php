@@ -40,18 +40,18 @@ class IndigoColorProvider implements IndigoColorProviderInterface, ColorInterfac
      */
     public function getColors() {
         return [
-            self::COLOR_50   => self::COLOR_INDIGO_50,
-            self::COLOR_100  => self::COLOR_INDIGO_100,
-            self::COLOR_200  => self::COLOR_INDIGO_200,
-            self::COLOR_300  => self::COLOR_INDIGO_300,
-            self::COLOR_400  => self::COLOR_INDIGO_400,
-            self::COLOR_500  => self::COLOR_INDIGO_500,
-            self::COLOR_600  => self::COLOR_INDIGO_600,
-            self::COLOR_700  => self::COLOR_INDIGO_700,
-            self::COLOR_A100 => self::COLOR_INDIGO_A100,
-            self::COLOR_A200 => self::COLOR_INDIGO_A200,
-            self::COLOR_A400 => self::COLOR_INDIGO_A400,
-            self::COLOR_A700 => self::COLOR_INDIGO_A700,
+            self::COLOR_50   => self::INDIGO_COLOR_50,
+            self::COLOR_100  => self::INDIGO_COLOR_100,
+            self::COLOR_200  => self::INDIGO_COLOR_200,
+            self::COLOR_300  => self::INDIGO_COLOR_300,
+            self::COLOR_400  => self::INDIGO_COLOR_400,
+            self::COLOR_500  => self::INDIGO_COLOR_500,
+            self::COLOR_600  => self::INDIGO_COLOR_600,
+            self::COLOR_700  => self::INDIGO_COLOR_700,
+            self::COLOR_A100 => self::INDIGO_COLOR_A100,
+            self::COLOR_A200 => self::INDIGO_COLOR_A200,
+            self::COLOR_A400 => self::INDIGO_COLOR_A400,
+            self::COLOR_A700 => self::INDIGO_COLOR_A700,
         ];
     }
 
@@ -59,7 +59,7 @@ class IndigoColorProvider implements IndigoColorProviderInterface, ColorInterfac
      *{@inheritdoc}
      */
     public function getName() {
-        return self::COLOR_INDIGO;
+        return self::INDIGO_COLOR;
     }
 
 }

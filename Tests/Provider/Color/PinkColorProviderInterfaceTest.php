@@ -29,20 +29,22 @@ class PinkColorProviderInterfaceTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("#FCE4EC", PinkColorProviderInterface::COLOR_PINK_50);
-        $this->assertEquals("#F8BBD0", PinkColorProviderInterface::COLOR_PINK_100);
-        $this->assertEquals("#F48FB1", PinkColorProviderInterface::COLOR_PINK_200);
-        $this->assertEquals("#F06292", PinkColorProviderInterface::COLOR_PINK_300);
-        $this->assertEquals("#EC407A", PinkColorProviderInterface::COLOR_PINK_400);
-        $this->assertEquals("#E91E63", PinkColorProviderInterface::COLOR_PINK_500);
-        $this->assertEquals("#D81B60", PinkColorProviderInterface::COLOR_PINK_600);
-        $this->assertEquals("#C2185B", PinkColorProviderInterface::COLOR_PINK_700);
-        $this->assertEquals("#AD1457", PinkColorProviderInterface::COLOR_PINK_800);
-        $this->assertEquals("#880E4F", PinkColorProviderInterface::COLOR_PINK_900);
-        $this->assertEquals("#FF80AB", PinkColorProviderInterface::COLOR_PINK_A100);
-        $this->assertEquals("#FF4081", PinkColorProviderInterface::COLOR_PINK_A200);
-        $this->assertEquals("#F50057", PinkColorProviderInterface::COLOR_PINK_A400);
-        $this->assertEquals("#C51162", PinkColorProviderInterface::COLOR_PINK_A700);
+        $this->assertEquals("pink", PinkColorProviderInterface::PINK_COLOR);
+
+        $this->assertEquals("#FCE4EC", PinkColorProviderInterface::PINK_COLOR_50);
+        $this->assertEquals("#F8BBD0", PinkColorProviderInterface::PINK_COLOR_100);
+        $this->assertEquals("#F48FB1", PinkColorProviderInterface::PINK_COLOR_200);
+        $this->assertEquals("#F06292", PinkColorProviderInterface::PINK_COLOR_300);
+        $this->assertEquals("#EC407A", PinkColorProviderInterface::PINK_COLOR_400);
+        $this->assertEquals("#E91E63", PinkColorProviderInterface::PINK_COLOR_500);
+        $this->assertEquals("#D81B60", PinkColorProviderInterface::PINK_COLOR_600);
+        $this->assertEquals("#C2185B", PinkColorProviderInterface::PINK_COLOR_700);
+        $this->assertEquals("#AD1457", PinkColorProviderInterface::PINK_COLOR_800);
+        $this->assertEquals("#880E4F", PinkColorProviderInterface::PINK_COLOR_900);
+        $this->assertEquals("#FF80AB", PinkColorProviderInterface::PINK_COLOR_A100);
+        $this->assertEquals("#FF4081", PinkColorProviderInterface::PINK_COLOR_A200);
+        $this->assertEquals("#F50057", PinkColorProviderInterface::PINK_COLOR_A400);
+        $this->assertEquals("#C51162", PinkColorProviderInterface::PINK_COLOR_A700);
     }
 
 }

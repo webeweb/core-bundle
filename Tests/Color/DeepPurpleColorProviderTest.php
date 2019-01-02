@@ -59,19 +59,19 @@ class DeepPurpleColorProviderTest extends AbstractTestCase {
         $this->assertArrayHasKey(ColorInterface::COLOR_A400, $res);
         $this->assertArrayHasKey(ColorInterface::COLOR_A700, $res);
 
-        $this->assertEquals(DeepPurpleColorProviderInterface::COLOR_DEEP_PURPLE_50, $res[ColorInterface::COLOR_50]);
-        $this->assertEquals(DeepPurpleColorProviderInterface::COLOR_DEEP_PURPLE_100, $res[ColorInterface::COLOR_100]);
-        $this->assertEquals(DeepPurpleColorProviderInterface::COLOR_DEEP_PURPLE_200, $res[ColorInterface::COLOR_200]);
-        $this->assertEquals(DeepPurpleColorProviderInterface::COLOR_DEEP_PURPLE_300, $res[ColorInterface::COLOR_300]);
-        $this->assertEquals(DeepPurpleColorProviderInterface::COLOR_DEEP_PURPLE_400, $res[ColorInterface::COLOR_400]);
-        $this->assertEquals(DeepPurpleColorProviderInterface::COLOR_DEEP_PURPLE_500, $res[ColorInterface::COLOR_500]);
-        $this->assertEquals(DeepPurpleColorProviderInterface::COLOR_DEEP_PURPLE_500, $res[ColorInterface::COLOR_500]);
-        $this->assertEquals(DeepPurpleColorProviderInterface::COLOR_DEEP_PURPLE_600, $res[ColorInterface::COLOR_600]);
-        $this->assertEquals(DeepPurpleColorProviderInterface::COLOR_DEEP_PURPLE_700, $res[ColorInterface::COLOR_700]);
-        $this->assertEquals(DeepPurpleColorProviderInterface::COLOR_DEEP_PURPLE_A100, $res[ColorInterface::COLOR_A100]);
-        $this->assertEquals(DeepPurpleColorProviderInterface::COLOR_DEEP_PURPLE_A200, $res[ColorInterface::COLOR_A200]);
-        $this->assertEquals(DeepPurpleColorProviderInterface::COLOR_DEEP_PURPLE_A400, $res[ColorInterface::COLOR_A400]);
-        $this->assertEquals(DeepPurpleColorProviderInterface::COLOR_DEEP_PURPLE_A700, $res[ColorInterface::COLOR_A700]);
+        $this->assertEquals(DeepPurpleColorProviderInterface::DEEP_PURPLE_COLOR_50, $res[ColorInterface::COLOR_50]);
+        $this->assertEquals(DeepPurpleColorProviderInterface::DEEP_PURPLE_COLOR_100, $res[ColorInterface::COLOR_100]);
+        $this->assertEquals(DeepPurpleColorProviderInterface::DEEP_PURPLE_COLOR_200, $res[ColorInterface::COLOR_200]);
+        $this->assertEquals(DeepPurpleColorProviderInterface::DEEP_PURPLE_COLOR_300, $res[ColorInterface::COLOR_300]);
+        $this->assertEquals(DeepPurpleColorProviderInterface::DEEP_PURPLE_COLOR_400, $res[ColorInterface::COLOR_400]);
+        $this->assertEquals(DeepPurpleColorProviderInterface::DEEP_PURPLE_COLOR_500, $res[ColorInterface::COLOR_500]);
+        $this->assertEquals(DeepPurpleColorProviderInterface::DEEP_PURPLE_COLOR_500, $res[ColorInterface::COLOR_500]);
+        $this->assertEquals(DeepPurpleColorProviderInterface::DEEP_PURPLE_COLOR_600, $res[ColorInterface::COLOR_600]);
+        $this->assertEquals(DeepPurpleColorProviderInterface::DEEP_PURPLE_COLOR_700, $res[ColorInterface::COLOR_700]);
+        $this->assertEquals(DeepPurpleColorProviderInterface::DEEP_PURPLE_COLOR_A100, $res[ColorInterface::COLOR_A100]);
+        $this->assertEquals(DeepPurpleColorProviderInterface::DEEP_PURPLE_COLOR_A200, $res[ColorInterface::COLOR_A200]);
+        $this->assertEquals(DeepPurpleColorProviderInterface::DEEP_PURPLE_COLOR_A400, $res[ColorInterface::COLOR_A400]);
+        $this->assertEquals(DeepPurpleColorProviderInterface::DEEP_PURPLE_COLOR_A700, $res[ColorInterface::COLOR_A700]);
     }
 
     /**
@@ -83,7 +83,7 @@ class DeepPurpleColorProviderTest extends AbstractTestCase {
 
         $obj = new DeepPurpleColorProvider();
 
-        $res = ColorInterface::COLOR_DEEP_PURPLE;
+        $res = DeepPurpleColorProviderInterface::DEEP_PURPLE_COLOR;
         $this->assertEquals($res, $obj->getName());
     }
 

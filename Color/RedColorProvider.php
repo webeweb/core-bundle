@@ -40,18 +40,18 @@ class RedColorProvider implements RedColorProviderInterface, ColorInterface {
      */
     public function getColors() {
         return [
-            self::COLOR_50   => self::COLOR_RED_50,
-            self::COLOR_100  => self::COLOR_RED_100,
-            self::COLOR_200  => self::COLOR_RED_200,
-            self::COLOR_300  => self::COLOR_RED_300,
-            self::COLOR_400  => self::COLOR_RED_400,
-            self::COLOR_500  => self::COLOR_RED_500,
-            self::COLOR_600  => self::COLOR_RED_600,
-            self::COLOR_700  => self::COLOR_RED_700,
-            self::COLOR_A100 => self::COLOR_RED_A100,
-            self::COLOR_A200 => self::COLOR_RED_A200,
-            self::COLOR_A400 => self::COLOR_RED_A400,
-            self::COLOR_A700 => self::COLOR_RED_A700,
+            self::COLOR_50   => self::RED_COLOR_50,
+            self::COLOR_100  => self::RED_COLOR_100,
+            self::COLOR_200  => self::RED_COLOR_200,
+            self::COLOR_300  => self::RED_COLOR_300,
+            self::COLOR_400  => self::RED_COLOR_400,
+            self::COLOR_500  => self::RED_COLOR_500,
+            self::COLOR_600  => self::RED_COLOR_600,
+            self::COLOR_700  => self::RED_COLOR_700,
+            self::COLOR_A100 => self::RED_COLOR_A100,
+            self::COLOR_A200 => self::RED_COLOR_A200,
+            self::COLOR_A400 => self::RED_COLOR_A400,
+            self::COLOR_A700 => self::RED_COLOR_A700,
         ];
     }
 
@@ -59,7 +59,7 @@ class RedColorProvider implements RedColorProviderInterface, ColorInterface {
      *{@inheritdoc}
      */
     public function getName() {
-        return self::COLOR_RED;
+        return self::RED_COLOR;
     }
 
 }

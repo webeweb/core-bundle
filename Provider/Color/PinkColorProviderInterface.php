@@ -22,101 +22,108 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface PinkColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Color pink "50"
+     * Pink color.
      *
      * @var string
      */
-    const COLOR_PINK_50 = "#FCE4EC";
+    const PINK_COLOR = "pink";
 
     /**
-     * Color pink "100"
+     * Pink color "50"
      *
      * @var string
      */
-    const COLOR_PINK_100 = "#F8BBD0";
+    const PINK_COLOR_50 = "#FCE4EC";
 
     /**
-     * Color pink "200"
+     * Pink color "100"
      *
      * @var string
      */
-    const COLOR_PINK_200 = "#F48FB1";
+    const PINK_COLOR_100 = "#F8BBD0";
 
     /**
-     * Color pink "300"
+     * Pink color "200"
      *
      * @var string
      */
-    const COLOR_PINK_300 = "#F06292";
+    const PINK_COLOR_200 = "#F48FB1";
 
     /**
-     * Color pink "400"
+     * Pink color "300"
      *
      * @var string
      */
-    const COLOR_PINK_400 = "#EC407A";
+    const PINK_COLOR_300 = "#F06292";
 
     /**
-     * Color pink "500"
+     * Pink color "400"
      *
      * @var string
      */
-    const COLOR_PINK_500 = "#E91E63";
+    const PINK_COLOR_400 = "#EC407A";
 
     /**
-     * Color pink "600"
+     * Pink color "500"
      *
      * @var string
      */
-    const COLOR_PINK_600 = "#D81B60";
+    const PINK_COLOR_500 = "#E91E63";
 
     /**
-     * Color pink "700"
+     * Pink color "600"
      *
      * @var string
      */
-    const COLOR_PINK_700 = "#C2185B";
+    const PINK_COLOR_600 = "#D81B60";
 
     /**
-     * Color pink "800"
+     * Pink color "700"
      *
      * @var string
      */
-    const COLOR_PINK_800 = "#AD1457";
+    const PINK_COLOR_700 = "#C2185B";
 
     /**
-     * Color pink "900"
+     * Pink color "800"
      *
      * @var string
      */
-    const COLOR_PINK_900 = "#880E4F";
+    const PINK_COLOR_800 = "#AD1457";
 
     /**
-     * Color pink "A100"
+     * Pink color "900"
      *
      * @var string
      */
-    const COLOR_PINK_A100 = "#FF80AB";
+    const PINK_COLOR_900 = "#880E4F";
 
     /**
-     * Color pink "A200"
+     * Pink color "A100"
      *
      * @var string
      */
-    const COLOR_PINK_A200 = "#FF4081";
+    const PINK_COLOR_A100 = "#FF80AB";
 
     /**
-     * Color pink "A400"
+     * Pink color "A200"
      *
      * @var string
      */
-    const COLOR_PINK_A400 = "#F50057";
+    const PINK_COLOR_A200 = "#FF4081";
 
     /**
-     * Color pink "A700"
+     * Pink color "A400"
      *
      * @var string
      */
-    const COLOR_PINK_A700 = "#C51162";
+    const PINK_COLOR_A400 = "#F50057";
+
+    /**
+     * Pink color "A700"
+     *
+     * @var string
+     */
+    const PINK_COLOR_A700 = "#C51162";
 
 }

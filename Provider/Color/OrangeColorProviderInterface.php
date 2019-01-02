@@ -22,101 +22,108 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface OrangeColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Color orange "50"
+     * Orange color.
      *
      * @var string
      */
-    const COLOR_ORANGE_50 = "#FFF3E0";
+    const ORANGE_COLOR = "orange";
 
     /**
-     * Color orange "100"
+     * Orange color "50"
      *
      * @var string
      */
-    const COLOR_ORANGE_100 = "#FFE0B2";
+    const ORANGE_COLOR_50 = "#FFF3E0";
 
     /**
-     * Color orange "200"
+     * Orange color "100"
      *
      * @var string
      */
-    const COLOR_ORANGE_200 = "#FFCC80";
+    const ORANGE_COLOR_100 = "#FFE0B2";
 
     /**
-     * Color orange "300"
+     * Orange color "200"
      *
      * @var string
      */
-    const COLOR_ORANGE_300 = "#FFB74D";
+    const ORANGE_COLOR_200 = "#FFCC80";
 
     /**
-     * Color orange "400"
+     * Orange color "300"
      *
      * @var string
      */
-    const COLOR_ORANGE_400 = "#FFA726";
+    const ORANGE_COLOR_300 = "#FFB74D";
 
     /**
-     * Color orange "500"
+     * Orange color "400"
      *
      * @var string
      */
-    const COLOR_ORANGE_500 = "#FF9800";
+    const ORANGE_COLOR_400 = "#FFA726";
 
     /**
-     * Color orange "600"
+     * Orange color "500"
      *
      * @var string
      */
-    const COLOR_ORANGE_600 = "#FB8C00";
+    const ORANGE_COLOR_500 = "#FF9800";
 
     /**
-     * Color orange "700"
+     * Orange color "600"
      *
      * @var string
      */
-    const COLOR_ORANGE_700 = "#F57C00";
+    const ORANGE_COLOR_600 = "#FB8C00";
 
     /**
-     * Color orange "800"
+     * Orange color "700"
      *
      * @var string
      */
-    const COLOR_ORANGE_800 = "#EF6C00";
+    const ORANGE_COLOR_700 = "#F57C00";
 
     /**
-     * Color orange "900"
+     * Orange color "800"
      *
      * @var string
      */
-    const COLOR_ORANGE_900 = "#E65100";
+    const ORANGE_COLOR_800 = "#EF6C00";
 
     /**
-     * Color orange "A100"
+     * Orange color "900"
      *
      * @var string
      */
-    const COLOR_ORANGE_A100 = "#FFD180";
+    const ORANGE_COLOR_900 = "#E65100";
 
     /**
-     * Color orange "A200"
+     * Orange color "A100"
      *
      * @var string
      */
-    const COLOR_ORANGE_A200 = "#FFAB40";
+    const ORANGE_COLOR_A100 = "#FFD180";
 
     /**
-     * Color orange "A400"
+     * Orange color "A200"
      *
      * @var string
      */
-    const COLOR_ORANGE_A400 = "#FF9100";
+    const ORANGE_COLOR_A200 = "#FFAB40";
 
     /**
-     * Color orange "A700"
+     * Orange color "A400"
      *
      * @var string
      */
-    const COLOR_ORANGE_A700 = "#FF6D00";
+    const ORANGE_COLOR_A400 = "#FF9100";
+
+    /**
+     * Orange color "A700"
+     *
+     * @var string
+     */
+    const ORANGE_COLOR_A700 = "#FF6D00";
 
 }

@@ -29,20 +29,22 @@ class IndigoColorProviderInterfaceTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("#E8EAF6", IndigoColorProviderInterface::COLOR_INDIGO_50);
-        $this->assertEquals("#C5CAE9", IndigoColorProviderInterface::COLOR_INDIGO_100);
-        $this->assertEquals("#9FA8DA", IndigoColorProviderInterface::COLOR_INDIGO_200);
-        $this->assertEquals("#7986CB", IndigoColorProviderInterface::COLOR_INDIGO_300);
-        $this->assertEquals("#5C6BC0", IndigoColorProviderInterface::COLOR_INDIGO_400);
-        $this->assertEquals("#3F51B5", IndigoColorProviderInterface::COLOR_INDIGO_500);
-        $this->assertEquals("#3949AB", IndigoColorProviderInterface::COLOR_INDIGO_600);
-        $this->assertEquals("#303F9F", IndigoColorProviderInterface::COLOR_INDIGO_700);
-        $this->assertEquals("#283593", IndigoColorProviderInterface::COLOR_INDIGO_800);
-        $this->assertEquals("#1A237E", IndigoColorProviderInterface::COLOR_INDIGO_900);
-        $this->assertEquals("#8C9EFF", IndigoColorProviderInterface::COLOR_INDIGO_A100);
-        $this->assertEquals("#536DFE", IndigoColorProviderInterface::COLOR_INDIGO_A200);
-        $this->assertEquals("#3D5AFE", IndigoColorProviderInterface::COLOR_INDIGO_A400);
-        $this->assertEquals("#304FFE", IndigoColorProviderInterface::COLOR_INDIGO_A700);
+        $this->assertEquals("indigo", IndigoColorProviderInterface::INDIGO_COLOR);
+
+        $this->assertEquals("#E8EAF6", IndigoColorProviderInterface::INDIGO_COLOR_50);
+        $this->assertEquals("#C5CAE9", IndigoColorProviderInterface::INDIGO_COLOR_100);
+        $this->assertEquals("#9FA8DA", IndigoColorProviderInterface::INDIGO_COLOR_200);
+        $this->assertEquals("#7986CB", IndigoColorProviderInterface::INDIGO_COLOR_300);
+        $this->assertEquals("#5C6BC0", IndigoColorProviderInterface::INDIGO_COLOR_400);
+        $this->assertEquals("#3F51B5", IndigoColorProviderInterface::INDIGO_COLOR_500);
+        $this->assertEquals("#3949AB", IndigoColorProviderInterface::INDIGO_COLOR_600);
+        $this->assertEquals("#303F9F", IndigoColorProviderInterface::INDIGO_COLOR_700);
+        $this->assertEquals("#283593", IndigoColorProviderInterface::INDIGO_COLOR_800);
+        $this->assertEquals("#1A237E", IndigoColorProviderInterface::INDIGO_COLOR_900);
+        $this->assertEquals("#8C9EFF", IndigoColorProviderInterface::INDIGO_COLOR_A100);
+        $this->assertEquals("#536DFE", IndigoColorProviderInterface::INDIGO_COLOR_A200);
+        $this->assertEquals("#3D5AFE", IndigoColorProviderInterface::INDIGO_COLOR_A400);
+        $this->assertEquals("#304FFE", IndigoColorProviderInterface::INDIGO_COLOR_A700);
     }
 
 }

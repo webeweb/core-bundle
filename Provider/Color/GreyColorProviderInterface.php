@@ -22,73 +22,80 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface GreyColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Color grey "50"
+     * Grey color.
      *
      * @var string
      */
-    const COLOR_GREY_50 = "#FAFAFA";
+    const GREY_COLOR = "grey";
 
     /**
-     * Color grey "100"
+     * Grey color "50"
      *
      * @var string
      */
-    const COLOR_GREY_100 = "#F5F5F5";
+    const GREY_COLOR_50 = "#FAFAFA";
 
     /**
-     * Color grey "200"
+     * Grey color "100"
      *
      * @var string
      */
-    const COLOR_GREY_200 = "#EEEEEE";
+    const GREY_COLOR_100 = "#F5F5F5";
 
     /**
-     * Color grey "300"
+     * Grey color "200"
      *
      * @var string
      */
-    const COLOR_GREY_300 = "#E0E0E0";
+    const GREY_COLOR_200 = "#EEEEEE";
 
     /**
-     * Color grey "400"
+     * Grey color "300"
      *
      * @var string
      */
-    const COLOR_GREY_400 = "#BDBDBD";
+    const GREY_COLOR_300 = "#E0E0E0";
 
     /**
-     * Color grey "500"
+     * Grey color "400"
      *
      * @var string
      */
-    const COLOR_GREY_500 = "#9E9E9E";
+    const GREY_COLOR_400 = "#BDBDBD";
 
     /**
-     * Color grey "600"
+     * Grey color "500"
      *
      * @var string
      */
-    const COLOR_GREY_600 = "#757575";
+    const GREY_COLOR_500 = "#9E9E9E";
 
     /**
-     * Color grey "700"
+     * Grey color "600"
      *
      * @var string
      */
-    const COLOR_GREY_700 = "#616161";
+    const GREY_COLOR_600 = "#757575";
 
     /**
-     * Color grey "800"
+     * Grey color "700"
      *
      * @var string
      */
-    const COLOR_GREY_800 = "#424242";
+    const GREY_COLOR_700 = "#616161";
 
     /**
-     * Color grey "900"
+     * Grey color "800"
      *
      * @var string
      */
-    const COLOR_GREY_900 = "#212121";
+    const GREY_COLOR_800 = "#424242";
+
+    /**
+     * Grey color "900"
+     *
+     * @var string
+     */
+    const GREY_COLOR_900 = "#212121";
 
 }

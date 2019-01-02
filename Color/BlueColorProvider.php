@@ -40,18 +40,18 @@ class BlueColorProvider implements BlueColorProviderInterface, ColorInterface {
      */
     public function getColors() {
         return [
-            self::COLOR_50   => self::COLOR_BLUE_50,
-            self::COLOR_100  => self::COLOR_BLUE_100,
-            self::COLOR_200  => self::COLOR_BLUE_200,
-            self::COLOR_300  => self::COLOR_BLUE_300,
-            self::COLOR_400  => self::COLOR_BLUE_400,
-            self::COLOR_500  => self::COLOR_BLUE_500,
-            self::COLOR_600  => self::COLOR_BLUE_600,
-            self::COLOR_700  => self::COLOR_BLUE_700,
-            self::COLOR_A100 => self::COLOR_BLUE_A100,
-            self::COLOR_A200 => self::COLOR_BLUE_A200,
-            self::COLOR_A400 => self::COLOR_BLUE_A400,
-            self::COLOR_A700 => self::COLOR_BLUE_A700,
+            self::COLOR_50   => self::BLUE_COLOR_50,
+            self::COLOR_100  => self::BLUE_COLOR_100,
+            self::COLOR_200  => self::BLUE_COLOR_200,
+            self::COLOR_300  => self::BLUE_COLOR_300,
+            self::COLOR_400  => self::BLUE_COLOR_400,
+            self::COLOR_500  => self::BLUE_COLOR_500,
+            self::COLOR_600  => self::BLUE_COLOR_600,
+            self::COLOR_700  => self::BLUE_COLOR_700,
+            self::COLOR_A100 => self::BLUE_COLOR_A100,
+            self::COLOR_A200 => self::BLUE_COLOR_A200,
+            self::COLOR_A400 => self::BLUE_COLOR_A400,
+            self::COLOR_A700 => self::BLUE_COLOR_A700,
         ];
     }
 
@@ -59,7 +59,7 @@ class BlueColorProvider implements BlueColorProviderInterface, ColorInterface {
      *{@inheritdoc}
      */
     public function getName() {
-        return self::COLOR_BLUE;
+        return self::BLUE_COLOR;
     }
 
 }

@@ -40,18 +40,18 @@ class DeepPurpleColorProvider implements DeepPurpleColorProviderInterface, Color
      */
     public function getColors() {
         return [
-            self::COLOR_50   => self::COLOR_DEEP_PURPLE_50,
-            self::COLOR_100  => self::COLOR_DEEP_PURPLE_100,
-            self::COLOR_200  => self::COLOR_DEEP_PURPLE_200,
-            self::COLOR_300  => self::COLOR_DEEP_PURPLE_300,
-            self::COLOR_400  => self::COLOR_DEEP_PURPLE_400,
-            self::COLOR_500  => self::COLOR_DEEP_PURPLE_500,
-            self::COLOR_600  => self::COLOR_DEEP_PURPLE_600,
-            self::COLOR_700  => self::COLOR_DEEP_PURPLE_700,
-            self::COLOR_A100 => self::COLOR_DEEP_PURPLE_A100,
-            self::COLOR_A200 => self::COLOR_DEEP_PURPLE_A200,
-            self::COLOR_A400 => self::COLOR_DEEP_PURPLE_A400,
-            self::COLOR_A700 => self::COLOR_DEEP_PURPLE_A700,
+            self::COLOR_50   => self::DEEP_PURPLE_COLOR_50,
+            self::COLOR_100  => self::DEEP_PURPLE_COLOR_100,
+            self::COLOR_200  => self::DEEP_PURPLE_COLOR_200,
+            self::COLOR_300  => self::DEEP_PURPLE_COLOR_300,
+            self::COLOR_400  => self::DEEP_PURPLE_COLOR_400,
+            self::COLOR_500  => self::DEEP_PURPLE_COLOR_500,
+            self::COLOR_600  => self::DEEP_PURPLE_COLOR_600,
+            self::COLOR_700  => self::DEEP_PURPLE_COLOR_700,
+            self::COLOR_A100 => self::DEEP_PURPLE_COLOR_A100,
+            self::COLOR_A200 => self::DEEP_PURPLE_COLOR_A200,
+            self::COLOR_A400 => self::DEEP_PURPLE_COLOR_A400,
+            self::COLOR_A700 => self::DEEP_PURPLE_COLOR_A700,
         ];
     }
 
@@ -59,7 +59,7 @@ class DeepPurpleColorProvider implements DeepPurpleColorProviderInterface, Color
      *{@inheritdoc}
      */
     public function getName() {
-        return self::COLOR_DEEP_PURPLE;
+        return self::DEEP_PURPLE_COLOR;
     }
 
 }

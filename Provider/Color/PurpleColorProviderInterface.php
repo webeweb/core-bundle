@@ -22,101 +22,108 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface PurpleColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Color purple "50"
+     * Purple color.
      *
      * @var string
      */
-    const COLOR_PURPLE_50 = "#F3E5F5";
+    const PURPLE_COLOR = "purple";
 
     /**
-     * Color purple "100"
+     * Purple color "50"
      *
      * @var string
      */
-    const COLOR_PURPLE_100 = "#E1BEE7";
+    const PURPLE_COLOR_50 = "#F3E5F5";
 
     /**
-     * Color purple "200"
+     * Purple color "100"
      *
      * @var string
      */
-    const COLOR_PURPLE_200 = "#CE93D8";
+    const PURPLE_COLOR_100 = "#E1BEE7";
 
     /**
-     * Color purple "300"
+     * Purple color "200"
      *
      * @var string
      */
-    const COLOR_PURPLE_300 = "#BA68C8";
+    const PURPLE_COLOR_200 = "#CE93D8";
 
     /**
-     * Color purple "400"
+     * Purple color "300"
      *
      * @var string
      */
-    const COLOR_PURPLE_400 = "#AB47BC";
+    const PURPLE_COLOR_300 = "#BA68C8";
 
     /**
-     * Color purple "500"
+     * Purple color "400"
      *
      * @var string
      */
-    const COLOR_PURPLE_500 = "#9C27B0";
+    const PURPLE_COLOR_400 = "#AB47BC";
 
     /**
-     * Color purple "600"
+     * Purple color "500"
      *
      * @var string
      */
-    const COLOR_PURPLE_600 = "#8E24AA";
+    const PURPLE_COLOR_500 = "#9C27B0";
 
     /**
-     * Color purple "700"
+     * Purple color "600"
      *
      * @var string
      */
-    const COLOR_PURPLE_700 = "#7B1FA2";
+    const PURPLE_COLOR_600 = "#8E24AA";
 
     /**
-     * Color purple "800"
+     * Purple color "700"
      *
      * @var string
      */
-    const COLOR_PURPLE_800 = "#6A1B9A";
+    const PURPLE_COLOR_700 = "#7B1FA2";
 
     /**
-     * Color purple "900"
+     * Purple color "800"
      *
      * @var string
      */
-    const COLOR_PURPLE_900 = "#4A148C";
+    const PURPLE_COLOR_800 = "#6A1B9A";
 
     /**
-     * Color purple "A100"
+     * Purple color "900"
      *
      * @var string
      */
-    const COLOR_PURPLE_A100 = "#EA80FC";
+    const PURPLE_COLOR_900 = "#4A148C";
 
     /**
-     * Color purple "A200"
+     * Purple color "A100"
      *
      * @var string
      */
-    const COLOR_PURPLE_A200 = "#E040FB";
+    const PURPLE_COLOR_A100 = "#EA80FC";
 
     /**
-     * Color purple "A400"
+     * Purple color "A200"
      *
      * @var string
      */
-    const COLOR_PURPLE_A400 = "#D500F9";
+    const PURPLE_COLOR_A200 = "#E040FB";
 
     /**
-     * Color purple "A700"
+     * Purple color "A400"
      *
      * @var string
      */
-    const COLOR_PURPLE_A700 = "#AA00FF";
+    const PURPLE_COLOR_A400 = "#D500F9";
+
+    /**
+     * Purple color "A700"
+     *
+     * @var string
+     */
+    const PURPLE_COLOR_A700 = "#AA00FF";
 
 }

@@ -22,73 +22,80 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface BrownColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Color brown "50"
+     * Brown color.
      *
      * @var string
      */
-    const COLOR_BROWN_50 = "#EFEBE9";
+    const BROWN_COLOR = "brown";
 
     /**
-     * Color brown "100"
+     * Brown color "50"
      *
      * @var string
      */
-    const COLOR_BROWN_100 = "#D7CCC8";
+    const BROWN_COLOR_50 = "#EFEBE9";
 
     /**
-     * Color brown "200"
+     * Brown color "100"
      *
      * @var string
      */
-    const COLOR_BROWN_200 = "#BCAAA4";
+    const BROWN_COLOR_100 = "#D7CCC8";
 
     /**
-     * Color brown "300"
+     * Brown color "200"
      *
      * @var string
      */
-    const COLOR_BROWN_300 = "#A1887F";
+    const BROWN_COLOR_200 = "#BCAAA4";
 
     /**
-     * Color brown "400"
+     * Brown color "300"
      *
      * @var string
      */
-    const COLOR_BROWN_400 = "#8D6E63";
+    const BROWN_COLOR_300 = "#A1887F";
 
     /**
-     * Color brown "500"
+     * Brown color "400"
      *
      * @var string
      */
-    const COLOR_BROWN_500 = "#795548";
+    const BROWN_COLOR_400 = "#8D6E63";
 
     /**
-     * Color brown "600"
+     * Brown color "500"
      *
      * @var string
      */
-    const COLOR_BROWN_600 = "#6D4C41";
+    const BROWN_COLOR_500 = "#795548";
 
     /**
-     * Color brown "700"
+     * Brown color "600"
      *
      * @var string
      */
-    const COLOR_BROWN_700 = "#5D4037";
+    const BROWN_COLOR_600 = "#6D4C41";
 
     /**
-     * Color brown "800"
+     * Brown color "700"
      *
      * @var string
      */
-    const COLOR_BROWN_800 = "#4E342E";
+    const BROWN_COLOR_700 = "#5D4037";
 
     /**
-     * Color brown "900"
+     * Brown color "800"
      *
      * @var string
      */
-    const COLOR_BROWN_900 = "#3E2723";
+    const BROWN_COLOR_800 = "#4E342E";
+
+    /**
+     * Brown color "900"
+     *
+     * @var string
+     */
+    const BROWN_COLOR_900 = "#3E2723";
 
 }
