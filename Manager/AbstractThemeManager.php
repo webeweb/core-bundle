@@ -15,6 +15,7 @@ use Twig_Environment;
 use WBW\Bundle\CoreBundle\Provider\ThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Service\TwigEnvironmentTrait;
 use WBW\Library\Core\Argument\ObjectHelper;
+use ReflectionException;
 
 /**
  * Abstract theme manager.
@@ -73,6 +74,7 @@ abstract class AbstractThemeManager extends AbstractManager {
      *
      * @param string $name The name.
      * @return ThemeProviderInterface Returns the theme provider in case of success, null otherwise.
+     * @throws ReflectionException Throws a reflection exception if an error occurs.
      */
     protected function getProvider($name) {
         $k = ObjectHelper::getShortName($name);
@@ -107,6 +109,7 @@ abstract class AbstractThemeManager extends AbstractManager {
      * @param mixed $name The name.
      * @param ThemeProviderInterface $provider The provider.
      * @return ManagerInterface Returns this manager.
+     * @throws ReflectionException Throws a reflection exception if an error occurs.
      */
     protected function setProvider($name, ThemeProviderInterface $provider) {
         $k = ObjectHelper::getShortName($name);
