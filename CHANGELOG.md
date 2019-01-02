@@ -47,6 +47,7 @@ CHANGELOG
 - Add Lime color interface
 - Add Lime color provider
 - Add Lime color provider trait
+- Add methods contains() and indexOf() into abstract manager
 - Add Navigation theme provider trait
 - Add Notifications drop down theme provider trait
 - Add Orange color interface
