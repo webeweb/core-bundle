@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### master
+### 1.6.0 (2019-01-xx)
 
 - Add Amber color interface
 - Add Amber color provider
@@ -18,6 +18,7 @@ CHANGELOG
 - Add Brown color provider
 - Add Brown color provider trait
 - Add Color interface
+- Add Color manager
 - Add Cyan color interface
 - Add Cyan color provider
 - Add Cyan color provider trait
