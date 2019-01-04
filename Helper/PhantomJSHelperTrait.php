@@ -20,7 +20,7 @@ namespace WBW\Bundle\CoreBundle\Helper;
 trait PhantomJSHelperTrait {
 
     /**
-     * PathomJS helper.
+     * PhantomJS helper.
      *
      * @var PhantomJSHelper
      */
