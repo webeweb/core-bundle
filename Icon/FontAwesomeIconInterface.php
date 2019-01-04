@@ -181,11 +181,11 @@ interface FontAwesomeIconInterface extends IconInterface {
     public function getBordered();
 
     /**
-     * Get the fiwed width.
+     * Get the fixed width.
      *
      * @return bool Returns the fixed width.
      */
-    public function getFixedWith();
+    public function getFixedWidth();
 
     /**
      * Get the font.
