@@ -3,15 +3,15 @@
 /*
  * This file is part of the core-bundle package.
  *
- * (c) 2018 WEBEWEB
+ * (c) 2019 WEBEWEB
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Factory;
+namespace WBW\Bundle\CoreBundle\Tests\Notification;
 
-use WBW\Bundle\CoreBundle\Factory\NotificationFactory;
+use WBW\Bundle\CoreBundle\Notification\NotificationFactory;
 use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
  * Notifcation factory test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Factory
+ * @package WBW\Bundle\CoreBundle\Tests\Notification
  */
 class NotifcationFactoryTest extends AbstractTestCase {
 
