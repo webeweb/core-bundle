@@ -48,8 +48,21 @@ class FontAwesomeIconTest extends AbstractTestCase {
 
         $obj = new FontAwesomeIcon();
 
+        $obj->setAnimation(FontAwesomeIcon::FONT_AWESOME_ANIMATION_PULSE);
+        $this->assertEquals(FontAwesomeIcon::FONT_AWESOME_ANIMATION_PULSE, $obj->getAnimation());
+    }
+
+    /**
+     * Tests the setAnimation() method.
+     *
+     * @return void
+     */
+    public function testSetAnimationWithBadArgument() {
+
+        $obj = new FontAwesomeIcon();
+
         $obj->setAnimation("animation");
-        $this->assertEquals("animation", $obj->getAnimation());
+        $this->assertNotEquals("animation", $obj->getAnimation());
     }
 
     /**
@@ -87,8 +100,21 @@ class FontAwesomeIconTest extends AbstractTestCase {
 
         $obj = new FontAwesomeIcon();
 
+        $obj->setFont(FontAwesomeIcon::FONT_AWESOME_FONT);
+        $this->assertEquals(FontAwesomeIcon::FONT_AWESOME_FONT, $obj->getFont());
+    }
+
+    /**
+     * Tests the setFont() method.
+     *
+     * @return void
+     */
+    public function testSetFontWithBadArgument() {
+
+        $obj = new FontAwesomeIcon();
+
         $obj->setFont("font");
-        $this->assertEquals("font", $obj->getFont());
+        $this->assertNotEquals("font", $obj->getFont());
     }
 
     /**
@@ -100,8 +126,21 @@ class FontAwesomeIconTest extends AbstractTestCase {
 
         $obj = new FontAwesomeIcon();
 
+        $obj->setPull(FontAwesomeIcon::FONT_AWESOME_PULL_LEFT);
+        $this->assertEquals(FontAwesomeIcon::FONT_AWESOME_PULL_LEFT, $obj->getPull());
+    }
+
+    /**
+     * Tests the setPull() method.
+     *
+     * @return void
+     */
+    public function testSetPullWithBadArgument() {
+
+        $obj = new FontAwesomeIcon();
+
         $obj->setPull("pull");
-        $this->assertEquals("pull", $obj->getPull());
+        $this->assertNotEquals("pull", $obj->getPull());
     }
 
     /**
@@ -113,8 +152,21 @@ class FontAwesomeIconTest extends AbstractTestCase {
 
         $obj = new FontAwesomeIcon();
 
+        $obj->setSize(FontAwesomeIcon::FONT_AWESOME_SIZE_LG);
+        $this->assertEquals(FontAwesomeIcon::FONT_AWESOME_SIZE_LG, $obj->getSize());
+    }
+
+    /**
+     * Tests the setSize() method.
+     *
+     * @return void
+     */
+    public function testSetSizeWithBadArgument() {
+
+        $obj = new FontAwesomeIcon();
+
         $obj->setSize("size");
-        $this->assertEquals("size", $obj->getSize());
+        $this->assertNotEquals("size", $obj->getSize());
     }
 
 }

@@ -117,7 +117,9 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
      * {@inheritdoc}
      */
     public function setAnimation($animation) {
-        $this->animation = $animation;
+        if (true === in_array($animation, FontAwesomeIconEnumerator::enumAnimations())) {
+            $this->animation = $animation;
+        }
         return $this;
     }
 
@@ -141,7 +143,9 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
      * {@inheritdoc}
      */
     public function setFont($font) {
-        $this->font = $font;
+        if (true === in_array($font, FontAwesomeIconEnumerator::enumFonts())) {
+            $this->font = $font;
+        }
         return $this;
     }
 
@@ -149,7 +153,9 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
      * {@inheritdoc}
      */
     public function setPull($pull) {
-        $this->pull = $pull;
+        if (true === in_array($pull, FontAwesomeIconEnumerator::enumPulls())) {
+            $this->pull = $pull;
+        }
         return $this;
     }
 
@@ -157,7 +163,9 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
      * {@inheritdoc}
      */
     public function setSize($size) {
-        $this->size = $size;
+        if (true === in_array($size, FontAwesomeIconEnumerator::enumSizes())) {
+            $this->size = $size;
+        }
         return $this;
     }
 
