@@ -85,6 +85,7 @@ CHANGELOG
 - Fix OS helper unit tests
 - Improve PHPDoc
 - Improve unit tests
+- Move Notification factory
 
 ### 1.5.0 (2018-12-19)
 
