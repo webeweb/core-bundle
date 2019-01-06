@@ -55,6 +55,7 @@ CHANGELOG
 - Add Lime color provider
 - Add Lime color provider trait
 - Add Material design iconic font icon
+- Add Material design iconic font icon enumerator
 - Add Material design iconic font icon interface
 - Add methods contains() and indexOf() into abstract manager
 - Add Navigation theme provider trait
