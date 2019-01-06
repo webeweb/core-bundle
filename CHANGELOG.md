@@ -28,6 +28,9 @@ CHANGELOG
 - Add Deep purple color interface
 - Add Deep purple color provider
 - Add Deep purple color provider trait
+- Add Font Awesome icon
+- Add Font Awesome icon enumerator
+- Add Font Awesome icon interface
 - Add Footer theme provider trait
 - Add Green color interface
 - Add Green color provider
@@ -36,6 +39,9 @@ CHANGELOG
 - Add Grey color provider
 - Add Grey color provider trait
 - Add Hook drop down theme provider trait
+- Add Icon factory
+- Add Icon interface
+- Add Icon parser
 - Add Indigo color interface
 - Add Indigo color provider
 - Add Indigo color provider trait
@@ -48,6 +54,8 @@ CHANGELOG
 - Add Lime color interface
 - Add Lime color provider
 - Add Lime color provider trait
+- Add Material design iconic font icon
+- Add Material design iconic font icon interface
 - Add methods contains() and indexOf() into abstract manager
 - Add Navigation theme provider trait
 - Add Notifications drop down theme provider trait
