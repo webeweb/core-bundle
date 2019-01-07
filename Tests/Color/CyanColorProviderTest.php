@@ -83,7 +83,7 @@ class CyanColorProviderTest extends AbstractTestCase {
 
         $obj = new CyanColorProvider();
 
-        $res = CyanColorProviderInterface::CYAN_COLOR;
+        $res = CyanColorProviderInterface::CYAN_COLOR_NAME;
         $this->assertEquals($res, $obj->getName());
     }
 

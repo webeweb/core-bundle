@@ -22,20 +22,6 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface CyanColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Cyan color.
-     *
-     * @var string
-     */
-    const CYAN_COLOR = "cyan";
-
-    /**
-     * Cyan color "50"
-     *
-     * @var string
-     */
-    const CYAN_COLOR_50 = "#E0F7FA";
-
-    /**
      * Cyan color "100"
      *
      * @var string
@@ -62,6 +48,13 @@ interface CyanColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const CYAN_COLOR_400 = "#26C6DA";
+
+    /**
+     * Cyan color "50"
+     *
+     * @var string
+     */
+    const CYAN_COLOR_50 = "#E0F7FA";
 
     /**
      * Cyan color "500"
@@ -125,5 +118,12 @@ interface CyanColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const CYAN_COLOR_A700 = "#00B8D4";
+
+    /**
+     * Cyan color name.
+     *
+     * @var string
+     */
+    const CYAN_COLOR_NAME = "cyan";
 
 }

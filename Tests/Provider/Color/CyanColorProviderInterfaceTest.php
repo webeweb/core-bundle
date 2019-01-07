@@ -29,7 +29,7 @@ class CyanColorProviderInterfaceTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("cyan", CyanColorProviderInterface::CYAN_COLOR);
+        $this->assertEquals("cyan", CyanColorProviderInterface::CYAN_COLOR_NAME);
 
         $this->assertEquals("#E0F7FA", CyanColorProviderInterface::CYAN_COLOR_50);
         $this->assertEquals("#B2EBF2", CyanColorProviderInterface::CYAN_COLOR_100);

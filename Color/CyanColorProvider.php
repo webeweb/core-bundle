@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Provider\Color\CyanColorProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Color
  */
-class CyanColorProvider implements CyanColorProviderInterface, ColorInterface {
+class CyanColorProvider extends AbstractColorProvider implements CyanColorProviderInterface {
 
     /**
      * Service name.
@@ -59,7 +59,7 @@ class CyanColorProvider implements CyanColorProviderInterface, ColorInterface {
      *{@inheritdoc}
      */
     public function getName() {
-        return self::CYAN_COLOR;
+        return self::CYAN_COLOR_NAME;
     }
 
 }
