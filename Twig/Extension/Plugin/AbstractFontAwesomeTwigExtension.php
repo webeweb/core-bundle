@@ -12,6 +12,8 @@
 namespace WBW\Bundle\CoreBundle\Twig\Extension\Plugin;
 
 use Twig_Environment;
+use WBW\Bundle\CoreBundle\Icon\FontAwesomeIconInterface;
+use WBW\Bundle\CoreBundle\Icon\FontAwesomeIconRenderer;
 use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
 
 /**
@@ -35,35 +37,22 @@ abstract class AbstractFontAwesomeTwigExtension extends AbstractTwigExtension {
     /**
      * Displays a Font Awesome icon.
      *
-     * @param string $font The font.
-     * @param string $name The name.
-     * @param string $size The size.
-     * @param bool $fixedWidth Fixed width ?
-     * @param bool $bordered Bordered ?
-     * @param string $pull The pull.
-     * @param string $anime The animation.
-     * @param string $style The style.
+     * @param FontAwesomeIconInterface $fontAwesomeIcon The Font Awesome icon.
      * @return string Returns the Font Awesome icon.
      */
-    protected function fontAwesomeIcon($font, $name, $size, $fixedWidth, $bordered, $pull, $anime, $style) {
-
-        // Initialize the values.
-        $fonts    = ["", "s", "r", "l", "b"];
-        $sizes    = ["xs", "sm", "lg", "2x", "3x", "4x", "5x", "6x", "7x", "8x", "9x", "10x"];
-        $pulls    = ["left", "right"];
-        $animates = ["spin", "pulse"];
+    protected function fontAwesomeIcon(FontAwesomeIconInterface $fontAwesomeIcon) {
 
         // Initialize the attributes.
         $attributes = [];
 
-        $attributes["class"][] = true === in_array($font, $fonts) ? "fa" . $font : "fa";
-        $attributes["class"][] = null !== $name ? "fa-" . $name : null;
-        $attributes["class"][] = true === in_array($size, $sizes) ? "fa-" . $size : null;
-        $attributes["class"][] = true === $fixedWidth ? "fa-fw" : null;
-        $attributes["class"][] = true === $bordered ? "fa-border" : null;
-        $attributes["class"][] = true === in_array($pull, $pulls) ? "fa-pull-" . $pull : null;
-        $attributes["class"][] = true === in_array($anime, $animates) ? "fa-" . $anime : null;
-        $attributes["style"]   = $style;
+        $attributes["class"][] = FontAwesomeIconRenderer::renderFont($fontAwesomeIcon);
+        $attributes["class"][] = FontAwesomeIconRenderer::renderName($fontAwesomeIcon);
+        $attributes["class"][] = FontAwesomeIconRenderer::renderSize($fontAwesomeIcon);
+        $attributes["class"][] = FontAwesomeIconRenderer::renderFixedWidth($fontAwesomeIcon);
+        $attributes["class"][] = FontAwesomeIconRenderer::renderBordered($fontAwesomeIcon);;
+        $attributes["class"][] = FontAwesomeIconRenderer::renderPull($fontAwesomeIcon);;
+        $attributes["class"][] = FontAwesomeIconRenderer::renderAnimation($fontAwesomeIcon);;
+        $attributes["style"] = FontAwesomeIconRenderer::renderStyle($fontAwesomeIcon);;
 
         // Return the HTML.
         return static::coreHTMLElement("i", null, $attributes);
