@@ -11,12 +11,9 @@
 
 namespace WBW\Bundle\CoreBundle\Twig\Extension\Plugin;
 
-use Twig_Environment;
 use Twig\Extension\AbstractExtension;
-use WBW\Bundle\CoreBundle\Color\AmberColorProvider;
-use WBW\Bundle\CoreBundle\Color\BlueColorProvider;
-use WBW\Bundle\CoreBundle\Color\BlueGreyColorProvider;
-use WBW\Bundle\CoreBundle\Color\BrownColorProvider;
+use Twig_Environment;
+use WBW\Bundle\CoreBundle\Helper\ColorHelper;
 use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 
 /**
@@ -43,36 +40,7 @@ abstract class AbstractMaterialDesignColorPaletteTwigExtension extends AbstractE
     protected function __construct(Twig_Environment $twigEnvironment) {
         parent::__construct($twigEnvironment);
 
-        $this->addColor(new AmberColorProvider());
-        $this->addColor(new BlueColorProvider());
-        $this->addColor(new BlueGreyColorProvider());
-        $this->addColor(new BrownColorProvider());
-        $this->addColor(new );
-        $this->addColor(new );
-        $this->addColor(new );
-        $this->addColor(new );
-        $this->addColor(new );
-        $this->addColor(new );
-        $this->addColor(new );
-        $this->addColor(new );
-        $this->addColor(new );
-        $this->addColor(new );
-        $this->addColor(new );
-        $this->addColor(new );
-        $this->addColor(new );
-        $this->addColor(new );
-        $this->addColor(new );
-    }
-
-    /**
-     * Add a color.
-     *
-     * @param ColorProviderInterface $color The color provider.
-     * @return AbstractMaterialDesignColorPaletteTwigExtension Returns this Material Design Color Palette Twig extension.
-     */
-    protected function addColor(ColorProviderInterface $color) {
-        $this->colors[] = $color;
-        return $this;
+        $this->setColors(ColorHelper::getMaterialDesignColorPalette());
     }
 
     /**
@@ -94,6 +62,5 @@ abstract class AbstractMaterialDesignColorPaletteTwigExtension extends AbstractE
         $this->colors = $colors;
         return $this;
     }
-
 
 }
