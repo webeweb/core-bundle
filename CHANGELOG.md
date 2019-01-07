@@ -32,6 +32,7 @@ CHANGELOG
 - Add Font Awesome icon
 - Add Font Awesome icon enumerator
 - Add Font Awesome icon interface
+- Add Font Awesome icon renderer
 - Add Footer theme provider trait
 - Add Green color interface
 - Add Green color provider
@@ -42,7 +43,6 @@ CHANGELOG
 - Add Hook drop down theme provider trait
 - Add Icon factory
 - Add Icon interface
-- Add Icon parser
 - Add Indigo color interface
 - Add Indigo color provider
 - Add Indigo color provider trait
@@ -58,6 +58,7 @@ CHANGELOG
 - Add Material design iconic font icon
 - Add Material design iconic font icon enumerator
 - Add Material design iconic font icon interface
+- Add Material design iconic font icon renderer
 - Add methods contains() and indexOf() into abstract manager
 - Add Navigation theme provider trait
 - Add Notifications drop down theme provider trait
@@ -87,6 +88,8 @@ CHANGELOG
 - Improve PHPDoc
 - Improve unit tests
 - Move Notification factory
+- Refactoring Font Awesome Twig extension
+- Refactoring Material Design Iconic Font Twig extension
 
 ### 1.5.0 (2018-12-19)
 
