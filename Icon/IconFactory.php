@@ -22,16 +22,16 @@ class IconFactory {
     /**
      * Creates a Font Awesome icon.
      *
-     * @return FontAwesomeIconInterface Returns a Font Awesome icon.
+     * @return FontAwesomeIconInterface Returns the Font Awesome icon.
      */
     public static function newFontAwesomeIcon() {
         return new FontAwesomeIcon();
     }
 
     /**
-     * Creates a Material design iconic font icon
+     * Creates a Material Design Iconic Font icon
      *
-     * @return MaterialDesignIconicFontIconInterface Returns a new Material design iconic font icon.
+     * @return MaterialDesignIconicFontIconInterface Returns the Material Design Iconic Font icon.
      */
     public static function newMaterialDesignIconicFontIcon() {
         return new MaterialDesignIconicFontIcon();

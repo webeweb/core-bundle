@@ -17,6 +17,7 @@ CHANGELOG
 - Add Brown color interface
 - Add Brown color provider
 - Add Brown color provider trait
+- Add Color helper
 - Add Color interface
 - Add Color manager
 - Add Cyan color interface
