@@ -22,20 +22,6 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface RedColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Red color.
-     *
-     * @var string
-     */
-    const RED_COLOR = "red";
-
-    /**
-     * Red color "50"
-     *
-     * @var string
-     */
-    const RED_COLOR_50 = "#FFEBEE";
-
-    /**
      * Red color "100"
      *
      * @var string
@@ -62,6 +48,13 @@ interface RedColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const RED_COLOR_400 = "#EF5350";
+
+    /**
+     * Red color "50"
+     *
+     * @var string
+     */
+    const RED_COLOR_50 = "#FFEBEE";
 
     /**
      * Red color "500"
@@ -125,5 +118,12 @@ interface RedColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const RED_COLOR_A700 = "#D50000";
+
+    /**
+     * Red color name.
+     *
+     * @var string
+     */
+    const RED_COLOR_NAME = "red";
 
 }
