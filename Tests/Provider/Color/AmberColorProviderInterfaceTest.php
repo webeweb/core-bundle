@@ -29,7 +29,7 @@ class AmberColorProviderInterfaceTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("amber", AmberColorProviderInterface::AMBER_COLOR);
+        $this->assertEquals("amber", AmberColorProviderInterface::AMBER_COLOR_NAME);
 
         $this->assertEquals("#FFF8E1", AmberColorProviderInterface::AMBER_COLOR_50);
         $this->assertEquals("#FFECB3", AmberColorProviderInterface::AMBER_COLOR_100);
