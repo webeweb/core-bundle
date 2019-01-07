@@ -22,20 +22,6 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface GreenColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Green color.
-     *
-     * @var string
-     */
-    const GREEN_COLOR = "green";
-
-    /**
-     * Green color "50"
-     *
-     * @var string
-     */
-    const GREEN_COLOR_50 = "#E8F5E9";
-
-    /**
      * Green color "100"
      *
      * @var string
@@ -62,6 +48,13 @@ interface GreenColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const GREEN_COLOR_400 = "#66BB6A";
+
+    /**
+     * Green color "50"
+     *
+     * @var string
+     */
+    const GREEN_COLOR_50 = "#E8F5E9";
 
     /**
      * Green color "500"
@@ -125,5 +118,12 @@ interface GreenColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const GREEN_COLOR_A700 = "#00C853";
+
+    /**
+     * Green color name.
+     *
+     * @var string
+     */
+    const GREEN_COLOR_NAME = "green";
 
 }

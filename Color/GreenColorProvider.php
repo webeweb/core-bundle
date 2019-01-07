@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Provider\Color\GreenColorProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Color
  */
-class GreenColorProvider implements GreenColorProviderInterface, ColorInterface {
+class GreenColorProvider extends AbstractColorProvider implements GreenColorProviderInterface {
 
     /**
      * Service name.
@@ -59,7 +59,7 @@ class GreenColorProvider implements GreenColorProviderInterface, ColorInterface 
      *{@inheritdoc}
      */
     public function getName() {
-        return self::GREEN_COLOR;
+        return self::GREEN_COLOR_NAME;
     }
 
 }
