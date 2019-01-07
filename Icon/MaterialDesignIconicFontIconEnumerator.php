@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Icon;
 
 /**
- * Material design iconic font icon enumerator.
+ * Material design Iconic Font icon enumerator.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Icon
@@ -71,7 +71,7 @@ class MaterialDesignIconicFontIconEnumerator {
     /**
      * Enumerates the sizes.
      *
-     * @return array Returns the sizes enumaration.
+     * @return array Returns the sizes enumeration.
      */
     public static function enumSizes() {
         return [
