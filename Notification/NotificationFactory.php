@@ -20,7 +20,7 @@ namespace WBW\Bundle\CoreBundle\Notification;
 class NotificationFactory {
 
     /**
-     * Create a danger notification.
+     * Creates a danger notification.
      *
      * @param string $content The content.
      * @return NotificationInterface Returns the danger notification.
@@ -30,7 +30,7 @@ class NotificationFactory {
     }
 
     /**
-     * Create a default notification.
+     * Creates a default notification.
      *
      * @param string $content The content.
      * @param string $type The type.
@@ -41,7 +41,7 @@ class NotificationFactory {
     }
 
     /**
-     * Create a info notification.
+     * Creates a info notification.
      *
      * @param string $content The content.
      * @return NotificationInterface Returns the info notification.
@@ -51,7 +51,7 @@ class NotificationFactory {
     }
 
     /**
-     * Create a success notification.
+     * Creates a success notification.
      *
      * @param string $content The content.
      * @return NotificationInterface Returns the success notification.
@@ -61,7 +61,7 @@ class NotificationFactory {
     }
 
     /**
-     * Create a warning notification.
+     * Creates a warning notification.
      *
      * @param string $content The content.
      * @return NotificationInterface Returns the warning notification.
