@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Icon;
 
 /**
- * Material design iconic font icon.
+ * Material Design Iconic Font icon.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Icon
