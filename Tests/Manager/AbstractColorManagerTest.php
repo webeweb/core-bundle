@@ -39,6 +39,8 @@ class AbstractColorManagerTest extends AbstractTestCase {
 
         $obj->registerProvider($colorProvider);
         $this->assertSame($colorProvider, $obj->getProviders()[0]);
+
+        $this->assertEquals(0, $obj->getIndex()[$colorProvider->getName()]);
         $this->assertEquals(1, $obj->size());
     }
 

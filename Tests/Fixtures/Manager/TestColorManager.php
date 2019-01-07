@@ -27,4 +27,12 @@ class TestColorManager extends AbstractColorManager {
     public function __construct() {
         parent::__construct();
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getIndex() {
+        return parent::getIndex();
+    }
+
 }
