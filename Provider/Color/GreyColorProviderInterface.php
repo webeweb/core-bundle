@@ -22,20 +22,6 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface GreyColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Grey color.
-     *
-     * @var string
-     */
-    const GREY_COLOR = "grey";
-
-    /**
-     * Grey color "50"
-     *
-     * @var string
-     */
-    const GREY_COLOR_50 = "#FAFAFA";
-
-    /**
      * Grey color "100"
      *
      * @var string
@@ -62,6 +48,13 @@ interface GreyColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const GREY_COLOR_400 = "#BDBDBD";
+
+    /**
+     * Grey color "50"
+     *
+     * @var string
+     */
+    const GREY_COLOR_50 = "#FAFAFA";
 
     /**
      * Grey color "500"
@@ -97,5 +90,12 @@ interface GreyColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const GREY_COLOR_900 = "#212121";
+
+    /**
+     * Grey color name.
+     *
+     * @var string
+     */
+    const GREY_COLOR_NAME = "grey";
 
 }

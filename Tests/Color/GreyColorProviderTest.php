@@ -75,7 +75,7 @@ class GreyColorProviderTest extends AbstractTestCase {
 
         $obj = new GreyColorProvider();
 
-        $res = GreyColorProviderInterface::GREY_COLOR;
+        $res = GreyColorProviderInterface::GREY_COLOR_NAME;
         $this->assertEquals($res, $obj->getName());
     }
 
