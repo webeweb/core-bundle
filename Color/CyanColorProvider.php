@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Provider\Color\CyanColorProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Color
  */
-class CyanColorProvider extends AbstractColorProvider implements CyanColorProviderInterface {
+class CyanColorProvider extends AbstractColorProvider implements CyanColorProviderInterface, ColorInterface {
 
     /**
      * Service name.

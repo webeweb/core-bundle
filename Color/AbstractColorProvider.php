@@ -11,14 +11,16 @@
 
 namespace WBW\Bundle\CoreBundle\Color;
 
+use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
+
 /**
- * AbstractColorProvider.
+ * Abstract color provider.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Color
  * @abstract
  */
-abstract class AbstractColorProvider implements ColorInterface {
+abstract class AbstractColorProvider implements ColorProviderInterface {
 
     /**
      * Domain.

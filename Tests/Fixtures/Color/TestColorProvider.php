@@ -33,6 +33,20 @@ class TestColorProvider extends AbstractColorProvider {
     /**
      *{@inheritdoc}
      */
+    public function getColors() {
+        return [];
+    }
+
+    /**
+     *{@inheritdoc}
+     */
+    public function getName() {
+        return null;
+    }
+
+    /**
+     *{@inheritdoc}
+     */
     public function setDomain($domain) {
         return parent::setDomain($domain);
     }

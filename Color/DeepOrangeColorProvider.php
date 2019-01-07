@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Provider\Color\DeepOrangeColorProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Color
  */
-class DeepOrangeColorProvider extends AbstractColorProvider implements DeepOrangeColorProviderInterface {
+class DeepOrangeColorProvider extends AbstractColorProvider implements DeepOrangeColorProviderInterface, ColorInterface {
 
     /**
      * Service name.

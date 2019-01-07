@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Provider\Color\IndigoColorProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Color
  */
-class IndigoColorProvider extends AbstractColorProvider implements IndigoColorProviderInterface {
+class IndigoColorProvider extends AbstractColorProvider implements IndigoColorProviderInterface, ColorInterface {
 
     /**
      * Service name.

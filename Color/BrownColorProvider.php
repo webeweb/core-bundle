@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Provider\Color\BrownColorProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Color
  */
-class BrownColorProvider extends AbstractColorProvider implements BrownColorProviderInterface {
+class BrownColorProvider extends AbstractColorProvider implements BrownColorProviderInterface, ColorInterface {
 
     /**
      * Service name.
