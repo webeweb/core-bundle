@@ -22,20 +22,6 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface LimeColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Lime color.
-     *
-     * @var string
-     */
-    const LIME_COLOR = "lime";
-
-    /**
-     * Lime color "50"
-     *
-     * @var string
-     */
-    const LIME_COLOR_50 = "#F9FBE7";
-
-    /**
      * Lime color "100"
      *
      * @var string
@@ -62,6 +48,13 @@ interface LimeColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const LIME_COLOR_400 = "#D4E157";
+
+    /**
+     * Lime color "50"
+     *
+     * @var string
+     */
+    const LIME_COLOR_50 = "#F9FBE7";
 
     /**
      * Lime color "500"
@@ -125,5 +118,12 @@ interface LimeColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const LIME_COLOR_A700 = "#AEEA00";
+
+    /**
+     * Lime color name.
+     *
+     * @var string
+     */
+    const LIME_COLOR_NAME = "lime";
 
 }

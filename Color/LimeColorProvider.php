@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Provider\Color\LimeColorProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Color
  */
-class LimeColorProvider implements LimeColorProviderInterface, ColorInterface {
+class LimeColorProvider extends AbstractColorProvider implements LimeColorProviderInterface {
 
     /**
      * Service name.
@@ -59,7 +59,7 @@ class LimeColorProvider implements LimeColorProviderInterface, ColorInterface {
      *{@inheritdoc}
      */
     public function getName() {
-        return self::LIME_COLOR;
+        return self::LIME_COLOR_NAME;
     }
 
 }

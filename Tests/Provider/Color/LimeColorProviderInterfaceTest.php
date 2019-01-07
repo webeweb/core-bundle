@@ -29,7 +29,7 @@ class LimeColorProviderInterfaceTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("lime", LimeColorProviderInterface::LIME_COLOR);
+        $this->assertEquals("lime", LimeColorProviderInterface::LIME_COLOR_NAME);
 
         $this->assertEquals("#F9FBE7", LimeColorProviderInterface::LIME_COLOR_50);
         $this->assertEquals("#F0F4C3", LimeColorProviderInterface::LIME_COLOR_100);
