@@ -83,7 +83,7 @@ class IndigoColorProviderTest extends AbstractTestCase {
 
         $obj = new IndigoColorProvider();
 
-        $res = IndigoColorProviderInterface::INDIGO_COLOR;
+        $res = IndigoColorProviderInterface::INDIGO_COLOR_NAME;
         $this->assertEquals($res, $obj->getName());
     }
 

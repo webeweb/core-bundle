@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Provider\Color\IndigoColorProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Color
  */
-class IndigoColorProvider implements IndigoColorProviderInterface, ColorInterface {
+class IndigoColorProvider extends AbstractColorProvider implements IndigoColorProviderInterface {
 
     /**
      * Service name.
@@ -59,7 +59,7 @@ class IndigoColorProvider implements IndigoColorProviderInterface, ColorInterfac
      *{@inheritdoc}
      */
     public function getName() {
-        return self::INDIGO_COLOR;
+        return self::INDIGO_COLOR_NAME;
     }
 
 }

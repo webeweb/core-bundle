@@ -22,20 +22,6 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface IndigoColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Indigo color.
-     *
-     * @var string
-     */
-    const INDIGO_COLOR = "indigo";
-
-    /**
-     * Indigo color "50"
-     *
-     * @var string
-     */
-    const INDIGO_COLOR_50 = "#E8EAF6";
-
-    /**
      * Indigo color "100"
      *
      * @var string
@@ -62,6 +48,13 @@ interface IndigoColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const INDIGO_COLOR_400 = "#5C6BC0";
+
+    /**
+     * Indigo color "50"
+     *
+     * @var string
+     */
+    const INDIGO_COLOR_50 = "#E8EAF6";
 
     /**
      * Indigo color "500"
@@ -125,5 +118,12 @@ interface IndigoColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const INDIGO_COLOR_A700 = "#304FFE";
+
+    /**
+     * Indigo color name.
+     *
+     * @var string
+     */
+    const INDIGO_COLOR_NAME = "indigo";
 
 }
