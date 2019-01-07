@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Provider\Color\BlueGreyColorProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Color
  */
-class BlueGreyColorProvider implements BlueGreyColorProviderInterface, ColorInterface {
+class BlueGreyColorProvider extends AbstractColorProvider implements BlueGreyColorProviderInterface {
 
     /**
      * Service name.
@@ -55,7 +55,7 @@ class BlueGreyColorProvider implements BlueGreyColorProviderInterface, ColorInte
      *{@inheritdoc}
      */
     public function getName() {
-        return self::BLUE_GREY_COLOR;
+        return self::BLUE_GREY_COLOR_NAME;
     }
 
 }

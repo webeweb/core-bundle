@@ -22,20 +22,6 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface BlueGreyColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Blue grey color.
-     *
-     * @var string
-     */
-    const BLUE_GREY_COLOR = "blue-grey";
-
-    /**
-     * Blue grey color "50"
-     *
-     * @var string
-     */
-    const BLUE_GREY_COLOR_50 = "#ECEFF1";
-
-    /**
      * Blue grey color "100"
      *
      * @var string
@@ -62,6 +48,13 @@ interface BlueGreyColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const BLUE_GREY_COLOR_400 = "#78909C";
+
+    /**
+     * Blue grey color "50"
+     *
+     * @var string
+     */
+    const BLUE_GREY_COLOR_50 = "#ECEFF1";
 
     /**
      * Blue grey color "500"
@@ -97,5 +90,12 @@ interface BlueGreyColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const BLUE_GREY_COLOR_900 = "#263238";
+
+    /**
+     * Blue grey color name.
+     *
+     * @var string
+     */
+    const BLUE_GREY_COLOR_NAME = "blue-grey";
 
 }

@@ -75,7 +75,7 @@ class BlueGreyColorProviderTest extends AbstractTestCase {
 
         $obj = new BlueGreyColorProvider();
 
-        $res = BlueGreyColorProviderInterface::BLUE_GREY_COLOR;
+        $res = BlueGreyColorProviderInterface::BLUE_GREY_COLOR_NAME;
         $this->assertEquals($res, $obj->getName());
     }
 
