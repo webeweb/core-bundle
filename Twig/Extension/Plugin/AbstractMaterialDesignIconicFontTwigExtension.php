@@ -43,14 +43,6 @@ abstract class AbstractMaterialDesignIconicFontTwigExtension extends AbstractTwi
      */
     protected function materialDesignIconicFontIcon(MaterialDesignIconicFontIconInterface $icon) {
 
-        // Initialize the values.
-        $sizes   = ["lg", "2x", "3x", "4x", "5x"];
-        $borders = ["border", "border-circle"];
-        $pulls   = ["left", "right"];
-        $spins   = ["spin", "spin-reverse"];
-        $rotates = ["90", "180", "270"];
-        $flips   = ["horizontal", "vertical"];
-
         // Initialize the attributes.
         $attributes = [];
 
