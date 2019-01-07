@@ -22,20 +22,6 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface BlueColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Blue color.
-     *
-     * @var string
-     */
-    const BLUE_COLOR = "blue";
-
-    /**
-     * Blue color "50"
-     *
-     * @var string
-     */
-    const BLUE_COLOR_50 = "#E3F2FD";
-
-    /**
      * Blue color "100"
      *
      * @var string
@@ -62,6 +48,13 @@ interface BlueColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const BLUE_COLOR_400 = "#42A5F5";
+
+    /**
+     * Blue color "50"
+     *
+     * @var string
+     */
+    const BLUE_COLOR_50 = "#E3F2FD";
 
     /**
      * Blue color "500"
@@ -125,5 +118,12 @@ interface BlueColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const BLUE_COLOR_A700 = "#2962FF";
+
+    /**
+     * Blue color name.
+     *
+     * @var string
+     */
+    const BLUE_COLOR_NAME = "blue";
 
 }
