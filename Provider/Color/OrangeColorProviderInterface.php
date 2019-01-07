@@ -22,20 +22,6 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface OrangeColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Orange color.
-     *
-     * @var string
-     */
-    const ORANGE_COLOR = "orange";
-
-    /**
-     * Orange color "50"
-     *
-     * @var string
-     */
-    const ORANGE_COLOR_50 = "#FFF3E0";
-
-    /**
      * Orange color "100"
      *
      * @var string
@@ -62,6 +48,13 @@ interface OrangeColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const ORANGE_COLOR_400 = "#FFA726";
+
+    /**
+     * Orange color "50"
+     *
+     * @var string
+     */
+    const ORANGE_COLOR_50 = "#FFF3E0";
 
     /**
      * Orange color "500"
@@ -125,5 +118,12 @@ interface OrangeColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const ORANGE_COLOR_A700 = "#FF6D00";
+
+    /**
+     * Orange color name.
+     *
+     * @var string
+     */
+    const ORANGE_COLOR_NAME = "orange";
 
 }

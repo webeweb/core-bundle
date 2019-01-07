@@ -83,7 +83,7 @@ class OrangeColorProviderTest extends AbstractTestCase {
 
         $obj = new OrangeColorProvider();
 
-        $res = OrangeColorProviderInterface::ORANGE_COLOR;
+        $res = OrangeColorProviderInterface::ORANGE_COLOR_NAME;
         $this->assertEquals($res, $obj->getName());
     }
 

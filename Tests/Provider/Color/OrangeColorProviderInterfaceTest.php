@@ -29,7 +29,7 @@ class OrangeColorProviderInterfaceTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("orange", OrangeColorProviderInterface::ORANGE_COLOR);
+        $this->assertEquals("orange", OrangeColorProviderInterface::ORANGE_COLOR_NAME);
 
         $this->assertEquals("#FFF3E0", OrangeColorProviderInterface::ORANGE_COLOR_50);
         $this->assertEquals("#FFE0B2", OrangeColorProviderInterface::ORANGE_COLOR_100);
