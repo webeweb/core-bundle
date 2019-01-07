@@ -25,11 +25,11 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class FontAwesomeIconRendererTest extends AbstractTestCase {
 
     /**
-     * Font Awesome icon.
+     * Icon.
      *
      * @var FontAwesomeIconInterface
      */
-    private $fontAwesomeIcon;
+    private $icon;
 
     /**
      * {@inheritdoc}
@@ -38,7 +38,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
         parent::setUp();
 
         // Set a Font Awesome icon mock.
-        $this->fontAwesomeIcon = IconFactory::parseFontAwesomeIcon([
+        $this->icon = IconFactory::parseFontAwesomeIcon([
             "name"       => "home",
             "style"      => "color: #000000;",
             "animation"  => "spin",
@@ -58,7 +58,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
      */
     public function testRenderAnimation() {
 
-        $res = FontAwesomeIconRenderer::renderAnimation($this->fontAwesomeIcon);
+        $res = FontAwesomeIconRenderer::renderAnimation($this->icon);
         $this->assertEquals("fa-spin", $res);
     }
 
@@ -69,7 +69,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
      */
     public function testRenderBordered() {
 
-        $res = FontAwesomeIconRenderer::renderBordered($this->fontAwesomeIcon);
+        $res = FontAwesomeIconRenderer::renderBordered($this->icon);
         $this->assertEquals("fa-border", $res);
     }
 
@@ -80,7 +80,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
      */
     public function testRenderFixedWidth() {
 
-        $res = FontAwesomeIconRenderer::renderFixedWidth($this->fontAwesomeIcon);
+        $res = FontAwesomeIconRenderer::renderFixedWidth($this->icon);
         $this->assertEquals("fa-fw", $res);
     }
 
@@ -91,7 +91,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
      */
     public function testRenderFont() {
 
-        $res = FontAwesomeIconRenderer::renderFont($this->fontAwesomeIcon);
+        $res = FontAwesomeIconRenderer::renderFont($this->icon);
         $this->assertEquals("fas", $res);
     }
 
@@ -102,7 +102,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
      */
     public function testRenderName() {
 
-        $res = FontAwesomeIconRenderer::renderName($this->fontAwesomeIcon);
+        $res = FontAwesomeIconRenderer::renderName($this->icon);
         $this->assertEquals("fa-home", $res);
     }
 
@@ -113,7 +113,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
      */
     public function testRenderPull() {
 
-        $res = FontAwesomeIconRenderer::renderPull($this->fontAwesomeIcon);
+        $res = FontAwesomeIconRenderer::renderPull($this->icon);
         $this->assertEquals("fa-pull-left", $res);
     }
 
@@ -124,7 +124,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
      */
     public function testRenderSize() {
 
-        $res = FontAwesomeIconRenderer::renderSize($this->fontAwesomeIcon);
+        $res = FontAwesomeIconRenderer::renderSize($this->icon);
         $this->assertEquals("fa-lg", $res);
     }
 
