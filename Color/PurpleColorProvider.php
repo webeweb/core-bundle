@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Provider\Color\PurpleColorProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Color
  */
-class PurpleColorProvider implements PurpleColorProviderInterface, ColorInterface {
+class PurpleColorProvider extends AbstractColorProvider implements PurpleColorProviderInterface {
 
     /**
      * Service name.
@@ -59,7 +59,7 @@ class PurpleColorProvider implements PurpleColorProviderInterface, ColorInterfac
      *{@inheritdoc}
      */
     public function getName() {
-        return self::PURPLE_COLOR;
+        return self::PURPLE_COLOR_NAME;
     }
 
 }

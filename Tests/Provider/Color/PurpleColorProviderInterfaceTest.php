@@ -29,7 +29,7 @@ class PurpleColorProviderInterfaceTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("purple", PurpleColorProviderInterface::PURPLE_COLOR);
+        $this->assertEquals("purple", PurpleColorProviderInterface::PURPLE_COLOR_NAME);
 
         $this->assertEquals("#F3E5F5", PurpleColorProviderInterface::PURPLE_COLOR_50);
         $this->assertEquals("#E1BEE7", PurpleColorProviderInterface::PURPLE_COLOR_100);

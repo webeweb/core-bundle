@@ -22,20 +22,6 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface PurpleColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Purple color.
-     *
-     * @var string
-     */
-    const PURPLE_COLOR = "purple";
-
-    /**
-     * Purple color "50"
-     *
-     * @var string
-     */
-    const PURPLE_COLOR_50 = "#F3E5F5";
-
-    /**
      * Purple color "100"
      *
      * @var string
@@ -62,6 +48,13 @@ interface PurpleColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const PURPLE_COLOR_400 = "#AB47BC";
+
+    /**
+     * Purple color "50"
+     *
+     * @var string
+     */
+    const PURPLE_COLOR_50 = "#F3E5F5";
 
     /**
      * Purple color "500"
@@ -125,5 +118,12 @@ interface PurpleColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const PURPLE_COLOR_A700 = "#AA00FF";
+
+    /**
+     * Purple color name.
+     *
+     * @var string
+     */
+    const PURPLE_COLOR_NAME = "purple";
 
 }

@@ -83,7 +83,7 @@ class PurpleColorProviderTest extends AbstractTestCase {
 
         $obj = new PurpleColorProvider();
 
-        $res = PurpleColorProviderInterface::PURPLE_COLOR;
+        $res = PurpleColorProviderInterface::PURPLE_COLOR_NAME;
         $this->assertEquals($res, $obj->getName());
     }
 
