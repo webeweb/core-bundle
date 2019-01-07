@@ -41,7 +41,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setBorder() mmethod.
+     * Tests the setBorder() method.
      *
      * @return void
      */
@@ -49,12 +49,25 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
 
         $obj = new MaterialDesignIconicFontIcon();
 
-        $obj->setBorder("border");
-        $this->assertEquals("border", $obj->getBorder());
+        $obj->setBorder(MaterialDesignIconicFontIcon::MATERIAL_DESIGN_ICONIC_FONT_BORDER);
+        $this->assertEquals(MaterialDesignIconicFontIcon::MATERIAL_DESIGN_ICONIC_FONT_BORDER, $obj->getBorder());
     }
 
     /**
-     * Tests the setFixedWidth() mmethod.
+     * Tests the setBorder() method.
+     *
+     * @return void
+     */
+    public function testSetBorderWithBadArgument() {
+
+        $obj = new MaterialDesignIconicFontIcon();
+
+        $obj->setBorder("exception");
+        $this->assertNotEquals("exception", $obj->getBorder());
+    }
+
+    /**
+     * Tests the setFixedWidth() method.
      *
      * @return void
      */
@@ -67,7 +80,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setFlip() mmethod.
+     * Tests the setFlip() method.
      *
      * @return void
      */
@@ -75,12 +88,25 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
 
         $obj = new MaterialDesignIconicFontIcon();
 
-        $obj->setFlip("flip");
-        $this->assertEquals("flip", $obj->getFlip());
+        $obj->setFlip(MaterialDesignIconicFontIcon::MATERIAL_DESIGN_ICONIC_FONT_FLIP_HORIZONTAL);
+        $this->assertEquals(MaterialDesignIconicFontIcon::MATERIAL_DESIGN_ICONIC_FONT_FLIP_HORIZONTAL, $obj->getFlip());
     }
 
     /**
-     * Tests the setPull() mmethod.
+     * Tests the setFlip() method.
+     *
+     * @return void
+     */
+    public function testSetFlipWithBadArgument() {
+
+        $obj = new MaterialDesignIconicFontIcon();
+
+        $obj->setFlip("exception");
+        $this->assertNotEquals("exception", $obj->getFlip());
+    }
+
+    /**
+     * Tests the setPull() method.
      *
      * @return void
      */
@@ -88,12 +114,25 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
 
         $obj = new MaterialDesignIconicFontIcon();
 
-        $obj->setPull("pull");
-        $this->assertEquals("pull", $obj->getPull());
+        $obj->setPull(MaterialDesignIconicFontIcon::MATERIAL_DESIGN_ICONIC_FONT_PULL_LEFT);
+        $this->assertEquals(MaterialDesignIconicFontIcon::MATERIAL_DESIGN_ICONIC_FONT_PULL_LEFT, $obj->getPull());
     }
 
     /**
-     * Tests the setRotate() mmethod.
+     * Tests the setPull() method.
+     *
+     * @return void
+     */
+    public function testSetPullWithBadArgument() {
+
+        $obj = new MaterialDesignIconicFontIcon();
+
+        $obj->setPull("exception");
+        $this->assertNotEquals("exception", $obj->getPull());
+    }
+
+    /**
+     * Tests the setRotate() method.
      *
      * @return void
      */
@@ -101,12 +140,25 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
 
         $obj = new MaterialDesignIconicFontIcon();
 
-        $obj->setRotate("rotate");
-        $this->assertEquals("rotate", $obj->getRotate());
+        $obj->setRotate(MaterialDesignIconicFontIcon::MATERIAL_DESIGN_ICONIC_FONT_ROTATE_90);
+        $this->assertEquals(MaterialDesignIconicFontIcon::MATERIAL_DESIGN_ICONIC_FONT_ROTATE_90, $obj->getRotate());
     }
 
     /**
-     * Tests the setSize() mmethod.
+     * Tests the setRotate() method.
+     *
+     * @return void
+     */
+    public function testSetRotateWithBadArgument() {
+
+        $obj = new MaterialDesignIconicFontIcon();
+
+        $obj->setRotate("exception");
+        $this->assertNotEquals("exception", $obj->getRotate());
+    }
+
+    /**
+     * Tests the setSize() method.
      *
      * @return void
      */
@@ -114,12 +166,25 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
 
         $obj = new MaterialDesignIconicFontIcon();
 
-        $obj->setSize("size");
-        $this->assertEquals("size", $obj->getSize());
+        $obj->setSize(MaterialDesignIconicFontIcon::MATERIAL_DESIGN_ICONIC_FONT_SIZE_LG);
+        $this->assertEquals(MaterialDesignIconicFontIcon::MATERIAL_DESIGN_ICONIC_FONT_SIZE_LG, $obj->getSize());
     }
 
     /**
-     * Tests the setSpin() mmethod.
+     * Tests the setSize() method.
+     *
+     * @return void
+     */
+    public function testSetSizeWithBadArgument() {
+
+        $obj = new MaterialDesignIconicFontIcon();
+
+        $obj->setSize("exception");
+        $this->assertNotEquals("exception", $obj->getSize());
+    }
+
+    /**
+     * Tests the setSpin() method.
      *
      * @return void
      */
@@ -127,8 +192,21 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
 
         $obj = new MaterialDesignIconicFontIcon();
 
-        $obj->setSpin("spin");
-        $this->assertEquals("spin", $obj->getSpin());
+        $obj->setSpin(MaterialDesignIconicFontIcon::MATERIAL_DESIGN_ICONIC_FONT_SPIN);
+        $this->assertEquals(MaterialDesignIconicFontIcon::MATERIAL_DESIGN_ICONIC_FONT_SPIN, $obj->getSpin());
+    }
+
+    /**
+     * Tests the setSpin() method.
+     *
+     * @return void
+     */
+    public function testSetSpinWithBadArgument() {
+
+        $obj = new MaterialDesignIconicFontIcon();
+
+        $obj->setSpin("exception");
+        $this->assertNotEquals("exception", $obj->getSpin());
     }
 
 }

@@ -129,7 +129,9 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
      * {@inheritdoc}
      */
     public function setBorder($border) {
-        $this->border = $border;
+        if (true === in_array($border, MaterialDesignIconicFontIconEnumerator::enumBorders())) {
+            $this->border = $border;
+        }
         return $this;
     }
 
@@ -145,7 +147,9 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
      *{@inheritdoc}
      */
     public function setFlip($flip) {
-        $this->flip = $flip;
+        if (true === in_array($flip, MaterialDesignIconicFontIconEnumerator::enumFlips())) {
+            $this->flip = $flip;
+        }
         return $this;
     }
 
@@ -153,7 +157,9 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
      * {@inheritdoc}
      */
     public function setPull($pull) {
-        $this->pull = $pull;
+        if (true === in_array($pull, MaterialDesignIconicFontIconEnumerator::enumPulls())) {
+            $this->pull = $pull;
+        }
         return $this;
     }
 
@@ -161,7 +167,9 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
      * {@inheritdoc}
      */
     public function setRotate($rotate) {
-        $this->rotate = $rotate;
+        if (true === in_array($rotate, MaterialDesignIconicFontIconEnumerator::enumRotates())) {
+            $this->rotate = $rotate;
+        }
         return $this;
     }
 
@@ -169,7 +177,9 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
      * {@inheritdoc}
      */
     public function setSize($size) {
-        $this->size = $size;
+        if (true === in_array($size, MaterialDesignIconicFontIconEnumerator::enumSizes())) {
+            $this->size = $size;
+        }
         return $this;
     }
 
@@ -177,7 +187,9 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
      * {@inheritdoc}
      */
     public function setSpin($spin) {
-        $this->spin = $spin;
+        if (true === in_array($spin, MaterialDesignIconicFontIconEnumerator::enumSpins())) {
+            $this->spin = $spin;
+        }
         return $this;
     }
 
