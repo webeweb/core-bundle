@@ -22,20 +22,6 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface TealColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Teal color.
-     *
-     * @var string
-     */
-    const TEAL_COLOR = "teal";
-
-    /**
-     * Teal color "50"
-     *
-     * @var string
-     */
-    const TEAL_COLOR_50 = "#E0F2F1";
-
-    /**
      * Teal color "100"
      *
      * @var string
@@ -62,6 +48,13 @@ interface TealColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const TEAL_COLOR_400 = "#26A69A";
+
+    /**
+     * Teal color "50"
+     *
+     * @var string
+     */
+    const TEAL_COLOR_50 = "#E0F2F1";
 
     /**
      * Teal color "500"
@@ -125,5 +118,12 @@ interface TealColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const TEAL_COLOR_A700 = "#00BFA5";
+
+    /**
+     * Teal color name.
+     *
+     * @var string
+     */
+    const TEAL_COLOR_NAME = "teal";
 
 }

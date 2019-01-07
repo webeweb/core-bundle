@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Provider\Color\TealColorProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Color
  */
-class TealColorProvider implements TealColorProviderInterface, ColorInterface {
+class TealColorProvider extends AbstractColorProvider implements TealColorProviderInterface {
 
     /**
      * Service name.
@@ -59,7 +59,7 @@ class TealColorProvider implements TealColorProviderInterface, ColorInterface {
      *{@inheritdoc}
      */
     public function getName() {
-        return self::TEAL_COLOR;
+        return self::TEAL_COLOR_NAME;
     }
 
 }

@@ -83,7 +83,7 @@ class TealColorProviderTest extends AbstractTestCase {
 
         $obj = new TealColorProvider();
 
-        $res = TealColorProviderInterface::TEAL_COLOR;
+        $res = TealColorProviderInterface::TEAL_COLOR_NAME;
         $this->assertEquals($res, $obj->getName());
     }
 
