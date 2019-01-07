@@ -37,22 +37,22 @@ abstract class AbstractFontAwesomeTwigExtension extends AbstractTwigExtension {
     /**
      * Displays a Font Awesome icon.
      *
-     * @param FontAwesomeIconInterface $fontAwesomeIcon The Font Awesome icon.
+     * @param FontAwesomeIconInterface $icon The icon.
      * @return string Returns the Font Awesome icon.
      */
-    protected function fontAwesomeIcon(FontAwesomeIconInterface $fontAwesomeIcon) {
+    protected function fontAwesomeIcon(FontAwesomeIconInterface $icon) {
 
         // Initialize the attributes.
         $attributes = [];
 
-        $attributes["class"][] = FontAwesomeIconRenderer::renderFont($fontAwesomeIcon);
-        $attributes["class"][] = FontAwesomeIconRenderer::renderName($fontAwesomeIcon);
-        $attributes["class"][] = FontAwesomeIconRenderer::renderSize($fontAwesomeIcon);
-        $attributes["class"][] = FontAwesomeIconRenderer::renderFixedWidth($fontAwesomeIcon);
-        $attributes["class"][] = FontAwesomeIconRenderer::renderBordered($fontAwesomeIcon);;
-        $attributes["class"][] = FontAwesomeIconRenderer::renderPull($fontAwesomeIcon);;
-        $attributes["class"][] = FontAwesomeIconRenderer::renderAnimation($fontAwesomeIcon);;
-        $attributes["style"] = FontAwesomeIconRenderer::renderStyle($fontAwesomeIcon);;
+        $attributes["class"][] = FontAwesomeIconRenderer::renderFont($icon);
+        $attributes["class"][] = FontAwesomeIconRenderer::renderName($icon);
+        $attributes["class"][] = FontAwesomeIconRenderer::renderSize($icon);
+        $attributes["class"][] = FontAwesomeIconRenderer::renderFixedWidth($icon);
+        $attributes["class"][] = FontAwesomeIconRenderer::renderBordered($icon);;
+        $attributes["class"][] = FontAwesomeIconRenderer::renderPull($icon);;
+        $attributes["class"][] = FontAwesomeIconRenderer::renderAnimation($icon);;
+        $attributes["style"] = FontAwesomeIconRenderer::renderStyle($icon);;
 
         // Return the HTML.
         return static::coreHTMLElement("i", null, $attributes);
