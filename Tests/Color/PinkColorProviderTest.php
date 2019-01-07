@@ -83,7 +83,7 @@ class PinkColorProviderTest extends AbstractTestCase {
 
         $obj = new PinkColorProvider();
 
-        $res = PinkColorProviderInterface::PINK_COLOR;
+        $res = PinkColorProviderInterface::PINK_COLOR_NAME;
         $this->assertEquals($res, $obj->getName());
     }
 

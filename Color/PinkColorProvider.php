@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Provider\Color\PinkColorProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Color
  */
-class PinkColorProvider implements PinkColorProviderInterface, ColorInterface {
+class PinkColorProvider extends AbstractColorProvider implements PinkColorProviderInterface {
 
     /**
      * Service name.
@@ -59,7 +59,7 @@ class PinkColorProvider implements PinkColorProviderInterface, ColorInterface {
      *{@inheritdoc}
      */
     public function getName() {
-        return self::PINK_COLOR;
+        return self::PINK_COLOR_NAME;
     }
 
 }

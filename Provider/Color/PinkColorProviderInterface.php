@@ -22,20 +22,6 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface PinkColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Pink color.
-     *
-     * @var string
-     */
-    const PINK_COLOR = "pink";
-
-    /**
-     * Pink color "50"
-     *
-     * @var string
-     */
-    const PINK_COLOR_50 = "#FCE4EC";
-
-    /**
      * Pink color "100"
      *
      * @var string
@@ -62,6 +48,13 @@ interface PinkColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const PINK_COLOR_400 = "#EC407A";
+
+    /**
+     * Pink color "50"
+     *
+     * @var string
+     */
+    const PINK_COLOR_50 = "#FCE4EC";
 
     /**
      * Pink color "500"
@@ -125,5 +118,12 @@ interface PinkColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const PINK_COLOR_A700 = "#C51162";
+
+    /**
+     * Pink color name.
+     *
+     * @var string
+     */
+    const PINK_COLOR_NAME = "pink";
 
 }
