@@ -11,10 +11,10 @@
 
 namespace WBW\Bundle\CoreBundle\Twig\Extension\Plugin;
 
-use Twig\Extension\AbstractExtension;
 use Twig_Environment;
 use WBW\Bundle\CoreBundle\Helper\ColorHelper;
 use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
+use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
 
 /**
  * Abstract Material designColorPaletteTwigExtesnion.
@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
  * @package WBW\Bundle\CoreBundle\Twig\Extension\Plugin
  * @abstract
  */
-abstract class AbstractMaterialDesignColorPaletteTwigExtension extends AbstractExtension {
+abstract class AbstractMaterialDesignColorPaletteTwigExtension extends AbstractTwigExtension {
 
     /**
      * Colors
