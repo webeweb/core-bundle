@@ -29,7 +29,7 @@ class DeepPurpleColorProviderInterfaceTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("deep-purple", DeepPurpleColorProviderInterface::DEEP_PURPLE_COLOR);
+        $this->assertEquals("deep-purple", DeepPurpleColorProviderInterface::DEEP_PURPLE_COLOR_NAME);
 
         $this->assertEquals("#EDE7F6", DeepPurpleColorProviderInterface::DEEP_PURPLE_COLOR_50);
         $this->assertEquals("#D1C4E9", DeepPurpleColorProviderInterface::DEEP_PURPLE_COLOR_100);

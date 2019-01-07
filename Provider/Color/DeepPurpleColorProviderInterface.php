@@ -22,20 +22,6 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface DeepPurpleColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Deep purpple color.
-     *
-     * @var string
-     */
-    const DEEP_PURPLE_COLOR = "deep-purple";
-
-    /**
-     * Deep purple color "50"
-     *
-     * @var string
-     */
-    const DEEP_PURPLE_COLOR_50 = "#EDE7F6";
-
-    /**
      * Deep purple color "100"
      *
      * @var string
@@ -62,6 +48,13 @@ interface DeepPurpleColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const DEEP_PURPLE_COLOR_400 = "#7E57C2";
+
+    /**
+     * Deep purple color "50"
+     *
+     * @var string
+     */
+    const DEEP_PURPLE_COLOR_50 = "#EDE7F6";
 
     /**
      * Deep purple color "500"
@@ -125,5 +118,12 @@ interface DeepPurpleColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const DEEP_PURPLE_COLOR_A700 = "#6200EA";
+
+    /**
+     * Deep purpple color name.
+     *
+     * @var string
+     */
+    const DEEP_PURPLE_COLOR_NAME = "deep-purple";
 
 }
