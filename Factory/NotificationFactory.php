@@ -11,9 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Factory;
 
-use WBW\Bundle\CoreBundle\Notification\NotificationFactory as BaseFactory;
-
-@trigger_error(sprintf('The "%s" class is deprecated, use %s instead.', NotificationFactory::class, WBW\Bundle\CoreBundle\Notification\NotificationFactory::class), E_USER_DEPRECATED);
+@trigger_error(sprintf('The "%s" class is deprecated, use %s instead.', WBW\Bundle\CoreBundle\Factory\NotificationFactory::class, WBW\Bundle\CoreBundle\Notification\NotificationFactory::class), E_USER_DEPRECATED);
 
 /**
  * Notification factory.
@@ -22,6 +20,4 @@ use WBW\Bundle\CoreBundle\Notification\NotificationFactory as BaseFactory;
  * @package WBW\Bundle\CoreBundle\Factory
  * @deprecated
  */
-class NotificationFactory extends BaseFactory {
-
-}
+class_alias("WBW\Bundle\CoreBundle\Notification\NotificationFactory", "WBW\Bundle\CoreBundle\Factory\NotificationFactory");
