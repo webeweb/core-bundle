@@ -12,6 +12,8 @@
 namespace WBW\Bundle\CoreBundle\Twig\Extension\Plugin;
 
 use Twig_Environment;
+use WBW\Bundle\CoreBundle\Icon\MaterialDesignIconicFontIconInterface;
+use WBW\Bundle\CoreBundle\Icon\MaterialDesignIconicFontIconRenderer;
 use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Library\Core\Argument\StringHelper;
 
@@ -36,18 +38,10 @@ abstract class AbstractMaterialDesignIconicFontTwigExtension extends AbstractTwi
     /**
      * Displays a Material Design Iconic Font icon.
      *
-     * @param string $name The name.
-     * @param string $size The size.
-     * @param bool $fixedWidth Fixed width ?
-     * @param string $border The border
-     * @param string $pull The pull.
-     * @param string $spin The spin.
-     * @param string $rotate The rotate.
-     * @param string $flip The flip.
-     * @param string $style The style.
+     * @param MaterialDesignIconicFontIconInterface $icon The icon.
      * @return string Returns the Material Design Iconic Font icon.
      */
-    protected function materialDesignIconicFontIcon($name, $size, $fixedWidth, $border, $pull, $spin, $rotate, $flip, $style) {
+    protected function materialDesignIconicFontIcon(MaterialDesignIconicFontIconInterface $icon) {
 
         // Initialize the values.
         $sizes   = ["lg", "2x", "3x", "4x", "5x"];
@@ -61,15 +55,15 @@ abstract class AbstractMaterialDesignIconicFontTwigExtension extends AbstractTwi
         $attributes = [];
 
         $attributes["class"][] = "zmdi";
-        $attributes["class"][] = null !== $name ? "zmdi-" . $name : null;
-        $attributes["class"][] = true === in_array($size, $sizes) ? "zmdi-hc-" . $size : null;
-        $attributes["class"][] = true === $fixedWidth ? "zmdi-hc-fw" : null;
-        $attributes["class"][] = true === in_array($border, $borders) ? "zmdi-hc-" . $border : null;
-        $attributes["class"][] = true === in_array($pull, $pulls) ? "pull-" . $pull : null;
-        $attributes["class"][] = true === in_array($spin, $spins) ? "zmdi-hc-" . $spin : null;
-        $attributes["class"][] = true === in_array($rotate, $rotates) ? "zmdi-hc-rotate-" . $rotate : null;
-        $attributes["class"][] = true === in_array($flip, $flips) ? "zmdi-hc-flip-" . $flip : null;
-        $attributes["style"]   = $style;
+        $attributes["class"][] = MaterialDesignIconicFontIconRenderer::renderName($icon);
+        $attributes["class"][] = MaterialDesignIconicFontIconRenderer::renderSize($icon);
+        $attributes["class"][] = MaterialDesignIconicFontIconRenderer::renderFixedWidth($icon);
+        $attributes["class"][] = MaterialDesignIconicFontIconRenderer::renderBorder($icon);
+        $attributes["class"][] = MaterialDesignIconicFontIconRenderer::renderPull($icon);
+        $attributes["class"][] = MaterialDesignIconicFontIconRenderer::renderSpin($icon);
+        $attributes["class"][] = MaterialDesignIconicFontIconRenderer::renderRotate($icon);
+        $attributes["class"][] = MaterialDesignIconicFontIconRenderer::renderFlip($icon);
+        $attributes["style"]   = MaterialDesignIconicFontIconRenderer::renderStyle($icon);
 
         // Return the HTML.
         return static::coreHTMLElement("i", null, $attributes);

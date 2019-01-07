@@ -14,8 +14,8 @@ namespace WBW\Bundle\CoreBundle\Twig\Extension\Plugin;
 use Twig_Environment;
 use Twig_SimpleFilter;
 use Twig_SimpleFunction;
+use WBW\Bundle\CoreBundle\Icon\IconFactory;
 use WBW\Bundle\CoreBundle\Renderer\IconRendererInterface;
-use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
  * Material Design Iconic Font Twig extension.
@@ -71,7 +71,7 @@ class MaterialDesignIconicFontTwigExtension extends AbstractMaterialDesignIconic
      * @return string Returns the Material Design Iconic Font icon.
      */
     public function materialDesignIconicFontIconFunction(array $args = []) {
-        return $this->materialDesignIconicFontIcon(ArrayHelper::get($args, "name", "home"), ArrayHelper::get($args, "size"), ArrayHelper::get($args, "fixedWidth", false), ArrayHelper::get($args, "border", false), ArrayHelper::get($args, "pull"), ArrayHelper::get($args, "spin"), ArrayHelper::get($args, "rotate"), ArrayHelper::get($args, "flip"), ArrayHelper::get($args, "style"));
+        return $this->materialDesignIconicFontIcon(IconFactory::parseMaterialDesignIconicFontIcon($args));
     }
 
     /**
