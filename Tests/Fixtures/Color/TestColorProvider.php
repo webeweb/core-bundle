@@ -50,4 +50,5 @@ class TestColorProvider extends AbstractColorProvider {
     public function setDomain($domain) {
         return parent::setDomain($domain);
     }
+
 }
