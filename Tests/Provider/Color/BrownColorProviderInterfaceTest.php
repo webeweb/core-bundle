@@ -29,7 +29,7 @@ class BrownColorProviderInterfaceTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("brown", BrownColorProviderInterface::BROWN_COLOR);
+        $this->assertEquals("brown", BrownColorProviderInterface::BROWN_COLOR_NAME);
 
         $this->assertEquals("#EFEBE9", BrownColorProviderInterface::BROWN_COLOR_50);
         $this->assertEquals("#D7CCC8", BrownColorProviderInterface::BROWN_COLOR_100);

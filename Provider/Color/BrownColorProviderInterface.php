@@ -22,20 +22,6 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface BrownColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Brown color.
-     *
-     * @var string
-     */
-    const BROWN_COLOR = "brown";
-
-    /**
-     * Brown color "50"
-     *
-     * @var string
-     */
-    const BROWN_COLOR_50 = "#EFEBE9";
-
-    /**
      * Brown color "100"
      *
      * @var string
@@ -62,6 +48,13 @@ interface BrownColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const BROWN_COLOR_400 = "#8D6E63";
+
+    /**
+     * Brown color "50"
+     *
+     * @var string
+     */
+    const BROWN_COLOR_50 = "#EFEBE9";
 
     /**
      * Brown color "500"
@@ -97,5 +90,12 @@ interface BrownColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const BROWN_COLOR_900 = "#3E2723";
+
+    /**
+     * Brown color name.
+     *
+     * @var string
+     */
+    const BROWN_COLOR_NAME = "brown";
 
 }
