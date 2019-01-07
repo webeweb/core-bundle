@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Provider\Color\LightBlueColorProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Color
  */
-class LightBlueColorProvider implements LightBlueColorProviderInterface, ColorInterface {
+class LightBlueColorProvider extends AbstractColorProvider implements LightBlueColorProviderInterface {
 
     /**
      * Service name.
@@ -59,7 +59,7 @@ class LightBlueColorProvider implements LightBlueColorProviderInterface, ColorIn
      *{@inheritdoc}
      */
     public function getName() {
-        return self::LIGHT_BLUE_COLOR;
+        return self::LIGHT_BLUE_COLOR_NAME;
     }
 
 }

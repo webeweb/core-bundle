@@ -29,7 +29,7 @@ class LightBlueColorProviderInterfaceTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("light-blue", LightBlueColorProviderInterface::LIGHT_BLUE_COLOR);
+        $this->assertEquals("light-blue", LightBlueColorProviderInterface::LIGHT_BLUE_COLOR_NAME);
 
         $this->assertEquals("#E1F5FE", LightBlueColorProviderInterface::LIGHT_BLUE_COLOR_50);
         $this->assertEquals("#B3E5FC", LightBlueColorProviderInterface::LIGHT_BLUE_COLOR_100);

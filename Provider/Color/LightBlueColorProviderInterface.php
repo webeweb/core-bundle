@@ -22,20 +22,6 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface LightBlueColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Light blue color.
-     *
-     * @var string
-     */
-    const LIGHT_BLUE_COLOR = "light-blue";
-
-    /**
-     * Light blue color "50"
-     *
-     * @var string
-     */
-    const LIGHT_BLUE_COLOR_50 = "#E1F5FE";
-
-    /**
      * Light blue color "100"
      *
      * @var string
@@ -62,6 +48,13 @@ interface LightBlueColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const LIGHT_BLUE_COLOR_400 = "#29B6F6";
+
+    /**
+     * Light blue color "50"
+     *
+     * @var string
+     */
+    const LIGHT_BLUE_COLOR_50 = "#E1F5FE";
 
     /**
      * Light blue color "500"
@@ -125,5 +118,12 @@ interface LightBlueColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const LIGHT_BLUE_COLOR_A700 = "#0091EA";
+
+    /**
+     * Light blue color name.
+     *
+     * @var string
+     */
+    const LIGHT_BLUE_COLOR_NAME = "light-blue";
 
 }
