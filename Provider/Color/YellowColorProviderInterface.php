@@ -22,20 +22,6 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface YellowColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Yellow color.
-     *
-     * @var string
-     */
-    const YELLOW_COLOR = "yellow";
-
-    /**
-     * Yellow color "50"
-     *
-     * @var string
-     */
-    const YELLOW_COLOR_50 = "#FFFDE7";
-
-    /**
      * Yellow color "100"
      *
      * @var string
@@ -62,6 +48,13 @@ interface YellowColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const YELLOW_COLOR_400 = "#FFEE58";
+
+    /**
+     * Yellow color "50"
+     *
+     * @var string
+     */
+    const YELLOW_COLOR_50 = "#FFFDE7";
 
     /**
      * Yellow color "500"
@@ -125,5 +118,12 @@ interface YellowColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const YELLOW_COLOR_A700 = "#FFD600";
+
+    /**
+     * Yellow color name.
+     *
+     * @var string
+     */
+    const YELLOW_COLOR_NAME = "yellow";
 
 }
