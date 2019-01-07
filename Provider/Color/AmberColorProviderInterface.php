@@ -22,20 +22,6 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface AmberColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Amber color.
-     *
-     * @var string
-     */
-    const AMBER_COLOR = "amber";
-
-    /**
-     * Amber color "50"
-     *
-     * @var string
-     */
-    const AMBER_COLOR_50 = "#FFF8E1";
-
-    /**
      * Amber color "100"
      *
      * @var string
@@ -62,6 +48,13 @@ interface AmberColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const AMBER_COLOR_400 = "#FFCA28";
+
+    /**
+     * Amber color "50"
+     *
+     * @var string
+     */
+    const AMBER_COLOR_50 = "#FFF8E1";
 
     /**
      * Amber color "500"
@@ -125,5 +118,12 @@ interface AmberColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const AMBER_COLOR_A700 = "#FFAB00";
+
+    /**
+     * Amber color name.
+     *
+     * @var string
+     */
+    const AMBER_COLOR_NAME = "amber";
 
 }

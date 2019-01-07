@@ -83,7 +83,7 @@ class AmberColorProviderTest extends AbstractTestCase {
 
         $obj = new AmberColorProvider();
 
-        $res = AmberColorProviderInterface::AMBER_COLOR;
+        $res = AmberColorProviderInterface::AMBER_COLOR_NAME;
         $this->assertEquals($res, $obj->getName());
     }
 
