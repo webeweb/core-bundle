@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Icon;
 
 use WBW\Bundle\CoreBundle\Icon\FontAwesomeIconInterface;
 use WBW\Bundle\CoreBundle\Icon\FontAwesomeIconRenderer;
-use WBW\Bundle\CoreBundle\Icon\IconParser;
+use WBW\Bundle\CoreBundle\Icon\IconFactory;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
@@ -38,7 +38,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
         parent::setUp();
 
         // Set a Font Awesome icon mock.
-        $this->fontAwesomeIcon = IconParser::parseFontAwesomeIcon([
+        $this->fontAwesomeIcon = IconFactory::parseFontAwesomeIcon([
             "name"       => "home",
             "style"      => "color: #000000;",
             "animation"  => "spin",

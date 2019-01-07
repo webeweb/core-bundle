@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Twig\Extension\Plugin;
 use Twig_Environment;
 use Twig_SimpleFilter;
 use Twig_SimpleFunction;
-use WBW\Bundle\CoreBundle\Icon\IconParser;
+use WBW\Bundle\CoreBundle\Icon\IconFactory;
 use WBW\Bundle\CoreBundle\Renderer\IconRendererInterface;
 
 /**
@@ -48,7 +48,7 @@ class FontAwesomeTwigExtension extends AbstractFontAwesomeTwigExtension implemen
      * @return string Returns the Font Awesome icon.
      */
     public function fontAwesomeIconFunction(array $args = []) {
-        return $this->fontAwesomeIcon(IconParser::parseFontAwesomeIcon($args));
+        return $this->fontAwesomeIcon(IconFactory::parseFontAwesomeIcon($args));
     }
 
     /**
