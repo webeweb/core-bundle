@@ -61,8 +61,8 @@ class FontAwesomeIconTest extends AbstractTestCase {
 
         $obj = new FontAwesomeIcon();
 
-        $obj->setAnimation("animation");
-        $this->assertNotEquals("animation", $obj->getAnimation());
+        $obj->setAnimation("exception");
+        $this->assertNotEquals("exception", $obj->getAnimation());
     }
 
     /**
@@ -113,8 +113,8 @@ class FontAwesomeIconTest extends AbstractTestCase {
 
         $obj = new FontAwesomeIcon();
 
-        $obj->setFont("font");
-        $this->assertNotEquals("font", $obj->getFont());
+        $obj->setFont("exception");
+        $this->assertNotEquals("exception", $obj->getFont());
     }
 
     /**
@@ -139,8 +139,8 @@ class FontAwesomeIconTest extends AbstractTestCase {
 
         $obj = new FontAwesomeIcon();
 
-        $obj->setPull("pull");
-        $this->assertNotEquals("pull", $obj->getPull());
+        $obj->setPull("exception");
+        $this->assertNotEquals("exception", $obj->getPull());
     }
 
     /**
@@ -165,8 +165,8 @@ class FontAwesomeIconTest extends AbstractTestCase {
 
         $obj = new FontAwesomeIcon();
 
-        $obj->setSize("size");
-        $this->assertNotEquals("size", $obj->getSize());
+        $obj->setSize("exception");
+        $this->assertNotEquals("exception", $obj->getSize());
     }
 
 }
