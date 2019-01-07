@@ -22,20 +22,6 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 interface DeepOrangeColorProviderInterface extends ColorProviderInterface {
 
     /**
-     * Deep orange color.
-     *
-     * @var string
-     */
-    const DEEP_ORANGE_COLOR = "deep-orange";
-
-    /**
-     * Deep orange color "50"
-     *
-     * @var string
-     */
-    const DEEP_ORANGE_COLOR_50 = "#FBE9E7";
-
-    /**
      * Deep orange color "100"
      *
      * @var string
@@ -62,6 +48,13 @@ interface DeepOrangeColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const DEEP_ORANGE_COLOR_400 = "#FF7043";
+
+    /**
+     * Deep orange color "50"
+     *
+     * @var string
+     */
+    const DEEP_ORANGE_COLOR_50 = "#FBE9E7";
 
     /**
      * Deep orange color "500"
@@ -125,5 +118,12 @@ interface DeepOrangeColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const DEEP_ORANGE_COLOR_A700 = "#DD2C00";
+
+    /**
+     * Deep orange color name.
+     *
+     * @var string
+     */
+    const DEEP_ORANGE_COLOR_NAME = "deep-orange";
 
 }

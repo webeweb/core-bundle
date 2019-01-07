@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Provider\Color\DeepOrangeColorProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Color
  */
-class DeepOrangeColorProvider implements DeepOrangeColorProviderInterface, ColorInterface {
+class DeepOrangeColorProvider extends AbstractColorProvider implements DeepOrangeColorProviderInterface {
 
     /**
      * Service name.
@@ -59,7 +59,7 @@ class DeepOrangeColorProvider implements DeepOrangeColorProviderInterface, Color
      *{@inheritdoc}
      */
     public function getName() {
-        return self::DEEP_ORANGE_COLOR;
+        return self::DEEP_ORANGE_COLOR_NAME;
     }
 
 }

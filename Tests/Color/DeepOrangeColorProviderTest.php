@@ -83,7 +83,7 @@ class DeepOrangeColorProviderTest extends AbstractTestCase {
 
         $obj = new DeepOrangeColorProvider();
 
-        $res = DeepOrangeColorProviderInterface::DEEP_ORANGE_COLOR;
+        $res = DeepOrangeColorProviderInterface::DEEP_ORANGE_COLOR_NAME;
         $this->assertEquals($res, $obj->getName());
     }
 
