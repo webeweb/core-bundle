@@ -31,7 +31,7 @@ class AbstractColorProviderTest extends AbstractTestCase {
 
         $obj = new TestColorProvider();
 
-        $this->assertEquals("MaterialDesignColorPalette", $obj->getDomain());
+        $this->assertNull($obj->getDomain());
     }
 
     /**

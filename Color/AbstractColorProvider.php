@@ -34,7 +34,7 @@ abstract class AbstractColorProvider implements ColorProviderInterface {
      *
      * @param string $domain The domain.
      */
-    protected function __construct($domain = "MaterialDesignColorPalette") {
+    protected function __construct($domain) {
         $this->setDomain($domain);
     }
 
