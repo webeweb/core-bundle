@@ -39,7 +39,6 @@ class AbstractThemeManagerTest extends AbstractTestCase {
         $obj->addGlobal();
 
         $res = $this->twigEnvironment->getGlobals();
-
         $this->assertCount(1, $res);
 
         $this->assertArrayHasKey("ThemeProvider", $res);
@@ -58,7 +57,6 @@ class AbstractThemeManagerTest extends AbstractTestCase {
         $obj->addGlobal();
 
         $res = $this->twigEnvironment->getGlobals();
-
         $this->assertCount(0, $res);
     }
 
