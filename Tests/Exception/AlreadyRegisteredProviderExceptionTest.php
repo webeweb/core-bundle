@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Exception;
+namespace  WBW\Bundle\CoreBundle\Tests\Exception;
 
 use WBW\Bundle\CoreBundle\Exception\AlreadyRegisteredProviderException;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Theme\DefaultApplicationThemeProvider;
  * Already registered provider exception test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package Exception
+ * @package  WBW\Bundle\CoreBundle\Tests\Exception
  */
 class AlreadyRegisteredProviderExceptionTest extends AbstractTestCase {
 
