@@ -8,6 +8,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+
 use WBW\Bundle\CoreBundle\Tests\AbstractKernel;
 
 /**
@@ -23,6 +24,7 @@ class TestKernel extends AbstractKernel {
      */
     public function registerBundles() {
         $bundles = [
+            new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\MonologBundle\MonologBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
