@@ -23,6 +23,7 @@ use Symfony\Component\Translation\TranslatorInterface;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
+use WBW\Bundle\CoreBundle\Helper\FormHelper;
 use WBW\Bundle\CoreBundle\Helper\UserHelper;
 use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
 
@@ -51,6 +52,15 @@ abstract class AbstractController extends Controller {
      */
     protected function getEventDispatcher() {
         return $this->get("event_dispatcher");
+    }
+
+    /**
+     * Get the form helper.
+     *
+     * @return FormHelper Returns the form helper.
+     */
+    protected function getFormHelper() {
+        return $this->get(FormHelper::SERVICE_NAME);
     }
 
     /**

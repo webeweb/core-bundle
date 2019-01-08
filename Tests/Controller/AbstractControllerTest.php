@@ -23,6 +23,7 @@ use Symfony\Component\Translation\TranslatorInterface;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
+use WBW\Bundle\CoreBundle\Helper\FormHelper;
 use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Controller\TestAbstractController;
@@ -34,6 +35,13 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Controller\TestAbstractController;
  * @package WBW\Bundle\CoreBundle\Tests\Controller
  */
 class AbstractControllerTest extends AbstractTestCase {
+
+    /**
+     * Form helper.
+     *
+     * @var FormHelper
+     */
+    private $formHelper;
 
     /**
      * Kernel event listener.
@@ -48,10 +56,14 @@ class AbstractControllerTest extends AbstractTestCase {
     protected function setUp() {
         parent::setUp();
 
+        // Set a Form helper mock.
+        $this->formHelper = $this->getMockBuilder(FormHelper::class)->disableOriginalConstructor()->getMock();
+
         // Set a Kernel event listener mock.
         $this->kernelEventListener = $this->getMockBuilder(KernelEventListener::class)->disableOriginalConstructor()->getMock();
 
         // Set the Container builder mock.
+        $this->containerBuilder->set(FormHelper::SERVICE_NAME, $this->formHelper);
         $this->containerBuilder->set(KernelEventListener::SERVICE_NAME, $this->kernelEventListener);
     }
 
@@ -83,6 +95,21 @@ class AbstractControllerTest extends AbstractTestCase {
         $res = $obj->getEventDispatcher();
         $this->assertInstanceOf(EventDispatcherInterface::class, $res);
         $this->assertSame($this->eventDispatcher, $res);
+    }
+
+    /**
+     * Tests the getFormHelper() method.
+     *
+     * @return void
+     */
+    public function testGetFormHelper() {
+
+        $obj = new TestAbstractController();
+        $obj->setContainer($this->containerBuilder);
+
+        $res = $obj->getFormHelper();
+        $this->assertInstanceOf(FormHelper::class, $res);
+        $this->assertSame($this->formHelper, $res);
     }
 
     /**

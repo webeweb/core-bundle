@@ -39,6 +39,13 @@ class TestAbstractController extends AbstractController {
     /**
      * {@inheritdoc}
      */
+    public function getFormHelper() {
+        return parent::getFormHelper();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getKernelEventListener() {
         return parent::getKernelEventListener();
     }
