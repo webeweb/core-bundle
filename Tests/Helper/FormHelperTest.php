@@ -12,8 +12,12 @@
 namespace WBW\Bundle\CoreBundle\Tests\Helper;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Exception;
+use Symfony\Component\EventDispatcher\Event;
+use WBW\Bundle\CoreBundle\Exception\RedirectResponseException;
 use WBW\Bundle\CoreBundle\Helper\FormHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
+use WBW\Library\Core\Exception\Argument\IllegalArgumentException;
 
 /**
  * Form helper test.
@@ -44,17 +48,96 @@ class FormHelperTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the checkCollection() method.
+     *
+     * @return void
+     */
+    public function testCheckCollection() {
+
+        $obj = new FormHelper($this->objectManager, $this->eventDispatcher);
+
+        $this->assertNull($obj->checkCollection($this->collection, "notification", "redirectURL"));
+    }
+
+    /**
+     * Tests the checkCollection() method.
+     *
+     * @return void
+     */
+    public function testCheckCollectionWithIllegalArgumentException() {
+
+        $obj = new FormHelper($this->objectManager, $this->eventDispatcher);
+
+        try {
+
+            $obj->checkCollection(null, "notification", "redirectURL");
+        } catch (Exception $ex) {
+
+            $this->assertInstanceOf(IllegalArgumentException::class, $ex);
+            $this->assertEquals("The collection must be a countable", $ex->getMessage());
+        }
+    }
+
+    /**
+     * Tests the checkCollection() method.
+     *
+     * @return void
+     */
+    public function testCheckCollectionWithRedirectResponseException() {
+
+        // Set the Event dispatcher mock.
+        $this->eventDispatcher->expects($this->any())->method("hasListeners")->willReturn(true);
+        $this->eventDispatcher->expects($this->any())->method("dispatch")->willReturnCallback(function($eventName, Event $event) {
+            return $event;
+        });
+
+        $obj = new FormHelper($this->objectManager, $this->eventDispatcher);
+
+        try {
+
+            $obj->checkCollection($this->collection, "notification", "redirectURL", 11);
+        } catch (Exception $ex) {
+
+            $this->assertInstanceOf(RedirectResponseException::class, $ex);
+            $this->assertEquals("redirectURL", $ex->getRedirectURL());
+        }
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $obj = new FormHelper($this->objectManager, $this->eventDispatcher);
+
+        $this->assertEquals("webeweb.core.helper.form", FormHelper::SERVICE_NAME);
+        $this->assertSame($this->objectManager, $obj->getObjectManager());
+    }
+
+    /**
      * Tests the onPostHandleRequestWithCollection() method.
      *
      * @return void
      */
     public function testOnPostRequestWithCollection() {
 
+        $obj = new FormHelper($this->objectManager, $this->eventDispatcher);
+
+        // Set a Collection mocks.
         $oldCollection = $this->collection;
-        $newCollection = FormHelper::onPreHandleRequestWithCollection($oldCollection);
+        $newCollection = $obj->onPreHandleRequestWithCollection($oldCollection);
         $newCollection->removeElement("element1");
 
-        $this->assertNull(FormHelper::onPostHandleRequestWithCollection($oldCollection, $newCollection, $this->objectManager));
+        $this->assertEquals(10, $oldCollection->count());
+        $this->assertEquals(9, $newCollection->count());
+
+        $res = $obj->onPostHandleRequestWithCollection($oldCollection, $newCollection);
+        $this->assertEquals(1, $res);
+
+        $this->assertEquals(10, $oldCollection->count());
+        $this->assertEquals(9, $newCollection->count());
     }
 
     /**
@@ -64,12 +147,15 @@ class FormHelperTest extends AbstractTestCase {
      */
     public function testOnPreHandleRequestWithCollection() {
 
-        $res = FormHelper::onPreHandleRequestWithCollection($this->collection);
+        $obj = new FormHelper($this->objectManager, $this->eventDispatcher);
 
+        $res = $obj->onPreHandleRequestWithCollection($this->collection);
         $this->assertEquals(10, $res->count());
+
         $this->assertNotSame($res, $this->collection);
+
         for ($i = 0; $i < 10; ++$i) {
-            $this->assertEquals("element" . $i, $res->get($i));
+            $this->assertSame($this->collection->get($i), $res->get($i));
         }
     }
 
