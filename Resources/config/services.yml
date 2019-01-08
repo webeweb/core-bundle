@@ -23,11 +23,6 @@ services:
             - { name: "kernel.event_listener", event: "webeweb.core.event.notification.success", method: "onNotify" }
             - { name: "kernel.event_listener", event: "webeweb.core.event.notification.warning", method: "onNotify" }
 
-    webeweb.core.helper.form:
-        class:     WBW\Bundle\CoreBundle\Helper\FormHelper
-        arguments: ["@doctrine.orm.entity_manager", "@event_dispatcher"]
-        public:    true
-
     webeweb.core.manager.color:
         class:  WBW\Bundle\CoreBundle\Manager\ColorManager
         public: true
