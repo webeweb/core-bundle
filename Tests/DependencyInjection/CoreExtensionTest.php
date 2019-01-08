@@ -33,6 +33,7 @@ use WBW\Bundle\CoreBundle\Color\YellowColorProvider;
 use WBW\Bundle\CoreBundle\DependencyInjection\CoreExtension;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\EventListener\NotificationEventListener;
+use WBW\Bundle\CoreBundle\Manager\ColorManager;
 use WBW\Bundle\CoreBundle\Manager\ThemeManager;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\FontAwesomeTwigExtension;
@@ -65,6 +66,7 @@ class CoreExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(NotificationEventListener::class, $this->containerBuilder->get(NotificationEventListener::SERVICE_NAME));
 
         // Managers
+        $this->assertInstanceOf(ColorManager::class, $this->containerBuilder->get(ColorManager::SERVICE_NAME));
         $this->assertInstanceOf(ThemeManager::class, $this->containerBuilder->get(ThemeManager::SERVICE_NAME));
 
         // Providers
@@ -94,7 +96,7 @@ class CoreExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(MaterialDesignIconicFontTwigExtension::class, $this->containerBuilder->get(MaterialDesignIconicFontTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(MeteoconsTwigExtension::class, $this->containerBuilder->get(MeteoconsTwigExtension::SERVICE_NAME));
 
-        // Twig extensions Renderers
+        // Twig extensions Renderer
         $this->assertInstanceOf(RendererTwigExtension::class, $this->containerBuilder->get(RendererTwigExtension::SERVICE_NAME));
     }
 
