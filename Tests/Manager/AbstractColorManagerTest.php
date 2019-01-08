@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Manager;
+namespace  WBW\Bundle\CoreBundle\Tests\Manager;
 
 use Exception;
 use WBW\Bundle\CoreBundle\Color\RedColorProvider;
@@ -22,7 +22,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\TestColorManager;
  * Abstract color manager test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package Manager
+ * @package  WBW\Bundle\CoreBundle\Tests\Manager
  */
 class AbstractColorManagerTest extends AbstractTestCase {
 
