@@ -13,6 +13,7 @@ namespace WBW\Bundle\CoreBundle\Manager;
 
 use ReflectionException;
 use WBW\Bundle\CoreBundle\Exception\AlreadyRegisteredProviderException;
+use WBW\Bundle\CoreBundle\Helper\ColorHelper;
 use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 
 /**
@@ -51,16 +52,17 @@ abstract class AbstractColorManager extends AbstractManager {
     /**
      * Register a color provider.
      *
-     * @param ColorProviderInterface $provider The color provider.
+     * @param ColorProviderInterface $colorProvider The color provider.
      * @throws AlreadyRegisteredProviderException Throws an already registered provider exception.
      * @throws ReflectionException Throws a reflection exception if an error occurs.
      */
-    public function registerProvider(ColorProviderInterface $provider) {
-        if (true === array_key_exists($provider->getName(), $this->index)) {
-            throw new AlreadyRegisteredProviderException($provider);
+    public function registerProvider(ColorProviderInterface $colorProvider) {
+        $key = ColorHelper::getIdentifier($colorProvider);
+        if (true === array_key_exists($key, $this->index)) {
+            throw new AlreadyRegisteredProviderException($colorProvider);
         }
-        $this->index[$provider->getName()] = $this->size();
-        $this->addProvider($provider);
+        $this->index[$key] = $this->size();
+        $this->addProvider($colorProvider);
     }
 
     /**
