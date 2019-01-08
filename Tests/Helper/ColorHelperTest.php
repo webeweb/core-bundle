@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Helper;
 
+use WBW\Bundle\CoreBundle\Color\RedColorProvider;
 use WBW\Bundle\CoreBundle\Helper\ColorHelper;
 use WBW\Bundle\CoreBundle\Provider\Color\AmberColorProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\Color\BlueColorProviderInterface;
@@ -42,6 +43,20 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class ColorHelperTest extends AbstractTestCase {
 
     /**
+     * Tests the getIdentifier() method.
+     *
+     * @return void
+     */
+    public function testGetIdentifier() {
+
+        // Set a Color provider mock.
+        $colorProvider = new RedColorProvider();
+
+        $res = implode(":", ["MaterialDesignColorPalette", "red"]);
+        $this->assertEquals($res, ColorHelper::getIdentifier($colorProvider));
+    }
+
+    /**
      * Tests the getMaterialDesignColorPalette() method.
      *
      * @return void
@@ -49,7 +64,6 @@ class ColorHelperTest extends AbstractTestCase {
     public function testGetMaterialDesignColorPalette() {
 
         $res = ColorHelper::getMaterialDesignColorPalette();
-
         $this->assertCount(19, $res);
 
         $this->assertInstanceOf(RedColorProviderInterface::class, $res[0]);
