@@ -49,10 +49,10 @@ abstract class AbstractFontAwesomeTwigExtension extends AbstractTwigExtension {
         $attributes["class"][] = FontAwesomeIconRenderer::renderName($icon);
         $attributes["class"][] = FontAwesomeIconRenderer::renderSize($icon);
         $attributes["class"][] = FontAwesomeIconRenderer::renderFixedWidth($icon);
-        $attributes["class"][] = FontAwesomeIconRenderer::renderBordered($icon);;
-        $attributes["class"][] = FontAwesomeIconRenderer::renderPull($icon);;
-        $attributes["class"][] = FontAwesomeIconRenderer::renderAnimation($icon);;
-        $attributes["style"] = FontAwesomeIconRenderer::renderStyle($icon);;
+        $attributes["class"][] = FontAwesomeIconRenderer::renderBordered($icon);
+        $attributes["class"][] = FontAwesomeIconRenderer::renderPull($icon);
+        $attributes["class"][] = FontAwesomeIconRenderer::renderAnimation($icon);
+        $attributes["style"]   = FontAwesomeIconRenderer::renderStyle($icon);
 
         // Return the HTML.
         return static::coreHTMLElement("i", null, $attributes);
