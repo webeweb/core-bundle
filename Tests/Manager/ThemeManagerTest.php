@@ -93,6 +93,8 @@ class ThemeManagerTest extends AbstractTestCase {
 
         $obj = new ThemeManager($this->twigEnvironment);
 
+        $this->assertEquals("webeweb.core.manager.theme", ThemeManager::SERVICE_NAME);
+
         $this->assertNull($obj->getApplicationThemeProvider());
         $this->assertNull($obj->getBreadcrumbsThemeProvider());
         $this->assertNull($obj->getFooterThemeProvider());
