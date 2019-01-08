@@ -33,6 +33,7 @@ use WBW\Bundle\CoreBundle\Color\YellowColorProvider;
 use WBW\Bundle\CoreBundle\DependencyInjection\CoreExtension;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\EventListener\NotificationEventListener;
+use WBW\Bundle\CoreBundle\Helper\FormHelper;
 use WBW\Bundle\CoreBundle\Manager\ColorManager;
 use WBW\Bundle\CoreBundle\Manager\ThemeManager;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
@@ -65,6 +66,9 @@ class CoreExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(KernelEventListener::class, $this->containerBuilder->get(KernelEventListener::SERVICE_NAME));
         $this->assertInstanceOf(NotificationEventListener::class, $this->containerBuilder->get(NotificationEventListener::SERVICE_NAME));
 
+        // Helpers.
+        $this->assertInstanceOf(FormHelper::class, $this->containerBuilder->get(FormHelper::SERVICE_NAME));
+
         // Managers
         $this->assertInstanceOf(ColorManager::class, $this->containerBuilder->get(ColorManager::SERVICE_NAME));
         $this->assertInstanceOf(ThemeManager::class, $this->containerBuilder->get(ThemeManager::SERVICE_NAME));
@@ -90,13 +94,13 @@ class CoreExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(TealColorProvider::class, $this->containerBuilder->get(TealColorProvider::SERVICE_NAME));
         $this->assertInstanceOf(YellowColorProvider::class, $this->containerBuilder->get(YellowColorProvider::SERVICE_NAME));
 
-        // Twig extensions Plug-ins
+        // Plug-ins Twig extensions
         $this->assertInstanceOf(FontAwesomeTwigExtension::class, $this->containerBuilder->get(FontAwesomeTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(JQueryInputMaskTwigExtension::class, $this->containerBuilder->get(JQueryInputMaskTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(MaterialDesignIconicFontTwigExtension::class, $this->containerBuilder->get(MaterialDesignIconicFontTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(MeteoconsTwigExtension::class, $this->containerBuilder->get(MeteoconsTwigExtension::SERVICE_NAME));
 
-        // Twig extensions Renderer
+        // Renderer Twig extension
         $this->assertInstanceOf(RendererTwigExtension::class, $this->containerBuilder->get(RendererTwigExtension::SERVICE_NAME));
     }
 
