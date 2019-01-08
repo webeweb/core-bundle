@@ -30,6 +30,7 @@ use WBW\Bundle\CoreBundle\Color\PurpleColorProvider;
 use WBW\Bundle\CoreBundle\Color\RedColorProvider;
 use WBW\Bundle\CoreBundle\Color\TealColorProvider;
 use WBW\Bundle\CoreBundle\Color\YellowColorProvider;
+use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 
 /**
  * Color helper.
@@ -38,6 +39,16 @@ use WBW\Bundle\CoreBundle\Color\YellowColorProvider;
  * @package WBW\Bundle\CoreBundle\Helper
  */
 class ColorHelper {
+
+    /**
+     * Get an identifier.
+     *
+     * @param ColorProviderInterface $colorProvider The color provider.
+     * @return string Returns the identifier.
+     */
+    public static function getIdentifier(ColorProviderInterface $colorProvider) {
+        return implode(":", [$colorProvider->getDomain(), $colorProvider->getName()]);
+    }
 
     /**
      * Get the Material Design Color Palette.
