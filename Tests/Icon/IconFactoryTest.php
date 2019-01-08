@@ -32,8 +32,6 @@ class IconFactoryTest extends AbstractTestCase {
     public function testNewFontAwesomeIcon() {
 
         $obj = IconFactory::newFontAwesomeIcon();
-
-        $this->assertNotNull($obj);
         $this->assertInstanceOf(FontAwesomeIconInterface::class, $obj);
     }
 
@@ -45,8 +43,6 @@ class IconFactoryTest extends AbstractTestCase {
     public function testNewMaterialDesignIconicFontIcon() {
 
         $obj = IconFactory::newMaterialDesignIconicFontIcon();
-
-        $this->assertNotNull($obj);
         $this->assertInstanceOf(MaterialDesignIconicFontIconInterface::class, $obj);
     }
 
@@ -70,7 +66,6 @@ class IconFactoryTest extends AbstractTestCase {
         ];
 
         $obj = IconFactory::parseFontAwesomeIcon($arg);
-        $this->assertNotNull($obj);
         $this->assertInstanceOf(FontAwesomeIconInterface::class, $obj);
 
         $this->assertEquals($arg["name"], $obj->getName());
