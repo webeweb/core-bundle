@@ -49,7 +49,7 @@ class FontAwesomeIconEnumerator {
     /**
      * Enumerates the pulls.
      *
-     * @return array Returns the pulls enumaration.
+     * @return array Returns the pulls enumeration.
      */
     public static function enumPulls() {
         return [
