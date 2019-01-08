@@ -32,7 +32,7 @@ class BlueColorProvider extends AbstractColorProvider implements BlueColorProvid
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
+        parent::__construct("MaterialDesignColorPalette");
     }
 
     /**

@@ -31,7 +31,10 @@ class BlueGreyColorProviderTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
+        $obj = new BlueGreyColorProvider();
+
         $this->assertEquals("webeweb.core.provider.color.blue_grey", BlueGreyColorProvider::SERVICE_NAME);
+        $this->assertEquals("MaterialDesignColorPalette", $obj->getDomain());
     }
 
     /**
@@ -75,8 +78,7 @@ class BlueGreyColorProviderTest extends AbstractTestCase {
 
         $obj = new BlueGreyColorProvider();
 
-        $res = BlueGreyColorProviderInterface::BLUE_GREY_COLOR_NAME;
-        $this->assertEquals($res, $obj->getName());
+        $this->assertEquals(BlueGreyColorProviderInterface::BLUE_GREY_COLOR_NAME, $obj->getName());
     }
 
 }

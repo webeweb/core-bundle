@@ -32,7 +32,7 @@ class TealColorProvider extends AbstractColorProvider implements TealColorProvid
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
+        parent::__construct("MaterialDesignColorPalette");
     }
 
     /**

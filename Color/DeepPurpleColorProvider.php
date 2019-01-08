@@ -32,7 +32,7 @@ class DeepPurpleColorProvider extends AbstractColorProvider implements DeepPurpl
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
+        parent::__construct("MaterialDesignColorPalette");
     }
 
     /**

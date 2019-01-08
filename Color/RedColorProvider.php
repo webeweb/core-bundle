@@ -32,7 +32,7 @@ class RedColorProvider extends AbstractColorProvider implements RedColorProvider
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
+        parent::__construct("MaterialDesignColorPalette");
     }
 
     /**

@@ -32,7 +32,7 @@ class IndigoColorProvider extends AbstractColorProvider implements IndigoColorPr
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
+        parent::__construct("MaterialDesignColorPalette");
     }
 
     /**

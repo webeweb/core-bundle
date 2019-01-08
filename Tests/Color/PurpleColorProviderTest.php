@@ -31,7 +31,10 @@ class PurpleColorProviderTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
+        $obj = new PurpleColorProvider();
+
         $this->assertEquals("webeweb.core.provider.color.purple", PurpleColorProvider::SERVICE_NAME);
+        $this->assertEquals("MaterialDesignColorPalette", $obj->getDomain());
     }
 
     /**
@@ -83,8 +86,7 @@ class PurpleColorProviderTest extends AbstractTestCase {
 
         $obj = new PurpleColorProvider();
 
-        $res = PurpleColorProviderInterface::PURPLE_COLOR_NAME;
-        $this->assertEquals($res, $obj->getName());
+        $this->assertEquals(PurpleColorProviderInterface::PURPLE_COLOR_NAME, $obj->getName());
     }
 
 }

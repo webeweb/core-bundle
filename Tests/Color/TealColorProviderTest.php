@@ -31,7 +31,10 @@ class TealColorProviderTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
+        $obj = new TealColorProvider();
+
         $this->assertEquals("webeweb.core.provider.color.teal", TealColorProvider::SERVICE_NAME);
+        $this->assertEquals("MaterialDesignColorPalette", $obj->getDomain());
     }
 
     /**
@@ -83,8 +86,7 @@ class TealColorProviderTest extends AbstractTestCase {
 
         $obj = new TealColorProvider();
 
-        $res = TealColorProviderInterface::TEAL_COLOR_NAME;
-        $this->assertEquals($res, $obj->getName());
+        $this->assertEquals(TealColorProviderInterface::TEAL_COLOR_NAME, $obj->getName());
     }
 
 }

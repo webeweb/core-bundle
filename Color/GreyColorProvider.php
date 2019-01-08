@@ -32,7 +32,7 @@ class GreyColorProvider extends AbstractColorProvider implements GreyColorProvid
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
+        parent::__construct("MaterialDesignColorPalette");
     }
 
     /**

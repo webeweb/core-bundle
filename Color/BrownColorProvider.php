@@ -32,7 +32,7 @@ class BrownColorProvider extends AbstractColorProvider implements BrownColorProv
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
+        parent::__construct("MaterialDesignColorPalette");
     }
 
     /**

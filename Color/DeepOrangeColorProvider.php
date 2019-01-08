@@ -32,7 +32,7 @@ class DeepOrangeColorProvider extends AbstractColorProvider implements DeepOrang
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
+        parent::__construct("MaterialDesignColorPalette");
     }
 
     /**

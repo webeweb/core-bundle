@@ -32,7 +32,7 @@ class OrangeColorProvider extends AbstractColorProvider implements OrangeColorPr
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
+        parent::__construct("MaterialDesignColorPalette");
     }
 
     /**

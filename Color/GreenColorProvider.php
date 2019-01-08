@@ -32,7 +32,7 @@ class GreenColorProvider extends AbstractColorProvider implements GreenColorProv
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
+        parent::__construct("MaterialDesignColorPalette");
     }
 
     /**

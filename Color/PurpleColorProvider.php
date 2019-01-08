@@ -32,7 +32,7 @@ class PurpleColorProvider extends AbstractColorProvider implements PurpleColorPr
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
+        parent::__construct("MaterialDesignColorPalette");
     }
 
     /**

@@ -32,7 +32,7 @@ class CyanColorProvider extends AbstractColorProvider implements CyanColorProvid
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
+        parent::__construct("MaterialDesignColorPalette");
     }
 
     /**

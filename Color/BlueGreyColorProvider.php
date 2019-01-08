@@ -32,7 +32,7 @@ class BlueGreyColorProvider extends AbstractColorProvider implements BlueGreyCol
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
+        parent::__construct("MaterialDesignColorPalette");
     }
 
     /**

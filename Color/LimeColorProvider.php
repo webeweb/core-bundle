@@ -32,7 +32,7 @@ class LimeColorProvider extends AbstractColorProvider implements LimeColorProvid
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
+        parent::__construct("MaterialDesignColorPalette");
     }
 
     /**

@@ -32,7 +32,7 @@ class LightBlueColorProvider extends AbstractColorProvider implements LightBlueC
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
+        parent::__construct("MaterialDesignColorPalette");
     }
 
     /**

@@ -32,7 +32,7 @@ class PinkColorProvider extends AbstractColorProvider implements PinkColorProvid
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
+        parent::__construct("MaterialDesignColorPalette");
     }
 
     /**

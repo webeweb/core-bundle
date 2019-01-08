@@ -31,7 +31,10 @@ class CyanColorProviderTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
+        $obj = new CyanColorProvider();
+
         $this->assertEquals("webeweb.core.provider.color.cyan", CyanColorProvider::SERVICE_NAME);
+        $this->assertEquals("MaterialDesignColorPalette", $obj->getDomain());
     }
 
     /**
@@ -83,8 +86,7 @@ class CyanColorProviderTest extends AbstractTestCase {
 
         $obj = new CyanColorProvider();
 
-        $res = CyanColorProviderInterface::CYAN_COLOR_NAME;
-        $this->assertEquals($res, $obj->getName());
+        $this->assertEquals(CyanColorProviderInterface::CYAN_COLOR_NAME, $obj->getName());
     }
 
 }
