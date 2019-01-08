@@ -39,7 +39,7 @@ class Select2HelperTest extends AbstractTestCase {
     protected function setUp() {
         parent::setUp();
 
-        // Set a items array mock.
+        // Set an Items array mock.
         $this->items = [];
 
         $this->items[] = new TestSelect2Item("1", "item1");
