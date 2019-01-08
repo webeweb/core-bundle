@@ -12,8 +12,9 @@
 namespace Manager;
 
 use Exception;
-use WBW\Bundle\CoreBundle\Color\AmberColorProvider;
+use WBW\Bundle\CoreBundle\Color\RedColorProvider;
 use WBW\Bundle\CoreBundle\Exception\AlreadyRegisteredProviderException;
+use WBW\Bundle\CoreBundle\Helper\ColorHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\TestColorManager;
 
@@ -30,29 +31,42 @@ class AbstractColorManagerTest extends AbstractTestCase {
      *
      * @return void
      */
+    public function testConstruct() {
+
+        $obj = new TestColorManager();
+
+        $this->assertEquals([], $obj->getProviders());
+        $this->assertEquals([], $obj->getIndex());
+    }
+
+    /**
+     * Tests the registerProvider() method.
+     *
+     * @return void
+     */
     public function testRegisterProvider() {
 
         // Set a Color provider mock.
-        $colorProvider = new AmberColorProvider();
+        $colorProvider = new RedColorProvider();
 
         $obj = new TestColorManager();
 
         $obj->registerProvider($colorProvider);
         $this->assertSame($colorProvider, $obj->getProviders()[0]);
 
-        $this->assertEquals(0, $obj->getIndex()[$colorProvider->getName()]);
-        $this->assertEquals(1, $obj->size());
+        $this->assertCount(1, $obj->getIndex());
+        $this->assertArrayHasKey(ColorHelper::getIdentifier($colorProvider), $obj->getIndex());
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests the registerProvider() method.
      *
      * @return void
      */
     public function testRegisterProviderWithAlreadyRegisteredException() {
 
         // Set a Color provider mock.
-        $colorProvider = new AmberColorProvider();
+        $colorProvider = new RedColorProvider();
 
         $obj = new TestColorManager();
 
