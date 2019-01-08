@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\EventListener;
 
+use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
@@ -79,7 +80,7 @@ class KernelEventListener {
      *
      * @param GetResponseForExceptionEvent $event The event.
      * @param BadUserRoleException $ex The exception.
-     * @return GetResponseForExceptionEvent Return the event.
+     * @return GetResponseForExceptionEvent Returns the event.
      */
     protected function handleBadUserRoleException(GetResponseForExceptionEvent $event, BadUserRoleException $ex) {
         if (null !== $ex->getRedirectUrl()) {
@@ -93,7 +94,7 @@ class KernelEventListener {
      *
      * @param GetResponseForExceptionEvent $event The event.
      * @param RedirectResponseException $ex The exception.
-     * @return GetResponseForExceptionEvent Return the event.
+     * @return GetResponseForExceptionEvent Returns the event.
      */
     protected function handleRedirectResponseException(GetResponseForExceptionEvent $event, RedirectResponseException $ex) {
         if (null !== $ex->getRedirectUrl()) {
@@ -129,7 +130,7 @@ class KernelEventListener {
      * On kernel request.
      *
      * @param GetResponseEvent $event The event.
-     * @return void
+     * @return Event Returns the event.
      */
     public function onKernelRequest(GetResponseEvent $event) {
 
@@ -138,6 +139,9 @@ class KernelEventListener {
 
         // Register the theme providers.
         $this->getThemeManager()->addGlobal();
+
+        // Return the event.
+        return $event;
     }
 
 }
