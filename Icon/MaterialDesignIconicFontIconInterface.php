@@ -184,7 +184,7 @@ interface MaterialDesignIconicFontIconInterface extends IconInterface {
      * Set the border.
      *
      * @param string $border The border.
-     * @return MaterialDesignIconicFontIconInterface Returns this material Design Iconic Font icon.
+     * @return MaterialDesignIconicFontIconInterface Returns this icon.
      */
     public function setBorder($border);
 
@@ -192,7 +192,7 @@ interface MaterialDesignIconicFontIconInterface extends IconInterface {
      * Set the fixed width.
      *
      * @param bool $fixedWidth Fixed width ?
-     * @return MaterialDesignIconicFontIconInterface Returns this material Design Iconic Font icon.
+     * @return MaterialDesignIconicFontIconInterface Returns this icon.
      */
     public function setFixedWidth($fixedWidth);
 
@@ -200,7 +200,7 @@ interface MaterialDesignIconicFontIconInterface extends IconInterface {
      * Set the flip.
      *
      * @param string $flip The flip.
-     * @return MaterialDesignIconicFontIconInterface Returns this material Design Iconic Font icon.
+     * @return MaterialDesignIconicFontIconInterface Returns this icon.
      */
     public function setFlip($flip);
 
@@ -208,7 +208,7 @@ interface MaterialDesignIconicFontIconInterface extends IconInterface {
      * Set the pull.
      *
      * @param string $pull The pull.
-     * @return MaterialDesignIconicFontIconInterface Returns this material Design Iconic Font icon.
+     * @return MaterialDesignIconicFontIconInterface Returns this icon.
      */
     public function setPull($pull);
 
@@ -216,7 +216,7 @@ interface MaterialDesignIconicFontIconInterface extends IconInterface {
      * Set the rotate.
      *
      * @param string $rotate The rotate.
-     * @return MaterialDesignIconicFontIconInterface Returns this material Design Iconic Font icon.
+     * @return MaterialDesignIconicFontIconInterface Returns this icon.
      */
     public function setRotate($rotate);
 
@@ -224,7 +224,7 @@ interface MaterialDesignIconicFontIconInterface extends IconInterface {
      * Set the size.
      *
      * @param string $size The size.
-     * @return MaterialDesignIconicFontIconInterface Returns this material Design Iconic Font icon.
+     * @return MaterialDesignIconicFontIconInterface Returns this icon.
      */
     public function setSize($size);
 
@@ -232,7 +232,7 @@ interface MaterialDesignIconicFontIconInterface extends IconInterface {
      * Set the spin.
      *
      * @param string $spin The spin.
-     * @return MaterialDesignIconicFontIconInterface Returns this material Design Iconic Font icon.
+     * @return MaterialDesignIconicFontIconInterface Returns this icon.
      */
     public function setSpin($spin);
 

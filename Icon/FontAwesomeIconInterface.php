@@ -212,7 +212,7 @@ interface FontAwesomeIconInterface extends IconInterface {
      * Set the animation.
      *
      * @param string $animation The animation.
-     * @return FontAwesomeIconInterface Returns this font awesome icon.
+     * @return FontAwesomeIconInterface Returns this icon.
      */
     public function setAnimation($animation);
 
@@ -220,7 +220,7 @@ interface FontAwesomeIconInterface extends IconInterface {
      * Set the bordered.
      *
      * @param bool $bordered Bordered ?
-     * @return FontAwesomeIconInterface Returns this font awesome icon.
+     * @return FontAwesomeIconInterface Returns this icon.
      */
     public function setBordered($bordered);
 
@@ -228,7 +228,7 @@ interface FontAwesomeIconInterface extends IconInterface {
      * Set the fixed width.
      *
      * @param bool $fixedWidth Fixed width ?
-     * @return FontAwesomeIconInterface Returns this font awesome icon.
+     * @return FontAwesomeIconInterface Returns this icon.
      */
     public function setFixedWidth($fixedWidth);
 
@@ -236,7 +236,7 @@ interface FontAwesomeIconInterface extends IconInterface {
      * Set the font.
      *
      * @param string $font The font.
-     * @return FontAwesomeIconInterface Returns this font awesome icon.
+     * @return FontAwesomeIconInterface Returns this icon.
      */
     public function setFont($font);
 
@@ -244,7 +244,7 @@ interface FontAwesomeIconInterface extends IconInterface {
      * Set the pull.
      *
      * @param string $pull The pull.
-     * @return FontAwesomeIconInterface Returns this font awesome icon.
+     * @return FontAwesomeIconInterface Returns this icon.
      */
     public function setPull($pull);
 
@@ -252,7 +252,7 @@ interface FontAwesomeIconInterface extends IconInterface {
      * Set the size.
      *
      * @param string $size The size.
-     * @return FontAwesomeIconInterface Returns this font awesome icon.
+     * @return FontAwesomeIconInterface Returns this icon.
      */
     public function setSize($size);
 

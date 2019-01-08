@@ -22,7 +22,7 @@ class MaterialDesignIconicFontIconRenderer extends IconRenderer {
     /**
      * Render a border.
      *
-     * @param MaterialDesignIconicFontIconInterface $icon The Material Design Iconic Font icon.
+     * @param MaterialDesignIconicFontIconInterface $icon The icon.
      * @return string Returns the rendered border in case of success, null otherwise.
      */
     public static function renderBorder(MaterialDesignIconicFontIconInterface $icon) {
@@ -32,7 +32,7 @@ class MaterialDesignIconicFontIconRenderer extends IconRenderer {
     /**
      * Render a fixed width.
      *
-     * @param MaterialDesignIconicFontIconInterface $icon The Material Design Iconic Font icon.
+     * @param MaterialDesignIconicFontIconInterface $icon The icon.
      * @return string Returns the rendered fixed width in case of success, null otherwise.
      */
     public static function renderFixedWidth(MaterialDesignIconicFontIconInterface $icon) {
@@ -42,7 +42,7 @@ class MaterialDesignIconicFontIconRenderer extends IconRenderer {
     /**
      * Render a flip.
      *
-     * @param MaterialDesignIconicFontIconInterface $icon The Material Design Iconic Font icon.
+     * @param MaterialDesignIconicFontIconInterface $icon The icon.
      * @return string Returns the rendered flip.
      */
     public static function renderFlip(MaterialDesignIconicFontIconInterface $icon) {
@@ -52,7 +52,7 @@ class MaterialDesignIconicFontIconRenderer extends IconRenderer {
     /**
      * Render a name.
      *
-     * @param MaterialDesignIconicFontIconInterface $icon The Material Design Iconic Font icon.
+     * @param MaterialDesignIconicFontIconInterface $icon The icon.
      * @return string Returns the rendered name in case of success, false otherwise.
      */
     public static function renderName(MaterialDesignIconicFontIconInterface $icon) {
@@ -62,7 +62,7 @@ class MaterialDesignIconicFontIconRenderer extends IconRenderer {
     /**
      * Render a pull.
      *
-     * @param MaterialDesignIconicFontIconInterface $icon The Material Design Iconic Font icon.
+     * @param MaterialDesignIconicFontIconInterface $icon The icon.
      * @return string Returns the rendered pull in case of success, null otherwise.
      */
     public static function renderPull(MaterialDesignIconicFontIconInterface $icon) {
@@ -72,7 +72,7 @@ class MaterialDesignIconicFontIconRenderer extends IconRenderer {
     /**
      * Render a rotate.
      *
-     * @param MaterialDesignIconicFontIconInterface $icon The Material Design Iconic Font icon.
+     * @param MaterialDesignIconicFontIconInterface $icon The icon.
      * @return string Returns the rendered rotate in case of success, null otherwise.
      */
     public static function renderRotate(MaterialDesignIconicFontIconInterface $icon) {
@@ -82,7 +82,7 @@ class MaterialDesignIconicFontIconRenderer extends IconRenderer {
     /**
      * Render a size.
      *
-     * @param MaterialDesignIconicFontIconInterface $icon The Material Design Iconic Font icon.
+     * @param MaterialDesignIconicFontIconInterface $icon The icon.
      * @return string Returns the rendered size in case of success, null otherwise.
      */
     public static function renderSize(MaterialDesignIconicFontIconInterface $icon) {
@@ -92,7 +92,7 @@ class MaterialDesignIconicFontIconRenderer extends IconRenderer {
     /**
      * Render a spin.
      *
-     * @param MaterialDesignIconicFontIconInterface $icon The Material Design Iconic Font icon.
+     * @param MaterialDesignIconicFontIconInterface $icon The icon.
      * @return string Returns the rendered spin in case of success, null otherwise.
      */
     public static function renderSpin(MaterialDesignIconicFontIconInterface $icon) {
