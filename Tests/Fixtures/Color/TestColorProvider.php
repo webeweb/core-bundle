@@ -23,11 +23,9 @@ class TestColorProvider extends AbstractColorProvider {
 
     /**
      * Constructor.
-     *
-     * @param string $domain The domain.
      */
-    public function __construct($domain = "MaterialDesignColorPalette") {
-        parent::__construct($domain);
+    public function __construct() {
+        parent::__construct(null);
     }
 
     /**
