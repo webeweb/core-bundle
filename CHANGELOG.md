@@ -20,6 +20,7 @@ CHANGELOG
 - Add Color helper
 - Add Color interface
 - Add Color manager
+- Add Color provider compiler pass
 - Add Cyan color interface
 - Add Cyan color provider
 - Add Cyan color provider trait
