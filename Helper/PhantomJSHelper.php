@@ -78,11 +78,7 @@ class PhantomJSHelper {
 
         // Initialize the command.
         $command = $this->getBinaryPath();
-
-        // Check the operating system.
-        if (true === OSHelper::isWindows()) {
-            $command .= ".exe";
-        }
+        $command .= true === OSHelper::isWindows() ? ".exe" : "";
 
         // Return the command.
         return realpath($command);
