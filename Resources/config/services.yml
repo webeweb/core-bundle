@@ -175,6 +175,13 @@ services:
         tags:
             - { name: "twig.extension" }
 
+    webeweb.core.twig.extension.plugin.material_design_color_palette:
+        class:     WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MaterialDesignColorPaletteTwigExtension
+        arguments: ["@twig"]
+        public:    true
+        tags:
+            - { name: "twig.extension" }
+
     webeweb.core.twig.extension.plugin.material_design_iconic_font:
         class:     WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MaterialDesignIconicFontTwigExtension
         arguments: ["@twig"]
