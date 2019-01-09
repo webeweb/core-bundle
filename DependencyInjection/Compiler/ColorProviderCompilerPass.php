@@ -11,6 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\DependencyInjection\Compiler;
 
+use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Reference;
 use WBW\Bundle\CoreBundle\Manager\ColorManager;
 use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
@@ -21,7 +23,7 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\DependencyInjection\Compiler
  */
-class ColorProviderCompilerPass {
+class ColorProviderCompilerPass implements CompilerPassInterface {
 
     /**
      *{@inheritdoc}
