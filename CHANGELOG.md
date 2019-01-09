@@ -56,10 +56,11 @@ CHANGELOG
 - Add Lime color interface
 - Add Lime color provider
 - Add Lime color provider trait
-- Add Material design iconic font icon
-- Add Material design iconic font icon enumerator
-- Add Material design iconic font icon interface
-- Add Material design iconic font icon renderer
+- Add Material Design Color Palette Twig extension
+- Add Material Design Iconic Font icon
+- Add Material Design Iconic Font icon enumerator
+- Add Material Design Iconic Font icon interface
+- Add Material Design Iconic Font icon renderer
 - Add methods contains() and indexOf() into abstract manager
 - Add Navigation theme provider trait
 - Add Notifications drop down theme provider trait
