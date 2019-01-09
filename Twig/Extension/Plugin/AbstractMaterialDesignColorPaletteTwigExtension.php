@@ -26,7 +26,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
 abstract class AbstractMaterialDesignColorPaletteTwigExtension extends AbstractTwigExtension {
 
     /**
-     * Colors
+     * Colors.
      *
      * @var ColorProviderInterface[]
      */
@@ -50,6 +50,40 @@ abstract class AbstractMaterialDesignColorPaletteTwigExtension extends AbstractT
      */
     protected function getColors() {
         return $this->colors;
+    }
+
+    /**
+     * Displays a Material Design Color Palette.
+     *
+     * @param string $type The type.
+     * @param string $name The name.
+     * @param string $value The value.
+     * @return string Returns the Material Design Color Palette.
+     */
+    protected function materialDesignColorPalette($type, $name, $value) {
+
+        $color = $this->getColors()[0];
+
+        // Handle each color.
+        foreach ($this->getColors() as $current) {
+            if ($name !== $current->getName()) {
+                continue;
+            }
+            $color = $current;
+        }
+
+        // Initialize the HTML.
+        $html = [];
+
+        $html[] = "mdc";
+        $html[] = $type;
+        $html[] = $color->getName();
+        if (null !== $value && true === array_key_exists($value, $current->getColors())) {
+            $html[] = $value;
+        }
+
+        // Return the HTML.
+        return implode("-", $html);
     }
 
     /**
