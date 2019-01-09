@@ -78,7 +78,7 @@ abstract class AbstractMaterialDesignColorPaletteTwigExtension extends AbstractT
         $html[] = "mdc";
         $html[] = $type;
         $html[] = $color->getName();
-        if (null !== $value && true === array_key_exists($value, $current->getColors())) {
+        if (null !== $value && true === array_key_exists($value, $color->getColors())) {
             $html[] = $value;
         }
 
