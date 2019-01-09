@@ -11,7 +11,9 @@
 
 namespace WBW\Bundle\CoreBundle;
 
+use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
+use WBW\Bundle\CoreBundle\DependencyInjection\Compiler\ColorProviderCompilerPass;
 use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
 
 /**
@@ -49,6 +51,13 @@ class CoreBundle extends Bundle implements AssetsProviderInterface {
      * @var string
      */
     const CORE_WARNING = "warning";
+
+    /**
+     * {@inheritdoc}
+     */
+    public function build(ContainerBuilder $container) {
+        $container->addCompilerPass(new ColorProviderCompilerPass());
+    }
 
     /**
      * {@inheritdoc}

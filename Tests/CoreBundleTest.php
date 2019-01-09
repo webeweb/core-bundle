@@ -22,6 +22,18 @@ use WBW\Bundle\CoreBundle\CoreBundle;
 class CoreBundleTest extends AbstractTestCase {
 
     /**
+     * Tests the build() method.
+     *
+     * @return void
+     */
+    public function testBuild() {
+
+        $obj = new CoreBundle();
+
+        $this->assertNull($obj->build($this->containerBuilder));
+    }
+
+    /**
      * Tests the __construct() method.
      *
      * @return void
