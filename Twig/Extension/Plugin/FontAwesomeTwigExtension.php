@@ -92,6 +92,7 @@ class FontAwesomeTwigExtension extends AbstractFontAwesomeTwigExtension implemen
     public function getFunctions() {
         return [
             new Twig_SimpleFunction("fontAwesomeIcon", [$this, "fontAwesomeIconFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("faIcon", [$this, "fontAwesomeIconFunction"], ["is_safe" => ["html"]]),
         ];
     }
 

@@ -47,120 +47,8 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
 
         $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
 
-        $arg = ["font" => "s", "name" => "camera-retro", "size" => "lg", "fixedWidth" => true, "bordered" => true, "pull" => "left", "animation" => "spin"];
-        $res = '<i class="fas fa-camera-retro fa-lg fa-fw fa-border fa-pull-left fa-spin"></i>';
-        $this->assertEquals($res, $obj->fontAwesomeIconFunction($arg));
-    }
-
-    /**
-     * Tests the fontAwesomeIconFunction() method.
-     *
-     * @return void
-     */
-    public function testFontAwesomeIconFunctionWithAnimation() {
-
-        $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
-
-        $arg = ["animation" => "pulse"];
-        $res = '<i class="fa fa-home fa-pulse"></i>';
-        $this->assertEquals($res, $obj->fontAwesomeIconFunction($arg));
-    }
-
-    /**
-     * Tests the fontAwesomeIconFunction() method.
-     *
-     * @return void
-     */
-    public function testFontAwesomeIconFunctionWithBordered() {
-
-        $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
-
-        $arg = ["bordered" => true];
-        $res = '<i class="fa fa-home fa-border"></i>';
-        $this->assertEquals($res, $obj->fontAwesomeIconFunction($arg));
-    }
-
-    /**
-     * Tests the fontAwesomeIconFunction() method.
-     *
-     * @return void
-     */
-    public function testFontAwesomeIconFunctionWithFixedWidth() {
-
-        $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
-
-        $arg = ["fixedWidth" => true];
-        $res = '<i class="fa fa-home fa-fw"></i>';
-        $this->assertEquals($res, $obj->fontAwesomeIconFunction($arg));
-    }
-
-    /**
-     * Tests the fontAwesomeIconFunction() method.
-     *
-     * @return void
-     */
-    public function testFontAwesomeIconFunctionWithFont() {
-
-        $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
-
-        $arg = ["font" => "s"];
-        $res = '<i class="fas fa-home"></i>';
-        $this->assertEquals($res, $obj->fontAwesomeIconFunction($arg));
-    }
-
-    /**
-     * Tests the fontAwesomeIconFunction() method.
-     *
-     * @return void
-     */
-    public function testFontAwesomeIconFunctionWithName() {
-
-        $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
-
-        $arg = ["name" => "camera-retro"];
-        $res = '<i class="fa fa-camera-retro"></i>';
-        $this->assertEquals($res, $obj->fontAwesomeIconFunction($arg));
-    }
-
-    /**
-     * Tests the fontAwesomeIconFunction() method.
-     *
-     * @return void
-     */
-    public function testFontAwesomeIconFunctionWithPull() {
-
-        $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
-
-        $arg = ["pull" => "right"];
-        $res = '<i class="fa fa-home fa-pull-right"></i>';
-        $this->assertEquals($res, $obj->fontAwesomeIconFunction($arg));
-    }
-
-    /**
-     * Tests the fontAwesomeIconFunction() method.
-     *
-     * @return void
-     */
-    public function testFontAwesomeIconFunctionWithSize() {
-
-        $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
-
-        $arg = ["size" => "xs"];
-        $res = '<i class="fa fa-home fa-xs"></i>';
-        $this->assertEquals($res, $obj->fontAwesomeIconFunction($arg));
-    }
-
-    /**
-     * Tests the fontAwesomeIconFunction() method.
-     *
-     * @return void
-     */
-    public function testFontAwesomeIconFunctionWithStyle() {
-
-        $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
-
-        $arg = ["style" => "color: #FFFFFF;"];
-        $res = '<i class="fa fa-home" style="color: #FFFFFF;"></i>';
+        $arg = ["font" => "s", "name" => "camera-retro", "size" => "lg", "fixedWidth" => true, "bordered" => true, "pull" => "left", "animation" => "spin", "style"=>"color: #FFFFFF;"];
+        $res = '<i class="fas fa-camera-retro fa-lg fa-fw fa-border fa-pull-left fa-spin" style="color: #FFFFFF;"></i>';
         $this->assertEquals($res, $obj->fontAwesomeIconFunction($arg));
     }
 
@@ -253,12 +141,17 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
         $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-        $this->assertCount(1, $res);
+        $this->assertCount(2, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
         $this->assertEquals("fontAwesomeIcon", $res[0]->getName());
         $this->assertEquals([$obj, "fontAwesomeIconFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
+        $this->assertEquals("faIcon", $res[1]->getName());
+        $this->assertEquals([$obj, "fontAwesomeIconFunction"], $res[1]->getCallable());
+        $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
     }
 
     /**
