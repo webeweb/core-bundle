@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### 1.6.0 (2019-01-xx)
+### 1.6.0 (2019-01-10)
 
 - Add Amber color interface
 - Add Amber color provider
