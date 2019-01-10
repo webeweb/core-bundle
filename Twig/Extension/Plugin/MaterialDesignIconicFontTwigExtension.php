@@ -61,6 +61,7 @@ class MaterialDesignIconicFontTwigExtension extends AbstractMaterialDesignIconic
     public function getFunctions() {
         return [
             new Twig_SimpleFunction("materialDesignIconicFontIcon", [$this, "materialDesignIconicFontIconFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("mdiIcon", [$this, "materialDesignIconicFontIconFunction"], ["is_safe" => ["html"]]),
         ];
     }
 

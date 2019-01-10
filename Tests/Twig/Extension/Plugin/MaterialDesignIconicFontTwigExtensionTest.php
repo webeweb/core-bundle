@@ -71,12 +71,17 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
         $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-        $this->assertCount(1, $res);
+        $this->assertCount(2, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
         $this->assertEquals("materialDesignIconicFontIcon", $res[0]->getName());
         $this->assertEquals([$obj, "materialDesignIconicFontIconFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
+        $this->assertEquals("mdiIcon", $res[1]->getName());
+        $this->assertEquals([$obj, "materialDesignIconicFontIconFunction"], $res[1]->getCallable());
+        $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
     }
 
     /**
@@ -88,134 +93,8 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
 
         $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
 
-        $arg = ["name" => "camera-retro", "size" => "lg", "fixedWidth" => true, "border" => "border-circle", "pull" => "left", "spin" => "spin", "rotate" => "180", "flip" => "horizontal"];
-        $res = '<i class="zmdi zmdi-camera-retro zmdi-hc-lg zmdi-hc-fw zmdi-hc-border-circle pull-left zmdi-hc-spin zmdi-hc-rotate-180 zmdi-hc-flip-horizontal"></i>';
-        $this->assertEquals($res, $obj->materialDesignIconicFontIconFunction($arg));
-    }
-
-    /**
-     * Tests the materialDesignIconicFontIconFunction() method.
-     *
-     * @return void
-     */
-    public function testMaterialDesignIconicFontIconFunctionWithBorder() {
-
-        $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
-
-        $arg = ["border" => "border-circle"];
-        $res = '<i class="zmdi zmdi-home zmdi-hc-border-circle"></i>';
-        $this->assertEquals($res, $obj->materialDesignIconicFontIconFunction($arg));
-    }
-
-    /**
-     * Tests the materialDesignIconicFontIconFunction() method.
-     *
-     * @return void
-     */
-    public function testMaterialDesignIconicFontIconFunctionWithFixedWidth() {
-
-        $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
-
-        $arg = ["fixedWidth" => true];
-        $res = '<i class="zmdi zmdi-home zmdi-hc-fw"></i>';
-        $this->assertEquals($res, $obj->materialDesignIconicFontIconFunction($arg));
-    }
-
-    /**
-     * Tests the materialDesignIconicFontIconFunction() method.
-     *
-     * @return void
-     */
-    public function testMaterialDesignIconicFontIconFunctionWithFlip() {
-
-        $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
-
-        $arg = ["flip" => "vertical"];
-        $res = '<i class="zmdi zmdi-home zmdi-hc-flip-vertical"></i>';
-        $this->assertEquals($res, $obj->materialDesignIconicFontIconFunction($arg));
-    }
-
-    /**
-     * Tests the materialDesignIconicFontIconFunction() method.
-     *
-     * @return void
-     */
-    public function testMaterialDesignIconicFontIconFunctionWithName() {
-
-        $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
-
-        $arg = ["name" => "camera-retro"];
-        $res = '<i class="zmdi zmdi-camera-retro"></i>';
-        $this->assertEquals($res, $obj->materialDesignIconicFontIconFunction($arg));
-    }
-
-    /**
-     * Tests the materialDesignIconicFontIconFunction() method.
-     *
-     * @return void
-     */
-    public function testMaterialDesignIconicFontIconFunctionWithPull() {
-
-        $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
-
-        $arg = ["pull" => "right"];
-        $res = '<i class="zmdi zmdi-home pull-right"></i>';
-        $this->assertEquals($res, $obj->materialDesignIconicFontIconFunction($arg));
-    }
-
-    /**
-     * Tests the materialDesignIconicFontIconFunction() method.
-     *
-     * @return void
-     */
-    public function testMaterialDesignIconicFontIconFunctionWithRotate() {
-
-        $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
-
-        $arg = ["rotate" => "90"];
-        $res = '<i class="zmdi zmdi-home zmdi-hc-rotate-90"></i>';
-        $this->assertEquals($res, $obj->materialDesignIconicFontIconFunction($arg));
-    }
-
-    /**
-     * Tests the materialDesignIconicFontIconFunction() method.
-     *
-     * @return void
-     */
-    public function testMaterialDesignIconicFontIconFunctionWithSize() {
-
-        $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
-
-        $arg = ["size" => "lg"];
-        $res = '<i class="zmdi zmdi-home zmdi-hc-lg"></i>';
-        $this->assertEquals($res, $obj->materialDesignIconicFontIconFunction($arg));
-    }
-
-    /**
-     * Tests the materialDesignIconicFontIconFunction() method.
-     *
-     * @return void
-     */
-    public function testMaterialDesignIconicFontIconFunctionWithSpin() {
-
-        $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
-
-        $arg = ["spin" => "spin"];
-        $res = '<i class="zmdi zmdi-home zmdi-hc-spin"></i>';
-        $this->assertEquals($res, $obj->materialDesignIconicFontIconFunction($arg));
-    }
-
-    /**
-     * Tests the materialDesignIconicFontIconFunction() method.
-     *
-     * @return void
-     */
-    public function testMaterialDesignIconicFontIconFunctionWithStyle() {
-
-        $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
-
-        $arg = ["style" => "color: #FFFFFF;"];
-        $res = '<i class="zmdi zmdi-home" style="color: #FFFFFF;"></i>';
+        $arg = ["name" => "camera-retro", "size" => "lg", "fixedWidth" => true, "border" => "border-circle", "pull" => "left", "spin" => "spin", "rotate" => "180", "flip" => "horizontal", "style"=>"color: #FFFFFF;"];
+        $res = '<i class="zmdi zmdi-camera-retro zmdi-hc-lg zmdi-hc-fw zmdi-hc-border-circle pull-left zmdi-hc-spin zmdi-hc-rotate-180 zmdi-hc-flip-horizontal" style="color: #FFFFFF;"></i>';
         $this->assertEquals($res, $obj->materialDesignIconicFontIconFunction($arg));
     }
 
