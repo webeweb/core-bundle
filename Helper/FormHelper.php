@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Helper;
 
+use Countable;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Persistence\ObjectManager;
@@ -55,7 +56,7 @@ class FormHelper {
     /**
      * Check an entity type.
      *
-     * @param $collection The collection.
+     * @param Countable $collection The collection.
      * @param string $notification The notification.
      * @param string $redirectURL The redirect URL.
      * @param int $expected The expected count.
@@ -65,7 +66,7 @@ class FormHelper {
     public function checkCollection($collection, $notification, $redirectURL, $expected = 1) {
 
         // Check the collection.
-        if (null === $collection) {
+        if (null === $collection || false === ($collection instanceof Countable)) {
             throw new IllegalArgumentException("The collection must be a countable");
         }
         if ($expected <= count($collection)) {
