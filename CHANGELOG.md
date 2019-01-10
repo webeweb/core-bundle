@@ -34,6 +34,7 @@ CHANGELOG
 - Add Font Awesome icon enumerator
 - Add Font Awesome icon interface
 - Add Font Awesome icon renderer
+- Add Font Awesome Twig extension aliases
 - Add Footer theme provider trait
 - Add Green color interface
 - Add Green color provider
@@ -61,6 +62,7 @@ CHANGELOG
 - Add Material Design Iconic Font icon enumerator
 - Add Material Design Iconic Font icon interface
 - Add Material Design Iconic Font icon renderer
+- Add Material Design Iconic Font Twig extension aliases
 - Add methods contains() and indexOf() into abstract manager
 - Add Navigation theme provider trait
 - Add Notifications drop down theme provider trait
