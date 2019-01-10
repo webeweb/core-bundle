@@ -47,7 +47,7 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
         $obj = new MaterialDesignColorPaletteTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-        $this->assertCount(2, $res);
+        $this->assertCount(4, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
         $this->assertEquals("materialDesignColorPaletteBackground", $res[0]->getName());
@@ -58,6 +58,16 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("materialDesignColorPaletteText", $res[1]->getName());
         $this->assertEquals([$obj, "materialDesignColorPaletteTextFunction"], $res[1]->getCallable());
         $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
+        $this->assertEquals("mdcBackground", $res[2]->getName());
+        $this->assertEquals([$obj, "materialDesignColorPaletteBackgroundFunction"], $res[2]->getCallable());
+        $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[3]);
+        $this->assertEquals("mdcText", $res[3]->getName());
+        $this->assertEquals([$obj, "materialDesignColorPaletteTextFunction"], $res[3]->getCallable());
+        $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
     }
 
     /**

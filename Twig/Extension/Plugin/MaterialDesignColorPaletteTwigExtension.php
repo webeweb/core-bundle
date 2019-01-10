@@ -48,6 +48,8 @@ class MaterialDesignColorPaletteTwigExtension extends AbstractMaterialDesignColo
         return [
             new Twig_SimpleFunction("materialDesignColorPaletteBackground", [$this, "materialDesignColorPaletteBackgroundFunction"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("materialDesignColorPaletteText", [$this, "materialDesignColorPaletteTextFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("mdcBackground", [$this, "materialDesignColorPaletteBackgroundFunction"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFunction("mdcText", [$this, "materialDesignColorPaletteTextFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
