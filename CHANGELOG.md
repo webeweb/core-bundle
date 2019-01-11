@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Improve unit tests
+
 ### 1.6.0 (2019-01-10)
 
 - Add Amber color interface
