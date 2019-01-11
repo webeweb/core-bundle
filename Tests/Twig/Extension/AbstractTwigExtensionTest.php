@@ -51,4 +51,17 @@ EOT;
         $this->assertEquals($res, TestTwigExtension::coreHTMLElement("script", "\n    $(document).ready(function() {});\n", ["type" => "text/javascript"]));
     }
 
+    /**
+     * Tests the getFilters() method.
+     *
+     * @return void
+     */
+    public function testGetFilters() {
+
+        $obj = new TestTwigExtension($this->twigEnvironment);
+
+        $res = $obj->getFilters();
+        $this->assertCount(0, $res);
+    }
+
 }
