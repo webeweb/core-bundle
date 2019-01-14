@@ -1,8 +1,11 @@
 CHANGELOG
 =========
 
-### master
+### 1.7.0 (2019-01-14)
 
+- Add Date/time renderer
+- Add formatDateFilter() into Renderer Twig extension
+- Allow null into Container trait
 - Improve unit tests
 
 ### 1.6.0 (2019-01-10)
