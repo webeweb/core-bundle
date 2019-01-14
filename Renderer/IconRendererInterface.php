@@ -27,4 +27,5 @@ interface IconRendererInterface {
      * @return string Returns a rendered icon.
      */
     public function renderIcon($name, $style);
+
 }
