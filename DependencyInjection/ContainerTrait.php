@@ -42,7 +42,7 @@ trait ContainerTrait {
      *
      * @param Container $container The container.
      */
-    protected function setContainer(Container $container) {
+    protected function setContainer(Container $container = null) {
         $this->container = $container;
         return $this;
     }
