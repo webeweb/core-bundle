@@ -94,5 +94,4 @@ class MaterialDesignIconicFontIconEnumerator {
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SPIN_REVERSE,
         ];
     }
-
 }

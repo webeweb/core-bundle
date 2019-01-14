@@ -262,5 +262,4 @@ class ThemeManager extends AbstractThemeManager {
         $this->setProvider(UserInfoThemeProviderInterface::class, $provider);
         return $this;
     }
-
 }

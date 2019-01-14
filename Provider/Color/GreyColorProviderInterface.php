@@ -97,5 +97,4 @@ interface GreyColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const GREY_COLOR_NAME = "grey";
-
 }

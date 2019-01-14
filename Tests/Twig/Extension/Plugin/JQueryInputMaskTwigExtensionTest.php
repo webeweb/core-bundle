@@ -228,5 +228,4 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
         $res = "$('#selector').inputmask(\"**999 999 999 99\",{\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"placeholder\":\"_____ ___ ___ __\"});";
         $this->assertEquals($res, $obj->jQueryInputMaskVATNumberFunction($arg));
     }
-
 }

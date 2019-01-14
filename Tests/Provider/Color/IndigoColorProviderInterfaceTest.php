@@ -46,5 +46,4 @@ class IndigoColorProviderInterfaceTest extends AbstractTestCase {
         $this->assertEquals("#3D5AFE", IndigoColorProviderInterface::INDIGO_COLOR_A400);
         $this->assertEquals("#304FFE", IndigoColorProviderInterface::INDIGO_COLOR_A700);
     }
-
 }

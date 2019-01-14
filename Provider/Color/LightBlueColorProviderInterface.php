@@ -125,5 +125,4 @@ interface LightBlueColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const LIGHT_BLUE_COLOR_NAME = "light-blue";
-
 }

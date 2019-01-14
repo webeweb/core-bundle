@@ -44,5 +44,4 @@ trait UserInfoThemeProviderTrait {
         $this->userInfoThemeProvider = $userInfoThemeProvider;
         return $this;
     }
-
 }

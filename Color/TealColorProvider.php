@@ -61,5 +61,4 @@ class TealColorProvider extends AbstractColorProvider implements TealColorProvid
     public function getName() {
         return self::TEAL_COLOR_NAME;
     }
-
 }

@@ -33,5 +33,4 @@ class DateTimeTypeInterfaceTest extends AbstractTestCase {
         $this->assertEquals("HH:mm", DateTimeTypeInterface::FORMAT_TIME);
         $this->assertEquals("dd/MM/yyyy HH:mm", DateTimeTypeInterface::FORMAT_DATETIME);
     }
-
 }

@@ -57,5 +57,4 @@ class BrownColorProvider extends AbstractColorProvider implements BrownColorProv
     public function getName() {
         return self::BROWN_COLOR_NAME;
     }
-
 }

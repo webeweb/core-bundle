@@ -50,5 +50,4 @@ class BreadcrumbsThemeProviderTraitTest extends AbstractTestCase {
         $obj->setBreadcrumbsThemeProvider($breadcrumbsThemeProvider);
         $this->assertSame($breadcrumbsThemeProvider, $obj->getBreadcrumbsThemeProvider());
     }
-
 }

@@ -93,5 +93,4 @@ class FormFactoryTest extends AbstractTestCase {
         $this->assertEquals("─ This option must implements [Translated]ChoiceLabelInterface", $res["choice_label"]($res["choices"][2]));
         $this->assertEquals("─ This option must implements [Translated]ChoiceLabelInterface", $res["choice_label"]($res["choices"][3]));
     }
-
 }

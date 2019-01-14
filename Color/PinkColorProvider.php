@@ -61,5 +61,4 @@ class PinkColorProvider extends AbstractColorProvider implements PinkColorProvid
     public function getName() {
         return self::PINK_COLOR_NAME;
     }
-
 }

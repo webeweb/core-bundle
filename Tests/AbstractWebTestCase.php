@@ -50,5 +50,4 @@ abstract class AbstractWebTestCase extends WebTestCase {
         // Shutdown the kernel.
         static::$kernel->shutdown();
     }
-
 }

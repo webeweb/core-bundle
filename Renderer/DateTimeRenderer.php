@@ -41,5 +41,4 @@ class DateTimeRenderer {
         }
         return $dateTime->format($format);
     }
-
 }

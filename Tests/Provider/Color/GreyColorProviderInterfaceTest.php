@@ -42,5 +42,4 @@ class GreyColorProviderInterfaceTest extends AbstractTestCase {
         $this->assertEquals("#424242", GreyColorProviderInterface::GREY_COLOR_800);
         $this->assertEquals("#212121", GreyColorProviderInterface::GREY_COLOR_900);
     }
-
 }

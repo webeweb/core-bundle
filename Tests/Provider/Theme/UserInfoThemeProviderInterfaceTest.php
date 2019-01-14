@@ -31,5 +31,4 @@ class UserInfoThemeProviderInterfaceTest extends AbstractTestCase {
 
         $this->assertEquals("webeweb.core.provider.theme.user_info", UserInfoThemeProviderInterface::SERVICE_NAME);
     }
-
 }

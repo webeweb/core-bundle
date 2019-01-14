@@ -41,5 +41,4 @@ class TestNotification extends AbstractNotification {
     public function setType($type) {
         return parent::setType($type);
     }
-
 }

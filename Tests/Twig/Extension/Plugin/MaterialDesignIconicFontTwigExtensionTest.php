@@ -166,5 +166,4 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
         $res = '<i class="zmdi zmdi-camera-retro" style="color: #FFFFFF;"></i>';
         $this->assertEquals($res, $obj->renderIcon("camera-retro", "color: #FFFFFF;"));
     }
-
 }

@@ -35,5 +35,4 @@ class DangerNotificationTest extends AbstractTestCase {
         $this->assertEquals(NotificationInterface::NOTIFICATION_DANGER, $obj->getType());
         $this->assertEquals("danger", $obj->getContent());
     }
-
 }

@@ -125,5 +125,4 @@ interface PurpleColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const PURPLE_COLOR_NAME = "purple";
-
 }

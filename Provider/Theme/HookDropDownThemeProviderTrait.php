@@ -44,5 +44,4 @@ trait HookDropDownThemeProviderTrait {
         $this->hookDropDownThemeProvider = $hookDropDownThemeProvider;
         return $this;
     }
-
 }

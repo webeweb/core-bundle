@@ -31,5 +31,4 @@ class NavigationThemeProviderInterfaceTest extends AbstractTestCase {
 
         $this->assertEquals("webeweb.core.provider.theme.navigation", NavigationThemeProviderInterface::SERVICE_NAME);
     }
-
 }

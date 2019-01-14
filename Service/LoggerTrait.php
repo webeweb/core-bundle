@@ -46,5 +46,4 @@ trait LoggerTrait {
         $this->logger = $logger;
         return $this;
     }
-
 }

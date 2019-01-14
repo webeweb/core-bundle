@@ -143,5 +143,4 @@ class WikiViewTest extends AbstractTestCase {
         $obj->setTitle("title2");
         $this->assertEquals("title2", $obj->getTitle());
     }
-
 }

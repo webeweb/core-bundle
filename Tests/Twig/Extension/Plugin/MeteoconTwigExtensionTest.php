@@ -136,5 +136,4 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
         $res = '<i class="meteocons" data-meteocons="B" style="color: #FFFFFF;"></i>';
         $this->assertEquals($res, $obj->renderIcon("B", "color: #FFFFFF;"));
     }
-
 }

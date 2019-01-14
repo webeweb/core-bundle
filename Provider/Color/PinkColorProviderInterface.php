@@ -125,5 +125,4 @@ interface PinkColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const PINK_COLOR_NAME = "pink";
-
 }

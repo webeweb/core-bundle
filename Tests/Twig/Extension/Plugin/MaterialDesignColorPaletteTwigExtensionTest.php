@@ -194,5 +194,4 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
         $res = "mdc-text-red";
         $this->assertEquals($res, $obj->materialDesignColorPaletteTextFunction($arg));
     }
-
 }

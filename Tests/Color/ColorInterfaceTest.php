@@ -43,5 +43,4 @@ class ColorInterfaceTest extends AbstractTestCase {
         $this->assertEquals("A400", ColorInterface::COLOR_A400);
         $this->assertEquals("A700", ColorInterface::COLOR_A700);
     }
-
 }

@@ -27,5 +27,4 @@ interface FooterThemeProviderInterface extends ThemeProviderInterface {
      * @var string
      */
     const SERVICE_NAME = "webeweb.core.provider.theme.footer";
-
 }

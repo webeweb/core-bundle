@@ -64,5 +64,4 @@ class NotificationEventListenerTest extends AbstractTestCase {
 
         $this->assertNull($obj->onNotify(new NotificationEvent("eventName", $notification)));
     }
-
 }

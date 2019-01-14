@@ -50,5 +50,4 @@ class TasksDropDownThemeProviderTraitTest extends AbstractTestCase {
         $obj->setTasksDropDownThemeProvider($tasksDropDownThemeProvider);
         $this->assertSame($tasksDropDownThemeProvider, $obj->getTasksDropDownThemeProvider());
     }
-
 }

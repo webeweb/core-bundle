@@ -51,5 +51,4 @@ abstract class AbstractMeteoconsTwigExtension extends AbstractTwigExtension {
         // Return the HTML.
         return static::coreHTMLElement("i", null, $attributes);
     }
-
 }

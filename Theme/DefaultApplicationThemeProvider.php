@@ -88,5 +88,4 @@ class DefaultApplicationThemeProvider implements ApplicationThemeProviderInterfa
         }
         return implode("-", $years);
     }
-
 }

@@ -28,5 +28,4 @@ class IconRenderer {
     public static function renderStyle(IconInterface $icon) {
         return null !== $icon->getStyle() ? $icon->getStyle() : null;
     }
-
 }

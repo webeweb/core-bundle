@@ -97,5 +97,4 @@ interface BrownColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const BROWN_COLOR_NAME = "brown";
-
 }

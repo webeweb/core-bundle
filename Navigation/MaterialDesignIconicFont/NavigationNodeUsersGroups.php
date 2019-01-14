@@ -30,5 +30,4 @@ class NavigationNodeUsersGroups extends NavigationNode {
     public function __construct($uri = null, $matcher = self::NAVIGATION_MATCHER_URL) {
         parent::__construct("navigation.node.usersGroups", "zmdi:accounts", $uri, $matcher);
     }
-
 }

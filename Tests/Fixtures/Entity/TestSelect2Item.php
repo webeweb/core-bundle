@@ -73,5 +73,4 @@ class TestSelect2Item extends AbstractNode implements Select2ItemInterface {
         $this->name = $name;
         return $this;
     }
-
 }

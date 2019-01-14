@@ -44,5 +44,4 @@ trait NotificationEventListenerTrait {
         $this->notificationEventListener = $notificationEventListener;
         return $this;
     }
-
 }

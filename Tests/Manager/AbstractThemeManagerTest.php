@@ -109,5 +109,4 @@ class AbstractThemeManagerTest extends AbstractTestCase {
         $obj->setProvider(ThemeProviderInterface::class, $provider2);
         $this->assertSame($provider2, $obj->getProvider(ThemeProviderInterface::class));
     }
-
 }

@@ -34,5 +34,4 @@ class DefaultHookDropDownThemeProviderTest extends AbstractTestCase {
         $this->assertEquals([], $obj->getItems());
         $this->assertNull($obj->getView());
     }
-
 }

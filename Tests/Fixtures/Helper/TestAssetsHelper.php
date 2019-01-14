@@ -27,5 +27,4 @@ class TestAssetsHelper extends AssetsHelper {
     public static function listAssets($directory) {
         return parent::listAssets($directory);
     }
-
 }

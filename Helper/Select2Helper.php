@@ -52,5 +52,4 @@ class Select2Helper {
         // Return the output.
         return $output;
     }
-
 }

@@ -50,5 +50,4 @@ class ApplicationThemeProviderTraitTest extends AbstractTestCase {
         $obj->setApplicationThemeProvider($applicationThemeProvider);
         $this->assertSame($applicationThemeProvider, $obj->getApplicationThemeProvider());
     }
-
 }

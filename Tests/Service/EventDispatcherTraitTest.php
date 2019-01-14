@@ -46,5 +46,4 @@ class EventDispatcherTraitTest extends AbstractTestCase {
         $obj->setEventDispatcher($this->eventDispatcher);
         $this->assertSame($this->eventDispatcher, $obj->getEventDispatcher());
     }
-
 }

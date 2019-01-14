@@ -37,5 +37,4 @@ class NavigationTreeTest extends AbstractTestCase {
         $this->assertNull($obj->getUri());
         $this->assertTrue($obj->getVisible());
     }
-
 }

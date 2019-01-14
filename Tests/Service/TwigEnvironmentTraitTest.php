@@ -46,5 +46,4 @@ class TwigEnvironmentTraitTest extends AbstractTestCase {
         $obj->setTwigEnvironment($this->twigEnvironment);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
-
 }

@@ -125,5 +125,4 @@ interface CyanColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const CYAN_COLOR_NAME = "cyan";
-
 }

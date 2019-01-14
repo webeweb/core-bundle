@@ -50,5 +50,4 @@ class NavigationThemeProviderTraitTest extends AbstractTestCase {
         $obj->setNavigationThemeProvider($navigationThemeProvider);
         $this->assertSame($navigationThemeProvider, $obj->getNavigationThemeProvider());
     }
-
 }

@@ -32,5 +32,4 @@ class TestAbstractNavigationNode extends AbstractNavigationNode {
     public function __construct($name, $icon = null, $uri = null, $matcher = self::NAVIGATION_MATCHER_URL) {
         parent::__construct($name, $icon, $uri, $matcher);
     }
-
 }

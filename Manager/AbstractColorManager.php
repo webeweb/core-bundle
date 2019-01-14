@@ -75,5 +75,4 @@ abstract class AbstractColorManager extends AbstractManager {
         $this->index = $index;
         return $this;
     }
-
 }

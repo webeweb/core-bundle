@@ -46,5 +46,4 @@ class RedColorProviderInterfaceTest extends AbstractTestCase {
         $this->assertEquals("#FF1744", RedColorProviderInterface::RED_COLOR_A400);
         $this->assertEquals("#D50000", RedColorProviderInterface::RED_COLOR_A700);
     }
-
 }

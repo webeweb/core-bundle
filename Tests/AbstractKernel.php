@@ -43,5 +43,4 @@ abstract class AbstractKernel extends Kernel {
     public function registerContainerConfiguration(LoaderInterface $loader) {
         $loader->load(getcwd() . "/Tests/Fixtures/app/config/config_test.yml");
     }
-
 }

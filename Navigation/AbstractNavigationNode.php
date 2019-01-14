@@ -250,5 +250,4 @@ abstract class AbstractNavigationNode extends AbstractNode implements Navigation
         $this->visible = $visible;
         return $this;
     }
-
 }

@@ -274,5 +274,4 @@ class AbstractControllerTest extends AbstractTestCase {
         $res = $obj->notify("eventName", $notification);
         $this->assertNull($res);
     }
-
 }

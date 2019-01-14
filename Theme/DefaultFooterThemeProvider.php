@@ -34,5 +34,4 @@ class DefaultFooterThemeProvider implements FooterThemeProviderInterface {
     public function getView() {
         return null;
     }
-
 }

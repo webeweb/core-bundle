@@ -50,5 +50,4 @@ class ThemeManagerTraitTest extends AbstractTestCase {
         $obj->setThemeManager($themeManager);
         $this->assertSame($themeManager, $obj->getThemeManager());
     }
-
 }

@@ -46,5 +46,4 @@ trait EventDispatcherTrait {
         $this->eventDispatcher = $eventDispatcher;
         return $this;
     }
-
 }

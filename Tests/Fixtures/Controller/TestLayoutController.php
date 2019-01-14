@@ -53,5 +53,4 @@ class TestLayoutController extends AbstractController {
         // Return the response.
         return $this->render("@Core/layout/stylesheets.html.twig");
     }
-
 }

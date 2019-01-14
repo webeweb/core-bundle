@@ -54,5 +54,4 @@ class FontAwesomeIconInterfaceTest extends AbstractTestCase {
         $this->assertEquals("sm", FontAwesomeIconInterface::FONT_AWESOME_SIZE_SM);
         $this->assertEquals("xs", FontAwesomeIconInterface::FONT_AWESOME_SIZE_XS);
     }
-
 }

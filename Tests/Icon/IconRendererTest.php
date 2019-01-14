@@ -51,5 +51,4 @@ class IconRendererTest extends AbstractTestCase {
         $res = IconRenderer::renderStyle($this->icon);
         $this->assertEquals("color: #000000;", $res);
     }
-
 }

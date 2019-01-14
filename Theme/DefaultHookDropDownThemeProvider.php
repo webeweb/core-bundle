@@ -41,5 +41,4 @@ class DefaultHookDropDownThemeProvider implements HookDropDownThemeProviderInter
     public function getView() {
         return null;
     }
-
 }

@@ -87,5 +87,4 @@ class NavigationTreeHelperTest extends AbstractTestCase {
         $this->assertEquals("GitHub", $res[0]->getId());
         $this->assertEquals("Core bundle", $res[1]->getId());
     }
-
 }

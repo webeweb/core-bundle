@@ -61,5 +61,4 @@ class RedColorProvider extends AbstractColorProvider implements RedColorProvider
     public function getName() {
         return self::RED_COLOR_NAME;
     }
-
 }

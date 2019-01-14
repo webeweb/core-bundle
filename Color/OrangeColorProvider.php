@@ -61,5 +61,4 @@ class OrangeColorProvider extends AbstractColorProvider implements OrangeColorPr
     public function getName() {
         return self::ORANGE_COLOR_NAME;
     }
-
 }

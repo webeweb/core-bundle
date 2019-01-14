@@ -36,5 +36,4 @@ class OSHelper {
     public static function isWindows() {
         return "\\" === DIRECTORY_SEPARATOR;
     }
-
 }

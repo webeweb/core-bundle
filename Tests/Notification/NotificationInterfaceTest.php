@@ -34,5 +34,4 @@ class NotificationInterfaceTest extends AbstractTestCase {
         $this->assertEquals("success", NotificationInterface::NOTIFICATION_SUCCESS);
         $this->assertEquals("warning", NotificationInterface::NOTIFICATION_WARNING);
     }
-
 }

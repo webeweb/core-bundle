@@ -51,5 +51,4 @@ class MaterialDesignIconicFontIconInterfaceTest extends AbstractTestCase {
         $this->assertEquals("spin", MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SPIN);
         $this->assertEquals("spin-reverse", MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SPIN_REVERSE);
     }
-
 }

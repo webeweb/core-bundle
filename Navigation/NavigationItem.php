@@ -118,5 +118,4 @@ class NavigationItem extends AbstractNode implements NavigationInterface {
         // Return the output.
         return $output;
     }
-
 }

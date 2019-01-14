@@ -57,5 +57,4 @@ class BlueGreyColorProvider extends AbstractColorProvider implements BlueGreyCol
     public function getName() {
         return self::BLUE_GREY_COLOR_NAME;
     }
-
 }

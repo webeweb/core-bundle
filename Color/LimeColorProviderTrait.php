@@ -44,5 +44,4 @@ trait LimeColorProviderTrait {
         $this->limeColorProvider = $limeColorProvider;
         return $this;
     }
-
 }

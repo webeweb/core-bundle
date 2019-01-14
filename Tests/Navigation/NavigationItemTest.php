@@ -88,5 +88,4 @@ class NavigationItemTest extends AbstractTestCase {
         $res4 = ["span" => "id", "href" => "href", "icon" => "icon", "subitems" => [["span" => "id2", "href" => "javascript:void(0);"]]];
         $this->assertEquals($res4, $obj->toArray());
     }
-
 }

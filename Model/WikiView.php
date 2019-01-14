@@ -206,5 +206,4 @@ class WikiView {
         $this->title = $title;
         return $this;
     }
-
 }

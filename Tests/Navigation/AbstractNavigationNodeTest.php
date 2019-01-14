@@ -139,5 +139,4 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
         $obj->setURI("route");
         $this->assertEquals("route", $obj->getUri());
     }
-
 }

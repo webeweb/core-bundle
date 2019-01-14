@@ -50,5 +50,4 @@ class FooterThemeProviderTraitTest extends AbstractTestCase {
         $obj->setFooterThemeProvider($footerThemeProvider);
         $this->assertSame($footerThemeProvider, $obj->getFooterThemeProvider());
     }
-
 }

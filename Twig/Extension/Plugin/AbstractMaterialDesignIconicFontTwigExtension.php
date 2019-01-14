@@ -92,5 +92,4 @@ abstract class AbstractMaterialDesignIconicFontTwigExtension extends AbstractTwi
         // Return the HTML.
         return static::coreHTMLElement("li", $glyphicon . $innerHTML);
     }
-
 }

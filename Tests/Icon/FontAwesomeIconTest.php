@@ -168,5 +168,4 @@ class FontAwesomeIconTest extends AbstractTestCase {
         $obj->setSize("exception");
         $this->assertNotEquals("exception", $obj->getSize());
     }
-
 }

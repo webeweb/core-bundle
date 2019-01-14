@@ -61,5 +61,4 @@ class GreenColorProvider extends AbstractColorProvider implements GreenColorProv
     public function getName() {
         return self::GREEN_COLOR_NAME;
     }
-
 }

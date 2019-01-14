@@ -44,5 +44,4 @@ trait SearchThemeProviderTrait {
         $this->searchThemeProvider = $searchThemeProvider;
         return $this;
     }
-
 }

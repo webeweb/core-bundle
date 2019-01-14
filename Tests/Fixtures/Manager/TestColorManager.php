@@ -34,5 +34,4 @@ class TestColorManager extends AbstractColorManager {
     public function getIndex() {
         return parent::getIndex();
     }
-
 }

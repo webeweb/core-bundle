@@ -46,5 +46,4 @@ trait TokenStorageTrait {
         $this->tokenStorage = $tokenStorage;
         return $this;
     }
-
 }

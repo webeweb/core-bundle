@@ -50,5 +50,4 @@ class RequestTraitTest extends AbstractTestCase {
         $obj->setRequest($request);
         $this->assertSame($request, $obj->getRequest());
     }
-
 }

@@ -44,5 +44,4 @@ trait PhantomJSHelperTrait {
         $this->phantomJSHelper = $phantomJSHelper;
         return $this;
     }
-
 }

@@ -125,5 +125,4 @@ interface RedColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const RED_COLOR_NAME = "red";
-
 }

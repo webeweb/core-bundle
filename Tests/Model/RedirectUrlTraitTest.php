@@ -46,5 +46,4 @@ class RedirectUrlTraitTest extends AbstractTestCase {
         $obj->setRedirectUrl("redirectUrl");
         $this->assertEquals("redirectUrl", $obj->getRedirectUrl());
     }
-
 }

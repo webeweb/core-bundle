@@ -46,5 +46,4 @@ class TealColorProviderInterfaceTest extends AbstractTestCase {
         $this->assertEquals("#1DE9B6", TealColorProviderInterface::TEAL_COLOR_A400);
         $this->assertEquals("#00BFA5", TealColorProviderInterface::TEAL_COLOR_A700);
     }
-
 }

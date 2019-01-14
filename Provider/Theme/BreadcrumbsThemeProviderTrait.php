@@ -44,5 +44,4 @@ trait BreadcrumbsThemeProviderTrait {
         $this->breadcrumbsThemeProvider = $breadcrumbsThemeProvider;
         return $this;
     }
-
 }

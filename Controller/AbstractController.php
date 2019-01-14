@@ -155,5 +155,4 @@ abstract class AbstractController extends BaseController {
         // Dispatch the event.
         return $eventDispatcher->dispatch($eventName, new NotificationEvent($eventName, $notification));
     }
-
 }

@@ -61,5 +61,4 @@ class LightBlueColorProvider extends AbstractColorProvider implements LightBlueC
     public function getName() {
         return self::LIGHT_BLUE_COLOR_NAME;
     }
-
 }

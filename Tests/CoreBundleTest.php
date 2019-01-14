@@ -58,5 +58,4 @@ class CoreBundleTest extends AbstractTestCase {
         $res = $obj->getAssetsRelativeDirectory();
         $this->assertEquals("/Resources/assets", $res);
     }
-
 }

@@ -31,5 +31,4 @@ class TasksDropDownThemeProviderInterfaceTest extends AbstractTestCase {
 
         $this->assertEquals("webeweb.core.provider.theme.tasks_drop_down", TasksDropDownThemeProviderInterface::SERVICE_NAME);
     }
-
 }

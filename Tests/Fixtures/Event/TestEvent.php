@@ -29,5 +29,4 @@ class TestEvent extends AbstractEvent {
     public function __construct($eventName) {
         parent::__construct($eventName);
     }
-
 }

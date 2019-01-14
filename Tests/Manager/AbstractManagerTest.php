@@ -129,5 +129,4 @@ class AbstractManagerTest extends AbstractTestCase {
         $obj->removeProvider($provider1);
         $this->assertEquals(1, $obj->size());
     }
-
 }

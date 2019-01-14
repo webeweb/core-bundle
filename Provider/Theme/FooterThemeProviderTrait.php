@@ -44,5 +44,4 @@ trait FooterThemeProviderTrait {
         $this->footerThemeProvider = $footerThemeProvider;
         return $this;
     }
-
 }

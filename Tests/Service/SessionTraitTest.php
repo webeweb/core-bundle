@@ -46,5 +46,4 @@ class SessionTraitTest extends AbstractTestCase {
         $obj->setSession($this->session);
         $this->assertSame($this->session, $obj->getSession());
     }
-
 }

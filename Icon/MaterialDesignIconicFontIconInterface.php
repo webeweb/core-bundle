@@ -235,5 +235,4 @@ interface MaterialDesignIconicFontIconInterface extends IconInterface {
      * @return MaterialDesignIconicFontIconInterface Returns this icon.
      */
     public function setSpin($spin);
-
 }

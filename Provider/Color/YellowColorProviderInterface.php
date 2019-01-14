@@ -125,5 +125,4 @@ interface YellowColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const YELLOW_COLOR_NAME = "yellow";
-
 }

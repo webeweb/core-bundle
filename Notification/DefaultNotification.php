@@ -28,5 +28,4 @@ class DefaultNotification extends AbstractNotification {
     public function __construct($type, $content) {
         parent::__construct($type, $content);
     }
-
 }

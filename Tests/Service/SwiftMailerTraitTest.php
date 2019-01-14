@@ -50,5 +50,4 @@ class SwiftMailerTraitTest extends AbstractTestCase {
         $obj->setSwiftMailer($swiftMailer);
         $this->assertSame($swiftMailer, $obj->getSwiftMailer());
     }
-
 }

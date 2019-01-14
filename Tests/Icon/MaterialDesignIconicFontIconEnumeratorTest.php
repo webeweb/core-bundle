@@ -104,5 +104,4 @@ class MaterialDesignIconicFontIconEnumeratorTest extends AbstractTestCase {
         ];
         $this->assertEquals($res, MaterialDesignIconicFontIconEnumerator::enumSpins());
     }
-
 }

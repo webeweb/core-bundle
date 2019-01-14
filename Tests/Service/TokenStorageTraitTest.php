@@ -46,5 +46,4 @@ class TokenStorageTraitTest extends AbstractTestCase {
         $obj->setTokenStorage($this->tokenStorage);
         $this->assertSame($this->tokenStorage, $obj->getTokenStorage());
     }
-
 }

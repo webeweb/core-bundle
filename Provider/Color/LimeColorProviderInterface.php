@@ -125,5 +125,4 @@ interface LimeColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const LIME_COLOR_NAME = "lime";
-
 }

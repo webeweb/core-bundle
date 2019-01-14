@@ -92,5 +92,4 @@ class AssetsHelper {
         // Return the results.
         return $result;
     }
-
 }

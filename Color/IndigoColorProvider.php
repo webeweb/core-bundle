@@ -61,5 +61,4 @@ class IndigoColorProvider extends AbstractColorProvider implements IndigoColorPr
     public function getName() {
         return self::INDIGO_COLOR_NAME;
     }
-
 }

@@ -58,5 +58,4 @@ class FormRenderer {
         // Return the output.
         return $output;
     }
-
 }

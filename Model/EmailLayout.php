@@ -268,5 +268,4 @@ class EmailLayout {
         $this->unsubscribeURL = $unsubscribeURL;
         return $this;
     }
-
 }

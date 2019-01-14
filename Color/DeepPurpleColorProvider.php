@@ -61,5 +61,4 @@ class DeepPurpleColorProvider extends AbstractColorProvider implements DeepPurpl
     public function getName() {
         return self::DEEP_PURPLE_COLOR_NAME;
     }
-
 }

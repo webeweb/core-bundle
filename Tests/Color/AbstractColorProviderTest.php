@@ -46,5 +46,4 @@ class AbstractColorProviderTest extends AbstractTestCase {
         $obj->setDomain("domain");
         $this->assertEquals("domain", $obj->getDomain());
     }
-
 }

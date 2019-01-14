@@ -86,5 +86,4 @@ class FormRendererTest extends AbstractTestCase {
 
         $this->assertEquals("translatedChoiceLabel", FormRenderer::renderOption($arg));
     }
-
 }

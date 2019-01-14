@@ -91,5 +91,4 @@ class AbstractCommandTest extends AbstractTestCase {
         $this->assertNotNull($res);
         $this->assertInstanceOf(StyleInterface::class, $res);
     }
-
 }

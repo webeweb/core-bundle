@@ -46,5 +46,4 @@ class LoggerTraitTest extends AbstractTestCase {
         $obj->setLogger($this->logger);
         $this->assertSame($this->logger, $obj->getLogger());
     }
-
 }

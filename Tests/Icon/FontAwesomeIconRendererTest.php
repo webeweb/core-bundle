@@ -127,5 +127,4 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
         $res = FontAwesomeIconRenderer::renderSize($this->icon);
         $this->assertEquals("fa-lg", $res);
     }
-
 }

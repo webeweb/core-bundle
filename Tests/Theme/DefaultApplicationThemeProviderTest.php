@@ -40,5 +40,4 @@ class DefaultApplicationThemeProviderTest extends AbstractTestCase {
         $this->assertNull($obj->getView());
         $this->assertContains("2018", $obj->getYear());
     }
-
 }

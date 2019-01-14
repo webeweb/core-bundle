@@ -46,5 +46,4 @@ interface ColorProviderInterface extends ProviderInterface {
      * @return string Returns the color name.
      */
     public function getName();
-
 }

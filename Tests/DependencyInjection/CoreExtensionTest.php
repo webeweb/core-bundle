@@ -105,5 +105,4 @@ class CoreExtensionTest extends AbstractTestCase {
         // Renderer Twig extension
         $this->assertInstanceOf(RendererTwigExtension::class, $this->containerBuilder->get(RendererTwigExtension::SERVICE_NAME));
     }
-
 }

@@ -58,5 +58,4 @@ class NotificationEvent extends AbstractEvent {
         $this->notification = $notification;
         return $this;
     }
-
 }

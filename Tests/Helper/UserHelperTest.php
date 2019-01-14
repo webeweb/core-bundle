@@ -52,5 +52,4 @@ class UserHelperTest extends AbstractTestCase {
         $this->assertFalse(UserHelper::hasRoles($arg, ["ROLE_SUPER_ADMIN", "ROLE_GITHUB"]));
         $this->assertFalse(UserHelper::hasRoles($arg, ["ROLE_SUPER_ADMIN", "ROLE_GITHUB"], false));
     }
-
 }

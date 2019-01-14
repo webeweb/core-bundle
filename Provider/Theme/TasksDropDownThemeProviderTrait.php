@@ -44,5 +44,4 @@ trait TasksDropDownThemeProviderTrait {
         $this->tasksDropDownThemeProvider = $tasksDropDownThemeProvider;
         return $this;
     }
-
 }

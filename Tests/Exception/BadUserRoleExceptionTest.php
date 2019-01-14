@@ -45,5 +45,4 @@ class BadUserRoleExceptionTest extends AbstractTestCase {
         $this->assertEquals($roles, $ex->getRoles());
         $this->assertSame($user, $ex->getUser());
     }
-
 }

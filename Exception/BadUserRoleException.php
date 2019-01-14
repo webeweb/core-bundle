@@ -96,5 +96,4 @@ class BadUserRoleException extends AbstractException {
         $this->user = $user;
         return $this;
     }
-
 }

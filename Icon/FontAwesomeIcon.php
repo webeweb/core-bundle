@@ -168,5 +168,4 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
         }
         return $this;
     }
-
 }

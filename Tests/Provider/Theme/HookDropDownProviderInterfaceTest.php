@@ -31,5 +31,4 @@ class HookDropDownThemeProviderInterfaceTest extends AbstractTestCase {
 
         $this->assertEquals("webeweb.core.provider.theme.hook_drop_down", HookDropDownThemeProviderInterface::SERVICE_NAME);
     }
-
 }

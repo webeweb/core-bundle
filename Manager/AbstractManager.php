@@ -108,5 +108,4 @@ abstract class AbstractManager implements ManagerInterface {
     public function size() {
         return count($this->providers);
     }
-
 }

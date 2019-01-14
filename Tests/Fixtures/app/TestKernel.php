@@ -33,5 +33,4 @@ class TestKernel extends AbstractKernel {
         ];
         return $bundles;
     }
-
 }

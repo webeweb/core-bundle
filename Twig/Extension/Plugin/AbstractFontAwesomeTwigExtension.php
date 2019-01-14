@@ -89,5 +89,4 @@ abstract class AbstractFontAwesomeTwigExtension extends AbstractTwigExtension {
         // Return the HTML.
         return static::coreHTMLElement("li", $glyphicon . $innerHTML);
     }
-
 }

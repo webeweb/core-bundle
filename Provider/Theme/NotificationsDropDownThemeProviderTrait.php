@@ -44,5 +44,4 @@ trait NotificationsDropDownThemeProviderTrait {
         $this->notificationsDropDownThemeProvider = $notificationsDropDownThemeProvider;
         return $this;
     }
-
 }

@@ -158,5 +158,4 @@ class EmailLayoutTest extends AbstractTestCase {
         $obj->setUnsubscribeURL("unsubscribeURL");
         $this->assertEquals("unsubscribeURL", $obj->getUnsubscribeURL());
     }
-
 }

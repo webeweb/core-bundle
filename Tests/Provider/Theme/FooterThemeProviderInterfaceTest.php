@@ -31,5 +31,4 @@ class FooterThemeProviderInterfaceTest extends AbstractTestCase {
 
         $this->assertEquals("webeweb.core.provider.theme.footer", FooterThemeProviderInterface::SERVICE_NAME);
     }
-
 }

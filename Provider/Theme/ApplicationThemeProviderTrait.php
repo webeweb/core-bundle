@@ -44,5 +44,4 @@ trait ApplicationThemeProviderTrait {
         $this->applicationThemeProvider = $applicationThemeProvider;
         return $this;
     }
-
 }

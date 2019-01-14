@@ -37,5 +37,4 @@ class RedirectResponseException extends AbstractException {
         $this->setOriginUrl($originUrl);
         $this->setRedirectUrl($redirectUrl);
     }
-
 }

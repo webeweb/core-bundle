@@ -255,5 +255,4 @@ interface FontAwesomeIconInterface extends IconInterface {
      * @return FontAwesomeIconInterface Returns this icon.
      */
     public function setSize($size);
-
 }

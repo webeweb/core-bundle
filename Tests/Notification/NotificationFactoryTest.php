@@ -92,5 +92,4 @@ class NotifcationFactoryTest extends AbstractTestCase {
         $this->assertEquals("content", $obj->getContent());
         $this->assertEquals(NotificationInterface::NOTIFICATION_WARNING, $obj->getType());
     }
-
 }

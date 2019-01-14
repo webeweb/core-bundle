@@ -57,5 +57,4 @@ abstract class AbstractEvent extends Event {
         $this->eventName = $eventName;
         return $this;
     }
-
 }

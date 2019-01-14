@@ -46,5 +46,4 @@ class EnvironmentTraitTest extends AbstractTestCase {
         $obj->setEnvironment("environment");
         $this->assertEquals("environment", $obj->getEnvironment());
     }
-
 }

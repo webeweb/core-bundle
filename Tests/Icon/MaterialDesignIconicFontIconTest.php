@@ -208,5 +208,4 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
         $obj->setSpin("exception");
         $this->assertNotEquals("exception", $obj->getSpin());
     }
-
 }

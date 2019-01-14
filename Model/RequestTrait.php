@@ -46,5 +46,4 @@ trait RequestTrait {
         $this->request = $request;
         return $this;
     }
-
 }

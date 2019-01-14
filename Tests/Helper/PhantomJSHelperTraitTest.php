@@ -50,5 +50,4 @@ class PhantomJSHelperTraitTest extends AbstractTestCase {
         $obj->setPhantomJSHelper($phantomJSHelper);
         $this->assertSame($phantomJSHelper, $obj->getPhantomJSHelper());
     }
-
 }

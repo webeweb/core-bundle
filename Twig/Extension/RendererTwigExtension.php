@@ -124,5 +124,4 @@ class RendererTwigExtension extends AbstractTwigExtension {
         // Return the output.
         return $output;
     }
-
 }

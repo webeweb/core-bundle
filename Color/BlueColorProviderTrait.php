@@ -44,5 +44,4 @@ trait BlueColorProviderTrait {
         $this->blueColorProvider = $blueColorProvider;
         return $this;
     }
-
 }

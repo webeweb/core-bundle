@@ -80,5 +80,4 @@ class BlueGreyColorProviderTest extends AbstractTestCase {
 
         $this->assertEquals(BlueGreyColorProviderInterface::BLUE_GREY_COLOR_NAME, $obj->getName());
     }
-
 }

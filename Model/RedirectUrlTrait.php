@@ -44,5 +44,4 @@ trait RedirectUrlTrait {
         $this->redirectUrl = $redirectUrl;
         return $this;
     }
-
 }

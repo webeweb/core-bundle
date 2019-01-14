@@ -27,5 +27,4 @@ class NavigationTree extends AbstractNavigationNode {
     public function __construct($name) {
         parent::__construct($name);
     }
-
 }

@@ -267,5 +267,4 @@ class ThemeManagerTest extends AbstractTestCase {
         $obj->setUserInfoThemeProvider($provider);
         $this->assertSame($provider, $obj->getUserInfoThemeProvider());
     }
-
 }

@@ -46,5 +46,4 @@ interface NavigationInterface {
      * @var string
      */
     const NAVIGATION_MATCHER_URL = "url";
-
 }

@@ -46,5 +46,4 @@ trait TwigEnvironmentTrait {
         $this->twigEnvironment = $twigEnvironment;
         return $this;
     }
-
 }

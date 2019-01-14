@@ -62,5 +62,4 @@ abstract class AbstractJQueryInputMaskTwigExtension extends AbstractTwigExtensio
         }
         return $innerHTML;
     }
-
 }

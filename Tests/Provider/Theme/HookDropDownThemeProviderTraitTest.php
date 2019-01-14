@@ -50,5 +50,4 @@ class HookDropDownThemeProviderTraitTest extends AbstractTestCase {
         $obj->setHookDropDownThemeProvider($hookDropDownThemeProvider);
         $this->assertSame($hookDropDownThemeProvider, $obj->getHookDropDownThemeProvider());
     }
-
 }

@@ -46,5 +46,4 @@ class TranslatorTraitTest extends AbstractTestCase {
         $obj->setTranslator($this->translator);
         $this->assertSame($this->translator, $obj->getTranslator());
     }
-
 }

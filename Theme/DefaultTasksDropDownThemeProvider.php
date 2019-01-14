@@ -41,5 +41,4 @@ class DefaultTasksDropDownThemeProvider implements TasksDropDownThemeProviderInt
     public function getView() {
         return null;
     }
-
 }

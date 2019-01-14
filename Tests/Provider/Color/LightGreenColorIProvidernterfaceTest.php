@@ -46,5 +46,4 @@ class LightGreenColorProviderInterfaceTest extends AbstractTestCase {
         $this->assertEquals("#76FF03", LightGreenColorProviderInterface::LIGHT_GREEN_COLOR_A400);
         $this->assertEquals("#64DD17", LightGreenColorProviderInterface::LIGHT_GREEN_COLOR_A700);
     }
-
 }

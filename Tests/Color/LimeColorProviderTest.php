@@ -88,5 +88,4 @@ class LimeColorProviderTest extends AbstractTestCase {
 
         $this->assertEquals(LimeColorProviderInterface::LIME_COLOR_NAME, $obj->getName());
     }
-
 }

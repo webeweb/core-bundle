@@ -125,5 +125,4 @@ interface IndigoColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const INDIGO_COLOR_NAME = "indigo";
-
 }

@@ -31,5 +31,4 @@ class CommandHelper {
         }
         return sprintf("<fg=yellow;options=bold>%s</>", OSHelper::isWindows() ? "KO" : "!");
     }
-
 }

@@ -33,5 +33,4 @@ class DefaultFooterThemeProviderTest extends AbstractTestCase {
 
         $this->assertNull($obj->getView());
     }
-
 }

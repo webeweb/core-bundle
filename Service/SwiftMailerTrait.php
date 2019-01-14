@@ -46,5 +46,4 @@ trait SwiftMailerTrait {
         $this->swiftMailer = $swiftMailer;
         return $this;
     }
-
 }

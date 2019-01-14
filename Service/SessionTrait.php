@@ -46,5 +46,4 @@ trait SessionTrait {
         $this->session = $session;
         return $this;
     }
-
 }

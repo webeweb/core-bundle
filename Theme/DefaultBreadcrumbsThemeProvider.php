@@ -34,5 +34,4 @@ class DefaultBreadcrumbsThemeProvider implements BreadcrumbsThemeProviderInterfa
     public function getView() {
         return null;
     }
-
 }

@@ -34,5 +34,4 @@ class DefaultNotificationsDropDownThemeProviderTest extends AbstractTestCase {
         $this->assertEquals([], $obj->getNotifications());
         $this->assertNull($obj->getView());
     }
-
 }

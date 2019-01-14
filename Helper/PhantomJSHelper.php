@@ -134,5 +134,4 @@ class PhantomJSHelper {
         $this->scriptsPath = $scriptsPath;
         return $this;
     }
-
 }

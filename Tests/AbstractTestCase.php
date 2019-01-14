@@ -203,5 +203,4 @@ abstract class AbstractTestCase extends TestCase {
         $this->containerBuilder->set("translator", $this->translator);
         $this->containerBuilder->set("twig", $this->twigEnvironment);
     }
-
 }

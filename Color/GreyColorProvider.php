@@ -57,5 +57,4 @@ class GreyColorProvider extends AbstractColorProvider implements GreyColorProvid
     public function getName() {
         return self::GREY_COLOR_NAME;
     }
-
 }

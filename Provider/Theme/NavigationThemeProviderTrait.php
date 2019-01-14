@@ -44,5 +44,4 @@ trait NavigationThemeProviderTrait {
         $this->navigationThemeProvider = $navigationThemeProvider;
         return $this;
     }
-
 }

@@ -135,5 +135,4 @@ class NavigationTreeHelper {
         // Return the result.
         return boolval($result);
     }
-
 }

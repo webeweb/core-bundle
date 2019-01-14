@@ -50,5 +50,4 @@ class NotificationsDropDownThemeProviderTraitTest extends AbstractTestCase {
         $obj->setNotificationsDropDownThemeProvider($notificationsDropDownThemeProvider);
         $this->assertSame($notificationsDropDownThemeProvider, $obj->getNotificationsDropDownThemeProvider());
     }
-
 }

@@ -130,5 +130,4 @@ class AssetsHelperTest extends AbstractTestCase {
             $this->assertEquals("\"" . $this->directoryIllegal . "\" is not a directory", $ex->getMessage());
         }
     }
-
 }

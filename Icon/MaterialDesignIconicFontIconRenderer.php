@@ -98,5 +98,4 @@ class MaterialDesignIconicFontIconRenderer extends IconRenderer {
     public static function renderSpin(MaterialDesignIconicFontIconInterface $icon) {
         return null !== $icon->getSpin() ? "zmdi-hc-" . $icon->getSpin() : null;
     }
-
 }

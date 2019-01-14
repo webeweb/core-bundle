@@ -35,5 +35,4 @@ class ColorManagerTest extends AbstractTestCase {
 
         $this->assertEquals([], $obj->getProviders());
     }
-
 }

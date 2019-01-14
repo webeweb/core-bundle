@@ -46,5 +46,4 @@ class UserTraitTest extends AbstractTestCase {
         $obj->setUser($this->user);
         $this->assertSame($this->user, $obj->getUser());
     }
-
 }

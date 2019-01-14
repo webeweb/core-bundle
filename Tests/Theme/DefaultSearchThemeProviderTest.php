@@ -33,5 +33,4 @@ class DefaultSearchThemeProviderTest extends AbstractTestCase {
 
         $this->assertNull($obj->getView());
     }
-
 }

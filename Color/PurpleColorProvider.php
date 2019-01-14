@@ -61,5 +61,4 @@ class PurpleColorProvider extends AbstractColorProvider implements PurpleColorPr
     public function getName() {
         return self::PURPLE_COLOR_NAME;
     }
-
 }

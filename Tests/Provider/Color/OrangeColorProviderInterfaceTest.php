@@ -46,5 +46,4 @@ class OrangeColorProviderInterfaceTest extends AbstractTestCase {
         $this->assertEquals("#FF9100", OrangeColorProviderInterface::ORANGE_COLOR_A400);
         $this->assertEquals("#FF6D00", OrangeColorProviderInterface::ORANGE_COLOR_A700);
     }
-
 }

@@ -43,5 +43,4 @@ class TestAbstractCommand extends AbstractCommand {
     public function newStyle(InputInterface $input, OutputInterface $output) {
         return parent::newStyle($input, $output);
     }
-
 }

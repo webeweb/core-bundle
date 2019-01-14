@@ -33,5 +33,4 @@ class AbstractEventTest extends AbstractTestCase {
 
         $this->assertEquals("eventName", $obj->getEventName());
     }
-
 }

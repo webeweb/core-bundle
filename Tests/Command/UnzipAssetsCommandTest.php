@@ -158,5 +158,4 @@ class UnzipAssetsCommandTest extends AbstractTestCase {
         ];
         $this->assertEquals(1, $obj->displayResult($this->style, $arg));
     }
-
 }

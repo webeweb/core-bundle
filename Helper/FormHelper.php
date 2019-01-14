@@ -123,5 +123,4 @@ class FormHelper {
         }
         return $output;
     }
-
 }

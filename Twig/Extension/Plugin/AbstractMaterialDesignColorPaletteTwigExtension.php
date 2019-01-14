@@ -96,5 +96,4 @@ abstract class AbstractMaterialDesignColorPaletteTwigExtension extends AbstractT
         $this->colors = $colors;
         return $this;
     }
-
 }

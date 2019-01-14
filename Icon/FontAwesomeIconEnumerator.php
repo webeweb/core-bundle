@@ -79,5 +79,4 @@ class FontAwesomeIconEnumerator {
             FontAwesomeIconInterface::FONT_AWESOME_SIZE_10X,
         ];
     }
-
 }

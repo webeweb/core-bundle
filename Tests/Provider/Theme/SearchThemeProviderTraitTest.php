@@ -50,5 +50,4 @@ class SearchThemeProviderTraitTest extends AbstractTestCase {
         $obj->setSearchThemeProvider($searchThemeProvider);
         $this->assertSame($searchThemeProvider, $obj->getSearchThemeProvider());
     }
-
 }

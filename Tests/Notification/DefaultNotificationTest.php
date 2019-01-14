@@ -34,5 +34,4 @@ class DefaultNotificationTest extends AbstractTestCase {
         $this->assertEquals("type", $obj->getType());
         $this->assertEquals("default", $obj->getContent());
     }
-
 }

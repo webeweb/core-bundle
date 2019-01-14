@@ -92,5 +92,4 @@ class PhantomJSHelperTest extends AbstractTestCase {
         }
         $this->assertEquals($res, $obj->getCommand());
     }
-
 }

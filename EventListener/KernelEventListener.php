@@ -143,5 +143,4 @@ class KernelEventListener {
         // Return the event.
         return $event;
     }
-
 }

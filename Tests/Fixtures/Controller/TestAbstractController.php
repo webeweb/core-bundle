@@ -91,5 +91,4 @@ class TestAbstractController extends AbstractController {
     public function notify($eventName, NotificationInterface $notification) {
         return parent::notify($eventName, $notification);
     }
-
 }

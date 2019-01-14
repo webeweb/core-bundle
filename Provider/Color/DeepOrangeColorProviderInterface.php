@@ -125,5 +125,4 @@ interface DeepOrangeColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const DEEP_ORANGE_COLOR_NAME = "deep-orange";
-
 }

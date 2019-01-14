@@ -48,5 +48,4 @@ class ThemeManagerWebTest extends AbstractWebTestCase {
         $this->assertInstanceOf(TasksDropDownThemeProviderInterface::class, $obj->getTasksDropDownThemeProvider());
         $this->assertInstanceOf(UserInfoThemeProviderInterface::class, $obj->getUserInfoThemeProvider());
     }
-
 }

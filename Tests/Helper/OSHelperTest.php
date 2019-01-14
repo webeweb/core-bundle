@@ -55,5 +55,4 @@ class OSHelperTest extends AbstractTestCase {
             $this->assertTrue(OSHelper::isWindows());
         }
     }
-
 }

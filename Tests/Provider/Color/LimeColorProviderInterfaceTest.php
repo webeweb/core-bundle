@@ -46,5 +46,4 @@ class LimeColorProviderInterfaceTest extends AbstractTestCase {
         $this->assertEquals("#C6FF00", LimeColorProviderInterface::LIME_COLOR_A400);
         $this->assertEquals("#AEEA00", LimeColorProviderInterface::LIME_COLOR_A700);
     }
-
 }

@@ -31,5 +31,4 @@ class SearchThemeProviderInterfaceTest extends AbstractTestCase {
 
         $this->assertEquals("webeweb.core.provider.theme.search", SearchThemeProviderInterface::SERVICE_NAME);
     }
-
 }

@@ -44,5 +44,4 @@ trait KernelEventListenerTrait {
         $this->KernelEventListener = $kernelEventListener;
         return $this;
     }
-
 }

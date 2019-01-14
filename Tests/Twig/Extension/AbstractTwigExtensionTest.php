@@ -63,5 +63,4 @@ EOT;
         $res = $obj->getFilters();
         $this->assertCount(0, $res);
     }
-
 }

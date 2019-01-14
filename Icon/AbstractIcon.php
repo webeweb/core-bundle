@@ -70,5 +70,4 @@ abstract class AbstractIcon implements IconInterface {
         $this->style = $style;
         return $this;
     }
-
 }

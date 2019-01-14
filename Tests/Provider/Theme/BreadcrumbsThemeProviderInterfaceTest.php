@@ -31,5 +31,4 @@ class BreadcrumbsThemeProviderInterfaceTest extends AbstractTestCase {
 
         $this->assertEquals("webeweb.core.provider.theme.breadcrumbs", BreadcrumbsThemeProviderInterface::SERVICE_NAME);
     }
-
 }

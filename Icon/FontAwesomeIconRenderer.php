@@ -88,5 +88,4 @@ class FontAwesomeIconRenderer extends IconRenderer {
     public static function renderSize(FontAwesomeIconInterface $icon) {
         return null !== $icon->getSize() ? "fa-" . $icon->getSize() : null;
     }
-
 }

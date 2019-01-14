@@ -155,5 +155,4 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
         // Return the arguments.
         return $options;
     }
-
 }

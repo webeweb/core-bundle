@@ -44,5 +44,4 @@ trait IndigoColorProviderTrait {
         $this->indigoColorProvider = $indigoColorProvider;
         return $this;
     }
-
 }

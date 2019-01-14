@@ -50,5 +50,4 @@ class UserInfoThemeProviderTraitTest extends AbstractTestCase {
         $obj->setUserInfoThemeProvider($userInfoThemeProvider);
         $this->assertSame($userInfoThemeProvider, $obj->getUserInfoThemeProvider());
     }
-
 }

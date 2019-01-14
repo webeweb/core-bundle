@@ -72,5 +72,4 @@ class MaterialDesignColorPaletteTwigExtension extends AbstractMaterialDesignColo
     public function materialDesignColorPaletteTextFunction(array $args = []) {
         return $this->materialDesignColorPalette("text", ArrayHelper::get($args, "name"), ArrayHelper::get($args, "value"));
     }
-
 }

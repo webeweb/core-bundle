@@ -158,5 +158,4 @@ class FormHelperTest extends AbstractTestCase {
             $this->assertSame($this->collection->get($i), $res->get($i));
         }
     }
-
 }

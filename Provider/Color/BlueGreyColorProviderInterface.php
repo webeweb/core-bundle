@@ -97,5 +97,4 @@ interface BlueGreyColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const BLUE_GREY_COLOR_NAME = "blue-grey";
-
 }

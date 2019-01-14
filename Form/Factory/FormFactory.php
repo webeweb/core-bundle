@@ -71,5 +71,4 @@ class FormFactory {
         // Return the output.
         return $output;
     }
-
 }

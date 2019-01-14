@@ -125,5 +125,4 @@ interface AmberColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const AMBER_COLOR_NAME = "amber";
-
 }

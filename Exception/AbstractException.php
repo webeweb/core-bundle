@@ -31,5 +31,4 @@ abstract class AbstractException extends AbstractCoreException {
     public function __construct($message, $code) {
         parent::__construct($message, $code);
     }
-
 }

@@ -39,5 +39,4 @@ interface DateTimeTypeInterface {
      * @var string
      */
     const FORMAT_TIME = "HH:mm";
-
 }

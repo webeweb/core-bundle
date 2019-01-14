@@ -40,5 +40,4 @@ class RedirectResponseExceptionTest extends AbstractTestCase {
         $this->assertEquals($originUrl, $ex->getOriginUrl());
         $this->assertEquals($redirectUrl, $ex->getRedirectUrl());
     }
-
 }

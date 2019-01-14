@@ -46,5 +46,4 @@ class YellowColorProviderInterfaceTest extends AbstractTestCase {
         $this->assertEquals("#FFEA00", YellowColorProviderInterface::YELLOW_COLOR_A400);
         $this->assertEquals("#FFD600", YellowColorProviderInterface::YELLOW_COLOR_A700);
     }
-
 }

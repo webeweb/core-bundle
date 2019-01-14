@@ -42,5 +42,4 @@ class TestUnzipAssetsCommand extends UnzipAssetsCommand {
     public function displayResult(StyleInterface $io, array $results) {
         return parent::displayResult($io, $results);
     }
-
 }

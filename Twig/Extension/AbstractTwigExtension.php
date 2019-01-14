@@ -76,5 +76,4 @@ abstract class AbstractTwigExtension extends Twig_Extension {
         // Return the HTML.
         return StringHelper::replace($template, ["%element%", "%attributes%", "%innerHTML%"], [trim($element), $attributes, $innerHTML]);
     }
-
 }

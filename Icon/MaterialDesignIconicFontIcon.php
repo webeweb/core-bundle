@@ -192,5 +192,4 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
         }
         return $this;
     }
-
 }

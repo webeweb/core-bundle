@@ -32,5 +32,4 @@ class ColorManager extends AbstractColorManager {
     public function __construct() {
         parent::__construct();
     }
-
 }

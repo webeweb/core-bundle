@@ -60,5 +60,4 @@ class AbstractNotificationTest extends AbstractTestCase {
         $obj->setType("type");
         $this->assertEquals("type", $obj->getType());
     }
-
 }

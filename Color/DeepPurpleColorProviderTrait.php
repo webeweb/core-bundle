@@ -44,5 +44,4 @@ trait DeepPurpleColorProviderTrait {
         $this->deepPurpleColorProvider = $deepPurpleColorProvider;
         return $this;
     }
-
 }

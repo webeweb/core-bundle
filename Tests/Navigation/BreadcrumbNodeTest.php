@@ -39,5 +39,4 @@ class BreadcrumbNodeTest extends AbstractTestCase {
         $this->assertNull($obj->getUri());
         $this->assertFalse($obj->getVisible());
     }
-
 }

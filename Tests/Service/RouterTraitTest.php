@@ -46,5 +46,4 @@ class RouterTraitTest extends AbstractTestCase {
         $obj->setRouter($this->router);
         $this->assertSame($this->router, $obj->getRouter());
     }
-
 }

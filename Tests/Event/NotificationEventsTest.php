@@ -34,5 +34,4 @@ class NotificationEventsTest extends AbstractTestCase {
         $this->assertEquals("webeweb.core.event.notification.success", NotificationEvents::NOTIFICATION_SUCCESS);
         $this->assertEquals("webeweb.core.event.notification.warning", NotificationEvents::NOTIFICATION_WARNING);
     }
-
 }

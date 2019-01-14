@@ -41,5 +41,4 @@ class DefaultNotificationsDropDownThemeProvider implements NotificationsDropDown
     public function getView() {
         return null;
     }
-
 }

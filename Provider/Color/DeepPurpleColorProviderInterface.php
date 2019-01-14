@@ -125,5 +125,4 @@ interface DeepPurpleColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const DEEP_PURPLE_COLOR_NAME = "deep-purple";
-
 }

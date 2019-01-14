@@ -61,5 +61,4 @@ class BlueColorProvider extends AbstractColorProvider implements BlueColorProvid
     public function getName() {
         return self::BLUE_COLOR_NAME;
     }
-
 }

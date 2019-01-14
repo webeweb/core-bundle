@@ -61,5 +61,4 @@ class DeepOrangeColorProvider extends AbstractColorProvider implements DeepOrang
     public function getName() {
         return self::DEEP_ORANGE_COLOR_NAME;
     }
-
 }

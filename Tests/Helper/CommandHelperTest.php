@@ -40,5 +40,4 @@ class CommandHelperTest extends AbstractTestCase {
             $this->assertEquals("<fg=yellow;options=bold>WARNING</>", CommandHelper::getCheckbox(false));
         }
     }
-
 }

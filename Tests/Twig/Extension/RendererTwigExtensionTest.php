@@ -135,5 +135,4 @@ EOT;
         $res = '<i class="meteocons" data-meteocons="A"></i>';
         $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "mc:A"));
     }
-
 }

@@ -46,5 +46,4 @@ class ObjectManagerTraitTest extends AbstractTestCase {
         $obj->setObjectManager($this->objectManager);
         $this->assertSame($this->objectManager, $obj->getObjectManager());
     }
-
 }

@@ -44,5 +44,4 @@ trait OriginUrlTrait {
         $this->originUrl = $originUrl;
         return $this;
     }
-
 }

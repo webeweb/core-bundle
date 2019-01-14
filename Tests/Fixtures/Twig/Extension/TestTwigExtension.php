@@ -30,5 +30,4 @@ class TestTwigExtension extends AbstractTwigExtension {
     public function __construct(Twig_Environment $twigEnvironment) {
         parent::__construct($twigEnvironment);
     }
-
 }

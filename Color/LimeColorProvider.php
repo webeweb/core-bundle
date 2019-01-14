@@ -61,5 +61,4 @@ class LimeColorProvider extends AbstractColorProvider implements LimeColorProvid
     public function getName() {
         return self::LIME_COLOR_NAME;
     }
-
 }

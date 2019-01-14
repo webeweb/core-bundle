@@ -62,5 +62,4 @@ class DateTimeRendererTest extends AbstractTestCase {
 
         $this->assertEquals("", DateTimeRenderer::renderDateTime());
     }
-
 }

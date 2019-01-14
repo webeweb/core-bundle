@@ -125,5 +125,4 @@ interface TealColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const TEAL_COLOR_NAME = "teal";
-
 }

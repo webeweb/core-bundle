@@ -42,5 +42,4 @@ class DefaultNavigationThemeProvider implements NavigationThemeProviderInterface
     public function getView() {
         return null;
     }
-
 }

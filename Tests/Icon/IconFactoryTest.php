@@ -114,5 +114,4 @@ class IconFactoryTest extends AbstractTestCase {
         $this->assertEquals($arg["size"], $obj->getSize());
         $this->assertEquals($arg["spin"], $obj->getSpin());
     }
-
 }

@@ -46,5 +46,4 @@ trait ObjectManagerTrait {
         $this->objectManager = $objectManager;
         return $this;
     }
-
 }

@@ -166,5 +166,4 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
         $res = '<i class="fa fa-camera-retro" style="color: #FFFFFF;"></i>';
         $this->assertEquals($res, $obj->renderIcon("camera-retro", "color: #FFFFFF;"));
     }
-
 }

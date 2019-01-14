@@ -102,5 +102,4 @@ interface ColorInterface {
      * @var string
      */
     const COLOR_A700 = "A700";
-
 }

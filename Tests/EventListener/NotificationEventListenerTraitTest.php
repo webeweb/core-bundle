@@ -50,5 +50,4 @@ class NotificationEventListenerTraitTest extends AbstractTestCase {
         $obj->setNotificationEventListener($notificationEventListener);
         $this->assertSame($notificationEventListener, $obj->getNotificationEventListener());
     }
-
 }

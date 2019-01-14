@@ -46,5 +46,4 @@ class AmberColorProviderInterfaceTest extends AbstractTestCase {
         $this->assertEquals("#FFC400", AmberColorProviderInterface::AMBER_COLOR_A400);
         $this->assertEquals("#FFAB00", AmberColorProviderInterface::AMBER_COLOR_A700);
     }
-
 }

@@ -46,5 +46,4 @@ class PinkColorProviderInterfaceTest extends AbstractTestCase {
         $this->assertEquals("#F50057", PinkColorProviderInterface::PINK_COLOR_A400);
         $this->assertEquals("#C51162", PinkColorProviderInterface::PINK_COLOR_A700);
     }
-
 }

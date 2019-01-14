@@ -47,5 +47,4 @@ abstract class AbstractCommand extends Command {
     protected function newStyle(InputInterface $input, OutputInterface $output) {
         return new SymfonyStyle($input, $output);
     }
-
 }

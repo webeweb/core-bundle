@@ -88,5 +88,4 @@ class DeepPurpleColorProviderTest extends AbstractTestCase {
 
         $this->assertEquals(DeepPurpleColorProviderInterface::DEEP_PURPLE_COLOR_NAME, $obj->getName());
     }
-
 }

@@ -38,5 +38,4 @@ class NotificationEventTest extends AbstractTestCase {
         $this->assertEquals("eventName", $obj->getEventName());
         $this->assertSame($notification, $obj->getNotification());
     }
-
 }

@@ -61,5 +61,4 @@ class YellowColorProvider extends AbstractColorProvider implements YellowColorPr
     public function getName() {
         return self::YELLOW_COLOR_NAME;
     }
-
 }

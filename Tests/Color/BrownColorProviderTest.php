@@ -80,5 +80,4 @@ class BrownColorProviderTest extends AbstractTestCase {
 
         $this->assertEquals(BrownColorProviderInterface::BROWN_COLOR_NAME, $obj->getName());
     }
-
 }

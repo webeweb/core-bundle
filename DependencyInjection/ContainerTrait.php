@@ -46,5 +46,4 @@ trait ContainerTrait {
         $this->container = $container;
         return $this;
     }
-
 }

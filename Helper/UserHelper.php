@@ -57,5 +57,4 @@ class UserHelper {
         // Return the result.
         return boolval($result);
     }
-
 }

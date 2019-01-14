@@ -35,5 +35,4 @@ class DefaultNavigationThemeProviderTest extends AbstractTestCase {
         $this->assertNull($obj->getView());
         $this->assertInstanceOf(NavigationTree::class, $obj->getTree());
     }
-
 }

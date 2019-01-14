@@ -62,5 +62,4 @@ class UnzipAssetsCommandWebTest extends AbstractWebTestCase {
         $this->assertRegexp("/waitme\-.*\.zip/", $output);
         $this->assertContains("[OK] All assets were successfully unzipped", $output);
     }
-
 }

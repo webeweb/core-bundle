@@ -48,5 +48,4 @@ interface IconInterface {
      * @return IconInterface Returns this icon.
      */
     public function setStyle($style);
-
 }

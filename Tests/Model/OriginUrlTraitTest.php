@@ -46,5 +46,4 @@ class OriginUrlTraitTest extends AbstractTestCase {
         $obj->setOriginUrl("originUrl");
         $this->assertEquals("originUrl", $obj->getOriginUrl());
     }
-
 }

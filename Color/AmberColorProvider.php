@@ -61,5 +61,4 @@ class AmberColorProvider extends AbstractColorProvider implements AmberColorProv
     public function getName() {
         return self::AMBER_COLOR_NAME;
     }
-
 }

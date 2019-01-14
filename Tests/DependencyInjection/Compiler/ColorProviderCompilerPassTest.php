@@ -84,5 +84,4 @@ class ColorProviderCompilerPassTest extends AbstractTestCase {
         $this->assertTrue($this->containerBuilder->hasDefinition(RedColorProvider::SERVICE_NAME));
         $this->assertTrue($this->containerBuilder->getDefinition(ColorManager::SERVICE_NAME)->hasMethodCall("registerProvider"));
     }
-
 }

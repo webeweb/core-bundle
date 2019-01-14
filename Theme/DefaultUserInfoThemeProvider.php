@@ -48,5 +48,4 @@ class DefaultUserInfoThemeProvider implements UserInfoThemeProviderInterface {
     public function provideResettingLink() {
         return false;
     }
-
 }

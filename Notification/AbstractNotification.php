@@ -80,5 +80,4 @@ abstract class AbstractNotification implements NotificationInterface {
         $this->type = $type;
         return $this;
     }
-
 }

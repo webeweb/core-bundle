@@ -46,5 +46,4 @@ trait UserTrait {
         $this->user = $user;
         return $this;
     }
-
 }

@@ -77,5 +77,4 @@ class NotificationFactory {
     public static function newWarningNotification($content) {
         return new WarningNotification($content);
     }
-
 }

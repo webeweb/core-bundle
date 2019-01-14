@@ -34,5 +34,4 @@ class DefaultSearchThemeProvider implements SearchThemeProviderInterface {
     public function getView() {
         return null;
     }
-
 }

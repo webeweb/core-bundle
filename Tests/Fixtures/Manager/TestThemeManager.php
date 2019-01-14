@@ -55,5 +55,4 @@ class TestThemeManager extends AbstractThemeManager {
     public function setProvider($name, ThemeProviderInterface $provider) {
         return parent::setProvider($name, $provider);
     }
-
 }

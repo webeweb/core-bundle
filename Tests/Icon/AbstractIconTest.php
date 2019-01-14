@@ -60,5 +60,4 @@ class AbstractIconTest extends AbstractTestCase {
         $obj->setStyle("style");
         $this->assertEquals("style", $obj->getStyle());
     }
-
 }

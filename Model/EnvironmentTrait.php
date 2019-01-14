@@ -44,5 +44,4 @@ trait EnvironmentTrait {
         $this->environment = $environment;
         return $this;
     }
-
 }

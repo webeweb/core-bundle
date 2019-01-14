@@ -46,5 +46,4 @@ class ContainerTraitTest extends AbstractTestCase {
         $obj->setContainer($this->containerBuilder);
         $this->assertSame($this->containerBuilder, $obj->getContainer());
     }
-
 }

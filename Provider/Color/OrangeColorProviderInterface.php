@@ -125,5 +125,4 @@ interface OrangeColorProviderInterface extends ColorProviderInterface {
      * @var string
      */
     const ORANGE_COLOR_NAME = "orange";
-
 }

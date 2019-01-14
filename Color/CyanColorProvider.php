@@ -61,5 +61,4 @@ class CyanColorProvider extends AbstractColorProvider implements CyanColorProvid
     public function getName() {
         return self::CYAN_COLOR_NAME;
     }
-
 }

@@ -88,5 +88,4 @@ class Select2HelperTest extends AbstractTestCase {
             $this->assertEquals("The item must implements Select2ItemInterface", $ex->getMessage());
         }
     }
-
 }

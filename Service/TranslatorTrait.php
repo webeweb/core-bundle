@@ -46,5 +46,4 @@ trait TranslatorTrait {
         $this->translator = $translator;
         return $this;
     }
-
 }

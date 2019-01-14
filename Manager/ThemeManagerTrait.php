@@ -44,5 +44,4 @@ trait ThemeManagerTrait {
         $this->themeManager = $themeManager;
         return $this;
     }
-
 }

@@ -50,5 +50,4 @@ class NotificationEventListener {
     public function onNotify(NotificationEvent $event) {
         $this->getSession()->getFlashBag()->add($event->getNotification()->getType(), $event->getNotification()->getContent());
     }
-
 }
