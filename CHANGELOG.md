@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Improve code checkstyle
+
 ### 1.7.0 (2019-01-14)
 
 - Add Date/time renderer
