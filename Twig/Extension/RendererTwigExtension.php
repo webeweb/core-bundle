@@ -11,8 +11,10 @@
 
 namespace WBW\Bundle\CoreBundle\Twig\Extension;
 
+use DateTime;
 use Twig_Environment;
 use Twig_SimpleFilter;
+use WBW\Bundle\CoreBundle\Renderer\DateTimeRenderer;
 use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\FontAwesomeTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MaterialDesignIconicFontTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MeteoconsTwigExtension;
@@ -62,6 +64,17 @@ class RendererTwigExtension extends AbstractTwigExtension {
     }
 
     /**
+     * Format a date/time.
+     *
+     * @param DateTime $dateTime The date/time.
+     * @param string $format The format.
+     * @return string Returns the formated date/time.
+     */
+    public function formatDateFilter(DateTime $dateTime = null, $format = DateTimeRenderer::DATETIME_FORMAT) {
+        return DateTimeRenderer::renderDateTime($dateTime, $format);
+    }
+
+    /**
      * Get the Twig filters.
      *
      * @return Twig_SimpleFilter[] Returns the Twig filters.
@@ -69,6 +82,7 @@ class RendererTwigExtension extends AbstractTwigExtension {
     public function getFilters() {
         return [
             new Twig_SimpleFilter("coreScript", [$this, "coreScriptFilter"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFilter("formatDate", [$this, "formatDateFilter"], ["is_safe" => ["html"]]),
         ];
     }
 

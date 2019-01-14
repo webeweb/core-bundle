@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension;
 
+use DateTime;
 use Twig_Node;
 use Twig_SimpleFilter;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
@@ -55,6 +56,20 @@ EOT;
     }
 
     /**
+     * Tests the formatDateFilter() method.
+     *
+     * @return void
+     */
+    public function testFormatDateFilter() {
+
+        $obj = new RendererTwigExtension($this->twigEnvironment);
+
+        $this->assertEquals("", $obj->formatDateFilter());
+        $this->assertEquals("2018-01-14 18:00", $obj->formatDateFilter(new DateTime("2018-01-14 18:00")));
+        $this->assertEquals("14/01/2018 18:00", $obj->formatDateFilter(new DateTime("2018-01-14 18:00"), "d/m/Y H:i"));
+    }
+
+    /**
      * Tests the getFilters() method.
      *
      * @return void
@@ -64,12 +79,17 @@ EOT;
         $obj = new RendererTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFilters();
-        $this->assertCount(1, $res);
+        $this->assertCount(2, $res);
 
         $this->assertInstanceOf(Twig_SimpleFilter::class, $res[0]);
         $this->assertEquals("coreScript", $res[0]->getName());
         $this->assertEquals([$obj, "coreScriptFilter"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFilter::class, $res[1]);
+        $this->assertEquals("formatDate", $res[1]->getName());
+        $this->assertEquals([$obj, "formatDateFilter"], $res[1]->getCallable());
+        $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
     }
 
     /**
@@ -100,6 +120,7 @@ EOT;
      * @return void
      */
     public function testRenderIconWithMaterialDesignIconicFont() {
+
         $res = '<i class="zmdi zmdi-home"></i>';
         $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "zmdi:home"));
     }
