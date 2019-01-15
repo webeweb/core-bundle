@@ -4,6 +4,7 @@ CHANGELOG
 ### master
 
 - Improve code checkstyle
+- Improve PHPDoc
 
 ### 1.7.0 (2019-01-14)
 
