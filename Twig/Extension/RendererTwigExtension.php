@@ -66,7 +66,7 @@ class RendererTwigExtension extends AbstractTwigExtension {
     /**
      * Format a date/time.
      *
-     * @param DateTime $dateTime The date/time.
+     * @param DateTime|null $dateTime The date/time.
      * @param string $format The format.
      * @return string Returns the formated date/time.
      */
@@ -91,7 +91,7 @@ class RendererTwigExtension extends AbstractTwigExtension {
      *
      * @param Twig_Environment $twigEnvironment The twig environment.
      * @param string $name The name.
-     * @param string $style The style.
+     * @param string|null $style The style.
      * @return string Returns the rendered icon.
      */
     public static function renderIcon(Twig_Environment $twigEnvironment, $name, $style = null) {

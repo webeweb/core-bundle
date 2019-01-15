@@ -38,7 +38,7 @@ trait LightBlueColorProviderTrait {
     /**
      * Set the light blue color provider.
      *
-     * @param LightBlueColorProvider $lightBlueColorProvider The light blue color provider.
+     * @param LightBlueColorProvider|null $lightBlueColorProvider The light blue color provider.
      */
     protected function setLightBlueColorProvider(LightBlueColorProvider $lightBlueColorProvider = null) {
         $this->lightBlueColorProvider = $lightBlueColorProvider;

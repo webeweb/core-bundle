@@ -24,7 +24,7 @@ class BreadcrumbNodeActionEdit extends BreadcrumbNode {
     /**
      * Constructor.
      *
-     * @param string $uri The URI.
+     * @param string|null $uri The URI.
      * @param string $matcher The matcher.
      */
     public function __construct($uri = null, $matcher = self::NAVIGATION_MATCHER_URL) {

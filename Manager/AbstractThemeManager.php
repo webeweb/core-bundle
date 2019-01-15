@@ -73,7 +73,7 @@ abstract class AbstractThemeManager extends AbstractManager {
      * Get a provider.
      *
      * @param string $name The name.
-     * @return ThemeProviderInterface Returns the theme provider in case of success, null otherwise.
+     * @return ThemeProviderInterface|null Returns the theme provider in case of success, null otherwise.
      * @throws ReflectionException Throws a reflection exception if an error occurs.
      */
     protected function getProvider($name) {

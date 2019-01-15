@@ -38,7 +38,7 @@ trait BreadcrumbsThemeProviderTrait {
     /**
      * Set the breadcrumbs theme provider.
      *
-     * @param BreadcrumbsThemeProviderInterface $breadcrumbsThemeProvider The breadcrumbs theme provider.
+     * @param BreadcrumbsThemeProviderInterface|null $breadcrumbsThemeProvider The breadcrumbs theme provider.
      */
     protected function setBreadcrumbsThemeProvider(BreadcrumbsThemeProviderInterface $breadcrumbsThemeProvider = null) {
         $this->breadcrumbsThemeProvider = $breadcrumbsThemeProvider;

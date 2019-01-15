@@ -23,7 +23,7 @@ class FontAwesomeIconRenderer extends IconRenderer {
      * Render an animation.
      *
      * @param FontAwesomeIconInterface $icon The icon.
-     * @return string Returns the rendered animation in case of success, null otherwise.
+     * @return string|null Returns the rendered animation in case of success, null otherwise.
      */
     public static function renderAnimation(FontAwesomeIconInterface $icon) {
         return null !== $icon->getAnimation() ? "fa-" . $icon->getAnimation() : null;
@@ -63,7 +63,7 @@ class FontAwesomeIconRenderer extends IconRenderer {
      * Render a name.
      *
      * @param FontAwesomeIconInterface $icon The icon.
-     * @return string Returns the rendered name in case of success, false otherwise.
+     * @return string|null Returns the rendered name in case of success, false otherwise.
      */
     public static function renderName(FontAwesomeIconInterface $icon) {
         return null !== $icon->getName() ? "fa-" . $icon->getName() : null;
@@ -73,7 +73,7 @@ class FontAwesomeIconRenderer extends IconRenderer {
      * Render a pull.
      *
      * @param FontAwesomeIconInterface $icon The icon.
-     * @return string Returns the rendered pull in case of success, null otherwise.
+     * @return string|null Returns the rendered pull in case of success, null otherwise.
      */
     public static function renderPull(FontAwesomeIconInterface $icon) {
         return null !== $icon->getPull() ? "fa-pull-" . $icon->getPull() : null;
@@ -83,7 +83,7 @@ class FontAwesomeIconRenderer extends IconRenderer {
      * Render a size.
      *
      * @param FontAwesomeIconInterface $icon The icon.
-     * @return string Returns the rendered size in case of success, null otherwise.
+     * @return string|null Returns the rendered size in case of success, null otherwise.
      */
     public static function renderSize(FontAwesomeIconInterface $icon) {
         return null !== $icon->getSize() ? "fa-" . $icon->getSize() : null;

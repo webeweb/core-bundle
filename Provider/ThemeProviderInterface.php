@@ -22,7 +22,7 @@ interface ThemeProviderInterface extends ProviderInterface {
     /**
      * Get the view.
      *
-     * @return string Returns the view.
+     * @return string|null Returns the view.
      */
     public function getView();
 }

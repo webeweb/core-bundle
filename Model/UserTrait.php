@@ -40,7 +40,7 @@ trait UserTrait {
     /**
      * Set the user.
      *
-     * @param UserInterface $user The user.
+     * @param UserInterface|null $user The user.
      */
     protected function setUser(UserInterface $user = null) {
         $this->user = $user;

@@ -38,7 +38,7 @@ trait LimeColorProviderTrait {
     /**
      * Set the lime color provider.
      *
-     * @param LimeColorProvider $limeColorProvider The lime color provider.
+     * @param LimeColorProvider|null $limeColorProvider The lime color provider.
      */
     protected function setLimeColorProvider(LimeColorProvider $limeColorProvider = null) {
         $this->limeColorProvider = $limeColorProvider;

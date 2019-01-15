@@ -40,7 +40,7 @@ trait ObjectManagerTrait {
     /**
      * Set the object manager.
      *
-     * @param ObjectManager $objectManager The object manager.
+     * @param ObjectManager|null $objectManager The object manager.
      */
     protected function setObjectManager(ObjectManager $objectManager = null) {
         $this->objectManager = $objectManager;

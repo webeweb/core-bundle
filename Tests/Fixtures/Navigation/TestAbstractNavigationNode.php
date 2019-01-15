@@ -25,8 +25,8 @@ class TestAbstractNavigationNode extends AbstractNavigationNode {
      * Constructor.
      *
      * @param string $name The name.
-     * @param string $icon The icon.
-     * @param string $uri The URI.
+     * @param string|null $icon The icon.
+     * @param string|null $uri The URI.
      * @param string $matcher The matcher.
      */
     public function __construct($name, $icon = null, $uri = null, $matcher = self::NAVIGATION_MATCHER_URL) {

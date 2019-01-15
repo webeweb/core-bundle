@@ -38,7 +38,7 @@ trait ThemeManagerTrait {
     /**
      * Set the theme manager.
      *
-     * @param ThemeManager $themeManager The theme manager.
+     * @param ThemeManager|null $themeManager The theme manager.
      */
     protected function setThemeManager(ThemeManager $themeManager = null) {
         $this->themeManager = $themeManager;

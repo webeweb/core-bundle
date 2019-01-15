@@ -139,7 +139,7 @@ abstract class AbstractController extends BaseController {
      *
      * @param string $eventName The event name.
      * @param NotificationInterface $notification The notification.
-     * @return Event Returns the event.
+     * @return Event|null Returns the event in case of success, null otherwise.
      */
     protected function notify($eventName, NotificationInterface $notification) {
 

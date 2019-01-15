@@ -40,7 +40,7 @@ trait EventDispatcherTrait {
     /**
      * Set the event dispatcher.
      *
-     * @param EventDispatcherInterface $eventDispatcher The event dispatcher.
+     * @param EventDispatcherInterface|null $eventDispatcher The event dispatcher.
      */
     protected function setEventDispatcher(EventDispatcherInterface $eventDispatcher = null) {
         $this->eventDispatcher = $eventDispatcher;

@@ -38,7 +38,7 @@ trait DeepOrangeColorProviderTrait {
     /**
      * Set the deep orange color provider.
      *
-     * @param DeepOrangeColorProvider $deepOrangeColorProvider The deep orange color provider.
+     * @param DeepOrangeColorProvider|null $deepOrangeColorProvider The deep orange color provider.
      */
     protected function setDeepOrangeColorProvider(DeepOrangeColorProvider $deepOrangeColorProvider = null) {
         $this->deepOrangeColorProvider = $deepOrangeColorProvider;

@@ -59,7 +59,7 @@ class KernelEventListener {
     /**
      * Get the current user.
      *
-     * @return UserInterface Returns the current user in case of success, null otherwise.
+     * @return UserInterface|null Returns the current user in case of success, null otherwise.
      */
     public function getUser() {
         $token = null;

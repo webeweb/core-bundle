@@ -38,7 +38,7 @@ trait TealColorProviderTrait {
     /**
      * Set the teal color provider.
      *
-     * @param TealColorProvider $tealColorProvider The teal color provider.
+     * @param TealColorProvider|null $tealColorProvider The teal color provider.
      */
     protected function setTealColorProvider(TealColorProvider $tealColorProvider = null) {
         $this->tealColorProvider = $tealColorProvider;

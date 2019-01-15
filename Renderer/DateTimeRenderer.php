@@ -31,7 +31,7 @@ class DateTimeRenderer {
     /**
      * Render a date/time.
      *
-     * @param DateTime $dateTime The date/time.
+     * @param DateTime|null $dateTime The date/time.
      * @param string $format The format.
      * @return string Returns the rendered date/time.
      */

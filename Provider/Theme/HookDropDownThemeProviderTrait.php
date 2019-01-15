@@ -38,7 +38,7 @@ trait HookDropDownThemeProviderTrait {
     /**
      * Set the hook drop down theme provider.
      *
-     * @param HookDropDownThemeProviderInterface $hookDropDownThemeProvider The hook drop down theme provider.
+     * @param HookDropDownThemeProviderInterface|null $hookDropDownThemeProvider The hook drop down theme provider.
      */
     protected function setHookDropDownThemeProvider(HookDropDownThemeProviderInterface $hookDropDownThemeProvider = null) {
         $this->hookDropDownThemeProvider = $hookDropDownThemeProvider;

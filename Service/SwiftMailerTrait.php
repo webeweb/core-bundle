@@ -40,7 +40,7 @@ trait SwiftMailerTrait {
     /**
      * Set the swift mailer.
      *
-     * @param Swift_Mailer $swiftMailer The swift mailer.
+     * @param Swift_Mailer|null $swiftMailer The swift mailer.
      */
     protected function setSwiftMailer(Swift_Mailer $swiftMailer = null) {
         $this->swiftMailer = $swiftMailer;

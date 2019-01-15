@@ -38,7 +38,7 @@ trait NavigationThemeProviderTrait {
     /**
      * Set the navigation theme provider.
      *
-     * @param NavigationThemeProviderInterface $navigationThemeProvider The navigation theme provider.
+     * @param NavigationThemeProviderInterface|null $navigationThemeProvider The navigation theme provider.
      */
     protected function setNavigationThemeProvider(NavigationThemeProviderInterface $navigationThemeProvider = null) {
         $this->navigationThemeProvider = $navigationThemeProvider;

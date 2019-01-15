@@ -38,7 +38,7 @@ trait CyanColorProviderTrait {
     /**
      * Set the cyan color provider.
      *
-     * @param CyanColorProvider $cyanColorProvider The cyan color provider.
+     * @param CyanColorProvider|null $cyanColorProvider The cyan color provider.
      */
     protected function setCyanColorProvider(CyanColorProvider $cyanColorProvider = null) {
         $this->cyanColorProvider = $cyanColorProvider;

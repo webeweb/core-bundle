@@ -38,7 +38,7 @@ trait IndigoColorProviderTrait {
     /**
      * Set the indigo color provider.
      *
-     * @param IndigoColorProvider $indigoColorProvider The indigo color provider.
+     * @param IndigoColorProvider|null $indigoColorProvider The indigo color provider.
      */
     protected function setIndigoColorProvider(IndigoColorProvider $indigoColorProvider = null) {
         $this->indigoColorProvider = $indigoColorProvider;

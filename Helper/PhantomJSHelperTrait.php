@@ -38,7 +38,7 @@ trait PhantomJSHelperTrait {
     /**
      * Set the phantomJS helper.
      *
-     * @param PhantomJSHelper $phantomJSHelper The phantomJS helper.
+     * @param PhantomJSHelper|null $phantomJSHelper The phantomJS helper.
      */
     protected function setPhantomJSHelper(PhantomJSHelper $phantomJSHelper = null) {
         $this->phantomJSHelper = $phantomJSHelper;

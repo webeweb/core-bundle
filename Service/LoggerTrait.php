@@ -40,7 +40,7 @@ trait LoggerTrait {
     /**
      * Set the logger.
      *
-     * @param LoggerInterface $logger The logger.
+     * @param LoggerInterface|null $logger The logger.
      */
     protected function setLogger(LoggerInterface $logger = null) {
         $this->logger = $logger;

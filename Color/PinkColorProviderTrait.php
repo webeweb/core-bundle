@@ -38,7 +38,7 @@ trait PinkColorProviderTrait {
     /**
      * Set the pink color provider.
      *
-     * @param PinkColorProvider $pinkColorProvider The pink color provider.
+     * @param PinkColorProvider|null $pinkColorProvider The pink color provider.
      */
     protected function setPinkColorProvider(PinkColorProvider $pinkColorProvider = null) {
         $this->pinkColorProvider = $pinkColorProvider;

@@ -38,7 +38,7 @@ trait SearchThemeProviderTrait {
     /**
      * Set the search theme provider.
      *
-     * @param SearchThemeProviderInterface $searchThemeProvider The search theme provider.
+     * @param SearchThemeProviderInterface|null $searchThemeProvider The search theme provider.
      */
     protected function setSearchThemeProvider(SearchThemeProviderInterface $searchThemeProvider = null) {
         $this->searchThemeProvider = $searchThemeProvider;

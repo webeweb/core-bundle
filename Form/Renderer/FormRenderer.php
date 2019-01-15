@@ -29,7 +29,7 @@ class FormRenderer {
      * Render an option.
      *
      * @param mixed $option The option.
-     * @param TranslatorInterface $translator The translator service.
+     * @param TranslatorInterface|null $translator The translator service.
      * @return string Returns the rendered option.
      */
     public static function renderOption($option, TranslatorInterface $translator = null) {

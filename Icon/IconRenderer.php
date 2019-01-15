@@ -23,7 +23,7 @@ class IconRenderer {
      * Render a style.
      *
      * @param IconInterface $icon The icon.
-     * @return string Returns the rendered style in case of success, null otherwise.
+     * @return string|null Returns the rendered style in case of success, null otherwise.
      */
     public static function renderStyle(IconInterface $icon) {
         return null !== $icon->getStyle() ? $icon->getStyle() : null;

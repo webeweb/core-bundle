@@ -40,7 +40,7 @@ trait TranslatorTrait {
     /**
      * Set the translator.
      *
-     * @param TranslatorInterface $translator The translator.
+     * @param TranslatorInterface|null $translator The translator.
      */
     protected function setTranslator(TranslatorInterface $translator = null) {
         $this->translator = $translator;

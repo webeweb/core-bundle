@@ -23,7 +23,7 @@ class MaterialDesignIconicFontIconRenderer extends IconRenderer {
      * Render a border.
      *
      * @param MaterialDesignIconicFontIconInterface $icon The icon.
-     * @return string Returns the rendered border in case of success, null otherwise.
+     * @return string|null Returns the rendered border in case of success, null otherwise.
      */
     public static function renderBorder(MaterialDesignIconicFontIconInterface $icon) {
         return null !== $icon->getBorder() ? "zmdi-hc-" . $icon->getBorder() : null;
@@ -43,7 +43,7 @@ class MaterialDesignIconicFontIconRenderer extends IconRenderer {
      * Render a flip.
      *
      * @param MaterialDesignIconicFontIconInterface $icon The icon.
-     * @return string Returns the rendered flip.
+     * @return string|null Returns the rendered flip.
      */
     public static function renderFlip(MaterialDesignIconicFontIconInterface $icon) {
         return null !== $icon->getFlip() ? "zmdi-hc-flip-" . $icon->getFlip() : null;
@@ -53,7 +53,7 @@ class MaterialDesignIconicFontIconRenderer extends IconRenderer {
      * Render a name.
      *
      * @param MaterialDesignIconicFontIconInterface $icon The icon.
-     * @return string Returns the rendered name in case of success, false otherwise.
+     * @return string|null Returns the rendered name in case of success, false otherwise.
      */
     public static function renderName(MaterialDesignIconicFontIconInterface $icon) {
         return null !== $icon->getName() ? "zmdi-" . $icon->getName() : null;
@@ -63,7 +63,7 @@ class MaterialDesignIconicFontIconRenderer extends IconRenderer {
      * Render a pull.
      *
      * @param MaterialDesignIconicFontIconInterface $icon The icon.
-     * @return string Returns the rendered pull in case of success, null otherwise.
+     * @return string|null Returns the rendered pull in case of success, null otherwise.
      */
     public static function renderPull(MaterialDesignIconicFontIconInterface $icon) {
         return null !== $icon->getPull() ? "pull-" . $icon->getPull() : null;
@@ -73,7 +73,7 @@ class MaterialDesignIconicFontIconRenderer extends IconRenderer {
      * Render a rotate.
      *
      * @param MaterialDesignIconicFontIconInterface $icon The icon.
-     * @return string Returns the rendered rotate in case of success, null otherwise.
+     * @return string|null Returns the rendered rotate in case of success, null otherwise.
      */
     public static function renderRotate(MaterialDesignIconicFontIconInterface $icon) {
         return null !== $icon->getRotate() ? "zmdi-hc-rotate-" . $icon->getRotate() : null;
@@ -83,7 +83,7 @@ class MaterialDesignIconicFontIconRenderer extends IconRenderer {
      * Render a size.
      *
      * @param MaterialDesignIconicFontIconInterface $icon The icon.
-     * @return string Returns the rendered size in case of success, null otherwise.
+     * @return string|null Returns the rendered size in case of success, null otherwise.
      */
     public static function renderSize(MaterialDesignIconicFontIconInterface $icon) {
         return null !== $icon->getSize() ? "zmdi-hc-" . $icon->getSize() : null;
@@ -93,7 +93,7 @@ class MaterialDesignIconicFontIconRenderer extends IconRenderer {
      * Render a spin.
      *
      * @param MaterialDesignIconicFontIconInterface $icon The icon.
-     * @return string Returns the rendered spin in case of success, null otherwise.
+     * @return string|null Returns the rendered spin in case of success, null otherwise.
      */
     public static function renderSpin(MaterialDesignIconicFontIconInterface $icon) {
         return null !== $icon->getSpin() ? "zmdi-hc-" . $icon->getSpin() : null;

@@ -52,7 +52,7 @@ class PhantomJSHelper {
      *
      * @param string $binaryPath The binary path.
      * @param string $scriptsPath The scripts path.
-     * @param string $outputPath The output path.
+     * @param string|null $outputPath The output path.
      */
     public function __construct($binaryPath, $scriptsPath, $outputPath = null) {
         $this->setBinaryPath($binaryPath);
