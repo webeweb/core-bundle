@@ -52,7 +52,7 @@ abstract class AbstractTwigExtension extends Twig_Extension {
     }
 
     /**
-     * Displays a Core HTML element.
+     * Displays an HTML element.
      *
      * @param string $element The object.
      * @param string $content The content.
@@ -61,7 +61,7 @@ abstract class AbstractTwigExtension extends Twig_Extension {
      */
     public static function coreHTMLElement($element, $content, array $attrs = []) {
 
-        // Initialize the templates.
+        // Initialize the template.
         $template = "<%element%%attributes%>%innerHTML%</%element%>";
 
         // Initialize the attributes.
