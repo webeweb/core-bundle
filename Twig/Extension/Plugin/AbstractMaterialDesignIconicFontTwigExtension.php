@@ -12,8 +12,8 @@
 namespace WBW\Bundle\CoreBundle\Twig\Extension\Plugin;
 
 use Twig_Environment;
-use WBW\Bundle\CoreBundle\Icon\MaterialDesignIconicFontIconInterface;
-use WBW\Bundle\CoreBundle\Icon\MaterialDesignIconicFontIconRenderer;
+use WBW\Bundle\CoreBundle\Icon\MaterialDesignIconicFont\MaterialDesignIconicFontIconInterface;
+use WBW\Bundle\CoreBundle\Icon\MaterialDesignIconicFont\MaterialDesignIconicFontIconRenderer;
 use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Library\Core\Argument\StringHelper;
 
