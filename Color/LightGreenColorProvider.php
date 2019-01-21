@@ -11,54 +11,15 @@
 
 namespace WBW\Bundle\CoreBundle\Color;
 
-use WBW\Bundle\CoreBundle\Provider\Color\LightGreenColorProviderInterface;
+use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\LightGreenColorProvider as BaseLightGreenColorProvider;
 
 /**
  * Light green color provider.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Color
+ * @deprecated since Core bundle 1.8, use {@see WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\LightGreenColorProvider} instead.
  */
-class LightGreenColorProvider extends AbstractColorProvider implements LightGreenColorProviderInterface, ColorInterface {
+class LightGreenColorProvider extends BaseLightGreenColorProvider implements ColorInterface {
 
-    /**
-     * Service name.
-     *
-     * @var string
-     */
-    const SERVICE_NAME = "webeweb.core.provider.color.light_green";
-
-    /**
-     * Constructor.
-     */
-    public function __construct() {
-        parent::__construct("MaterialDesignColorPalette");
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getColors() {
-        return [
-            self::COLOR_50   => self::LIGHT_GREEN_COLOR_50,
-            self::COLOR_100  => self::LIGHT_GREEN_COLOR_100,
-            self::COLOR_200  => self::LIGHT_GREEN_COLOR_200,
-            self::COLOR_300  => self::LIGHT_GREEN_COLOR_300,
-            self::COLOR_400  => self::LIGHT_GREEN_COLOR_400,
-            self::COLOR_500  => self::LIGHT_GREEN_COLOR_500,
-            self::COLOR_600  => self::LIGHT_GREEN_COLOR_600,
-            self::COLOR_700  => self::LIGHT_GREEN_COLOR_700,
-            self::COLOR_A100 => self::LIGHT_GREEN_COLOR_A100,
-            self::COLOR_A200 => self::LIGHT_GREEN_COLOR_A200,
-            self::COLOR_A400 => self::LIGHT_GREEN_COLOR_A400,
-            self::COLOR_A700 => self::LIGHT_GREEN_COLOR_A700,
-        ];
-    }
-
-    /**
-     *{@inheritdoc}
-     */
-    public function getName() {
-        return self::LIGHT_GREEN_COLOR_NAME;
-    }
 }
