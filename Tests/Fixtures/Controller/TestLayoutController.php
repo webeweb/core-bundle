@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Controller;
 
+use Symfony\Component\HttpFoundation\Response;
 use WBW\Bundle\CoreBundle\Controller\AbstractController;
 
 /**
