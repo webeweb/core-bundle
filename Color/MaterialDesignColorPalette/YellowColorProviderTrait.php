@@ -3,20 +3,19 @@
 /*
  * This file is part of the core-bundle package.
  *
- * (c) 2018 WEBEWEB
+ * (c) 2019 WEBEWEB
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Color;
+namespace WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette;
 
 /**
  * Yellow color provider trait.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Color
- * @deprecated since Core bundle 1.8, use {@see WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\YellowColorProviderTrait} instead.
+ * @package WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette
  */
 trait YellowColorProviderTrait {
 
