@@ -12,8 +12,8 @@
 namespace WBW\Bundle\CoreBundle\Twig\Extension\Plugin;
 
 use Twig_Environment;
-use WBW\Bundle\CoreBundle\Icon\FontAwesomeIconInterface;
-use WBW\Bundle\CoreBundle\Icon\FontAwesomeIconRenderer;
+use WBW\Bundle\CoreBundle\Icon\FontAwesome\FontAwesomeIconInterface;
+use WBW\Bundle\CoreBundle\Icon\FontAwesome\FontAwesomeIconRenderer;
 use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
 
 /**
