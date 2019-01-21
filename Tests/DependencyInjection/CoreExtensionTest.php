@@ -43,6 +43,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MaterialDesignColorPaletteTwigEx
 use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MaterialDesignIconicFontTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MeteoconsTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension;
+use WBW\Bundle\CoreBundle\Twig\Extension\UtilityTwigExtension;
 
 /**
  * Core extension test.
@@ -104,5 +105,8 @@ class CoreExtensionTest extends AbstractTestCase {
 
         // Renderer Twig extension
         $this->assertInstanceOf(RendererTwigExtension::class, $this->containerBuilder->get(RendererTwigExtension::SERVICE_NAME));
+
+        // Utility Twig extension
+        $this->assertInstanceOf(UtilityTwigExtension::class, $this->containerBuilder->get(UtilityTwigExtension::SERVICE_NAME));
     }
 }
