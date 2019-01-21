@@ -9,14 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Color;
+namespace WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette;
 
 /**
  * Blue color provider trait.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Color
- * @deprecated since Core bundle 1.8, use {@see WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\BlueColorProviderTrait} instead.
+ * @package WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette
  */
 trait BlueColorProviderTrait {
 
