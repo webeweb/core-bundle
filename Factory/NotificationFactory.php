@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Notification\WarningNotification;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Factory
- * @deprecated since Core bundle 1.6, use {@see WBW\Bundle\CoreBundle\Notification\NotificationFactory} instead
+ * @deprecated since Core bundle 1.6, use {@see WBW\Bundle\CoreBundle\Notification\NotificationFactory} instead.
  */
 class NotificationFactory {
 
