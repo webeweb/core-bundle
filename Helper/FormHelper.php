@@ -54,7 +54,7 @@ class FormHelper {
     }
 
     /**
-     * Check an entity type.
+     * Check a collection.
      *
      * @param Countable $collection The collection.
      * @param string $notification The notification.
@@ -66,7 +66,7 @@ class FormHelper {
     public function checkCollection($collection, $notification, $redirectURL, $expected = 1) {
 
         // Check the collection.
-        if (null === $collection || false === ($collection instanceof Countable)) {
+        if (null === $collection || (false === is_array($collection) && false === ($collection instanceof Countable))) {
             throw new IllegalArgumentException("The collection must be a countable");
         }
         if ($expected <= count($collection)) {

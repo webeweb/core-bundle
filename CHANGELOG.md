@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+### 1.8.1 (2019-01-xx)
+
+- Fix checkCollection() issue into Form helper
+- Replace deprecated classes into Icon factory 
+
 ### 1.8.0 (2019-01-21)
 
 - Add Utility Twig extension
@@ -128,6 +133,7 @@ CHANGELOG
 - Move Notification factory
 - Refactoring Font Awesome Twig extension
 - Refactoring Material Design Iconic Font Twig extension
+- Set Form helper as a service
 
 ### 1.5.0 (2018-12-19)
 

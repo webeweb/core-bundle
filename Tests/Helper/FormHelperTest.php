@@ -57,6 +57,7 @@ class FormHelperTest extends AbstractTestCase {
         $obj = new FormHelper($this->objectManager, $this->eventDispatcher);
 
         $this->assertNull($obj->checkCollection($this->collection, "notification", "redirectURL"));
+        $this->assertNull($obj->checkCollection(["element0"], "notification", "redirectURL"));
     }
 
     /**
