@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Icon;
 
-use WBW\Bundle\CoreBundle\Icon\FontAwesomeIconInterface;
+use WBW\Bundle\CoreBundle\Icon\FontAwesome\FontAwesomeIconInterface;
 use WBW\Bundle\CoreBundle\Icon\IconFactory;
-use WBW\Bundle\CoreBundle\Icon\MaterialDesignIconicFontIconInterface;
+use WBW\Bundle\CoreBundle\Icon\MaterialDesignIconicFont\MaterialDesignIconicFontIconInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
