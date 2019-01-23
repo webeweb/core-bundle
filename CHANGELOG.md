@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### 1.8.1 (2019-01-xx)
+### 1.8.1 (2019-01-23)
 
 - Fix checkCollection() issue into Form helper
 - Replace deprecated classes into Icon factory 
