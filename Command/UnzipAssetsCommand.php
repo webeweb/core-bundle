@@ -31,11 +31,10 @@ class UnzipAssetsCommand extends AbstractCommand {
      *
      * @var string
      */
-    const COMMAND_HELP = <<< 'EOT'
-The <info>%command.name%</info> command unzips bundle assets into a given
-directory (e.g. the <comment>public</comment> directory).
+    const COMMAND_HELP = <<< EOT
+The <info>%command.name%</info> command unzips bundle assets into <comment>public</comment>.
 
-    <info>php %command.full_name% public</info>
+    <info>php %command.full_name%</info>
 
 EOT;
 
