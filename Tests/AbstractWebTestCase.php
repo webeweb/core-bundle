@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use Symfony\Component\Filesystem\Filesystem;
 use TestKernel;
 
 /**
@@ -37,8 +38,14 @@ abstract class AbstractWebTestCase extends WebTestCase {
     public static function setUpBeforeClass() {
         parent::setUpBeforeClass();
 
-        // Initialize and boot the kernel.
+        // Initialize the kernel.
         static::$kernel = static::createKernel();
+
+        // Clean the cache to avoid issues due to cache files.
+        $filesystem = new Filesystem();
+        $filesystem->remove(static::$kernel->getCacheDir());
+
+        // Boot the kernel.
         static::$kernel->boot();
     }
 
