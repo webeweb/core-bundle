@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### 1.8.2 (2019-01-25)
+
+- Clean the cache to avoid issues due to cache files during functional tests
+
 ### 1.8.1 (2019-01-23)
 
 - Fix checkCollection() issue into Form helper
