@@ -31,20 +31,16 @@ class UserHelper {
      */
     public static function hasRoles($user, $roles, $or = true) {
 
-        // Check the user.
         if (null === $user || false === ($user instanceof UserInterface)) {
             return false;
         }
 
-        // Check the roles.
         if (false === is_array($roles)) {
             $roles = [$roles];
         }
 
-        // Initialize the result.
         $result = 1 <= count($roles);
 
-        // Handle each role.
         foreach ($roles as $role) {
             $buffer = in_array($role, $user->getRoles());
             if (true === $buffer && true === $or) {
@@ -54,7 +50,6 @@ class UserHelper {
             $result &= $buffer;
         }
 
-        // Return the result.
         return boolval($result);
     }
 }

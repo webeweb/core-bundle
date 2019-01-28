@@ -31,25 +31,20 @@ class Select2Helper {
      */
     public static function toResults(array $items) {
 
-        // Initialize the output.
         $output = [];
 
-        // Handle each item.
         foreach ($items as $current) {
 
-            // Check the item.
             if (false === ($current instanceof Select2ItemInterface)) {
                 throw new IllegalArgumentException("The item must implements Select2ItemInterface");
             }
 
-            // Add the item.
             $output[] = [
                 "id"   => $current->getSelect2ItemId(),
                 "text" => $current->getSelect2ItemText(),
             ];
         }
 
-        // Return the output.
         return $output;
     }
 }

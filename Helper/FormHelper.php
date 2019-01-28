@@ -65,7 +65,6 @@ class FormHelper {
      */
     public function checkCollection($collection, $notification, $redirectURL, $expected = 1) {
 
-        // Check the collection.
         if (null === $collection || (false === is_array($collection) && false === ($collection instanceof Countable))) {
             throw new IllegalArgumentException("The collection must be a countable");
         }
@@ -73,21 +72,16 @@ class FormHelper {
             return;
         }
 
-        // Initialize the event name.
         $eventName = NotificationEvents::NOTIFICATION_WARNING;
 
-        // Check the event dispatcher.
         if (null !== $this->getEventDispatcher() && true === $this->getEventDispatcher()->hasListeners($eventName)) {
 
-            // Initialize the event.
             $notification = NotificationFactory::newWarningNotification($notification);
             $event        = new NotificationEvent($eventName, $notification);
 
-            // Dispatch the event.
             $this->getEventDispatcher()->dispatch($eventName, $event);
         }
 
-        // Throws a redirect response exception.
         throw new RedirectResponseException($redirectURL, null);
     }
 

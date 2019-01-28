@@ -32,15 +32,12 @@ class AssetsHelper {
      */
     protected static function listAssets($directory) {
 
-        // Check the directory.
         if (false === is_dir($directory)) {
             throw new IllegalArgumentException(sprintf("\"%s\" is not a directory", $directory));
         }
 
-        // Initialize the assets.
         $assets = [];
 
-        // Handle each file.
         foreach (new DirectoryIterator(realpath($directory)) as $current) {
 
             // Check the filename and his extension.
@@ -48,14 +45,11 @@ class AssetsHelper {
                 continue;
             }
 
-            // Add the pathname.
             $assets[] = $current->getPathname();
         }
 
-        // Sort the assets.
         sort($assets);
 
-        // Return the assets.
         return $assets;
     }
 
@@ -69,27 +63,22 @@ class AssetsHelper {
      */
     public static function unzipAssets($src, $dst) {
 
-        // List all assets.
-        $assets = static::listAssets($src);
-
-        // Check the directory.
         if (false === is_dir($dst)) {
             throw new IllegalArgumentException(sprintf("\"%s\" is not a directory", $dst));
         }
 
-        // Initialize the results.
         $result = [];
 
-        // Handle each asset.
-        foreach ($assets as $current) {
+        foreach (static::listAssets($src) as $current) {
+
             $zip = new ZipArchive();
+
             if (true === $zip->open($current)) {
                 $result[$current] = $zip->extractTo(realpath($dst));
                 $zip->close();
             }
         }
 
-        // Return the results.
         return $result;
     }
 }
