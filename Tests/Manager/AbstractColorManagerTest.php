@@ -12,7 +12,7 @@
 namespace  WBW\Bundle\CoreBundle\Tests\Manager;
 
 use Exception;
-use WBW\Bundle\CoreBundle\Color\RedColorProvider;
+use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\RedColorProvider;
 use WBW\Bundle\CoreBundle\Exception\AlreadyRegisteredProviderException;
 use WBW\Bundle\CoreBundle\Helper\ColorHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
@@ -43,6 +43,7 @@ class AbstractColorManagerTest extends AbstractTestCase {
      * Tests the registerProvider() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testRegisterProvider() {
 
