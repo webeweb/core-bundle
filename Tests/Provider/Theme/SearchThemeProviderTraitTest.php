@@ -42,7 +42,7 @@ class SearchThemeProviderTraitTest extends AbstractTestCase {
      */
     public function testSetSearchThemeProvider() {
 
-        // Set an Search theme provider mock.
+        // Set a Search theme provider mock.
         $searchThemeProvider = $this->getMockBuilder(SearchThemeProviderInterface::class)->getMock();
 
         $obj = new TestSearchThemeProviderTrait();

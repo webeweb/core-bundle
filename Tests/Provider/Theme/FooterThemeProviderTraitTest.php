@@ -42,7 +42,7 @@ class FooterThemeProviderTraitTest extends AbstractTestCase {
      */
     public function testSetFooterThemeProvider() {
 
-        // Set an Footer theme provider mock.
+        // Set a Footer theme provider mock.
         $footerThemeProvider = $this->getMockBuilder(FooterThemeProviderInterface::class)->getMock();
 
         $obj = new TestFooterThemeProviderTrait();

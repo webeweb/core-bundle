@@ -42,7 +42,7 @@ class TasksDropDownThemeProviderTraitTest extends AbstractTestCase {
      */
     public function testSetTasksDropDownThemeProvider() {
 
-        // Set an Tasks drop down theme provider mock.
+        // Set a Tasks drop down theme provider mock.
         $tasksDropDownThemeProvider = $this->getMockBuilder(TasksDropDownThemeProviderInterface::class)->getMock();
 
         $obj = new TestTasksDropDownThemeProviderTrait();

@@ -42,7 +42,7 @@ class NavigationThemeProviderTraitTest extends AbstractTestCase {
      */
     public function testSetNavigationThemeProvider() {
 
-        // Set an Navigation theme provider mock.
+        // Set a Navigation theme provider mock.
         $navigationThemeProvider = $this->getMockBuilder(NavigationThemeProviderInterface::class)->getMock();
 
         $obj = new TestNavigationThemeProviderTrait();

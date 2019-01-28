@@ -42,7 +42,7 @@ class BreadcrumbsThemeProviderTraitTest extends AbstractTestCase {
      */
     public function testSetBreadcrumbsThemeProvider() {
 
-        // Set an Breadcrumbs theme provider mock.
+        // Set a Breadcrumbs theme provider mock.
         $breadcrumbsThemeProvider = $this->getMockBuilder(BreadcrumbsThemeProviderInterface::class)->getMock();
 
         $obj = new TestBreadcrumbsThemeProviderTrait();
