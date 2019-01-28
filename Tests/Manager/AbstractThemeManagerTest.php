@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Manager;
 
+use Exception;
 use WBW\Bundle\CoreBundle\Provider\ThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\TestThemeManager;
@@ -27,6 +28,7 @@ class AbstractThemeManagerTest extends AbstractTestCase {
      * Tests the addGlobal() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testAddGlobal() {
 
@@ -64,6 +66,7 @@ class AbstractThemeManagerTest extends AbstractTestCase {
      * Tests the __construct() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testConstruct() {
 
@@ -78,6 +81,7 @@ class AbstractThemeManagerTest extends AbstractTestCase {
      * Tests the setProvider() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testSetProvider() {
 
@@ -94,6 +98,7 @@ class AbstractThemeManagerTest extends AbstractTestCase {
      * Tests the setProvider() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testSetProviderWithOverwrite() {
 
