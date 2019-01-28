@@ -191,6 +191,7 @@ class AbstractControllerTest extends AbstractTestCase {
      * Tests the hasRoleOrRedirect() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testHasRoleOrRedirect() {
 
