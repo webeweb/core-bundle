@@ -89,13 +89,12 @@ EOT;
      */
     protected function displayResult(StyleInterface $io, array $results) {
 
-        // Initialize.
-        $success = $this->getCheckbox(true);
-        $warning = $this->getCheckbox(false);
+        $exitCode = 0;
 
         $rows = [];
 
-        $exitCode = 0;
+        $success = $this->getCheckbox(true);
+        $warning = $this->getCheckbox(false);
 
         // Handle each result.
         foreach ($results as $bundle => $assets) {
@@ -111,10 +110,9 @@ EOT;
             }
         }
 
-        // Display a table.
+        // Displays a table.
         $io->table(["", "Bundle", "Asset"], $rows);
 
-        // Return the exit code.
         return $exitCode;
     }
 
@@ -123,45 +121,34 @@ EOT;
      */
     protected function execute(InputInterface $input, OutputInterface $output) {
 
-        // Check the application.
         if (false === ($this->getApplication() instanceof Application)) {
             return -1;
         }
 
-        // Create an I/O and display.
         $io = $this->newStyle($input, $output);
         $this->displayHeader($io);
 
-        // Initialize the results.
         $results = [];
 
-        // Get the bundles.
         $bundles = $this->getApplication()->getKernel()->getBundles();
 
-        // Handle each bundle.
         foreach ($bundles as $current) {
 
-            // Check the bundle.
             if (false === ($current instanceof AssetsProviderInterface)) {
                 continue;
             }
 
-            // Get the bundle path.
             $bundlePath = $current->getPath();
 
-            // Initialize the directories.
             $assetsDirectory = $bundlePath . $current->getAssetsRelativeDirectory();
             $publicDirectory = $bundlePath . "/Resources/public";
 
-            // Unzip the assets.
             $results[$current->getName()] = AssetsHelper::unzipAssets($assetsDirectory, $publicDirectory);
         }
 
-        // Display.
         $exitCode = $this->displayResult($io, $results);
         $this->displayFooter($io, $exitCode, count($results));
 
-        // Return.
         return $exitCode;
     }
 }
