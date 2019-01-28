@@ -48,5 +48,4 @@ class NotificationEvents {
      * @var string
      */
     const NOTIFICATION_WARNING = "webeweb.core.event.notification." . NotificationInterface::NOTIFICATION_WARNING;
-
 }
