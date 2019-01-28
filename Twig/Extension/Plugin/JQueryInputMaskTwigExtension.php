@@ -143,7 +143,6 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
      */
     private function prepareOptions(array $args, $defaultMask) {
 
-        // Initialize the options.
         $options = ArrayHelper::get($args, "opts", []);
 
         $options["autoUnmask"]         = ArrayHelper::get($options, "autoUnmask", true);
@@ -152,7 +151,6 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
             $options["placeholder"] = preg_replace("/[^\ ][.]*/", "_", $defaultMask);
         }
 
-        // Return the arguments.
         return $options;
     }
 }

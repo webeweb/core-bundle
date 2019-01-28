@@ -42,7 +42,6 @@ abstract class AbstractFontAwesomeTwigExtension extends AbstractTwigExtension {
      */
     protected function fontAwesomeIcon(FontAwesomeIconInterface $icon) {
 
-        // Initialize the attributes.
         $attributes = [];
 
         $attributes["class"][] = FontAwesomeIconRenderer::renderFont($icon);
@@ -54,7 +53,6 @@ abstract class AbstractFontAwesomeTwigExtension extends AbstractTwigExtension {
         $attributes["class"][] = FontAwesomeIconRenderer::renderAnimation($icon);
         $attributes["style"]   = FontAwesomeIconRenderer::renderStyle($icon);
 
-        // Return the HTML.
         return static::coreHTMLElement("i", null, $attributes);
     }
 
@@ -66,10 +64,8 @@ abstract class AbstractFontAwesomeTwigExtension extends AbstractTwigExtension {
      */
     protected function fontAwesomeList($items) {
 
-        // Initialize the parameters.
         $innerHTML = true === is_array($items) ? implode("\n", $items) : $items;
 
-        // Return the HTML.
         return static::coreHTMLElement("ul", $innerHTML, ["class" => "fa-ul"]);
     }
 
@@ -82,11 +78,9 @@ abstract class AbstractFontAwesomeTwigExtension extends AbstractTwigExtension {
      */
     protected function fontAwesomeListIcon($icon, $content) {
 
-        // Initialize the parameters.
         $glyphicon = static::coreHTMLElement("span", $icon, ["class" => "fa-li"]);
         $innerHTML = null !== $content ? $content : "";
 
-        // Return the HTML.
         return static::coreHTMLElement("li", $glyphicon . $innerHTML);
     }
 }

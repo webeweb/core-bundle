@@ -64,7 +64,6 @@ abstract class AbstractMaterialDesignColorPaletteTwigExtension extends AbstractT
 
         $color = $this->getColors()[0];
 
-        // Handle each color.
         foreach ($this->getColors() as $current) {
             if ($name !== $current->getName()) {
                 continue;
@@ -72,7 +71,6 @@ abstract class AbstractMaterialDesignColorPaletteTwigExtension extends AbstractT
             $color = $current;
         }
 
-        // Initialize the HTML.
         $html = [];
 
         $html[] = "mdc";
@@ -82,7 +80,6 @@ abstract class AbstractMaterialDesignColorPaletteTwigExtension extends AbstractT
             $html[] = $value;
         }
 
-        // Return the HTML.
         return implode("-", $html);
     }
 

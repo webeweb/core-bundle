@@ -41,14 +41,12 @@ abstract class AbstractMeteoconsTwigExtension extends AbstractTwigExtension {
      */
     protected function meteoconsIcon($name, $style) {
 
-        // Initialize the attributes.
         $attributes = [];
 
         $attributes["class"]          = "meteocons";
         $attributes["data-meteocons"] = $name;
         $attributes["style"]          = $style;
 
-        // Return the HTML.
         return static::coreHTMLElement("i", null, $attributes);
     }
 }
