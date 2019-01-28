@@ -12,6 +12,7 @@
 namespace Twig\Extension;
 
 use DateTime;
+use Exception;
 use Twig_Node;
 use Twig_SimpleFilter;
 use Twig_SimpleFunction;
@@ -43,6 +44,7 @@ class UtilityTwigExtensionTest extends AbstractTestCase {
      * Tests the formatDate() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testFormatDate() {
 
