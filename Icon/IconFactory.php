@@ -51,7 +51,6 @@ class IconFactory {
      */
     public static function parseFontAwesomeIcon(array $args) {
 
-        // Initialize the icon.
         $icon = static::newFontAwesomeIcon();
 
         $icon->setName(ArrayHelper::get($args, "name", "home"));
@@ -64,7 +63,6 @@ class IconFactory {
         $icon->setPull(ArrayHelper::get($args, "pull"));
         $icon->setSize(ArrayHelper::get($args, "size"));
 
-        // Return the icon.
         return $icon;
     }
 
@@ -76,7 +74,6 @@ class IconFactory {
      */
     public static function parseMaterialDesignIconicFontIcon(array $args) {
 
-        // Initialize the icon.
         $icon = static::newMaterialDesignIconicFontIcon();
 
         $icon->setName(ArrayHelper::get($args, "name", "home"));
@@ -90,7 +87,6 @@ class IconFactory {
         $icon->setSize(ArrayHelper::get($args, "size"));
         $icon->setSpin(ArrayHelper::get($args, "spin"));
 
-        // Return the icon.
         return $icon;
     }
 }
