@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Form\Renderer;
 
 use DateTime;
+use Exception;
 use WBW\Bundle\CoreBundle\Renderer\DateTimeRenderer;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
@@ -37,6 +38,7 @@ class DateTimeRendererTest extends AbstractTestCase {
      * Tests the renderDateTime() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testRenderDateTime() {
 
@@ -47,6 +49,7 @@ class DateTimeRendererTest extends AbstractTestCase {
      * Tests the renderDateTime() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testRenderDateTimeWithFormat() {
 
