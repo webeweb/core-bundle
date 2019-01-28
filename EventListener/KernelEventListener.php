@@ -111,7 +111,6 @@ class KernelEventListener {
      */
     public function onKernelException(GetResponseForExceptionEvent $event) {
 
-        // Get the exception.
         $ex = $event->getException();
 
         // Handle the exception.
@@ -122,7 +121,6 @@ class KernelEventListener {
             $this->handleRedirectResponseException($event, $ex);
         }
 
-        // Return the event.
         return $event;
     }
 
@@ -134,13 +132,11 @@ class KernelEventListener {
      */
     public function onKernelRequest(GetResponseEvent $event) {
 
-        // Initialize the request.
         $this->setRequest($event->getRequest());
 
         // Register the theme providers.
         $this->getThemeManager()->addGlobal();
 
-        // Return the event.
         return $event;
     }
 }
