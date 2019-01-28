@@ -33,7 +33,7 @@ class LightGreenColorProvider extends AbstractColorProvider implements LightGree
      * Constructor.
      */
     public function __construct() {
-        parent::__construct("MaterialDesignColorPalette");
+        parent::__construct(self::COLOR_DOMAIN);
     }
 
     /**

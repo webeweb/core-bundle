@@ -34,7 +34,7 @@ class DeepOrangeColorProviderTest extends AbstractTestCase {
         $obj = new DeepOrangeColorProvider();
 
         $this->assertEquals("webeweb.core.provider.color.deep_orange", DeepOrangeColorProvider::SERVICE_NAME);
-        $this->assertEquals("MaterialDesignColorPalette", $obj->getDomain());
+        $this->assertEquals(MaterialDesignColorPaletteInterface::COLOR_DOMAIN, $obj->getDomain());
     }
 
     /**

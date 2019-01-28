@@ -34,7 +34,7 @@ class BrownColorProviderTest extends AbstractTestCase {
         $obj = new BrownColorProvider();
 
         $this->assertEquals("webeweb.core.provider.color.brown", BrownColorProvider::SERVICE_NAME);
-        $this->assertEquals("MaterialDesignColorPalette", $obj->getDomain());
+        $this->assertEquals(MaterialDesignColorPaletteInterface::COLOR_DOMAIN, $obj->getDomain());
     }
 
     /**

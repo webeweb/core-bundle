@@ -34,7 +34,7 @@ class IndigoColorProviderTest extends AbstractTestCase {
         $obj = new IndigoColorProvider();
 
         $this->assertEquals("webeweb.core.provider.color.indigo", IndigoColorProvider::SERVICE_NAME);
-        $this->assertEquals("MaterialDesignColorPalette", $obj->getDomain());
+        $this->assertEquals(MaterialDesignColorPaletteInterface::COLOR_DOMAIN, $obj->getDomain());
     }
 
     /**
