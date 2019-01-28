@@ -25,30 +25,35 @@ interface MaterialDesignColorPaletteInterface {
      * @var string
      */
     const COLOR_100 = "100";
+
     /**
      * Color "200".
      *
      * @var string
      */
     const COLOR_200 = "200";
+
     /**
      * Color "300".
      *
      * @var string
      */
     const COLOR_300 = "300";
+
     /**
      * Color "400".
      *
      * @var string
      */
     const COLOR_400 = "400";
+
     /**
      * Color "50".
      *
      * @var string
      */
     const COLOR_50 = "50";
+
     /**
      * Color "500".
      *
@@ -97,4 +102,11 @@ interface MaterialDesignColorPaletteInterface {
      * @var string
      */
     const COLOR_A700 = "A700";
+
+    /**
+     * Color "domain".
+     *
+     * @var string
+     */
+    const COLOR_DOMAIN = "MaterialDesignColorPalette";
 }

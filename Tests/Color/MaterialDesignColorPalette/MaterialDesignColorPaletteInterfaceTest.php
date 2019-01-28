@@ -29,6 +29,8 @@ class MaterialDesignColorPaletteInterfaceTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
+        $this->assertEquals("MaterialDesignColorPalette", MaterialDesignColorPaletteInterface::COLOR_DOMAIN);
+
         $this->assertEquals("50", MaterialDesignColorPaletteInterface::COLOR_50);
         $this->assertEquals("100", MaterialDesignColorPaletteInterface::COLOR_100);
         $this->assertEquals("200", MaterialDesignColorPaletteInterface::COLOR_200);
