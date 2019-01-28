@@ -31,37 +31,29 @@ class NavigationTreeHelper {
      */
     protected static function activeNodes(Request $request, array $nodes = [], $level = 0) {
 
-        // Initialize the result.
         $result = false;
 
-        // Handle each node.
         foreach ($nodes as $n) {
 
-            // Check the node.
             if (false === ($n instanceof AbstractNavigationNode)) {
                 continue;
             }
 
-            // Determines if the current node matches the URL.
             if (true === self::nodeMatch($n, $request)) {
                 $current = true;
             } else {
                 $current = self::activeNodes($request, $n->getNodes(), $level + 1);
             }
 
-            // Handle the next node.
             if (false === $current) {
                 continue;
             }
 
-            // Mark the node as active.
             $n->setActive(true);
 
-            // Set the result.
             $result = true;
         }
 
-        // Return the result.
         return $result;
     }
 
@@ -84,15 +76,12 @@ class NavigationTreeHelper {
      */
     public static function getBreadcrumbs(AbstractNavigationNode $node) {
 
-        // Create the breadcrumbs.
         $breadcrumbs = [];
 
-        // Check the instance.
         if (true === ($node instanceof NavigationNode || $node instanceof BreadcrumbNode) && true === $node->getActive()) {
             $breadcrumbs[] = $node;
         }
 
-        // Handle each node.
         foreach ($node->getNodes() as $current) {
             if (false === ($current instanceof AbstractNavigationNode)) {
                 continue;
@@ -100,7 +89,6 @@ class NavigationTreeHelper {
             $breadcrumbs = array_merge($breadcrumbs, self::getBreadcrumbs($current));
         }
 
-        // Return the breadcrumbs.
         return $breadcrumbs;
     }
 
@@ -113,10 +101,8 @@ class NavigationTreeHelper {
      */
     protected static function nodeMatch(AbstractNavigationNode $node, Request $request) {
 
-        // Initialize the result.
         $result = false;
 
-        // Switch into matcher.
         switch ($node->getMatcher()) {
 
             case NavigationInterface::NAVIGATION_MATCHER_REGEXP:
@@ -132,7 +118,6 @@ class NavigationTreeHelper {
                 break;
         }
 
-        // Return the result.
         return boolval($result);
     }
 }

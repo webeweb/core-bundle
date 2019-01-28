@@ -97,14 +97,12 @@ class NavigationItem extends AbstractNode implements NavigationInterface {
      */
     public function toArray() {
 
-        // Initialize the output.
         $output = [];
 
         ArrayHelper::set($output, "href", $this->href, [null]);
         ArrayHelper::set($output, "icon", $this->icon, [null]);
         ArrayHelper::set($output, "span", $this->getId(), [null]);
 
-        // Check the nodes.
         if (0 < $this->size()) {
             $output["subitems"] = [];
             foreach ($this->getNodes() as $current) {
@@ -115,7 +113,6 @@ class NavigationItem extends AbstractNode implements NavigationInterface {
             }
         }
 
-        // Return the output.
         return $output;
     }
 }
