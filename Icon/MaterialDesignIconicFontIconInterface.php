@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Icon\MaterialDesignIconicFont\MaterialDesignIconicFont
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Icon
- * @deprecated since Core bundle 1.8, use {@see WBW\Bundle\CoreBundle\Icon\MaterialDesignIconicFont\MaterialDesignIconicFontIconInterface} instead.
+ * @deprecated since Core bundle 1.8.0, use {@see WBW\Bundle\CoreBundle\Icon\MaterialDesignIconicFont\MaterialDesignIconicFontIconInterface} instead.
  */
 interface MaterialDesignIconicFontIconInterface extends BaseMaterialDesignIconicFontIconInterface {
 
