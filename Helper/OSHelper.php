@@ -22,7 +22,7 @@ class OSHelper {
     /**
      * Determines if the operating system is Linux.
      *
-     * @return Returns true in case of success, false otherwise.
+     * @return bool Returns true in case of success, false otherwise.
      */
     public static function isLinux() {
         return !static::isWindows();
@@ -31,7 +31,7 @@ class OSHelper {
     /**
      * Determines if the operating system is Windows.
      *
-     * @return Returns true in case of success, false otherwise.
+     * @return bool Returns true in case of success, false otherwise.
      */
     public static function isWindows() {
         return "\\" === DIRECTORY_SEPARATOR;
