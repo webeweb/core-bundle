@@ -119,10 +119,8 @@ abstract class AbstractController extends BaseController {
      */
     protected function hasRolesOrRedirect(array $roles, $or, $redirectUrl, $originUrl = "") {
 
-        // Get the user.
         $user = $this->getKernelEventListener()->getUser();
 
-        // User have roles ?
         if (false === UserHelper::hasRoles($user, $roles, $or)) {
 
             // Throw a bad user role exception with an anonymous user if user is null.
@@ -130,7 +128,6 @@ abstract class AbstractController extends BaseController {
             throw new BadUserRoleException($user, $roles, $redirectUrl, $originUrl);
         }
 
-        // Return.
         return true;
     }
 
@@ -143,16 +140,13 @@ abstract class AbstractController extends BaseController {
      */
     protected function notify($eventName, NotificationInterface $notification) {
 
-        // Get and check the event dispatcher.
         $eventDispatcher = $this->getEventDispatcher();
         if (null === $eventDispatcher || false === $eventDispatcher->hasListeners($eventName)) {
             return null;
         }
 
-        // Log a debug trace.
         $this->getLogger()->debug(sprintf("Core controller dispatch a notification event with name \"%s\"", $eventName));
 
-        // Dispatch the event.
         return $eventDispatcher->dispatch($eventName, new NotificationEvent($eventName, $notification));
     }
 }
