@@ -68,7 +68,6 @@ class FormFactory {
         // Add all choices.
         $output["choices"] = array_merge($output["choices"], $choices);
 
-        // Return the output.
         return $output;
     }
 }
