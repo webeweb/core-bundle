@@ -11,6 +11,7 @@
 
 namespace  WBW\Bundle\CoreBundle\Tests\Exception;
 
+use Exception;
 use WBW\Bundle\CoreBundle\Exception\AlreadyRegisteredProviderException;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Theme\DefaultApplicationThemeProvider;
@@ -27,6 +28,7 @@ class AlreadyRegisteredProviderExceptionTest extends AbstractTestCase {
      * Tests the __construct() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testConstruct() {
 
