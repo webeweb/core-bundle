@@ -1,6 +1,14 @@
 CHANGELOG
 =========
 
+### 1.8.3 (2019-01-28)
+
+- Add COLOR_DOMAIN into Material Design Color Palette interface
+- Clean up comments
+- Fix Material Design Color Palette interface unit tests
+- Improve PHPDoc
+- Improve unit tests
+
 ### 1.8.2 (2019-01-25)
 
 - Clean the cache to avoid issues due to cache files during functional tests
