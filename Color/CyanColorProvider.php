@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\CyanColorProvider as 
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Color
- * @deprecated since Core bundle 1.8, use {@see WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\CyanColorProvider} instead.
+ * @deprecated since Core bundle 1.8.0, use {@see WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\CyanColorProvider} instead.
  */
 class CyanColorProvider extends BaseCyanColorProvider implements ColorInterface {
 

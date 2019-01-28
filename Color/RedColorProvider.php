@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\RedColorProvider as B
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Color
- * @deprecated since Core bundle 1.8, use {@see WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\RedColorProvider} instead.
+ * @deprecated since Core bundle 1.8.0, use {@see WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\RedColorProvider} instead.
  */
 class RedColorProvider extends BaseRedColorProvider implements ColorInterface {
 

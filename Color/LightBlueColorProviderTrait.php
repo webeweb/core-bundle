@@ -16,7 +16,7 @@ namespace WBW\Bundle\CoreBundle\Color;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Color
- * @deprecated since Core bundle 1.8, use {@see WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\LightBlueColorProviderTrait} instead.
+ * @deprecated since Core bundle 1.8.0, use {@see WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\LightBlueColorProviderTrait} instead.
  */
 trait LightBlueColorProviderTrait {
 
