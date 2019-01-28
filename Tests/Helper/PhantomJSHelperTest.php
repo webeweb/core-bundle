@@ -14,10 +14,6 @@ namespace WBW\Bundle\CoreBundle\Tests\Helper;
 use WBW\Bundle\CoreBundle\Helper\PhantomJSHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
-function realpath($path) {
-    return $path;
-}
-
 /**
  * PhantomJS helper test.
  *
