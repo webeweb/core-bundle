@@ -53,16 +53,20 @@ abstract class AbstractColorManager extends AbstractManager {
      * Register a color provider.
      *
      * @param ColorProviderInterface $colorProvider The color provider.
+     * @return ManagerInterface Returns this manager.
      * @throws AlreadyRegisteredProviderException Throws an already registered provider exception.
      * @throws ReflectionException Throws a reflection exception if an error occurs.
      */
     public function registerProvider(ColorProviderInterface $colorProvider) {
+
         $key = ColorHelper::getIdentifier($colorProvider);
+
         if (true === array_key_exists($key, $this->index)) {
             throw new AlreadyRegisteredProviderException($colorProvider);
         }
+
         $this->index[$key] = $this->size();
-        $this->addProvider($colorProvider);
+        return $this->addProvider($colorProvider);
     }
 
     /**
