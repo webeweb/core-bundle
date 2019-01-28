@@ -51,6 +51,7 @@ class FormHelperTest extends AbstractTestCase {
      * Tests the checkCollection() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testCheckCollection() {
 

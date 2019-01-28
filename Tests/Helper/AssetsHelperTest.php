@@ -61,6 +61,7 @@ class AssetsHelperTest extends AbstractTestCase {
      * Tests the listAssets() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testListAssets() {
 
@@ -102,6 +103,7 @@ class AssetsHelperTest extends AbstractTestCase {
      * Tests the unzipAssets() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testUnzipAssets() {
 
