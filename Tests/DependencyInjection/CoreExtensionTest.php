@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\DependencyInjection;
 
+use Exception;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\AmberColorProvider;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\BlueColorProvider;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\BlueGreyColorProvider;
@@ -57,6 +58,7 @@ class CoreExtensionTest extends AbstractTestCase {
      * Tests the load() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testLoad() {
 
