@@ -49,15 +49,12 @@ class RendererTwigExtension extends AbstractTwigExtension {
      */
     public function coreScriptFilter($content) {
 
-        // Initialize the attributes.
         $attributes = [];
 
         $attributes["type"] = "text/javascript";
 
-        // Initialize the parameters.
         $innerHTML = null !== $content ? implode("", ["\n", $content, "\n"]) : "";
 
-        // Return the HTML.
         return static::coreHTMLElement("script", $innerHTML, $attributes);
     }
 
@@ -82,16 +79,13 @@ class RendererTwigExtension extends AbstractTwigExtension {
      */
     public static function renderIcon(Twig_Environment $twigEnvironment, $name, $style = null) {
 
-        // Determines the handler.
         $handler = explode(":", $name);
         if (2 !== count($handler)) {
             return "";
         }
 
-        // Initialize the output.
         $output = "";
 
-        // Swith into handler.
         switch ($handler[0]) {
 
             case "fa": // Font Awesome
@@ -107,7 +101,6 @@ class RendererTwigExtension extends AbstractTwigExtension {
                 break;
         }
 
-        // Return the output.
         return $output;
     }
 }

@@ -61,19 +61,15 @@ abstract class AbstractTwigExtension extends Twig_Extension {
      */
     public static function coreHTMLElement($element, $content, array $attrs = []) {
 
-        // Initialize the template.
         $template = "<%element%%attributes%>%innerHTML%</%element%>";
 
-        // Initialize the attributes.
         $attributes = trim(StringHelper::parseArray($attrs));
         if (0 < strlen($attributes)) {
             $attributes = " " . $attributes;
         }
 
-        // Initialize the parameters.
         $innerHTML = null !== $content ? trim($content, " ") : "";
 
-        // Return the HTML.
         return StringHelper::replace($template, ["%element%", "%attributes%", "%innerHTML%"], [trim($element), $attributes, $innerHTML]);
     }
 }
