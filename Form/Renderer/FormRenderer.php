@@ -34,7 +34,6 @@ class FormRenderer {
      */
     public static function renderOption($option, TranslatorInterface $translator = null) {
 
-        // Check the option.
         if (null === $option) {
             return null !== $translator ? $translator->trans("label.empty_selection") : "Empty selection";
         }
@@ -55,7 +54,6 @@ class FormRenderer {
             $output     = implode("", [str_repeat($nbsp, $multiplier * 3), $symbol, $nbsp, $output]);
         }
 
-        // Return the output.
         return $output;
     }
 }
