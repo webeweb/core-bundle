@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension;
 
-use DateTime;
 use Twig_Node;
 use Twig_SimpleFilter;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
