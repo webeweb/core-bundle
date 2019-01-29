@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### 1.9.0 (2019-01-29)
+
+- Replace IllegalArgumentException by InvalidArgumentException
+
 ### 1.8.3 (2019-01-28)
 
 - Add COLOR_DOMAIN into Material Design Color Palette interface
