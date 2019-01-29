@@ -12,9 +12,9 @@
 namespace WBW\Bundle\CoreBundle\Tests\Helper;
 
 use Exception;
+use InvalidArgumentException;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Helper\TestAssetsHelper;
-use WBW\Library\Core\Exception\Argument\IllegalArgumentException;
 
 /**
  * Assets helper test.
@@ -87,14 +87,14 @@ class AssetsHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testListAssetsWithIllegalArgumentException() {
+    public function testListAssetsWithInvalidArgumentException() {
 
         try {
 
             TestAssetsHelper::listAssets($this->directoryIllegal);
         } catch (Exception $ex) {
 
-            $this->assertInstanceOf(IllegalArgumentException::class, $ex);
+            $this->assertInstanceOf(InvalidArgumentException::class, $ex);
             $this->assertEquals("\"" . $this->directoryIllegal . "\" is not a directory", $ex->getMessage());
         }
     }
@@ -121,14 +121,14 @@ class AssetsHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testUnzipAssetsWithIllegalArgumentException() {
+    public function testUnzipAssetsWithInvalidArgumentException() {
 
         try {
 
             TestAssetsHelper::unzipAssets($this->directoryAssets, $this->directoryIllegal);
         } catch (Exception $ex) {
 
-            $this->assertInstanceOf(IllegalArgumentException::class, $ex);
+            $this->assertInstanceOf(InvalidArgumentException::class, $ex);
             $this->assertEquals("\"" . $this->directoryIllegal . "\" is not a directory", $ex->getMessage());
         }
     }

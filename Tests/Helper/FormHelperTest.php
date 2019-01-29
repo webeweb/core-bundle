@@ -13,11 +13,11 @@ namespace WBW\Bundle\CoreBundle\Tests\Helper;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Exception;
+use InvalidArgumentException;
 use Symfony\Component\EventDispatcher\Event;
 use WBW\Bundle\CoreBundle\Exception\RedirectResponseException;
 use WBW\Bundle\CoreBundle\Helper\FormHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Library\Core\Exception\Argument\IllegalArgumentException;
 
 /**
  * Form helper test.
@@ -75,7 +75,7 @@ class FormHelperTest extends AbstractTestCase {
             $obj->checkCollection(null, "notification", "redirectURL");
         } catch (Exception $ex) {
 
-            $this->assertInstanceOf(IllegalArgumentException::class, $ex);
+            $this->assertInstanceOf(InvalidArgumentException::class, $ex);
             $this->assertEquals("The collection must be a countable", $ex->getMessage());
         }
     }

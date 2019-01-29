@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Helper;
 
 use DirectoryIterator;
-use WBW\Library\Core\Exception\Argument\IllegalArgumentException;
+use InvalidArgumentException;
 use ZipArchive;
 
 /**
@@ -28,12 +28,12 @@ class AssetsHelper {
      *
      * @param string $directory The directory.
      * @return array Returns the assets.
-     * @throws IllegalArgumentException Throw an illegal argument exception if the directory is not a directory.
+     * @throws InvalidArgumentException Throw an invalid argument exception if the directory is not a directory.
      */
     protected static function listAssets($directory) {
 
         if (false === is_dir($directory)) {
-            throw new IllegalArgumentException(sprintf("\"%s\" is not a directory", $directory));
+            throw new InvalidArgumentException(sprintf("\"%s\" is not a directory", $directory));
         }
 
         $assets = [];
@@ -59,12 +59,12 @@ class AssetsHelper {
      * @param string $src The source directory.
      * @param string $dst The destination directory.
      * @return array Returns the assets.
-     * @throws IllegalArgumentException Throw an illegal argument exception if a directory is not a directory.
+     * @throws InvalidArgumentException Throw an invalid argument if a directory is not a directory.
      */
     public static function unzipAssets($src, $dst) {
 
         if (false === is_dir($dst)) {
-            throw new IllegalArgumentException(sprintf("\"%s\" is not a directory", $dst));
+            throw new InvalidArgumentException(sprintf("\"%s\" is not a directory", $dst));
         }
 
         $result = [];

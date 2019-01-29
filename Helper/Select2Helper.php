@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Helper;
 
+use InvalidArgumentException;
 use WBW\Bundle\CoreBundle\Entity\Select2ItemInterface;
-use WBW\Library\Core\Exception\Argument\IllegalArgumentException;
 
 /**
  * Select2 helper.
@@ -27,7 +27,7 @@ class Select2Helper {
      *
      * @param Select2ItemInterface[] $items The items.
      * @return array Returns the "results" array.
-     * @throws IllegalArgumentException Throws an illegal argument exception if an item does not implement Select2ItemInterface.
+     * @throws InvalidArgumentException Throws an invalid argument exception if an item does not implement Select2ItemInterface.
      */
     public static function toResults(array $items) {
 
@@ -36,7 +36,7 @@ class Select2Helper {
         foreach ($items as $current) {
 
             if (false === ($current instanceof Select2ItemInterface)) {
-                throw new IllegalArgumentException("The item must implements Select2ItemInterface");
+                throw new InvalidArgumentException("The item must implements Select2ItemInterface");
             }
 
             $output[] = [

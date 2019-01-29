@@ -15,6 +15,7 @@ use Countable;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Persistence\ObjectManager;
+use InvalidArgumentException;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\Event\NotificationEvents;
@@ -22,7 +23,6 @@ use WBW\Bundle\CoreBundle\Exception\RedirectResponseException;
 use WBW\Bundle\CoreBundle\Notification\NotificationFactory;
 use WBW\Bundle\CoreBundle\Service\EventDispatcherTrait;
 use WBW\Bundle\CoreBundle\Service\ObjectManagerTrait;
-use WBW\Library\Core\Exception\Argument\IllegalArgumentException;
 
 /**
  * Form helper.
@@ -60,13 +60,13 @@ class FormHelper {
      * @param string $notification The notification.
      * @param string $redirectURL The redirect URL.
      * @param int $expected The expected count.
-     * @throws IllegalArgumentException Throws an illegal argument exception if collection is null.
+     * @throws InvalidArgumentException Throws an invalid argument exception if collection is null.
      * @throws RedirectResponseException Throws a redirect response exception if the collection is less than $expected.
      */
     public function checkCollection($collection, $notification, $redirectURL, $expected = 1) {
 
         if (null === $collection || (false === is_array($collection) && false === ($collection instanceof Countable))) {
-            throw new IllegalArgumentException("The collection must be a countable");
+            throw new InvalidArgumentException("The collection must be a countable");
         }
         if ($expected <= count($collection)) {
             return;

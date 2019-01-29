@@ -12,11 +12,11 @@
 namespace WBW\Bundle\CoreBundle\Tests\Helper;
 
 use Exception;
+use InvalidArgumentException;
 use WBW\Bundle\CoreBundle\Helper\Select2Helper;
 use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Entity\TestSelect2Item;
-use WBW\Library\Core\Exception\Argument\IllegalArgumentException;
 
 /**
  * Select2 helper test.
@@ -76,7 +76,7 @@ class Select2HelperTest extends AbstractTestCase {
      *
      * @retrurn void
      */
-    public function testToResultsWithIllegalArgumentException() {
+    public function testToResultsWithInvalidArgumentException() {
 
         try {
 
@@ -84,7 +84,7 @@ class Select2HelperTest extends AbstractTestCase {
             Select2Helper::toResults($this->items);
         } catch (Exception $ex) {
 
-            $this->assertInstanceOf(IllegalArgumentException::class, $ex);
+            $this->assertInstanceOf(InvalidArgumentException::class, $ex);
             $this->assertEquals("The item must implements Select2ItemInterface", $ex->getMessage());
         }
     }
