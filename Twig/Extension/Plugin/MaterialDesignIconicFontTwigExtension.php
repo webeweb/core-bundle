@@ -49,7 +49,10 @@ class MaterialDesignIconicFontTwigExtension extends AbstractMaterialDesignIconic
     public function getFilters() {
         return [
             new Twig_SimpleFilter("materialDesignIconicFontList", [$this, "materialDesignIconicFontListFilter"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFilter("mdiFontList", [$this, "materialDesignIconicFontListFilter"], ["is_safe" => ["html"]]),
+
             new Twig_SimpleFilter("materialDesignIconicFontListIcon", [$this, "materialDesignIconicFontListIconFilter"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFilter("mdiFontListIcon", [$this, "materialDesignIconicFontListIconFilter"], ["is_safe" => ["html"]]),
         ];
     }
 

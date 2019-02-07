@@ -48,7 +48,7 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
         $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFilters();
-        $this->assertCount(2, $res);
+        $this->assertCount(4, $res);
 
         $this->assertInstanceOf(Twig_SimpleFilter::class, $res[0]);
         $this->assertEquals("materialDesignIconicFontList", $res[0]->getName());
@@ -56,9 +56,19 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFilter::class, $res[1]);
-        $this->assertEquals("materialDesignIconicFontListIcon", $res[1]->getName());
-        $this->assertEquals([$obj, "materialDesignIconicFontListIconFilter"], $res[1]->getCallable());
+        $this->assertEquals("mdiFontList", $res[1]->getName());
+        $this->assertEquals([$obj, "materialDesignIconicFontListFilter"], $res[1]->getCallable());
         $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFilter::class, $res[2]);
+        $this->assertEquals("materialDesignIconicFontListIcon", $res[2]->getName());
+        $this->assertEquals([$obj, "materialDesignIconicFontListIconFilter"], $res[2]->getCallable());
+        $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFilter::class, $res[3]);
+        $this->assertEquals("mdiFontListIcon", $res[3]->getName());
+        $this->assertEquals([$obj, "materialDesignIconicFontListIconFilter"], $res[3]->getCallable());
+        $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
     }
 
     /**
