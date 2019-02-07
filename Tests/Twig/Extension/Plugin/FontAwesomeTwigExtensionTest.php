@@ -118,7 +118,7 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
         $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFilters();
-        $this->assertCount(2, $res);
+        $this->assertCount(4, $res);
 
         $this->assertInstanceOf(Twig_SimpleFilter::class, $res[0]);
         $this->assertEquals("fontAwesomeList", $res[0]->getName());
@@ -126,9 +126,19 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFilter::class, $res[1]);
-        $this->assertEquals("fontAwesomeListIcon", $res[1]->getName());
-        $this->assertEquals([$obj, "fontAwesomeListIconFilter"], $res[1]->getCallable());
+        $this->assertEquals("faList", $res[1]->getName());
+        $this->assertEquals([$obj, "fontAwesomeListFilter"], $res[1]->getCallable());
         $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFilter::class, $res[2]);
+        $this->assertEquals("fontAwesomeListIcon", $res[2]->getName());
+        $this->assertEquals([$obj, "fontAwesomeListIconFilter"], $res[2]->getCallable());
+        $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFilter::class, $res[3]);
+        $this->assertEquals("faListIcon", $res[3]->getName());
+        $this->assertEquals([$obj, "fontAwesomeListIconFilter"], $res[3]->getCallable());
+        $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
     }
 
     /**

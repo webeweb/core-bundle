@@ -80,7 +80,10 @@ class FontAwesomeTwigExtension extends AbstractFontAwesomeTwigExtension implemen
     public function getFilters() {
         return [
             new Twig_SimpleFilter("fontAwesomeList", [$this, "fontAwesomeListFilter"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFilter("faList", [$this, "fontAwesomeListFilter"], ["is_safe" => ["html"]]),
+
             new Twig_SimpleFilter("fontAwesomeListIcon", [$this, "fontAwesomeListIconFilter"], ["is_safe" => ["html"]]),
+            new Twig_SimpleFilter("faListIcon", [$this, "fontAwesomeListIconFilter"], ["is_safe" => ["html"]]),
         ];
     }
 
