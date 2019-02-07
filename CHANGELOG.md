@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+### 1.10.0 (2019-xx-xx)
+
+- Add Font Awesome Twig filters aliases
+- Add Material Design Color Palette Twig functions aliases
+- Add Material Design Iconic Font Twig filters aliases
+
 ### 1.9.0 (2019-01-29)
 
 - Replace IllegalArgumentException by InvalidArgumentException
