@@ -7,11 +7,11 @@ CHANGELOG
 - Add Material Design Color Palette Twig functions aliases
 - Add Material Design Iconic Font Twig filters aliases
 
-### 1.9.0 (2019-01-29)
+### [1.9.0](https://github.com/webeweb/core-bundle/tree/v1.9.0) (2019-01-29)
 
 - Replace IllegalArgumentException by InvalidArgumentException
 
-### 1.8.3 (2019-01-28)
+### [1.8.3](https://github.com/webeweb/core-bundle/tree/v1.8.9) (2019-01-28)
 
 - Add COLOR_DOMAIN into Material Design Color Palette interface
 - Clean up comments
@@ -19,17 +19,17 @@ CHANGELOG
 - Improve PHPDoc
 - Improve unit tests
 
-### 1.8.2 (2019-01-25)
+### [1.8.2](https://github.com/webeweb/core-bundle/tree/v1.8.2) (2019-01-25)
 
 - Clean the cache to avoid issues due to cache files during functional tests
 - Correct Unzip assets command help 
 
-### 1.8.1 (2019-01-23)
+### [1.8.1](https://github.com/webeweb/core-bundle/tree/v1.8.1) (2019-01-23)
 
 - Fix checkCollection() issue into Form helper
 - Replace deprecated classes into Icon factory 
 
-### 1.8.0 (2019-01-21)
+### [1.8.0](https://github.com/webeweb/core-bundle/tree/v1.8.0) (2019-01-21)
 
 - Add Utility Twig extension
 - Improve code checkstyle
@@ -56,14 +56,14 @@ CHANGELOG
 - Move Teal color provider classes
 - Move Yellow color provider classes
 
-### 1.7.0 (2019-01-14)
+### [1.7.0](https://github.com/webeweb/core-bundle/tree/v1.7.0) (2019-01-14)
 
 - Add Date/time renderer
 - Add formatDateFilter() into Renderer Twig extension
 - Allow null into Container trait
 - Improve unit tests
 
-### 1.6.0 (2019-01-10)
+### [1.6.0](https://github.com/webeweb/core-bundle/tree/v1.6.0) (2019-01-10)
 
 - Add Amber color provider
 - Add Amber color provider interface
@@ -158,27 +158,27 @@ CHANGELOG
 - Refactoring Material Design Iconic Font Twig extension
 - Set Form helper as a service
 
-### 1.5.0 (2018-12-19)
+### [1.5.0](https://github.com/webeweb/core-bundle/tree/v1.5.0) (2018-12-19)
 
 - Add OS helper (to determines the operating system)
 
-### 1.4.3 (2018-12-19)
+### [1.4.3](https://github.com/webeweb/core-bundle/tree/v1.4.3) (2018-12-19)
 
 - Fix find() method into WikiView model
 
-### 1.4.2 (2018-12-19)
+### [1.4.2](https://github.com/webeweb/core-bundle/tree/v1.4.2) (2018-12-19)
 
 - Fix unclosed script tag into layout templates
 
-### 1.4.1 (2018-12-13)
+### [1.4.1](https://github.com/webeweb/core-bundle/tree/v1.4.1) (2018-12-13)
 
 - Improve unit tests
 
-### 1.4.0 (2018-12-13)
+### [1.4.0](https://github.com/webeweb/core-bundle/tree/v1.4.0) (2018-12-13)
 
 - Add Renderer Twig extension trait
 
-### 1.3.0 (2018-12-13)
+### [1.3.0](https://github.com/webeweb/core-bundle/tree/v1.3.0) (2018-12-13)
 
 - Add find() and getView() into WikiView model
 - Add removeProvider() into Manager interface
@@ -186,12 +186,12 @@ CHANGELOG
 - Improve unit tests
 - Remove registerProvider() into Manager interface
 
-### 1.2.0 (2018-12-08)
+### [1.2.0](https://github.com/webeweb/core-bundle/tree/v1.2.0) (2018-12-08)
 
 - Improve layout functional tests
 - Reorganize views
 
-### 1.1.0 (2018-12-01)
+### [1.1.0](https://github.com/webeweb/core-bundle/tree/v1.1.0) (2018-12-01)
 
 - Add Assets helper
 - Add Command helper
@@ -212,11 +212,11 @@ CHANGELOG
 - Remove Symfony 2.6 support
 - Rename $route into $uri in Navigation classes
 
-### 1.0.1 (2018-11-19)
+### [1.0.1](https://github.com/webeweb/core-bundle/tree/v1.0.1) (2018-11-19)
 
 - Fix email layout block names
 - Fix resource paths
 
-### 1.0.0 (2018-11-17)
+### [1.0.0](https://github.com/webeweb/core-bundle/tree/v1.0.0) (2018-11-17)
 
 - Initial release
