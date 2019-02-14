@@ -1,11 +1,15 @@
 CHANGELOG
 =========
 
-### 1.10.0 (2019-xx-xx)
+### [1.10.0](https://github.com/webeweb/core-bundle/tree/v1.10.0) (2019-02-14)
 
 - Add Font Awesome Twig filters aliases
 - Add Material Design Color Palette Twig functions aliases
 - Add Material Design Iconic Font Twig filters aliases
+- Add calcAge() Twig function (and Twig filter) to get an age with a birth date
+- Update Font Awesome to 5.7.2
+- Update jQuery to 3.3.1
+- Update SweetAlert to 2.1.2
 
 ### [1.9.0](https://github.com/webeweb/core-bundle/tree/v1.9.0) (2019-01-29)
 
