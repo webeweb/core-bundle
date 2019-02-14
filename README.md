@@ -17,8 +17,8 @@ into all our bundles and Symfony applications.
 Includes:
 
 - [Animate.css 3.5.2](https://daneden.github.io/animate.css/)
-- [Font Awesome 5.3.1](https://fontawesome.com/)
-- [jQuery 3.2.1](http://jquery.com/)
+- [Font Awesome 5.7.2](https://fontawesome.com/)
+- [jQuery 3.3.1](http://jquery.com/)
 - [jQuery EasyAutocomplete 1.3.4](http://www.easyautocomplete.com/) (jQuery plug-in)
 - [jQuery InputMask 3.3.11](https://robinherbots.github.io/Inputmask/) (jQuery plug-in)
 - [jQuery Select2 4.0.5](https://select2.org/) (jQuery plug-in)
@@ -26,7 +26,7 @@ Includes:
 - [Material Design Hierarchical Display 1.0.1](http://zavoloklom.github.io/material-design-hierarchical-display/)
 - [Material Design Iconic Font 2.2.0](http://zavoloklom.github.io/material-design-iconic-font/)
 - [Meteocons](http://www.alessioatzeni.com/meteocons/)
-- [SweetAlert 2.1.0](https://sweetalert.js.org/)
+- [SweetAlert 2.1.2](https://sweetalert.js.org/)
 - [waitMe 1.19](http://vadimsva.github.io/waitMe/) (jQuery plug-in)
 
 ---
