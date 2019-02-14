@@ -35,6 +35,30 @@ class DateTimeRendererTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the renderAge() method.
+     *
+     * @return void
+     * @throws Exception Throws an exception if an error occurs.
+     */
+    public function testRenderAge() {
+
+        // Set Date/time mocks.
+        $now = new DateTime();
+        $ref = new DateTime("2019-02-14");
+
+        // Calculate an offset to validate future tests.
+        $offset = intval($now->format("Y")) - 2019;
+
+        $this->assertEquals(19, DateTimeRenderer::renderAge(new DateTime("2000-02-13"), $ref));
+        $this->assertEquals(19, DateTimeRenderer::renderAge(new DateTime("2000-02-14"), $ref));
+        $this->assertEquals(18, DateTimeRenderer::renderAge(new DateTime("2000-02-15"), $ref));
+
+        $this->assertEquals(19 + $offset, DateTimeRenderer::renderAge(new DateTime("2000-02-13")));
+        $this->assertEquals(19 + $offset, DateTimeRenderer::renderAge(new DateTime("2000-02-14")));
+        $this->assertEquals(18 + $offset, DateTimeRenderer::renderAge(new DateTime("2000-02-15")));
+    }
+
+    /**
      * Tests the renderDateTime() method.
      *
      * @return void

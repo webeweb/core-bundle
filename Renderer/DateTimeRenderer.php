@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Renderer;
 
 use DateTime;
+use Exception;
 
 /**
  * Date/time renderer.
@@ -27,6 +28,27 @@ class DateTimeRenderer {
      * @var string
      */
     const DATETIME_FORMAT = "Y-m-d H:i";
+
+    /**
+     * Render an age.
+     *
+     * @param DateTime $birthDate The birth date.
+     * @param DateTime|null $refDate The reference date.
+     * @return int Returns the age.
+     * @throws Exception Throws an exception if an errors occurs.
+     */
+    public static function renderAge(DateTime $birthDate, DateTime $refDate = null) {
+
+        // Use the current date/time.
+        if (null === $refDate) {
+            $refDate = new DateTime();
+        }
+
+        $diff  = $refDate->getTimestamp() - $birthDate->getTimestamp();
+        $years = new DateTime("@" . $diff);
+
+        return intval($years->format("Y")) - 1970;
+    }
 
     /**
      * Render a date/time.
