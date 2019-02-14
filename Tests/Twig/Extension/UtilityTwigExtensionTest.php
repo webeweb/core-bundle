@@ -28,6 +28,21 @@ use WBW\Bundle\CoreBundle\Twig\Extension\UtilityTwigExtension;
 class UtilityTwigExtensionTest extends AbstractTestCase {
 
     /**
+     * Tests the calcAge() method.
+     *
+     * @return void
+     * @throws Exception Throws an exception if an error occurs.
+     */
+    public function testCalcAge() {
+
+        $obj = new UtilityTwigExtension($this->twigEnvironment);
+
+        $this->assertGreaterThanOrEqual(19, $obj->calcAge(new DateTime("2000-02-13")));
+        $this->assertGreaterThanOrEqual(19, $obj->calcAge(new DateTime("2000-02-14")));
+        $this->assertGreaterThanOrEqual(18, $obj->calcAge(new DateTime("2000-02-15")));
+    }
+
+    /**
      * Tests the __construct() method.
      *
      * @return void
@@ -65,27 +80,32 @@ class UtilityTwigExtensionTest extends AbstractTestCase {
         $obj = new UtilityTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFilters();
-        $this->assertCount(4, $res);
+        $this->assertCount(5, $res);
 
         $this->assertInstanceOf(Twig_SimpleFilter::class, $res[0]);
-        $this->assertEquals("formatDate", $res[0]->getName());
-        $this->assertEquals([$obj, "formatDate"], $res[0]->getCallable());
+        $this->assertEquals("calcAge", $res[0]->getName());
+        $this->assertEquals([$obj, "calcAge"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFilter::class, $res[1]);
-        $this->assertEquals("htmlEntityDecode", $res[1]->getName());
-        $this->assertEquals([$obj, "htmlEntityDecode"], $res[1]->getCallable());
+        $this->assertEquals("formatDate", $res[1]->getName());
+        $this->assertEquals([$obj, "formatDate"], $res[1]->getCallable());
         $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFilter::class, $res[2]);
-        $this->assertEquals("htmlEntityEncode", $res[2]->getName());
-        $this->assertEquals([$obj, "htmlEntityEncode"], $res[2]->getCallable());
+        $this->assertEquals("htmlEntityDecode", $res[2]->getName());
+        $this->assertEquals([$obj, "htmlEntityDecode"], $res[2]->getCallable());
         $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFilter::class, $res[3]);
-        $this->assertEquals("md5", $res[3]->getName());
-        $this->assertEquals([$obj, "md5"], $res[3]->getCallable());
+        $this->assertEquals("htmlEntityEncode", $res[3]->getName());
+        $this->assertEquals([$obj, "htmlEntityEncode"], $res[3]->getCallable());
         $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFilter::class, $res[4]);
+        $this->assertEquals("md5", $res[4]->getName());
+        $this->assertEquals([$obj, "md5"], $res[4]->getCallable());
+        $this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()));
     }
 
     /**
@@ -98,27 +118,32 @@ class UtilityTwigExtensionTest extends AbstractTestCase {
         $obj = new UtilityTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-        $this->assertCount(4, $res);
+        $this->assertCount(5, $res);
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
-        $this->assertEquals("formatDate", $res[0]->getName());
-        $this->assertEquals([$obj, "formatDate"], $res[0]->getCallable());
+        $this->assertEquals("calcAge", $res[0]->getName());
+        $this->assertEquals([$obj, "calcAge"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[1]);
-        $this->assertEquals("htmlEntityDecode", $res[1]->getName());
-        $this->assertEquals([$obj, "htmlEntityDecode"], $res[1]->getCallable());
+        $this->assertEquals("formatDate", $res[1]->getName());
+        $this->assertEquals([$obj, "formatDate"], $res[1]->getCallable());
         $this->assertEquals(["html"], $res[1]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[2]);
-        $this->assertEquals("htmlEntityEncode", $res[2]->getName());
-        $this->assertEquals([$obj, "htmlEntityEncode"], $res[2]->getCallable());
+        $this->assertEquals("htmlEntityDecode", $res[2]->getName());
+        $this->assertEquals([$obj, "htmlEntityDecode"], $res[2]->getCallable());
         $this->assertEquals(["html"], $res[2]->getSafe(new Twig_Node()));
 
         $this->assertInstanceOf(Twig_SimpleFunction::class, $res[3]);
-        $this->assertEquals("md5", $res[3]->getName());
-        $this->assertEquals([$obj, "md5"], $res[3]->getCallable());
+        $this->assertEquals("htmlEntityEncode", $res[3]->getName());
+        $this->assertEquals([$obj, "htmlEntityEncode"], $res[3]->getCallable());
         $this->assertEquals(["html"], $res[3]->getSafe(new Twig_Node()));
+
+        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[4]);
+        $this->assertEquals("md5", $res[4]->getName());
+        $this->assertEquals([$obj, "md5"], $res[4]->getCallable());
+        $this->assertEquals(["html"], $res[4]->getSafe(new Twig_Node()));
     }
 
     /**

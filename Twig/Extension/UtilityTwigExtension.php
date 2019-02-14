@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Twig\Extension;
 
 use DateTime;
+use Exception;
 use Twig_Environment;
 use Twig_SimpleFilter;
 use Twig_SimpleFunction;
@@ -42,6 +43,18 @@ class UtilityTwigExtension extends AbstractTwigExtension {
     }
 
     /**
+     * Calculates an age.
+     *
+     * @param DateTime $birthDate The birth date.
+     * @param DateTime|null $refDate The reference date.
+     * @return int Returns teh age.
+     * @throws Exception Throws an exception if an error occurs.
+     */
+    public function calcAge(DateTime $birthDate, DateTime $refDate = null) {
+        return DateTimeRenderer::renderAge($birthDate, $refDate);
+    }
+
+    /**
      * Format a date/time.
      *
      * @param DateTime|null $dateTime The date/time.
@@ -59,6 +72,7 @@ class UtilityTwigExtension extends AbstractTwigExtension {
      */
     public function getFilters() {
         return [
+            new Twig_SimpleFilter("calcAge", [$this, "calcAge"], ["is_safe" => ["html"]]),
             new Twig_SimpleFilter("formatDate", [$this, "formatDate"], ["is_safe" => ["html"]]),
             new Twig_SimpleFilter("htmlEntityDecode", [$this, "htmlEntityDecode"], ["is_safe" => ["html"]]),
             new Twig_SimpleFilter("htmlEntityEncode", [$this, "htmlEntityEncode"], ["is_safe" => ["html"]]),
@@ -73,6 +87,7 @@ class UtilityTwigExtension extends AbstractTwigExtension {
      */
     public function getFunctions() {
         return [
+            new Twig_SimpleFunction("calcAge", [$this, "calcAge"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("formatDate", [$this, "formatDate"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("htmlEntityDecode", [$this, "htmlEntityDecode"], ["is_safe" => ["html"]]),
             new Twig_SimpleFunction("htmlEntityEncode", [$this, "htmlEntityEncode"], ["is_safe" => ["html"]]),
