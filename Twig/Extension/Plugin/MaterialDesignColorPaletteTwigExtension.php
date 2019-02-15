@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\CoreBundle\Twig\Extension\Plugin;
 
-use Twig_Environment;
 use Twig_SimpleFunction;
 use WBW\Library\Core\Argument\ArrayHelper;
 
@@ -29,15 +28,6 @@ class MaterialDesignColorPaletteTwigExtension extends AbstractMaterialDesignColo
      * @var string
      */
     const SERVICE_NAME = "webeweb.core.twig.extension.plugin.material_design_color_palette";
-
-    /**
-     * Constructor.
-     *
-     * @param Twig_Environment $twigEnvironment The wig environment.
-     */
-    public function __construct(Twig_Environment $twigEnvironment) {
-        parent::__construct($twigEnvironment);
-    }
 
     /**
      * Get the Twig functions.

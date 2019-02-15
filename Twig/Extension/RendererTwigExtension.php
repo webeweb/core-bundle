@@ -33,15 +33,6 @@ class RendererTwigExtension extends AbstractTwigExtension {
     const SERVICE_NAME = "webeweb.core.twig.extension.renderer";
 
     /**
-     * Constructor.
-     *
-     * @param Twig_Environment $twigEnvironment The twig environment.
-     */
-    public function __construct(Twig_Environment $twigEnvironment) {
-        parent::__construct($twigEnvironment);
-    }
-
-    /**
      * Displays a script.
      *
      * @param string $content The content.

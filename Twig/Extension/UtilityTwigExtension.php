@@ -13,7 +13,6 @@ namespace WBW\Bundle\CoreBundle\Twig\Extension;
 
 use DateTime;
 use Exception;
-use Twig_Environment;
 use Twig_SimpleFilter;
 use Twig_SimpleFunction;
 use WBW\Bundle\CoreBundle\Renderer\DateTimeRenderer;
@@ -32,15 +31,6 @@ class UtilityTwigExtension extends AbstractTwigExtension {
      * @var string
      */
     const SERVICE_NAME = "webeweb.core.twig.extension.utility";
-
-    /**
-     * Constructor.
-     *
-     * @param Twig_Environment $twigEnvironment The wig environment.
-     */
-    public function __construct(Twig_Environment $twigEnvironment) {
-        parent::__construct($twigEnvironment);
-    }
 
     /**
      * Calculates an age.

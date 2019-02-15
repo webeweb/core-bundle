@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\CoreBundle\Twig\Extension\Plugin;
 
-use Twig_Environment;
 use WBW\Bundle\CoreBundle\Icon\FontAwesome\FontAwesomeIconInterface;
 use WBW\Bundle\CoreBundle\Icon\FontAwesome\FontAwesomeIconRenderer;
 use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
@@ -24,15 +23,6 @@ use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
  * @abstract
  */
 abstract class AbstractFontAwesomeTwigExtension extends AbstractTwigExtension {
-
-    /**
-     * Constructor.
-     *
-     * @param Twig_Environment $twigEnvironment The twig environment.
-     */
-    protected function __construct(Twig_Environment $twigEnvironment) {
-        parent::__construct($twigEnvironment);
-    }
 
     /**
      * Displays a Font Awesome icon.

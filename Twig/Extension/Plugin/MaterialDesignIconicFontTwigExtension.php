@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\CoreBundle\Twig\Extension\Plugin;
 
-use Twig_Environment;
 use Twig_SimpleFilter;
 use Twig_SimpleFunction;
 use WBW\Bundle\CoreBundle\Icon\IconFactory;
@@ -31,15 +30,6 @@ class MaterialDesignIconicFontTwigExtension extends AbstractMaterialDesignIconic
      * @var string
      */
     const SERVICE_NAME = "webeweb.core.twig.extension.plugin.material_design_iconic_font";
-
-    /**
-     * Constructor.
-     *
-     * @param Twig_Environment $twigEnvironment The wig environment.
-     */
-    public function __construct(Twig_Environment $twigEnvironment) {
-        parent::__construct($twigEnvironment);
-    }
 
     /**
      * Get the Twig filters.

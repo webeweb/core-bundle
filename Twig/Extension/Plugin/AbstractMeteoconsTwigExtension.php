@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\CoreBundle\Twig\Extension\Plugin;
 
-use Twig_Environment;
 use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
 
 /**
@@ -22,15 +21,6 @@ use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
  * @abstract
  */
 abstract class AbstractMeteoconsTwigExtension extends AbstractTwigExtension {
-
-    /**
-     * Constructor.
-     *
-     * @param Twig_Environment $twigEnvironment The twig environment.
-     */
-    protected function __construct(Twig_Environment $twigEnvironment) {
-        parent::__construct($twigEnvironment);
-    }
 
     /**
      * Displays a Meteocons icon.
