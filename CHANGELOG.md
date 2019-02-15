@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [1.10.1](https://github.com/webeweb/core-bundle/tree/v1.10.1) (2019-02-15)
+
+- Remove all unnecessary Twig extension constructors 
+
 ### [1.10.0](https://github.com/webeweb/core-bundle/tree/v1.10.0) (2019-02-14)
 
 - Add Font Awesome Twig filters aliases
