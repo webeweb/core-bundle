@@ -47,7 +47,7 @@ abstract class AbstractTwigExtension extends Twig_Extension {
      *
      * @param Twig_Environment $twigEnvironment The twig environment.
      */
-    protected function __construct(Twig_Environment $twigEnvironment) {
+    public function __construct(Twig_Environment $twigEnvironment) {
         $this->setTwigEnvironment($twigEnvironment);
     }
 
