@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Form\Renderer;
 
+use DateInterval;
 use DateTime;
 use Exception;
 use WBW\Bundle\CoreBundle\Renderer\DateTimeRenderer;
@@ -42,20 +43,12 @@ class DateTimeRendererTest extends AbstractTestCase {
      */
     public function testRenderAge() {
 
-        // Set Date/time mocks.
-        $now = new DateTime();
+        // Set a Date/time mock.
         $ref = new DateTime("2019-02-14");
-
-        // Calculate an offset to validate future tests.
-        $offset = intval($now->format("Y")) - 2019;
 
         $this->assertEquals(19, DateTimeRenderer::renderAge(new DateTime("2000-02-13"), $ref));
         $this->assertEquals(19, DateTimeRenderer::renderAge(new DateTime("2000-02-14"), $ref));
         $this->assertEquals(18, DateTimeRenderer::renderAge(new DateTime("2000-02-15"), $ref));
-
-        $this->assertEquals(19 + $offset, DateTimeRenderer::renderAge(new DateTime("2000-02-13")));
-        $this->assertEquals(19 + $offset, DateTimeRenderer::renderAge(new DateTime("2000-02-14")));
-        $this->assertEquals(18 + $offset, DateTimeRenderer::renderAge(new DateTime("2000-02-15")));
     }
 
     /**
