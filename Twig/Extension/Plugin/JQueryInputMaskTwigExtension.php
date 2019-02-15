@@ -11,9 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Twig\Extension\Plugin;
 
-use Twig_Environment;
 use Twig_SimpleFunction;
-use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension;
 use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
@@ -30,16 +28,6 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
      * @var string
      */
     const SERVICE_NAME = "webeweb.core.twig.extension.plugin.jquery_inputmask";
-
-    /**
-     * Constructor.
-     *
-     * @param Twig_Environment $twigEnvironment The twig environment.
-     * @param RendererTwigExtension $rendererTwigExtension The renderer Twig extension.
-     */
-    public function __construct(Twig_Environment $twigEnvironment, RendererTwigExtension $rendererTwigExtension) {
-        parent::__construct($twigEnvironment, $rendererTwigExtension);
-    }
 
     /**
      * Get the Twig functions.
