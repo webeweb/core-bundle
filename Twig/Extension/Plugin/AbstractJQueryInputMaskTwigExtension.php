@@ -34,7 +34,7 @@ abstract class AbstractJQueryInputMaskTwigExtension extends AbstractTwigExtensio
      * @param Twig_Environment $twigEnvironment The twig environment.
      * @param RendererTwigExtension $rendererTwigExtension The renderer Twig extension.
      */
-    protected function __construct(Twig_Environment $twigEnvironment, RendererTwigExtension $rendererTwigExtension) {
+    public function __construct(Twig_Environment $twigEnvironment, RendererTwigExtension $rendererTwigExtension) {
         parent::__construct($twigEnvironment);
         $this->setRendererTwigExtension($rendererTwigExtension);
     }
