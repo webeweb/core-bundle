@@ -4,6 +4,7 @@ CHANGELOG
 ### master
 
 - Add FOSUser breadcrumb nodes
+- Add preconfigured FOSUser routing file
 
 ### [1.10.1](https://github.com/webeweb/core-bundle/tree/v1.10.1) (2019-02-15)
 
