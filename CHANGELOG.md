@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Add FOSUser breadcrumb nodes
+
 ### [1.10.1](https://github.com/webeweb/core-bundle/tree/v1.10.1) (2019-02-15)
 
 - Remove all unnecessary Twig extension constructors 
