@@ -1,10 +1,15 @@
 CHANGELOG
 =========
 
-### master
+###  [1.11.0](https://github.com/webeweb/core-bundle/tree/v1.11.0) (2019-02-19)
 
+- Add Black color provider
+- Add Black color provider trait
+- Add Core interface
 - Add FOSUser breadcrumb nodes
 - Add preconfigured FOSUser routing file
+- Add White color provider
+- Add White color provider trait
 
 ### [1.10.1](https://github.com/webeweb/core-bundle/tree/v1.10.1) (2019-02-15)
 
