@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Notification;
 
-use WBW\Bundle\CoreBundle\CoreBundle;
+use WBW\Bundle\CoreBundle\CoreInterface;
 
 /**
  * Notification interface.
@@ -26,28 +26,28 @@ interface NotificationInterface {
      *
      * @var string
      */
-    const NOTIFICATION_DANGER = CoreBundle::CORE_DANGER;
+    const NOTIFICATION_DANGER = CoreInterface::CORE_DANGER;
 
     /**
      * Notification "Info".
      *
      * @var string
      */
-    const NOTIFICATION_INFO = CoreBundle::CORE_INFO;
+    const NOTIFICATION_INFO = CoreInterface::CORE_INFO;
 
     /**
      * Notification "Success".
      *
      * @var string
      */
-    const NOTIFICATION_SUCCESS = CoreBundle::CORE_SUCCESS;
+    const NOTIFICATION_SUCCESS = CoreInterface::CORE_SUCCESS;
 
     /**
      * Notification "Warning".
      *
      * @var string
      */
-    const NOTIFICATION_WARNING = CoreBundle::CORE_WARNING;
+    const NOTIFICATION_WARNING = CoreInterface::CORE_WARNING;
 
     /**
      * Get the content.
