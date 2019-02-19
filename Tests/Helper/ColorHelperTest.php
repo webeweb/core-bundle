@@ -11,9 +11,10 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Helper;
 
-use WBW\Bundle\CoreBundle\Color\RedColorProvider;
+use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\RedColorProvider;
 use WBW\Bundle\CoreBundle\Helper\ColorHelper;
 use WBW\Bundle\CoreBundle\Provider\Color\AmberColorProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Color\BlackColorProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\Color\BlueColorProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\Color\BlueGreyColorProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\Color\BrownColorProviderInterface;
@@ -31,6 +32,7 @@ use WBW\Bundle\CoreBundle\Provider\Color\PinkColorProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\Color\PurpleColorProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\Color\RedColorProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\Color\TealColorProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Color\WhiteColorProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\Color\YellowColorProviderInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
@@ -64,7 +66,7 @@ class ColorHelperTest extends AbstractTestCase {
     public function testGetMaterialDesignColorPalette() {
 
         $res = ColorHelper::getMaterialDesignColorPalette();
-        $this->assertCount(19, $res);
+        $this->assertCount(21, $res);
 
         $this->assertInstanceOf(RedColorProviderInterface::class, $res[0]);
         $this->assertInstanceOf(PinkColorProviderInterface::class, $res[1]);
@@ -85,5 +87,7 @@ class ColorHelperTest extends AbstractTestCase {
         $this->assertInstanceOf(BrownColorProviderInterface::class, $res[16]);
         $this->assertInstanceOf(GreyColorProviderInterface::class, $res[17]);
         $this->assertInstanceOf(BlueGreyColorProviderInterface::class, $res[18]);
+        $this->assertInstanceOf(BlackColorProviderInterface::class, $res[19]);
+        $this->assertInstanceOf(WhiteColorProviderInterface::class, $res[20]);
     }
 }

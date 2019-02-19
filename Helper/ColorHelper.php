@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Helper;
 
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\AmberColorProvider;
+use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\BlackColorProvider;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\BlueColorProvider;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\BlueGreyColorProvider;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\BrownColorProvider;
@@ -29,6 +30,7 @@ use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\PinkColorProvider;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\PurpleColorProvider;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\RedColorProvider;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\TealColorProvider;
+use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\WhiteColorProvider;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\YellowColorProvider;
 use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 
@@ -76,6 +78,8 @@ class ColorHelper {
             new BrownColorProvider(),
             new GreyColorProvider(),
             new BlueGreyColorProvider(),
+            new BlackColorProvider(),
+            new WhiteColorProvider(),
         ];
     }
 }
