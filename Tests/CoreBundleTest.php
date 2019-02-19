@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests;
 
 use WBW\Bundle\CoreBundle\CoreBundle;
+use WBW\Bundle\CoreBundle\CoreInterface;
 
 /**
  * Core bundle test.
@@ -40,10 +41,10 @@ class CoreBundleTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("danger", CoreBundle::CORE_DANGER);
-        $this->assertEquals("info", CoreBundle::CORE_INFO);
-        $this->assertEquals("success", CoreBundle::CORE_SUCCESS);
-        $this->assertEquals("warning", CoreBundle::CORE_WARNING);
+        $this->assertEquals(CoreInterface::CORE_DANGER, CoreBundle::CORE_DANGER);
+        $this->assertEquals(CoreInterface::CORE_INFO, CoreBundle::CORE_INFO);
+        $this->assertEquals(CoreInterface::CORE_SUCCESS, CoreBundle::CORE_SUCCESS);
+        $this->assertEquals(CoreInterface::CORE_WARNING, CoreBundle::CORE_WARNING);
     }
 
     /**

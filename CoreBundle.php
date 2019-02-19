@@ -28,29 +28,33 @@ class CoreBundle extends Bundle implements AssetsProviderInterface {
      * Core "Danger".
      *
      * @var string
+     * @deprecated since Core bundle 1.11.0, use {@see WBW\Bundle\CoreBundle\CoreInterface} instead.
      */
-    const CORE_DANGER = "danger";
+    const CORE_DANGER = CoreInterface::CORE_DANGER;
 
     /**
      * Core "Info".
      *
      * @var string
+     * @deprecated since Core bundle 1.11.0, use {@see WBW\Bundle\CoreBundle\CoreInterface} instead.
      */
-    const CORE_INFO = "info";
+    const CORE_INFO = CoreInterface::CORE_INFO;
 
     /**
      * Core "Success".
      *
      * @var string
+     * @deprecated since Core bundle 1.11.0, use {@see WBW\Bundle\CoreBundle\CoreInterface} instead.
      */
-    const CORE_SUCCESS = "success";
+    const CORE_SUCCESS = CoreInterface::CORE_SUCCESS;
 
     /**
      * Core "Warning".
      *
      * @var string
+     * @deprecated since Core bundle 1.11.0, use {@see WBW\Bundle\CoreBundle\CoreInterface} instead.
      */
-    const CORE_WARNING = "warning";
+    const CORE_WARNING = CoreInterface::CORE_WARNING;
 
     /**
      * {@inheritdoc}
