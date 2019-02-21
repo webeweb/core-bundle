@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Add Utility Twig extension trait
+
 ###  [1.11.0](https://github.com/webeweb/core-bundle/tree/v1.11.0) (2019-02-19)
 
 - Add Black color provider
