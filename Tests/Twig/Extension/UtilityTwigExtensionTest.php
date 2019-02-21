@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Twig\Extension;
+namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension;
 
 use DateTime;
 use Exception;
@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\UtilityTwigExtension;
  * Utility Twig extension test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package Twig\Extension
+ * @package WBW\Bundle\CoreBundle\Tests\Twig\Extension
  */
 class UtilityTwigExtensionTest extends AbstractTestCase {
 
