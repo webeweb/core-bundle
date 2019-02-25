@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\DependencyInjection;
 use Symfony\Component\DependencyInjection\Container;
 
 /**
- * Container trait
+ * Container trait.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\DependencyInjection
