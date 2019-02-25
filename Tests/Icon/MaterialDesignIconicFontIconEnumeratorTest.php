@@ -15,6 +15,12 @@ use WBW\Bundle\CoreBundle\Icon\MaterialDesignIconicFontIconEnumerator;
 use WBW\Bundle\CoreBundle\Icon\MaterialDesignIconicFontIconInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
+/**
+ * Material Design Iconic Font icon enumerator test.
+ *
+ * @author webeweb <https://github.com/webeweb/>
+ * @package WBW\Bundle\CoreBundle\Tests\Icon
+ */
 class MaterialDesignIconicFontIconEnumeratorTest extends AbstractTestCase {
 
     /**

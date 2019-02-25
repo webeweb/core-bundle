@@ -15,7 +15,7 @@ use WBW\Bundle\CoreBundle\Icon\MaterialDesignIconicFontIconInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
- * Material design iconic font icon interface test.
+ * Material Design Iconic Font icon interface test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Icon
