@@ -1,11 +1,12 @@
 CHANGELOG
 =========
 
-### master
+### [1.11.1](https://github.com/webeweb/core-bundle/tree/v1.11.1) (2019-02-25)
 
 - Add Utility Twig extension trait
+- Fix Unzip assets command visibility into Symfony 4
 
-###  [1.11.0](https://github.com/webeweb/core-bundle/tree/v1.11.0) (2019-02-19)
+### [1.11.0](https://github.com/webeweb/core-bundle/tree/v1.11.0) (2019-02-19)
 
 - Add Black color provider
 - Add Black color provider trait
