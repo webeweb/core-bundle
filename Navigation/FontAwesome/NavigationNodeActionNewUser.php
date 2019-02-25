@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Navigation\FontAwesome;
 use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
 
 /**
- * Navigation node action "New user".
+ * Navigation node action "new user".
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Navigation\FontAwesome

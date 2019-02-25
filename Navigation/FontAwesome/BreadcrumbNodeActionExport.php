@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Navigation\FontAwesome;
 use WBW\Bundle\CoreBundle\Navigation\BreadcrumbNode;
 
 /**
- * Breadcrumb node action "Export".
+ * Breadcrumb node action "export".
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Navigation\FontAwesome

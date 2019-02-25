@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Navigation\FontAwesome;
 use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
 
 /**
- * Navigation node action "Index".
+ * Navigation node action "index".
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Navigation\FontAwesome
