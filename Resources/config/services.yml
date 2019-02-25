@@ -201,15 +201,22 @@ services:
         tags:
             - { name: "twig.extension" }
 
-    webeweb.core.twig.extension.utility:
-        class:     WBW\Bundle\CoreBundle\Twig\Extension\UtilityTwigExtension
+    webeweb.core.twig.extension.renderer:
+        class:     WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension
         arguments: ["@twig"]
         public:    true
         tags:
             - { name: "twig.extension" }
 
-    webeweb.core.twig.extension.renderer:
-        class:     WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension
+    webeweb.core.twig.extension.stylesheet:
+        class:     WBW\Bundle\CoreBundle\Twig\Extension\StylesheetTwigExtension
+        arguments: ["@twig"]
+        public:    true
+        tags:
+            - { name: "twig.extension" }
+
+    webeweb.core.twig.extension.utility:
+        class:     WBW\Bundle\CoreBundle\Twig\Extension\UtilityTwigExtension
         arguments: ["@twig"]
         public:    true
         tags:
