@@ -31,6 +31,7 @@ use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\PurpleColorProvider;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\RedColorProvider;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\TealColorProvider;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\YellowColorProvider;
+use WBW\Bundle\CoreBundle\Command\UnzipAssetsCommand;
 use WBW\Bundle\CoreBundle\DependencyInjection\CoreExtension;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\EventListener\NotificationEventListener;
@@ -66,11 +67,14 @@ class CoreExtensionTest extends AbstractTestCase {
 
         $this->assertNull($obj->load([], $this->containerBuilder));
 
+        // Commands
+        $this->assertInstanceOf(UnzipAssetsCommand::class, $this->containerBuilder->get(UnzipAssetsCommand::SERVICE_NAME));
+
         // Event listeners
         $this->assertInstanceOf(KernelEventListener::class, $this->containerBuilder->get(KernelEventListener::SERVICE_NAME));
         $this->assertInstanceOf(NotificationEventListener::class, $this->containerBuilder->get(NotificationEventListener::SERVICE_NAME));
 
-        // Helpers.
+        // Helpers
         $this->assertInstanceOf(FormHelper::class, $this->containerBuilder->get(FormHelper::SERVICE_NAME));
 
         // Managers

@@ -5,6 +5,11 @@ services:
         alias:  "monolog.logger"
         public: true
 
+    webeweb.core.command.unzip_assets:
+        class:     WBW\Bundle\CoreBundle\Command\UnzipAssetsCommand
+        tags:
+            - { name: "console.command" }
+
     webeweb.core.event_listener.kernel:
         class:     WBW\Bundle\CoreBundle\EventListener\KernelEventListener
         arguments: ["@security.token_storage", "@webeweb.core.manager.theme"]
