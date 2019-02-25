@@ -24,6 +24,7 @@ use Symfony\Component\Translation\TranslatorInterface;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Command
+ * @abstract
  */
 abstract class AbstractContainerAwareCommand extends ContainerAwareCommand {
 
