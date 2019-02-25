@@ -37,7 +37,7 @@ class StylesheetTwigExtension extends AbstractTwigExtension {
      * @param float $alpha The alpha channel.
      * @return string Returns the rgba().
      */
-    public function cssRGBA($color, $alpha) {
+    public function cssRGBA($color, $alpha = 1.00) {
 
         if (0 === preg_match_all("/^#?([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/", strtolower($color), $hex)) {
             return "";

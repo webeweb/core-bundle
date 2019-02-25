@@ -47,6 +47,8 @@ class StylesheetTwigExtensionTest extends AbstractTestCase {
 
         $obj = new StylesheetTwigExtension($this->twigEnvironment);
 
+        $this->assertEquals("", $obj->cssRGBA(null));
+
         $this->assertEquals("rgba(0, 0, 0, 0.00)", $obj->cssRGBA("#000000", 0.00));
         $this->assertEquals("rgba(0, 0, 0, 0.00)", $obj->cssRGBA("000000", 0.00));
         $this->assertEquals("rgba(0, 0, 0, 0.00)", $obj->cssRGBA("#000", 0.00));
