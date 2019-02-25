@@ -36,11 +36,11 @@ class RendererTwigExtensionTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setUser() method.
+     * Tests the setRendererTwigExtension() method.
      *
      * @return void
      */
-    public function testSetUser() {
+    public function testSetRendererTwigExtension() {
 
         // Set a Renderer Twig extension mock.
         $rendererTwigExtension = new RendererTwigExtension($this->twigEnvironment);
