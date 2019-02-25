@@ -15,6 +15,12 @@ CHANGELOG
 
 ### [1.11.0](https://github.com/webeweb/core-bundle/tree/v1.11.0) (2019-02-19)
 
+> IMPORTANT NOTICE: The following constants has been deprecated
+> - WBW\Bundle\CoreBundle\CoreBundle::CORE_DANGER
+> - WBW\Bundle\CoreBundle\CoreBundle::CORE_INFO
+> - WBW\Bundle\CoreBundle\CoreBundle::CORE_SUCCESS
+> - WBW\Bundle\CoreBundle\CoreBundle::CORE_WARNING
+
 - Add Black color provider
 - Add Black color provider trait
 - Add Core interface
@@ -61,6 +67,55 @@ CHANGELOG
 
 ### [1.8.0](https://github.com/webeweb/core-bundle/tree/v1.8.0) (2019-01-21)
 
+> IMPORTANT NOTICE: The following classes has been deprecated
+> - WBW\Bundle\CoreBundle\Color\AmberColorProvider
+> - WBW\Bundle\CoreBundle\Color\AmberColorProviderTrait
+> - WBW\Bundle\CoreBundle\Color\BlueColorProvider
+> - WBW\Bundle\CoreBundle\Color\BlueColorProviderTrait
+> - WBW\Bundle\CoreBundle\Color\BlueGreyColorProvider
+> - WBW\Bundle\CoreBundle\Color\BlueGreyColorProviderTrait
+> - WBW\Bundle\CoreBundle\Color\BrownColorProvider
+> - WBW\Bundle\CoreBundle\Color\BrownColorProviderTrait
+> - WBW\Bundle\CoreBundle\Color\CyanColorProvider
+> - WBW\Bundle\CoreBundle\Color\ColorInterface
+> - WBW\Bundle\CoreBundle\Color\CyanColorProviderTrait
+> - WBW\Bundle\CoreBundle\Color\DeepOrangeColorProvider
+> - WBW\Bundle\CoreBundle\Color\DeepOrangeColorProviderTrait
+> - WBW\Bundle\CoreBundle\Color\DeepPurpleColorProvider
+> - WBW\Bundle\CoreBundle\Color\DeepPurpleColorProviderTrait
+> - WBW\Bundle\CoreBundle\Color\GreenColorProvider
+> - WBW\Bundle\CoreBundle\Color\GreenColorProviderTrait
+> - WBW\Bundle\CoreBundle\Color\GreyColorProvider
+> - WBW\Bundle\CoreBundle\Color\GreyColorProviderTrait
+> - WBW\Bundle\CoreBundle\Color\IndigoColorProvider
+> - WBW\Bundle\CoreBundle\Color\IndigoColorProviderTrait
+> - WBW\Bundle\CoreBundle\Color\LightBlueColorProvider
+> - WBW\Bundle\CoreBundle\Color\LightBlueProviderTrait
+> - WBW\Bundle\CoreBundle\Color\LightGreenProvider
+> - WBW\Bundle\CoreBundle\Color\LightGreenColorProviderTrait
+> - WBW\Bundle\CoreBundle\Color\LimeColorProvider
+> - WBW\Bundle\CoreBundle\Color\LimeColorProviderTrait
+> - WBW\Bundle\CoreBundle\Color\OrangeColorProvider
+> - WBW\Bundle\CoreBundle\Color\OrangeColorProviderTrait
+> - WBW\Bundle\CoreBundle\Color\PinkColorProvider
+> - WBW\Bundle\CoreBundle\Color\PinkColorProviderTrait
+> - WBW\Bundle\CoreBundle\Color\PurpleColorProvider
+> - WBW\Bundle\CoreBundle\Color\PurpleColorProviderTrait
+> - WBW\Bundle\CoreBundle\Color\RedColorProvider
+> - WBW\Bundle\CoreBundle\Color\RedColorProviderTrait
+> - WBW\Bundle\CoreBundle\Color\TealColorProvider
+> - WBW\Bundle\CoreBundle\Color\TealColorProviderTrait
+> - WBW\Bundle\CoreBundle\Color\YellowColorProvider
+> - WBW\Bundle\CoreBundle\Color\YellowColorProviderTrait
+> - WBW\Bundle\CoreBundle\Icon\FontAwesomeIcon
+> - WBW\Bundle\CoreBundle\Icon\FontAwesomeIconEnumerator
+> - WBW\Bundle\CoreBundle\Icon\FontAwesomeIconInterface
+> - WBW\Bundle\CoreBundle\Icon\FontAwesomeIconRenderer
+> - WBW\Bundle\CoreBundle\Icon\MaterialDesignIconicFontIcon
+> - WBW\Bundle\CoreBundle\Icon\MaterialDesignIconicFontIconEnumerator
+> - WBW\Bundle\CoreBundle\Icon\MaterialDesignIconicFontIconInterface
+> - WBW\Bundle\CoreBundle\Icon\MaterialDesignIconicFontIconRenderer
+
 - Add Utility Twig extension
 - Improve code checkstyle
 - Improve PHPDoc
@@ -94,6 +149,9 @@ CHANGELOG
 - Improve unit tests
 
 ### [1.6.0](https://github.com/webeweb/core-bundle/tree/v1.6.0) (2019-01-10)
+
+> IMPORTANT NOTICE: The following classes has been deprecated
+> - WBW\Bundle\CoreBundle\Factory\NotificationFactory
 
 - Add Amber color provider
 - Add Amber color provider interface
