@@ -1,6 +1,13 @@
 CHANGELOG
 =========
 
+### master
+
+- Add abstract Container aware command
+- Add Stylesheet Twig extension
+- Add Stylesheet Twig extension trait
+- Improve PHPDoc
+
 ### [1.11.1](https://github.com/webeweb/core-bundle/tree/v1.11.1) (2019-02-25)
 
 - Add Utility Twig extension trait
