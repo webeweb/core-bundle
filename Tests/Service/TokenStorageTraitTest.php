@@ -15,7 +15,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Service\TestTokenStorageTrait;
 
 /**
- * TokenStorage trait test.
+ * Token storage trait test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Service
