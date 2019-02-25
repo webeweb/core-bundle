@@ -22,28 +22,28 @@ use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
 class NotificationEvents {
 
     /**
-     * Notification "Danger".
+     * Notification "danger".
      *
      * @var string
      */
     const NOTIFICATION_DANGER = "webeweb.core.event.notification." . NotificationInterface::NOTIFICATION_DANGER;
 
     /**
-     * Notification "Info".
+     * Notification "info".
      *
      * @var string
      */
     const NOTIFICATION_INFO = "webeweb.core.event.notification." . NotificationInterface::NOTIFICATION_INFO;
 
     /**
-     * Notification "Success".
+     * Notification "success".
      *
      * @var string
      */
     const NOTIFICATION_SUCCESS = "webeweb.core.event.notification." . NotificationInterface::NOTIFICATION_SUCCESS;
 
     /**
-     * Notification "Warning".
+     * Notification "warning".
      *
      * @var string
      */
