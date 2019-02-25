@@ -15,7 +15,7 @@ use WBW\Bundle\CoreBundle\Notification\DefaultNotification;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
- * DefaultNotificationTest.
+ * Default notification test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Notification
