@@ -6,7 +6,7 @@ services:
         public: true
 
     webeweb.core.command.unzip_assets:
-        class:     WBW\Bundle\CoreBundle\Command\UnzipAssetsCommand
+        class: WBW\Bundle\CoreBundle\Command\UnzipAssetsCommand
         tags:
             - { name: "console.command" }
 
