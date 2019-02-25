@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Navigation\MaterialDesignIconicFont;
 use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
 
 /**
- * Navigation node action "Export".
+ * Navigation node action "export".
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Navigation\MaterialDesignIconicFont

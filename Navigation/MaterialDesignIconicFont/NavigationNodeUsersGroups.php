@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Navigation\MaterialDesignIconicFont;
 use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
 
 /**
- * Navigation node "Users groups".
+ * Navigation node "users groups".
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Navigation\MaterialDesignIconicFont
