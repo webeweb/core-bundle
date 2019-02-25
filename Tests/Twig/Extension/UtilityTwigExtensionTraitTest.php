@@ -36,11 +36,11 @@ class UtilityTwigExtensionTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setUser() method.
+     * Tests the setUtilityTwigExtension() method.
      *
      * @return void
      */
-    public function testSetUser() {
+    public function testSetUtilityTwigExtension() {
 
         // Set a Utility Twig extension mock.
         $utilityTwigExtension = new UtilityTwigExtension($this->twigEnvironment);
