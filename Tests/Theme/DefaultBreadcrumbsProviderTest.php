@@ -15,7 +15,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Theme\DefaultBreadcrumbsThemeProvider;
 
 /**
- * Default breadcrumbs theme provider test
+ * Default breadcrumbs theme provider test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Theme
