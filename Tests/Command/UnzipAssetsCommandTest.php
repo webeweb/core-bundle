@@ -74,6 +74,8 @@ class UnzipAssetsCommandTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
+        $this->assertEquals("webeweb.core.command.unzip_assets", TestUnzipAssetsCommand::SERVICE_NAME);
+
         $obj = new TestUnzipAssetsCommand();
 
         $this->assertEquals("Unzip assets under a public directory", $obj->getDescription());

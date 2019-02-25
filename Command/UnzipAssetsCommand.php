@@ -39,6 +39,13 @@ The <info>%command.name%</info> command unzips bundle assets into <comment>publi
 EOT;
 
     /**
+     * Service name.
+     *
+     * @var string
+     */
+    const SERVICE_NAME = "webeweb.core.command.unzip_assets";
+
+    /**
      * {@inheritdoc}
      */
     protected function configure() {
