@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
- * Breadcrumb node action "New users group" test.
+ * Breadcrumb node action "new users group" test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Navigation\MaterialDesignIconicFont

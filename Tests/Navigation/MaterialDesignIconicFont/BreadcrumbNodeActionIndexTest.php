@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
- * Breadcrumb node action "Index" test.
+ * Breadcrumb node action "index" test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Navigation\MaterialDesignIconicFont

@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
- * Navigation node "Users groups" test.
+ * Navigation node "users groups" test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Navigation\MaterialDesignIconicFont

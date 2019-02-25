@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
- * Navigation node action "New user" test.
+ * Navigation node action "new user" test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Navigation\MaterialDesignIconicFont
