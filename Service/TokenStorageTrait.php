@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Service;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 
 /**
- * TokenStorage trait.
+ * Token storage trait.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Service
