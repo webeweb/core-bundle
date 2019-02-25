@@ -15,7 +15,7 @@ use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Navigation\NavigationItem;
 use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Navigation\TestAbstractNavigationNode;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Navigation\TestNavigationNode;
 
 /**
  * Abstract navigation node test.
@@ -32,7 +32,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $obj = new TestAbstractNavigationNode("id");
+        $obj = new TestNavigationNode("id");
 
         $this->assertFalse($obj->getActive());
         $this->assertFalse($obj->getEnable());
@@ -50,7 +50,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
      */
     public function testIsDisplayable() {
 
-        $obj = new TestAbstractNavigationNode("id");
+        $obj = new TestNavigationNode("id");
 
         $this->assertSame($obj, $obj->addNode(new NavigationItem("id1")));
         $this->assertSame($obj, $obj->addNode(new NavigationNode("id2")));
@@ -69,7 +69,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
      */
     public function testSetActive() {
 
-        $obj = new TestAbstractNavigationNode("id");
+        $obj = new TestNavigationNode("id");
 
         $obj->setActive(true);
         $this->assertTrue($obj->getActive());
@@ -82,7 +82,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
      */
     public function testSetEnable() {
 
-        $obj = new TestAbstractNavigationNode("id");
+        $obj = new TestNavigationNode("id");
 
         $obj->setEnable(true);
         $this->assertTrue($obj->getEnable());
@@ -95,7 +95,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
      */
     public function testSetIcon() {
 
-        $obj = new TestAbstractNavigationNode("id");
+        $obj = new TestNavigationNode("id");
 
         $obj->setIcon("icon");
         $this->assertEquals("icon", $obj->getIcon());
@@ -108,7 +108,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
      */
     public function testSetMatcher() {
 
-        $obj = new TestAbstractNavigationNode("id");
+        $obj = new TestNavigationNode("id");
 
         $obj->setMatcher(NavigationInterface::NAVIGATION_MATCHER_ROUTER);
         $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_ROUTER, $obj->getMatcher());
@@ -121,7 +121,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
      */
     public function testSetTarget() {
 
-        $obj = new TestAbstractNavigationNode("id");
+        $obj = new TestNavigationNode("id");
 
         $obj->setTarget("_blank");
         $this->assertEquals("_blank", $obj->getTarget());
@@ -134,7 +134,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
      */
     public function testSetURI() {
 
-        $obj = new TestAbstractNavigationNode("id");
+        $obj = new TestNavigationNode("id");
 
         $obj->setURI("route");
         $this->assertEquals("route", $obj->getUri());

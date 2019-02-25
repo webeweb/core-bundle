@@ -14,12 +14,12 @@ namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Navigation;
 use WBW\Bundle\CoreBundle\Navigation\AbstractNavigationNode;
 
 /**
- * Test abstract navigation node.
+ * Test navigation node.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Navigation
  */
-class TestAbstractNavigationNode extends AbstractNavigationNode {
+class TestNavigationNode extends AbstractNavigationNode {
 
     /**
      * Constructor.
