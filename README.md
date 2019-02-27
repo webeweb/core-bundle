@@ -83,9 +83,8 @@ Open a command console and execute the following commands to download the latest
 stable version of this package:
 
 ```bash
-$ mkdir core-bundle
+$ git clone https://github.com/webeweb/core-bundle.git
 $ cd core-bundle
-$ git clone https://github.com/webeweb/core-bundle.git .
 $ composer install
 ```
 
