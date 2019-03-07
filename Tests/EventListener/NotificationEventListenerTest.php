@@ -62,6 +62,8 @@ class NotificationEventListenerTest extends AbstractTestCase {
 
         $obj = new NotificationEventListener($this->session);
 
-        $this->assertNull($obj->onNotify(new NotificationEvent("eventName", $notification)));
+        $arg = new NotificationEvent("eventName", $notification);
+
+        $this->assertSame($arg, $obj->onNotify($arg));
     }
 }

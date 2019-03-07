@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\EventListener;
 
+use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\Service\SessionTrait;
@@ -44,10 +45,13 @@ class NotificationEventListener {
     /**
      * On notify.
      *
-     * @param NotificationEvent $event The notification event.
-     * @return void
+     * @param NotificationEvent $event The event.
+     * @return NotificationEvent Returns the event.
      */
     public function onNotify(NotificationEvent $event) {
-        $this->getSession()->getFlashBag()->add($event->getNotification()->getType(), $event->getNotification()->getContent());
+        if (true === ($this->getSession() instanceof Session)) {
+            $this->getSession()->getFlashBag()->add($event->getNotification()->getType(), $event->getNotification()->getContent());
+        }
+        return $event;
     }
 }
