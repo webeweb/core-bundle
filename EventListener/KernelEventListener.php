@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\CoreBundle\EventListener;
 
-use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
@@ -107,7 +106,7 @@ class KernelEventListener {
      * On kernel exception.
      *
      * @param GetResponseForExceptionEvent $event The event.
-     * @return Event Returns the event.
+     * @return GetResponseForExceptionEvent Returns the event.
      */
     public function onKernelException(GetResponseForExceptionEvent $event) {
 
@@ -128,7 +127,7 @@ class KernelEventListener {
      * On kernel request.
      *
      * @param GetResponseEvent $event The event.
-     * @return Event Returns the event.
+     * @return GetResponseEvent Returns the event.
      */
     public function onKernelRequest(GetResponseEvent $event) {
 
