@@ -7,6 +7,7 @@ CHANGELOG
 - Add Stylesheet Twig extension
 - Add Stylesheet Twig extension trait
 - Improve PHPDoc
+- Update returned values into Notification event listener
 
 ### [1.11.1](https://github.com/webeweb/core-bundle/tree/v1.11.1) (2019-02-25)
 
