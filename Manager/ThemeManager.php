@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Manager;
 
 use ReflectionException;
-use Twig_Environment;
+use Twig\Environment;
 use WBW\Bundle\CoreBundle\Provider\Theme\ApplicationThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\Theme\BreadcrumbsThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\Theme\FooterThemeProviderInterface;
@@ -42,9 +42,9 @@ class ThemeManager extends AbstractThemeManager {
     /**
      * Constructor.
      *
-     * @param Twig_Environment $twigEnvironment The Twig environment.
+     * @param Environment $twigEnvironment The Twig environment.
      */
-    public function __construct(Twig_Environment $twigEnvironment) {
+    public function __construct(Environment $twigEnvironment) {
         parent::__construct($twigEnvironment);
     }
 

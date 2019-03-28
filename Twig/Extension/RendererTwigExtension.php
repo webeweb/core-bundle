@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Twig\Extension;
 
-use Twig_Environment;
+use Twig\Environment;
 use Twig\TwigFilter;
 use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\FontAwesomeTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MaterialDesignIconicFontTwigExtension;
@@ -63,12 +63,12 @@ class RendererTwigExtension extends AbstractTwigExtension {
     /**
      * Render an icon.
      *
-     * @param Twig_Environment $twigEnvironment The twig environment.
+     * @param Environment $twigEnvironment The twig environment.
      * @param string $name The name.
      * @param string|null $style The style.
      * @return string Returns the rendered icon.
      */
-    public static function renderIcon(Twig_Environment $twigEnvironment, $name, $style = null) {
+    public static function renderIcon(Environment $twigEnvironment, $name, $style = null) {
 
         $handler = explode(":", $name);
         if (2 !== count($handler)) {

@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Manager;
 
-use Twig_Environment;
+use Twig\Environment;
 use WBW\Bundle\CoreBundle\Provider\ThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Service\TwigEnvironmentTrait;
 use WBW\Library\Core\Argument\ObjectHelper;
@@ -38,9 +38,9 @@ abstract class AbstractThemeManager extends AbstractManager {
     /**
      * Constructor.
      *
-     * @param Twig_Environment $twigEnvironment The Twig environment.
+     * @param Environment $twigEnvironment The Twig environment.
      */
-    protected function __construct(Twig_Environment $twigEnvironment) {
+    protected function __construct(Environment $twigEnvironment) {
         parent::__construct();
         $this->setIndex($this->initIndex());
         $this->setTwigEnvironment($twigEnvironment);

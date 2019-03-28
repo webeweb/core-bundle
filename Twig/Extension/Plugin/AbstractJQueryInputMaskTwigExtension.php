@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Twig\Extension\Plugin;
 
-use Twig_Environment;
+use Twig\Environment;
 use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtensionTrait;
@@ -31,10 +31,10 @@ abstract class AbstractJQueryInputMaskTwigExtension extends AbstractTwigExtensio
     /**
      * Constructor.
      *
-     * @param Twig_Environment $twigEnvironment The twig environment.
+     * @param Environment $twigEnvironment The twig environment.
      * @param RendererTwigExtension $rendererTwigExtension The renderer Twig extension.
      */
-    public function __construct(Twig_Environment $twigEnvironment, RendererTwigExtension $rendererTwigExtension) {
+    public function __construct(Environment $twigEnvironment, RendererTwigExtension $rendererTwigExtension) {
         parent::__construct($twigEnvironment);
         $this->setRendererTwigExtension($rendererTwigExtension);
     }

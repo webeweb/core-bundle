@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Twig\Extension;
 
-use Twig_Environment;
+use Twig\Environment;
 use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
 
 /**
@@ -25,9 +25,9 @@ class TestTwigExtension extends AbstractTwigExtension {
     /**
      * Constructor.
      *
-     * @param Twig_Environment $twigEnvironment The twig environment.
+     * @param Environment $twigEnvironment The twig environment.
      */
-    public function __construct(Twig_Environment $twigEnvironment) {
+    public function __construct(Environment $twigEnvironment) {
         parent::__construct($twigEnvironment);
     }
 }
