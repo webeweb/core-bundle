@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Service;
 
-use Twig_Environment;
+use Twig\Environment;
 
 /**
  * Twig environment trait.
@@ -24,14 +24,14 @@ trait TwigEnvironmentTrait {
     /**
      * Twig environment.
      *
-     * @var Twig_Environment
+     * @var Environment
      */
     private $twigEnvironment;
 
     /**
      * Get the Twig environment.
      *
-     * @return Twig_Environment Returns the Twig environment.
+     * @return Environment Returns the Twig environment.
      */
     public function getTwigEnvironment() {
         return $this->twigEnvironment;
@@ -40,9 +40,9 @@ trait TwigEnvironmentTrait {
     /**
      * Set the Twig environment.
      *
-     * @param Twig_Environment|null $twigEnvironment The Twig environment.
+     * @param Environment|null $twigEnvironment The Twig environment.
      */
-    protected function setTwigEnvironment(Twig_Environment $twigEnvironment = null) {
+    protected function setTwigEnvironment(Environment $twigEnvironment = null) {
         $this->twigEnvironment = $twigEnvironment;
         return $this;
     }

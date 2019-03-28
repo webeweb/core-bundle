@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension;
 
-use Twig_Node;
-use Twig_SimpleFilter;
+use Twig\Node\Node;
+use Twig\TwigFilter;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension;
 
@@ -66,10 +66,10 @@ EOT;
         $res = $obj->getFilters();
         $this->assertCount(1, $res);
 
-        $this->assertInstanceOf(Twig_SimpleFilter::class, $res[0]);
+        $this->assertInstanceOf(TwigFilter::class, $res[0]);
         $this->assertEquals("coreScript", $res[0]->getName());
         $this->assertEquals([$obj, "coreScriptFilter"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
     }
 
     /**

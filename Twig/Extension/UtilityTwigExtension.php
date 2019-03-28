@@ -13,8 +13,8 @@ namespace WBW\Bundle\CoreBundle\Twig\Extension;
 
 use DateTime;
 use Exception;
-use Twig_SimpleFilter;
-use Twig_SimpleFunction;
+use Twig\TwigFilter;
+use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\Renderer\DateTimeRenderer;
 
 /**
@@ -58,30 +58,30 @@ class UtilityTwigExtension extends AbstractTwigExtension {
     /**
      * Get the Twig filters.
      *
-     * @return Twig_SimpleFilter[] Returns the Twig filters.
+     * @return TwigFilter[] Returns the Twig filters.
      */
     public function getFilters() {
         return [
-            new Twig_SimpleFilter("calcAge", [$this, "calcAge"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFilter("formatDate", [$this, "formatDate"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFilter("htmlEntityDecode", [$this, "htmlEntityDecode"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFilter("htmlEntityEncode", [$this, "htmlEntityEncode"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFilter("md5", [$this, "md5"], ["is_safe" => ["html"]]),
+            new TwigFilter("calcAge", [$this, "calcAge"], ["is_safe" => ["html"]]),
+            new TwigFilter("formatDate", [$this, "formatDate"], ["is_safe" => ["html"]]),
+            new TwigFilter("htmlEntityDecode", [$this, "htmlEntityDecode"], ["is_safe" => ["html"]]),
+            new TwigFilter("htmlEntityEncode", [$this, "htmlEntityEncode"], ["is_safe" => ["html"]]),
+            new TwigFilter("md5", [$this, "md5"], ["is_safe" => ["html"]]),
         ];
     }
 
     /**
      * Get the Twig functions.
      *
-     * @return Twig_SimpleFunction[] Returns the Twig functions.
+     * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("calcAge", [$this, "calcAge"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("formatDate", [$this, "formatDate"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("htmlEntityDecode", [$this, "htmlEntityDecode"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("htmlEntityEncode", [$this, "htmlEntityEncode"], ["is_safe" => ["html"]]),
-            new Twig_SimpleFunction("md5", [$this, "md5"], ["is_safe" => ["html"]]),
+            new TwigFunction("calcAge", [$this, "calcAge"], ["is_safe" => ["html"]]),
+            new TwigFunction("formatDate", [$this, "formatDate"], ["is_safe" => ["html"]]),
+            new TwigFunction("htmlEntityDecode", [$this, "htmlEntityDecode"], ["is_safe" => ["html"]]),
+            new TwigFunction("htmlEntityEncode", [$this, "htmlEntityEncode"], ["is_safe" => ["html"]]),
+            new TwigFunction("md5", [$this, "md5"], ["is_safe" => ["html"]]),
         ];
     }
 

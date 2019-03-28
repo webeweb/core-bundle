@@ -24,7 +24,7 @@ use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInt
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Translation\TranslatorInterface;
-use Twig_Environment;
+use Twig\Environment;
 use Twig_LoaderInterface;
 
 /**
@@ -109,7 +109,7 @@ abstract class AbstractTestCase extends TestCase {
     /**
      * Twig environment.
      *
-     * @var Twig_Environment
+     * @var Environment
      */
     protected $twigEnvironment;
 
@@ -177,7 +177,7 @@ abstract class AbstractTestCase extends TestCase {
         $this->twigLoader = $this->getMockBuilder(Twig_LoaderInterface::class)->getMock();
 
         // Set a Twig environment mock.
-        $this->twigEnvironment = $this->getMockBuilder(Twig_Environment::class)->setConstructorArgs([$this->twigLoader, []])->getMock();
+        $this->twigEnvironment = $this->getMockBuilder(Environment::class)->setConstructorArgs([$this->twigLoader, []])->getMock();
         $this->twigEnvironment->expects($this->any())->method("addGlobal")->willReturnCallback(function($name, $value) {
             $this->twigGlobals[$name] = $value;
         });

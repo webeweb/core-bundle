@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Twig\Extension;
 
-use Twig_Environment;
-use Twig_Extension;
+use Twig\Environment;
+use Twig\Extension\AbstractExtension;
 use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Service\TwigEnvironmentTrait;
 use WBW\Library\Core\Argument\StringHelper;
@@ -24,7 +24,7 @@ use WBW\Library\Core\Argument\StringHelper;
  * @package WBW\Bundle\CoreBundle\Twig\Extension
  * @abstract
  */
-abstract class AbstractTwigExtension extends Twig_Extension {
+abstract class AbstractTwigExtension extends AbstractExtension {
 
     use TwigEnvironmentTrait;
 
@@ -45,9 +45,9 @@ abstract class AbstractTwigExtension extends Twig_Extension {
     /**
      * Constructor.
      *
-     * @param Twig_Environment $twigEnvironment The twig environment.
+     * @param Environment $twigEnvironment The twig environment.
      */
-    public function __construct(Twig_Environment $twigEnvironment) {
+    public function __construct(Environment $twigEnvironment) {
         $this->setTwigEnvironment($twigEnvironment);
     }
 

@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Twig\Extension;
 
 use Twig_Environment;
-use Twig_SimpleFilter;
+use Twig\TwigFilter;
 use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\FontAwesomeTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MaterialDesignIconicFontTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MeteoconsTwigExtension;
@@ -52,11 +52,11 @@ class RendererTwigExtension extends AbstractTwigExtension {
     /**
      * Get the Twig filters.
      *
-     * @return Twig_SimpleFilter[] Returns the Twig filters.
+     * @return TwigFilter[] Returns the Twig filters.
      */
     public function getFilters() {
         return [
-            new Twig_SimpleFilter("coreScript", [$this, "coreScriptFilter"], ["is_safe" => ["html"]]),
+            new TwigFilter("coreScript", [$this, "coreScriptFilter"], ["is_safe" => ["html"]]),
         ];
     }
 

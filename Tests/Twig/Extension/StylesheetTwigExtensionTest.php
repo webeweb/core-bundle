@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension;
 
-use Twig_Node;
-use Twig_SimpleFilter;
-use Twig_SimpleFunction;
+use Twig\Node\Node;
+use Twig\TwigFilter;
+use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Twig\Extension\StylesheetTwigExtension;
 
@@ -82,10 +82,10 @@ class StylesheetTwigExtensionTest extends AbstractTestCase {
         $res = $obj->getFilters();
         $this->assertCount(1, $res);
 
-        $this->assertInstanceOf(Twig_SimpleFilter::class, $res[0]);
+        $this->assertInstanceOf(TwigFilter::class, $res[0]);
         $this->assertEquals("cssRGBA", $res[0]->getName());
         $this->assertEquals([$obj, "cssRGBA"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
     }
 
     /**
@@ -100,9 +100,9 @@ class StylesheetTwigExtensionTest extends AbstractTestCase {
         $res = $obj->getFunctions();
         $this->assertCount(1, $res);
 
-        $this->assertInstanceOf(Twig_SimpleFunction::class, $res[0]);
+        $this->assertInstanceOf(TwigFunction::class, $res[0]);
         $this->assertEquals("cssRGBA", $res[0]->getName());
         $this->assertEquals([$obj, "cssRGBA"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Twig_Node()));
+        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
     }
 }

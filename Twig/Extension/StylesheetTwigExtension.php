@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Twig\Extension;
 
-use Twig_SimpleFilter;
-use Twig_SimpleFunction;
+use Twig\TwigFilter;
+use Twig\TwigFunction;
 use WBW\Library\Core\Argument\StringHelper;
 
 /**
@@ -62,22 +62,22 @@ class StylesheetTwigExtension extends AbstractTwigExtension {
     /**
      * Get the Twig filters.
      *
-     * @return Twig_SimpleFilter[] Returns the Twig filters.
+     * @return TwigFilter[] Returns the Twig filters.
      */
     public function getFilters() {
         return [
-            new Twig_SimpleFilter("cssRGBA", [$this, "cssRGBA"], ["is_safe" => ["html"]]),
+            new TwigFilter("cssRGBA", [$this, "cssRGBA"], ["is_safe" => ["html"]]),
         ];
     }
 
     /**
      * Get the Twig functions.
      *
-     * @return Twig_SimpleFunction[] Returns the Twig functions.
+     * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction("cssRGBA", [$this, "cssRGBA"], ["is_safe" => ["html"]]),
+            new TwigFunction("cssRGBA", [$this, "cssRGBA"], ["is_safe" => ["html"]]),
         ];
     }
 }
