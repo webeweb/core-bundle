@@ -1,11 +1,12 @@
 CHANGELOG
 =========
 
-### master
+### [1.11.2](https://github.com/webeweb/core-bundle/tree/v1.11.2) (2019-03-28)
 
 - Add abstract Container aware command
 - Add Stylesheet Twig extension
 - Add Stylesheet Twig extension trait
+- Fix deprecated Twig classes
 - Improve PHPDoc
 - Update returned values into Notification event listener
 
