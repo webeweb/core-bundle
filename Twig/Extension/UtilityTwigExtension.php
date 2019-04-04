@@ -56,6 +56,21 @@ class UtilityTwigExtension extends AbstractTwigExtension {
     }
 
     /**
+     * Format a string.
+     *
+     * @param string $string The string.
+     * @param string $format The format.
+     * @return string Returns the formatted string.
+     */
+    public function formatString($string, $format) {
+
+        $fmt = str_replace("_", "%s", $format);
+        $str = str_split($string);
+
+        return vsprintf($fmt, $str);
+    }
+
+    /**
      * Get the Twig filters.
      *
      * @return TwigFilter[] Returns the Twig filters.
@@ -63,9 +78,17 @@ class UtilityTwigExtension extends AbstractTwigExtension {
     public function getFilters() {
         return [
             new TwigFilter("calcAge", [$this, "calcAge"], ["is_safe" => ["html"]]),
+
             new TwigFilter("formatDate", [$this, "formatDate"], ["is_safe" => ["html"]]),
+            new TwigFilter("fmtDate", [$this, "formatDate"], ["is_safe" => ["html"]]),
+
+            new TwigFilter("formatString", [$this, "formatString"], ["is_safe" => ["html"]]),
+            new TwigFilter("fmtString", [$this, "formatString"], ["is_safe" => ["html"]]),
+
             new TwigFilter("htmlEntityDecode", [$this, "htmlEntityDecode"], ["is_safe" => ["html"]]),
+
             new TwigFilter("htmlEntityEncode", [$this, "htmlEntityEncode"], ["is_safe" => ["html"]]),
+
             new TwigFilter("md5", [$this, "md5"], ["is_safe" => ["html"]]),
         ];
     }
@@ -78,9 +101,17 @@ class UtilityTwigExtension extends AbstractTwigExtension {
     public function getFunctions() {
         return [
             new TwigFunction("calcAge", [$this, "calcAge"], ["is_safe" => ["html"]]),
+
             new TwigFunction("formatDate", [$this, "formatDate"], ["is_safe" => ["html"]]),
+            new TwigFunction("fmtDate", [$this, "formatDate"], ["is_safe" => ["html"]]),
+
+            new TwigFunction("formatString", [$this, "formatString"], ["is_safe" => ["html"]]),
+            new TwigFunction("fmtString", [$this, "formatString"], ["is_safe" => ["html"]]),
+
             new TwigFunction("htmlEntityDecode", [$this, "htmlEntityDecode"], ["is_safe" => ["html"]]),
+
             new TwigFunction("htmlEntityEncode", [$this, "htmlEntityEncode"], ["is_safe" => ["html"]]),
+
             new TwigFunction("md5", [$this, "md5"], ["is_safe" => ["html"]]),
         ];
     }
