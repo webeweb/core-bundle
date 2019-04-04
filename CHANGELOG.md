@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+###  [1.12.0](https://github.com/webeweb/core-bundle/tree/v1.12.0) (2019-04-04)
+
+- Add fmtDate() alias into Utility Twig extension
+- Add formatString() Twig function (and Twig filter) into Utility Twig extension
+
 ### [1.11.2](https://github.com/webeweb/core-bundle/tree/v1.11.2) (2019-03-28)
 
 - Add Stylesheet Twig extension
