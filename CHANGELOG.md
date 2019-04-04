@@ -5,6 +5,8 @@ CHANGELOG
 
 - Add fmtDate() alias into Utility Twig extension
 - Add formatString() Twig function (and Twig filter) into Utility Twig extension
+- Upgrade Animate.css to 3.7.0
+- Upgrade Font Awesome to 5.8.1 
 
 ### [1.11.2](https://github.com/webeweb/core-bundle/tree/v1.11.2) (2019-03-28)
 
