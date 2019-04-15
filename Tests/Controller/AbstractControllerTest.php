@@ -51,7 +51,7 @@ class AbstractControllerTest extends AbstractTestCase {
     private $kernelEventListener;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp() {
         parent::setUp();
