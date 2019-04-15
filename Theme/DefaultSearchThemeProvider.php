@@ -29,7 +29,7 @@ class DefaultSearchThemeProvider implements SearchThemeProviderInterface {
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getView() {
         return null;

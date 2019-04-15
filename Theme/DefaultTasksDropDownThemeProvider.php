@@ -29,14 +29,14 @@ class DefaultTasksDropDownThemeProvider implements TasksDropDownThemeProviderInt
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getTasks() {
         return [];
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getView() {
         return null;

@@ -29,56 +29,56 @@ class DefaultApplicationThemeProvider implements ApplicationThemeProviderInterfa
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getDescription() {
         return "Core bundle";
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getHome() {
         return "/";
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getName() {
         return "Core<b>bundle</b>";
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getRoute() {
         return "/";
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getTitle() {
         return "Core bundle";
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getVersion() {
         return "dev-master";
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getView() {
         return null;
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getYear() {
         $today = date("Y");

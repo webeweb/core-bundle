@@ -57,14 +57,14 @@ class CoreBundle extends Bundle implements AssetsProviderInterface {
     const CORE_WARNING = CoreInterface::CORE_WARNING;
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function build(ContainerBuilder $container) {
         $container->addCompilerPass(new ColorProviderCompilerPass());
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getAssetsRelativeDirectory() {
         return "/Resources/assets";

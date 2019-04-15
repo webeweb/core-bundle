@@ -29,7 +29,7 @@ class DefaultFooterThemeProvider implements FooterThemeProviderInterface {
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getView() {
         return null;

@@ -19,6 +19,3 @@ navigation:
         settings:    "Settings"
         users:       "Users"
         usersGroups: "Users groups"
-
-notification:
-    welcome: "Welcome %s"
