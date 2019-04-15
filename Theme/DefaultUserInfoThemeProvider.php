@@ -29,21 +29,21 @@ class DefaultUserInfoThemeProvider implements UserInfoThemeProviderInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getView() {
         return null;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function provideRegisterLink() {
         return false;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function provideResettingLink() {
         return false;
