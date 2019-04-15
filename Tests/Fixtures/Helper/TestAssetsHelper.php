@@ -22,7 +22,7 @@ use WBW\Bundle\CoreBundle\Helper\AssetsHelper;
 class TestAssetsHelper extends AssetsHelper {
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public static function listAssets($directory) {
         return parent::listAssets($directory);
