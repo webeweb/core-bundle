@@ -60,12 +60,12 @@ abstract class AbstractColorManager extends AbstractManager {
     public function registerProvider(ColorProviderInterface $colorProvider) {
 
         $key = ColorHelper::getIdentifier($colorProvider);
-
         if (true === array_key_exists($key, $this->index)) {
             throw new AlreadyRegisteredProviderException($colorProvider);
         }
 
         $this->index[$key] = $this->size();
+
         return $this->addProvider($colorProvider);
     }
 
