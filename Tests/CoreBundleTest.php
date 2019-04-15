@@ -13,6 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests;
 
 use WBW\Bundle\CoreBundle\CoreBundle;
 use WBW\Bundle\CoreBundle\CoreInterface;
+use WBW\Bundle\CoreBundle\DependencyInjection\CoreExtension;
 
 /**
  * Core bundle test.
@@ -48,15 +49,28 @@ class CoreBundleTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getAssetsDirectory() method.
+     * Tests the getAssetsRelativeDirectory() method.
      *
      * @return void
      */
-    public function testGetAssetsDirectory() {
+    public function testGetAssetsRelativeDirectory() {
 
         $obj = new CoreBundle();
 
         $res = $obj->getAssetsRelativeDirectory();
         $this->assertEquals("/Resources/assets", $res);
+    }
+
+    /**
+     * Tests the getContainerExtension() method.
+     *
+     * @return void
+     */
+    public function testGetContainerExtension() {
+
+        $obj = new CoreBundle();
+
+        $res = $obj->getContainerExtension();
+        $this->assertInstanceOf(CoreExtension::class, $res);
     }
 }

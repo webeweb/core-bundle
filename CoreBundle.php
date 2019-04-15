@@ -69,4 +69,11 @@ class CoreBundle extends Bundle implements AssetsProviderInterface {
     public function getAssetsRelativeDirectory() {
         return "/Resources/assets";
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getContainerExtension() {
+        return parent::getContainerExtension();
+    }
 }
