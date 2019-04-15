@@ -25,7 +25,7 @@ use TestKernel;
 abstract class AbstractWebTestCase extends WebTestCase {
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected static function getKernelClass() {
         require_once getcwd() . "/Tests/Fixtures/app/TestKernel.php";
@@ -33,7 +33,7 @@ abstract class AbstractWebTestCase extends WebTestCase {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public static function setUpBeforeClass() {
         parent::setUpBeforeClass();
@@ -50,7 +50,7 @@ abstract class AbstractWebTestCase extends WebTestCase {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function tearDown() {
 

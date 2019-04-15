@@ -135,7 +135,7 @@ abstract class AbstractTestCase extends TestCase {
     protected $user;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp() {
 
