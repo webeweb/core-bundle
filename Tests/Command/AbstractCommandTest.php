@@ -41,7 +41,7 @@ class AbstractCommandTest extends AbstractTestCase {
     private $output;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp() {
         parent::setUp();

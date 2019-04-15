@@ -48,7 +48,7 @@ class UnzipAssetsCommandTest extends AbstractTestCase {
     private $style;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp() {
         parent::setUp();
