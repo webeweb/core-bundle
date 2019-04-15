@@ -50,14 +50,14 @@ class TestSelect2Item extends AbstractNode implements Select2ItemInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getSelect2ItemId() {
         return $this->getId();
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getSelect2ItemText() {
         return $this->getName();
