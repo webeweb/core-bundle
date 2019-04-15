@@ -57,6 +57,18 @@ use WBW\Bundle\CoreBundle\Twig\Extension\UtilityTwigExtension;
 class CoreExtensionTest extends AbstractTestCase {
 
     /**
+     * Tests the getAlias() method.
+     *
+     * @return void
+     */
+    public function testGetAlias() {
+
+        $obj = new CoreExtension();
+
+        $this->assertEquals("core", $obj->getAlias());
+    }
+
+    /**
      * Tests the load() method.
      *
      * @return void
