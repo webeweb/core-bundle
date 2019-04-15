@@ -32,7 +32,7 @@ class EventDispatcherTraitTest extends AbstractTestCase {
     private $themeManager;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp() {
         parent::setUp();

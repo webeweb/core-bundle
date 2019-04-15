@@ -27,7 +27,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class NotificationEventListenerTest extends AbstractTestCase {
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp() {
         parent::setUp();
