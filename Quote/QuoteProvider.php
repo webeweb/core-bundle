@@ -51,7 +51,7 @@ class QuoteProvider implements QuoteProviderInterface {
     }
 
     /**
-     *{@inheritdoc}
+     *{@inheritDoc}
      */
     public function getAuthors() {
 

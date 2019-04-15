@@ -50,21 +50,21 @@ class Quote implements QuoteInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getAuthor() {
         return $this->author;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getContent() {
         return $this->content;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getDate() {
         return $this->date;
