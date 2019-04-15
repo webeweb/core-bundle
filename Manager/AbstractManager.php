@@ -37,7 +37,7 @@ abstract class AbstractManager implements ManagerInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function addProvider(ProviderInterface $provider) {
         $this->providers[] = $provider;
@@ -45,7 +45,7 @@ abstract class AbstractManager implements ManagerInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function contains(ProviderInterface $provider) {
         return -1 !== $this->indexOf($provider);
@@ -61,14 +61,14 @@ abstract class AbstractManager implements ManagerInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function hasProviders() {
         return 0 < $this->size();
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function indexOf(ProviderInterface $provider) {
         for ($i = count($this->providers) - 1; 0 <= $i; --$i) {
@@ -81,7 +81,7 @@ abstract class AbstractManager implements ManagerInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function removeProvider(ProviderInterface $provider) {
         $indexOf = $this->indexOf($provider);
@@ -103,7 +103,7 @@ abstract class AbstractManager implements ManagerInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function size() {
         return count($this->providers);

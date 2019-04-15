@@ -139,7 +139,7 @@ class ThemeManager extends AbstractThemeManager {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function initIndex() {
         return [
