@@ -23,70 +23,70 @@ use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
 class TestAbstractController extends AbstractController {
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getContainer() {
         return parent::getContainer();
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getEventDispatcher() {
         return parent::getEventDispatcher();
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getFormHelper() {
         return parent::getFormHelper();
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getKernelEventListener() {
         return parent::getKernelEventListener();
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getLogger() {
         return parent::getLogger();
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getRouter() {
         return parent::getRouter();
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getSession() {
         return parent::getSession();
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getTranslator() {
         return parent::getTranslator();
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function hasRolesOrRedirect(array $roles, $or, $redirectUrl, $originUrl = "") {
         return parent::hasRolesOrRedirect($roles, $or, $redirectUrl, $originUrl);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function notify($eventName, NotificationInterface $notification) {
         return parent::notify($eventName, $notification);
