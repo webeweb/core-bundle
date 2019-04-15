@@ -74,49 +74,49 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getAnimation() {
         return $this->animation;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getBordered() {
         return $this->bordered;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getFixedWidth() {
         return $this->fixedWidth;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getFont() {
         return $this->font;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getPull() {
         return $this->pull;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getSize() {
         return $this->size;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setAnimation($animation) {
         if (false === in_array($animation, FontAwesomeIconEnumerator::enumAnimations())) {
@@ -127,7 +127,7 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setBordered($bordered) {
         $this->bordered = $bordered;
@@ -135,7 +135,7 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setFixedWidth($fixedWidth) {
         $this->fixedWidth = $fixedWidth;
@@ -143,7 +143,7 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setFont($font) {
         if (false === in_array($font, FontAwesomeIconEnumerator::enumFonts())) {
@@ -154,7 +154,7 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setPull($pull) {
         if (false === in_array($pull, FontAwesomeIconEnumerator::enumPulls())) {
@@ -165,7 +165,7 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setSize($size) {
         if (false === in_array($size, FontAwesomeIconEnumerator::enumSizes())) {

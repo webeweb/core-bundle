@@ -42,21 +42,21 @@ abstract class AbstractIcon implements IconInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getName() {
         return $this->name;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getStyle() {
         return $this->style;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setName($name) {
         $this->name = $name;
@@ -64,7 +64,7 @@ abstract class AbstractIcon implements IconInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setStyle($style) {
         $this->style = $style;

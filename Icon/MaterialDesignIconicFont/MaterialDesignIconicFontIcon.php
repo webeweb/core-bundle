@@ -79,56 +79,56 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getBorder() {
         return $this->border;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getFixedWidth() {
         return $this->fixedWidth;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getFlip() {
         return $this->flip;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getPull() {
         return $this->pull;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getRotate() {
         return $this->rotate;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getSize() {
         return $this->size;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getSpin() {
         return $this->spin;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setBorder($border) {
         if (false === in_array($border, MaterialDesignIconicFontIconEnumerator::enumBorders())) {
@@ -139,7 +139,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setFixedWidth($fixedWidth) {
         $this->fixedWidth = $fixedWidth;
@@ -147,7 +147,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
     }
 
     /**
-     *{@inheritdoc}
+     *{@inheritDoc}
      */
     public function setFlip($flip) {
         if (false === in_array($flip, MaterialDesignIconicFontIconEnumerator::enumFlips())) {
@@ -158,7 +158,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setPull($pull) {
         if (false === in_array($pull, MaterialDesignIconicFontIconEnumerator::enumPulls())) {
@@ -169,7 +169,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setRotate($rotate) {
         if (false === in_array($rotate, MaterialDesignIconicFontIconEnumerator::enumRotates())) {
@@ -180,7 +180,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setSize($size) {
         if (false === in_array($size, MaterialDesignIconicFontIconEnumerator::enumSizes())) {
@@ -191,7 +191,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setSpin($spin) {
         if (false === in_array($spin, MaterialDesignIconicFontIconEnumerator::enumSpins())) {
