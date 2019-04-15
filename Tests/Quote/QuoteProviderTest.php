@@ -32,7 +32,7 @@ class QuoteProviderTest extends AbstractTestCase {
     private $filename;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp() {
         parent::setUp();
