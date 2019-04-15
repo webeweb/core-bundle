@@ -26,7 +26,7 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 class ColorProviderCompilerPass implements CompilerPassInterface {
 
     /**
-     *{@inheritdoc}
+     *{@inheritDoc}
      */
     public function process(ContainerBuilder $container) {
 
