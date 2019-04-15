@@ -46,7 +46,7 @@ EOT;
     const SERVICE_NAME = "webeweb.core.command.unzip_assets";
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function configure() {
         $this
@@ -124,7 +124,7 @@ EOT;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function execute(InputInterface $input, OutputInterface $output) {
 
