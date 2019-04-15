@@ -37,7 +37,7 @@ class LightBlueColorProvider extends AbstractColorProvider implements LightBlueC
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getColors() {
         return [
@@ -57,7 +57,7 @@ class LightBlueColorProvider extends AbstractColorProvider implements LightBlueC
     }
 
     /**
-     *{@inheritdoc}
+     *{@inheritDoc}
      */
     public function getName() {
         return self::LIGHT_BLUE_COLOR_NAME;

@@ -37,7 +37,7 @@ class YellowColorProvider extends AbstractColorProvider implements YellowColorPr
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getColors() {
         return [
@@ -57,7 +57,7 @@ class YellowColorProvider extends AbstractColorProvider implements YellowColorPr
     }
 
     /**
-     *{@inheritdoc}
+     *{@inheritDoc}
      */
     public function getName() {
         return self::YELLOW_COLOR_NAME;

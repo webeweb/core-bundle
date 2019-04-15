@@ -37,7 +37,7 @@ class TealColorProvider extends AbstractColorProvider implements TealColorProvid
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getColors() {
         return [
@@ -57,7 +57,7 @@ class TealColorProvider extends AbstractColorProvider implements TealColorProvid
     }
 
     /**
-     *{@inheritdoc}
+     *{@inheritDoc}
      */
     public function getName() {
         return self::TEAL_COLOR_NAME;

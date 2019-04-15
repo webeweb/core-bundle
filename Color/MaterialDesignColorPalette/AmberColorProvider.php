@@ -37,7 +37,7 @@ class AmberColorProvider extends AbstractColorProvider implements AmberColorProv
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getColors() {
         return [
@@ -57,7 +57,7 @@ class AmberColorProvider extends AbstractColorProvider implements AmberColorProv
     }
 
     /**
-     *{@inheritdoc}
+     *{@inheritDoc}
      */
     public function getName() {
         return self::AMBER_COLOR_NAME;

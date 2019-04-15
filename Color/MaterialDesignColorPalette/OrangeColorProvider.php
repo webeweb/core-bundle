@@ -37,7 +37,7 @@ class OrangeColorProvider extends AbstractColorProvider implements OrangeColorPr
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getColors() {
         return [
@@ -57,7 +57,7 @@ class OrangeColorProvider extends AbstractColorProvider implements OrangeColorPr
     }
 
     /**
-     *{@inheritdoc}
+     *{@inheritDoc}
      */
     public function getName() {
         return self::ORANGE_COLOR_NAME;

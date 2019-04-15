@@ -37,7 +37,7 @@ class CyanColorProvider extends AbstractColorProvider implements CyanColorProvid
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getColors() {
         return [
@@ -57,7 +57,7 @@ class CyanColorProvider extends AbstractColorProvider implements CyanColorProvid
     }
 
     /**
-     *{@inheritdoc}
+     *{@inheritDoc}
      */
     public function getName() {
         return self::CYAN_COLOR_NAME;

@@ -37,7 +37,7 @@ class LimeColorProvider extends AbstractColorProvider implements LimeColorProvid
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getColors() {
         return [
@@ -57,7 +57,7 @@ class LimeColorProvider extends AbstractColorProvider implements LimeColorProvid
     }
 
     /**
-     *{@inheritdoc}
+     *{@inheritDoc}
      */
     public function getName() {
         return self::LIME_COLOR_NAME;

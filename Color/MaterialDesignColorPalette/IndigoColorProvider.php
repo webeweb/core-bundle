@@ -37,7 +37,7 @@ class IndigoColorProvider extends AbstractColorProvider implements IndigoColorPr
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getColors() {
         return [
@@ -57,7 +57,7 @@ class IndigoColorProvider extends AbstractColorProvider implements IndigoColorPr
     }
 
     /**
-     *{@inheritdoc}
+     *{@inheritDoc}
      */
     public function getName() {
         return self::INDIGO_COLOR_NAME;
