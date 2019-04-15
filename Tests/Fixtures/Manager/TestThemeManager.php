@@ -34,14 +34,14 @@ class TestThemeManager extends AbstractThemeManager {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getProvider($name) {
         return parent::getProvider($name);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function initIndex() {
         return [
@@ -50,7 +50,7 @@ class TestThemeManager extends AbstractThemeManager {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setProvider($name, ThemeProviderInterface $provider) {
         return parent::setProvider($name, $provider);
