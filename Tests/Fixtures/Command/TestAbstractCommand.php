@@ -24,21 +24,21 @@ use WBW\Bundle\CoreBundle\Command\AbstractCommand;
 class TestAbstractCommand extends AbstractCommand {
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function configure() {
         $this->setName("wbw:core:abstract");
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getCheckbox($checked) {
         return parent::getCheckbox($checked);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function newStyle(InputInterface $input, OutputInterface $output) {
         return parent::newStyle($input, $output);
