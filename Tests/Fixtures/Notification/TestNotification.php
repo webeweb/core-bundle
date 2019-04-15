@@ -29,14 +29,14 @@ class TestNotification extends AbstractNotification {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setContent($content) {
         return parent::setContent($content);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setType($type) {
         return parent::setType($type);
