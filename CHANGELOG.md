@@ -1,6 +1,13 @@
 CHANGELOG
 =========
 
+### master
+
+- Add Quote interface
+- Add Quote provider interface
+- Improve PHPDoc
+- Improve unit tests
+
 ###  [1.12.0](https://github.com/webeweb/core-bundle/tree/v1.12.0) (2019-04-04)
 
 - Add fmtDate() alias into Utility Twig extension
