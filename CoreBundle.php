@@ -14,6 +14,7 @@ namespace WBW\Bundle\CoreBundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use WBW\Bundle\CoreBundle\DependencyInjection\Compiler\ColorProviderCompilerPass;
+use WBW\Bundle\CoreBundle\DependencyInjection\CoreExtension;
 use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
 
 /**
@@ -25,7 +26,7 @@ use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
 class CoreBundle extends Bundle implements AssetsProviderInterface {
 
     /**
-     * Core "Danger".
+     * Core "danger".
      *
      * @var string
      * @deprecated since Core bundle 1.11.0, use {@see WBW\Bundle\CoreBundle\CoreInterface} instead.
@@ -33,7 +34,7 @@ class CoreBundle extends Bundle implements AssetsProviderInterface {
     const CORE_DANGER = CoreInterface::CORE_DANGER;
 
     /**
-     * Core "Info".
+     * Core "info".
      *
      * @var string
      * @deprecated since Core bundle 1.11.0, use {@see WBW\Bundle\CoreBundle\CoreInterface} instead.
@@ -41,7 +42,7 @@ class CoreBundle extends Bundle implements AssetsProviderInterface {
     const CORE_INFO = CoreInterface::CORE_INFO;
 
     /**
-     * Core "Success".
+     * Core "success".
      *
      * @var string
      * @deprecated since Core bundle 1.11.0, use {@see WBW\Bundle\CoreBundle\CoreInterface} instead.
@@ -49,7 +50,7 @@ class CoreBundle extends Bundle implements AssetsProviderInterface {
     const CORE_SUCCESS = CoreInterface::CORE_SUCCESS;
 
     /**
-     * Core "Warning".
+     * Core "warning".
      *
      * @var string
      * @deprecated since Core bundle 1.11.0, use {@see WBW\Bundle\CoreBundle\CoreInterface} instead.
@@ -74,6 +75,6 @@ class CoreBundle extends Bundle implements AssetsProviderInterface {
      * {@inheritDoc}
      */
     public function getContainerExtension() {
-        return parent::getContainerExtension();
+        return new CoreExtension();
     }
 }
