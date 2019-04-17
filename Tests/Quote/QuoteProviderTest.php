@@ -11,6 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Quote;
 
+use DateInterval;
+use DateTime;
 use Exception;
 use Symfony\Component\Filesystem\Exception\FileNotFoundException;
 use WBW\Bundle\CoreBundle\Quote\QuoteProvider;
@@ -75,6 +77,7 @@ class QuoteProviderTest extends AbstractTestCase {
      * Tests the parse() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testParse() {
 
@@ -83,5 +86,22 @@ class QuoteProviderTest extends AbstractTestCase {
         $obj->parse();
         $this->assertCount(171, $obj->getAuthors());
         $this->assertCount(366, $obj->getQuotes());
+
+        // Set a Date mock.
+        $date = new DateTime("2016-01-01");
+
+        do {
+
+            $day = $date->format("m.d");
+            $this->assertArrayHasKey($day, $obj->getQuotes());
+
+            $this->assertNotNull($obj->getQuotes()[$day]->getDate());
+            $this->assertEquals($day, $obj->getQuotes()[$day]->getDate()->format("m.d"));
+
+            $this->assertNotNull($obj->getQuotes()[$day]->getAuthor());
+            $this->assertNotNull($obj->getQuotes()[$day]->getContent());
+
+            $date->add(new DateInterval("P1D"));
+        } while ("2017" !== $date->format("Y"));
     }
 }

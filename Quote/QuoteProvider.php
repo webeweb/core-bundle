@@ -88,7 +88,7 @@ class QuoteProvider implements QuoteProviderInterface {
     }
 
     /**
-     * Parses.
+     * Parses the file.
      *
      * @return void
      */
@@ -100,14 +100,15 @@ class QuoteProvider implements QuoteProviderInterface {
 
         foreach ($yamlContent as $k => $v) {
 
-            $date = DateTime::createFromFormat("!m.d", $k);
+            // Force year to manage the leap years.
+            $date = DateTime::createFromFormat("!Y.m.d", "2016." . $k);
 
             $model = new Quote();
-            $model->setDate(false === $date ? nulll : $date);
+            $model->setDate(false === $date ? null : $date);
             $model->setAuthor(ArrayHelper::get($v, "author"));
             $model->setContent(ArrayHelper::get($v, "content"));
 
-            $this->quotes[] = $model;
+            $this->quotes[$k] = $model;
         }
     }
 
