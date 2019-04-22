@@ -5,6 +5,8 @@ CHANGELOG
 
 - Add Quote interface
 - Add Quote provider interface
+- Add Quote Twig extension
+- Add Quote Twig extension trait
 - Improve PHPDoc
 - Improve unit tests
 
