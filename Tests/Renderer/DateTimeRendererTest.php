@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Form\Renderer;
 
-use DateInterval;
 use DateTime;
 use Exception;
 use WBW\Bundle\CoreBundle\Renderer\DateTimeRenderer;
