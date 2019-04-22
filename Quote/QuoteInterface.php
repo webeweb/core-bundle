@@ -31,7 +31,7 @@ interface QuoteInterface {
     /**
      * Get the content.
      *
-     * @return strng Returns the content.
+     * @return string Returns the content.
      */
     public function getContent();
 
