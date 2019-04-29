@@ -38,14 +38,12 @@ abstract class AbstractWebTestCase extends WebTestCase {
     public static function setUpBeforeClass() {
         parent::setUpBeforeClass();
 
-        // Initialize the kernel.
         static::$kernel = static::createKernel();
 
         // Clean the cache to avoid issues due to cache files.
         $filesystem = new Filesystem();
         $filesystem->remove(static::$kernel->getCacheDir());
 
-        // Boot the kernel.
         static::$kernel->boot();
     }
 
@@ -53,8 +51,6 @@ abstract class AbstractWebTestCase extends WebTestCase {
      * {@inheritDoc}
      */
     protected function tearDown() {
-
-        // Shutdown the kernel.
         static::$kernel->shutdown();
     }
 }
