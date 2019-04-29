@@ -25,7 +25,7 @@ use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Translation\TranslatorInterface;
 use Twig\Environment;
-use Twig_LoaderInterface;
+use Twig\Loader\LoaderInterface;
 
 /**
  * Abstract test case.
@@ -123,7 +123,7 @@ abstract class AbstractTestCase extends TestCase {
     /**
      * Twig loader.
      *
-     * @var Twig_LoaderInterface
+     * @var LoaderInterface
      */
     protected $twigLoader;
 
@@ -174,7 +174,7 @@ abstract class AbstractTestCase extends TestCase {
         $this->tokenStorage->expects($this->any())->method("getToken")->willReturn($this->token);
 
         // Set a Twig loader mock.
-        $this->twigLoader = $this->getMockBuilder(Twig_LoaderInterface::class)->getMock();
+        $this->twigLoader = $this->getMockBuilder(LoaderInterface::class)->getMock();
 
         // Set a Twig environment mock.
         $this->twigEnvironment = $this->getMockBuilder(Environment::class)->setConstructorArgs([$this->twigLoader, []])->getMock();
