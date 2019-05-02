@@ -36,9 +36,9 @@ trait StylesheetTwigExtensionTrait {
     }
 
     /**
-     * Set the stylesheet twig extension.
+     * Set the stylesheet Twig extension.
      *
-     * @param StylesheetTwigExtension|null $stylesheetTwigExtension The stylesheet twig extension.
+     * @param StylesheetTwigExtension|null $stylesheetTwigExtension The stylesheet Twig extension.
      */
     protected function setStylesheetTwigExtension(StylesheetTwigExtension $stylesheetTwigExtension = null) {
         $this->stylesheetTwigExtension = $stylesheetTwigExtension;

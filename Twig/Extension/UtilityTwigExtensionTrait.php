@@ -36,9 +36,9 @@ trait UtilityTwigExtensionTrait {
     }
 
     /**
-     * Set the utility twig extension.
+     * Set the utility Twig extension.
      *
-     * @param UtilityTwigExtension|null $utilityTwigExtension The utility twig extension.
+     * @param UtilityTwigExtension|null $utilityTwigExtension The utility Twig extension.
      */
     protected function setUtilityTwigExtension(UtilityTwigExtension $utilityTwigExtension = null) {
         $this->utilityTwigExtension = $utilityTwigExtension;

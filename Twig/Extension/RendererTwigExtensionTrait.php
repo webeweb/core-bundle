@@ -36,9 +36,9 @@ trait RendererTwigExtensionTrait {
     }
 
     /**
-     * Set the renderer twig extension.
+     * Set the renderer Twig extension.
      *
-     * @param RendererTwigExtension|null $rendererTwigExtension The renderer twig extension.
+     * @param RendererTwigExtension|null $rendererTwigExtension The renderer Twig extension.
      */
     protected function setRendererTwigExtension(RendererTwigExtension $rendererTwigExtension = null) {
         $this->rendererTwigExtension = $rendererTwigExtension;

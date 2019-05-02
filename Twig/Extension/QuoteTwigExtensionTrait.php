@@ -36,9 +36,9 @@ trait QuoteTwigExtensionTrait {
     }
 
     /**
-     * Set the quote twig extension.
+     * Set the quote Twig extension.
      *
-     * @param QuoteTwigExtension|null $quoteTwigExtension The quote twig extension.
+     * @param QuoteTwigExtension|null $quoteTwigExtension The quote Twig extension.
      */
     protected function setQuoteTwigExtension(QuoteTwigExtension $quoteTwigExtension = null) {
         $this->stylesheetTwigExtension = $quoteTwigExtension;
