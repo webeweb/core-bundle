@@ -4,6 +4,8 @@ CHANGELOG
 ### master
 
 - Add Quote interface
+- Add Quote manager
+- Add Quote manager trait
 - Add Quote provider interface
 - Add Quote Twig extension
 - Add Quote Twig extension trait
