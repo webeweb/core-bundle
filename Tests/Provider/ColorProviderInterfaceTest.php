@@ -11,13 +11,16 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Provider;
 
+use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
+
 /**
  * Color provider interface test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Provider
  */
-class ColorProviderInterfaceTest {
+class ColorProviderInterfaceTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.
