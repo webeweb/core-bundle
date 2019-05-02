@@ -53,6 +53,7 @@ class QuoteProviderTest extends AbstractTestCase {
 
         $this->assertEquals($this->filename, $obj->getFilename());
         $this->assertEquals([], $obj->getAuthors());
+        $this->assertEquals("WorldsWisdom.fr", $obj->getDomain());
         $this->assertEquals([], $obj->getQuotes());
     }
 
@@ -74,16 +75,16 @@ class QuoteProviderTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parse() method.
+     * Tests the init() method.
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testParse() {
+    public function testInit() {
 
         $obj = new QuoteProvider($this->filename);
 
-        $obj->parse();
+        $obj->init();
         $this->assertCount(171, $obj->getAuthors());
         $this->assertCount(366, $obj->getQuotes());
 

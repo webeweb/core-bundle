@@ -20,9 +20,37 @@ namespace WBW\Bundle\CoreBundle\Provider;
 interface QuoteProviderInterface extends ProviderInterface {
 
     /**
+     * Tag name.
+     *
+     * @var string
+     */
+    const TAG_NAME = "webeweb.core.provider.quote";
+
+    /**
      * Get the authors.
      *
      * @return string[] Returns the authors.
      */
     public function getAuthors();
+
+    /**
+     * Get the domain.
+     *
+     * @return string Returns the domain.
+     */
+    public function getDomain();
+
+    /**
+     * Get the quotes.
+     *
+     * @return QuoteInterface[] Returns the quotes.
+     */
+    public function getQuotes();
+
+    /**
+     * Initializes.
+     *
+     * @return void
+     */
+    public function init();
 }

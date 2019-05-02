@@ -70,6 +70,13 @@ class QuoteProvider implements QuoteProviderInterface {
     }
 
     /**
+     * {@inheritDoc}
+     */
+    public function getDomain() {
+        return basename($this->getFilename(), ".yml");
+    }
+
+    /**
      * Get the filename.
      *
      * @return string Returns the filename.
@@ -79,20 +86,16 @@ class QuoteProvider implements QuoteProviderInterface {
     }
 
     /**
-     * Get the quotes.
-     *
-     * @return QuoteInterface[] Returns the quotes.
+     * {@onheritDoc}
      */
     public function getQuotes() {
         return $this->quotes;
     }
 
     /**
-     * Parses the file.
-     *
-     * @return void
+     * {@inheritDoc}
      */
-    public function parse() {
+    public function init() {
 
         $fileContent = file_get_contents($this->filename);
 
