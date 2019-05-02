@@ -3,12 +3,17 @@ CHANGELOG
 
 ### master
 
+- Add Font Awesome Twig extension trait
+- Add jQuery InputMask Twig extension trait
 - Add Quote interface
 - Add Quote manager
 - Add Quote manager trait
 - Add Quote provider interface
 - Add Quote Twig extension
 - Add Quote Twig extension trait
+- Add Material Design color palette Twig extension trait
+- Add Material Design Iconic font Twig extension trait
+- Add Meteocons Twig extension trait
 - Improve PHPDoc
 - Improve unit tests
 
