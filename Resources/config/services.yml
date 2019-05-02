@@ -37,6 +37,10 @@ services:
         class:  WBW\Bundle\CoreBundle\Manager\ColorManager
         public: true
 
+    webeweb.core.manager.quote:
+        class:  WBW\Bundle\CoreBundle\Manager\QuoteManager
+        public: true
+
     webeweb.core.manager.theme:
         class:     WBW\Bundle\CoreBundle\Manager\ThemeManager
         arguments: ["@twig"]

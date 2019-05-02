@@ -37,6 +37,7 @@ use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\EventListener\NotificationEventListener;
 use WBW\Bundle\CoreBundle\Helper\FormHelper;
 use WBW\Bundle\CoreBundle\Manager\ColorManager;
+use WBW\Bundle\CoreBundle\Manager\QuoteManager;
 use WBW\Bundle\CoreBundle\Manager\ThemeManager;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\FontAwesomeTwigExtension;
@@ -93,6 +94,7 @@ class CoreExtensionTest extends AbstractTestCase {
 
         // Managers
         $this->assertInstanceOf(ColorManager::class, $this->containerBuilder->get(ColorManager::SERVICE_NAME));
+        $this->assertInstanceOf(QuoteManager::class, $this->containerBuilder->get(QuoteManager::SERVICE_NAME));
         $this->assertInstanceOf(ThemeManager::class, $this->containerBuilder->get(ThemeManager::SERVICE_NAME));
 
         // Providers
