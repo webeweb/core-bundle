@@ -25,11 +25,4 @@ class ColorManager extends AbstractColorManager {
      * @var string
      */
     const SERVICE_NAME = "webeweb.core.manager.color";
-
-    /**
-     * Constructor.
-     */
-    public function __construct() {
-        parent::__construct();
-    }
 }

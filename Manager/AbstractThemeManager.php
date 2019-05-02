@@ -40,7 +40,7 @@ abstract class AbstractThemeManager extends AbstractManager {
      *
      * @param Environment $twigEnvironment The Twig environment.
      */
-    protected function __construct(Environment $twigEnvironment) {
+    public function __construct(Environment $twigEnvironment) {
         parent::__construct();
         $this->setIndex($this->initIndex());
         $this->setTwigEnvironment($twigEnvironment);

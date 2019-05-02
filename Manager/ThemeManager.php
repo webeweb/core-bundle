@@ -12,7 +12,6 @@
 namespace WBW\Bundle\CoreBundle\Manager;
 
 use ReflectionException;
-use Twig\Environment;
 use WBW\Bundle\CoreBundle\Provider\Theme\ApplicationThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\Theme\BreadcrumbsThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\Theme\FooterThemeProviderInterface;
@@ -38,15 +37,6 @@ class ThemeManager extends AbstractThemeManager {
      * @var string
      */
     const SERVICE_NAME = "webeweb.core.manager.theme";
-
-    /**
-     * Constructor.
-     *
-     * @param Environment $twigEnvironment The Twig environment.
-     */
-    public function __construct(Environment $twigEnvironment) {
-        parent::__construct($twigEnvironment);
-    }
 
     /**
      * Get the application theme provider.
