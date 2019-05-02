@@ -11,6 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Provider;
 
+use WBW\Bundle\CoreBundle\Quote\QuoteInterface;
+
 /**
  * Quote provider interface.
  *
