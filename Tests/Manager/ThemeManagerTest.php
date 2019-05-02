@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Manager;
 
+use Exception;
 use WBW\Bundle\CoreBundle\Manager\ThemeManager;
 use WBW\Bundle\CoreBundle\Provider\Theme\ApplicationThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\Theme\BreadcrumbsThemeProviderInterface;
@@ -35,6 +36,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * Tests the addGlobal() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testAddGlobal() {
 
@@ -88,12 +90,13 @@ class ThemeManagerTest extends AbstractTestCase {
      * Tests the __construct() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testConstruct() {
 
-        $obj = new ThemeManager($this->twigEnvironment);
-
         $this->assertEquals("webeweb.core.manager.theme", ThemeManager::SERVICE_NAME);
+
+        $obj = new ThemeManager($this->twigEnvironment);
 
         $this->assertNull($obj->getApplicationThemeProvider());
         $this->assertNull($obj->getBreadcrumbsThemeProvider());
@@ -110,6 +113,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * Tests the hasProviders() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testHasProviders() {
 
@@ -125,6 +129,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * Tests the setApplicationThemeProvider() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testSetApplicationThemeProvider() {
 
@@ -144,6 +149,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * Tests the setBreadcrumbsThemeProvider() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testSetBreadcrumbsThemeProvider() {
 
@@ -160,6 +166,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * Tests the setFooterThemeProvider() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testSetFooterThemeProvider() {
 
@@ -176,6 +183,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * Tests the setHookDropDownThemeProvider() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testSetHookDropDownThemeProvider() {
 
@@ -192,6 +200,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * Tests the setNavigationThemeProvider() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testSetNavigationThemeProvider() {
 
@@ -208,6 +217,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * Tests the setNotificationsDropDownThemeProvider() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testSetNotificationsDropDownThemeProvider() {
 
@@ -224,6 +234,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * Tests the setSearchThemeProvider() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testSetSearchThemeProvider() {
 
@@ -240,6 +251,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * Tests the setTasksDropDownThemeProvider() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testSetTasksDropDownThemeProvider() {
 
@@ -256,6 +268,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * Tests the setUserInfoThemeProvider() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testSetUserInfoThemeProvider() {
 
