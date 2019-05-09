@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension;
 
+use WBW\Bundle\CoreBundle\Manager\QuoteManager;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Twig\Extension\TestQuoteTwigExtensionTrait;
 use WBW\Bundle\CoreBundle\Twig\Extension\QuoteTwigExtension;
@@ -43,11 +44,11 @@ class QuoteTwigExtensionTraitTest extends AbstractTestCase {
     public function testSetQuoteTwigExtension() {
 
         // Set a Quote Twig extension mock.
-        $rendererTwigExtension = new QuoteTwigExtension($this->twigEnvironment);
+        $quoteTwigExtension = new QuoteTwigExtension($this->twigEnvironment, new QuoteManager());
 
         $obj = new TestQuoteTwigExtensionTrait();
 
-        $obj->setQuoteTwigExtension($rendererTwigExtension);
-        $this->assertSame($rendererTwigExtension, $obj->getQuoteTwigExtension());
+        $obj->setQuoteTwigExtension($quoteTwigExtension);
+        $this->assertSame($quoteTwigExtension, $obj->getQuoteTwigExtension());
     }
 }

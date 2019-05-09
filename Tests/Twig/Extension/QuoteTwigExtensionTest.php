@@ -13,6 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension;
 
 use Twig\Node\Node;
 use Twig\TwigFunction;
+use WBW\Bundle\CoreBundle\Manager\QuoteManager;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Twig\Extension\QuoteTwigExtension;
 
@@ -31,10 +32,14 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $obj = new QuoteTwigExtension($this->twigEnvironment);
+        // Set a Quote manager mock.
+        $quoteManager = new QuoteManager();
+
+        $obj = new QuoteTwigExtension($this->twigEnvironment, $quoteManager);
 
         $this->assertEquals("webeweb.core.twig.extension.quote", QuoteTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+        $this->assertSame($quoteManager, $obj->getQuoteManager());
     }
 
     /**
@@ -44,7 +49,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
      */
     public function testGetFunctions() {
 
-        $obj = new QuoteTwigExtension($this->twigEnvironment);
+        $obj = new QuoteTwigExtension($this->twigEnvironment, new QuoteManager());
 
         $res = $obj->getFunctions();
         $this->assertCount(2, $res);

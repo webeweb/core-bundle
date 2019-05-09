@@ -207,7 +207,7 @@ services:
 
     webeweb.core.twig.extension.quote:
         class:     WBW\Bundle\CoreBundle\Twig\Extension\QuoteTwigExtension
-        arguments: ["@twig"]
+        arguments: ["@twig", "@webeweb.core.manager.quote"]
         public:    true
         tags:
             - { name: "twig.extension" }

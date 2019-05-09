@@ -11,7 +11,10 @@
 
 namespace WBW\Bundle\CoreBundle\Twig\Extension;
 
+use Twig\Environment;
 use Twig\TwigFunction;
+use WBW\Bundle\CoreBundle\Manager\QuoteManager;
+use WBW\Bundle\CoreBundle\Manager\QuoteManagerTrait;
 
 /**
  * Quote Twig extension.
@@ -21,12 +24,25 @@ use Twig\TwigFunction;
  */
 class QuoteTwigExtension extends AbstractTwigExtension {
 
+    use QuoteManagerTrait;
+
     /**
      * Service name.
      *
      * @var string
      */
     const SERVICE_NAME = "webeweb.core.twig.extension.quote";
+
+    /**
+     * Constructor.
+     *
+     * @param Environment $twigEnvironment The Twig environment.
+     * @param QuoteManager $quoteManager The quote manager.
+     */
+    public function __construct(Environment $twigEnvironment, QuoteManager $quoteManager) {
+        parent::__construct($twigEnvironment);
+        $this->setQuoteManager($quoteManager);
+    }
 
     /**
      * Get the Twig functions.
