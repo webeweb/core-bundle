@@ -11,10 +11,15 @@
 
 namespace WBW\Bundle\CoreBundle\Twig\Extension;
 
+use DateTime;
+use Exception;
 use Twig\Environment;
 use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\Manager\QuoteManager;
 use WBW\Bundle\CoreBundle\Manager\QuoteManagerTrait;
+use WBW\Bundle\CoreBundle\Provider\QuoteProviderInterface;
+use WBW\Bundle\CoreBundle\Quote\QuoteInterface;
+use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
  * Quote Twig extension.
@@ -51,28 +56,79 @@ class QuoteTwigExtension extends AbstractTwigExtension {
      */
     public function getFunctions() {
         return [
+            new TwigFunction("quote", [$this, "quoteFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("quoteAuthor", [$this, "quoteAuthorFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("quoteContent", [$this, "quoteContentFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
     /**
+     * Get the quote provider.
+     *
+     * @param string|null $domain The domain.
+     * @return QuoteProviderInterface|null Returns the quote provider.
+     */
+    protected function getQuoteProvider($domain = null) {
+
+        if (false === $this->getQuoteManager()->hasProviders()) {
+            return null;
+        }
+
+        if (null !== $domain) {
+            return $this->getQuoteManager()->getQuoteProvider($domain);
+        }
+
+        return $this->getQuoteManager()->getProviders()[0];
+    }
+
+    /**
      * Displays a quote author.
      *
-     * @param array $args The arguments.
+     * @param string $domain The domain.
      * @return string Returns the quote author.
+     * @throws Exception Throws an exception if an error occurs.
      */
-    public function quoteAuthorFunction(array $args = []) {
+    public function quoteAuthorFunction($domain = null) {
 
+        $quote = $this->quoteFunction($domain);
+        if (null === $quote) {
+            return "";
+        }
+
+        return $quote->getAuthor();
     }
 
     /**
      * Displays a quote content.
      *
-     * @param array $args The arguments.
+     * @param string $domain The domain.
      * @return string Returns the quote content.
+     * @throws Exception Throws an exception if an error occurs.
      */
-    public function quoteContentFunction(array $args = []) {
+    public function quoteContentFunction($domain = null) {
 
+        $quote = $this->quoteFunction($domain);
+        if (null === $quote) {
+            return "";
+        }
+
+        return $quote->getContent();
+    }
+
+    /**
+     * Get the quote.
+     *
+     * @param string|null $domain The domain.
+     * @return QuoteInterface|null Returns the quote.
+     * @throws Exception Throws an exception if an error occurs.
+     */
+    public function quoteFunction($domain = null) {
+
+        $provider = $this->getQuoteProvider($domain);
+        if (null === $provider) {
+            return null;
+        }
+
+        return ArrayHelper::get($provider->getQuotes(), (new DateTime())->format("m.d"), null);
     }
 }

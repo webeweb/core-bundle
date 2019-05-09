@@ -11,9 +11,12 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension;
 
+use Exception;
 use Twig\Node\Node;
 use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\Manager\QuoteManager;
+use WBW\Bundle\CoreBundle\Provider\QuoteProviderInterface;
+use WBW\Bundle\CoreBundle\Quote\QuoteProvider;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Twig\Extension\QuoteTwigExtension;
 
@@ -26,20 +29,47 @@ use WBW\Bundle\CoreBundle\Twig\Extension\QuoteTwigExtension;
 class QuoteTwigExtensionTest extends AbstractTestCase {
 
     /**
+     * Quote manager.
+     *
+     * @var QuoteManager
+     */
+    private $quoteManager;
+
+    /**
+     * Quote provider.
+     *
+     * @var QuoteProviderInterface
+     */
+    private $quoteProvider;
+
+    /**
+     * {@inheritDoc}
+     */
+    protected function setUp() {
+        parent::setUp();
+
+        $filename = getcwd() . "/Resources/translations/WorldsWisdom.fr.yml";
+
+        // Set a Quote provider mock.
+        $this->quoteProvider = new QuoteProvider($filename);
+
+        // Set a Quote manager mock.
+        $this->quoteManager = new QuoteManager();
+        $this->quoteManager->addProvider($this->quoteProvider);
+    }
+
+    /**
      * Tests the __construct() method.
      *
      * @return void
      */
     public function testConstruct() {
 
-        // Set a Quote manager mock.
-        $quoteManager = new QuoteManager();
-
-        $obj = new QuoteTwigExtension($this->twigEnvironment, $quoteManager);
+        $obj = new QuoteTwigExtension($this->twigEnvironment, $this->quoteManager);
 
         $this->assertEquals("webeweb.core.twig.extension.quote", QuoteTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-        $this->assertSame($quoteManager, $obj->getQuoteManager());
+        $this->assertSame($this->quoteManager, $obj->getQuoteManager());
     }
 
     /**
@@ -49,19 +79,118 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
      */
     public function testGetFunctions() {
 
-        $obj = new QuoteTwigExtension($this->twigEnvironment, new QuoteManager());
+        $obj = new QuoteTwigExtension($this->twigEnvironment, $this->quoteManager);
 
         $res = $obj->getFunctions();
-        $this->assertCount(2, $res);
+        $this->assertCount(3, $res);
 
         $this->assertInstanceOf(TwigFunction::class, $res[0]);
-        $this->assertEquals("quoteAuthor", $res[0]->getName());
-        $this->assertEquals([$obj, "quoteAuthorFunction"], $res[0]->getCallable());
+        $this->assertEquals("quote", $res[0]->getName());
+        $this->assertEquals([$obj, "quoteFunction"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
 
         $this->assertInstanceOf(TwigFunction::class, $res[1]);
-        $this->assertEquals("quoteContent", $res[1]->getName());
-        $this->assertEquals([$obj, "quoteContentFunction"], $res[1]->getCallable());
+        $this->assertEquals("quoteAuthor", $res[1]->getName());
+        $this->assertEquals([$obj, "quoteAuthorFunction"], $res[1]->getCallable());
         $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[2]);
+        $this->assertEquals("quoteContent", $res[2]->getName());
+        $this->assertEquals([$obj, "quoteContentFunction"], $res[2]->getCallable());
+        $this->assertEquals(["html"], $res[2]->getSafe(new Node()));
+    }
+
+    /**
+     * Tests the quoteAuthorFunction() method.
+     *
+     * @return void
+     * @throws Exception Throws an exception if an error occurs.
+     */
+    public function testQuoteAuthorFunction() {
+
+        $obj = new QuoteTwigExtension($this->twigEnvironment, $this->quoteManager);
+
+        $this->assertNotNull($obj->quoteAuthorFunction());
+    }
+
+    /**
+     * Tests the quoteAuthorFunction() method.
+     *
+     * @return void
+     * @throws Exception Throws an exception if an error occurs.
+     */
+    public function testQuoteAuthorFunctionWithBadDomain() {
+
+        $obj = new QuoteTwigExtension($this->twigEnvironment, $this->quoteManager);
+
+        $this->assertEquals("", $obj->quoteAuthorFunction("github"));
+    }
+
+    /**
+     * Tests the quoteContentFunction() method.
+     *
+     * @return void
+     * @throws Exception Throws an exception if an error occurs.
+     */
+    public function testQuoteContentFunction() {
+
+        $obj = new QuoteTwigExtension($this->twigEnvironment, $this->quoteManager);
+
+        $this->assertNotNull($obj->quoteContentFunction());
+    }
+
+    /**
+     * Tests the quoteContentFunction() method.
+     *
+     * @return void
+     * @throws Exception Throws an exception if an error occurs.
+     */
+    public function testQuoteContentFunctionWithBadDomain() {
+
+        $obj = new QuoteTwigExtension($this->twigEnvironment, $this->quoteManager);
+
+        $this->assertEquals("", $obj->quoteContentFunction("github"));
+    }
+
+    /**
+     * Tests the quoteFunction() method.
+     *
+     * @return void
+     * @throws Exception Throws an exception if an error occurs.
+     */
+    public function testQuoteFunction() {
+
+        $obj = new QuoteTwigExtension($this->twigEnvironment, $this->quoteManager);
+
+        $res = $obj->quoteFunction();
+        $this->assertNotNull($res);
+
+        $this->assertSame($res, $obj->quoteFunction("WorldsWisdom.fr"));
+    }
+
+    /**
+     * Tests the quoteFunction() method.
+     *
+     * @return void
+     * @throws Exception Throws an exception if an error occurs.
+     */
+    public function testQuoteFunctionWithBadDomain() {
+
+        $obj = new QuoteTwigExtension($this->twigEnvironment, $this->quoteManager);
+
+        $this->assertNull($obj->quoteFunction("github"));
+    }
+
+    /**
+     * Tests the quoteFunction() method.
+     *
+     * @return void
+     * @throws Exception Throws an exception if an error occurs.
+     */
+    public function testQuoteFunctionWithoutProvider() {
+
+        $obj = new QuoteTwigExtension($this->twigEnvironment, new QuoteManager());
+
+        $this->assertNull($obj->quoteFunction());
     }
 }
