@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Manager;
 
 use Exception;
+use InvalidArgumentException;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\RedColorProvider;
 use WBW\Bundle\CoreBundle\Exception\AlreadyRegisteredProviderException;
 use WBW\Bundle\CoreBundle\Manager\QuoteManager;
@@ -27,7 +28,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class QuoteManagerTest extends AbstractTestCase {
 
     /**
-     * Quote provider
+     * Quote provider.
      *
      * @var QuoteProviderInterface
      */
@@ -42,6 +43,39 @@ class QuoteManagerTest extends AbstractTestCase {
         // Set a Quote provider mock.
         $this->quoteProvider = $this->getMockBuilder(QuoteProviderInterface::class)->getMock();
         $this->quoteProvider->expects($this->any())->method("getDomain")->willReturn("domain");
+    }
+
+    /**
+     * Tests the addProvider() method.
+     *
+     * @return void
+     * @throws Exception Throws an exception if an error occurs.
+     */
+    public function testAddProvider() {
+
+        $obj = new QuoteManager();
+
+        $obj->addProvider($this->quoteProvider);
+        $this->assertSame($this->quoteProvider, $obj->getProviders()[0]);
+    }
+
+    /**
+     * Tests the addProvider() method.
+     *
+     * @return void
+     */
+    public function testAddProviderWithAlreadyRegisteredException() {
+
+        $obj = new QuoteManager();
+
+        try {
+
+            $obj->addProvider($this->quoteProvider);
+            $obj->addProvider($this->quoteProvider);
+        } catch (Exception $ex) {
+
+            $this->assertInstanceOf(AlreadyRegisteredProviderException::class, $ex);
+        }
     }
 
     /**
@@ -62,56 +96,43 @@ class QuoteManagerTest extends AbstractTestCase {
      * Tests the contains() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testContains() {
 
         // Set a Quote provider mock.
         $quoteProvider = $this->getMockBuilder(QuoteProviderInterface::class)->getMock();
-        $quoteProvider->expects($this->any())->method("getDomain")->willReturn("domain2");
+        $quoteProvider->expects($this->any())->method("getDomain")->willReturn("niamod");
+
+        $obj = new QuoteManager();
+
+        $this->assertFalse($obj->contains($this->quoteProvider));
+
+        $obj->addProvider($this->quoteProvider);
+        $this->assertTrue($obj->contains($this->quoteProvider));
+
+        $this->assertFalse($obj->contains($quoteProvider));
+    }
+
+    /**
+     * Tests the contains() method.
+     *
+     * @return void
+     */
+    public function testContainsWithInvalidArgumentException() {
 
         // Set a Color provider mock.
         $colorProvider = new RedColorProvider();
 
         $obj = new QuoteManager();
 
-        $obj->addProvider($quoteProvider);
-        $obj->addProvider($this->quoteProvider);
-        $this->assertTrue($obj->contains($this->quoteProvider));
-
-        $obj->addProvider($colorProvider);
-        $this->assertFalse($obj->contains($colorProvider));
-    }
-
-    /**
-     * Tests the registerProvider() method.
-     *
-     * @return void
-     * @throws Exception Throws an exception if an error occurs.
-     */
-    public function testRegisterProvider() {
-
-        $obj = new QuoteManager();
-
-        $obj->registerProvider($this->quoteProvider);
-        $this->assertSame($this->quoteProvider, $obj->getProviders()[0]);
-    }
-
-    /**
-     * Tests the registerProvider() method.
-     *
-     * @return void
-     */
-    public function testRegisterProviderWithAlreadyRegisteredException() {
-
-        $obj = new QuoteManager();
-
         try {
 
-            $obj->registerProvider($this->quoteProvider);
-            $obj->registerProvider($this->quoteProvider);
+            $obj->contains($colorProvider);
         } catch (Exception $ex) {
 
-            $this->assertInstanceOf(AlreadyRegisteredProviderException::class, $ex);
+            $this->assertInstanceOf(InvalidArgumentException::class, $ex);
+            $this->assertEquals("The provider must implements QuoteProviderInterface", $ex->getMessage());
         }
     }
 }

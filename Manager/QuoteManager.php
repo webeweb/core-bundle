@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Manager;
 
-use ReflectionException;
+use InvalidArgumentException;
 use WBW\Bundle\CoreBundle\Exception\AlreadyRegisteredProviderException;
 use WBW\Bundle\CoreBundle\Provider\ProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\QuoteProviderInterface;
@@ -34,34 +34,26 @@ class QuoteManager extends AbstractManager {
     /**
      * {@inheritDoc}
      */
-    public function contains(ProviderInterface $provider) {
-
-        if (false === ($provider instanceof QuoteProviderInterface)) {
-            return false;
+    public function addProvider(ProviderInterface $provider) {
+        if (true === $this->contains($provider)) {
+            throw new AlreadyRegisteredProviderException($provider);
         }
+        return parent::addProvider($provider);
+    }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function contains(ProviderInterface $provider) {
+        if (false === ($provider instanceof QuoteProviderInterface)) {
+            throw new InvalidArgumentException("The provider must implements QuoteProviderInterface");
+        }
         foreach ($this->getProviders() as $current) {
-            if (false === ($current instanceof QuoteProviderInterface) || $provider->getDomain() !== $current->getDomain()) {
+            if ($provider->getDomain() !== $current->getDomain()) {
                 continue;
             }
             return true;
         }
-
         return false;
-    }
-
-    /**
-     * Register a quote provider.
-     *
-     * @param QuoteProviderInterface $quoteProvider The quote provider.
-     * @return ManagerInterface Returns this manager.
-     * @throws AlreadyRegisteredProviderException Throws an already registered provider exception.
-     * @throws ReflectionException Throws a reflection exception if an error occurs.
-     */
-    public function registerProvider(QuoteProviderInterface $quoteProvider) {
-        if (true === $this->contains($quoteProvider)) {
-            throw new AlreadyRegisteredProviderException($quoteProvider);
-        }
-        return $this->addProvider($quoteProvider);
     }
 }
