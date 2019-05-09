@@ -11,7 +11,11 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Manager;
 
+use Exception;
+use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\RedColorProvider;
+use WBW\Bundle\CoreBundle\Exception\AlreadyRegisteredProviderException;
 use WBW\Bundle\CoreBundle\Manager\QuoteManager;
+use WBW\Bundle\CoreBundle\Provider\QuoteProviderInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
@@ -21,6 +25,24 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
  * @package WBW\Bundle\CoreBundle\Tests\Manager
  */
 class QuoteManagerTest extends AbstractTestCase {
+
+    /**
+     * Quote provider
+     *
+     * @var QuoteProviderInterface
+     */
+    private $quoteProvider;
+
+    /**
+     * {@inheritDoc}
+     */
+    protected function setUp() {
+        parent::setUp();
+
+        // Set a Quote provider mock.
+        $this->quoteProvider = $this->getMockBuilder(QuoteProviderInterface::class)->getMock();
+        $this->quoteProvider->expects($this->any())->method("getDomain")->willReturn("domain");
+    }
 
     /**
      * Tests the __construct() method.
@@ -34,5 +56,62 @@ class QuoteManagerTest extends AbstractTestCase {
         $obj = new QuoteManager();
 
         $this->assertEquals([], $obj->getProviders());
+    }
+
+    /**
+     * Tests the contains() method.
+     *
+     * @return void
+     */
+    public function testContains() {
+
+        // Set a Quote provider mock.
+        $quoteProvider = $this->getMockBuilder(QuoteProviderInterface::class)->getMock();
+        $quoteProvider->expects($this->any())->method("getDomain")->willReturn("domain2");
+
+        // Set a Color provider mock.
+        $colorProvider = new RedColorProvider();
+
+        $obj = new QuoteManager();
+
+        $obj->addProvider($quoteProvider);
+        $obj->addProvider($this->quoteProvider);
+        $this->assertTrue($obj->contains($this->quoteProvider));
+
+        $obj->addProvider($colorProvider);
+        $this->assertFalse($obj->contains($colorProvider));
+    }
+
+    /**
+     * Tests the registerProvider() method.
+     *
+     * @return void
+     * @throws Exception Throws an exception if an error occurs.
+     */
+    public function testRegisterProvider() {
+
+        $obj = new QuoteManager();
+
+        $obj->registerProvider($this->quoteProvider);
+        $this->assertSame($this->quoteProvider, $obj->getProviders()[0]);
+    }
+
+    /**
+     * Tests the registerProvider() method.
+     *
+     * @return void
+     */
+    public function testRegisterProviderWithAlreadyRegisteredException() {
+
+        $obj = new QuoteManager();
+
+        try {
+
+            $obj->registerProvider($this->quoteProvider);
+            $obj->registerProvider($this->quoteProvider);
+        } catch (Exception $ex) {
+
+            $this->assertInstanceOf(AlreadyRegisteredProviderException::class, $ex);
+        }
     }
 }
