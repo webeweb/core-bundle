@@ -38,6 +38,7 @@ class QuoteManager extends AbstractManager {
         if (true === $this->contains($provider)) {
             throw new AlreadyRegisteredProviderException($provider);
         }
+        $provider->init();
         return parent::addProvider($provider);
     }
 
@@ -55,5 +56,20 @@ class QuoteManager extends AbstractManager {
             return true;
         }
         return false;
+    }
+
+    /**
+     * Get a quote provider.
+     *
+     * @param string $domain The domain.
+     * @return ProviderInterface|null Returns the quote provider.
+     */
+    public function getQuoteProvider($domain) {
+        foreach ($this->getProviders() as $current) {
+            if ($domain === $current->getDomain()) {
+                return $current;
+            }
+        }
+        return null;
     }
 }

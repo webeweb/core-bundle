@@ -102,7 +102,7 @@ class QuoteManagerTest extends AbstractTestCase {
 
         // Set a Quote provider mock.
         $quoteProvider = $this->getMockBuilder(QuoteProviderInterface::class)->getMock();
-        $quoteProvider->expects($this->any())->method("getDomain")->willReturn("niamod");
+        $quoteProvider->expects($this->any())->method("getDomain")->willReturn("github");
 
         $obj = new QuoteManager();
 
@@ -134,5 +134,20 @@ class QuoteManagerTest extends AbstractTestCase {
             $this->assertInstanceOf(InvalidArgumentException::class, $ex);
             $this->assertEquals("The provider must implements QuoteProviderInterface", $ex->getMessage());
         }
+    }
+
+    /**
+     * Tests the getQuoteProvider() method.
+     *
+     * @return void
+     * @throws Exception Throws an exception if an error occurs.
+     */
+    public function testGetQuoteProvider() {
+
+        $obj = new QuoteManager();
+        $obj->addProvider($this->quoteProvider);
+
+        $this->assertSame($this->quoteProvider, $obj->getQuoteProvider("domain"));
+        $this->assertNull($obj->getQuoteProvider("github"));
     }
 }
