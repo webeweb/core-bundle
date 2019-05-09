@@ -35,7 +35,7 @@ abstract class AbstractMaterialDesignColorPaletteTwigExtension extends AbstractT
     /**
      * Constructor.
      *
-     * @param Environment $twigEnvironment The twig environment.
+     * @param Environment $twigEnvironment The Twig environment.
      */
     public function __construct(Environment $twigEnvironment) {
         parent::__construct($twigEnvironment);

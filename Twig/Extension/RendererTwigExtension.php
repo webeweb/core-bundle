@@ -63,7 +63,7 @@ class RendererTwigExtension extends AbstractTwigExtension {
     /**
      * Render an icon.
      *
-     * @param Environment $twigEnvironment The twig environment.
+     * @param Environment $twigEnvironment The Twig environment.
      * @param string $name The name.
      * @param string|null $style The style.
      * @return string Returns the rendered icon.
