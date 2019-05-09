@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Manager;
 
-use ReflectionException;
+use InvalidArgumentException;
 use WBW\Bundle\CoreBundle\Exception\AlreadyRegisteredProviderException;
 use WBW\Bundle\CoreBundle\Helper\ColorHelper;
 use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
@@ -35,36 +35,27 @@ class ColorManager extends AbstractManager {
     /**
      * {@inheritDoc}
      */
-    public function contains(ProviderInterface $provider) {
-
-        if (false === ($provider instanceof ColorProviderInterface)) {
-            return false;
+    public function addProvider(ProviderInterface $provider) {
+        if (true === $this->contains($provider)) {
+            throw new AlreadyRegisteredProviderException($provider);
         }
+        return parent::addProvider($provider);
+    }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function contains(ProviderInterface $provider) {
+        if (false === ($provider instanceof ColorProviderInterface)) {
+            throw new InvalidArgumentException("The provider must implements ColorProviderInterface");
+        }
         $identifier = ColorHelper::getIdentifier($provider);
-
         foreach ($this->getProviders() as $current) {
-            if (false === ($current instanceof ColorProviderInterface) || $identifier !== ColorHelper::getIdentifier($current)) {
+            if ($identifier !== ColorHelper::getIdentifier($current)) {
                 continue;
             }
             return true;
         }
-
         return false;
-    }
-
-    /**
-     * Register a color provider.
-     *
-     * @param ColorProviderInterface $colorProvider The color provider.
-     * @return ManagerInterface Returns this manager.
-     * @throws AlreadyRegisteredProviderException Throws an already registered provider exception.
-     * @throws ReflectionException Throws a reflection exception if an error occurs.
-     */
-    public function registerProvider(ColorProviderInterface $colorProvider) {
-        if (true === $this->contains($colorProvider)) {
-            throw new AlreadyRegisteredProviderException($colorProvider);
-        }
-        return $this->addProvider($colorProvider);
     }
 }

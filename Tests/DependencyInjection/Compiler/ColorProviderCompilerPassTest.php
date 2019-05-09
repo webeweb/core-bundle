@@ -70,18 +70,18 @@ class ColorProviderCompilerPassTest extends AbstractTestCase {
         $obj->process($this->containerBuilder);
         $this->assertTrue($this->containerBuilder->hasDefinition(ColorManager::SERVICE_NAME));
         $this->assertFalse($this->containerBuilder->hasDefinition(RedColorProvider::SERVICE_NAME));
-        $this->assertFalse($this->containerBuilder->getDefinition(ColorManager::SERVICE_NAME)->hasMethodCall("registerProvider"));
+        $this->assertFalse($this->containerBuilder->getDefinition(ColorManager::SERVICE_NAME)->hasMethodCall("addProvider"));
 
         // Register the Color provider.
         $this->containerBuilder->register(RedColorProvider::SERVICE_NAME, $this->colorProvider)->addTag(RedColorProvider::TAG_NAME);
 
         $this->assertTrue($this->containerBuilder->hasDefinition(ColorManager::SERVICE_NAME));
         $this->assertTrue($this->containerBuilder->hasDefinition(RedColorProvider::SERVICE_NAME));
-        $this->assertFalse($this->containerBuilder->getDefinition(ColorManager::SERVICE_NAME)->hasMethodCall("registerProvider"));
+        $this->assertFalse($this->containerBuilder->getDefinition(ColorManager::SERVICE_NAME)->hasMethodCall("addProvider"));
 
         $obj->process($this->containerBuilder);
         $this->assertTrue($this->containerBuilder->hasDefinition(ColorManager::SERVICE_NAME));
         $this->assertTrue($this->containerBuilder->hasDefinition(RedColorProvider::SERVICE_NAME));
-        $this->assertTrue($this->containerBuilder->getDefinition(ColorManager::SERVICE_NAME)->hasMethodCall("registerProvider"));
+        $this->assertTrue($this->containerBuilder->getDefinition(ColorManager::SERVICE_NAME)->hasMethodCall("addProvider"));
     }
 }

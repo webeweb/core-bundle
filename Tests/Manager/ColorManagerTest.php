@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Manager;
 
 use Exception;
+use InvalidArgumentException;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\PinkColorProvider;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\RedColorProvider;
 use WBW\Bundle\CoreBundle\Exception\AlreadyRegisteredProviderException;
@@ -29,7 +30,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class ColorManagerTest extends AbstractTestCase {
 
     /**
-     * Color provider
+     * Color provider.
      *
      * @var ColorProviderInterface
      */
@@ -43,6 +44,39 @@ class ColorManagerTest extends AbstractTestCase {
 
         // Set a Color provider mock.
         $this->colorProvider = new RedColorProvider();
+    }
+
+    /**
+     * Tests the addProvider() method.
+     *
+     * @return void
+     * @throws Exception Throws an exception if an error occurs.
+     */
+    public function testAddProvider() {
+
+        $obj = new ColorManager();
+
+        $obj->addProvider($this->colorProvider);
+        $this->assertSame($this->colorProvider, $obj->getProviders()[0]);
+    }
+
+    /**
+     * Tests the addProvider() method.
+     *
+     * @return void
+     */
+    public function testAddProviderWithAlreadyRegisteredException() {
+
+        $obj = new ColorManager();
+
+        try {
+
+            $obj->addProvider($this->colorProvider);
+            $obj->addProvider($this->colorProvider);
+        } catch (Exception $ex) {
+
+            $this->assertInstanceOf(AlreadyRegisteredProviderException::class, $ex);
+        }
     }
 
     /**
@@ -63,52 +97,39 @@ class ColorManagerTest extends AbstractTestCase {
      * Tests the contains() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testContains() {
 
-        // Set a Color provider mock.
-        $quoteProvider = $this->getMockBuilder(QuoteProviderInterface::class)->getMock();
-
         $obj = new ColorManager();
 
-        $obj->addProvider(new PinkColorProvider());
+        $this->assertFalse($obj->contains($this->colorProvider));
+
         $obj->addProvider($this->colorProvider);
         $this->assertTrue($obj->contains($this->colorProvider));
 
-        $obj->addProvider($quoteProvider);
-        $this->assertFalse($obj->contains($quoteProvider));
+        $this->assertFalse($obj->contains(new PinkColorProvider()));
     }
 
     /**
-     * Tests the registerProvider() method.
-     *
-     * @return void
-     * @throws Exception Throws an exception if an error occurs.
-     */
-    public function testRegisterProvider() {
-
-        $obj = new ColorManager();
-
-        $obj->registerProvider($this->colorProvider);
-        $this->assertSame($this->colorProvider, $obj->getProviders()[0]);
-    }
-
-    /**
-     * Tests the registerProvider() method.
+     * Tests the contains() method.
      *
      * @return void
      */
-    public function testRegisterProviderWithAlreadyRegisteredException() {
+    public function testContainsWithInvalidArgumentException() {
+
+        // Set a Quote provider mock.
+        $quoteProvider = $this->getMockBuilder(QuoteProviderInterface::class)->getMock();
 
         $obj = new ColorManager();
 
         try {
 
-            $obj->registerProvider($this->colorProvider);
-            $obj->registerProvider($this->colorProvider);
+            $obj->contains($quoteProvider);
         } catch (Exception $ex) {
 
-            $this->assertInstanceOf(AlreadyRegisteredProviderException::class, $ex);
+            $this->assertInstanceOf(InvalidArgumentException::class, $ex);
+            $this->assertEquals("The provider must implements ColorProviderInterface", $ex->getMessage());
         }
     }
 }
