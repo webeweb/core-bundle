@@ -14,7 +14,6 @@ namespace WBW\Bundle\CoreBundle\Quote;
 use DateTime;
 use Symfony\Component\Filesystem\Exception\FileNotFoundException;
 use Symfony\Component\Yaml\Yaml;
-use WBW\Bundle\CoreBundle\Provider\QuoteProviderInterface;
 use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
@@ -23,7 +22,7 @@ use WBW\Library\Core\Argument\ArrayHelper;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Quote
  */
-class QuoteProvider implements QuoteProviderInterface {
+class QuoteProvider extends AbstractQuoteProvider {
 
     /**
      * Filename.
@@ -31,13 +30,6 @@ class QuoteProvider implements QuoteProviderInterface {
      * @var string
      */
     private $filename;
-
-    /**
-     * Quotes.
-     *
-     * @var QuoteInterface[]
-     */
-    private $quotes;
 
     /**
      * Constructor.
@@ -48,25 +40,6 @@ class QuoteProvider implements QuoteProviderInterface {
     public function __construct($filename) {
         $this->setFilename($filename);
         $this->setQuotes([]);
-    }
-
-    /**
-     *{@inheritDoc}
-     */
-    public function getAuthors() {
-
-        $authors = [];
-
-        foreach ($this->quotes as $current) {
-            if (true === in_array($current->getAuthor(), $authors)) {
-                continue;
-            }
-            $authors[] = $current->getAuthor();
-        }
-
-        asort($authors);
-
-        return $authors;
     }
 
     /**
@@ -83,13 +56,6 @@ class QuoteProvider implements QuoteProviderInterface {
      */
     public function getFilename() {
         return $this->filename;
-    }
-
-    /**
-     * {@onheritDoc}
-     */
-    public function getQuotes() {
-        return $this->quotes;
     }
 
     /**
@@ -127,17 +93,6 @@ class QuoteProvider implements QuoteProviderInterface {
             throw new FileNotFoundException(sprintf("The file \"%s\" was not found", $filename));
         }
         $this->filename = realpath($filename);
-        return $this;
-    }
-
-    /**
-     * Set the quotes.
-     *
-     * @param QuoteInterface[] $quotes The quotes.
-     * @return QuoteProvider Returns this quote provider.
-     */
-    protected function setQuotes(array $quotes) {
-        $this->quotes = $quotes;
         return $this;
     }
 }

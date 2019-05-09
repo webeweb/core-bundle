@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Manager;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Quote;
 
-use WBW\Bundle\CoreBundle\Manager\AbstractColorManager;
+use WBW\Bundle\CoreBundle\Quote\AbstractQuoteProvider;
 
 /**
- * Test color manager.
+ * Test quote provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Manager
+ * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Quote
  */
-class TestColorManager extends AbstractColorManager {
+class TestQuoteProvider extends AbstractQuoteProvider {
 
     /**
      * Constructor.
@@ -31,7 +31,14 @@ class TestColorManager extends AbstractColorManager {
     /**
      * {@inheritDoc}
      */
-    public function getIndex() {
-        return parent::getIndex();
+    public function getDomain() {
+        return null;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function init() {
+        return null;
     }
 }
