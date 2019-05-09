@@ -30,21 +30,15 @@ class ColorProviderCompilerPass implements CompilerPassInterface {
      */
     public function process(ContainerBuilder $container) {
 
-        // Check if the manager is defined.
         if (false === $container->has(ColorManager::SERVICE_NAME)) {
             return;
         }
 
-        // Get the manager.
         $manager = $container->findDefinition(ColorManager::SERVICE_NAME);
 
-        // Find all service IDs with provider tag.
         $providers = $container->findTaggedServiceIds(ColorProviderInterface::TAG_NAME);
-
-        // Register each provider.
         foreach ($providers as $id => $tag) {
             $manager->addMethodCall("registerProvider", [new Reference($id)]);
         }
-
     }
 }
