@@ -14,6 +14,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension\Plugin;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Twig\Extension\Plugin\TestJQueryInputMaskTwigExtensionTrait;
 use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\JQueryInputMaskTwigExtension;
+use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension;
 
 /**
  * jQuery InputMask Twig extension trait test.
@@ -43,7 +44,7 @@ class JQueryInputMaskTwigExtensionTraitTest extends AbstractTestCase {
     public function testSetJQueryInputMaskTwigExtension() {
 
         // Set a jQuery InputMask Twig extension mock.
-        $jQueryInputMaskTwigExtension = new JQueryInputMaskTwigExtension($this->twigEnvironment);
+        $jQueryInputMaskTwigExtension = new JQueryInputMaskTwigExtension($this->twigEnvironment, new RendererTwigExtension($this->twigEnvironment));
 
         $obj = new TestJQueryInputMaskTwigExtensionTrait();
 
