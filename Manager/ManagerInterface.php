@@ -53,14 +53,6 @@ interface ManagerInterface {
     public function indexOf(ProviderInterface $provider);
 
     /**
-     * Remove a provider.
-     *
-     * @param ProviderInterface $provider The provider
-     * @return ManagerInterface Returns this manager.
-     */
-    public function removeProvider(ProviderInterface $provider);
-
-    /**
      * Size.
      *
      * @return int Returns the providers count

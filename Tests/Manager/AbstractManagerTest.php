@@ -24,19 +24,32 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\TestManager;
 class AbstractManagerTest extends AbstractTestCase {
 
     /**
+     * Provider.
+     *
+     * @var ProviderInterface
+     */
+    private $provider;
+
+    /**
+     * {@inheritDoc}
+     */
+    protected function setUp() {
+        parent::setUp();
+
+        // Set a Color provider mock.
+        $this->provider = $this->getMockBuilder(ProviderInterface::class)->getMock();
+    }
+    /**
      * Tests the addProvider() method.
      *
      * @return void
      */
     public function testAddProvider() {
 
-        // Set a Provider mock.
-        $provider = $this->getMockBuilder(ProviderInterface::class)->getMock();
-
         $obj = new TestManager();
 
-        $obj->addProvider($provider);
-        $this->assertSame($provider, $obj->getProviders()[0]);
+        $obj->addProvider($this->provider);
+        $this->assertSame($this->provider, $obj->getProviders()[0]);
         $this->assertEquals(1, $obj->size());
     }
 
@@ -60,15 +73,12 @@ class AbstractManagerTest extends AbstractTestCase {
      */
     public function testContains() {
 
-        // Set a Provider mock.
-        $provider = $this->getMockBuilder(ProviderInterface::class)->getMock();
-
         $obj = new TestManager();
 
-        $this->assertFalse($obj->contains($provider));
+        $this->assertFalse($obj->contains($this->provider));
 
-        $obj->addProvider($provider);
-        $this->assertTrue($obj->contains($provider));
+        $obj->addProvider($this->provider);
+        $this->assertTrue($obj->contains($this->provider));
     }
 
     /**
@@ -78,14 +88,11 @@ class AbstractManagerTest extends AbstractTestCase {
      */
     public function testHasProviders() {
 
-        // Set a Provider mock.
-        $provider = $this->getMockBuilder(ProviderInterface::class)->getMock();
-
         $obj = new TestManager();
 
         $this->assertFalse($obj->hasProviders());
 
-        $obj->addProvider($provider);
+        $obj->addProvider($this->provider);
         $this->assertTrue($obj->hasProviders());
     }
 
@@ -101,32 +108,10 @@ class AbstractManagerTest extends AbstractTestCase {
 
         $obj = new TestManager();
 
-        $this->assertEquals(-1, $obj->indexOf($provider));
-
         $obj->addProvider($provider);
-        $this->assertEquals(0, $obj->indexOf($provider));
-    }
+        $this->assertEquals(-1, $obj->indexOf($this->provider));
 
-    /**
-     * Tests the removeProvider() method.
-     *
-     * @return void
-     */
-    public function testRemoveProvider() {
-
-        // Set a Provider mocks.
-        $provider1 = $this->getMockBuilder(ProviderInterface::class)->getMock();
-        $provider2 = $this->getMockBuilder(ProviderInterface::class)->getMock();
-
-        $obj = new TestManager();
-
-        $obj->addProvider($provider1);
-        $this->assertEquals(1, $obj->size());
-
-        $obj->addProvider($provider2);
-        $this->assertEquals(2, $obj->size());
-
-        $obj->removeProvider($provider1);
-        $this->assertEquals(1, $obj->size());
+        $obj->addProvider($this->provider);
+        $this->assertEquals(1, $obj->indexOf($this->provider));
     }
 }

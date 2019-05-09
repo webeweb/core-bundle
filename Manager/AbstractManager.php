@@ -81,17 +81,6 @@ abstract class AbstractManager implements ManagerInterface {
     }
 
     /**
-     * {@inheritDoc}
-     */
-    public function removeProvider(ProviderInterface $provider) {
-        $indexOf = $this->indexOf($provider);
-        if (-1 !== $indexOf) {
-            unset($this->providers[$indexOf]);
-        }
-        return $this;
-    }
-
-    /**
      * Set the providers.
      *
      * @param ProviderInterface[] $providers The providers.
