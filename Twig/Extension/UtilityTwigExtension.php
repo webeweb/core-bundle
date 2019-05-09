@@ -64,6 +64,10 @@ class UtilityTwigExtension extends AbstractTwigExtension {
      */
     public function formatString($string, $format) {
 
+        if (null === $string || null === $format) {
+            return "";
+        }
+
         $fmt = str_replace("_", "%s", $format);
         $str = str_split($string);
 

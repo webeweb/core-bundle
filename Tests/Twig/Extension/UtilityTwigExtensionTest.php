@@ -79,6 +79,9 @@ class UtilityTwigExtensionTest extends AbstractTestCase {
 
         $obj = new UtilityTwigExtension($this->twigEnvironment);
 
+        $this->assertEquals("", $obj->formatString(null, "_____ _____ _"));
+        $this->assertEquals("", $obj->formatString("Helloworld!", null));
+
         $this->assertEquals("Hello world !", $obj->formatString("Helloworld!", "_____ _____ _"));
         $this->assertEquals("+33 6 12 34 56 78", $obj->formatString("612345678", "+33 _ __ __ __ __"));
     }
