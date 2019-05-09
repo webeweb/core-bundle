@@ -14,8 +14,10 @@ CHANGELOG
 - Add Material Design color palette Twig extension trait
 - Add Material Design Iconic font Twig extension trait
 - Add Meteocons Twig extension trait
+- Fix null argument into fmtString() Twig function
 - Improve PHPDoc
 - Improve unit tests
+- Update Color manager
 
 ###  [1.12.0](https://github.com/webeweb/core-bundle/tree/v1.12.0) (2019-04-04)
 
