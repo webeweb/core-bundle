@@ -13,6 +13,8 @@ namespace WBW\Bundle\CoreBundle\Tests;
 
 use WBW\Bundle\CoreBundle\CoreBundle;
 use WBW\Bundle\CoreBundle\CoreInterface;
+use WBW\Bundle\CoreBundle\DependencyInjection\Compiler\ColorProviderCompilerPass;
+use WBW\Bundle\CoreBundle\DependencyInjection\Compiler\QuoteProviderCompilerPass;
 use WBW\Bundle\CoreBundle\DependencyInjection\CoreExtension;
 
 /**
@@ -33,6 +35,10 @@ class CoreBundleTest extends AbstractTestCase {
         $obj = new CoreBundle();
 
         $this->assertNull($obj->build($this->containerBuilder));
+
+        $passConfig = $this->containerBuilder->getCompilerPassConfig();
+        $this->assertInstanceOf(ColorProviderCompilerPass::class, $passConfig->getBeforeOptimizationPasses()[3]);
+        $this->assertInstanceOf(QuoteProviderCompilerPass::class, $passConfig->getBeforeOptimizationPasses()[4]);
     }
 
     /**
