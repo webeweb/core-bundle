@@ -16,7 +16,7 @@ use Twig\Node\Node;
 use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\Manager\QuoteManager;
 use WBW\Bundle\CoreBundle\Provider\QuoteProviderInterface;
-use WBW\Bundle\CoreBundle\Quote\QuoteProvider;
+use WBW\Bundle\CoreBundle\Quote\YamlQuoteProvider;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Twig\Extension\QuoteTwigExtension;
 
@@ -51,7 +51,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
         $filename = getcwd() . "/Resources/translations/WorldsWisdom.fr.yml";
 
         // Set a Quote provider mock.
-        $this->quoteProvider = new QuoteProvider($filename);
+        $this->quoteProvider = new YamlQuoteProvider($filename);
 
         // Set a Quote manager mock.
         $this->quoteManager = new QuoteManager();
@@ -166,6 +166,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
         $this->assertNotNull($res);
 
         $this->assertSame($res, $obj->quoteFunction("WorldsWisdom.fr"));
+        $this->assertSame($res, $obj->quoteFunction());
     }
 
     /**

@@ -15,16 +15,16 @@ use DateInterval;
 use DateTime;
 use Exception;
 use Symfony\Component\Filesystem\Exception\FileNotFoundException;
-use WBW\Bundle\CoreBundle\Quote\QuoteProvider;
+use WBW\Bundle\CoreBundle\Quote\YamlQuoteProvider;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
- * Quote provider test.
+ * YAML Quote provider test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Quote
  */
-class QuoteProviderTest extends AbstractTestCase {
+class YamlQuoteProviderTest extends AbstractTestCase {
 
     /**
      * Filename.
@@ -49,7 +49,7 @@ class QuoteProviderTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $obj = new QuoteProvider($this->filename);
+        $obj = new YamlQuoteProvider($this->filename);
 
         $this->assertEquals($this->filename, $obj->getFilename());
         $this->assertEquals([], $obj->getAuthors());
@@ -66,7 +66,7 @@ class QuoteProviderTest extends AbstractTestCase {
 
         try {
 
-            new QuoteProvider("exception");
+            new YamlQuoteProvider("exception");
         } catch (Exception $ex) {
 
             $this->assertInstanceOf(FileNotFoundException::class, $ex);
@@ -82,14 +82,14 @@ class QuoteProviderTest extends AbstractTestCase {
      */
     public function testInit() {
 
-        $obj = new QuoteProvider($this->filename);
+        // Set a Date mock.
+        $date = new DateTime("2016-01-01");
+
+        $obj = new YamlQuoteProvider($this->filename);
 
         $obj->init();
         $this->assertCount(171, $obj->getAuthors());
         $this->assertCount(366, $obj->getQuotes());
-
-        // Set a Date mock.
-        $date = new DateTime("2016-01-01");
 
         do {
 

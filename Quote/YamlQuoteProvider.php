@@ -17,12 +17,12 @@ use Symfony\Component\Yaml\Yaml;
 use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
- * Quote provider.
+ * YAML Quote provider.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Quote
  */
-class QuoteProvider extends AbstractQuoteProvider {
+class YamlQuoteProvider extends AbstractQuoteProvider {
 
     /**
      * Filename.
@@ -85,7 +85,7 @@ class QuoteProvider extends AbstractQuoteProvider {
      * Set the filename.
      *
      * @param string $filename The filename.
-     * @return QuoteProvider Returns this quote provider.
+     * @return YamlQuoteProvider Returns this quote provider.
      * @throws FileNotFoundException Throws a file not found exception.
      */
     protected function setFilename($filename) {
