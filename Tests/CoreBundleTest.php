@@ -35,10 +35,6 @@ class CoreBundleTest extends AbstractTestCase {
         $obj = new CoreBundle();
 
         $this->assertNull($obj->build($this->containerBuilder));
-
-        $passConfig = $this->containerBuilder->getCompilerPassConfig();
-        $this->assertInstanceOf(ColorProviderCompilerPass::class, $passConfig->getBeforeOptimizationPasses()[3]);
-        $this->assertInstanceOf(QuoteProviderCompilerPass::class, $passConfig->getBeforeOptimizationPasses()[4]);
     }
 
     /**
