@@ -14,12 +14,14 @@ CHANGELOG
 - Add Material Design color palette Twig extension trait
 - Add Material Design Iconic font Twig extension trait
 - Add Meteocons Twig extension trait
+- Add Yaml Quote provider
 - Fix null argument into fmtString() Twig function
 - Improve PHPDoc
 - Improve unit tests
 - Update Color manager
+- Update jQuery to 3.4.1
 
-###  [1.12.0](https://github.com/webeweb/core-bundle/tree/v1.12.0) (2019-04-04)
+### [1.12.0](https://github.com/webeweb/core-bundle/tree/v1.12.0) (2019-04-04)
 
 - Add fmtDate() alias into Utility Twig extension
 - Add formatString() Twig function (and Twig filter) into Utility Twig extension
