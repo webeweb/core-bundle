@@ -44,7 +44,7 @@ Open a command console, enter your project directory and execute the following
 command to download the latest stable version of this package:
 
 ```bash
-$ composer require webeweb/core-bundle "^1.0"
+$ composer require webeweb/core-bundle "^2.0"
 ```
 
 This command requires you to have Composer installed globally, as explained in
@@ -58,7 +58,7 @@ in the `app/AppKernel.php` file of your project:
     public function registerBundles() {
         $bundles = [
             // ...
-            new WBW\Bundle\CoreBundle\CoreBundle(),
+            new WBW\Bundle\CoreBundle\WBWCoreBundle(),
         ];
 
         // ...
