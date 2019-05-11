@@ -51,10 +51,9 @@ class ColorManager extends AbstractManager {
         }
         $identifier = ColorHelper::getIdentifier($provider);
         foreach ($this->getProviders() as $current) {
-            if ($identifier !== ColorHelper::getIdentifier($current)) {
-                continue;
+            if ($identifier === ColorHelper::getIdentifier($current)) {
+                return true;
             }
-            return true;
         }
         return false;
     }
