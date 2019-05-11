@@ -63,14 +63,15 @@ class QuoteManagerTest extends AbstractTestCase {
      * Tests the addProvider() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testAddProviderWithAlreadyRegisteredException() {
 
         $obj = new QuoteManager();
+        $obj->addProvider($this->quoteProvider);
 
         try {
 
-            $obj->addProvider($this->quoteProvider);
             $obj->addProvider($this->quoteProvider);
         } catch (Exception $ex) {
 

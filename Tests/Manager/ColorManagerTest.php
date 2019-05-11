@@ -64,14 +64,15 @@ class ColorManagerTest extends AbstractTestCase {
      * Tests the addProvider() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testAddProviderWithAlreadyRegisteredException() {
 
         $obj = new ColorManager();
+        $obj->addProvider($this->colorProvider);
 
         try {
 
-            $obj->addProvider($this->colorProvider);
             $obj->addProvider($this->colorProvider);
         } catch (Exception $ex) {
 
