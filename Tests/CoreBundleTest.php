@@ -12,9 +12,6 @@
 namespace WBW\Bundle\CoreBundle\Tests;
 
 use WBW\Bundle\CoreBundle\CoreBundle;
-use WBW\Bundle\CoreBundle\CoreInterface;
-use WBW\Bundle\CoreBundle\DependencyInjection\Compiler\ColorProviderCompilerPass;
-use WBW\Bundle\CoreBundle\DependencyInjection\Compiler\QuoteProviderCompilerPass;
 use WBW\Bundle\CoreBundle\DependencyInjection\CoreExtension;
 
 /**
@@ -35,19 +32,6 @@ class CoreBundleTest extends AbstractTestCase {
         $obj = new CoreBundle();
 
         $this->assertNull($obj->build($this->containerBuilder));
-    }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals(CoreInterface::CORE_DANGER, CoreBundle::CORE_DANGER);
-        $this->assertEquals(CoreInterface::CORE_INFO, CoreBundle::CORE_INFO);
-        $this->assertEquals(CoreInterface::CORE_SUCCESS, CoreBundle::CORE_SUCCESS);
-        $this->assertEquals(CoreInterface::CORE_WARNING, CoreBundle::CORE_WARNING);
     }
 
     /**

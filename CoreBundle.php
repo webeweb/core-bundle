@@ -27,38 +27,6 @@ use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
 class CoreBundle extends Bundle implements AssetsProviderInterface {
 
     /**
-     * Core "danger".
-     *
-     * @var string
-     * @deprecated since Core bundle 1.11.0, use {@see WBW\Bundle\CoreBundle\CoreInterface} instead.
-     */
-    const CORE_DANGER = CoreInterface::CORE_DANGER;
-
-    /**
-     * Core "info".
-     *
-     * @var string
-     * @deprecated since Core bundle 1.11.0, use {@see WBW\Bundle\CoreBundle\CoreInterface} instead.
-     */
-    const CORE_INFO = CoreInterface::CORE_INFO;
-
-    /**
-     * Core "success".
-     *
-     * @var string
-     * @deprecated since Core bundle 1.11.0, use {@see WBW\Bundle\CoreBundle\CoreInterface} instead.
-     */
-    const CORE_SUCCESS = CoreInterface::CORE_SUCCESS;
-
-    /**
-     * Core "warning".
-     *
-     * @var string
-     * @deprecated since Core bundle 1.11.0, use {@see WBW\Bundle\CoreBundle\CoreInterface} instead.
-     */
-    const CORE_WARNING = CoreInterface::CORE_WARNING;
-
-    /**
      * {@inheritDoc}
      */
     public function build(ContainerBuilder $container) {
