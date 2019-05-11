@@ -75,7 +75,7 @@ class QuoteTwigExtension extends AbstractTwigExtension {
         }
 
         if (null !== $domain) {
-            return $this->getQuoteManager()->getQuoteProvider($domain);
+            return $this->getQuoteManager()->getProvider($domain);
         }
 
         return $this->getQuoteManager()->getProviders()[0];
