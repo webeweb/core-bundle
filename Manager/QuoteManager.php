@@ -50,10 +50,9 @@ class QuoteManager extends AbstractManager {
             throw new InvalidArgumentException("The provider must implements QuoteProviderInterface");
         }
         foreach ($this->getProviders() as $current) {
-            if ($provider->getDomain() !== $current->getDomain()) {
-                continue;
+            if ($provider->getDomain() === $current->getDomain()) {
+                return true;
             }
-            return true;
         }
         return false;
     }
