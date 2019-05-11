@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### master
+### [2.0.0](https://github.com/webeweb/core-bundle/tree/v2.0.0) (2019-05-11)
 
 > IMPORTANT NOTICE: The following classes has been removed
 > - WBW\Bundle\CoreBundle\Color\AmberColorProvider
