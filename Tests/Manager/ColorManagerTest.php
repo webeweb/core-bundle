@@ -13,7 +13,6 @@ namespace WBW\Bundle\CoreBundle\Tests\Manager;
 
 use Exception;
 use InvalidArgumentException;
-use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\PinkColorProvider;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\RedColorProvider;
 use WBW\Bundle\CoreBundle\Exception\AlreadyRegisteredProviderException;
 use WBW\Bundle\CoreBundle\Manager\ColorManager;
@@ -108,8 +107,6 @@ class ColorManagerTest extends AbstractTestCase {
 
         $obj->addProvider($this->colorProvider);
         $this->assertTrue($obj->contains($this->colorProvider));
-
-        $this->assertFalse($obj->contains(new PinkColorProvider()));
     }
 
     /**

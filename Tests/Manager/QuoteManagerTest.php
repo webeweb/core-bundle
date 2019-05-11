@@ -101,18 +101,12 @@ class QuoteManagerTest extends AbstractTestCase {
      */
     public function testContains() {
 
-        // Set a Quote provider mock.
-        $quoteProvider = $this->getMockBuilder(QuoteProviderInterface::class)->getMock();
-        $quoteProvider->expects($this->any())->method("getDomain")->willReturn("github");
-
         $obj = new QuoteManager();
 
         $this->assertFalse($obj->contains($this->quoteProvider));
 
         $obj->addProvider($this->quoteProvider);
         $this->assertTrue($obj->contains($this->quoteProvider));
-
-        $this->assertFalse($obj->contains($quoteProvider));
     }
 
     /**
