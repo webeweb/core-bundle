@@ -18,7 +18,7 @@ Includes:
 
 - [Animate.css 3.7.0](https://daneden.github.io/animate.css/)
 - [Font Awesome 5.8.1](https://fontawesome.com/)
-- [jQuery 3.3.1](http://jquery.com/)
+- [jQuery 3.4.1](http://jquery.com/)
 - [jQuery EasyAutocomplete 1.3.4](http://www.easyautocomplete.com/) (jQuery plug-in)
 - [jQuery InputMask 3.3.11](https://robinherbots.github.io/Inputmask/) (jQuery plug-in)
 - [jQuery Select2 4.0.5](https://select2.org/) (jQuery plug-in)
