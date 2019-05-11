@@ -20,21 +20,21 @@ namespace WBW\Bundle\CoreBundle\Form\Type;
 interface DateTimeTypeInterface {
 
     /**
-     * Format "Date".
+     * Format "date".
      *
      * @var string
      */
     const FORMAT_DATE = "dd/MM/yyyy";
 
     /**
-     * Format "Date/time".
+     * Format "date/time".
      *
      * @var string
      */
     const FORMAT_DATETIME = self::FORMAT_DATE . " " . self::FORMAT_TIME;
 
     /**
-     * Format "Time".
+     * Format "time".
      *
      * @var string
      */
