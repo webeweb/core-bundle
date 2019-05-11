@@ -29,6 +29,6 @@ class FooterThemeProviderInterfaceTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("webeweb.core.provider.theme.footer", FooterThemeProviderInterface::SERVICE_NAME);
+        $this->assertEquals("wbw.core.provider.theme.footer", FooterThemeProviderInterface::SERVICE_NAME);
     }
 }

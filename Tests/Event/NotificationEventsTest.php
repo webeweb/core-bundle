@@ -29,9 +29,9 @@ class NotificationEventsTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("webeweb.core.event.notification.danger", NotificationEvents::NOTIFICATION_DANGER);
-        $this->assertEquals("webeweb.core.event.notification.info", NotificationEvents::NOTIFICATION_INFO);
-        $this->assertEquals("webeweb.core.event.notification.success", NotificationEvents::NOTIFICATION_SUCCESS);
-        $this->assertEquals("webeweb.core.event.notification.warning", NotificationEvents::NOTIFICATION_WARNING);
+        $this->assertEquals("wbw.core.event.notification.danger", NotificationEvents::NOTIFICATION_DANGER);
+        $this->assertEquals("wbw.core.event.notification.info", NotificationEvents::NOTIFICATION_INFO);
+        $this->assertEquals("wbw.core.event.notification.success", NotificationEvents::NOTIFICATION_SUCCESS);
+        $this->assertEquals("wbw.core.event.notification.warning", NotificationEvents::NOTIFICATION_WARNING);
     }
 }

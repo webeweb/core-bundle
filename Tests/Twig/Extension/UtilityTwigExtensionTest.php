@@ -51,7 +51,7 @@ class UtilityTwigExtensionTest extends AbstractTestCase {
 
         $obj = new UtilityTwigExtension($this->twigEnvironment);
 
-        $this->assertEquals("webeweb.core.twig.extension.utility", UtilityTwigExtension::SERVICE_NAME);
+        $this->assertEquals("wbw.core.twig.extension.utility", UtilityTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 

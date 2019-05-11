@@ -26,5 +26,5 @@ interface SearchThemeProviderInterface extends ThemeProviderInterface {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.core.provider.theme.search";
+    const SERVICE_NAME = "wbw.core.provider.theme.search";
 }

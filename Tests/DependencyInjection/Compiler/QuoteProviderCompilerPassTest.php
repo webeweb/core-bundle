@@ -71,9 +71,9 @@ class QuoteProviderCompilerPassTest extends AbstractTestCase {
         $this->assertFalse($this->containerBuilder->getDefinition(QuoteManager::SERVICE_NAME)->hasMethodCall("addProvider"));
 
         // Register the Quote provider.
-        $this->containerBuilder->register("webeweb.core.provider.quote", $this->quoteProvider)->addTag(QuoteProviderInterface::TAG_NAME);
-        $this->assertTrue($this->containerBuilder->hasDefinition("webeweb.core.provider.quote"));
-        $this->assertTrue($this->containerBuilder->getDefinition("webeweb.core.provider.quote")->hasTag(QuoteProviderInterface::TAG_NAME));
+        $this->containerBuilder->register("wbw.core.provider.quote", $this->quoteProvider)->addTag(QuoteProviderInterface::TAG_NAME);
+        $this->assertTrue($this->containerBuilder->hasDefinition("wbw.core.provider.quote"));
+        $this->assertTrue($this->containerBuilder->getDefinition("wbw.core.provider.quote")->hasTag(QuoteProviderInterface::TAG_NAME));
 
         $obj->process($this->containerBuilder);
         $this->assertTrue($this->containerBuilder->hasDefinition(QuoteManager::SERVICE_NAME));

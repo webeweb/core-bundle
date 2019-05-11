@@ -31,7 +31,7 @@ class NotificationEventListener {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.core.event_listener.notification";
+    const SERVICE_NAME = "wbw.core.event_listener.notification";
 
     /**
      * Constructor.

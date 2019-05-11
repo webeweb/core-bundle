@@ -27,7 +27,7 @@ class RedColorProvider extends AbstractColorProvider implements RedColorProvider
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.core.provider.color.red";
+    const SERVICE_NAME = "wbw.core.provider.color.red";
 
     /**
      * Constructor.

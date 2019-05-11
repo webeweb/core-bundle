@@ -27,7 +27,7 @@ class LightGreenColorProvider extends AbstractColorProvider implements LightGree
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.core.provider.color.light_green";
+    const SERVICE_NAME = "wbw.core.provider.color.light_green";
 
     /**
      * Constructor.

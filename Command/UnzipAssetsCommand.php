@@ -43,7 +43,7 @@ EOT;
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.core.command.unzip_assets";
+    const SERVICE_NAME = "wbw.core.command.unzip_assets";
 
     /**
      * {@inheritDoc}

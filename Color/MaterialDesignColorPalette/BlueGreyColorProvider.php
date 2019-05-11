@@ -27,7 +27,7 @@ class BlueGreyColorProvider extends AbstractColorProvider implements BlueGreyCol
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.core.provider.color.blue_grey";
+    const SERVICE_NAME = "wbw.core.provider.color.blue_grey";
 
     /**
      * Constructor.

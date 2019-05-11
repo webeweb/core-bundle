@@ -27,7 +27,7 @@ class TealColorProvider extends AbstractColorProvider implements TealColorProvid
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.core.provider.color.teal";
+    const SERVICE_NAME = "wbw.core.provider.color.teal";
 
     /**
      * Constructor.

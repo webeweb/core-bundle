@@ -27,7 +27,7 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.core.twig.extension.plugin.jquery_inputmask";
+    const SERVICE_NAME = "wbw.core.twig.extension.plugin.jquery_inputmask";
 
     /**
      * Get the Twig functions.

@@ -26,26 +26,26 @@ class NotificationEvents {
      *
      * @var string
      */
-    const NOTIFICATION_DANGER = "webeweb.core.event.notification." . NotificationInterface::NOTIFICATION_DANGER;
+    const NOTIFICATION_DANGER = "wbw.core.event.notification." . NotificationInterface::NOTIFICATION_DANGER;
 
     /**
      * Notification "info".
      *
      * @var string
      */
-    const NOTIFICATION_INFO = "webeweb.core.event.notification." . NotificationInterface::NOTIFICATION_INFO;
+    const NOTIFICATION_INFO = "wbw.core.event.notification." . NotificationInterface::NOTIFICATION_INFO;
 
     /**
      * Notification "success".
      *
      * @var string
      */
-    const NOTIFICATION_SUCCESS = "webeweb.core.event.notification." . NotificationInterface::NOTIFICATION_SUCCESS;
+    const NOTIFICATION_SUCCESS = "wbw.core.event.notification." . NotificationInterface::NOTIFICATION_SUCCESS;
 
     /**
      * Notification "warning".
      *
      * @var string
      */
-    const NOTIFICATION_WARNING = "webeweb.core.event.notification." . NotificationInterface::NOTIFICATION_WARNING;
+    const NOTIFICATION_WARNING = "wbw.core.event.notification." . NotificationInterface::NOTIFICATION_WARNING;
 }

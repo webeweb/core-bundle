@@ -24,7 +24,7 @@ class PhantomJSHelper {
      *
      * @avr string
      */
-    const SERVICE_NAME = "webeweb.core.helper.phantomjs";
+    const SERVICE_NAME = "wbw.core.helper.phantomjs";
 
     /**
      * Binary path.

@@ -29,6 +29,6 @@ class ApplicationThemeProviderInterfaceTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("webeweb.core.provider.theme.application", ApplicationThemeProviderInterface::SERVICE_NAME);
+        $this->assertEquals("wbw.core.provider.theme.application", ApplicationThemeProviderInterface::SERVICE_NAME);
     }
 }

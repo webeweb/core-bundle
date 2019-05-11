@@ -1,26 +1,26 @@
 # Tests/Fixtures/App/config/services_test.yml
 services:
 
-    webeweb.core.provider.theme.application:
+    wbw.core.provider.theme.application:
         class: WBW\Bundle\CoreBundle\Theme\DefaultApplicationThemeProvider
 
-    webeweb.core.provider.theme.breadcrumbs:
+    wbw.core.provider.theme.breadcrumbs:
         class: WBW\Bundle\CoreBundle\Theme\DefaultBreadcrumbsThemeProvider
 
-    webeweb.core.provider.theme.footer:
+    wbw.core.provider.theme.footer:
         class: WBW\Bundle\CoreBundle\Theme\DefaultFooterThemeProvider
 
-    webeweb.core.provider.theme.hook_drop_down:
+    wbw.core.provider.theme.hook_drop_down:
         class: WBW\Bundle\CoreBundle\Theme\DefaultHookDropDownThemeProvider
 
-    webeweb.core.provider.theme.notifications_drop_down:
+    wbw.core.provider.theme.notifications_drop_down:
         class: WBW\Bundle\CoreBundle\Theme\DefaultNotificationsDropDownThemeProvider
 
-    webeweb.core.provider.theme.search:
+    wbw.core.provider.theme.search:
         class: WBW\Bundle\CoreBundle\Theme\DefaultSearchThemeProvider
 
-    webeweb.core.provider.theme.tasks_drop_down:
+    wbw.core.provider.theme.tasks_drop_down:
         class: WBW\Bundle\CoreBundle\Theme\DefaultTasksDropDownThemeProvider
 
-    webeweb.core.provider.theme.user_info:
+    wbw.core.provider.theme.user_info:
         class: WBW\Bundle\CoreBundle\Theme\DefaultUserInfoThemeProvider

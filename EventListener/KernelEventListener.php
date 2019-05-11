@@ -42,7 +42,7 @@ class KernelEventListener {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.core.event_listener.kernel";
+    const SERVICE_NAME = "wbw.core.event_listener.kernel";
 
     /**
      * Constructor.

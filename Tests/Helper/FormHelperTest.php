@@ -114,7 +114,7 @@ class FormHelperTest extends AbstractTestCase {
 
         $obj = new FormHelper($this->objectManager, $this->eventDispatcher);
 
-        $this->assertEquals("webeweb.core.helper.form", FormHelper::SERVICE_NAME);
+        $this->assertEquals("wbw.core.helper.form", FormHelper::SERVICE_NAME);
         $this->assertSame($this->objectManager, $obj->getObjectManager());
     }
 

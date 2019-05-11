@@ -27,7 +27,7 @@ class WhiteColorProvider extends AbstractColorProvider implements WhiteColorProv
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.core.provider.color.white";
+    const SERVICE_NAME = "wbw.core.provider.color.white";
 
     /**
      * Constructor.

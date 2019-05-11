@@ -27,7 +27,7 @@ class MaterialDesignColorPaletteTwigExtension extends AbstractMaterialDesignColo
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.core.twig.extension.plugin.material_design_color_palette";
+    const SERVICE_NAME = "wbw.core.twig.extension.plugin.material_design_color_palette";
 
     /**
      * Get the Twig functions.

@@ -85,7 +85,7 @@ class QuoteManagerTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("webeweb.core.manager.quote", QuoteManager::SERVICE_NAME);
+        $this->assertEquals("wbw.core.manager.quote", QuoteManager::SERVICE_NAME);
 
         $obj = new QuoteManager();
 

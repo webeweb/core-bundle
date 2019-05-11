@@ -33,7 +33,7 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
 
         $obj = new MeteoconsTwigExtension($this->twigEnvironment);
 
-        $this->assertEquals("webeweb.core.twig.extension.plugin.meteocons", MeteoconsTwigExtension::SERVICE_NAME);
+        $this->assertEquals("wbw.core.twig.extension.plugin.meteocons", MeteoconsTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 

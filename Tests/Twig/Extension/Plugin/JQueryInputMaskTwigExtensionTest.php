@@ -51,7 +51,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
 
         $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->rendererTwigExtension);
 
-        $this->assertEquals("webeweb.core.twig.extension.plugin.jquery_inputmask", JQueryInputMaskTwigExtension::SERVICE_NAME);
+        $this->assertEquals("wbw.core.twig.extension.plugin.jquery_inputmask", JQueryInputMaskTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
         $this->assertSame($this->rendererTwigExtension, $obj->getRendererTwigExtension());
     }

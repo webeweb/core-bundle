@@ -30,7 +30,7 @@ class RendererTwigExtension extends AbstractTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.core.twig.extension.renderer";
+    const SERVICE_NAME = "wbw.core.twig.extension.renderer";
 
     /**
      * Displays a script.

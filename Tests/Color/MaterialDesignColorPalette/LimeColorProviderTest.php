@@ -33,7 +33,7 @@ class LimeColorProviderTest extends AbstractTestCase {
 
         $obj = new LimeColorProvider();
 
-        $this->assertEquals("webeweb.core.provider.color.lime", LimeColorProvider::SERVICE_NAME);
+        $this->assertEquals("wbw.core.provider.color.lime", LimeColorProvider::SERVICE_NAME);
         $this->assertEquals(MaterialDesignColorPaletteInterface::COLOR_DOMAIN, $obj->getDomain());
     }
 

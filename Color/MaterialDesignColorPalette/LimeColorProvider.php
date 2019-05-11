@@ -27,7 +27,7 @@ class LimeColorProvider extends AbstractColorProvider implements LimeColorProvid
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.core.provider.color.lime";
+    const SERVICE_NAME = "wbw.core.provider.color.lime";
 
     /**
      * Constructor.

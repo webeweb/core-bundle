@@ -28,7 +28,7 @@ class StylesheetTwigExtension extends AbstractTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.core.twig.extension.stylesheet";
+    const SERVICE_NAME = "wbw.core.twig.extension.stylesheet";
 
     /**
      * Displays a rgba().

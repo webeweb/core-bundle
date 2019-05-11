@@ -27,7 +27,7 @@ class YellowColorProvider extends AbstractColorProvider implements YellowColorPr
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.core.provider.color.yellow";
+    const SERVICE_NAME = "wbw.core.provider.color.yellow";
 
     /**
      * Constructor.

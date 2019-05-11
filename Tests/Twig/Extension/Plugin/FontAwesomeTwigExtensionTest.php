@@ -34,7 +34,7 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
 
         $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
 
-        $this->assertEquals("webeweb.core.twig.extension.plugin.font_awesome", FontAwesomeTwigExtension::SERVICE_NAME);
+        $this->assertEquals("wbw.core.twig.extension.plugin.font_awesome", FontAwesomeTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 

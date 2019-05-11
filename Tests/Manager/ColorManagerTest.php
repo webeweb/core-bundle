@@ -86,7 +86,7 @@ class ColorManagerTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("webeweb.core.manager.color", ColorManager::SERVICE_NAME);
+        $this->assertEquals("wbw.core.manager.color", ColorManager::SERVICE_NAME);
 
         $obj = new ColorManager();
 

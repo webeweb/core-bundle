@@ -26,7 +26,7 @@ interface QuoteProviderInterface extends ProviderInterface {
      *
      * @var string
      */
-    const TAG_NAME = "webeweb.core.provider.quote";
+    const TAG_NAME = "wbw.core.provider.quote";
 
     /**
      * Get the authors.

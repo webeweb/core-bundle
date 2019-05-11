@@ -27,7 +27,7 @@ class BlackColorProvider extends AbstractColorProvider implements BlackColorProv
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.core.provider.color.black";
+    const SERVICE_NAME = "wbw.core.provider.color.black";
 
     /**
      * Constructor.

@@ -27,7 +27,7 @@ class OrangeColorProvider extends AbstractColorProvider implements OrangeColorPr
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.core.provider.color.orange";
+    const SERVICE_NAME = "wbw.core.provider.color.orange";
 
     /**
      * Constructor.

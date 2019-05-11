@@ -27,7 +27,7 @@ class CyanColorProvider extends AbstractColorProvider implements CyanColorProvid
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.core.provider.color.cyan";
+    const SERVICE_NAME = "wbw.core.provider.color.cyan";
 
     /**
      * Constructor.

@@ -33,7 +33,7 @@ class CyanColorProviderTest extends AbstractTestCase {
 
         $obj = new CyanColorProvider();
 
-        $this->assertEquals("webeweb.core.provider.color.cyan", CyanColorProvider::SERVICE_NAME);
+        $this->assertEquals("wbw.core.provider.color.cyan", CyanColorProvider::SERVICE_NAME);
         $this->assertEquals(MaterialDesignColorPaletteInterface::COLOR_DOMAIN, $obj->getDomain());
     }
 

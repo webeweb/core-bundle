@@ -33,7 +33,7 @@ class PinkColorProviderTest extends AbstractTestCase {
 
         $obj = new PinkColorProvider();
 
-        $this->assertEquals("webeweb.core.provider.color.pink", PinkColorProvider::SERVICE_NAME);
+        $this->assertEquals("wbw.core.provider.color.pink", PinkColorProvider::SERVICE_NAME);
         $this->assertEquals(MaterialDesignColorPaletteInterface::COLOR_DOMAIN, $obj->getDomain());
     }
 

@@ -29,7 +29,7 @@ class QuoteManager extends AbstractManager {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.core.manager.quote";
+    const SERVICE_NAME = "wbw.core.manager.quote";
 
     /**
      * {@inheritDoc}

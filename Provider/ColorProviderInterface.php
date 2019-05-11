@@ -24,7 +24,7 @@ interface ColorProviderInterface extends ProviderInterface {
      *
      * @var string
      */
-    const TAG_NAME = "webeweb.core.provider.color";
+    const TAG_NAME = "wbw.core.provider.color";
 
     /**
      * Get the colors.

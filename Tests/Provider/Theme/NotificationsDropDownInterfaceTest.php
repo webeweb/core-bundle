@@ -29,6 +29,6 @@ class NotificationsDropDownThemeProviderInterfaceTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("webeweb.core.provider.theme.notifications_drop_down", NotificationsDropDownThemeProviderInterface::SERVICE_NAME);
+        $this->assertEquals("wbw.core.provider.theme.notifications_drop_down", NotificationsDropDownThemeProviderInterface::SERVICE_NAME);
     }
 }

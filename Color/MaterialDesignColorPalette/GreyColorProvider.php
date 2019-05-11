@@ -27,7 +27,7 @@ class GreyColorProvider extends AbstractColorProvider implements GreyColorProvid
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.core.provider.color.grey";
+    const SERVICE_NAME = "wbw.core.provider.color.grey";
 
     /**
      * Constructor.

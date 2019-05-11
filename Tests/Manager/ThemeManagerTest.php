@@ -94,7 +94,7 @@ class ThemeManagerTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("webeweb.core.manager.theme", ThemeManager::SERVICE_NAME);
+        $this->assertEquals("wbw.core.manager.theme", ThemeManager::SERVICE_NAME);
 
         $obj = new ThemeManager($this->twigEnvironment);
 

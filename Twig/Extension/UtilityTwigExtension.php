@@ -30,7 +30,7 @@ class UtilityTwigExtension extends AbstractTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.core.twig.extension.utility";
+    const SERVICE_NAME = "wbw.core.twig.extension.utility";
 
     /**
      * Calculates an age.

@@ -33,7 +33,7 @@ class RendererTwigExtensionTest extends AbstractTestCase {
 
         $obj = new RendererTwigExtension($this->twigEnvironment);
 
-        $this->assertEquals("webeweb.core.twig.extension.renderer", RendererTwigExtension::SERVICE_NAME);
+        $this->assertEquals("wbw.core.twig.extension.renderer", RendererTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 

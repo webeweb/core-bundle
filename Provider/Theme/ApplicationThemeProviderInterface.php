@@ -26,7 +26,7 @@ interface ApplicationThemeProviderInterface extends ThemeProviderInterface {
      *
      * @var string
      */
-    const SERVICE_NAME = "webeweb.core.provider.theme.application";
+    const SERVICE_NAME = "wbw.core.provider.theme.application";
 
     /**
      * Get the description.

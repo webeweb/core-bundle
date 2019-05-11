@@ -5,228 +5,228 @@ services:
         alias:  "monolog.logger"
         public: true
 
-    webeweb.core.command.unzip_assets:
+    wbw.core.command.unzip_assets:
         class: WBW\Bundle\CoreBundle\Command\UnzipAssetsCommand
         tags:
             - { name: "console.command" }
 
-    webeweb.core.event_listener.kernel:
+    wbw.core.event_listener.kernel:
         class:     WBW\Bundle\CoreBundle\EventListener\KernelEventListener
-        arguments: ["@security.token_storage", "@webeweb.core.manager.theme"]
+        arguments: ["@security.token_storage", "@wbw.core.manager.theme"]
         public:    true
         tags:
             - { name: "kernel.event_listener", event: "kernel.exception", method: "onKernelException" }
             - { name: "kernel.event_listener", event: "kernel.request",   method: "onKernelRequest" }
 
-    webeweb.core.event_listener.notification:
+    wbw.core.event_listener.notification:
         class:     WBW\Bundle\CoreBundle\EventListener\NotificationEventListener
         arguments: ["@session"]
         public:    true
         tags:
-            - { name: "kernel.event_listener", event: "webeweb.core.event.notification.danger",  method: "onNotify" }
-            - { name: "kernel.event_listener", event: "webeweb.core.event.notification.info",    method: "onNotify" }
-            - { name: "kernel.event_listener", event: "webeweb.core.event.notification.success", method: "onNotify" }
-            - { name: "kernel.event_listener", event: "webeweb.core.event.notification.warning", method: "onNotify" }
+            - { name: "kernel.event_listener", event: "wbw.core.event.notification.danger",  method: "onNotify" }
+            - { name: "kernel.event_listener", event: "wbw.core.event.notification.info",    method: "onNotify" }
+            - { name: "kernel.event_listener", event: "wbw.core.event.notification.success", method: "onNotify" }
+            - { name: "kernel.event_listener", event: "wbw.core.event.notification.warning", method: "onNotify" }
 
-    webeweb.core.helper.form:
+    wbw.core.helper.form:
         class:     WBW\Bundle\CoreBundle\Helper\FormHelper
         arguments: ["@doctrine.orm.entity_manager", "@event_dispatcher"]
         public:    true
 
-    webeweb.core.manager.color:
+    wbw.core.manager.color:
         class:  WBW\Bundle\CoreBundle\Manager\ColorManager
         public: true
 
-    webeweb.core.manager.quote:
+    wbw.core.manager.quote:
         class:  WBW\Bundle\CoreBundle\Manager\QuoteManager
         public: true
 
-    webeweb.core.manager.theme:
+    wbw.core.manager.theme:
         class:     WBW\Bundle\CoreBundle\Manager\ThemeManager
         arguments: ["@twig"]
         public:    true
         calls:
-            - ["setApplicationThemeProvider",           ["@?webeweb.core.provider.theme.application"]]
-            - ["setBreadcrumbsThemeProvider",           ["@?webeweb.core.provider.theme.breadcrumbs"]]
-            - ["setHookDropDownThemeProvider",          ["@?webeweb.core.provider.theme.hook_drop_down"]]
-            - ["setFooterThemeProvider",                ["@?webeweb.core.provider.theme.footer"]]
-            - ["setNavigationThemeProvider",            ["@?webeweb.core.provider.theme.navigation"]]
-            - ["setNotificationsDropDownThemeProvider", ["@?webeweb.core.provider.theme.notifications_drop_down"]]
-            - ["setSearchThemeProvider",                ["@?webeweb.core.provider.theme.search"]]
-            - ["setTasksDropDownThemeProvider",         ["@?webeweb.core.provider.theme.tasks_drop_down"]]
-            - ["setUserInfoThemeProvider",              ["@?webeweb.core.provider.theme.user_info"]]
+            - ["setApplicationThemeProvider",           ["@?wbw.core.provider.theme.application"]]
+            - ["setBreadcrumbsThemeProvider",           ["@?wbw.core.provider.theme.breadcrumbs"]]
+            - ["setHookDropDownThemeProvider",          ["@?wbw.core.provider.theme.hook_drop_down"]]
+            - ["setFooterThemeProvider",                ["@?wbw.core.provider.theme.footer"]]
+            - ["setNavigationThemeProvider",            ["@?wbw.core.provider.theme.navigation"]]
+            - ["setNotificationsDropDownThemeProvider", ["@?wbw.core.provider.theme.notifications_drop_down"]]
+            - ["setSearchThemeProvider",                ["@?wbw.core.provider.theme.search"]]
+            - ["setTasksDropDownThemeProvider",         ["@?wbw.core.provider.theme.tasks_drop_down"]]
+            - ["setUserInfoThemeProvider",              ["@?wbw.core.provider.theme.user_info"]]
 
-    webeweb.core.provider.color.amber:
+    wbw.core.provider.color.amber:
         class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\AmberColorProvider
         public: true
         tags:
-            - { name: "webeweb.core.provider.color" }
+            - { name: "wbw.core.provider.color" }
 
-    webeweb.core.provider.color.blue:
+    wbw.core.provider.color.blue:
         class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\BlueColorProvider
         public: true
         tags:
-            - { name: "webeweb.core.provider.color" }
+            - { name: "wbw.core.provider.color" }
 
-    webeweb.core.provider.color.blue_grey:
+    wbw.core.provider.color.blue_grey:
         class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\BlueGreyColorProvider
         public: true
         tags:
-            - { name: "webeweb.core.provider.color" }
+            - { name: "wbw.core.provider.color" }
 
-    webeweb.core.provider.color.brown:
+    wbw.core.provider.color.brown:
         class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\BrownColorProvider
         public: true
         tags:
-            - { name: "webeweb.core.provider.color" }
+            - { name: "wbw.core.provider.color" }
 
-    webeweb.core.provider.color.cyan:
+    wbw.core.provider.color.cyan:
         class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\CyanColorProvider
         public: true
         tags:
-            - { name: "webeweb.core.provider.color" }
+            - { name: "wbw.core.provider.color" }
 
-    webeweb.core.provider.color.deep_orange:
+    wbw.core.provider.color.deep_orange:
         class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\DeepOrangeColorProvider
         public: true
         tags:
-            - { name: "webeweb.core.provider.color" }
+            - { name: "wbw.core.provider.color" }
 
-    webeweb.core.provider.color.deep_purple:
+    wbw.core.provider.color.deep_purple:
         class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\DeepPurpleColorProvider
         public: true
         tags:
-            - { name: "webeweb.core.provider.color" }
+            - { name: "wbw.core.provider.color" }
 
-    webeweb.core.provider.color.green:
+    wbw.core.provider.color.green:
         class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\GreenColorProvider
         public: true
         tags:
-            - { name: "webeweb.core.provider.color" }
+            - { name: "wbw.core.provider.color" }
 
-    webeweb.core.provider.color.grey:
+    wbw.core.provider.color.grey:
         class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\GreyColorProvider
         public: true
         tags:
-            - { name: "webeweb.core.provider.color" }
+            - { name: "wbw.core.provider.color" }
 
-    webeweb.core.provider.color.indigo:
+    wbw.core.provider.color.indigo:
         class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\IndigoColorProvider
         public: true
         tags:
-            - { name: "webeweb.core.provider.color" }
+            - { name: "wbw.core.provider.color" }
 
-    webeweb.core.provider.color.light_blue:
+    wbw.core.provider.color.light_blue:
         class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\LightBlueColorProvider
         public: true
         tags:
-            - { name: "webeweb.core.provider.color" }
+            - { name: "wbw.core.provider.color" }
 
-    webeweb.core.provider.color.light_green:
+    wbw.core.provider.color.light_green:
         class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\LightGreenColorProvider
         public: true
         tags:
-            - { name: "webeweb.core.provider.color" }
+            - { name: "wbw.core.provider.color" }
 
-    webeweb.core.provider.color.lime:
+    wbw.core.provider.color.lime:
         class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\LimeColorProvider
         public: true
         tags:
-            - { name: "webeweb.core.provider.color" }
+            - { name: "wbw.core.provider.color" }
 
-    webeweb.core.provider.color.orange:
+    wbw.core.provider.color.orange:
         class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\OrangeColorProvider
         public: true
         tags:
-            - { name: "webeweb.core.provider.color" }
+            - { name: "wbw.core.provider.color" }
 
-    webeweb.core.provider.color.pink:
+    wbw.core.provider.color.pink:
         class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\PinkColorProvider
         public: true
         tags:
-            - { name: "webeweb.core.provider.color" }
+            - { name: "wbw.core.provider.color" }
 
-    webeweb.core.provider.color.purple:
+    wbw.core.provider.color.purple:
         class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\PurpleColorProvider
         public: true
         tags:
-            - { name: "webeweb.core.provider.color" }
+            - { name: "wbw.core.provider.color" }
 
-    webeweb.core.provider.color.red:
+    wbw.core.provider.color.red:
         class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\RedColorProvider
         public: true
         tags:
-            - { name: "webeweb.core.provider.color" }
+            - { name: "wbw.core.provider.color" }
 
-    webeweb.core.provider.color.teal:
+    wbw.core.provider.color.teal:
         class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\TealColorProvider
         public: true
         tags:
-            - { name: "webeweb.core.provider.color" }
+            - { name: "wbw.core.provider.color" }
 
-    webeweb.core.provider.color.yellow:
+    wbw.core.provider.color.yellow:
         class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\YellowColorProvider
         public: true
         tags:
-            - { name: "webeweb.core.provider.color" }
+            - { name: "wbw.core.provider.color" }
 
-    webeweb.core.twig.extension.plugin.font_awesome:
+    wbw.core.twig.extension.plugin.font_awesome:
         class:     WBW\Bundle\CoreBundle\Twig\Extension\Plugin\FontAwesomeTwigExtension
         arguments: ["@twig"]
         public:    true
         tags:
             - { name: "twig.extension" }
 
-    webeweb.core.twig.extension.plugin.jquery_inputmask:
+    wbw.core.twig.extension.plugin.jquery_inputmask:
         class:     WBW\Bundle\CoreBundle\Twig\Extension\Plugin\JQueryInputMaskTwigExtension
-        arguments: ["@twig", "@webeweb.core.twig.extension.renderer"]
+        arguments: ["@twig", "@wbw.core.twig.extension.renderer"]
         public:    true
         tags:
             - { name: "twig.extension" }
 
-    webeweb.core.twig.extension.plugin.material_design_color_palette:
+    wbw.core.twig.extension.plugin.material_design_color_palette:
         class:     WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MaterialDesignColorPaletteTwigExtension
         arguments: ["@twig"]
         public:    true
         tags:
             - { name: "twig.extension" }
 
-    webeweb.core.twig.extension.plugin.material_design_iconic_font:
+    wbw.core.twig.extension.plugin.material_design_iconic_font:
         class:     WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MaterialDesignIconicFontTwigExtension
         arguments: ["@twig"]
         public:    true
         tags:
             - { name: "twig.extension" }
 
-    webeweb.core.twig.extension.plugin.meteocons:
+    wbw.core.twig.extension.plugin.meteocons:
         class:      WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MeteoconsTwigExtension
         arguments: ["@twig"]
         public:     true
         tags:
             - { name: "twig.extension" }
 
-    webeweb.core.twig.extension.quote:
+    wbw.core.twig.extension.quote:
         class:     WBW\Bundle\CoreBundle\Twig\Extension\QuoteTwigExtension
-        arguments: ["@twig", "@webeweb.core.manager.quote"]
+        arguments: ["@twig", "@wbw.core.manager.quote"]
         public:    true
         tags:
             - { name: "twig.extension" }
 
-    webeweb.core.twig.extension.renderer:
+    wbw.core.twig.extension.renderer:
         class:     WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension
         arguments: ["@twig"]
         public:    true
         tags:
             - { name: "twig.extension" }
 
-    webeweb.core.twig.extension.stylesheet:
+    wbw.core.twig.extension.stylesheet:
         class:     WBW\Bundle\CoreBundle\Twig\Extension\StylesheetTwigExtension
         arguments: ["@twig"]
         public:    true
         tags:
             - { name: "twig.extension" }
 
-    webeweb.core.twig.extension.utility:
+    wbw.core.twig.extension.utility:
         class:     WBW\Bundle\CoreBundle\Twig\Extension\UtilityTwigExtension
         arguments: ["@twig"]
         public:    true

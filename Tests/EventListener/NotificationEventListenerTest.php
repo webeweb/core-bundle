@@ -46,7 +46,7 @@ class NotificationEventListenerTest extends AbstractTestCase {
 
         $obj = new NotificationEventListener($this->session);
 
-        $this->assertEquals("webeweb.core.event_listener.notification", NotificationEventListener::SERVICE_NAME);
+        $this->assertEquals("wbw.core.event_listener.notification", NotificationEventListener::SERVICE_NAME);
         $this->assertSame($this->session, $obj->getSession());
     }
 

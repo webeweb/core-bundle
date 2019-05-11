@@ -40,7 +40,7 @@ class FormHelper {
      *
      * @avr string
      */
-    const SERVICE_NAME = "webeweb.core.helper.form";
+    const SERVICE_NAME = "wbw.core.helper.form";
 
     /**
      * Constructor.
