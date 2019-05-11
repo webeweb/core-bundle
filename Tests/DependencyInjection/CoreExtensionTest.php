@@ -59,18 +59,6 @@ use WBW\Bundle\CoreBundle\Twig\Extension\UtilityTwigExtension;
 class CoreExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the getAlias() method.
-     *
-     * @return void
-     */
-    public function testGetAlias() {
-
-        $obj = new CoreExtension();
-
-        $this->assertEquals("core", $obj->getAlias());
-    }
-
-    /**
      * Tests the load() method.
      *
      * @return void
@@ -125,16 +113,10 @@ class CoreExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(MaterialDesignIconicFontTwigExtension::class, $this->containerBuilder->get(MaterialDesignIconicFontTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(MeteoconsTwigExtension::class, $this->containerBuilder->get(MeteoconsTwigExtension::SERVICE_NAME));
 
-        // Quote Twig extension
+        // Twig extensions
         $this->assertInstanceOf(QuoteTwigExtension::class, $this->containerBuilder->get(QuoteTwigExtension::SERVICE_NAME));
-
-        // Renderer Twig extension
         $this->assertInstanceOf(RendererTwigExtension::class, $this->containerBuilder->get(RendererTwigExtension::SERVICE_NAME));
-
-        // Stylesheet Twig extension
         $this->assertInstanceOf(StylesheetTwigExtension::class, $this->containerBuilder->get(StylesheetTwigExtension::SERVICE_NAME));
-
-        // Utility Twig extension
         $this->assertInstanceOf(UtilityTwigExtension::class, $this->containerBuilder->get(UtilityTwigExtension::SERVICE_NAME));
     }
 }
