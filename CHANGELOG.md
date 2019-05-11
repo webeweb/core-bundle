@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### master
+### [1.13.0](https://github.com/webeweb/core-bundle/tree/v1.12.0) (2019-05-11)
 
 - Add Font Awesome Twig extension trait
 - Add jQuery InputMask Twig extension trait
