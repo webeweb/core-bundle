@@ -60,6 +60,7 @@ CHANGELOG
 > - WBW\Bundle\CoreBundle\CoreBundle::CORE_WARNING
 
 - Better support of Symfony's bundle recommendations
+- Update SERVICE_NAME constants
 
 ### [1.13.0](https://github.com/webeweb/core-bundle/tree/v1.13.0) (2019-05-11)
 
