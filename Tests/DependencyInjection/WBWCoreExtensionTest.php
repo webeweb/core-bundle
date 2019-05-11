@@ -32,7 +32,7 @@ use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\RedColorProvider;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\TealColorProvider;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\YellowColorProvider;
 use WBW\Bundle\CoreBundle\Command\UnzipAssetsCommand;
-use WBW\Bundle\CoreBundle\DependencyInjection\CoreExtension;
+use WBW\Bundle\CoreBundle\DependencyInjection\WBWCoreExtension;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\EventListener\NotificationEventListener;
 use WBW\Bundle\CoreBundle\Helper\FormHelper;
@@ -56,7 +56,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\UtilityTwigExtension;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\DependencyInjection
  */
-class CoreExtensionTest extends AbstractTestCase {
+class WBWCoreExtensionTest extends AbstractTestCase {
 
     /**
      * Tests the load() method.
@@ -66,7 +66,7 @@ class CoreExtensionTest extends AbstractTestCase {
      */
     public function testLoad() {
 
-        $obj = new CoreExtension();
+        $obj = new WBWCoreExtension();
 
         $this->assertNull($obj->load([], $this->containerBuilder));
 

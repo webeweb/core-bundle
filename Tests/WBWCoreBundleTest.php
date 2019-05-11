@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Tests;
 
-use WBW\Bundle\CoreBundle\CoreBundle;
-use WBW\Bundle\CoreBundle\DependencyInjection\CoreExtension;
+use WBW\Bundle\CoreBundle\DependencyInjection\WBWCoreExtension;
+use WBW\Bundle\CoreBundle\WBWCoreBundle;
 
 /**
  * Core bundle test.
@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\DependencyInjection\CoreExtension;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests
  */
-class CoreBundleTest extends AbstractTestCase {
+class WBWCoreBundleTest extends AbstractTestCase {
 
     /**
      * Tests the build() method.
@@ -29,7 +29,7 @@ class CoreBundleTest extends AbstractTestCase {
      */
     public function testBuild() {
 
-        $obj = new CoreBundle();
+        $obj = new WBWCoreBundle();
 
         $this->assertNull($obj->build($this->containerBuilder));
     }
@@ -41,7 +41,7 @@ class CoreBundleTest extends AbstractTestCase {
      */
     public function testGetAssetsRelativeDirectory() {
 
-        $obj = new CoreBundle();
+        $obj = new WBWCoreBundle();
 
         $res = $obj->getAssetsRelativeDirectory();
         $this->assertEquals("/Resources/assets", $res);
@@ -54,9 +54,9 @@ class CoreBundleTest extends AbstractTestCase {
      */
     public function testGetContainerExtension() {
 
-        $obj = new CoreBundle();
+        $obj = new WBWCoreBundle();
 
         $res = $obj->getContainerExtension();
-        $this->assertInstanceOf(CoreExtension::class, $res);
+        $this->assertInstanceOf(WBWCoreExtension::class, $res);
     }
 }

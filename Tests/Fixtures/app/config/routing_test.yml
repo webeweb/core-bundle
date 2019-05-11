@@ -1,15 +1,15 @@
 # Tests/Fixtures/app/config/routing_test.yml
-core_email_action:
+wbw_core_email:
     path:     "/email"
     defaults: { _controller: "WBW\\Bundle\\CoreBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::emailAction" }
     methods:  ["GET"]
 
-core_javascripts_action:
+wbw_core_javascripts:
     path:     "/javascripts"
     defaults: { _controller: "WBW\\Bundle\\CoreBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::javascriptsAction" }
     methods:  ["GET"]
 
-core_stylesheets_action:
+wbw_core_stylesheets:
     path:     "/stylesheets"
     defaults: { _controller: "WBW\\Bundle\\CoreBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::stylesheetsAction" }
     methods:  ["GET"]

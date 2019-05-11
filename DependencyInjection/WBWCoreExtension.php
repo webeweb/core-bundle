@@ -22,7 +22,7 @@ use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\DependencyInjection
  */
-class CoreExtension extends Extension {
+class WBWCoreExtension extends Extension {
 
     /**
      * {@inheritDoc}

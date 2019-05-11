@@ -15,7 +15,6 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use WBW\Bundle\CoreBundle\DependencyInjection\Compiler\ColorProviderCompilerPass;
 use WBW\Bundle\CoreBundle\DependencyInjection\Compiler\QuoteProviderCompilerPass;
-use WBW\Bundle\CoreBundle\DependencyInjection\CoreExtension;
 use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
 
 /**
@@ -24,7 +23,7 @@ use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle
  */
-class CoreBundle extends Bundle implements AssetsProviderInterface {
+class WBWCoreBundle extends Bundle implements AssetsProviderInterface {
 
     /**
      * {@inheritDoc}
@@ -39,12 +38,5 @@ class CoreBundle extends Bundle implements AssetsProviderInterface {
      */
     public function getAssetsRelativeDirectory() {
         return "/Resources/assets";
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getContainerExtension() {
-        return new CoreExtension();
     }
 }
