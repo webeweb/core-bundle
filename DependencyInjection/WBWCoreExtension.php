@@ -33,5 +33,9 @@ class WBWCoreExtension extends Extension {
 
         $serviceLoader = new YamlFileLoader($container, $fileLocator);
         $serviceLoader->load("services.yml");
+
+        $serviceLoader->load("commands.yml");
+        $serviceLoader->load("listeners.yml");
+        $serviceLoader->load("twig.yml");
     }
 }

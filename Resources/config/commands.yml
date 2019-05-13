@@ -1,0 +1,7 @@
+# Resources/config/commands.yml
+services:
+
+    wbw.core.command.unzip_assets:
+        class: WBW\Bundle\CoreBundle\Command\UnzipAssetsCommand
+        tags:
+            - { name: "console.command" }
