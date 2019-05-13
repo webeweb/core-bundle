@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Split Resources/config/services.yml (commands.yml, listeners.yml, twig.yml)
+
 ### [2.0.0](https://github.com/webeweb/core-bundle/tree/v2.0.0) (2019-05-11)
 
 > IMPORTANT NOTICE: The following classes has been removed
