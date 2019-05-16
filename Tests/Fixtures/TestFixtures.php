@@ -11,10 +11,13 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures;
 
+use DateInterval;
+use Exception;
 use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Navigation\NavigationItem;
 use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
 use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Entity\TestUser;
 
 /**
  * Test fixtures.
@@ -26,7 +29,6 @@ class TestFixtures {
 
     /**
      * Get a navigation tree.
-     *
      * GitHub
      * |- AdminBSB Material Design bundle
      * |- Bootstrap bundle
@@ -46,7 +48,6 @@ class TestFixtures {
      */
     public static function getNavigationTree() {
 
-        // Initialize the tree.
         $tree = new NavigationTree("tree");
 
         $tree->addNode(new NavigationNode("GitHub", null, NavigationInterface::NAVIGATION_HREF_DEFAULT));
@@ -70,7 +71,30 @@ class TestFixtures {
         $tree->getLastNode()->addNode(new NavigationNode("SkiData library", null, "https:\/\/github\.com\/webeweb\/skidata-library", NavigationInterface::NAVIGATION_MATCHER_REGEXP));
         $tree->getLastNode()->addNode(new NavigationNode("sMsmode library", null, "https://github.com/webeweb/smsmode-library", NavigationInterface::NAVIGATION_MATCHER_ROUTER));
 
-        // Return the tree.
         return $tree;
+    }
+
+    /**
+     * Get the users.
+     *
+     * @return UserInterface[] Returns the users.
+     * @throws Exception Throws an exception if an error occurs.
+     */
+    public static function getUsers() {
+
+        $fixtures   = [];
+        $fixtures[] = (new TestUser())
+            ->setUsername("webeweb")
+            ->setUsernameCanonical("webeweb")
+            ->setEmail("webeweb@github.com")
+            ->setEmailCanonical("webeweb@github.com")
+            ->setEnabled(true)
+            ->setSalt(md5("salt"))
+            ->setPassword("github")
+            ->setLastLogin((new DateTime())->sub(new DateInterval("P1D")))
+            ->setConfirmationToken(md5("confirmationToken"))
+            ->setPasswordRequestedAt(new DateTime());
+
+        return $fixtures;
     }
 }

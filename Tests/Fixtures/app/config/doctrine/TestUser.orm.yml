@@ -1,0 +1,11 @@
+# Tests/Fixtures/App/config/doctrine/Employee.orm.yml
+WBW\Bundle\CoreBundle\Tests\Fixtures\Entity\TestUser:
+
+    type:  "entity"
+    table: "fos_user"
+
+    id:
+        id:
+            name:      "id"
+            type:      "integer"
+            generator: { strategy: "auto" }
