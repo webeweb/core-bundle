@@ -3,7 +3,9 @@ CHANGELOG
 
 ### master
 
+- Add Test user
 - Split Resources/config/services.yml (commands.yml, listeners.yml, twig.yml)
+- Update dependencies
 
 ### [2.0.0](https://github.com/webeweb/core-bundle/tree/v2.0.0) (2019-05-11)
 
