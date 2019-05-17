@@ -1,9 +1,10 @@
 CHANGELOG
 =========
 
-### master
+### [2.1.0](https://github.com/webeweb/core-bundle/tree/v2.1.0) (2019-05-17)
 
 - Add Test user
+- Fix email layout translations
 - Split Resources/config/services.yml (commands.yml, listeners.yml, twig.yml)
 - Update dependencies
 
