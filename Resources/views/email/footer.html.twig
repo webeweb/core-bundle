@@ -7,12 +7,12 @@
         <tr>
             <td class="signature" width="300">
                 <p>
-                    {{ emailLayout.bestRegards|default("label.with_best_regards"|trans({}, "CoreBundle")) }},<br/>
+                    {{ emailLayout.bestRegards|default("label.with_best_regards"|trans({}, "WBWCoreBundle")) }},<br/>
                     {{ emailLayout.companyName|default("WEBEWEB") }}<br/>
-                    {{ emailLayout.supportPhone|default("+33 6 xx xx xx xx") }}, {{ emailLayout.supportName|default("label.support"|trans({}, "CoreBundle")) }}<br/>
+                    {{ emailLayout.supportPhone|default("+33 6 xx xx xx xx") }}, {{ emailLayout.supportName|default("label.support"|trans({}, "WBWCoreBundle")) }}<br/>
                 </p>
                 <p>
-                    {{ "label.support"|trans({}, "CoreBundle") }}: <a class="strong" href="{{ emailLayout.supportEmail|default("https://github.com/webeweb/") }}" target="_blank">
+                    {{ "label.support"|trans({}, "WBWCoreBundle") }}: <a class="strong" href="{{ emailLayout.supportEmail|default("https://github.com/webeweb/") }}" target="_blank">
                         {{ emailLayout.supportName|default("https://github.com/webeweb/") }}
                     </a>
                 </p>
@@ -25,11 +25,11 @@
                 </div>
                 <p>
                     <a class="strong block" href="{{ emailLayout.unsubscribeURL|default("#") }}" target="_blank">
-                        {{ "label.unsubscribe"|trans({}, "CoreBundle") }}
+                        {{ "label.unsubscribe"|trans({}, "WBWCoreBundle") }}
                     </a>
                     <span class="hide">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                     <a class="strong block" href="{{ emailLayout.accountSettingsURL|default("#") }}" target="_blank">
-                        {{ "label.account_settings"|trans({}, "CoreBundle") }}
+                        {{ "label.account_settings"|trans({}, "WBWCoreBundle") }}
                     </a>
                 </p>
             </td>
