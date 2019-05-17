@@ -154,7 +154,7 @@ class UnzipAssetsCommandTest extends AbstractTestCase {
         $obj = new TestUnzipAssetsCommand();
 
         $arg = [
-            "CoreBundle" => [
+            "WBWCoreBundle" => [
                 "animate.css-3.5.2.zip" => false,
             ],
         ];
