@@ -18,4 +18,3 @@ services:
             - { name: "kernel.event_listener", event: "wbw.core.event.notification.info",    method: "onNotify" }
             - { name: "kernel.event_listener", event: "wbw.core.event.notification.success", method: "onNotify" }
             - { name: "kernel.event_listener", event: "wbw.core.event.notification.warning", method: "onNotify" }
-
