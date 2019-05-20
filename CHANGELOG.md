@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [2.1.1](https://github.com/webeweb/core-bundle/tree/v2.1.1) (2019-05-20)
+
+- Update $id visibility into TestUser
+
 ### [2.1.0](https://github.com/webeweb/core-bundle/tree/v2.1.0) (2019-05-17)
 
 - Add Test user
