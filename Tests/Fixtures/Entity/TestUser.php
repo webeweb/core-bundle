@@ -26,7 +26,7 @@ class TestUser extends BaseUser {
      *
      * @var int
      */
-    private $id;
+    protected $id;
 
     /**
      * Constructor.
