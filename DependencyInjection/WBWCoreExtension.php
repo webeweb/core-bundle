@@ -34,8 +34,20 @@ class WBWCoreExtension extends Extension {
         $serviceLoader = new YamlFileLoader($container, $fileLocator);
         $serviceLoader->load("services.yml");
 
-        $serviceLoader->load("commands.yml");
-        $serviceLoader->load("listeners.yml");
-        $serviceLoader->load("twig.yml");
+        $configuration = $this->getConfiguration($configs, $container);
+
+        $config = $this->processConfiguration($configuration, $configs);
+
+        if (true === $config["commands"]) {
+            $serviceLoader->load("commands.yml");
+        }
+
+        if (true === $config["event_listeners"]) {
+            $serviceLoader->load("event_listeners.yml");
+        }
+
+        if (true === $config["twig"]) {
+            $serviceLoader->load("twig.yml");
+        }
     }
 }

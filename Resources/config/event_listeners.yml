@@ -1,4 +1,4 @@
-# Resources/config/listeners.yml
+# Resources/config/event_listeners.yml
 services:
 
     wbw.core.event_listener.kernel:

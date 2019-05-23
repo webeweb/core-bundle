@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\DependencyInjection;
 
 use Exception;
+use Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\AmberColorProvider;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\BlueColorProvider;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\BlueGreyColorProvider;
@@ -32,6 +33,7 @@ use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\RedColorProvider;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\TealColorProvider;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\YellowColorProvider;
 use WBW\Bundle\CoreBundle\Command\UnzipAssetsCommand;
+use WBW\Bundle\CoreBundle\DependencyInjection\Configuration;
 use WBW\Bundle\CoreBundle\DependencyInjection\WBWCoreExtension;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\EventListener\NotificationEventListener;
@@ -59,6 +61,41 @@ use WBW\Bundle\CoreBundle\Twig\Extension\UtilityTwigExtension;
 class WBWCoreExtensionTest extends AbstractTestCase {
 
     /**
+     * Configs.
+     *
+     * @var array
+     */
+    private $configs;
+
+    /**
+     * {@inheritDoc}
+     */
+    protected function setUp() {
+        parent::setUp();
+
+        // Set a configs array mock.
+        $this->configs = [
+            "wbw_core" => [
+                "commands"        => true,
+                "event_listeners" => true,
+                "twig"            => true,
+            ],
+        ];
+    }
+
+    /**
+     * Tests the getConfiguration() method.
+     *
+     * @return void
+     */
+    public function testGetConfiguration() {
+
+        $obj = new WBWCoreExtension();
+
+        $this->assertInstanceOf(Configuration::class, $obj->getConfiguration([], $this->containerBuilder));
+    }
+
+    /**
      * Tests the load() method.
      *
      * @return void
@@ -68,7 +105,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
 
         $obj = new WBWCoreExtension();
 
-        $this->assertNull($obj->load([], $this->containerBuilder));
+        $this->assertNull($obj->load($this->configs, $this->containerBuilder));
 
         // Commands
         $this->assertInstanceOf(UnzipAssetsCommand::class, $this->containerBuilder->get(UnzipAssetsCommand::SERVICE_NAME));
@@ -118,5 +155,74 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(RendererTwigExtension::class, $this->containerBuilder->get(RendererTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(StylesheetTwigExtension::class, $this->containerBuilder->get(StylesheetTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(UtilityTwigExtension::class, $this->containerBuilder->get(UtilityTwigExtension::SERVICE_NAME));
+    }
+
+    /**
+     * Tests the load() method.
+     *
+     * @return void
+     */
+    public function testLoadWithoutCommand() {
+
+        // Set the configs mock.
+        $this->configs["wbw_core"]["commands"] = false;
+
+        $obj = new WBWCoreExtension();
+
+        $this->assertNull($obj->load($this->configs, $this->containerBuilder));
+
+        try {
+
+            $this->containerBuilder->get(UnzipAssetsCommand::SERVICE_NAME);
+        } catch (Exception $ex) {
+
+            $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
+        }
+    }
+
+    /**
+     * Tests the load() method.
+     *
+     * @return void
+     */
+    public function testLoadWithoutEventListener() {
+
+        // Set the configs mock.
+        $this->configs["wbw_core"]["event_listeners"] = false;
+
+        $obj = new WBWCoreExtension();
+
+        $this->assertNull($obj->load($this->configs, $this->containerBuilder));
+
+        try {
+
+            $this->containerBuilder->get(KernelEventListener::SERVICE_NAME);
+        } catch (Exception $ex) {
+
+            $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
+        }
+    }
+
+    /**
+     * Tests the load() method.
+     *
+     * @return void
+     */
+    public function testLoadWithoutTwig() {
+
+        // Set the configs mock.
+        $this->configs["wbw_core"]["twig"] = false;
+
+        $obj = new WBWCoreExtension();
+
+        $this->assertNull($obj->load($this->configs, $this->containerBuilder));
+
+        try {
+
+            $this->containerBuilder->get(QuoteTwigExtension::SERVICE_NAME);
+        } catch (Exception $ex) {
+
+            $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
+        }
     }
 }
