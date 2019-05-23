@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Add Configuration
+
 ### [2.1.1](https://github.com/webeweb/core-bundle/tree/v2.1.1) (2019-05-20)
 
 - Update $id visibility into TestUser
