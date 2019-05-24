@@ -1,13 +1,13 @@
 CHANGELOG
 =========
 
-### master
+### [2.2.0](https://github.com/webeweb/core-bundle/tree/v2.2.0) (2019-05-24)
 
-- Add Configuration
+- Add Configuration class
 
 ### [2.1.1](https://github.com/webeweb/core-bundle/tree/v2.1.1) (2019-05-20)
 
-- Update $id visibility into TestUser
+- Update $id visibility into Test user
 
 ### [2.1.0](https://github.com/webeweb/core-bundle/tree/v2.1.0) (2019-05-17)
 
