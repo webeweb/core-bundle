@@ -1,0 +1,116 @@
+# Resources/config/providers.yml
+services:
+
+    wbw.core.provider.color.amber:
+        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\AmberColorProvider
+        public: true
+        tags:
+            - { name: "wbw.core.provider.color" }
+
+    wbw.core.provider.color.blue:
+        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\BlueColorProvider
+        public: true
+        tags:
+            - { name: "wbw.core.provider.color" }
+
+    wbw.core.provider.color.blue_grey:
+        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\BlueGreyColorProvider
+        public: true
+        tags:
+            - { name: "wbw.core.provider.color" }
+
+    wbw.core.provider.color.brown:
+        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\BrownColorProvider
+        public: true
+        tags:
+            - { name: "wbw.core.provider.color" }
+
+    wbw.core.provider.color.cyan:
+        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\CyanColorProvider
+        public: true
+        tags:
+            - { name: "wbw.core.provider.color" }
+
+    wbw.core.provider.color.deep_orange:
+        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\DeepOrangeColorProvider
+        public: true
+        tags:
+            - { name: "wbw.core.provider.color" }
+
+    wbw.core.provider.color.deep_purple:
+        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\DeepPurpleColorProvider
+        public: true
+        tags:
+            - { name: "wbw.core.provider.color" }
+
+    wbw.core.provider.color.green:
+        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\GreenColorProvider
+        public: true
+        tags:
+            - { name: "wbw.core.provider.color" }
+
+    wbw.core.provider.color.grey:
+        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\GreyColorProvider
+        public: true
+        tags:
+            - { name: "wbw.core.provider.color" }
+
+    wbw.core.provider.color.indigo:
+        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\IndigoColorProvider
+        public: true
+        tags:
+            - { name: "wbw.core.provider.color" }
+
+    wbw.core.provider.color.light_blue:
+        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\LightBlueColorProvider
+        public: true
+        tags:
+            - { name: "wbw.core.provider.color" }
+
+    wbw.core.provider.color.light_green:
+        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\LightGreenColorProvider
+        public: true
+        tags:
+            - { name: "wbw.core.provider.color" }
+
+    wbw.core.provider.color.lime:
+        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\LimeColorProvider
+        public: true
+        tags:
+            - { name: "wbw.core.provider.color" }
+
+    wbw.core.provider.color.orange:
+        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\OrangeColorProvider
+        public: true
+        tags:
+            - { name: "wbw.core.provider.color" }
+
+    wbw.core.provider.color.pink:
+        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\PinkColorProvider
+        public: true
+        tags:
+            - { name: "wbw.core.provider.color" }
+
+    wbw.core.provider.color.purple:
+        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\PurpleColorProvider
+        public: true
+        tags:
+            - { name: "wbw.core.provider.color" }
+
+    wbw.core.provider.color.red:
+        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\RedColorProvider
+        public: true
+        tags:
+            - { name: "wbw.core.provider.color" }
+
+    wbw.core.provider.color.teal:
+        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\TealColorProvider
+        public: true
+        tags:
+            - { name: "wbw.core.provider.color" }
+
+    wbw.core.provider.color.yellow:
+        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\YellowColorProvider
+        public: true
+        tags:
+            - { name: "wbw.core.provider.color" }

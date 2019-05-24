@@ -33,6 +33,7 @@ class Configuration implements ConfigurationInterface {
         $rootNode->children()
             ->booleanNode("commands")->defaultTrue()->info("Load commands")->end()
             ->booleanNode("event_listeners")->defaultTrue()->info("Load event listeners")->end()
+            ->booleanNode("providers")->defaultTrue()->info("Load providers")->end()
             ->booleanNode("twig")->defaultTrue()->info("Load Twig extensions")->end()
             ->end();
 
