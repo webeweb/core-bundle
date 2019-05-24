@@ -120,7 +120,6 @@ abstract class AbstractController extends BaseController {
     protected function hasRolesOrRedirect(array $roles, $or, $redirectUrl, $originUrl = "") {
 
         $user = $this->getKernelEventListener()->getUser();
-
         if (false === UserHelper::hasRoles($user, $roles, $or)) {
 
             // Throw a bad user role exception with an anonymous user if user is null.
