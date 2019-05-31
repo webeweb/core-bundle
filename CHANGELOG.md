@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Update Travis-CI configuration (Symfony 4.3)
+
 ### [2.2.0](https://github.com/webeweb/core-bundle/tree/v2.2.0) (2019-05-24)
 
 - Add Configuration class

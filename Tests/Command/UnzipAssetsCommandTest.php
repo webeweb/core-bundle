@@ -64,7 +64,7 @@ class UnzipAssetsCommandTest extends AbstractTestCase {
         $this->output->expects($this->any())->method("getFormatter")->willReturn($outputFormatter);
 
         // Set a Symfony style mock.
-        $this->style = $this->getMockBuilder(StyleInterface::class)->setConstructorArgs([$this->input, $this->output])->getMock();
+        $this->style = $this->getMockBuilder(StyleInterface::class)->getMock();
     }
 
     /**
