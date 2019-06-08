@@ -27,9 +27,9 @@ class Configuration implements ConfigurationInterface {
      */
     public function getConfigTreeBuilder() {
 
-        $treeBuilder = new TreeBuilder();
+        $treeBuilder = new TreeBuilder("wbw_core");
 
-        $rootNode = $treeBuilder->root("wbw_core");
+        $rootNode = ConfigurationHelper::getRootNode($treeBuilder, "wbw_core");
         $rootNode->children()
             ->booleanNode("commands")->defaultTrue()->info("Load commands")->end()
             ->booleanNode("event_listeners")->defaultTrue()->info("Load event listeners")->end()
