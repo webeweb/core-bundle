@@ -3,6 +3,7 @@ CHANGELOG
 
 ### [2.4.0](https://github.com/webeweb/core-bundle/tree/v2.4.0) (2019-05-08)
 
+- Add dispatchEvent() method to support Symfony changes
 - Add Base event (alias of Symfony event)
 - Fix deprecated root() call into Configuration
 

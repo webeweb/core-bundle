@@ -15,10 +15,11 @@ use Psr\Log\LoggerInterface;
 use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Security\Core\User\User;
 use Symfony\Component\Translation\TranslatorInterface;
-use WBW\Bundle\CoreBundle\Event\AbstractEvent;
+use WBW\Bundle\CoreBundle\Component\BaseEvent;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
@@ -34,6 +35,27 @@ use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
  * @abstract
  */
 abstract class AbstractController extends BaseController {
+
+    /**
+     * Dispatch an event.
+     *
+     * @param string $eventName The event name.
+     * @param BaseEvent $event The event.
+     * @return BaseEvent|null Returns the event in case of success, null otherwise.
+     */
+    protected function dispatchEvent($eventName, BaseEvent $event) {
+
+        $eventDispatcher = $this->getEventDispatcher();
+        if (null === $eventDispatcher || false === $eventDispatcher->hasListeners($eventName)) {
+            return null;
+        }
+
+        if (Kernel::VERSION_ID < 40300) {
+            return $eventDispatcher->dispatch($eventName, $event);
+        }
+
+        return $eventDispatcher->dispatch($event, $eventName);
+    }
 
     /**
      * Get the container.
@@ -138,14 +160,7 @@ abstract class AbstractController extends BaseController {
      * @return NotificationEvent|null Returns the event in case of success, null otherwise.
      */
     protected function notify($eventName, NotificationInterface $notification) {
-
-        $eventDispatcher = $this->getEventDispatcher();
-        if (null === $eventDispatcher || false === $eventDispatcher->hasListeners($eventName)) {
-            return null;
-        }
-
         $this->getLogger()->debug(sprintf("Core controller dispatch a notification event with name \"%s\"", $eventName));
-
-        return $eventDispatcher->dispatch($eventName, new NotificationEvent($eventName, $notification));
+        return $this->dispatchEvent($eventName, new NotificationEvent($eventName, $notification));
     }
 }

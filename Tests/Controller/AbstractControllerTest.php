@@ -16,6 +16,7 @@ use Psr\Log\LoggerInterface;
 use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Translation\TranslatorInterface;
@@ -236,14 +237,22 @@ class AbstractControllerTest extends AbstractTestCase {
      */
     public function testNotify() {
 
+        // Set a dispatch function.
+        $dispatchFunction = function(BaseEvent $event, $eventName) {
+            return $event;
+        };
+        if (Kernel::VERSION_ID < 40300) {
+            $dispatchFunction = function($eventName, BaseEvent $event) {
+                return $event;
+            };
+        }
+
         // Set a Notification mock.
         $notification = $this->getMockBuilder(NotificationInterface::class)->getMock();
 
         // Set the Event dispatcher mock.
         $this->eventDispatcher->expects($this->any())->method("hasListeners")->willReturn(true);
-        $this->eventDispatcher->expects($this->any())->method("dispatch")->willReturnCallback(function($eventName, BaseEvent $event) {
-            return $event;
-        });
+        $this->eventDispatcher->expects($this->any())->method("dispatch")->willReturnCallback($dispatchFunction);
 
         $obj = new TestAbstractController();
         $obj->setContainer($this->containerBuilder);
