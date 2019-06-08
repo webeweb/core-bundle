@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Component;
 
 use Symfony\Component\HttpKernel\Kernel;
 
-if (Kernel::VERSION_ID < 40300) {
+if (Kernel::VERSION_ID < 40400) {
     class_alias("Symfony\Component\EventDispatcher\Event", "WBW\Bundle\CoreBundle\Component\BaseEvent");
 } else {
     class_alias("Symfony\Contracts\EventDispatcher\Event", "WBW\Bundle\CoreBundle\Component\BaseEvent");
