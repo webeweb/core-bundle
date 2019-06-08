@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Event;
 
-use Symfony\Component\EventDispatcher\Event;
+use WBW\Bundle\CoreBundle\Component\BaseEvent;
 
 /**
  * Abstract event.
@@ -20,7 +20,7 @@ use Symfony\Component\EventDispatcher\Event;
  * @package WBW\Bundle\CoreBundle\Event
  * @abstract
  */
-abstract class AbstractEvent extends Event {
+abstract class AbstractEvent extends BaseEvent {
 
     /**
      * Event name.

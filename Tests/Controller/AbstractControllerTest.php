@@ -14,12 +14,12 @@ namespace WBW\Bundle\CoreBundle\Tests\Controller;
 use Exception;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\DependencyInjection\Container;
-use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Translation\TranslatorInterface;
+use WBW\Bundle\CoreBundle\Component\BaseEvent;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
@@ -241,7 +241,7 @@ class AbstractControllerTest extends AbstractTestCase {
 
         // Set the Event dispatcher mock.
         $this->eventDispatcher->expects($this->any())->method("hasListeners")->willReturn(true);
-        $this->eventDispatcher->expects($this->any())->method("dispatch")->willReturnCallback(function($eventName, Event $event) {
+        $this->eventDispatcher->expects($this->any())->method("dispatch")->willReturnCallback(function($eventName, BaseEvent $event) {
             return $event;
         });
 

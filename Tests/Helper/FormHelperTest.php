@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Helper;
 use Doctrine\Common\Collections\ArrayCollection;
 use Exception;
 use InvalidArgumentException;
-use Symfony\Component\EventDispatcher\Event;
+use WBW\Bundle\CoreBundle\Component\BaseEvent;
 use WBW\Bundle\CoreBundle\Exception\RedirectResponseException;
 use WBW\Bundle\CoreBundle\Helper\FormHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
@@ -89,7 +89,7 @@ class FormHelperTest extends AbstractTestCase {
 
         // Set the Event dispatcher mock.
         $this->eventDispatcher->expects($this->any())->method("hasListeners")->willReturn(true);
-        $this->eventDispatcher->expects($this->any())->method("dispatch")->willReturnCallback(function($eventName, Event $event) {
+        $this->eventDispatcher->expects($this->any())->method("dispatch")->willReturnCallback(function($eventName, BaseEvent $event) {
             return $event;
         });
 

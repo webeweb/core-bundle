@@ -13,12 +13,12 @@ namespace WBW\Bundle\CoreBundle\Controller;
 
 use Psr\Log\LoggerInterface;
 use Symfony\Component\DependencyInjection\Container;
-use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Security\Core\User\User;
 use Symfony\Component\Translation\TranslatorInterface;
+use WBW\Bundle\CoreBundle\Event\AbstractEvent;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
@@ -135,7 +135,7 @@ abstract class AbstractController extends BaseController {
      *
      * @param string $eventName The event name.
      * @param NotificationInterface $notification The notification.
-     * @return Event|null Returns the event in case of success, null otherwise.
+     * @return AbstractEvent|null Returns the event in case of success, null otherwise.
      */
     protected function notify($eventName, NotificationInterface $notification) {
 
