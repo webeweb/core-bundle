@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+### [2.3.1](https://github.com/webeweb/core-bundle/tree/v2.3.1) (2019-05-08)
+
+- Add Base event (alias of Symfony event)
+- Fix deprecated root() call into Configuration
+
 ### [2.3.0](https://github.com/webeweb/core-bundle/tree/v2.3.0) (2019-05-08)
 
 - Change license
