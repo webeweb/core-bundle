@@ -1,8 +1,9 @@
 CHANGELOG
 =========
 
-### master
+### [2.3.0](https://github.com/webeweb/core-bundle/tree/v2.3.0) (2019-05-08)
 
+- Change license
 - Update Composer (according to Composer schema)
 - Update Travis-CI configuration (Symfony 4.3)
 
