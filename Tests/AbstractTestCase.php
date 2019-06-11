@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests;
 
+use Closure;
 use Doctrine\Common\Persistence\ObjectManager;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\LoggerInterface;
@@ -18,6 +19,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
@@ -26,6 +28,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Translation\TranslatorInterface;
 use Twig\Environment;
 use Twig\Loader\LoaderInterface;
+use WBW\Bundle\CoreBundle\Component\BaseEvent;
 
 /**
  * Abstract test case.
@@ -133,6 +136,26 @@ abstract class AbstractTestCase extends TestCase {
      * @var UserInterface
      */
     protected $user;
+
+    /**
+     * Get the dispatch() method for an EventDispatcher.
+     *
+     * @return Closure Returns the dispatch() method for an EventDispatcher.
+     */
+    public static function getEventDispatcherDispatchFunction() {
+
+        $dispatchFunction = function(BaseEvent $event, $eventName) {
+            return $event;
+        };
+
+        if (Kernel::VERSION_ID < 40300) {
+            $dispatchFunction = function($eventName, BaseEvent $event) {
+                return $event;
+            };
+        }
+
+        return $dispatchFunction;
+    }
 
     /**
      * {@inheritDoc}

@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [2.4.1](https://github.com/webeweb/core-bundle/tree/v2.4.1) (2019-05-11)
+
+- Fix Symfony event dispatcher support
+
 ### [2.4.0](https://github.com/webeweb/core-bundle/tree/v2.4.0) (2019-05-08)
 
 - Add dispatchEvent() method to support Symfony changes

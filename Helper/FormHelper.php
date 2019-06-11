@@ -19,6 +19,7 @@ use InvalidArgumentException;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\Event\NotificationEvents;
+use WBW\Bundle\CoreBundle\EventDispatcher\EventDispatcherHelper;
 use WBW\Bundle\CoreBundle\Exception\RedirectResponseException;
 use WBW\Bundle\CoreBundle\Notification\NotificationFactory;
 use WBW\Bundle\CoreBundle\Service\EventDispatcherTrait;
@@ -72,15 +73,11 @@ class FormHelper {
             return;
         }
 
-        $eventName = NotificationEvents::NOTIFICATION_WARNING;
+        $eventName    = NotificationEvents::NOTIFICATION_WARNING;
+        $notification = NotificationFactory::newWarningNotification($notification);
+        $event        = new NotificationEvent($eventName, $notification);
 
-        if (null !== $this->getEventDispatcher() && true === $this->getEventDispatcher()->hasListeners($eventName)) {
-
-            $notification = NotificationFactory::newWarningNotification($notification);
-            $event        = new NotificationEvent($eventName, $notification);
-
-            $this->getEventDispatcher()->dispatch($eventName, $event);
-        }
+        EventDispatcherHelper::dispatch($this->getEventDispatcher(), $eventName, $event);
 
         throw new RedirectResponseException($redirectURL, null);
     }
