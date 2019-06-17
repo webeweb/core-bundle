@@ -32,9 +32,10 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
+        $this->assertEquals("wbw.core.twig.extension.plugin.material_design_iconic_font", MaterialDesignIconicFontTwigExtension::SERVICE_NAME);
+
         $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
 
-        $this->assertEquals("wbw.core.twig.extension.plugin.material_design_iconic_font", MaterialDesignIconicFontTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 

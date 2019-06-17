@@ -32,9 +32,10 @@ class StylesheetTwigExtensionTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
+        $this->assertEquals("wbw.core.twig.extension.stylesheet", StylesheetTwigExtension::SERVICE_NAME);
+
         $obj = new StylesheetTwigExtension($this->twigEnvironment);
 
-        $this->assertEquals("wbw.core.twig.extension.stylesheet", StylesheetTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 

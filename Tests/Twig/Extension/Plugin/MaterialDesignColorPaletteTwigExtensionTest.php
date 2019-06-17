@@ -31,9 +31,10 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
+        $this->assertEquals("wbw.core.twig.extension.plugin.material_design_color_palette", MaterialDesignColorPaletteTwigExtension::SERVICE_NAME);
+
         $obj = new MaterialDesignColorPaletteTwigExtension($this->twigEnvironment);
 
-        $this->assertEquals("wbw.core.twig.extension.plugin.material_design_color_palette", MaterialDesignColorPaletteTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 

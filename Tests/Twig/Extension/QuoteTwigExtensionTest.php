@@ -65,9 +65,10 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
+        $this->assertEquals("wbw.core.twig.extension.quote", QuoteTwigExtension::SERVICE_NAME);
+
         $obj = new QuoteTwigExtension($this->twigEnvironment, $this->quoteManager);
 
-        $this->assertEquals("wbw.core.twig.extension.quote", QuoteTwigExtension::SERVICE_NAME);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
         $this->assertSame($this->quoteManager, $obj->getQuoteManager());
     }
