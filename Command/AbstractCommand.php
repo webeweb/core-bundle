@@ -15,7 +15,6 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\StyleInterface;
-use Symfony\Component\Console\Style\SymfonyStyle;
 use WBW\Bundle\CoreBundle\Helper\CommandHelper;
 
 /**
@@ -41,10 +40,10 @@ abstract class AbstractCommand extends Command {
      * Create a style.
      *
      * @param InputInterface $input The input.
-     * @param OutputInterface $output The ouptut.
+     * @param OutputInterface $output The output.
      * @return StyleInterface Returns the style.
      */
     protected function newStyle(InputInterface $input, OutputInterface $output) {
-        return new SymfonyStyle($input, $output);
+        return CommandHelper::newSymfonyStyle($input, $output);
     }
 }
