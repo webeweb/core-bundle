@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+### [2.5.0](https://github.com/webeweb/core-bundle/tree/v2.5.0) (2019-06-19)
+
+- Add newSymfonyStyle() into Command helper
+- Improve unit tests
+
 ### [2.4.1](https://github.com/webeweb/core-bundle/tree/v2.4.1) (2019-05-11)
 
 - Fix Symfony event dispatcher support
