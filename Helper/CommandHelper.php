@@ -11,6 +11,11 @@
 
 namespace WBW\Bundle\CoreBundle\Helper;
 
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\Style\StyleInterface;
+use Symfony\Component\Console\Style\SymfonyStyle;
+
 /**
  * Command helper.
  *
@@ -30,5 +35,16 @@ class CommandHelper {
             return sprintf("<fg=green;options=bold>%s</>", OSHelper::isWindows() ? "OK" : "\xE2\x9C\x94");
         }
         return sprintf("<fg=yellow;options=bold>%s</>", OSHelper::isWindows() ? "KO" : "!");
+    }
+
+    /**
+     * Create a Symfony style.
+     *
+     * @param InputInterface $input The input.
+     * @param OutputInterface $output The output.
+     * @return StyleInterface Returns the Symfony style.
+     */
+    public static function newSymfonyStyle(InputInterface $input, OutputInterface $output) {
+        return new SymfonyStyle($input, $output);
     }
 }

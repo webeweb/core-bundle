@@ -11,6 +11,10 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Helper;
 
+use Symfony\Component\Console\Formatter\OutputFormatterInterface;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\Style\StyleInterface;
 use WBW\Bundle\CoreBundle\Helper\CommandHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
@@ -39,5 +43,26 @@ class CommandHelperTest extends AbstractTestCase {
             $this->assertEquals("<fg=green;options=bold>OK</>", CommandHelper::getCheckbox(true));
             $this->assertEquals("<fg=yellow;options=bold>WARNING</>", CommandHelper::getCheckbox(false));
         }
+    }
+
+    /**
+     * Tests the newSymfonyStyle() method.
+     *
+     * @return void
+     */
+    public function testNewSymfonyStyle() {
+
+        // Set an Ouput formatter mock.
+        $outputFormatter = $this->getMockBuilder(OutputFormatterInterface::class)->getMock();
+
+        // Set an Input mock.
+        $input = $this->getMockBuilder(InputInterface::class)->getMock();
+
+        // Set an Output mock.
+        $output = $this->getMockBuilder(OutputInterface::class)->getMock();
+        $output->expects($this->any())->method("getFormatter")->willReturn($outputFormatter);
+
+        $res = CommandHelper::newSymfonyStyle($input, $output);
+        $this->assertInstanceOf(StyleInterface::class, $res);
     }
 }
