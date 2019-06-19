@@ -11,11 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Command;
 
-use Symfony\Component\Console\Formatter\OutputFormatterInterface;
-use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\StyleInterface;
-use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractCommandTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Command\TestAbstractCommand;
 
 /**
@@ -24,38 +21,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Command\TestAbstractCommand;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Command
  */
-class AbstractCommandTest extends AbstractTestCase {
-
-    /**
-     * Input.
-     *
-     * @var InputInterface
-     */
-    private $input;
-
-    /**
-     * Output.
-     *
-     * @var OutputInterface
-     */
-    private $output;
-
-    /**
-     * {@inheritDoc}
-     */
-    protected function setUp() {
-        parent::setUp();
-
-        // Set an Ouput formatter mock.
-        $outputFormatter = $this->getMockBuilder(OutputFormatterInterface::class)->getMock();
-
-        // Set an Input mock.
-        $this->input = $this->getMockBuilder(InputInterface::class)->getMock();
-
-        // Set an Output mock.
-        $this->output = $this->getMockBuilder(OutputInterface::class)->getMock();
-        $this->output->expects($this->any())->method("getFormatter")->willReturn($outputFormatter);
-    }
+class AbstractCommandTest extends AbstractCommandTestCase {
 
     /**
      * Tests the getCheckbox() method.
