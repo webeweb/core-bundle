@@ -17,8 +17,8 @@ use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Security\Core\User\User;
-use Symfony\Component\Translation\TranslatorInterface;
 use WBW\Bundle\CoreBundle\Component\BaseEvent;
+use WBW\Bundle\CoreBundle\Component\BaseTranslatorInterface;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\EventDispatcher\EventDispatcherHelper;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
@@ -113,7 +113,7 @@ abstract class AbstractController extends BaseController {
     /**
      * Get the translator.
      *
-     * @return TranslatorInterface Returns the translator.
+     * @return BaseTranslatorInterface Returns the translator.
      */
     protected function getTranslator() {
         return $this->get("translator");

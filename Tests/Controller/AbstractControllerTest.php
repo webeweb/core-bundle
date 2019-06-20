@@ -16,11 +16,9 @@ use Psr\Log\LoggerInterface;
 use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
-use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
-use Symfony\Component\Translation\TranslatorInterface;
-use WBW\Bundle\CoreBundle\Component\BaseEvent;
+use WBW\Bundle\CoreBundle\Component\BaseTranslatorInterface;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
@@ -184,7 +182,7 @@ class AbstractControllerTest extends AbstractTestCase {
         $obj->setContainer($this->containerBuilder);
 
         $res = $obj->getTranslator();
-        $this->assertInstanceOf(TranslatorInterface::class, $res);
+        $this->assertInstanceOf(BaseTranslatorInterface::class, $res);
         $this->assertSame($this->translator, $res);
     }
 

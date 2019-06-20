@@ -25,10 +25,10 @@ use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
-use Symfony\Component\Translation\TranslatorInterface;
 use Twig\Environment;
 use Twig\Loader\LoaderInterface;
 use WBW\Bundle\CoreBundle\Component\BaseEvent;
+use WBW\Bundle\CoreBundle\Component\BaseTranslatorInterface;
 
 /**
  * Abstract test case.
@@ -105,7 +105,7 @@ abstract class AbstractTestCase extends TestCase {
     /**
      * Translator.
      *
-     * @var TranslatorInterface
+     * @var BaseTranslatorInterface
      */
     protected $translator;
 
@@ -181,7 +181,7 @@ abstract class AbstractTestCase extends TestCase {
         $this->session = $this->getMockBuilder(SessionInterface::class)->getMock();
 
         // Set a Translator mock.
-        $this->translator = $this->getMockBuilder(TranslatorInterface::class)->getMock();
+        $this->translator = $this->getMockBuilder(BaseTranslatorInterface::class)->getMock();
         $this->translator->expects($this->any())->method("trans")->willReturnCallback(function($id, array $parameters = [], $domain = null, $locale = null) {
             return $id;
         });
