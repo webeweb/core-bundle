@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Add Security event listener
+
 ### [2.5.0](https://github.com/webeweb/core-bundle/tree/v2.5.0) (2019-06-19)
 
 - Add newSymfonyStyle() into Command helper
