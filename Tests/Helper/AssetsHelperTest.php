@@ -66,20 +66,21 @@ class AssetsHelperTest extends AbstractTestCase {
     public function testListAssets() {
 
         $res = TestAssetsHelper::listAssets($this->directoryAssets);
-        $this->assertCount(12, $res);
+        $this->assertCount(13, $res);
 
         $this->assertRegExp("/animate\.css\-.*\.zip$/", $res[0]);
-        $this->assertRegExp("/fontawesome\-.*\.zip$/", $res[1]);
-        $this->assertRegExp("/jquery\-.*\.zip$/", $res[2]);
-        $this->assertRegExp("/jquery\-easyautocomplete\-.*\.zip$/", $res[3]);
-        $this->assertRegExp("/jquery\-inputmask\-.*\.zip$/", $res[4]);
-        $this->assertRegExp("/jquery\-select2\-.*\.zip$/", $res[5]);
-        $this->assertRegExp("/material\-design\-color\-palette\-.*\.zip$/", $res[6]);
-        $this->assertRegExp("/material\-design\-hierarchical\-display\-.*\.zip$/", $res[7]);
-        $this->assertRegExp("/material\-design\-iconic\-font\-.*\.zip$/", $res[8]);
-        $this->assertRegExp("/meteocons\.zip$/", $res[9]);
-        $this->assertRegExp("/sweetalert\-.*\.zip$/", $res[10]);
-        $this->assertRegExp("/waitme\-.*\.zip$/", $res[11]);
+        $this->assertRegExp("/clippy\.js\.zip$/", $res[1]);
+        $this->assertRegExp("/fontawesome\-.*\.zip$/", $res[2]);
+        $this->assertRegExp("/jquery\-.*\.zip$/", $res[3]);
+        $this->assertRegExp("/jquery\-easyautocomplete\-.*\.zip$/", $res[4]);
+        $this->assertRegExp("/jquery\-inputmask\-.*\.zip$/", $res[5]);
+        $this->assertRegExp("/jquery\-select2\-.*\.zip$/", $res[6]);
+        $this->assertRegExp("/material\-design\-color\-palette\-.*\.zip$/", $res[7]);
+        $this->assertRegExp("/material\-design\-hierarchical\-display\-.*\.zip$/", $res[8]);
+        $this->assertRegExp("/material\-design\-iconic\-font\-.*\.zip$/", $res[9]);
+        $this->assertRegExp("/meteocons\.zip$/", $res[10]);
+        $this->assertRegExp("/sweetalert\-.*\.zip$/", $res[11]);
+        $this->assertRegExp("/waitme\-.*\.zip$/", $res[12]);
     }
 
     /**
@@ -108,7 +109,7 @@ class AssetsHelperTest extends AbstractTestCase {
     public function testUnzipAssets() {
 
         $res = TestAssetsHelper::unzipAssets($this->directoryAssets, $this->directoryPublic);
-        $this->assertCount(12, $res);
+        $this->assertCount(13, $res);
 
         foreach ($res as $k => $v) {
             $this->assertDirectoryExists(str_replace([$this->directoryAssets, ".zip"], [$this->directoryPublic, ""], $k));
