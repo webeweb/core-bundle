@@ -1,10 +1,6 @@
 CHANGELOG
 =========
 
-### [2.6.0](https://github.com/webeweb/core-bundle/tree/v2.6.0) (2019-06-20)
-
-- Add Base translator interface (alias of Symfony translator)
-
 ### [2.5.0](https://github.com/webeweb/core-bundle/tree/v2.5.0) (2019-06-19)
 
 - Add newSymfonyStyle() into Command helper

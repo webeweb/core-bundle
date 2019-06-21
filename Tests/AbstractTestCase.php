@@ -18,6 +18,8 @@ use Psr\Log\LoggerInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
+use Symfony\Component\HttpFoundation\Session\Flash\FlashBagInterface;
+use Symfony\Component\HttpFoundation\Session\SessionBagInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\HttpKernel\KernelInterface;
@@ -25,10 +27,10 @@ use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Translation\TranslatorInterface;
 use Twig\Environment;
 use Twig\Loader\LoaderInterface;
 use WBW\Bundle\CoreBundle\Component\BaseEvent;
-use WBW\Bundle\CoreBundle\Component\BaseTranslatorInterface;
 
 /**
  * Abstract test case.
@@ -52,6 +54,13 @@ abstract class AbstractTestCase extends TestCase {
      * @var EventDispatcherInterface
      */
     protected $eventDispatcher;
+
+    /**
+     * Flash bag.
+     *
+     * @var FlashBagInterface
+     */
+    protected $flashBag;
 
     /**
      * Kernel.
@@ -89,6 +98,13 @@ abstract class AbstractTestCase extends TestCase {
     protected $session;
 
     /**
+     * Session bag.
+     *
+     * @var SessionBagInterface
+     */
+    protected $sessionBag;
+
+    /**
      * Token
      *
      * @var TokenInterface
@@ -105,7 +121,7 @@ abstract class AbstractTestCase extends TestCase {
     /**
      * Translator.
      *
-     * @var BaseTranslatorInterface
+     * @var TranslatorInterface
      */
     protected $translator;
 
@@ -165,6 +181,9 @@ abstract class AbstractTestCase extends TestCase {
         // Set an Event dispatcher mock.
         $this->eventDispatcher = $this->getMockBuilder(EventDispatcherInterface::class)->getMock();
 
+        // Set a Flash bag mock.
+        $this->flashBag = $this->getMockBuilder(FlashBagInterface::class)->getMock();
+
         // Set a Kernel mock.
         $this->kernel = $this->getMockBuilder(KernelInterface::class)->getMock();
 
@@ -180,8 +199,11 @@ abstract class AbstractTestCase extends TestCase {
         // Set a Session mock.
         $this->session = $this->getMockBuilder(SessionInterface::class)->getMock();
 
+        // Set a Session bag mock.
+        $this->sessionBag = $this->getMockBuilder(SessionBagInterface::class)->getMock();
+
         // Set a Translator mock.
-        $this->translator = $this->getMockBuilder(BaseTranslatorInterface::class)->getMock();
+        $this->translator = $this->getMockBuilder(TranslatorInterface::class)->getMock();
         $this->translator->expects($this->any())->method("trans")->willReturnCallback(function($id, array $parameters = [], $domain = null, $locale = null) {
             return $id;
         });
