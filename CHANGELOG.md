@@ -1,10 +1,12 @@
 CHANGELOG
 =========
 
-### master
+### [2.6.0](https://github.com/webeweb/core-bundle/tree/v2.6.0) (2019-06-24)
 
+- Add ASSETS_RELATIVE_DIRECTORY constant
 - Add Clippy.js
 - Add Security event listener
+- Rename TAG_NAME constants into ColorProviderInterface and QuoteProviderInterface (to avoid same constants into a class that implements both provider types)
 
 ### [2.5.0](https://github.com/webeweb/core-bundle/tree/v2.5.0) (2019-06-19)
 
