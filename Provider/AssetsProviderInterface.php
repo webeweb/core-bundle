@@ -20,6 +20,13 @@ namespace WBW\Bundle\CoreBundle\Provider;
 interface AssetsProviderInterface extends ProviderInterface {
 
     /**
+     * Assets relative directory.
+     *
+     * @var string
+     */
+    const ASSETS_RELATIVE_DIRECTORY = "/Resources/assets";
+
+    /**
      * Get the assets relative directory.
      *
      * @return string Returns the assets relative directory.

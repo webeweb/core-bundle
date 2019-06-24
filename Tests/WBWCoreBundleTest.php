@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests;
 
 use WBW\Bundle\CoreBundle\DependencyInjection\WBWCoreExtension;
+use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
 use WBW\Bundle\CoreBundle\WBWCoreBundle;
 
 /**
@@ -44,7 +45,7 @@ class WBWCoreBundleTest extends AbstractTestCase {
         $obj = new WBWCoreBundle();
 
         $res = $obj->getAssetsRelativeDirectory();
-        $this->assertEquals("/Resources/assets", $res);
+        $this->assertEquals(AssetsProviderInterface::ASSETS_RELATIVE_DIRECTORY, $res);
     }
 
     /**
