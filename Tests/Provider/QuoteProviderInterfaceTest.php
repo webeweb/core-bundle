@@ -29,6 +29,6 @@ class QuoteProviderInterfaceTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("wbw.core.provider.quote", QuoteProviderInterface::TAG_NAME);
+        $this->assertEquals("wbw.core.provider.quote", QuoteProviderInterface::QUOTE_TAG_NAME);
     }
 }

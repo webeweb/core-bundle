@@ -36,7 +36,7 @@ class QuoteProviderCompilerPass implements CompilerPassInterface {
 
         $manager = $container->findDefinition(QuoteManager::SERVICE_NAME);
 
-        $providers = $container->findTaggedServiceIds(QuoteProviderInterface::TAG_NAME);
+        $providers = $container->findTaggedServiceIds(QuoteProviderInterface::QUOTE_TAG_NAME);
         foreach ($providers as $id => $tag) {
             $manager->addMethodCall("addProvider", [new Reference($id)]);
         }

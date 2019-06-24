@@ -36,7 +36,7 @@ class ColorProviderCompilerPass implements CompilerPassInterface {
 
         $manager = $container->findDefinition(ColorManager::SERVICE_NAME);
 
-        $providers = $container->findTaggedServiceIds(ColorProviderInterface::TAG_NAME);
+        $providers = $container->findTaggedServiceIds(ColorProviderInterface::COLOR_TAG_NAME);
         foreach ($providers as $id => $tag) {
             $manager->addMethodCall("addProvider", [new Reference($id)]);
         }

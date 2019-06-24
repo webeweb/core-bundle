@@ -58,6 +58,9 @@ class QuoteProviderCompilerPassTest extends AbstractTestCase {
      */
     public function testProcess() {
 
+        // Set a Service name mock.
+        $serviceName = "wbw.core.provider.quote";
+
         $obj = new QuoteProviderCompilerPass();
 
         $obj->process($this->containerBuilder);
@@ -68,15 +71,19 @@ class QuoteProviderCompilerPassTest extends AbstractTestCase {
 
         $obj->process($this->containerBuilder);
         $this->assertTrue($this->containerBuilder->hasDefinition(QuoteManager::SERVICE_NAME));
+        $this->assertFalse($this->containerBuilder->hasDefinition($serviceName));
         $this->assertFalse($this->containerBuilder->getDefinition(QuoteManager::SERVICE_NAME)->hasMethodCall("addProvider"));
 
         // Register the Quote provider.
-        $this->containerBuilder->register("wbw.core.provider.quote", $this->quoteProvider)->addTag(QuoteProviderInterface::TAG_NAME);
-        $this->assertTrue($this->containerBuilder->hasDefinition("wbw.core.provider.quote"));
-        $this->assertTrue($this->containerBuilder->getDefinition("wbw.core.provider.quote")->hasTag(QuoteProviderInterface::TAG_NAME));
+        $this->containerBuilder->register($serviceName, $this->quoteProvider)->addTag(QuoteProviderInterface::QUOTE_TAG_NAME);
+
+        $this->assertTrue($this->containerBuilder->hasDefinition(QuoteManager::SERVICE_NAME));
+        $this->assertTrue($this->containerBuilder->hasDefinition($serviceName));
+        $this->assertFalse($this->containerBuilder->getDefinition(QuoteManager::SERVICE_NAME)->hasMethodCall("addProvider"));
 
         $obj->process($this->containerBuilder);
         $this->assertTrue($this->containerBuilder->hasDefinition(QuoteManager::SERVICE_NAME));
+        $this->assertTrue($this->containerBuilder->hasDefinition($serviceName));
         $this->assertTrue($this->containerBuilder->getDefinition(QuoteManager::SERVICE_NAME)->hasMethodCall("addProvider"));
     }
 }
