@@ -1,6 +1,20 @@
 CHANGELOG
 =========
 
+### master
+
+- Add Core events
+- Add Toast event
+- Add Toast event listener
+- Add Toast event listener trait
+- Add Toast factory
+- Add Toast interface
+- Add Danger toast
+- Add Default toast
+- Add Info toast
+- Add Success toast
+- Add Warning toast
+
 ### [2.6.0](https://github.com/webeweb/core-bundle/tree/v2.6.0) (2019-06-24)
 
 - Add ASSETS_RELATIVE_DIRECTORY constant
