@@ -18,12 +18,12 @@ use Doctrine\Common\Persistence\ObjectManager;
 use InvalidArgumentException;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
-use WBW\Bundle\CoreBundle\Event\NotificationEvents;
 use WBW\Bundle\CoreBundle\EventDispatcher\EventDispatcherHelper;
 use WBW\Bundle\CoreBundle\Exception\RedirectResponseException;
 use WBW\Bundle\CoreBundle\Notification\NotificationFactory;
 use WBW\Bundle\CoreBundle\Service\EventDispatcherTrait;
 use WBW\Bundle\CoreBundle\Service\ObjectManagerTrait;
+use WBW\Bundle\CoreBundle\WBWCoreEvents;
 
 /**
  * Form helper.
@@ -73,7 +73,7 @@ class FormHelper {
             return;
         }
 
-        $eventName    = NotificationEvents::NOTIFICATION_WARNING;
+        $eventName    = WBWCoreEvents::NOTIFICATION_WARNING;
         $notification = NotificationFactory::newWarningNotification($notification);
         $event        = new NotificationEvent($eventName, $notification);
 
