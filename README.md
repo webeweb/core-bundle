@@ -17,6 +17,7 @@ into all our bundles and Symfony applications.
 Includes:
 
 - [Animate.css 3.7.0](https://daneden.github.io/animate.css/)
+- [Clippy JS](https://www.smore.com/clippy-js)
 - [Font Awesome 5.8.1](https://fontawesome.com/)
 - [jQuery 3.4.1](http://jquery.com/)
 - [jQuery EasyAutocomplete 1.3.4](http://www.easyautocomplete.com/) (jQuery plug-in)
