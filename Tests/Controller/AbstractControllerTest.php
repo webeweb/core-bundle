@@ -20,12 +20,14 @@ use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Translation\TranslatorInterface;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
+use WBW\Bundle\CoreBundle\Event\ToastEvent;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
 use WBW\Bundle\CoreBundle\Helper\FormHelper;
 use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Controller\TestAbstractController;
+use WBW\Bundle\CoreBundle\Toast\ToastInterface;
 
 /**
  * Abstract controller test.
@@ -270,6 +272,51 @@ class AbstractControllerTest extends AbstractTestCase {
         $obj->setContainer($this->containerBuilder);
 
         $res = $obj->notify("eventName", $notification);
+        $this->assertNull($res);
+    }
+
+    /**
+     * Tests the toast() method.
+     *
+     * @return void
+     */
+    public function testToast() {
+
+        // Set a Toast mock.
+        $toast = $this->getMockBuilder(ToastInterface::class)->getMock();
+
+        // Set the Event dispatcher mock.
+        $this->eventDispatcher->expects($this->any())->method("hasListeners")->willReturn(true);
+        $this->eventDispatcher->expects($this->any())->method("dispatch")->willReturnCallback(AbstractTestCase::getEventDispatcherDispatchFunction());
+
+        $obj = new TestAbstractController();
+        $obj->setContainer($this->containerBuilder);
+
+        $res = $obj->toast("eventName", $toast);
+        $this->assertNotNull($res);
+
+        $this->assertInstanceOf(ToastEvent::class, $res);
+        $this->assertEquals("eventName", $res->getEventName());
+        $this->assertSame($toast, $res->getToast());
+    }
+
+    /**
+     * Tests the toast() method.
+     *
+     * @return void
+     */
+    public function testToastWithoutListener() {
+
+        // Set a Toast mock.
+        $toast = $this->getMockBuilder(ToastInterface::class)->getMock();
+
+        // Set the Event dispatcher mock.
+        $this->eventDispatcher->expects($this->any())->method("hasListeners")->willReturn(false);
+
+        $obj = new TestAbstractController();
+        $obj->setContainer($this->containerBuilder);
+
+        $res = $obj->toast("eventName", $toast);
         $this->assertNull($res);
     }
 }

@@ -20,12 +20,14 @@ use Symfony\Component\Security\Core\User\User;
 use Symfony\Component\Translation\TranslatorInterface;
 use WBW\Bundle\CoreBundle\Component\BaseEvent;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
+use WBW\Bundle\CoreBundle\Event\ToastEvent;
 use WBW\Bundle\CoreBundle\EventDispatcher\EventDispatcherHelper;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
 use WBW\Bundle\CoreBundle\Helper\FormHelper;
 use WBW\Bundle\CoreBundle\Helper\UserHelper;
 use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
+use WBW\Bundle\CoreBundle\Toast\ToastInterface;
 
 /**
  * Abstract controller.
@@ -152,5 +154,17 @@ abstract class AbstractController extends BaseController {
     protected function notify($eventName, NotificationInterface $notification) {
         $this->getLogger()->debug(sprintf("Core controller dispatch a notification event with name \"%s\"", $eventName));
         return $this->dispatchEvent($eventName, new NotificationEvent($eventName, $notification));
+    }
+
+    /**
+     * Toast.
+     *
+     * @param string $eventName The event name.
+     * @param ToastInterface $toast The toast.
+     * @return ToastEvent|null Returns the event in case of success, null otherwise.
+     */
+    protected function toast($eventName, ToastInterface $toast) {
+        $this->getLogger()->debug(sprintf("Core controller dispatch a toast event with name \"%s\"", $eventName));
+        return $this->dispatchEvent($eventName, new ToastEvent($eventName, $toast));
     }
 }

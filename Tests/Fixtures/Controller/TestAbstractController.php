@@ -13,6 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Controller;
 
 use WBW\Bundle\CoreBundle\Controller\AbstractController;
 use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
+use WBW\Bundle\CoreBundle\Toast\ToastInterface;
 
 /**
  * Test abstract controller.
@@ -90,5 +91,12 @@ class TestAbstractController extends AbstractController {
      */
     public function notify($eventName, NotificationInterface $notification) {
         return parent::notify($eventName, $notification);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function toast($eventName, ToastInterface $toast) {
+        return parent::toast($eventName, $toast);
     }
 }
