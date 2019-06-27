@@ -52,6 +52,10 @@ class WBWCoreExtension extends Extension {
             $serviceLoader->load("providers.yml");
         }
 
+        if (true === $config["security_event_listener"]) {
+            $serviceLoader->load("services/security_event_listener.yml");
+        }
+
         if (true === $config["twig"]) {
             $serviceLoader->load("twig.yml");
         }

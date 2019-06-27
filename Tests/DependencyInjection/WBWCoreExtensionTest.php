@@ -37,6 +37,7 @@ use WBW\Bundle\CoreBundle\DependencyInjection\Configuration;
 use WBW\Bundle\CoreBundle\DependencyInjection\WBWCoreExtension;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\EventListener\NotificationEventListener;
+use WBW\Bundle\CoreBundle\EventListener\SecurityEventListener;
 use WBW\Bundle\CoreBundle\EventListener\ToastEventListener;
 use WBW\Bundle\CoreBundle\Helper\FormHelper;
 use WBW\Bundle\CoreBundle\Manager\ColorManager;
@@ -117,6 +118,15 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(NotificationEventListener::class, $this->containerBuilder->get(NotificationEventListener::SERVICE_NAME));
         $this->assertInstanceOf(ToastEventListener::class, $this->containerBuilder->get(ToastEventListener::SERVICE_NAME));
 
+        try {
+
+            $this->containerBuilder->get(SecurityEventListener::SERVICE_NAME);
+        } catch (Exception $ex) {
+
+            $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
+            $this->assertContains(SecurityEventListener::SERVICE_NAME, $ex->getMessage());
+        }
+
         // Helpers
         $this->assertInstanceOf(FormHelper::class, $this->containerBuilder->get(FormHelper::SERVICE_NAME));
 
@@ -158,6 +168,24 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(RendererTwigExtension::class, $this->containerBuilder->get(RendererTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(StylesheetTwigExtension::class, $this->containerBuilder->get(StylesheetTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(UtilityTwigExtension::class, $this->containerBuilder->get(UtilityTwigExtension::SERVICE_NAME));
+    }
+
+    /**
+     * Tests the load() method.
+     *
+     * @return void
+     * @throws Exception Throws an exception if an error occurs.
+     */
+    public function testLoadWitSecurityEventListener() {
+
+        // Set the configs mock.
+        $this->configs["wbw_core"]["security_event_listener"] = true;
+
+        $obj = new WBWCoreExtension();
+
+        $this->assertNull($obj->load($this->configs, $this->containerBuilder));
+
+        $this->assertInstanceOf(SecurityEventListener::class, $this->containerBuilder->get(SecurityEventListener::SERVICE_NAME));
     }
 
     /**

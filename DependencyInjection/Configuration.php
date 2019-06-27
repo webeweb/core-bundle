@@ -34,6 +34,7 @@ class Configuration implements ConfigurationInterface {
             ->booleanNode("commands")->defaultTrue()->info("Load commands")->end()
             ->booleanNode("event_listeners")->defaultTrue()->info("Load event listeners")->end()
             ->booleanNode("providers")->defaultTrue()->info("Load providers")->end()
+            ->booleanNode("security_event_listener")->defaultFalse()->info("Load Security event listener")->end()
             ->booleanNode("twig")->defaultTrue()->info("Load Twig extensions")->end()
             ->end();
 
