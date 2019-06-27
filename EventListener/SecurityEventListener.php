@@ -29,12 +29,19 @@ class SecurityEventListener {
     use UserTrait;
 
     /**
+     * Service name.
+     *
+     * @var string
+     */
+    const SERVICE_NAME = "wbw.core.event_listener.security";
+
+    /**
      * Constructor.
      *
      * @param TranslatorInterface $translator The translator.
      * @param UserInterface $user The user.
      */
-    public function __construct(TranslatorInterface $translator, UserInterface $user) {
+    public function __construct(TranslatorInterface $translator, UserInterface $user = null) {
         $this->setTranslator($translator);
         $this->setUser($user);
     }

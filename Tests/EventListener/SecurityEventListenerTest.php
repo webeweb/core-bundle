@@ -42,6 +42,8 @@ class SecurityEventListenerTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
+        $this->assertEquals("wbw.core.event_listener.security", SecurityEventListener::SERVICE_NAME);
+
         $obj = new SecurityEventListener($this->translator, $this->user);
 
         $this->assertSame($this->translator, $obj->getTranslator());
