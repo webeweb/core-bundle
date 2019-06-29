@@ -12,6 +12,7 @@ CHANGELOG
 - Add Danger toast
 - Add Default toast
 - Add Info toast
+- Add Security event listener into Dependency injection configuration
 - Add Success toast
 - Add Warning toast
 
