@@ -1,0 +1,4 @@
+QUOTE
+=====
+
+Redaction in progress...
