@@ -162,9 +162,9 @@ class EmailLayout {
     }
 
     /**
-     * Get the unsuscribe URL.
+     * Get the unsubscribe URL.
      *
-     * @return string Returns the unsuscribe URL.
+     * @return string Returns the unsubscribe URL.
      */
     public function getUnsubscribeURL() {
         return $this->unsubscribeURL;
@@ -259,9 +259,9 @@ class EmailLayout {
     }
 
     /**
-     * Set the unsuscribe URL.
+     * Set the unsubscribe URL.
      *
-     * @param string $unsubscribeURL The unsuscribe URL.
+     * @param string $unsubscribeURL The unsubscribe URL.
      * @return EmailLayout Returns this email layout.
      */
     public function setUnsubscribeURL($unsubscribeURL) {
