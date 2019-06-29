@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\CoreBundle\EventDispatcher;
 
-use Symfony\Component\EventDispatcher\EventDispatcher;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpKernel\Kernel;
 use WBW\Bundle\CoreBundle\Component\BaseEvent;
