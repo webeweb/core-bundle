@@ -77,6 +77,12 @@ $ php bin/console assets:install
 
 ---
 
+## Usage
+
+Read the [documentation](Resources/doc/index.md) (redaction in progress).
+
+---
+
 ## Testing
 
 To test the package, is better to clone this repository on your computer.
