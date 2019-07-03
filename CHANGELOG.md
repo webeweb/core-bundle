@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [2.7.1](https://github.com/webeweb/core-bundle/tree/v2.7.1) (2019-07-03)
+
+- Fix filename into World's wisdom quote provider
+
 ### [2.7.0](https://github.com/webeweb/core-bundle/tree/v2.7.0) (2019-07-03)
 
 - Add Core events

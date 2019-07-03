@@ -3,6 +3,6 @@ services:
 
     wbw.core.provider.quote.worlds_wisdom:
         class:     WBW\Bundle\CoreBundle\Quote\YamlQuoteProvider
-        arguments: ["@=service('kernel').locateResource('@WBWCoreBundle/translations/WorldsWisdom.fr.yml')"]
+        arguments: ["@=service('kernel').locateResource('@WBWCoreBundle/Resources/translations/WorldsWisdom.fr.yml')"]
         tags:
             - { name: "wbw.core.provider.quote" }
