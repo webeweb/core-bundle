@@ -59,5 +59,9 @@ class WBWCoreExtension extends Extension {
         if (true === $config["twig"]) {
             $serviceLoader->load("twig.yml");
         }
+
+        if (true === $config["quote_providers"]["worlds_wisdom"]) {
+            $serviceLoader->load("services/worlds_wisdom_quote_provider.yml");
+        }
     }
 }

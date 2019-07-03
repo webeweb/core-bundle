@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### master
+### [2.7.0](https://github.com/webeweb/core-bundle/tree/v2.7.0) (2019-07-03)
 
 - Add Core events
 - Add Toast event
@@ -15,6 +15,7 @@ CHANGELOG
 - Add Security event listener into Dependency injection configuration
 - Add Success toast
 - Add Warning toast
+- Add World's wisdom quote provider into Dependency injection configuration
 
 ### [2.6.0](https://github.com/webeweb/core-bundle/tree/v2.6.0) (2019-06-24)
 

@@ -43,6 +43,7 @@ use WBW\Bundle\CoreBundle\Helper\FormHelper;
 use WBW\Bundle\CoreBundle\Manager\ColorManager;
 use WBW\Bundle\CoreBundle\Manager\QuoteManager;
 use WBW\Bundle\CoreBundle\Manager\ThemeManager;
+use WBW\Bundle\CoreBundle\Quote\YamlQuoteProvider;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\FontAwesomeTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\JQueryInputMaskTwigExtension;
@@ -61,6 +62,13 @@ use WBW\Bundle\CoreBundle\Twig\Extension\UtilityTwigExtension;
  * @package WBW\Bundle\CoreBundle\Tests\DependencyInjection
  */
 class WBWCoreExtensionTest extends AbstractTestCase {
+
+    /**
+     * World's wisdom quote provider.
+     *
+     * @var string
+     */
+    const WORLDS_WISDOM_QUOTE_PROVIDER_SERVICE_NAME = "wbw.core.provider.quote.worlds_wisdom";
 
     /**
      * Configs.
@@ -82,6 +90,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
                 "event_listeners" => true,
                 "providers"       => true,
                 "twig"            => true,
+                "quote_providers" => [],
             ],
         ];
     }
@@ -156,6 +165,15 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(TealColorProvider::class, $this->containerBuilder->get(TealColorProvider::SERVICE_NAME));
         $this->assertInstanceOf(YellowColorProvider::class, $this->containerBuilder->get(YellowColorProvider::SERVICE_NAME));
 
+        try {
+
+            $this->containerBuilder->get(self::WORLDS_WISDOM_QUOTE_PROVIDER_SERVICE_NAME);
+        } catch (Exception $ex) {
+
+            $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
+            $this->assertContains(self::WORLDS_WISDOM_QUOTE_PROVIDER_SERVICE_NAME, $ex->getMessage());
+        }
+
         // Plug-ins Twig extensions
         $this->assertInstanceOf(FontAwesomeTwigExtension::class, $this->containerBuilder->get(FontAwesomeTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(JQueryInputMaskTwigExtension::class, $this->containerBuilder->get(JQueryInputMaskTwigExtension::SERVICE_NAME));
@@ -176,7 +194,25 @@ class WBWCoreExtensionTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testLoadWitSecurityEventListener() {
+    public function testLoadWitWorldsWisdomQuoteProvider() {
+
+        // Set the configs mock.
+        $this->configs["wbw_core"]["quote_providers"]["worlds_wisdom"] = true;
+
+        $obj = new WBWCoreExtension();
+
+        $this->assertNull($obj->load($this->configs, $this->containerBuilder));
+
+        $this->assertInstanceOf(YamlQuoteProvider::class, $this->containerBuilder->get(self::WORLDS_WISDOM_QUOTE_PROVIDER_SERVICE_NAME));
+    }
+
+    /**
+     * Tests the load() method.
+     *
+     * @return void
+     * @throws Exception Throws an exception if an error occurs.
+     */
+    public function testLoadWithSecurityEventListener() {
 
         // Set the configs mock.
         $this->configs["wbw_core"]["security_event_listener"] = true;

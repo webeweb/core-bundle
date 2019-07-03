@@ -36,6 +36,9 @@ class Configuration implements ConfigurationInterface {
             ->booleanNode("providers")->defaultTrue()->info("Load providers")->end()
             ->booleanNode("security_event_listener")->defaultFalse()->info("Load Security event listener")->end()
             ->booleanNode("twig")->defaultTrue()->info("Load Twig extensions")->end()
+            ->arrayNode("quote_providers")->addDefaultsIfNotSet()->children()
+                ->booleanNode("worlds_wisdom")->defaultFalse()->info("Load World's wisdom")->end()
+                ->end()
             ->end();
 
         return $treeBuilder;
