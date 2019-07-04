@@ -1,8 +1,7 @@
 COLOR
 =====
 
-This package contains the `ColorProviderInterface` to help GUI building or customize
-some elements.
+This package contains some `ColorProviderInterface` to help GUI building or customize.
 
 The following color providers are available:
 
