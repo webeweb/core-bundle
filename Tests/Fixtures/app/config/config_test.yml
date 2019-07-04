@@ -41,3 +41,8 @@ monolog:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+
+wbw_core:
+    quote_providers:
+        worlds_wisdom: true
+    security_event_listener: true
