@@ -44,8 +44,7 @@ class WBWCoreBundleTest extends AbstractTestCase {
 
         $obj = new WBWCoreBundle();
 
-        $res = $obj->getAssetsRelativeDirectory();
-        $this->assertEquals(AssetsProviderInterface::ASSETS_RELATIVE_DIRECTORY, $res);
+        $this->assertEquals(AssetsProviderInterface::ASSETS_RELATIVE_DIRECTORY, $obj->getAssetsRelativeDirectory());
     }
 
     /**
@@ -57,7 +56,6 @@ class WBWCoreBundleTest extends AbstractTestCase {
 
         $obj = new WBWCoreBundle();
 
-        $res = $obj->getContainerExtension();
-        $this->assertInstanceOf(WBWCoreExtension::class, $res);
+        $this->assertInstanceOf(WBWCoreExtension::class, $obj->getContainerExtension());
     }
 }
