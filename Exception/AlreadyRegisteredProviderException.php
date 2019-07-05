@@ -30,6 +30,7 @@ class AlreadyRegisteredProviderException extends AbstractException {
      * @throws ReflectionException Throws a reflection exception if an error occurs.
      */
     public function __construct(ProviderInterface $provider) {
-        parent::__construct(sprintf("The provider \"%s\" is already registered", ObjectHelper::getName($provider)), 500);
+        $format = "The provider \"%s\" is already registered";
+        parent::__construct(sprintf($format, ObjectHelper::getName($provider)), 500);
     }
 }

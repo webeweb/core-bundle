@@ -50,7 +50,8 @@ class BadUserRoleException extends AbstractException {
      * @param string $originUrl The route.
      */
     public function __construct(UserInterface $user, array $roles, $redirectUrl, $originUrl) {
-        parent::__construct(sprintf("User \"%s\" is not allowed to access to \"%s\" with roles [%s]", $user->getUsername(), $originUrl, implode(",", $roles)), HTTPInterface::HTTP_STATUS_FORBIDDEN);
+        $format = "User \"%s\" is not allowed to access to \"%s\" with roles [%s]";
+        parent::__construct(sprintf($format, $user->getUsername(), $originUrl, implode(",", $roles)), HTTPInterface::HTTP_STATUS_FORBIDDEN);
         $this->setOriginUrl($originUrl);
         $this->setRedirectUrl($redirectUrl);
         $this->setRoles($roles);

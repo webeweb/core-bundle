@@ -32,12 +32,11 @@ class RedirectResponseExceptionTest extends AbstractTestCase {
         $originUrl   = "https://github.com/webeweb";
         $redirectUrl = "https://github.com";
 
-        $ex = new RedirectResponseException($redirectUrl, $originUrl);
+        $obj = new RedirectResponseException($redirectUrl, $originUrl);
 
-        $res = "You're not allowed to access to \"https://github.com/webeweb\"";
-        $this->assertEquals($res, $ex->getMessage());
+        $this->assertEquals("You're not allowed to access to \"https://github.com/webeweb\"", $obj->getMessage());
 
-        $this->assertEquals($originUrl, $ex->getOriginUrl());
-        $this->assertEquals($redirectUrl, $ex->getRedirectUrl());
+        $this->assertEquals($originUrl, $obj->getOriginUrl());
+        $this->assertEquals($redirectUrl, $obj->getRedirectUrl());
     }
 }

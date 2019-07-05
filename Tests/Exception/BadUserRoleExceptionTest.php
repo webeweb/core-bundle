@@ -35,14 +35,13 @@ class BadUserRoleExceptionTest extends AbstractTestCase {
         $originUrl   = "https://github.com/webeweb";
         $redirectUrl = "https://github.com";
 
-        $ex = new BadUserRoleException($user, $roles, $redirectUrl, $originUrl);
+        $obj = new BadUserRoleException($user, $roles, $redirectUrl, $originUrl);
 
-        $res = "User \"anonymous\" is not allowed to access to \"https://github.com/webeweb\" with roles [ROLE_ADMIN,ROLE_USER]";
-        $this->assertEquals($res, $ex->getMessage());
+        $this->assertEquals("User \"anonymous\" is not allowed to access to \"https://github.com/webeweb\" with roles [ROLE_ADMIN,ROLE_USER]", $obj->getMessage());
 
-        $this->assertEquals($originUrl, $ex->getOriginUrl());
-        $this->assertEquals($redirectUrl, $ex->getRedirectUrl());
-        $this->assertEquals($roles, $ex->getRoles());
-        $this->assertSame($user, $ex->getUser());
+        $this->assertEquals($originUrl, $obj->getOriginUrl());
+        $this->assertEquals($redirectUrl, $obj->getRedirectUrl());
+        $this->assertEquals($roles, $obj->getRoles());
+        $this->assertSame($user, $obj->getUser());
     }
 }
