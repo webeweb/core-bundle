@@ -77,6 +77,10 @@ abstract class AbstractFormTypeTestCase extends AbstractTestCase {
             ];
             return $this->formBuilder;
         });
+        $this->formBuilder->expects($this->any())->method("remove")->willReturnCallback(function($child) {
+            unset($this->childs[$child]);
+            return $this->formBuilder;
+        });
         $this->formBuilder->expects($this->any())->method("addEventListener")->willReturn($this->formBuilder);
         $this->formBuilder->expects($this->any())->method("addModelTransformer")->willReturn($this->formBuilder);
         $this->formBuilder->expects($this->any())->method("get")->willReturn($this->formBuilder);
