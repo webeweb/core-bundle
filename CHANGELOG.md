@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [2.7.3](https://github.com/webeweb/core-bundle/tree/v2.7.3) (2019-07-22)
+
+- Add PHP extensions into Composer
+
 ### [2.7.2](https://github.com/webeweb/core-bundle/tree/v2.7.2) (2019-07-08)
 
 - Add remove() method into abstract form type test case
