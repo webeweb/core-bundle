@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [2.8.0](https://github.com/webeweb/core-bundle/tree/v2.8.0) (2019-08-06)
+
+- Add Choice value interface
+
 ### [2.7.3](https://github.com/webeweb/core-bundle/tree/v2.7.3) (2019-07-22)
 
 - Add PHP extensions into Composer
