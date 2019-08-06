@@ -177,6 +177,7 @@ abstract class AbstractTestCase extends TestCase {
      * {@inheritDoc}
      */
     protected function setUp() {
+        parent::setUp();
 
         // Set an Event dispatcher mock.
         $this->eventDispatcher = $this->getMockBuilder(EventDispatcherInterface::class)->getMock();

@@ -91,6 +91,9 @@ class FormFactoryTest extends AbstractTestCase {
         $this->assertEquals("This option must implements [Translated]ChoiceLabelInterface", $res($this->choiceValues[0]));
         $this->assertEquals("This option must implements [Translated]ChoiceLabelInterface", $res($this->choiceValues[1]));
 
+        $this->assertEquals("This option must implements [Translated]ChoiceLabelInterface", $res($this->choices[0]));
+        $this->assertEquals("This option must implements [Translated]ChoiceLabelInterface", $res($this->choices[1]));
+
         $this->assertEquals("Empty selection", $res(null));
         $this->assertEquals("─ This option must implements [Translated]ChoiceLabelInterface", $res($this->entities[0]));
         $this->assertEquals("─ This option must implements [Translated]ChoiceLabelInterface", $res($this->entities[1]));
@@ -184,6 +187,8 @@ class FormFactoryTest extends AbstractTestCase {
         $this->assertSame($arg[1], $res["choices"][1]);
 
         $this->assertInstanceOf(Closure::class, $res["choice_label"]);
+
+        $this->assertInstanceOf(Closure::class, $res["choice_value"]);
     }
 
     /**
@@ -208,6 +213,5 @@ class FormFactoryTest extends AbstractTestCase {
         $this->assertSame($this->entities[2], $res["choices"][3]);
 
         $this->assertInstanceOf(Closure::class, $res["choice_label"]);
-        $this->assertEquals("Empty selection", $res["choice_label"]($res["choices"][0]));
     }
 }
