@@ -12,6 +12,8 @@
 namespace WBW\Bundle\CoreBundle\Form\Factory;
 
 use Closure;
+use ReflectionClass;
+use ReflectionException;
 use WBW\Bundle\CoreBundle\Entity\ChoiceValueInterface;
 use WBW\Bundle\CoreBundle\Form\Renderer\FormRenderer;
 use WBW\Library\Core\Argument\ArrayHelper;
@@ -51,6 +53,20 @@ class FormFactory {
     }
 
     /**
+     * Determines if a class is a choice value interface.
+     *
+     * @param string $class The class.
+     * @return bool Returns true in case of success, false otherwise.
+     */
+    protected static function isChoiceValueInterface($class) {
+        try {
+            return (new ReflectionClass($class))->implementsInterface(ChoiceValueInterface::class);
+        } catch (ReflectionException $ex) {
+            return false;
+        }
+    }
+
+    /**
      * Create a choice type.
      *
      * @param array $choices The choices.
@@ -78,7 +94,7 @@ class FormFactory {
             "choice_label" => static::getChoiceLabelClosure($options),
         ];
 
-        if (true === is_subclass_of($class, ChoiceValueInterface::class)) {
+        if (true === self::isChoiceValueInterface($class)) {
             $output["choice_value"] = static::getChoiceValueClosure();
         }
 
