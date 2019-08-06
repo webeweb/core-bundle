@@ -11,7 +11,10 @@
 
 namespace WBW\Bundle\CoreBundle\Form\Factory;
 
+use Closure;
+use WBW\Bundle\CoreBundle\Entity\ChoiceValueInterface;
 use WBW\Bundle\CoreBundle\Form\Renderer\FormRenderer;
+use WBW\Library\Core\Argument\ArrayHelper;
 
 /**
  * Form factory.
@@ -20,6 +23,32 @@ use WBW\Bundle\CoreBundle\Form\Renderer\FormRenderer;
  * @package WBW\Bundle\CoreBundle\Form\Factory
  */
 class FormFactory {
+
+    /**
+     * Get a choice label closure.
+     *
+     * @param array $options The options
+     * @return Closure Returns the choice label closure.
+     */
+    protected static function getChoiceLabelClosure(array $options) {
+
+        $options["translator"] = ArrayHelper::get($options, "translator", null);
+
+        return function($entity) use ($options) {
+            return FormRenderer::renderOption($entity, $options["translator"]);
+        };
+    }
+
+    /**
+     * Get a choice value closure.
+     *
+     * @return Closure Returns the choice value closure.
+     */
+    public static function getChoiceValueClosure() {
+        return function(ChoiceValueInterface $entity = null) {
+            return null !== $entity ? $entity->getChoiceValue() : "";
+        };
+    }
 
     /**
      * Create a choice type.
@@ -43,29 +72,21 @@ class FormFactory {
      */
     public static function newEntityType($class, array $choices = [], array $options = []) {
 
-        // Check the options.
-        if (false === array_key_exists("empty", $options)) {
-            $options["empty"] = false;
-        }
-        if (false === array_key_exists("translator", $options)) {
-            $options["translator"] = null;
-        }
-
-        // Initialize the output.
         $output = [
             "class"        => $class,
             "choices"      => [],
-            "choice_label" => function($entity) use ($options) {
-                return FormRenderer::renderOption($entity, $options["translator"]);
-            },
+            "choice_label" => static::getChoiceLabelClosure($options),
         ];
 
-        // Add an empty choice.
+        if (true === is_subclass_of($class, ChoiceValueInterface::class)) {
+            $output["choice_value"] = static::getChoiceValueClosure();
+        }
+
+        $options["empty"] = ArrayHelper::get($options, "empty", false);
         if (true === $options["empty"]) {
             $output["choices"][] = null;
         }
 
-        // Add all choices.
         $output["choices"] = array_merge($output["choices"], $choices);
 
         return $output;

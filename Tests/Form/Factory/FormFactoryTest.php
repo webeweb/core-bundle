@@ -11,9 +11,13 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Form\Factory;
 
+use Closure;
+use WBW\Bundle\CoreBundle\Entity\ChoiceValueInterface;
 use WBW\Bundle\CoreBundle\Form\Factory\FormFactory;
 use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
+use WBW\Bundle\CoreBundle\Tests\Entity\TestChoiceValue;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Form\Factory\TestFormFactory;
 
 /**
  * Form factory test.
@@ -24,20 +28,108 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class FormFactoryTest extends AbstractTestCase {
 
     /**
+     * Choice values
+     *
+     * @var ChoiceValueInterface[]
+     */
+    private $choiceValues;
+
+    /**
+     * Choices.
+     *
+     * @var array
+     */
+    private $choices;
+
+    /**
+     * Entities.
+     *
+     * @var NavigationNode[]
+     */
+    private $entities;
+
+    /**
+     * {@inheritDoc}
+     */
+    protected function setUp() {
+        parent::setUp();
+
+        // Set a choice values mock.
+        $this->choiceValues = [
+            $this->getMockBuilder(ChoiceValueInterface::class)->getMock(),
+            $this->getMockBuilder(ChoiceValueInterface::class)->getMock(),
+        ];
+
+        $this->choiceValues[0]->expects($this->any())->method("getChoiceValue")->willReturn(null);
+        $this->choiceValues[1]->expects($this->any())->method("getChoiceValue")->willReturn("value");
+
+        // Set a choices mock.
+        $this->choices = [
+            0 => "0",
+            1 => "1",
+            2 => "2",
+        ];
+
+        // Set an entities mock.
+        $this->entities = [
+            new NavigationNode("id1"),
+            new NavigationNode("id2"),
+            new NavigationNode("id3"),
+        ];
+    }
+
+    /**
+     * Tests the getChoiceLabelClosure() method.
+     *
+     * @return void
+     */
+    public function testGetChoiceLabelClosure() {
+
+        $res = TestFormFactory::getChoiceLabelClosure([]);
+        $this->assertInstanceOf(Closure::class, $res);
+
+        $this->assertEquals("This option must implements [Translated]ChoiceLabelInterface", $res($this->choiceValues[0]));
+        $this->assertEquals("This option must implements [Translated]ChoiceLabelInterface", $res($this->choiceValues[1]));
+
+        $this->assertEquals("Empty selection", $res(null));
+        $this->assertEquals("─ This option must implements [Translated]ChoiceLabelInterface", $res($this->entities[0]));
+        $this->assertEquals("─ This option must implements [Translated]ChoiceLabelInterface", $res($this->entities[1]));
+        $this->assertEquals("─ This option must implements [Translated]ChoiceLabelInterface", $res($this->entities[2]));
+    }
+
+    /**
+     * Tests the getChoiceValueClosure() method.
+     *
+     * @return void
+     */
+    public function testGetChoiceValueClosure() {
+
+        $res = FormFactory::getChoiceValueClosure();
+        $this->assertInstanceOf(Closure::class, $res);
+
+        $this->assertEquals("", $res($this->choiceValues[0]));
+        $this->assertEquals("value", $res($this->choiceValues[1]));
+    }
+
+    /**
      * Tests the newChoiceType() method.
      *
      * @return void
      */
     public function testNewChoiceType() {
 
-        $arg = [
-            0 => "0",
-            1 => "1",
-            2 => "2",
-        ];
+        $res = FormFactory::newChoiceType($this->choices);
+        $this->assertCount(1, $res);
+        $this->assertArrayHasKey("choices", $res);
 
-        $res = ["choices" => ["0" => 0, "1" => 1, "2" => 2]];
-        $this->assertEquals($res, FormFactory::newChoiceType($arg));
+        $this->assertCount(3, $res["choices"]);
+        $this->assertArrayHasKey(0, $res["choices"]);
+        $this->assertArrayHasKey(1, $res["choices"]);
+        $this->assertArrayHasKey(2, $res["choices"]);
+
+        $this->assertEquals("0", $res["choices"][0]);
+        $this->assertEquals("1", $res["choices"][1]);
+        $this->assertEquals("2", $res["choices"][2]);
     }
 
     /**
@@ -47,20 +139,20 @@ class FormFactoryTest extends AbstractTestCase {
      */
     public function testNewEntityType() {
 
-        $arg = [
-            new NavigationNode("id1"),
-            new NavigationNode("id2"),
-            new NavigationNode("id3"),
-        ];
+        $res = FormFactory::newEntityType(NavigationNode::class, $this->entities);
+        $this->assertCount(3, $res);
+        $this->assertArrayHasKey("class", $res);
+        $this->assertArrayHasKey("choice_label", $res);
+        $this->assertArrayHasKey("choices", $res);
 
-        $res = FormFactory::newEntityType(NavigationNode::class, $arg);
         $this->assertEquals(NavigationNode::class, $res["class"]);
-        $this->assertCount(3, $res["choices"]);
-        $this->assertSame($arg[0], $res["choices"][0]);
-        $this->assertSame($arg[1], $res["choices"][1]);
-        $this->assertSame($arg[2], $res["choices"][2]);
-        $this->assertTrue(is_callable($res["choice_label"]));
 
+        $this->assertCount(3, $res["choices"]);
+        $this->assertSame($this->entities[0], $res["choices"][0]);
+        $this->assertSame($this->entities[1], $res["choices"][1]);
+        $this->assertSame($this->entities[2], $res["choices"][2]);
+
+        $this->assertInstanceOf(Closure::class, $res["choice_label"]);
         $this->assertEquals("─ This option must implements [Translated]ChoiceLabelInterface", $res["choice_label"]($res["choices"][0]));
         $this->assertEquals("─ This option must implements [Translated]ChoiceLabelInterface", $res["choice_label"]($res["choices"][1]));
         $this->assertEquals("─ This option must implements [Translated]ChoiceLabelInterface", $res["choice_label"]($res["choices"][2]));
@@ -71,26 +163,51 @@ class FormFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewEntityTypeWithEmpty() {
+    public function testNewEntityTypeWithChoiceValueInterface() {
 
         $arg = [
-            new NavigationNode("id1"),
-            new NavigationNode("id2"),
-            new NavigationNode("id3"),
+            new TestChoiceValue(),
+            new TestChoiceValue(),
         ];
 
-        $res = FormFactory::newEntityType(NavigationNode::class, $arg, ["empty" => true]);
+        $res = FormFactory::newEntityType(TestChoiceValue::class, $arg);
+        $this->assertCount(4, $res);
+        $this->assertArrayHasKey("class", $res);
+        $this->assertArrayHasKey("choice_label", $res);
+        $this->assertArrayHasKey("choice_value", $res);
+        $this->assertArrayHasKey("choices", $res);
+
+        $this->assertEquals(TestChoiceValue::class, $res["class"]);
+
+        $this->assertCount(2, $res["choices"]);
+        $this->assertSame($arg[0], $res["choices"][0]);
+        $this->assertSame($arg[1], $res["choices"][1]);
+
+        $this->assertInstanceOf(Closure::class, $res["choice_label"]);
+    }
+
+    /**
+     * Tests the newEntityType method.
+     *
+     * @return void
+     */
+    public function testNewEntityTypeWithEmpty() {
+
+        $res = FormFactory::newEntityType(NavigationNode::class, $this->entities, ["empty" => true]);
+        $this->assertCount(3, $res);
+        $this->assertArrayHasKey("class", $res);
+        $this->assertArrayHasKey("choice_label", $res);
+        $this->assertArrayHasKey("choices", $res);
+
         $this->assertEquals(NavigationNode::class, $res["class"]);
+
         $this->assertCount(4, $res["choices"]);
         $this->assertNull($res["choices"][0]);
-        $this->assertSame($arg[0], $res["choices"][1]);
-        $this->assertSame($arg[1], $res["choices"][2]);
-        $this->assertSame($arg[2], $res["choices"][3]);
-        $this->assertTrue(is_callable($res["choice_label"]));
+        $this->assertSame($this->entities[0], $res["choices"][1]);
+        $this->assertSame($this->entities[1], $res["choices"][2]);
+        $this->assertSame($this->entities[2], $res["choices"][3]);
 
+        $this->assertInstanceOf(Closure::class, $res["choice_label"]);
         $this->assertEquals("Empty selection", $res["choice_label"]($res["choices"][0]));
-        $this->assertEquals("─ This option must implements [Translated]ChoiceLabelInterface", $res["choice_label"]($res["choices"][1]));
-        $this->assertEquals("─ This option must implements [Translated]ChoiceLabelInterface", $res["choice_label"]($res["choices"][2]));
-        $this->assertEquals("─ This option must implements [Translated]ChoiceLabelInterface", $res["choice_label"]($res["choices"][3]));
     }
 }
