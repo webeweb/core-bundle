@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Manager;
 
+use Psr\Log\LoggerInterface;
 use Twig\Environment;
 use WBW\Bundle\CoreBundle\Provider\ThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Service\TwigEnvironmentTrait;
@@ -38,10 +39,11 @@ abstract class AbstractThemeManager extends AbstractManager {
     /**
      * Constructor.
      *
+     * @param LoggerInterface $logger The logger.
      * @param Environment $twigEnvironment The Twig environment.
      */
-    public function __construct(Environment $twigEnvironment) {
-        parent::__construct();
+    public function __construct(LoggerInterface $logger, Environment $twigEnvironment) {
+        parent::__construct($logger);
         $this->setIndex($this->initIndex());
         $this->setTwigEnvironment($twigEnvironment);
     }

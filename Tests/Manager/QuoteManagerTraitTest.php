@@ -43,7 +43,7 @@ class QuoteManagerTraitTest extends AbstractTestCase {
     public function testSetQuoteManager() {
 
         // Set a Quote manager mock.
-        $quoteManager = new QuoteManager($this->twigEnvironment);
+        $quoteManager = new QuoteManager($this->logger);
 
         $obj = new TestQuoteManagerTrait();
 

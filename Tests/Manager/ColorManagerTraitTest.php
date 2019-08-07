@@ -43,7 +43,7 @@ class ColorManagerTraitTest extends AbstractTestCase {
     public function testSetColorManager() {
 
         // Set a Color manager mock.
-        $colorManager = new ColorManager($this->twigEnvironment);
+        $colorManager = new ColorManager($this->logger);
 
         $obj = new TestColorManagerTrait();
 

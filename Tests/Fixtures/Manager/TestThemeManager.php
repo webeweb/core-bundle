@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Manager;
 
+use Psr\Log\LoggerInterface;
 use Twig\Environment;
 use WBW\Bundle\CoreBundle\Manager\AbstractThemeManager;
 use WBW\Bundle\CoreBundle\Provider\ThemeProviderInterface;
@@ -25,12 +26,10 @@ use WBW\Library\Core\Argument\ObjectHelper;
 class TestThemeManager extends AbstractThemeManager {
 
     /**
-     * Constructor.
-     *
-     * @param Environment $twigEnvironment The Twig environment.
+     * {@inheritDoc}.
      */
-    public function __construct(Environment $twigEnvironment) {
-        parent::__construct($twigEnvironment);
+    public function __construct(LoggerInterface $logger, Environment $twigEnvironment) {
+        parent::__construct($logger, $twigEnvironment);
     }
 
     /**

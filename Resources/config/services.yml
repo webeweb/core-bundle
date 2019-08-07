@@ -11,16 +11,18 @@ services:
         public:    true
 
     wbw.core.manager.color:
-        class:  WBW\Bundle\CoreBundle\Manager\ColorManager
-        public: true
+        class:     WBW\Bundle\CoreBundle\Manager\ColorManager
+        public:    true
+        arguments: ["@logger"]
 
     wbw.core.manager.quote:
-        class:  WBW\Bundle\CoreBundle\Manager\QuoteManager
-        public: true
+        class:     WBW\Bundle\CoreBundle\Manager\QuoteManager
+        public:    true
+        arguments: ["@logger"]
 
     wbw.core.manager.theme:
         class:     WBW\Bundle\CoreBundle\Manager\ThemeManager
-        arguments: ["@twig"]
+        arguments: ["@logger", "@twig"]
         public:    true
         calls:
             - ["setApplicationThemeProvider",           ["@?wbw.core.provider.theme.application"]]

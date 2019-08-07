@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Manager;
 
+use Psr\Log\LoggerInterface;
 use WBW\Bundle\CoreBundle\Manager\AbstractManager;
 
 /**
@@ -22,9 +23,9 @@ use WBW\Bundle\CoreBundle\Manager\AbstractManager;
 class TestManager extends AbstractManager {
 
     /**
-     * Constructor.
+     * {@inheritDoc}
      */
-    public function __construct() {
-        parent::__construct();
+    public function __construct(LoggerInterface $logger) {
+        parent::__construct($logger);
     }
 }

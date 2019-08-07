@@ -35,7 +35,7 @@ class AbstractThemeManagerTest extends AbstractTestCase {
         // Set a Theme provider mock.
         $provider = $this->getMockBuilder(ThemeProviderInterface::class)->getMock();
 
-        $obj = new TestThemeManager($this->twigEnvironment);
+        $obj = new TestThemeManager($this->logger, $this->twigEnvironment);
         $obj->setProvider(ThemeProviderInterface::class, $provider);
 
         $obj->addGlobal();
@@ -54,7 +54,7 @@ class AbstractThemeManagerTest extends AbstractTestCase {
      */
     public function testAddGlobalWithNull() {
 
-        $obj = new TestThemeManager($this->twigEnvironment);
+        $obj = new TestThemeManager($this->logger, $this->twigEnvironment);
 
         $obj->addGlobal();
 
@@ -70,10 +70,12 @@ class AbstractThemeManagerTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $obj = new TestThemeManager($this->twigEnvironment);
+        $obj = new TestThemeManager($this->logger, $this->twigEnvironment);
 
+        $this->assertSame($this->logger, $obj->getLogger());
         $this->assertNull($obj->getProvider(ThemeProviderInterface::class));
         $this->assertCount(0, $obj->getProviders());
+
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 
@@ -88,7 +90,7 @@ class AbstractThemeManagerTest extends AbstractTestCase {
         // Set a Theme provider mock.
         $provider = $this->getMockBuilder(ThemeProviderInterface::class)->getMock();
 
-        $obj = new TestThemeManager($this->twigEnvironment);
+        $obj = new TestThemeManager($this->logger, $this->twigEnvironment);
 
         $obj->setProvider(ThemeProviderInterface::class, $provider);
         $this->assertSame($provider, $obj->getProvider(ThemeProviderInterface::class));
@@ -106,7 +108,7 @@ class AbstractThemeManagerTest extends AbstractTestCase {
         $provider1 = $this->getMockBuilder(ThemeProviderInterface::class)->getMock();
         $provider2 = $this->getMockBuilder(ThemeProviderInterface::class)->getMock();
 
-        $obj = new TestThemeManager($this->twigEnvironment);
+        $obj = new TestThemeManager($this->logger, $this->twigEnvironment);
 
         $obj->setProvider(ThemeProviderInterface::class, $provider1);
         $this->assertSame($provider1, $obj->getProvider(ThemeProviderInterface::class));

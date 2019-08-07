@@ -38,7 +38,7 @@ class EventDispatcherTraitTest extends AbstractTestCase {
         parent::setUp();
 
         // Set a Theme manager mock.
-        $this->themeManager = new ThemeManager($this->twigEnvironment);
+        $this->themeManager = new ThemeManager($this->logger, $this->twigEnvironment);
     }
 
     /**

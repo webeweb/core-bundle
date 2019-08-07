@@ -46,7 +46,7 @@ class AbstractManagerTest extends AbstractTestCase {
      */
     public function testAddProvider() {
 
-        $obj = new TestManager();
+        $obj = new TestManager($this->logger);
 
         $obj->addProvider($this->provider);
         $this->assertSame($this->provider, $obj->getProviders()[0]);
@@ -60,7 +60,7 @@ class AbstractManagerTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $obj = new TestManager();
+        $obj = new TestManager($this->logger);
 
         $this->assertEquals([], $obj->getProviders());
         $this->assertEquals(0, $obj->size());
@@ -73,7 +73,7 @@ class AbstractManagerTest extends AbstractTestCase {
      */
     public function testContains() {
 
-        $obj = new TestManager();
+        $obj = new TestManager($this->logger);
 
         $this->assertFalse($obj->contains($this->provider));
 
@@ -88,7 +88,7 @@ class AbstractManagerTest extends AbstractTestCase {
      */
     public function testHasProviders() {
 
-        $obj = new TestManager();
+        $obj = new TestManager($this->logger);
 
         $this->assertFalse($obj->hasProviders());
 
@@ -106,7 +106,7 @@ class AbstractManagerTest extends AbstractTestCase {
         // Set a Provider mock.
         $provider = $this->getMockBuilder(ProviderInterface::class)->getMock();
 
-        $obj = new TestManager();
+        $obj = new TestManager($this->logger);
 
         $obj->addProvider($provider);
         $this->assertEquals(-1, $obj->indexOf($this->provider));

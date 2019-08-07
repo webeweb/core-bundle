@@ -53,7 +53,7 @@ class QuoteManagerTest extends AbstractTestCase {
      */
     public function testAddProvider() {
 
-        $obj = new QuoteManager();
+        $obj = new QuoteManager($this->logger);
 
         $obj->addProvider($this->quoteProvider);
         $this->assertSame($this->quoteProvider, $obj->getProviders()[0]);
@@ -67,7 +67,7 @@ class QuoteManagerTest extends AbstractTestCase {
      */
     public function testAddProviderWithAlreadyRegisteredException() {
 
-        $obj = new QuoteManager();
+        $obj = new QuoteManager($this->logger);
         $obj->addProvider($this->quoteProvider);
 
         try {
@@ -88,8 +88,9 @@ class QuoteManagerTest extends AbstractTestCase {
 
         $this->assertEquals("wbw.core.manager.quote", QuoteManager::SERVICE_NAME);
 
-        $obj = new QuoteManager();
+        $obj = new QuoteManager($this->logger);
 
+        $this->assertSame($this->logger, $obj->getLogger());
         $this->assertEquals([], $obj->getProviders());
     }
 
@@ -101,7 +102,7 @@ class QuoteManagerTest extends AbstractTestCase {
      */
     public function testContains() {
 
-        $obj = new QuoteManager();
+        $obj = new QuoteManager($this->logger);
 
         $this->assertFalse($obj->contains($this->quoteProvider));
 
@@ -119,7 +120,7 @@ class QuoteManagerTest extends AbstractTestCase {
         // Set a Color provider mock.
         $colorProvider = new RedColorProvider();
 
-        $obj = new QuoteManager();
+        $obj = new QuoteManager($this->logger);
 
         try {
 
@@ -139,7 +140,7 @@ class QuoteManagerTest extends AbstractTestCase {
      */
     public function testGetProvider() {
 
-        $obj = new QuoteManager();
+        $obj = new QuoteManager($this->logger);
         $obj->addProvider($this->quoteProvider);
 
         $this->assertSame($this->quoteProvider, $obj->getProvider("domain"));

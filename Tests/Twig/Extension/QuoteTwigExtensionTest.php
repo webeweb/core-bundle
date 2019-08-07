@@ -54,7 +54,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
         $this->quoteProvider = new YamlQuoteProvider($filename);
 
         // Set a Quote manager mock.
-        $this->quoteManager = new QuoteManager();
+        $this->quoteManager = new QuoteManager($this->logger);
         $this->quoteManager->addProvider($this->quoteProvider);
     }
 
@@ -191,7 +191,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
      */
     public function testQuoteFunctionWithoutProvider() {
 
-        $obj = new QuoteTwigExtension($this->twigEnvironment, new QuoteManager());
+        $obj = new QuoteTwigExtension($this->twigEnvironment, new QuoteManager($this->logger));
 
         $this->assertNull($obj->quoteFunction());
     }

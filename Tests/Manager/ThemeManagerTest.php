@@ -40,7 +40,7 @@ class ThemeManagerTest extends AbstractTestCase {
      */
     public function testAddGlobal() {
 
-        $obj = new ThemeManager($this->twigEnvironment);
+        $obj = new ThemeManager($this->logger, $this->twigEnvironment);
 
         // Set the Theme provider mocks.
         $obj->setApplicationThemeProvider($this->getMockBuilder(ApplicationThemeProviderInterface::class)->getMock());
@@ -96,7 +96,7 @@ class ThemeManagerTest extends AbstractTestCase {
 
         $this->assertEquals("wbw.core.manager.theme", ThemeManager::SERVICE_NAME);
 
-        $obj = new ThemeManager($this->twigEnvironment);
+        $obj = new ThemeManager($this->logger, $this->twigEnvironment);
 
         $this->assertNull($obj->getApplicationThemeProvider());
         $this->assertNull($obj->getBreadcrumbsThemeProvider());
@@ -117,7 +117,7 @@ class ThemeManagerTest extends AbstractTestCase {
      */
     public function testHasProviders() {
 
-        $obj = new ThemeManager($this->twigEnvironment);
+        $obj = new ThemeManager($this->logger, $this->twigEnvironment);
 
         $this->assertFalse($obj->hasProviders());
 
@@ -136,7 +136,7 @@ class ThemeManagerTest extends AbstractTestCase {
         // Set a Application theme provider mock.
         $provider = $this->getMockBuilder(ApplicationThemeProviderInterface::class)->getMock();
 
-        $obj = new ThemeManager($this->twigEnvironment);
+        $obj = new ThemeManager($this->logger, $this->twigEnvironment);
 
         $obj->setApplicationThemeProvider($this->getMockBuilder(ApplicationThemeProviderInterface::class)->getMock());
         $this->assertNotSame($provider, $obj->getApplicationThemeProvider());
@@ -156,7 +156,7 @@ class ThemeManagerTest extends AbstractTestCase {
         // Set a Breadcrumbs theme provider mock.
         $provider = $this->getMockBuilder(BreadcrumbsThemeProviderInterface::class)->getMock();
 
-        $obj = new ThemeManager($this->twigEnvironment);
+        $obj = new ThemeManager($this->logger, $this->twigEnvironment);
 
         $obj->setBreadcrumbsThemeProvider($provider);
         $this->assertSame($provider, $obj->getBreadcrumbsThemeProvider());
@@ -173,7 +173,7 @@ class ThemeManagerTest extends AbstractTestCase {
         // Set a Footer theme provider mock.
         $provider = $this->getMockBuilder(FooterThemeProviderInterface::class)->getMock();
 
-        $obj = new ThemeManager($this->twigEnvironment);
+        $obj = new ThemeManager($this->logger, $this->twigEnvironment);
 
         $obj->setFooterThemeProvider($provider);
         $this->assertSame($provider, $obj->getFooterThemeProvider());
@@ -190,7 +190,7 @@ class ThemeManagerTest extends AbstractTestCase {
         // Set a Hook drop down theme provider mock.
         $provider = $this->getMockBuilder(HookDropDownThemeProviderInterface::class)->getMock();
 
-        $obj = new ThemeManager($this->twigEnvironment);
+        $obj = new ThemeManager($this->logger, $this->twigEnvironment);
 
         $obj->setHookDropDownThemeProvider($provider);
         $this->assertSame($provider, $obj->getHookDropDownThemeProvider());
@@ -207,7 +207,7 @@ class ThemeManagerTest extends AbstractTestCase {
         // Set a Navigation theme provider mock.
         $provider = $this->getMockBuilder(NavigationThemeProviderInterface::class)->getMock();
 
-        $obj = new ThemeManager($this->twigEnvironment);
+        $obj = new ThemeManager($this->logger, $this->twigEnvironment);
 
         $obj->setNavigationThemeProvider($provider);
         $this->assertSame($provider, $obj->getNavigationThemeProvider());
@@ -224,7 +224,7 @@ class ThemeManagerTest extends AbstractTestCase {
         // Set a Notifications drop down theme provider mock.
         $provider = $this->getMockBuilder(NotificationsDropDownThemeProviderInterface::class)->getMock();
 
-        $obj = new ThemeManager($this->twigEnvironment);
+        $obj = new ThemeManager($this->logger, $this->twigEnvironment);
 
         $obj->setNotificationsDropDownThemeProvider($provider);
         $this->assertSame($provider, $obj->getNotificationsDropDownThemeProvider());
@@ -241,7 +241,7 @@ class ThemeManagerTest extends AbstractTestCase {
         // Set a Search theme provider mock.
         $provider = $this->getMockBuilder(SearchThemeProviderInterface::class)->getMock();
 
-        $obj = new ThemeManager($this->twigEnvironment);
+        $obj = new ThemeManager($this->logger, $this->twigEnvironment);
 
         $obj->setSearchThemeProvider($provider);
         $this->assertSame($provider, $obj->getSearchThemeProvider());
@@ -258,7 +258,7 @@ class ThemeManagerTest extends AbstractTestCase {
         // Set a Tasks drop down theme provider mock.
         $provider = $this->getMockBuilder(TasksDropDownThemeProviderInterface::class)->getMock();
 
-        $obj = new ThemeManager($this->twigEnvironment);
+        $obj = new ThemeManager($this->logger, $this->twigEnvironment);
 
         $obj->setTasksDropDownThemeProvider($provider);
         $this->assertSame($provider, $obj->getTasksDropDownThemeProvider());
@@ -275,7 +275,7 @@ class ThemeManagerTest extends AbstractTestCase {
         // Set the mocks.
         $provider = $this->getMockBuilder(UserInfoThemeProviderInterface::class)->getMock();
 
-        $obj = new ThemeManager($this->twigEnvironment);
+        $obj = new ThemeManager($this->logger, $this->twigEnvironment);
 
         $obj->setUserInfoThemeProvider($provider);
         $this->assertSame($provider, $obj->getUserInfoThemeProvider());

@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [2.9.0](https://github.com/webeweb/core-bundle/tree/v2.9.0) (2019-08-07)
+
+- Add Logger interface into Abstract manager
+
 ### [2.8.0](https://github.com/webeweb/core-bundle/tree/v2.8.0) (2019-08-06)
 
 - Add Choice value interface

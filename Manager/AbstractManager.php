@@ -11,7 +11,9 @@
 
 namespace WBW\Bundle\CoreBundle\Manager;
 
+use Psr\Log\LoggerInterface;
 use WBW\Bundle\CoreBundle\Provider\ProviderInterface;
+use WBW\Bundle\CoreBundle\Service\LoggerTrait;
 
 /**
  * Abstract manager.
@@ -22,6 +24,8 @@ use WBW\Bundle\CoreBundle\Provider\ProviderInterface;
  */
 abstract class AbstractManager implements ManagerInterface {
 
+    use LoggerTrait;
+
     /**
      * Providers.
      *
@@ -31,8 +35,11 @@ abstract class AbstractManager implements ManagerInterface {
 
     /**
      * Constructor.
+     *
+     * @param LoggerInterface $logger The logger.
      */
-    public function __construct() {
+    public function __construct(LoggerInterface $logger) {
+        $this->setLogger($logger);
         $this->setProviders([]);
     }
 
@@ -40,6 +47,7 @@ abstract class AbstractManager implements ManagerInterface {
      * {@inheritDoc}
      */
     public function addProvider(ProviderInterface $provider) {
+        $this->getLogger()->info(sprintf("%s add a provider %s", get_class($this), get_class($provider)));
         $this->providers[] = $provider;
         return $this;
     }

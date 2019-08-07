@@ -44,7 +44,7 @@ class QuoteTwigExtensionTraitTest extends AbstractTestCase {
     public function testSetQuoteTwigExtension() {
 
         // Set a Quote Twig extension mock.
-        $quoteTwigExtension = new QuoteTwigExtension($this->twigEnvironment, new QuoteManager());
+        $quoteTwigExtension = new QuoteTwigExtension($this->twigEnvironment, new QuoteManager($this->logger));
 
         $obj = new TestQuoteTwigExtensionTrait();
 

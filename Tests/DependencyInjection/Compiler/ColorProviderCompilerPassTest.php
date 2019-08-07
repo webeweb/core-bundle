@@ -46,7 +46,7 @@ class ColorProviderCompilerPassTest extends AbstractTestCase {
         parent::setUp();
 
         // Set a Color manager mock.
-        $this->colorManager = new ColorManager();
+        $this->colorManager = new ColorManager($this->logger);
 
         // Set a Color provider mock.
         $this->colorProvider = new RedColorProvider();

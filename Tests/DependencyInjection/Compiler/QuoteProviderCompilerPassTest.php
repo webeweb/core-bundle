@@ -45,7 +45,7 @@ class QuoteProviderCompilerPassTest extends AbstractTestCase {
         parent::setUp();
 
         // Set a Quote manager mock.
-        $this->quoteManager = new QuoteManager();
+        $this->quoteManager = new QuoteManager($this->logger);
 
         // Set a Quote provider mock.
         $this->quoteProvider = $this->getMockBuilder(QuoteProviderInterface::class)->getMock();

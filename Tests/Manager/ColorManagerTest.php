@@ -53,7 +53,7 @@ class ColorManagerTest extends AbstractTestCase {
      */
     public function testAddProvider() {
 
-        $obj = new ColorManager();
+        $obj = new ColorManager($this->logger);
 
         $obj->addProvider($this->colorProvider);
         $this->assertSame($this->colorProvider, $obj->getProviders()[0]);
@@ -67,7 +67,7 @@ class ColorManagerTest extends AbstractTestCase {
      */
     public function testAddProviderWithAlreadyRegisteredException() {
 
-        $obj = new ColorManager();
+        $obj = new ColorManager($this->logger);
         $obj->addProvider($this->colorProvider);
 
         try {
@@ -88,7 +88,7 @@ class ColorManagerTest extends AbstractTestCase {
 
         $this->assertEquals("wbw.core.manager.color", ColorManager::SERVICE_NAME);
 
-        $obj = new ColorManager();
+        $obj = new ColorManager($this->logger);
 
         $this->assertEquals([], $obj->getProviders());
     }
@@ -101,7 +101,7 @@ class ColorManagerTest extends AbstractTestCase {
      */
     public function testContains() {
 
-        $obj = new ColorManager();
+        $obj = new ColorManager($this->logger);
 
         $this->assertFalse($obj->contains($this->colorProvider));
 
@@ -119,7 +119,7 @@ class ColorManagerTest extends AbstractTestCase {
         // Set a Quote provider mock.
         $quoteProvider = $this->getMockBuilder(QuoteProviderInterface::class)->getMock();
 
-        $obj = new ColorManager();
+        $obj = new ColorManager($this->logger);
 
         try {
 
