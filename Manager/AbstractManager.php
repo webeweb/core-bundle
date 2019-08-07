@@ -48,7 +48,7 @@ abstract class AbstractManager implements ManagerInterface {
      */
     public function addProvider(ProviderInterface $provider) {
         if (null !== $this->getLogger()) {
-            $this->getLogger()->info(sprintf("%s add a provider %s", get_class($this), get_class($provider)));
+            $this->getLogger()->debug(sprintf("%s add a provider %s", get_class($this), get_class($provider)));
         }
         $this->providers[] = $provider;
         return $this;

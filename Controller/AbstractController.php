@@ -46,6 +46,7 @@ abstract class AbstractController extends BaseController {
      * @return BaseEvent|null Returns the event in case of success, null otherwise.
      */
     protected function dispatchEvent($eventName, BaseEvent $event) {
+        $this->getLogger()->debug(sprintf("%s dispatch an event with name \"%s\"", get_class($this), $eventName));
         return EventDispatcherHelper::dispatch($this->getEventDispatcher(), $eventName, $event);
     }
 
@@ -152,7 +153,6 @@ abstract class AbstractController extends BaseController {
      * @return NotificationEvent|null Returns the event in case of success, null otherwise.
      */
     protected function notify($eventName, NotificationInterface $notification) {
-        $this->getLogger()->debug(sprintf("Core controller dispatch a notification event with name \"%s\"", $eventName));
         return $this->dispatchEvent($eventName, new NotificationEvent($eventName, $notification));
     }
 
@@ -164,7 +164,6 @@ abstract class AbstractController extends BaseController {
      * @return ToastEvent|null Returns the event in case of success, null otherwise.
      */
     protected function toast($eventName, ToastInterface $toast) {
-        $this->getLogger()->debug(sprintf("Core controller dispatch a toast event with name \"%s\"", $eventName));
         return $this->dispatchEvent($eventName, new ToastEvent($eventName, $toast));
     }
 }
