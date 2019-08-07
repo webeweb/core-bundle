@@ -36,9 +36,9 @@ abstract class AbstractManager implements ManagerInterface {
     /**
      * Constructor.
      *
-     * @param LoggerInterface $logger The logger.
+     * @param LoggerInterface|null $logger The logger.
      */
-    public function __construct(LoggerInterface $logger) {
+    public function __construct(LoggerInterface $logger = null) {
         $this->setLogger($logger);
         $this->setProviders([]);
     }
@@ -47,7 +47,9 @@ abstract class AbstractManager implements ManagerInterface {
      * {@inheritDoc}
      */
     public function addProvider(ProviderInterface $provider) {
-        $this->getLogger()->info(sprintf("%s add a provider %s", get_class($this), get_class($provider)));
+        if (null !== $this->getLogger()) {
+            $this->getLogger()->info(sprintf("%s add a provider %s", get_class($this), get_class($provider)));
+        }
         $this->providers[] = $provider;
         return $this;
     }

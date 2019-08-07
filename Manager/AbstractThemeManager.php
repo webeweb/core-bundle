@@ -12,11 +12,11 @@
 namespace WBW\Bundle\CoreBundle\Manager;
 
 use Psr\Log\LoggerInterface;
+use ReflectionException;
 use Twig\Environment;
 use WBW\Bundle\CoreBundle\Provider\ThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Service\TwigEnvironmentTrait;
 use WBW\Library\Core\Argument\ObjectHelper;
-use ReflectionException;
 
 /**
  * Abstract theme manager.
