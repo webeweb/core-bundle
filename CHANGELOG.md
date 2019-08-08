@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [2.9.1](https://github.com/webeweb/core-bundle/tree/v2.9.1) (2019-08-08)
+
+- Fix logs
+
 ### [2.9.0](https://github.com/webeweb/core-bundle/tree/v2.9.0) (2019-08-07)
 
 - Add Logger interface into Abstract manager

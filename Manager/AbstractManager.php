@@ -47,11 +47,8 @@ abstract class AbstractManager implements ManagerInterface {
      * {@inheritDoc}
      */
     public function addProvider(ProviderInterface $provider) {
-        if (null !== $this->getLogger()) {
-            $this->getLogger()->debug(sprintf("%s add a provider %s", get_class($this), get_class($provider)));
-        }
         $this->providers[] = $provider;
-        return $this;
+        return $this->logInfo("A manager add a provider", ["_manager" => get_class($this), "_provider" => get_class($provider)]);
     }
 
     /**
@@ -88,6 +85,20 @@ abstract class AbstractManager implements ManagerInterface {
             return $i;
         }
         return -1;
+    }
+
+    /**
+     * Log an info.
+     *
+     * @param string $message The message.
+     * @param array $context The context.
+     * @return AbstractManager Returns this manager.
+     */
+    protected function logInfo($message, array $context) {
+        if (null !== $this->getLogger()) {
+            $this->getLogger()->info($message, $context);
+        }
+        return $this;
     }
 
     /**
