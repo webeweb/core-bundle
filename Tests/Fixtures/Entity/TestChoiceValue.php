@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Entity;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Entity;
 
 use WBW\Bundle\CoreBundle\Entity\ChoiceValueInterface;
 
@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Entity\ChoiceValueInterface;
  * Test choice value.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Entity
+ * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Entity
  */
 class TestChoiceValue implements ChoiceValueInterface {
 
