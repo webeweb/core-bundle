@@ -17,6 +17,7 @@ use Exception;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\Filesystem\Filesystem;
 use TestKernel;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\TestFixtures;
 
 /**
  * Abstract web test case.
@@ -53,7 +54,7 @@ abstract class AbstractWebTestCase extends WebTestCase {
     /**
      * Set up the schema tool.
      *
-     * @return EntityManagerInterface Returns the entity manager.
+     * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
     protected static function setUpSchemaTool() {
@@ -66,8 +67,24 @@ abstract class AbstractWebTestCase extends WebTestCase {
         $schemaTool = new SchemaTool($em);
         $schemaTool->dropDatabase();
         $schemaTool->createSchema($entities);
+    }
 
-        return $em;
+    /**
+     * Set up the user fixtures.
+     *
+     * @return void
+     * @throws Exception Throws an exception if an error occurs.
+     */
+    public static function setUpUserFixtures() {
+
+        /** @var EntityManagerInterface $em */
+        $em = static::$kernel->getContainer()->get("doctrine.orm.entity_manager");
+
+        foreach (TestFixtures::getUsers() as $current) {
+            $em->persist($current);
+        }
+
+        $em->flush();
     }
 
     /**

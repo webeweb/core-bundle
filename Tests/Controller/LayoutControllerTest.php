@@ -12,7 +12,6 @@
 namespace WBW\Bundle\CoreBundle\Tests\Controller;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\TestFixtures;
 
 /**
  * Layout controller test.
@@ -28,17 +27,12 @@ class LayoutControllerTest extends AbstractWebTestCase {
     public static function setUpBeforeClass() {
         parent::setUpBeforeClass();
 
-        $em = parent::setUpSchemaTool();
-
-        foreach (TestFixtures::getUsers() as $current) {
-            $em->persist($current);
-        }
-
-        $em->flush();
+        parent::setUpSchemaTool();
+        parent::setUpUserFixtures();
     }
 
     /**
-     * Tests the emailAction() method.
+     * Tests the Resources/views/email/layout.html.twig template.
      *
      * @return void
      */
@@ -53,7 +47,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests the javascriptsAction() method.
+     * Tests the Resources/views/layout/javascripts.html.twig template.
      *
      * @return void
      */
@@ -68,7 +62,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests the stylesheetsAction() method.
+     * Tests the Resources/views/layout/stylesheets.html.twig template.
      *
      * @return void
      */
