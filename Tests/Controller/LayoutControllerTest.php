@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Controller;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\TestFixtures;
 
 /**
  * Layout controller test.
@@ -20,6 +21,21 @@ use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
  * @package WBW\Bundle\CoreBundle\Tests\Controller
  */
 class LayoutControllerTest extends AbstractWebTestCase {
+
+    /**
+     * {@inheritDoc}
+     */
+    public static function setUpBeforeClass() {
+        parent::setUpBeforeClass();
+
+        $em = parent::setUpSchemaTool();
+
+        foreach (TestFixtures::getUsers() as $current) {
+            $em->persist($current);
+        }
+
+        $em->flush();
+    }
 
     /**
      * Tests the emailAction() method.

@@ -11,6 +11,9 @@
 
 namespace WBW\Bundle\CoreBundle\Tests;
 
+use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\ORM\Tools\SchemaTool;
+use Exception;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\Filesystem\Filesystem;
 use TestKernel;
@@ -45,6 +48,26 @@ abstract class AbstractWebTestCase extends WebTestCase {
         $filesystem->remove(static::$kernel->getCacheDir());
 
         static::$kernel->boot();
+    }
+
+    /**
+     * Set up the schema tool.
+     *
+     * @return EntityManagerInterface Returns the entity manager.
+     * @throws Exception Throws an exception if an error occurs.
+     */
+    protected static function setUpSchemaTool() {
+
+        /** @var EntityManagerInterface $em */
+        $em = static::$kernel->getContainer()->get("doctrine.orm.entity_manager");
+
+        $entities = $em->getMetadataFactory()->getAllMetadata();
+
+        $schemaTool = new SchemaTool($em);
+        $schemaTool->dropDatabase();
+        $schemaTool->createSchema($entities);
+
+        return $em;
     }
 
     /**
