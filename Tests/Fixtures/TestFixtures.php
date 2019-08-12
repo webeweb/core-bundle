@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures;
 
 use DateInterval;
+use DateTime;
 use Exception;
 use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Navigation\NavigationItem;
@@ -89,10 +90,10 @@ class TestFixtures {
             ->setEmail("webeweb@github.com")
             ->setEmailCanonical("webeweb@github.com")
             ->setEnabled(true)
-            ->setSalt(md5("salt"))
-            ->setPassword("github")
+            ->setSalt("salt")
+            ->setPlainPassword("github")
+            ->setConfirmationToken("confirmationToken")
             ->setLastLogin((new DateTime())->sub(new DateInterval("P1D")))
-            ->setConfirmationToken(md5("confirmationToken"))
             ->setPasswordRequestedAt(new DateTime());
 
         return $fixtures;
