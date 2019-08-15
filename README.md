@@ -18,7 +18,7 @@ Includes:
 
 - [Animate.css 3.7.0](https://daneden.github.io/animate.css/)
 - [Clippy JS](https://www.smore.com/clippy-js)
-- [Font Awesome 5.8.1](https://fontawesome.com/)
+- [Font Awesome 5.10.1](https://fontawesome.com/)
 - [jQuery 3.4.1](http://jquery.com/)
 - [jQuery EasyAutocomplete 1.3.4](http://www.easyautocomplete.com/) (jQuery plug-in)
 - [jQuery InputMask 3.3.11](https://robinherbots.github.io/Inputmask/) (jQuery plug-in)
