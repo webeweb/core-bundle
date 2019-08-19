@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFormTypeTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Form\Type
  * @abstract
- * @deprecated since 2.5.0, use "WBW\Bundle\CoreBundle\Tests\AbstractFormTypeTestCase" instead.
+ * @deprecated since 2.5.0 use "WBW\Bundle\CoreBundle\Tests\AbstractFormTypeTestCase" instead.
  */
 abstract class AbstractFormTypeTest extends AbstractFormTypeTestCase {
 
