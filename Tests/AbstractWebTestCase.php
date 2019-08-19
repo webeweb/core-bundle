@@ -14,8 +14,12 @@ namespace WBW\Bundle\CoreBundle\Tests;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Tools\SchemaTool;
 use Exception;
+use Symfony\Bundle\FrameworkBundle\KernelBrowser;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use Symfony\Component\BrowserKit\Cookie;
 use Symfony\Component\Filesystem\Filesystem;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 use TestKernel;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\TestFixtures;
 
@@ -29,11 +33,28 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\TestFixtures;
 abstract class AbstractWebTestCase extends WebTestCase {
 
     /**
+     * Client.
+     *
+     * @var KernelBrowser
+     */
+    protected $client;
+
+    /**
      * {@inheritDoc}
      */
     protected static function getKernelClass() {
         require_once getcwd() . "/Tests/Fixtures/app/TestKernel.php";
         return TestKernel::class;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    protected function setUp() {
+        parent::setUp();
+
+        // Set a Client mock.
+        $this->client = static::createClient();
     }
 
     /**
@@ -49,6 +70,29 @@ abstract class AbstractWebTestCase extends WebTestCase {
         $filesystem->remove(static::$kernel->getCacheDir());
 
         static::$kernel->boot();
+    }
+
+    /**
+     * Set up a cookie.
+     *
+     * @param string $username The username.
+     * @param array $roles The user roles.
+     * @param string $firewallName The firewall name.
+     * @param string $firewallContext The firewall context.
+     * @return Cookie Returns the cookie.
+     */
+    protected function setUpCookie($username = "webeweb", $roles = ["ROLE_SUPER_ADMIN"], $firewallName = "main", $firewallContext = "main") {
+
+        $token = new UsernamePasswordToken($username, null, $firewallName, $roles);
+
+        /** @var SessionInterface $session */
+        $session = static::$kernel->getContainer()->get("session");
+        $session->set("_security_" . $firewallContext, serialize($token));
+        $session->save();
+
+        $cookie = new Cookie($session->getName(), $session->getId());
+
+        return $cookie;
     }
 
     /**

@@ -39,7 +39,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
     public function testEmailAction() {
 
         // Create a client.
-        $client = static::createClient();
+        $client = $this->client;
 
         // Make a GET request.
         $client->request("GET", "/email");
@@ -54,7 +54,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
     public function testJavascriptsAction() {
 
         // Create a client.
-        $client = static::createClient();
+        $client = $this->client;
 
         // Make a GET request.
         $client->request("GET", "/javascripts");
