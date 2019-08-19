@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [2.12.0](https://github.com/webeweb/core-bundle/tree/v2.12.0) (2019-08-19)
+
+- Improve unit test tools
+
 ### [2.11.0](https://github.com/webeweb/core-bundle/tree/v2.11.0) (2019-08-15)
 
 - Update Font Awesome to 5.10.1

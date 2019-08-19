@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Tests;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Tools\SchemaTool;
 use Exception;
-use Symfony\Bundle\FrameworkBundle\KernelBrowser;
+use Symfony\Bundle\FrameworkBundle\Client;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\BrowserKit\Cookie;
 use Symfony\Component\Filesystem\Filesystem;
@@ -35,7 +35,7 @@ abstract class AbstractWebTestCase extends WebTestCase {
     /**
      * Client.
      *
-     * @var KernelBrowser
+     * @var Client
      */
     protected $client;
 
