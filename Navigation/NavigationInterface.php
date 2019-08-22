@@ -27,14 +27,14 @@ interface NavigationInterface {
     const NAVIGATION_HREF_DEFAULT = "javascript:void(0);";
 
     /**
-     * Navigation matcher "Reg exp".
+     * Navigation matcher "reg exp".
      *
      * @var string
      */
     const NAVIGATION_MATCHER_REGEXP = "regexp";
 
     /**
-     * Navigation matcher "Router".
+     * Navigation matcher "router".
      *
      * @var string
      */
