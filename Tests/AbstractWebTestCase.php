@@ -101,7 +101,7 @@ abstract class AbstractWebTestCase extends WebTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    protected static function setUpSchemaTool() {
+    protected function setUpSchemaTool() {
 
         /** @var EntityManagerInterface $em */
         $em = static::$kernel->getContainer()->get("doctrine.orm.entity_manager");
@@ -119,7 +119,7 @@ abstract class AbstractWebTestCase extends WebTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public static function setUpUserFixtures() {
+    protected function setUpUserFixtures() {
 
         /** @var EntityManagerInterface $em */
         $em = static::$kernel->getContainer()->get("doctrine.orm.entity_manager");
