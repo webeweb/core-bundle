@@ -1,7 +1,11 @@
 CHANGELOG
 =========
 
-### [2.12.1](https://github.com/webeweb/core-bundle/tree/v2.12.1) (2019-08-23)
+### [2.12.2](https://github.com/webeweb/core-bundle/tree/v2.12.2) (2019-08-26)
+
+- Fix unit test tools
+
+### [2.12.1](https://github.com/webeweb/core-bundle/tree/v2.12.1) (2019-08-22)
 
 - Fix unit test tools
 

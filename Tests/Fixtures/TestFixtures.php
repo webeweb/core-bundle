@@ -14,6 +14,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Fixtures;
 use DateInterval;
 use DateTime;
 use Exception;
+use Symfony\Component\Security\Core\User\UserInterface;
 use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Navigation\NavigationItem;
 use WBW\Bundle\CoreBundle\Navigation\NavigationNode;

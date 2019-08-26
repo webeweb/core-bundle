@@ -20,6 +20,7 @@ use Symfony\Component\BrowserKit\Cookie;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
+use Symfony\Component\Security\Core\User\UserInterface;
 use TestKernel;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\TestFixtures;
 
@@ -75,15 +76,15 @@ abstract class AbstractWebTestCase extends WebTestCase {
     /**
      * Set up a cookie.
      *
-     * @param string $username The username.
+     * @param UserInterface|string $user The user.
      * @param array $roles The user roles.
      * @param string $firewallName The firewall name.
      * @param string $firewallContext The firewall context.
      * @return Cookie Returns the cookie.
      */
-    protected function setUpCookie($username = "webeweb", $roles = ["ROLE_SUPER_ADMIN"], $firewallName = "main", $firewallContext = "main") {
+    protected function setUpCookie($user = "webeweb", $roles = ["ROLE_SUPER_ADMIN"], $firewallName = "main", $firewallContext = "main") {
 
-        $token = new UsernamePasswordToken($username, null, $firewallName, $roles);
+        $token = new UsernamePasswordToken($user, null, $firewallName, $roles);
 
         /** @var SessionInterface $session */
         $session = static::$kernel->getContainer()->get("session");
