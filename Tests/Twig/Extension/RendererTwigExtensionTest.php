@@ -47,12 +47,8 @@ class RendererTwigExtensionTest extends AbstractTestCase {
 
         $obj = new RendererTwigExtension($this->twigEnvironment);
 
-        $res = <<< EOT
-<script type="text/javascript">
-content
-</script>
-EOT;
-        $this->assertEquals($res, $obj->coreScriptFilter("content"));
+        $res = file_get_contents(__DIR__ . "/testCoreScriptFilter.html.txt");
+        $this->assertEquals($res, $obj->coreScriptFilter("content") . "\n");
     }
 
     /**

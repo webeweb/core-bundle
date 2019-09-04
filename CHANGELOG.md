@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [2.12.3](https://github.com/webeweb/core-bundle/tree/v2.12.3) (2019-09-04)
+
+- Improve unit test
+
 ### [2.12.2](https://github.com/webeweb/core-bundle/tree/v2.12.2) (2019-08-26)
 
 - Fix unit test tools

@@ -43,12 +43,9 @@ class AbstractTwigExtensionTest extends AbstractTestCase {
      */
     public function testCoreHTMLElement() {
 
-        $res = <<< EOT
-<script type="text/javascript">
-    $(document).ready(function() {});
-</script>
-EOT;
-        $this->assertEquals($res, TestTwigExtension::coreHTMLElement("script", "\n    $(document).ready(function() {});\n", ["type" => "text/javascript"]));
+        $arg = ["type" => "text/javascript"];
+        $res = file_get_contents(__DIR__ . "/testCoreHTMLElement.html.txt");
+        $this->assertEquals($res, TestTwigExtension::coreHTMLElement("script", "\n    $(document).ready(function() {});\n", $arg) . "\n");
     }
 
     /**
