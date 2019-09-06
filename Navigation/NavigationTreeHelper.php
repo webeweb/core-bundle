@@ -22,12 +22,12 @@ use Symfony\Component\HttpFoundation\Request;
 class NavigationTreeHelper {
 
     /**
-     * Actives the nodes.
+     * Actives the navigation nodes.
      *
      * @param Request $request The request.
-     * @param array $nodes The nodes.
+     * @param AbstractNavigationNode[] $nodes The navigation nodes.
      * @param int $level The node level.
-     * @return bool Returns true in case of success, false othewise.
+     * @return bool Returns true in case of success, false otherwise.
      */
     protected static function activeNodes(Request $request, array $nodes = [], $level = 0) {
 
@@ -39,6 +39,7 @@ class NavigationTreeHelper {
                 continue;
             }
 
+            /** @var AbstractNavigationNode $n */
             if (true === self::nodeMatch($n, $request)) {
                 $current = true;
             } else {
@@ -49,9 +50,7 @@ class NavigationTreeHelper {
                 continue;
             }
 
-            $n->setActive(true);
-
-            $result = true;
+            $result = $n->setActive(true)->getActive();
         }
 
         return $result;
@@ -71,8 +70,8 @@ class NavigationTreeHelper {
     /**
      * Get the breadcrumbs.
      *
-     * @param AbstractNavigationNode $node The tree.
-     * @return AsbtractNavigationNode[] Returns the breadcrumbs.
+     * @param AbstractNavigationNode $node The navigation node.
+     * @return AbstractNavigationNode[] Returns the breadcrumbs.
      */
     public static function getBreadcrumbs(AbstractNavigationNode $node) {
 
@@ -83,9 +82,6 @@ class NavigationTreeHelper {
         }
 
         foreach ($node->getNodes() as $current) {
-            if (false === ($current instanceof AbstractNavigationNode)) {
-                continue;
-            }
             $breadcrumbs = array_merge($breadcrumbs, self::getBreadcrumbs($current));
         }
 
@@ -93,9 +89,9 @@ class NavigationTreeHelper {
     }
 
     /**
-     * Determines if a node match an URL.
+     * Determines if a navigation node match an URL.
      *
-     * @param AbstractNavigationNode $node The node.
+     * @param AbstractNavigationNode $node The navigation node.
      * @param Request $request The request.
      * @return bool Returns true in case of success, false otherwise.
      */

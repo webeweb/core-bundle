@@ -12,7 +12,6 @@
 namespace WBW\Bundle\CoreBundle\Tests\Navigation;
 
 use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
-use WBW\Bundle\CoreBundle\Navigation\NavigationItem;
 use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Navigation\TestNavigationNode;
@@ -26,6 +25,44 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Navigation\TestNavigationNode;
 class AbstractNavigationNodeTest extends AbstractTestCase {
 
     /**
+     * Tests the addNode() method.
+     *
+     * @return void
+     */
+    public function testAddNode() {
+
+        // Set a Navigation node mock.
+        $node = new TestNavigationNode("node");
+
+        $obj = new TestNavigationNode("id");
+
+        $this->assertSame($obj, $obj->addNode($node));
+        $this->assertEquals([$node], $obj->getNodes());
+
+        $this->assertSame($obj, $node->getParent());
+        $this->assertSame($obj, $node->getAlphabeticalTreeNodeParent());
+    }
+
+    /**
+     * Tests the clearNode() method.
+     *
+     * @return void
+     */
+    public function testClearNode() {
+
+        // Set a Navigation node mock.
+        $node = new TestNavigationNode("node");
+
+        $obj = new TestNavigationNode("id");
+
+        $this->assertSame($obj, $obj->addNode($node));
+        $this->assertEquals([$node], $obj->getNodes());
+
+        $this->assertSame($obj, $obj->clearNodes());
+        $this->assertEquals([], $obj->getNodes());
+    }
+
+    /**
      * Tests the __construct() method.
      *
      * @return void
@@ -35,12 +72,94 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
         $obj = new TestNavigationNode("id");
 
         $this->assertFalse($obj->getActive());
+        $this->assertEquals("id", $obj->getAlphabeticalTreeNodeLabel());
+        $this->assertNull($obj->getAlphabeticalTreeNodeParent());
         $this->assertFalse($obj->getEnable());
+        $this->assertNull($obj->getFirstNode());
         $this->assertNull($obj->getIcon());
+        $this->assertEquals("id", $obj->getId());
+        $this->assertNull($obj->getLastNode());
         $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
+        $this->assertEquals([], $obj->getNodes());
+        $this->assertNull($obj->getParent());
         $this->assertNull($obj->getTarget());
         $this->assertNull($obj->getUri());
         $this->assertTrue($obj->getVisible());
+    }
+
+    /**
+     * Tests the getFirstNode() method.
+     *
+     * @return void
+     */
+    public function testGetFirstNode() {
+
+        // Set a Navigation node mock.
+        $node = new TestNavigationNode("node");
+
+        $obj = new TestNavigationNode("id");
+
+        $this->assertSame($obj, $obj->addNode($node));
+        $this->assertSame($node, $obj->getFirstNode());
+    }
+
+    /**
+     * Tests the getLastNode() method.
+     *
+     * @return void
+     */
+    public function testGetLastNode() {
+
+        // Set a Navigation node mock.
+        $node = new TestNavigationNode("node");
+
+        $obj = new TestNavigationNode("id");
+
+        $this->assertSame($obj, $obj->addNode($node));
+        $this->assertSame($node, $obj->getLastNode());
+    }
+
+    /**
+     * Tests the getNodeAt() method.
+     *
+     * @return void
+     */
+    public function testGetNodeAt() {
+
+        // Set a Navigation node mock.
+        $node = new TestNavigationNode("node");
+
+        $obj = new TestNavigationNode("id");
+
+        $this->assertSame($obj, $obj->addNode($node));
+        $this->assertNull($obj->getNodeAt(-1));
+        $this->assertSame($node, $obj->getNodeAt(0));
+        $this->assertNull($obj->getNodeAt(1));
+    }
+
+    /**
+     * Tests the getNodeById() method.
+     *
+     * @return void
+     */
+    public function testGetNodeById() {
+
+        // Set the Navigation mocks.
+        $node1 = new TestNavigationNode("id1");
+        $node2 = new TestNavigationNode("id2");
+
+        $obj = new TestNavigationNode("id");
+        $obj->addNode($node1);
+
+        $this->assertNull($obj->getNodeById("id2"));
+        $this->assertNull($obj->getNodeById("id2", true));
+
+        $this->assertSame($node1, $obj->getNodeById("id1"));
+        $this->assertSame($node1, $obj->getNodeById("id1", true));
+
+        $node1->addNode($node2);
+        $this->assertNull($obj->getNodeById("id2"));
+        $this->assertSame($node2, $obj->getNodeById("id2", true));
     }
 
     /**
@@ -52,14 +171,34 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
 
         $obj = new TestNavigationNode("id");
 
-        $this->assertSame($obj, $obj->addNode(new NavigationItem("id1")));
-        $this->assertSame($obj, $obj->addNode(new NavigationNode("id2")));
+        $this->assertSame($obj, $obj->addNode(new NavigationNode("node")));
 
         $this->assertFalse($obj->isDisplayable());
 
         $this->assertNotSame($obj, $obj->getLastNode()->setActive(true));
         $this->assertNotSame($obj, $obj->getLastNode()->setEnable(true));
         $this->assertTrue($obj->isDisplayable());
+    }
+
+    /**
+     * Tests the removeNode() method.
+     *
+     * @return void
+     */
+    public function testRemoveNode() {
+
+        // Set a Navigation node mock.
+        $node = new TestNavigationNode("node");
+
+        $obj = new TestNavigationNode("id");
+
+        $this->assertSame($obj, $obj->removeNode($node));
+
+        $this->assertSame($obj, $obj->addNode($node));
+        $this->assertEquals([$node], $obj->getNodes());
+
+        $this->assertSame($obj, $obj->removeNode($node));
+        $this->assertEquals([], $obj->getNodes());
     }
 
     /**
@@ -128,15 +267,33 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setURI() method.
+     * Tests the setUri() method.
      *
      * @return void
      */
-    public function testSetURI() {
+    public function testSetUri() {
 
         $obj = new TestNavigationNode("id");
 
         $obj->setURI("route");
         $this->assertEquals("route", $obj->getUri());
+    }
+
+    /**
+     * Tests the size() method.
+     *
+     * @return void
+     */
+    public function testSize() {
+
+        // Set a Navigation node mock.
+        $node = new TestNavigationNode("node");
+
+        $obj = new TestNavigationNode("id");
+
+        $this->assertEquals(0, $obj->size());
+
+        $this->assertSame($obj, $obj->addNode($node));
+        $this->assertEquals(1, $obj->size());
     }
 }

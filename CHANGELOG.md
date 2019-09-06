@@ -1,6 +1,14 @@
 CHANGELOG
 =========
 
+### master
+
+> IMPORTANT NOTICE: The following classes has been removed
+> - WBW\Bundle\CoreBundle\Navigation\NavigationItem
+
+- Update abstract Navigation node
+- Update PHPDoc
+
 ### [2.12.3](https://github.com/webeweb/core-bundle/tree/v2.12.3) (2019-09-04)
 
 - Improve unit test
