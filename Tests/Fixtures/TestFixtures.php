@@ -16,7 +16,6 @@ use DateTime;
 use Exception;
 use Symfony\Component\Security\Core\User\UserInterface;
 use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
-use WBW\Bundle\CoreBundle\Navigation\NavigationItem;
 use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
 use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Entity\TestUser;
@@ -68,7 +67,7 @@ class TestFixtures {
         $tree->getLastNode()->addNode(new NavigationNode("Core library", null, "https://github.com/webeweb/core-library"));
         $tree->getLastNode()->addNode(new NavigationNode("cURL library", null, "https://github.com/webeweb/curl-library"));
         $tree->getLastNode()->addNode(new NavigationNode("FTP library", null, "https://github.com/webeweb/ftp-library"));
-        $tree->getLastNode()->addNode(new NavigationItem("fPDF library", null, "https://github.com/webeweb/fpdf-library"));
+        $tree->getLastNode()->addNode(new NavigationNode("fPDF library", null, "https://github.com/webeweb/fpdf-library"));
         $tree->getLastNode()->addNode(new NavigationNode("HaveIBeenPwnd library", null, "https://github.com/webeweb/haveibeenpwned-library"));
         $tree->getLastNode()->addNode(new NavigationNode("SkiData library", null, "https:\/\/github\.com\/webeweb\/skidata-library", NavigationInterface::NAVIGATION_MATCHER_REGEXP));
         $tree->getLastNode()->addNode(new NavigationNode("sMsmode library", null, "https://github.com/webeweb/smsmode-library", NavigationInterface::NAVIGATION_MATCHER_ROUTER));
