@@ -32,6 +32,7 @@ use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\PurpleColorProvider;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\RedColorProvider;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\TealColorProvider;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\YellowColorProvider;
+use WBW\Bundle\CoreBundle\Command\CopySkeletonCommand;
 use WBW\Bundle\CoreBundle\Command\UnzipAssetsCommand;
 use WBW\Bundle\CoreBundle\DependencyInjection\Configuration;
 use WBW\Bundle\CoreBundle\DependencyInjection\WBWCoreExtension;
@@ -120,6 +121,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         $this->assertNull($obj->load($this->configs, $this->containerBuilder));
 
         // Commands
+        $this->assertInstanceOf(CopySkeletonCommand::class, $this->containerBuilder->get(CopySkeletonCommand::SERVICE_NAME));
         $this->assertInstanceOf(UnzipAssetsCommand::class, $this->containerBuilder->get(UnzipAssetsCommand::SERVICE_NAME));
 
         // Event listeners

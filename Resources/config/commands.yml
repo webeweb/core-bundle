@@ -1,6 +1,11 @@
 # Resources/config/commands.yml
 services:
 
+    wbw.core.command.copy_skeleton:
+        class: WBW\Bundle\CoreBundle\Command\CopySkeletonCommand
+        tags:
+            - { name: "console.command" }
+
     wbw.core.command.unzip_assets:
         class: WBW\Bundle\CoreBundle\Command\UnzipAssetsCommand
         tags:
