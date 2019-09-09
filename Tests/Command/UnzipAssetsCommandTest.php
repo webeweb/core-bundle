@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Command;
 
+use WBW\Bundle\CoreBundle\Command\UnzipAssetsCommand;
 use WBW\Bundle\CoreBundle\Tests\AbstractCommandTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Command\TestUnzipAssetsCommand;
 
@@ -29,12 +30,12 @@ class UnzipAssetsCommandTest extends AbstractCommandTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("wbw.core.command.unzip_assets", TestUnzipAssetsCommand::SERVICE_NAME);
+        $this->assertEquals("wbw.core.command.unzip_assets", UnzipAssetsCommand::SERVICE_NAME);
 
-        $obj = new TestUnzipAssetsCommand();
+        $obj = new UnzipAssetsCommand();
 
         $this->assertEquals("Unzip assets under a public directory", $obj->getDescription());
-        $this->assertEquals(TestUnzipAssetsCommand::COMMAND_HELP, $obj->getHelp());
+        $this->assertEquals(UnzipAssetsCommand::COMMAND_HELP, $obj->getHelp());
         $this->assertEquals("wbw:core:unzip-assets", $obj->getName());
     }
 

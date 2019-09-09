@@ -91,7 +91,6 @@ EOT;
         $success = $this->getCheckbox(true);
         $warning = $this->getCheckbox(false);
 
-        // Handle each result.
         foreach ($results as $bundle => $assets) {
             foreach ($assets as $asset => $result) {
 
@@ -105,7 +104,6 @@ EOT;
             }
         }
 
-        // Displays a table.
         $io->table(["", "Bundle", "Asset"], $rows);
 
         return $exitCode;
@@ -133,6 +131,7 @@ EOT;
                 continue;
             }
 
+            /** @var AssetsProviderInterface $current */
             $bundlePath = $current->getPath();
 
             $assetsDirectory = $bundlePath . $current->getAssetsRelativeDirectory();
