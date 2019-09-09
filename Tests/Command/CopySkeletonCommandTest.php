@@ -11,6 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Command;
 
+use Symfony\Bundle\FrameworkBundle\Console\Application;
+use Symfony\Component\Console\Helper\HelperSet;
 use Symfony\Component\HttpKernel\Kernel;
 use WBW\Bundle\CoreBundle\Command\CopySkeletonCommand;
 use WBW\Bundle\CoreBundle\Tests\AbstractCommandTestCase;
@@ -113,12 +115,21 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
      */
     public function testGetResourcesDirectory() {
 
+        // Set an Helper set mock.
+        $helperSet = $this->getMockBuilder(HelperSet::class)->disableOriginalConstructor()->getMock();
+
+        // Set an Application mock.
+        $application = $this->getMockBuilder(Application::class)->disableOriginalConstructor()->getMock();
+        $application->expects($this->any())->method("getKernel")->willReturn($this->kernel);
+        $application->expects($this->any())->method("getHelperSet")->willReturn($helperSet);
+
         $obj = new TestCopySkeletonCommand();
+        $obj->setApplication($application);
 
         if (40000 <= Kernel::VERSION_ID) {
-            $this->assertEquals("/templates/bundles", $obj->getResourcesDirectory());
+            $this->assertRegExp("/\/templates\/bundles$/", $obj->getResourcesDirectory());
         } else {
-            $this->assertEquals("/app/Resources", $obj->getResourcesDirectory());
+            $this->assertRegExp("/\/app\/Resources$/", $obj->getResourcesDirectory());
         }
     }
 }

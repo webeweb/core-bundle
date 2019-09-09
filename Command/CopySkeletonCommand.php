@@ -16,6 +16,8 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\StyleInterface;
 use Symfony\Component\HttpKernel\Kernel;
+use Symfony\Component\HttpKernel\KernelInterface;
+use WBW\Bundle\CoreBundle\Helper\KernelHelper;
 use WBW\Bundle\CoreBundle\Helper\SkeletonHelper;
 use WBW\Bundle\CoreBundle\Provider\SkeletonProviderInterface;
 
@@ -66,7 +68,7 @@ EOT;
      */
     protected function displayFooter(StyleInterface $io, $exitCode, $count) {
         if (0 < $exitCode) {
-            $io->error("Some errors occurred while copying skeleton");
+            $io->error("Some errors occurred while copying skeletons");
             return;
         }
         if (0 === $count) {
@@ -119,7 +121,7 @@ EOT;
         }
 
         $io = $this->newStyle($input, $output);
-        $this->displayHeader($io, "Trying to unzip assets");
+        $this->displayHeader($io, "Trying to copy skeletons");
 
         $results = [];
 
@@ -135,7 +137,7 @@ EOT;
             $bundlePath = $current->getPath();
 
             $skeletonDirectory  = $bundlePath . $current->getSkeletonRelativeDirectory();
-            $resourcesDirectory = $bundlePath . "/Resources/public";
+            $resourcesDirectory = $this->getResourcesDirectory();
 
             $results[$current->getName()] = SkeletonHelper::copySkeleton($skeletonDirectory, $resourcesDirectory);
         }
@@ -152,9 +154,16 @@ EOT;
      * @return string Returns the resources directory.
      */
     protected function getResourcesDirectory() {
+
+        /** @var KernelInterface $kernel */
+        $kernel = $this->getApplication()->getKernel();
+
+        $rootDir = KernelHelper::getProjectDir($kernel);
+
         if (40000 <= Kernel::VERSION_ID) {
-            return "/templates/bundles";
+            return $rootDir . "/templates/bundles";
         }
-        return "app/Resources";
+
+        return $rootDir . "/app/Resources";
     }
 }
