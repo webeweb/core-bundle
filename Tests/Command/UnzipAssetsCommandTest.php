@@ -75,18 +75,6 @@ class UnzipAssetsCommandTest extends AbstractCommandTestCase {
     }
 
     /**
-     * Tests the displayHeader() method.
-     *
-     * @return void
-     */
-    public function testDisplayHeader() {
-
-        $obj = new TestUnzipAssetsCommand();
-
-        $this->assertNull($obj->displayHeader($this->style));
-    }
-
-    /**
      * Tests the displayResult() method.
      *
      * @return void

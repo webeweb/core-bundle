@@ -27,6 +27,18 @@ use WBW\Bundle\CoreBundle\Helper\CommandHelper;
 abstract class AbstractCommand extends Command {
 
     /**
+     * Displays the header.
+     *
+     * @param StyleInterface $io The I/O.
+     * @return void
+     */
+    protected function displayHeader(StyleInterface $io, $text) {
+        $io->newLine();
+        $io->text($text);
+        $io->newLine();
+    }
+
+    /**
      * Get a checkbox.
      *
      * @param bool $checked Checked ?

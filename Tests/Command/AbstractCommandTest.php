@@ -14,6 +14,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Command;
 use Symfony\Component\Console\Style\StyleInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractCommandTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Command\TestAbstractCommand;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Command\TestUnzipAssetsCommand;
 
 /**
  * Abstract command test.
@@ -23,6 +24,18 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Command\TestAbstractCommand;
  */
 class AbstractCommandTest extends AbstractCommandTestCase {
 
+
+    /**
+     * Tests the displayHeader() method.
+     *
+     * @return void
+     */
+    public function testDisplayHeader() {
+
+        $obj = new TestAbstractCommand();
+
+        $this->assertNull($obj->displayHeader($this->style, ""));
+    }
     /**
      * Tests the getCheckbox() method.
      *

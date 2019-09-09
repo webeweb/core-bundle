@@ -13,6 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Command;
 
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\Style\StyleInterface;
 use WBW\Bundle\CoreBundle\Command\AbstractCommand;
 
 /**
@@ -28,6 +29,13 @@ class TestAbstractCommand extends AbstractCommand {
      */
     protected function configure() {
         $this->setName("wbw:core:abstract");
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function displayHeader(StyleInterface $io, $text) {
+        parent::displayHeader($io, $text);
     }
 
     /**

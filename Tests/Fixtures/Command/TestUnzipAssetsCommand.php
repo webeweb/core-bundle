@@ -32,13 +32,6 @@ class TestUnzipAssetsCommand extends UnzipAssetsCommand {
     /**
      * {@inheritDoc}
      */
-    public function displayHeader(StyleInterface $io) {
-        return parent::displayHeader($io);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function displayResult(StyleInterface $io, array $results) {
         return parent::displayResult($io, $results);
     }

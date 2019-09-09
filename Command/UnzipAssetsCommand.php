@@ -76,18 +76,6 @@ EOT;
     }
 
     /**
-     * Displays the header.
-     *
-     * @param StyleInterface $io The I/O.
-     * @return void
-     */
-    protected function displayHeader(StyleInterface $io) {
-        $io->newLine();
-        $io->text("Trying to unzip assets");
-        $io->newLine();
-    }
-
-    /**
      * Displays the result.
      *
      * @param StyleInterface $io The I/O.
@@ -133,7 +121,7 @@ EOT;
         }
 
         $io = $this->newStyle($input, $output);
-        $this->displayHeader($io);
+        $this->displayHeader($io, "Trying to unzip assets");
 
         $results = [];
 
