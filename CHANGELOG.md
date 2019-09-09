@@ -6,6 +6,10 @@ CHANGELOG
 > IMPORTANT NOTICE: The following classes has been removed
 > - WBW\Bundle\CoreBundle\Navigation\NavigationItem
 
+- Add Divider node
+- Add Header node
+- Add Skeleton helper
+- Add Skeleton provider interface
 - Update abstract Navigation node
 - Update PHPDoc
 
