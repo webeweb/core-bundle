@@ -30,6 +30,6 @@ class KernelHelper {
             $method = "getRootDir";
         }
 
-        return $kernel->$method() . "/..";
+        return realpath($kernel->$method() . "/..");
     }
 }

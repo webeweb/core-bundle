@@ -30,6 +30,9 @@ class KernelHelperTest extends AbstractTestCase {
      */
     public function testGetProjectDir() {
 
-        $this->assertEquals(getcwd(), KernelHelper::getProjectDir(new TestKernel("test", true)));
+        // Set a Kernel mock.
+        $kernel = new TestKernel("test", true);
+
+        $this->assertStringStartsWith(getcwd(), KernelHelper::getProjectDir($kernel));
     }
 }
