@@ -1,0 +1,124 @@
+<?php
+
+/*
+ * This file is part of the core-bundle package.
+ *
+ * (c) 2019 WEBEWEB
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace WBW\Bundle\CoreBundle\Tests\Command;
+
+use Symfony\Component\HttpKernel\Kernel;
+use WBW\Bundle\CoreBundle\Command\CopySkeletonCommand;
+use WBW\Bundle\CoreBundle\Tests\AbstractCommandTestCase;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Command\TestCopySkeletonCommand;
+
+/**
+ * Copy skeleton command test.
+ *
+ * @author webeweb <https://github.com/webeweb/>
+ * @package WBW\Bundle\CoreBundle\Tests\Command
+ */
+class CopySkeletonCommandTest extends AbstractCommandTestCase {
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $this->assertEquals("wbw.core.command.copy_skeleton", CopySkeletonCommand::SERVICE_NAME);
+
+        $obj = new CopySkeletonCommand();
+
+        $this->assertEquals("Copy skeleton under the app/Resources directory", $obj->getDescription());
+        $this->assertEquals(CopySkeletonCommand::COMMAND_HELP, $obj->getHelp());
+        $this->assertEquals("wbw:core:copy-skeleton", $obj->getName());
+    }
+
+    /**
+     * Tests the displayFooter() method.
+     *
+     * @return void
+     */
+    public function testDisplayFooter() {
+
+        $obj = new TestCopySkeletonCommand();
+
+        $this->assertNull($obj->displayFooter($this->style, 0, 1));
+    }
+
+    /**
+     * Tests the displayFooter() method.
+     *
+     * @return void
+     */
+    public function testDisplayFooterWithExitCode0() {
+
+        $obj = new TestCopySkeletonCommand();
+
+        $this->assertNull($obj->displayFooter($this->style, 0, 0));
+    }
+
+    /**
+     * Tests the displayFooter() method.
+     *
+     * @return void
+     */
+    public function testDisplayFooterWithExitCode1() {
+
+        $obj = new TestCopySkeletonCommand();
+
+        $this->assertNull($obj->displayFooter($this->style, 1, 0));
+    }
+
+    /**
+     * Tests the displayResult() method.
+     *
+     * @return void
+     */
+    public function testDisplayResult() {
+
+        $obj = new TestCopySkeletonCommand();
+
+        $arg = [];
+        $this->assertEquals(0, $obj->displayResult($this->style, $arg));
+    }
+
+    /**
+     * Tests the displayResult() method.
+     *
+     * @return void
+     */
+    public function testDisplayResultWithExitCode() {
+
+        $obj = new TestCopySkeletonCommand();
+
+        $arg = [
+            "WBWCoreBundle" => [
+                "animate.css-3.5.2.zip" => false,
+            ],
+        ];
+        $this->assertEquals(1, $obj->displayResult($this->style, $arg));
+    }
+
+    /**
+     * Tests the getResourcesDirectory() method.
+     *
+     * @return void
+     */
+    public function testGetResourcesDirectory() {
+
+        $obj = new TestCopySkeletonCommand();
+
+        if (40000 <= Kernel::VERSION_ID) {
+            $this->assertEquals("/templates/bundles", $obj->getResourcesDirectory());
+        } else {
+            $this->assertEquals("/app/Resources", $obj->getResourcesDirectory());
+        }
+    }
+}
