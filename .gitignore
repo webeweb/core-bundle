@@ -8,4 +8,5 @@
 !/Resources/public/.gitkeep
 
 # Fixtures
+/Tests/Fixtures/app/Resources/*
 /Tests/Fixtures/app/var/*
