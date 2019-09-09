@@ -58,8 +58,8 @@ class AssetsHelper {
      *
      * @param string $src The source directory.
      * @param string $dst The destination directory.
-     * @return array Returns the assets.
-     * @throws InvalidArgumentException Throw an invalid argument if a directory is not a directory.
+     * @return bool[] Returns the assets.
+     * @throws InvalidArgumentException Throws an invalid argument if a directory is not a directory.
      */
     public static function unzipAssets($src, $dst) {
 
