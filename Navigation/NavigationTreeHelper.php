@@ -33,13 +33,9 @@ class NavigationTreeHelper {
 
         $result = false;
 
+        /** @var AbstractNavigationNode $n */
         foreach ($nodes as $n) {
 
-            if (false === ($n instanceof AbstractNavigationNode)) {
-                continue;
-            }
-
-            /** @var AbstractNavigationNode $n */
             if (true === self::nodeMatch($n, $request)) {
                 $current = true;
             } else {

@@ -15,6 +15,8 @@ use DateInterval;
 use DateTime;
 use Exception;
 use Symfony\Component\Security\Core\User\UserInterface;
+use WBW\Bundle\CoreBundle\Navigation\DividerNode;
+use WBW\Bundle\CoreBundle\Navigation\HeaderNode;
 use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
 use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
@@ -53,6 +55,8 @@ class TestFixtures {
 
         $tree->addNode(new NavigationNode("GitHub", null, NavigationInterface::NAVIGATION_HREF_DEFAULT));
 
+        $tree->getLastNode()->addNode(new HeaderNode("GitHub"));
+        $tree->getLastNode()->addNode(new DividerNode("Bundles"));
         $tree->getLastNode()->addNode(new NavigationNode("AdminBSB Material Design bundle", null, "https://github.com/webeweb/adminbsb-material-design-bundle"));
         $tree->getLastNode()->addNode(new NavigationNode("Bootstrap bundle", null, "https://github.com/webeweb/bootstrap-bundle"));
         $tree->getLastNode()->addNode(new NavigationNode("Core bundle", null, "https://github.com/webeweb/core-bundle"));
@@ -63,6 +67,7 @@ class TestFixtures {
         $tree->getLastNode()->addNode(new NavigationNode("jQuery QueryBuilder bundle", null, "https://github.com/webeweb/jquery-querybuilder-bundle"));
         $tree->getLastNode()->addNode(new NavigationNode("OpenData bundle", null, "https://github.com/webeweb/opendata-bundle"));
         $tree->getLastNode()->addNode(new NavigationNode("SyntaxHighlighter bundle", null, "https://github.com/webeweb/syntaxhighlighter-bundle"));
+        $tree->getLastNode()->addNode(new DividerNode("Libraries"));
         $tree->getLastNode()->addNode(new NavigationNode("Chart accounts library", null, "https://github.com/webeweb/chart-accounts-library"));
         $tree->getLastNode()->addNode(new NavigationNode("Core library", null, "https://github.com/webeweb/core-library"));
         $tree->getLastNode()->addNode(new NavigationNode("cURL library", null, "https://github.com/webeweb/curl-library"));
