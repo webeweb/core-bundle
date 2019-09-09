@@ -6,6 +6,7 @@ CHANGELOG
 > IMPORTANT NOTICE: The following classes has been removed
 > - WBW\Bundle\CoreBundle\Navigation\NavigationItem
 
+- Add Copy skeleton command
 - Add Divider node
 - Add Header node
 - Add Skeleton helper
