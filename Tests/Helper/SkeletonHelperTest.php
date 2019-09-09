@@ -12,8 +12,8 @@
 namespace WBW\Bundle\CoreBundle\Tests\Helper;
 
 use Exception;
+use InvalidArgumentException;
 use Symfony\Component\Filesystem\Filesystem;
-use Symfony\Component\Finder\Exception\DirectoryNotFoundException;
 use WBW\Bundle\CoreBundle\Helper\SkeletonHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
@@ -105,7 +105,7 @@ class SkeletonHelperTest extends AbstractTestCase {
             SkeletonHelper::listSkeleton($this->directoryIllegal);
         } catch (Exception $ex) {
 
-            $this->assertInstanceOf(DirectoryNotFoundException::class, $ex);
+            $this->assertInstanceOf(InvalidArgumentException::class, $ex);
         }
     }
 }

@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Helper;
 
-use Symfony\Component\Finder\Exception\DirectoryNotFoundException;
+use InvalidArgumentException;
 use Symfony\Component\Finder\Finder;
 
 /**
@@ -28,6 +28,7 @@ class SkeletonHelper {
      * @param string $src The source directory.
      * @param string $dst The destination directory.
      * @return bool[] Returns the assets.
+     * @throws InvalidArgumentException Throws an invalid argument exception if the directory does not exist.
      */
     public static function copySkeleton($src, $dst) {
 
@@ -55,7 +56,7 @@ class SkeletonHelper {
      *
      * @param string $directory The directory.
      * @return string[] Returns the skeletons.
-     * @throws DirectoryNotFoundException Throws a directory not found exception if the directory does not exist.
+     * @throws InvalidArgumentException Throws an invalid argument exception if the directory does not exist.
      */
     public static function listSkeleton($directory) {
 
