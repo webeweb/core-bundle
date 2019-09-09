@@ -9,6 +9,7 @@ CHANGELOG
 - Add Copy skeleton command
 - Add Divider node
 - Add Header node
+- Add Kernel helper
 - Add Skeleton helper
 - Add Skeleton provider interface
 - Update abstract Navigation node
