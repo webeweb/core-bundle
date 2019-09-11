@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Command;
 
+use Symfony\Bundle\FrameworkBundle\Console\Application;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -36,6 +37,15 @@ abstract class AbstractCommand extends Command {
         $io->newLine();
         $io->text($text);
         $io->newLine();
+    }
+
+    /**
+     * Get the application.
+     *
+     * @return Application|null Returns the application.
+     */
+    public function getApplication() {
+        return parent::getApplication();
     }
 
     /**
