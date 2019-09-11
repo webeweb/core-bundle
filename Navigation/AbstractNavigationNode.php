@@ -217,7 +217,7 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
      *
      * @return string Returns the label.
      */
-    public function getLabel(): string {
+    public function getLabel() {
         return $this->label;
     }
 
