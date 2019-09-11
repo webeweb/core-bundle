@@ -11,6 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Command;
 
+use Exception;
+use InvalidArgumentException;
 use Symfony\Bundle\FrameworkBundle\Console\Application;
 use Symfony\Component\Console\Helper\HelperSet;
 use Symfony\Component\HttpKernel\Kernel;
@@ -120,8 +122,8 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
 
         // Set an Application mock.
         $application = $this->getMockBuilder(Application::class)->disableOriginalConstructor()->getMock();
-        $application->expects($this->any())->method("getKernel")->willReturn($this->kernel);
         $application->expects($this->any())->method("getHelperSet")->willReturn($helperSet);
+        $application->expects($this->any())->method("getKernel")->willReturn($this->kernel);
 
         $obj = new TestCopySkeletonCommand();
         $obj->setApplication($application);
@@ -130,6 +132,33 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
             $this->assertRegExp("/\/templates\/bundles$/", $obj->getResourcesDirectory());
         } else {
             $this->assertRegExp("/\/app\/Resources$/", $obj->getResourcesDirectory());
+        }
+    }
+
+    /**
+     * Tests the getResourcesDirectory() method.
+     *
+     * @return void
+     */
+    public function testGetResourcesDirectoryWithInvalidArgumentException() {
+
+        // Set an Helper set mock.
+        $helperSet = $this->getMockBuilder(HelperSet::class)->disableOriginalConstructor()->getMock();
+
+        // Set an Application mock.
+        $application = $this->getMockBuilder(Application::class)->disableOriginalConstructor()->getMock();
+        $application->expects($this->any())->method("getHelperSet")->willReturn($helperSet);
+
+        $obj = new TestCopySkeletonCommand();
+        $obj->setApplication($application);
+
+        try {
+
+            $obj->getResourcesDirectory();
+        } catch (Exception $ex) {
+
+            $this->assertInstanceOf(InvalidArgumentException::class, $ex);
+            $this->assertEquals("The application kernel is null", $ex->getMessage());
         }
     }
 }

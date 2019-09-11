@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Command;
 
+use InvalidArgumentException;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\StyleInterface;
@@ -144,10 +145,16 @@ EOT;
      * Get the resources directory.
      *
      * @return string Returns the resources directory.
+     * @throws InvalidArgumentException Throws an invalid argument exception is the kernel is null.
      */
     protected function getResourcesDirectory() {
 
-        $rootDir = KernelHelper::getProjectDir($this->getKernel());
+        $kernel = $this->getKernel();
+        if (null === $kernel) {
+            throw new InvalidArgumentException("The application kernel is null");
+        }
+
+        $rootDir = KernelHelper::getProjectDir($kernel);
 
         if (40000 <= Kernel::VERSION_ID) {
             return $rootDir . "/templates/bundles";
