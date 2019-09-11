@@ -22,11 +22,11 @@ class HeaderNode extends AbstractNavigationNode {
     /**
      * Constructor.
      *
-     * @param string $name The name.
+     * @param string $label The label.
      * @param string $icon The icon.
      */
-    public function __construct($name, $icon = null) {
-        parent::__construct($name, $icon, null, null);
+    public function __construct($label, $icon = null) {
+        parent::__construct($label, $icon, null, null);
     }
 
     /**

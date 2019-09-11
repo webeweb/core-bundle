@@ -32,7 +32,7 @@ class BreadcrumbNodeActionNewUserTest extends AbstractTestCase {
 
         $obj = new BreadcrumbNodeActionNewUser("route");
 
-        $this->assertEquals("navigation.node.action.new", $obj->getId());
+        $this->assertEquals("navigation.node.action.new", $obj->getLabel());
         $this->assertEquals("zmdi:account-add", $obj->getIcon());
         $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
         $this->assertEquals("route", $obj->getUri());

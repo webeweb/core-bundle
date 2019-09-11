@@ -86,7 +86,7 @@ class NavigationTreeHelperTest extends AbstractTestCase {
         $res = NavigationTreeHelper::getBreadcrumbs($this->tree);
         $this->assertCount(2, $res);
 
-        $this->assertEquals("GitHub", $res[0]->getId());
-        $this->assertEquals("Core bundle", $res[1]->getId());
+        $this->assertEquals("GitHub", $res[0]->getLabel());
+        $this->assertEquals("Core bundle", $res[1]->getLabel());
     }
 }

@@ -72,12 +72,13 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
         $obj = new TestNavigationNode("id");
 
         $this->assertFalse($obj->getActive());
-        $this->assertEquals("id", $obj->getAlphabeticalTreeNodeLabel());
+        $this->assertNotEquals("", $obj->getAlphabeticalTreeNodeLabel());
         $this->assertNull($obj->getAlphabeticalTreeNodeParent());
         $this->assertFalse($obj->getEnable());
         $this->assertNull($obj->getFirstNode());
         $this->assertNull($obj->getIcon());
-        $this->assertEquals("id", $obj->getId());
+        $this->assertNotEquals("", $obj->getId());
+        $this->assertEquals("id", $obj->getLabel());
         $this->assertNull($obj->getLastNode());
         $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
         $this->assertEquals([], $obj->getNodes());
@@ -151,15 +152,15 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
         $obj = new TestNavigationNode("id");
         $obj->addNode($node1);
 
-        $this->assertNull($obj->getNodeById("id2"));
-        $this->assertNull($obj->getNodeById("id2", true));
+        $this->assertNull($obj->getNodeById($node2->getId()));
+        $this->assertNull($obj->getNodeById($node2->getId(), true));
 
-        $this->assertSame($node1, $obj->getNodeById("id1"));
-        $this->assertSame($node1, $obj->getNodeById("id1", true));
+        $this->assertSame($node1, $obj->getNodeById($node1->getId()));
+        $this->assertSame($node1, $obj->getNodeById($node1->getId(), true));
 
         $node1->addNode($node2);
-        $this->assertNull($obj->getNodeById("id2"));
-        $this->assertSame($node2, $obj->getNodeById("id2", true));
+        $this->assertNull($obj->getNodeById($node2->getId()));
+        $this->assertSame($node2, $obj->getNodeById($node2->getId(), true));
     }
 
     /**

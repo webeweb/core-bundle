@@ -58,6 +58,13 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
     private $index;
 
     /**
+     * Label.
+     *
+     * @var string
+     */
+    private $label;
+
+    /**
      * Matcher.
      *
      * @var string
@@ -102,17 +109,18 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
     /**
      * Constructor.
      *
-     * @param string $name The name.
+     * @param string $label The label.
      * @param string|null $icon The icon.
      * @param string|null $uri The URI.
      * @param string $matcher The matcher.
      */
-    protected function __construct($name, $icon = null, $uri = null, $matcher = self::NAVIGATION_MATCHER_URL) {
+    protected function __construct($label, $icon = null, $uri = null, $matcher = self::NAVIGATION_MATCHER_URL) {
         $this->setActive(false);
         $this->setEnable(false);
         $this->setIcon($icon);
-        $this->setId($name);
+        $this->setId(uniqid("nav"));
         $this->setIndex([]);
+        $this->setLabel($label);
         $this->setMatcher($matcher);
         $this->setNodes([]);
         $this->setParent(null);
@@ -202,6 +210,15 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
      */
     public function getId() {
         return $this->id;
+    }
+
+    /**
+     * Get the label.
+     *
+     * @return string Returns the label.
+     */
+    public function getLabel(): string {
+        return $this->label;
     }
 
     /**
@@ -403,6 +420,17 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
      */
     protected function setIndex(array $index) {
         $this->index = $index;
+        return $this;
+    }
+
+    /**
+     * Set the label.
+     *
+     * @param string $label The label.
+     * @return AbstractNavigationNode Returns this navigation node.
+     */
+    public function setLabel(string $label): AbstractNavigationNode {
+        $this->label = $label;
         return $this;
     }
 
