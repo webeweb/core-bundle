@@ -11,10 +11,11 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Command;
 
+use Symfony\Bundle\FrameworkBundle\Console\Application;
+use Symfony\Component\Console\Helper\HelperSet;
 use Symfony\Component\Console\Style\StyleInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractCommandTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Command\TestAbstractCommand;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Command\TestUnzipAssetsCommand;
 
 /**
  * Abstract command test.
@@ -23,7 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Command\TestUnzipAssetsCommand;
  * @package WBW\Bundle\CoreBundle\Tests\Command
  */
 class AbstractCommandTest extends AbstractCommandTestCase {
-
 
     /**
      * Tests the displayHeader() method.
@@ -36,6 +36,7 @@ class AbstractCommandTest extends AbstractCommandTestCase {
 
         $this->assertNull($obj->displayHeader($this->style, ""));
     }
+
     /**
      * Tests the getCheckbox() method.
      *
@@ -55,6 +56,29 @@ class AbstractCommandTest extends AbstractCommandTestCase {
             $this->assertEquals("<fg=green;options=bold>OK</>", $obj->getCheckbox(true));
             $this->assertEquals("<fg=yellow;options=bold>WARNING</>", $obj->getCheckbox(false));
         }
+    }
+
+    /**
+     * Tests the getKernel() method.
+     *
+     * @return void
+     */
+    public function testGetKernel() {
+
+        // Set an Helper set mock.
+        $helperSet = $this->getMockBuilder(HelperSet::class)->disableOriginalConstructor()->getMock();
+
+        // Set an Application mock.
+        $application = $this->getMockBuilder(Application::class)->disableOriginalConstructor()->getMock();
+        $application->expects($this->any())->method("getHelperSet")->willReturn($helperSet);
+
+        $obj = new TestAbstractCommand();
+        $obj->setApplication($application);
+
+        $this->assertNull($obj->getKernel());
+
+        $application->expects($this->any())->method("getKernel")->willReturn($this->kernel);
+        $this->assertSame($this->kernel, $obj->getKernel());
     }
 
     /**

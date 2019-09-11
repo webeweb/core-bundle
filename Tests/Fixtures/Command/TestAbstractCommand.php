@@ -48,6 +48,13 @@ class TestAbstractCommand extends AbstractCommand {
     /**
      * {@inheritDoc}
      */
+    public function getKernel() {
+        return parent::getKernel();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function newStyle(InputInterface $input, OutputInterface $output) {
         return parent::newStyle($input, $output);
     }
