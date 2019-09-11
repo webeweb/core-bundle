@@ -15,7 +15,6 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\StyleInterface;
 use Symfony\Component\HttpKernel\Kernel;
-use Symfony\Component\HttpKernel\KernelInterface;
 use WBW\Bundle\CoreBundle\Helper\KernelHelper;
 use WBW\Bundle\CoreBundle\Helper\SkeletonHelper;
 use WBW\Bundle\CoreBundle\Provider\SkeletonProviderInterface;
@@ -120,7 +119,7 @@ EOT;
 
         $results = [];
 
-        $bundles = $this->getApplication()->getKernel()->getBundles();
+        $bundles = $this->getKernel()->getBundles();
         foreach ($bundles as $current) {
 
             if (false === ($current instanceof SkeletonProviderInterface)) {
@@ -129,7 +128,6 @@ EOT;
 
             $bundlePath = $current->getPath();
 
-            /** @var SkeletonProviderInterface $current */
             $skeletonDirectory  = $bundlePath . $current->getSkeletonRelativeDirectory();
             $resourcesDirectory = $this->getResourcesDirectory();
 
@@ -149,10 +147,7 @@ EOT;
      */
     protected function getResourcesDirectory() {
 
-        /** @var KernelInterface $kernel */
-        $kernel = $this->getApplication()->getKernel();
-
-        $rootDir = KernelHelper::getProjectDir($kernel);
+        $rootDir = KernelHelper::getProjectDir($this->getKernel());
 
         if (40000 <= Kernel::VERSION_ID) {
             return $rootDir . "/templates/bundles";

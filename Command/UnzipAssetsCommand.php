@@ -118,7 +118,7 @@ EOT;
 
         $results = [];
 
-        $bundles = $this->getApplication()->getKernel()->getBundles();
+        $bundles = $this->getKernel()->getBundles();
         foreach ($bundles as $current) {
 
             if (false === ($current instanceof AssetsProviderInterface)) {
@@ -127,7 +127,6 @@ EOT;
 
             $bundlePath = $current->getPath();
 
-            /** @var AssetsProviderInterface $current */
             $assetsDirectory = $bundlePath . $current->getAssetsRelativeDirectory();
             $publicDirectory = $bundlePath . "/Resources/public";
 

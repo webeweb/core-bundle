@@ -16,6 +16,7 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\StyleInterface;
+use Symfony\Component\HttpKernel\KernelInterface;
 use WBW\Bundle\CoreBundle\Helper\CommandHelper;
 
 /**
@@ -40,15 +41,6 @@ abstract class AbstractCommand extends Command {
     }
 
     /**
-     * Get the application.
-     *
-     * @return Application|null Returns the application.
-     */
-    public function getApplication() {
-        return parent::getApplication();
-    }
-
-    /**
      * Get a checkbox.
      *
      * @param bool $checked Checked ?
@@ -56,6 +48,18 @@ abstract class AbstractCommand extends Command {
      */
     protected function getCheckbox($checked) {
         return CommandHelper::getCheckbox($checked);
+    }
+
+    /**
+     * Get the kernel.
+     *
+     * @return KernelInterface|null Returns the kernel in case of success, null othrewise.
+     */
+    public function getKernel() {
+        if (false === ($this->getApplication() instanceof Application)) {
+            return null;
+        }
+        return $this->getApplication()->getKernel();
     }
 
     /**
