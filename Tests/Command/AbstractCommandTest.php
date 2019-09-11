@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Command;
 
 use Symfony\Bundle\FrameworkBundle\Console\Application;
+use Symfony\Component\Console\Application as BaseApplication;
 use Symfony\Component\Console\Helper\HelperSet;
 use Symfony\Component\Console\Style\StyleInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractCommandTestCase;
@@ -79,6 +80,26 @@ class AbstractCommandTest extends AbstractCommandTestCase {
 
         $application->expects($this->any())->method("getKernel")->willReturn($this->kernel);
         $this->assertSame($this->kernel, $obj->getKernel());
+    }
+
+    /**
+     * Tests the getKernel() method.
+     *
+     * @return void
+     */
+    public function testGetKernelWithBaseApplication() {
+
+        // Set an Helper set mock.
+        $helperSet = $this->getMockBuilder(HelperSet::class)->disableOriginalConstructor()->getMock();
+
+        // Set an Application mock.
+        $application = $this->getMockBuilder(BaseApplication::class)->disableOriginalConstructor()->getMock();
+        $application->expects($this->any())->method("getHelperSet")->willReturn($helperSet);
+
+        $obj = new TestAbstractCommand();
+        $obj->setApplication($application);
+
+        $this->assertNull($obj->getKernel());
     }
 
     /**
