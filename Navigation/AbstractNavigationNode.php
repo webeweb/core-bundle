@@ -429,7 +429,7 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
      * @param string $label The label.
      * @return AbstractNavigationNode Returns this navigation node.
      */
-    public function setLabel(string $label): AbstractNavigationNode {
+    public function setLabel($label) {
         $this->label = $label;
         return $this;
     }
