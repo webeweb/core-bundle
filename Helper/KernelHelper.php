@@ -13,6 +13,12 @@ namespace WBW\Bundle\CoreBundle\Helper;
 
 use Symfony\Component\HttpKernel\KernelInterface;
 
+/**
+ * Kernel helper.
+ *
+ * @author webeweb <https://github.com/webeweb/>
+ * @package WBW\Bundle\CoreBundle\Helper
+ */
 class KernelHelper {
 
     /**
