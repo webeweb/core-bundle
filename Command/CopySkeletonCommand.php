@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\CoreBundle\Command;
 
-use Symfony\Bundle\FrameworkBundle\Console\Application;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\StyleInterface;
@@ -116,26 +115,21 @@ EOT;
      */
     protected function execute(InputInterface $input, OutputInterface $output) {
 
-        if (false === ($this->getApplication() instanceof Application)) {
-            return -1;
-        }
-
         $io = $this->newStyle($input, $output);
         $this->displayHeader($io, "Trying to copy skeletons");
 
         $results = [];
 
         $bundles = $this->getApplication()->getKernel()->getBundles();
-
         foreach ($bundles as $current) {
 
             if (false === ($current instanceof SkeletonProviderInterface)) {
                 continue;
             }
 
-            /** @var SkeletonProviderInterface $current */
             $bundlePath = $current->getPath();
 
+            /** @var SkeletonProviderInterface $current */
             $skeletonDirectory  = $bundlePath . $current->getSkeletonRelativeDirectory();
             $resourcesDirectory = $this->getResourcesDirectory();
 
