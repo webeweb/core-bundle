@@ -52,7 +52,7 @@ class DividerNodeTest extends AbstractTestCase {
         $obj = new DividerNode("id");
 
         $this->assertFalse($obj->getActive());
-        $this->assertFalse($obj->getEnable());
+        $this->assertTrue($obj->getEnable());
         $this->assertNull($obj->getIcon());
         $this->assertNull($obj->getMatcher());
         $this->assertNull($obj->getUri());
