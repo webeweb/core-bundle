@@ -36,7 +36,6 @@ abstract class AbstractCommand extends Command {
      * @return void
      */
     protected function displayHeader(StyleInterface $io, $header) {
-        $io->newLine();
         $io->text($header);
         $io->newLine();
     }
