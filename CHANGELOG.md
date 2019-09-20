@@ -12,6 +12,7 @@ CHANGELOG
 - Add Kernel helper
 - Add Skeleton helper
 - Add Skeleton provider interface
+- Update abstract Command
 - Update abstract Navigation node
 - Update PHPDoc
 
