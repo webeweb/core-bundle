@@ -34,8 +34,15 @@ class TestAbstractCommand extends AbstractCommand {
     /**
      * {@inheritDoc}
      */
-    public function displayHeader(StyleInterface $io, $text) {
-        parent::displayHeader($io, $text);
+    public function displayHeader(StyleInterface $io, $header) {
+        parent::displayHeader($io, $header);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function displayTitle(StyleInterface $io, $title) {
+        parent::displayTitle($io, $title);
     }
 
     /**

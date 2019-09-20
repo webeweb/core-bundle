@@ -39,6 +39,18 @@ class AbstractCommandTest extends AbstractCommandTestCase {
     }
 
     /**
+     * Tests the displayTitle() method.
+     *
+     * @return void
+     */
+    public function testDisplayTitle() {
+
+        $obj = new TestAbstractCommand();
+
+        $this->assertNull($obj->displayTitle($this->style, ""));
+    }
+
+    /**
      * Tests the getCheckbox() method.
      *
      * @return void

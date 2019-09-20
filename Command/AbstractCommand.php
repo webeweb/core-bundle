@@ -32,10 +32,23 @@ abstract class AbstractCommand extends Command {
      * Displays the header.
      *
      * @param StyleInterface $io The I/O.
+     * @param string $header The header.
      * @return void
      */
-    protected function displayHeader(StyleInterface $io, $text) {
-        $io->title($text);
+    protected function displayHeader(StyleInterface $io, $header) {
+        $io->newLine();
+        $io->text($header);
+        $io->newLine();
+    }
+    /**
+     * Displays the title.
+     *
+     * @param StyleInterface $io The I/O.
+     * @param string $title The title.
+     * @return void
+     */
+    protected function displayTitle(StyleInterface $io, $title) {
+        $io->title($title);
     }
 
     /**

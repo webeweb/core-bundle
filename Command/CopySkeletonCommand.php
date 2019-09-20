@@ -116,6 +116,7 @@ EOT;
     protected function execute(InputInterface $input, OutputInterface $output) {
 
         $io = $this->newStyle($input, $output);
+        $this->displayTitle($io, $this->getDescription());
         $this->displayHeader($io, "Trying to copy skeletons");
 
         $results = [];
