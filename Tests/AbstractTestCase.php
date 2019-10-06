@@ -13,6 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests;
 
 use Closure;
 use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\ORM\EntityManagerInterface;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -47,6 +48,13 @@ abstract class AbstractTestCase extends TestCase {
      * @var ContainerBuilder
      */
     protected $containerBuilder;
+
+    /**
+     * Entity manager.
+     *
+     * @var EntityManagerInterface;
+     */
+    protected $entityManager;
 
     /**
      * Event dispatcher.
@@ -178,6 +186,9 @@ abstract class AbstractTestCase extends TestCase {
      */
     protected function setUp() {
         parent::setUp();
+
+        // Set an Entity manager mock.
+        $this->entityManager = $this->getMockBuilder(EntityManagerInterface::class)->getMock();
 
         // Set an Event dispatcher mock.
         $this->eventDispatcher = $this->getMockBuilder(EventDispatcherInterface::class)->getMock();
