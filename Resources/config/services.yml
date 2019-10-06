@@ -10,6 +10,11 @@ services:
         arguments: ["@doctrine.orm.entity_manager", "@event_dispatcher"]
         public:    true
 
+    wbw.core.helper.repository_report:
+        class:     WBW\Bundle\CoreBundle\Helper\RepositoryReportHelper
+        arguments: ["@doctrine.orm.entity_manager"]
+        public:    true
+
     wbw.core.manager.color:
         class:     WBW\Bundle\CoreBundle\Manager\ColorManager
         public:    true

@@ -41,6 +41,7 @@ use WBW\Bundle\CoreBundle\EventListener\NotificationEventListener;
 use WBW\Bundle\CoreBundle\EventListener\SecurityEventListener;
 use WBW\Bundle\CoreBundle\EventListener\ToastEventListener;
 use WBW\Bundle\CoreBundle\Helper\FormHelper;
+use WBW\Bundle\CoreBundle\Helper\RepositoryReportHelper;
 use WBW\Bundle\CoreBundle\Manager\ColorManager;
 use WBW\Bundle\CoreBundle\Manager\QuoteManager;
 use WBW\Bundle\CoreBundle\Manager\ThemeManager;
@@ -140,6 +141,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
 
         // Helpers
         $this->assertInstanceOf(FormHelper::class, $this->containerBuilder->get(FormHelper::SERVICE_NAME));
+        $this->assertInstanceOf(RepositoryReportHelper::class, $this->containerBuilder->get(RepositoryReportHelper::SERVICE_NAME));
 
         // Managers
         $this->assertInstanceOf(ColorManager::class, $this->containerBuilder->get(ColorManager::SERVICE_NAME));
