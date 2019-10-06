@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace  WBW\Bundle\CoreBundle\Tests\Exception;
+namespace WBW\Bundle\CoreBundle\Tests\Exception;
 
 use Exception;
 use WBW\Bundle\CoreBundle\Exception\AlreadyRegisteredProviderException;

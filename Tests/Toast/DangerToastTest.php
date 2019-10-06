@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Toast;
 
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Toast\DangerToast;
 use WBW\Bundle\CoreBundle\Toast\ToastInterface;
-use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Danger toast test.

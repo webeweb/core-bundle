@@ -39,6 +39,7 @@ abstract class AbstractCommand extends Command {
         $io->text($header);
         $io->newLine();
     }
+
     /**
      * Displays the title.
      *

@@ -39,6 +39,7 @@ class AbstractManagerTest extends AbstractTestCase {
         // Set a Color provider mock.
         $this->provider = $this->getMockBuilder(ProviderInterface::class)->getMock();
     }
+
     /**
      * Tests the addProvider() method.
      *
