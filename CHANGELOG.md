@@ -10,6 +10,8 @@ CHANGELOG
 - Add Divider node
 - Add Header node
 - Add Kernel helper
+- Add Repository report
+- Add Repository report helper
 - Add Skeleton helper
 - Add Skeleton provider interface
 - Update abstract Command
