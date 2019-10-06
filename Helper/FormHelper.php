@@ -62,7 +62,7 @@ class FormHelper {
      * @param string $redirectURL The redirect URL.
      * @param int $expected The expected count.
      * @throws InvalidArgumentException Throws an invalid argument exception if collection is null.
-     * @throws RedirectResponseException Throws a redirect response exception if the collection is less than $expected.
+     * @throws RedirectResponseException Throws a redirect response exception if the collection count is less than $expected.
      */
     public function checkCollection($collection, $notification, $redirectURL, $expected = 1) {
 
