@@ -250,7 +250,7 @@ abstract class AbstractTestCase extends TestCase {
 
         // We set a container builder with only the necessary.
         $this->containerBuilder = new ContainerBuilder($parameterBag);
-        $this->containerBuilder->set("doctrine.orm.entity_manager", $this->objectManager);
+        $this->containerBuilder->set("doctrine.orm.entity_manager", $this->entityManager);
         $this->containerBuilder->set("event_dispatcher", $this->eventDispatcher);
         $this->containerBuilder->set("kernel", $this->kernel);
         $this->containerBuilder->set("logger", $this->logger);
