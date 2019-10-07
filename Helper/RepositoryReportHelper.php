@@ -44,7 +44,9 @@ class RepositoryReportHelper {
      */
     const SQL_QUERY = <<< EOT
 SELECT
+    '%table%' AS 'table',
     '%entity%' AS 'entity',
+    '%column%' AS 'column',
     '%field%' AS 'field',
     %available% AS 'available',
     MIN(LENGTH(`%column%`)) AS 'minimum',
@@ -81,11 +83,13 @@ EOT;
         $model = new RepositoryReport();
         $model->setAvailable(intval($row["available"]));
         $model->setAverage(floatval($row["average"]));
+        $model->setColumn($row["column"]);
         $model->setCount(intval($row["count"]));
         $model->setEntity($row["entity"]);
         $model->setField($row["field"]);
         $model->setMaximum(intval($row["maximum"]));
         $model->setMinimum(intval($row["minimum"]));
+        $model->setTable($row["table"]);
 
         return $model;
     }
@@ -129,7 +133,7 @@ EOT;
     }
 
     /**
-     * Read the reposotories.
+     * Read the repositories.
      *
      * @return RepositoryReport[] Returns the repository reports.
      * @throws DBALException Throws a DBAL exception.

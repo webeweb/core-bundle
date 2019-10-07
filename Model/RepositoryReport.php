@@ -34,6 +34,13 @@ class RepositoryReport {
     private $average;
 
     /**
+     * Column.
+     *
+     * @var string
+     */
+    private $column;
+
+    /**
      * Count.
      *
      * @var int
@@ -69,6 +76,13 @@ class RepositoryReport {
     private $minimum;
 
     /**
+     * Table.
+     *
+     * @var string
+     */
+    private $table;
+
+    /**
      * Constructor.
      */
     public function __construct() {
@@ -91,6 +105,15 @@ class RepositoryReport {
      */
     public function getAverage() {
         return $this->average;
+    }
+
+    /**
+     * Get the column.
+     *
+     * @return string Returns the column.
+     */
+    public function getColumn() {
+        return $this->column;
     }
 
     /**
@@ -139,6 +162,15 @@ class RepositoryReport {
     }
 
     /**
+     * Get the table.
+     *
+     * @return string Returns the table.
+     */
+    public function getTable() {
+        return $this->table;
+    }
+
+    /**
      * Set the available.
      *
      * @param int $available The available.
@@ -157,6 +189,17 @@ class RepositoryReport {
      */
     public function setAverage($average) {
         $this->average = $average;
+        return $this;
+    }
+
+    /**
+     * Set the column.
+     *
+     * @param string $column The column.
+     * @return RepositoryReport Returns this repository report.
+     */
+    public function setColumn($column) {
+        $this->column = $column;
         return $this;
     }
 
@@ -212,6 +255,17 @@ class RepositoryReport {
      */
     public function setMinimum($minimum) {
         $this->minimum = $minimum;
+        return $this;
+    }
+
+    /**
+     * Set the table.
+     *
+     * @param string $table The table.
+     * @return RepositoryReport Returns this repository report.
+     */
+    public function setTable($table) {
+        $this->table = $table;
         return $this;
     }
 }

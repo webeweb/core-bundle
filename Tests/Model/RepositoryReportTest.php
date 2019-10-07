@@ -33,11 +33,13 @@ class RepositoryReportTest extends AbstractTestCase {
 
         $this->assertNull($obj->getAvailable());
         $this->assertNull($obj->getAverage());
+        $this->assertNull($obj->getColumn());
         $this->assertNull($obj->getCount());
         $this->assertNull($obj->getEntity());
         $this->assertNull($obj->getField());
         $this->assertNull($obj->getMaximum());
         $this->assertNull($obj->getMinimum());
+        $this->assertNull($obj->getTable());
     }
 
     /**
@@ -64,6 +66,19 @@ class RepositoryReportTest extends AbstractTestCase {
 
         $obj->setAverage(0.1);
         $this->assertEquals(0.1, $obj->getAverage());
+    }
+
+    /**
+     * Tests the setColumn() method.
+     *
+     * @return void
+     */
+    public function testSetColumn() {
+
+        $obj = new RepositoryReport();
+
+        $obj->setColumn("column");
+        $this->assertEquals("column", $obj->getColumn());
     }
 
     /**
@@ -129,5 +144,18 @@ class RepositoryReportTest extends AbstractTestCase {
 
         $obj->setMinimum(90);
         $this->assertEquals(90, $obj->getMinimum());
+    }
+
+    /**
+     * Tests the setTable() method.
+     *
+     * @return void
+     */
+    public function testSetTable() {
+
+        $obj = new RepositoryReport();
+
+        $obj->setTable("table");
+        $this->assertEquals("table", $obj->getTable());
     }
 }
