@@ -24,6 +24,7 @@ use WBW\Bundle\CoreBundle\Event\ToastEvent;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
 use WBW\Bundle\CoreBundle\Helper\FormHelper;
+use WBW\Bundle\CoreBundle\Helper\RepositoryReportHelper;
 use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Controller\TestAbstractController;
@@ -52,6 +53,13 @@ class AbstractControllerTest extends AbstractTestCase {
     private $kernelEventListener;
 
     /**
+     * Repository report helper.
+     *
+     * @var RepositoryReportHelper
+     */
+    private $repositoryReportHelper;
+
+    /**
      * {@inheritDoc}
      */
     protected function setUp() {
@@ -63,9 +71,13 @@ class AbstractControllerTest extends AbstractTestCase {
         // Set a Kernel event listener mock.
         $this->kernelEventListener = $this->getMockBuilder(KernelEventListener::class)->disableOriginalConstructor()->getMock();
 
+        // Set a Repository report helper mock.
+        $this->repositoryReportHelper = $this->getMockBuilder(RepositoryReportHelper::class)->disableOriginalConstructor()->getMock();
+
         // Set the Container builder mock.
         $this->containerBuilder->set(FormHelper::SERVICE_NAME, $this->formHelper);
         $this->containerBuilder->set(KernelEventListener::SERVICE_NAME, $this->kernelEventListener);
+        $this->containerBuilder->set(RepositoryReportHelper::SERVICE_NAME, $this->repositoryReportHelper);
     }
 
     /**
@@ -141,6 +153,21 @@ class AbstractControllerTest extends AbstractTestCase {
         $res = $obj->getLogger();
         $this->assertInstanceOf(LoggerInterface::class, $res);
         $this->assertSame($this->logger, $res);
+    }
+
+    /**
+     * Tests the getRepositoryReportHelper() method.
+     *
+     * @return void
+     */
+    public function testGetRepositoryReportHelper() {
+
+        $obj = new TestAbstractController();
+        $obj->setContainer($this->containerBuilder);
+
+        $res = $obj->getRepositoryReportHelper();
+        $this->assertInstanceOf(RepositoryReportHelper::class, $res);
+        $this->assertSame($this->repositoryReportHelper, $res);
     }
 
     /**

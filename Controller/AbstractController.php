@@ -25,6 +25,7 @@ use WBW\Bundle\CoreBundle\EventDispatcher\EventDispatcherHelper;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
 use WBW\Bundle\CoreBundle\Helper\FormHelper;
+use WBW\Bundle\CoreBundle\Helper\RepositoryReportHelper;
 use WBW\Bundle\CoreBundle\Helper\UserHelper;
 use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
 use WBW\Bundle\CoreBundle\Toast\ToastInterface;
@@ -53,7 +54,7 @@ abstract class AbstractController extends BaseController {
     /**
      * Get the container.
      *
-     * @return Container Returns the container.
+     * @return Container|null Returns the container in case of success, null otherwise.
      */
     protected function getContainer() {
         return $this->get("service_container");
@@ -62,7 +63,7 @@ abstract class AbstractController extends BaseController {
     /**
      * Get the event dispatcher.
      *
-     * @return EventDispatcherInterface Returns the event dispatcher.
+     * @return EventDispatcherInterface|null Returns the event dispatcher in case of success, null otherwise.
      */
     protected function getEventDispatcher() {
         return $this->get("event_dispatcher");
@@ -71,7 +72,7 @@ abstract class AbstractController extends BaseController {
     /**
      * Get the form helper.
      *
-     * @return FormHelper Returns the form helper.
+     * @return FormHelper|null Returns the form helper in case of success, null otherwise.
      */
     protected function getFormHelper() {
         return $this->get(FormHelper::SERVICE_NAME);
@@ -80,7 +81,7 @@ abstract class AbstractController extends BaseController {
     /**
      * Get the kernel event listener.
      *
-     * @return KernelEventListener Returns the kernel event listener.
+     * @return KernelEventListener|null Returns the kernel event listener in case of success, null otherwise.
      */
     protected function getKernelEventListener() {
         return $this->get(KernelEventListener::SERVICE_NAME);
@@ -89,16 +90,25 @@ abstract class AbstractController extends BaseController {
     /**
      * Get the logger.
      *
-     * @return LoggerInterface Returns the logger.
+     * @return LoggerInterface|null Returns the logger in case of success, null otherwise.
      */
     protected function getLogger() {
         return $this->get("logger");
     }
 
     /**
+     * Get the repository report helper.
+     *
+     * @return RepositoryReportHelper|null Returns the repository report helper in case of success, null otherwise.
+     */
+    protected function getRepositoryReportHelper() {
+        return $this->get(RepositoryReportHelper::SERVICE_NAME);
+    }
+
+    /**
      * Get the router.
      *
-     * @return RouterInterface Returns the router.
+     * @return RouterInterface|null Returns the router in case of success, null otherwise.
      */
     protected function getRouter() {
         return $this->get("router");
@@ -107,7 +117,7 @@ abstract class AbstractController extends BaseController {
     /**
      * Get the session.
      *
-     * @return SessionInterface Returns the session.
+     * @return SessionInterface|null Returns the session in case of success, null otherwise.
      */
     protected function getSession() {
         return $this->get("session");
@@ -116,7 +126,7 @@ abstract class AbstractController extends BaseController {
     /**
      * Get the translator.
      *
-     * @return TranslatorInterface Returns the translator.
+     * @return TranslatorInterface|null Returns the translator in case of success, null otherwise.
      */
     protected function getTranslator() {
         return $this->get("translator");
