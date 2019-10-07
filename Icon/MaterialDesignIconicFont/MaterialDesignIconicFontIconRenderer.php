@@ -35,7 +35,7 @@ class MaterialDesignIconicFontIconRenderer extends IconRenderer {
      * Render a fixed width.
      *
      * @param MaterialDesignIconicFontIconInterface $icon The icon.
-     * @return string Returns the rendered fixed width in case of success, null otherwise.
+     * @return string|null Returns the rendered fixed width in case of success, null otherwise.
      */
     public static function renderFixedWidth(MaterialDesignIconicFontIconInterface $icon) {
         return true === $icon->getFixedWidth() ? "zmdi-hc-fw" : null;

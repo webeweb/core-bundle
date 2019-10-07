@@ -35,7 +35,7 @@ class FontAwesomeIconRenderer extends IconRenderer {
      * Render a bordered.
      *
      * @param FontAwesomeIconInterface $icon The icon.
-     * @return string Returns the rendered bordered in case of success, null otherwise.
+     * @return string|null Returns the rendered bordered in case of success, null otherwise.
      */
     public static function renderBordered(FontAwesomeIconInterface $icon) {
         return true === $icon->getBordered() ? "fa-border" : null;
@@ -45,7 +45,7 @@ class FontAwesomeIconRenderer extends IconRenderer {
      * Render a fixed width.
      *
      * @param FontAwesomeIconInterface $icon The icon.
-     * @return string Returns the rendered fixed width in case of success, null otherwise.
+     * @return string|null Returns the rendered fixed width in case of success, null otherwise.
      */
     public static function renderFixedWidth(FontAwesomeIconInterface $icon) {
         return true === $icon->getFixedWidth() ? "fa-fw" : null;

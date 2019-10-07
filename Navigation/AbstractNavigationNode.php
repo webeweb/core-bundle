@@ -259,7 +259,7 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
      *
      * @param string $id The id.
      * @param bool $recursively Recursively ?
-     * @return AbstractNavigationNode Returns the navigation node in case of success, null otherwise.
+     * @return AbstractNavigationNode|null Returns the navigation node in case of success, null otherwise.
      */
     public function getNodeById($id, $recursively = false) {
 
