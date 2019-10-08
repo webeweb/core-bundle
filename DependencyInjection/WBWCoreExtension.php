@@ -41,27 +41,22 @@ class WBWCoreExtension extends Extension {
         $config = $this->processConfiguration($configuration, $configs);
 
         if (true === $config["commands"]) {
-            $container->setParameter(implode(".", [$this->getAlias(), "commands"]), $config["commands"]);
             $serviceLoader->load("commands.yml");
         }
 
         if (true === $config["event_listeners"]) {
-            $container->setParameter(implode(".", [$this->getAlias(), "event_listeners"]), $config["event_listeners"]);
             $serviceLoader->load("event_listeners.yml");
         }
 
         if (true === $config["providers"]) {
-            $container->setParameter(implode(".", [$this->getAlias(), "providers"]), $config["providers"]);
             $serviceLoader->load("providers.yml");
         }
 
         if (true === $config["security_event_listener"]) {
-            $container->setParameter(implode(".", [$this->getAlias(), "security_event_listener"]), $config["security_event_listener"]);
             $serviceLoader->load("services/security_event_listener.yml");
         }
 
         if (true === $config["twig"]) {
-            $container->setParameter(implode(".", [$this->getAlias(), "twig"]), $config["twig"]);
             $serviceLoader->load("twig.yml");
         }
 
@@ -69,5 +64,11 @@ class WBWCoreExtension extends Extension {
             $container->setParameter(implode(".", [$this->getAlias(), "quote_providers", "worlds_wisdom"]), $config["quote_providers"]["worlds_wisdom"]);
             $serviceLoader->load("services/worlds_wisdom_quote_provider.yml");
         }
+
+        $container->setParameter(implode(".", [$this->getAlias(), "commands"]), $config["commands"]);
+        $container->setParameter(implode(".", [$this->getAlias(), "event_listeners"]), $config["event_listeners"]);
+        $container->setParameter(implode(".", [$this->getAlias(), "providers"]), $config["providers"]);
+        $container->setParameter(implode(".", [$this->getAlias(), "security_event_listener"]), $config["security_event_listener"]);
+        $container->setParameter(implode(".", [$this->getAlias(), "twig"]), $config["twig"]);
     }
 }
