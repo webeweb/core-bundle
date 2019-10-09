@@ -13,9 +13,9 @@ namespace WBW\Bundle\CoreBundle\Twig\Extension;
 
 use Twig\Environment;
 use Twig\TwigFilter;
-use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\FontAwesomeTwigExtension;
-use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MaterialDesignIconicFontTwigExtension;
-use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MeteoconsTwigExtension;
+use WBW\Bundle\CoreBundle\Twig\Extension\Asset\FontAwesomeTwigExtension;
+use WBW\Bundle\CoreBundle\Twig\Extension\Asset\MaterialDesignIconicFontTwigExtension;
+use WBW\Bundle\CoreBundle\Twig\Extension\Asset\MeteoconsTwigExtension;
 
 /**
  * Renderer Twig extension.
