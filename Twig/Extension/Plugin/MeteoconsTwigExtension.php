@@ -14,47 +14,15 @@ namespace WBW\Bundle\CoreBundle\Twig\Extension\Plugin;
 use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\Renderer\IconRendererInterface;
 use WBW\Library\Core\Argument\ArrayHelper;
+use WBW\Bundle\CoreBundle\Twig\Extension\Asset\MeteoconsTwigExtension as BaseMeteoconsTwigExtension;
 
 /**
  * Meteocons Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Twig\Extension\Plugin
+ * @deprecated since 2.13.0, use {@see WBW\Bundle\CoreBundle\Twig\Extension\Asset\MeteoconsTwigExtension} instead.
  */
-class MeteoconsTwigExtension extends AbstractMeteoconsTwigExtension implements IconRendererInterface {
+class MeteoconsTwigExtension extends BaseMeteoconsTwigExtension {
 
-    /**
-     * Service name.
-     *
-     * @var string
-     */
-    const SERVICE_NAME = "wbw.core.twig.extension.plugin.meteocons";
-
-    /**
-     * Get the Twig functions.
-     *
-     * @return TwigFunction[] Returns the Twig functions.
-     */
-    public function getFunctions() {
-        return [
-            new TwigFunction("meteoconsIcon", [$this, "meteoconsIconFunction"], ["is_safe" => ["html"]]),
-        ];
-    }
-
-    /**
-     * Displays a Meteocons icon.
-     *
-     * @param array $args The arguments.
-     * @return string Returns a Meteocons icon.
-     */
-    public function meteoconsIconFunction(array $args = []) {
-        return $this->meteoconsIcon(ArrayHelper::get($args, "name", "A"), ArrayHelper::get($args, "style"));
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function renderIcon($name, $style) {
-        return $this->meteoconsIconFunction(["name" => $name, "style" => $style]);
-    }
 }

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Twig\Extension\Plugin;
+namespace WBW\Bundle\CoreBundle\Twig\Extension\Asset;
 
 use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
 
@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
  * Abstract Meteocons Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Twig\Extension\Plugin
+ * @package WBW\Bundle\CoreBundle\Twig\Extension\Asset
  * @abstract
  */
 abstract class AbstractMeteoconsTwigExtension extends AbstractTwigExtension {
