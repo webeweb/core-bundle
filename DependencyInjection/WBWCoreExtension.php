@@ -79,7 +79,7 @@ class WBWCoreExtension extends Extension {
         ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "quote_providers");
         ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "security_event_listener");
 
-        $assets = ConfigurationHelper::loadYamlConfig("assets");
+        $assets = ConfigurationHelper::loadYamlConfig(__DIR__, "assets");
         ConfigurationHelper::registerContainerParameters($container, $assets["assets"]);
     }
 }

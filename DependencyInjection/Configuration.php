@@ -39,7 +39,7 @@ class Configuration implements ConfigurationInterface {
      */
     public function getConfigTreeBuilder() {
 
-        $assets  = ConfigurationHelper::loadYamlConfig("assets");
+        $assets  = ConfigurationHelper::loadYamlConfig(__DIR__, "assets");
         $locales = $assets["assets"]["wbw.core.asset.jquery_select2"]["locales"];
 
         $treeBuilder = new TreeBuilder(WBWCoreExtension::EXTENSION_ALIAS);

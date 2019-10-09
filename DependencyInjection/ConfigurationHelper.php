@@ -47,12 +47,13 @@ class ConfigurationHelper {
     /**
      * Load a YAML configuration.
      *
+     * @param string $directory The directory.
      * @param string $filename The filename.
      * @return array Returns the YAML configuration.
      */
-    public static function loadYamlConfig($filename) {
+    public static function loadYamlConfig($directory, $filename) {
 
-        $pathname = realpath(__DIR__ . "/../Resources/config/" . $filename . ".yml");
+        $pathname = realpath($directory . "/../Resources/config/" . $filename . ".yml");
         if (false === $pathname) {
             return [];
         }

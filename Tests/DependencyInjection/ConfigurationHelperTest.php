@@ -29,7 +29,7 @@ class ConfigurationHelperTest extends AbstractTestCase {
      */
     public function testLoadYamlConfig() {
 
-        $res = ConfigurationHelper::loadYamlConfig("assets");
+        $res = ConfigurationHelper::loadYamlConfig(getcwd() . "/DependencyInjection", "assets");
         $this->assertNotEquals([], $res);
     }
 
@@ -40,7 +40,7 @@ class ConfigurationHelperTest extends AbstractTestCase {
      */
     public function testLoadYamlConfigWithoutFilename() {
 
-        $res = ConfigurationHelper::loadYamlConfig("exception");
+        $res = ConfigurationHelper::loadYamlConfig(getcwd() . "/DependencyInjection", "exception");
         $this->assertEquals([], $res);
     }
 }
