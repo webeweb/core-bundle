@@ -9,12 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Twig\Extension\Plugin;
+namespace WBW\Bundle\CoreBundle\Twig\Extension\Asset;
 
 use WBW\Bundle\CoreBundle\Icon\MaterialDesignIconicFont\MaterialDesignIconicFontIconInterface;
 use WBW\Bundle\CoreBundle\Icon\MaterialDesignIconicFont\MaterialDesignIconicFontIconRenderer;
 use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
-use WBW\Library\Core\Argument\StringHelper;
 
 /**
  * Abstract Material Design Iconic Font Twig extension.
@@ -71,7 +70,7 @@ abstract class AbstractMaterialDesignIconicFontTwigExtension extends AbstractTwi
      */
     protected function materialDesignIconicFontListIcon($icon, $content) {
 
-        $glyphicon = null !== $icon ? StringHelper::replace($icon, ["class=\"zmdi"], ["class=\"zmdi-hc-li zmdi"]) : "";
+        $glyphicon = null !== $icon ? str_replace(["class=\"zmdi"], ["class=\"zmdi-hc-li zmdi"], $icon) : "";
         $innerHTML = null !== $content ? $content : "";
 
         return static::coreHTMLElement("li", $glyphicon . $innerHTML);
