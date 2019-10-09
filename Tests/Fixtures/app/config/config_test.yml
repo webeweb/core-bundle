@@ -64,6 +64,9 @@ twig:
     strict_variables: "%kernel.debug%"
 
 wbw_core:
+    assets:
+        jquery_select2:
+            locale: "fr"
     quote_providers:
         worlds_wisdom: true
     security_event_listener: true
