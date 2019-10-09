@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Twig\Extension\Plugin;
+namespace WBW\Bundle\CoreBundle\Twig\Extension\Asset;
 
 use WBW\Bundle\CoreBundle\Icon\FontAwesome\FontAwesomeIconInterface;
 use WBW\Bundle\CoreBundle\Icon\FontAwesome\FontAwesomeIconRenderer;
@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
  * Abstract Font Awesome Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Twig\Extension\Plugin
+ * @package WBW\Bundle\CoreBundle\Twig\Extension\Asset
  * @abstract
  */
 abstract class AbstractFontAwesomeTwigExtension extends AbstractTwigExtension {
