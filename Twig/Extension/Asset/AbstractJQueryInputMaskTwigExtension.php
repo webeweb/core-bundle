@@ -9,13 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Twig\Extension\Plugin;
+namespace WBW\Bundle\CoreBundle\Twig\Extension\Asset;
 
 use Twig\Environment;
 use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtensionTrait;
-use WBW\Library\Core\Argument\StringHelper;
 
 /**
  * Abstract jQuery input mask Twig extension.
@@ -52,7 +51,7 @@ abstract class AbstractJQueryInputMaskTwigExtension extends AbstractTwigExtensio
 
         $template = "$('%selector%').inputmask(\"%mask%\",%arguments%);";
 
-        $innerHTML = StringHelper::replace($template, ["%selector%", "%mask%", "%arguments%"], [$selector, $mask, json_encode($options)]);
+        $innerHTML = str_replace(["%selector%", "%mask%", "%arguments%"], [$selector, $mask, json_encode($options)], $template);
 
         if (true === $scriptTag) {
             return $this->getRendererTwigExtension()->coreScriptFilter($innerHTML);
