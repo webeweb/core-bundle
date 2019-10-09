@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Twig\Extension\Plugin;
+namespace WBW\Bundle\CoreBundle\Twig\Extension\Asset;
 
 use Twig\Environment;
 use WBW\Bundle\CoreBundle\Helper\ColorHelper;
@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
  * Abstract Material Design Color Palette Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Twig\Extension\Plugin
+ * @package WBW\Bundle\CoreBundle\Twig\Extension\Asset
  * @abstract
  */
 abstract class AbstractMaterialDesignColorPaletteTwigExtension extends AbstractTwigExtension {

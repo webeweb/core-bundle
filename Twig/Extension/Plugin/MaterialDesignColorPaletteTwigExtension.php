@@ -11,56 +11,15 @@
 
 namespace WBW\Bundle\CoreBundle\Twig\Extension\Plugin;
 
-use Twig\TwigFunction;
-use WBW\Library\Core\Argument\ArrayHelper;
+use WBW\Bundle\CoreBundle\Twig\Extension\Asset\MaterialDesignColorPaletteTwigExtension as BaseMaterialDesignColorPaletteTwigExtension;
 
 /**
  * Material Design Color Palette Twig extension.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Twig\Extension\Plugin
+ * @deprecated since 2.13.0, use {@see WBW\Bundle\CoreBundle\Twig\Extension\Asset\MaterialDesignColorPaletteTwigExtension} instead.
  */
-class MaterialDesignColorPaletteTwigExtension extends AbstractMaterialDesignColorPaletteTwigExtension {
+class MaterialDesignColorPaletteTwigExtension extends BaseMaterialDesignColorPaletteTwigExtension {
 
-    /**
-     * Service name.
-     *
-     * @var string
-     */
-    const SERVICE_NAME = "wbw.core.twig.extension.plugin.material_design_color_palette";
-
-    /**
-     * Get the Twig functions.
-     *
-     * @return TwigFunction[] Returns the Twig functions.
-     */
-    public function getFunctions() {
-        return [
-            new TwigFunction("materialDesignColorPaletteBackground", [$this, "materialDesignColorPaletteBackgroundFunction"], ["is_safe" => ["html"]]),
-            new TwigFunction("mdcBackground", [$this, "materialDesignColorPaletteBackgroundFunction"], ["is_safe" => ["html"]]),
-
-            new TwigFunction("materialDesignColorPaletteText", [$this, "materialDesignColorPaletteTextFunction"], ["is_safe" => ["html"]]),
-            new TwigFunction("mdcText", [$this, "materialDesignColorPaletteTextFunction"], ["is_safe" => ["html"]]),
-        ];
-    }
-
-    /**
-     * Displays a Material Design Color Palette background.
-     *
-     * @param array $args The arguments.
-     * @return string Returns the Material Design Color Palette background.
-     */
-    public function materialDesignColorPaletteBackgroundFunction(array $args = []) {
-        return $this->materialDesignColorPalette("bg", ArrayHelper::get($args, "name"), ArrayHelper::get($args, "value"));
-    }
-
-    /**
-     * Displays a Material Design Color Palette text.
-     *
-     * @param array $args The arguments.
-     * @return string Returns the Material Design Color Palette text.
-     */
-    public function materialDesignColorPaletteTextFunction(array $args = []) {
-        return $this->materialDesignColorPalette("text", ArrayHelper::get($args, "name"), ArrayHelper::get($args, "value"));
-    }
 }

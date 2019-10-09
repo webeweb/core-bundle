@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension\Plugin;
+namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension\Asset;
 
 use Twig\Node\Node;
 use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MaterialDesignColorPaletteTwigExtension;
+use WBW\Bundle\CoreBundle\Twig\Extension\Asset\MaterialDesignColorPaletteTwigExtension;
 
 /**
  * Material Design Color Palette Twig extension test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Twig\Extension\Plugin
+ * @package WBW\Bundle\CoreBundle\Tests\Twig\Extension\Asset
  */
 class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
 
