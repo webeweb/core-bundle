@@ -1,3 +1,4 @@
 {# Resources/views/layout/stylesheet/material-design-color-palette.html.twig #}
+{% set _version = getContainerParameter("wbw.core.asset.material_design_color_palette").version %}
 <!-- Material Design Color Palette -->
-<link type="text/css" rel="stylesheet" href="{{ asset("bundles/wbwcore/material-design-color-palette-1.1.0/material-design-color-palette.min.css") }}">
+<link type="text/css" rel="stylesheet" href="{{ asset("bundles/wbwcore/material-design-color-palette-" ~ _version ~ "/material-design-color-palette.min.css") }}">
