@@ -9,14 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Twig\Extension\Plugin;
+namespace WBW\Bundle\CoreBundle\Twig\Extension\Asset;
 
 /**
  * Meteocons Twig extension trait.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Twig\Extension
- * @deprecated since 2.13.0, use {@see WBW\Bundle\CoreBundle\Twig\Extension\Asset\MeteoconsTwigExtensionTrait} instead.
  */
 trait MeteoconsTwigExtensionTrait {
 
