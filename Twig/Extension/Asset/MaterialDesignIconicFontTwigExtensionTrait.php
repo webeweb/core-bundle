@@ -9,14 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Twig\Extension\Plugin;
+namespace WBW\Bundle\CoreBundle\Twig\Extension\Asset;
 
 /**
  * Material Design Iconic font Twig extension trait.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Twig\Extension
- * @deprecated since 2.13.0, use {@see WBW\Bundle\CoreBundle\Twig\Extension\Asset\MaterialDesignIconicFontTwigExtensionTrait} instead.
  */
 trait MaterialDesignIconicFontTwigExtensionTrait {
 
