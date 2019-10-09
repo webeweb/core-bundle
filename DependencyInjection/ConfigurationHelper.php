@@ -14,6 +14,7 @@ namespace WBW\Bundle\CoreBundle\DependencyInjection;
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 use Symfony\Component\Config\Definition\Builder\NodeDefinition;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
+use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\Yaml\Yaml;
 
 /**
@@ -25,7 +26,7 @@ use Symfony\Component\Yaml\Yaml;
 class ConfigurationHelper {
 
     /**
-     * Get the root node.
+     * Get a root node.
      *
      * @param TreeBuilder $treeBuilder The tree builder.
      * @param string $nodeName The node name.
@@ -57,5 +58,34 @@ class ConfigurationHelper {
         }
 
         return Yaml::parse(file_get_contents($pathname));
+    }
+
+    /**
+     * Register a container parameter.
+     *
+     * @param Container $container The container.
+     * @param array $config The configuration.
+     * @param string $alias The alias.
+     * @param string $key The key.
+     * @return void
+     */
+    public static function registerContainerParameter(Container $container, array $config, $alias, $key) {
+        if (false === array_key_exists($key, $config)) {
+            return;
+        }
+        $container->setParameter(implode(".", [$alias, $key]), $config[$key]);
+    }
+
+    /**
+     * Register the container parameters.
+     *
+     * @param Container $container The container.
+     * @param array $config The configuration.
+     * @return void
+     */
+    public static function registerContainerParameters(Container $container, array $config) {
+        foreach ($config as $k => $v) {
+            $container->setParameter($k, $v);
+        }
     }
 }
