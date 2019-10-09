@@ -1,3 +1,4 @@
 {# Resources/views/layout/javascript/material-design-hierarchical-display.html.twig #}
+{% set _version = getContainerParameter("wbw.core.asset.material_design_hierarchical_display").version %}
 <!-- Material Design Hierarchical Display -->
-<script type="text/javascript" src="{{ asset("bundles/wbwcore/material-design-hierarchical-display-1.0.1/jquery.zmd.hierarchical-display.min.js") }}"></script>
+<script type="text/javascript" src="{{ asset("bundles/wbwcore/material-design-hierarchical-display-" ~ _version ~ "/jquery.zmd.hierarchical-display.min.js") }}"></script>
