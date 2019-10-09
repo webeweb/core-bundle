@@ -1,21 +1,47 @@
 CHANGELOG
 =========
 
-### master
+### [2.13.0](https://github.com/webeweb/core-bundle/tree/v2.13.0) (2019-10-09)
 
 > IMPORTANT NOTICE: The following classes has been removed
 > - WBW\Bundle\CoreBundle\Navigation\NavigationItem
 
+> IMPORTANT NOTICE: The following classes has been deprecated
+> - WBW\Bundle\CoreBundle\Twig\Extension\Plugin\FontAwesomeTwigExtension
+> - WBW\Bundle\CoreBundle\Twig\Extension\Plugin\FontAwesomeTwigExtensionTrait
+> - WBW\Bundle\CoreBundle\Twig\Extension\Plugin\JQueryInputMaskTwigExtension
+> - WBW\Bundle\CoreBundle\Twig\Extension\Plugin\JQueryInputMaskTwigExtensionTrait
+> - WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MaterialDesignColorPaletteTwigExtension
+> - WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MaterialDesignColorPaletteTwigExtensionTrait
+> - WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MaterialDesignIconicFontTwigExtension
+> - WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MaterialDesignIconicFontTwigExtensionTrait
+> - WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MeteoconsTwigExtension
+> - WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MeteoconsTwigExtensionTrait
+
 - Add Copy skeleton command
 - Add Divider node
+- Add Entity manager trait
 - Add Header node
 - Add Kernel helper
 - Add Repository report
 - Add Repository report helper
 - Add Skeleton helper
 - Add Skeleton provider interface
+- Improve unit tests
+- Move FontAwesome Twig extension
+- Move FontAwesome Twig extension trait
+- Move JQueryInputMask Twig extension
+- Move JQueryInputMask Twig extension trait
+- Move MaterialDesignColorPalette Twig extension
+- Move MaterialDesignColorPalette Twig extension trait
+- Move MaterialDesignIconicFont Twig extension
+- Move MaterialDesignIconicFont Twig extension trait
+- Move Meteocons Twig extension
+- Move Meteocons Twig extensionTrait
 - Update abstract Command
 - Update abstract Navigation node
+- Update Configuration helper.
+- Update FOSUser breadcrumb nodes
 - Update PHPDoc
 
 ### [2.12.3](https://github.com/webeweb/core-bundle/tree/v2.12.3) (2019-09-04)
