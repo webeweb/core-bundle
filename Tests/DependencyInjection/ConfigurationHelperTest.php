@@ -1,0 +1,46 @@
+<?php
+
+/*
+ * This file is part of the core-bundle package.
+ *
+ * (c) 2019 WEBEWEB
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace DependencyInjection;
+
+use WBW\Bundle\CoreBundle\DependencyInjection\ConfigurationHelper;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
+
+/**
+ * Configuration helper test.
+ *
+ * @author webeweb <https://github.com/webeweb/>
+ * @package DependencyInjection
+ */
+class ConfigurationHelperTest extends AbstractTestCase {
+
+    /**
+     * Tests the loadYamlConfig() method.
+     *
+     * @return void
+     */
+    public function testLoadYamlConfig() {
+
+        $res = ConfigurationHelper::loadYamlConfig("assets");
+        $this->assertNotEquals([], $res);
+    }
+
+    /**
+     * Tests the loadYamlConfig() method.
+     *
+     * @return void
+     */
+    public function testLoadYamlConfigWithoutFilename() {
+
+        $res = ConfigurationHelper::loadYamlConfig("exception");
+        $this->assertEquals([], $res);
+    }
+}

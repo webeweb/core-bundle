@@ -14,6 +14,7 @@ namespace WBW\Bundle\CoreBundle\DependencyInjection;
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 use Symfony\Component\Config\Definition\Builder\NodeDefinition;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
+use Symfony\Component\Yaml\Yaml;
 
 /**
  * Configuration helper.
@@ -40,5 +41,21 @@ class ConfigurationHelper {
         }
 
         return $treeBuilder->$method($nodeName);
+    }
+
+    /**
+     * Load a YAML configuration.
+     *
+     * @param string $filename The filename.
+     * @return array Returns the YAML configuration.
+     */
+    public static function loadYamlConfig($filename) {
+
+        $pathname = realpath(__DIR__ . "/../Resources/config/" . $filename . ".yml");
+        if (false === $pathname) {
+            return [];
+        }
+
+        return Yaml::parse(file_get_contents($pathname));
     }
 }
