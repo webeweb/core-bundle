@@ -39,3 +39,10 @@ services:
             - ["setSearchThemeProvider",                ["@?wbw.core.provider.theme.search"]]
             - ["setTasksDropDownThemeProvider",         ["@?wbw.core.provider.theme.tasks_drop_down"]]
             - ["setUserInfoThemeProvider",              ["@?wbw.core.provider.theme.user_info"]]
+
+    wbw.core.twig.extension.container:
+        class:     WBW\Bundle\CoreBundle\Twig\Extension\ContainerTwigExtension
+        arguments: ["@service_container"]
+        public:    true
+        tags:
+            - { name: "twig.extension" }
