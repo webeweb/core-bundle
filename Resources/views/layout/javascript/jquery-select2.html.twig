@@ -1,12 +1,6 @@
 {# Resources/views/layout/javascript/jquery-select2.html.twig #}
-{% set _locales = [
-    "af", "ar", "az", "bg", "bs", "ca", "cs", "da", "de", "dsb", "el", "en",
-    "es", "et", "eu", "fa", "fi", "fr", "gl", "he", "hi", "hr", "hsb", "hu",
-    "hy", "id", "is", "it", "ja", "km", "ko", "lt", "lv", "mk", "ms", "nb",
-    "nl", "pl", "ps", "pt-BR", "pt", "ro", "ru", "sk", "sl", "sr-Cyrl", "sr",
-    "sv", "th", "tr", "uk", "vi", "zh-CN", "zh-TW",
-] %}
-{% set _locale  = locale|default("") in _locales ? locale : "en" %}
+{% set _version = getContainerParameter("wbw.core.asset.jquery_select2").version %}
+{% set _locale  = getContainerParameter("wbw_core.assets").jquery_select2.locale %}
 <!-- jQuery Select2 plug-in -->
-<script type="text/javascript" src="{{ asset("bundles/wbwcore/jquery-select2-4.0.5/js/select2.min.js") }}"></script>
-<script type="text/javascript" src="{{ asset("bundles/wbwcore/jquery-select2-4.0.5/js/i18n/" ~ _locale ~ ".js") }}"></script>
+<script type="text/javascript" src="{{ asset("bundles/wbwcore/jquery-select2-" ~ _version ~ "/js/select2.min.js") }}"></script>
+<script type="text/javascript" src="{{ asset("bundles/wbwcore/jquery-select2-" ~ _version ~ "/js/i18n/" ~ _locale ~ ".js") }}"></script>
