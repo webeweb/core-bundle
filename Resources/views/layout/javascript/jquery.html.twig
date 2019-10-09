@@ -1,3 +1,4 @@
 {# Resources/views/layout/javascript/jquery.html.twig #}
+{% set _version = getContainerParameter("wbw.core.asset.jquery").version %}
 <!-- jQuery -->
-<script type="text/javascript" src="{{ asset("bundles/wbwcore/jquery-3.4.1/jquery-3.4.1.min.js") }}"></script>
+<script type="text/javascript" src="{{ asset("bundles/wbwcore/jquery-" ~ _version ~ "/jquery-3.4.1.min.js") }}"></script>
