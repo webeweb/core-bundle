@@ -26,6 +26,13 @@ use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 class WBWCoreExtension extends Extension {
 
     /**
+     * Extension alias.
+     *
+     * @var string
+     */
+    const EXTENSION_ALIAS = "wbw_core";
+
+    /**
      * {@inheritDoc}
      */
     public function load(array $configs, ContainerBuilder $container) {
@@ -52,23 +59,27 @@ class WBWCoreExtension extends Extension {
             $serviceLoader->load("providers.yml");
         }
 
-        if (true === $config["security_event_listener"]) {
-            $serviceLoader->load("services/security_event_listener.yml");
-        }
-
         if (true === $config["twig"]) {
             $serviceLoader->load("twig.yml");
         }
 
+        if (true === $config["security_event_listener"]) {
+            $serviceLoader->load("services/security_event_listener.yml");
+        }
+
         if (true === $config["quote_providers"]["worlds_wisdom"]) {
-            $container->setParameter(implode(".", [$this->getAlias(), "quote_providers", "worlds_wisdom"]), $config["quote_providers"]["worlds_wisdom"]);
             $serviceLoader->load("services/worlds_wisdom_quote_provider.yml");
         }
 
-        $container->setParameter(implode(".", [$this->getAlias(), "commands"]), $config["commands"]);
-        $container->setParameter(implode(".", [$this->getAlias(), "event_listeners"]), $config["event_listeners"]);
-        $container->setParameter(implode(".", [$this->getAlias(), "providers"]), $config["providers"]);
-        $container->setParameter(implode(".", [$this->getAlias(), "security_event_listener"]), $config["security_event_listener"]);
-        $container->setParameter(implode(".", [$this->getAlias(), "twig"]), $config["twig"]);
+        ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "commands");
+        ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "event_listeners");
+        ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "providers");
+        ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "twig");
+        ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "assets");
+        ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "quote_providers");
+        ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "security_event_listener");
+
+        $assets = ConfigurationHelper::loadYamlConfig("assets");
+        ConfigurationHelper::registerContainerParameters($container, $assets["assets"]);
     }
 }
