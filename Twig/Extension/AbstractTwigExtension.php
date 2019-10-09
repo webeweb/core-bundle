@@ -70,6 +70,6 @@ abstract class AbstractTwigExtension extends AbstractExtension {
 
         $innerHTML = null !== $content ? trim($content, " ") : "";
 
-        return StringHelper::replace($template, ["%element%", "%attributes%", "%innerHTML%"], [trim($element), $attributes, $innerHTML]);
+        return str_replace(["%element%", "%attributes%", "%innerHTML%"], [trim($element), $attributes, $innerHTML], $template);
     }
 }

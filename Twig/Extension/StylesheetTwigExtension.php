@@ -13,7 +13,6 @@ namespace WBW\Bundle\CoreBundle\Twig\Extension;
 
 use Twig\TwigFilter;
 use Twig\TwigFunction;
-use WBW\Library\Core\Argument\StringHelper;
 
 /**
  * Stylesheet Twig extension.
@@ -56,7 +55,7 @@ class StylesheetTwigExtension extends AbstractTwigExtension {
 
         $template = "rgba(%r%, %g%, %b%, %a%)";
 
-        return StringHelper::replace($template, ["%r%", "%g%", "%b%", "%a%"], [hexdec($channels[0][0]), hexdec($channels[0][1]), hexdec($channels[0][2]), number_format($alpha, 2)]);
+        return str_replace(["%r%", "%g%", "%b%", "%a%"], [hexdec($channels[0][0]), hexdec($channels[0][1]), hexdec($channels[0][2]), number_format($alpha, 2)], $template);
     }
 
     /**
