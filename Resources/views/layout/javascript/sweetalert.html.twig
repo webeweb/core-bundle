@@ -1,3 +1,4 @@
 {# Resources/views/layout/javascript/sweetalert.html.twig #}
+{% set _version = getContainerParameter("wbw.core.asset.sweet_alert").version %}
 <!-- SweetAlert -->
-<script type="text/javascript" src="{{ asset("bundles/wbwcore/sweetalert-2.1.2/sweetalert.min.js") }}"></script>
+<script type="text/javascript" src="{{ asset("bundles/wbwcore/sweetalert-" ~ _version ~ "/sweetalert.min.js") }}"></script>
