@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [2.14.0](https://github.com/webeweb/core-bundle/tree/v2.14.0) (2019-10-10)
+
+- Improve Configuration
+
 ### [2.13.0](https://github.com/webeweb/core-bundle/tree/v2.13.0) (2019-10-09)
 
 > IMPORTANT NOTICE: The following classes has been removed
@@ -40,7 +44,7 @@ CHANGELOG
 - Move Meteocons Twig extensionTrait
 - Update abstract Command
 - Update abstract Navigation node
-- Update Configuration helper.
+- Update Configuration helper
 - Update FOSUser breadcrumb nodes
 - Update PHPDoc
 
