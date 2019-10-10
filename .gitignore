@@ -4,6 +4,7 @@
 
 # Resources
 /Resources/public/*
+!/Resources/public/css
 !/Resources/public/img
 !/Resources/public/.gitkeep
 
