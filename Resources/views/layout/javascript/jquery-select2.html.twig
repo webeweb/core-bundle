@@ -1,6 +1,0 @@
-{# Resources/views/layout/javascript/jquery-select2.html.twig #}
-{% set _version = getContainerParameter("wbw.core.asset.jquery_select2").version %}
-{% set _locale  = getContainerParameter("wbw_core.assets").jquery_select2.locale %}
-<!-- jQuery Select2 plug-in -->
-<script type="text/javascript" src="{{ asset("bundles/wbwcore/jquery-select2-" ~ _version ~ "/js/select2.min.js") }}"></script>
-<script type="text/javascript" src="{{ asset("bundles/wbwcore/jquery-select2-" ~ _version ~ "/js/i18n/" ~ _locale ~ ".js") }}"></script>
