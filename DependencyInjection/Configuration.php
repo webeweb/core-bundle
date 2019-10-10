@@ -30,9 +30,10 @@ class Configuration implements ConfigurationInterface {
      *      event_listeners:          true
      *      providers:                true
      *      twig:                     false
-     *      assets:
-     *          jquery_select2:
-     *              locale: "en"
+     *      locales:
+     *          jquery_select2: "en"
+     *      plugins:
+     *          - "jquery_select2"
      *      quote_providers:
      *          worlds_wisdom: false
      *      security_event_listeners: false
@@ -40,7 +41,8 @@ class Configuration implements ConfigurationInterface {
     public function getConfigTreeBuilder() {
 
         $assets  = ConfigurationHelper::loadYamlConfig(__DIR__, "assets");
-        $locales = $assets["assets"]["wbw.core.asset.jquery_select2"]["locales"];
+        $locales = $assets["assets"]["wbw.core.asset.core"]["plugins"]["jquery_select2"]["locales"];
+        $plugins = $assets["assets"]["wbw.core.asset.core"]["plugins"];
 
         $treeBuilder = new TreeBuilder(WBWCoreExtension::EXTENSION_ALIAS);
 
@@ -51,17 +53,21 @@ class Configuration implements ConfigurationInterface {
                 ->booleanNode("event_listeners")->defaultTrue()->info("Load event listeners")->end()
                 ->booleanNode("providers")->defaultTrue()->info("Load providers")->end()
                 ->booleanNode("twig")->defaultTrue()->info("Load Twig extensions")->end()
-                ->arrayNode("assets")->addDefaultsIfNotSet()
+                ->arrayNode("locales")->addDefaultsIfNotSet()
                     ->children()
-                        ->arrayNode("jquery_select2")->addDefaultsIfNotSet()
-                            ->children()
-                                ->variableNode("locale")->defaultValue("en")->info("jQuery Select2 locale")
-                                    ->validate()
-                                        ->ifNotInArray($locales)
-                                        ->thenInvalid("The jQuery Select2 locale %s is not supported. Please choose one of " . json_encode($locales))
-                                    ->end()
-                                ->end()
+                        ->variableNode("jquery_select2")->defaultValue("en")->info("jQuery Select2 locale")
+                            ->validate()
+                                ->ifNotInArray($locales)
+                                ->thenInvalid("The jQuery Select2 locale %s is not supported. Please choose one of " . json_encode($locales))
                             ->end()
+                        ->end()
+                    ->end()
+                ->end()
+                ->arrayNode("plugins")->info("Use plug-ins")
+                    ->prototype("scalar")
+                        ->validate()
+                            ->ifNotInArray(array_keys($plugins))
+                            ->thenInvalid("The WBW Core plug-in %s is not supported. Please choose one of " . json_encode(array_keys($plugins)))
                         ->end()
                     ->end()
                 ->end()

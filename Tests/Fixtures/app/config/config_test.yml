@@ -64,9 +64,22 @@ twig:
     strict_variables: "%kernel.debug%"
 
 wbw_core:
-    assets:
-        jquery_select2:
-            locale: "fr"
+    locales:
+        jquery_select2: "fr"
+    plugins:
+        - "animate_css"
+        - "clippy_js"
+        - "font_awesome"
+        - "jquery"
+        - "jquery_easy_autocomplete"
+        - "jquery_input_mask"
+        - "jquery_select2"
+        - "material_design_color_palette"
+        - "material_design_hierarchical_display"
+        - "material_design_iconic_font"
+        - "meteocons"
+        - "sweet_alert"
+        - "wait_me"
     quote_providers:
         worlds_wisdom: true
     security_event_listener: true

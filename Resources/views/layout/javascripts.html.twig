@@ -1,10 +1,15 @@
 {# Resources/views/layout/javascripts.html.twig #}
-{% include "@WBWCore/layout/javascript/jquery.html.twig" %}
-{% include "@WBWCore/layout/javascript/clippy.js.html.twig" %}
-{% include "@WBWCore/layout/javascript/fontawesome.html.twig" %}
-{% include "@WBWCore/layout/javascript/jquery-easyautocomplete.html.twig" %}
-{% include "@WBWCore/layout/javascript/jquery-inputmask.html.twig" %}
-{% include "@WBWCore/layout/javascript/jquery-select2.html.twig" %}
-{% include "@WBWCore/layout/javascript/material-design-hierarchical-display.html.twig" %}
-{% include "@WBWCore/layout/javascript/sweetalert.html.twig" %}
-{% include "@WBWCore/layout/javascript/waitme.html.twig" %}
+{% set _plugins    = getContainerParameter("wbw.core.asset.core").plugins %}
+{% set _webPath    = "bundles/wbwcore" %}
+{% set _appLocales = getContainerParameter("wbw_core.locales") %}
+{% set _appPlugins = getContainerParameter("wbw_core.plugins") %}
+{% for _appPlugin in _appPlugins %}
+    {% set _replaces = {"{{ version }}": _plugins[_appPlugin].version, "{{ locale }}": _appLocales[_appPlugin]|default("") } %}
+    {% for _javascript in _plugins[_appPlugin].javascripts %}
+        {% if (true == loop.first) %}
+            <!-- {{ _plugins[_appPlugin].description }} -->
+        {% endif %}
+        {% set _path = (_webPath ~ _javascript) | replace(_replaces) %}
+        <script type="text/javascript" src="{{ asset(_path) }}"></script>
+    {% endfor %}
+{% endfor %}

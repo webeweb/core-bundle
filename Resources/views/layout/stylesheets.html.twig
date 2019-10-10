@@ -1,11 +1,15 @@
 {# Resources/views/layout/stylesheets.html.twig #}
-{% include "@WBWCore/layout/stylesheet/animate.css.html.twig" %}
-{% include "@WBWCore/layout/stylesheet/clippy.js.html.twig" %}
-{% include "@WBWCore/layout/stylesheet/fontawesome.html.twig" %}
-{% include "@WBWCore/layout/stylesheet/jquery-easyautocomplete.html.twig" %}
-{% include "@WBWCore/layout/stylesheet/jquery-select2.html.twig" %}
-{% include "@WBWCore/layout/stylesheet/material-design-color-palette.html.twig" %}
-{% include "@WBWCore/layout/stylesheet/material-design-hierarchical-display.html.twig" %}
-{% include "@WBWCore/layout/stylesheet/material-design-iconic-font.html.twig" %}
-{% include "@WBWCore/layout/stylesheet/meteocons.html.twig" %}
-{% include "@WBWCore/layout/stylesheet/waitme.html.twig" %}
+{% set _plugins    = getContainerParameter("wbw.core.asset.core").plugins %}
+{% set _webPath    = "bundles/wbwcore" %}
+{% set _appPlugins = getContainerParameter("wbw_core.plugins") %}
+{% for _appPlugin in _appPlugins %}
+    {% set _replaces = {"{{ version }}": _plugins[_appPlugin].version} %}
+    {% for _stylesheet in _plugins[_appPlugin].stylesheets %}
+        {% if (true == loop.first) %}
+            <!-- {{ _plugins[_appPlugin].description }} -->
+        {% endif %}
+        {% set _path = (_webPath ~ _stylesheet) | replace(_replaces) %}
+        <link type="text/css" rel="stylesheet" href="{{ asset(_path) }}">
+    {% endfor %}
+{% endfor %}
+
