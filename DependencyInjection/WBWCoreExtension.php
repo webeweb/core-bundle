@@ -75,10 +75,10 @@ class WBWCoreExtension extends Extension {
         ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "event_listeners");
         ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "providers");
         ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "twig");
-        ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "locales");
-        ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "plugins");
         ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "quote_providers");
         ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "security_event_listener");
+        ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "plugins");
+        ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "locales");
 
         $assets = ConfigurationHelper::loadYamlConfig(__DIR__, "assets");
         ConfigurationHelper::registerContainerParameters($container, $assets["assets"]);

@@ -41,7 +41,6 @@ class Configuration implements ConfigurationInterface {
     public function getConfigTreeBuilder() {
 
         $assets  = ConfigurationHelper::loadYamlConfig(__DIR__, "assets");
-        $locales = $assets["assets"]["wbw.core.asset.core"]["plugins"]["jquery_select2"]["locales"];
         $plugins = $assets["assets"]["wbw.core.asset.core"]["plugins"];
 
         $treeBuilder = new TreeBuilder(WBWCoreExtension::EXTENSION_ALIAS);
@@ -53,29 +52,29 @@ class Configuration implements ConfigurationInterface {
                 ->booleanNode("event_listeners")->defaultTrue()->info("Load event listeners")->end()
                 ->booleanNode("providers")->defaultTrue()->info("Load providers")->end()
                 ->booleanNode("twig")->defaultTrue()->info("Load Twig extensions")->end()
-                ->arrayNode("locales")->addDefaultsIfNotSet()
-                    ->children()
-                        ->variableNode("jquery_select2")->defaultValue("en")->info("jQuery Select2 locale")
-                            ->validate()
-                                ->ifNotInArray($locales)
-                                ->thenInvalid("The jQuery Select2 locale %s is not supported. Please choose one of " . json_encode($locales))
-                            ->end()
-                        ->end()
-                    ->end()
-                ->end()
-                ->arrayNode("plugins")->info("Use plug-ins")
-                    ->prototype("scalar")
-                        ->validate()
-                            ->ifNotInArray(array_keys($plugins))
-                            ->thenInvalid("The WBW Core plug-in %s is not supported. Please choose one of " . json_encode(array_keys($plugins)))
-                        ->end()
-                    ->end()
-                ->end()
                 ->arrayNode("quote_providers")->addDefaultsIfNotSet()->children()
                     ->booleanNode("worlds_wisdom")->defaultFalse()->info("Load World's wisdom")->end()
                     ->end()
                 ->end()
                 ->booleanNode("security_event_listener")->defaultFalse()->info("Load Security event listener")->end()
+                ->arrayNode("plugins")->info("Core plug-ins")
+                    ->prototype("scalar")
+                        ->validate()
+                            ->ifNotInArray(array_keys($plugins))
+                            ->thenInvalid("The Core plug-in %s is not supported. Please choose one of " . json_encode(array_keys($plugins)))
+                        ->end()
+                    ->end()
+                ->end()
+                ->arrayNode("locales")->addDefaultsIfNotSet()
+                    ->children()
+                        ->variableNode("jquery_select2")->defaultValue("en")->info("jQuery Select2 locale")
+                            ->validate()
+                                ->ifNotInArray($plugins["jquery_select2"]["locales"])
+                                ->thenInvalid("The jQuery Select2 locale %s is not supported. Please choose one of " . json_encode($plugins["jquery_select2"]["locales"]))
+                            ->end()
+                        ->end()
+                    ->end()
+                ->end()
             ->end();
 
         return $treeBuilder;
