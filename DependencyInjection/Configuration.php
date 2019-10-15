@@ -25,18 +25,7 @@ class Configuration implements ConfigurationInterface {
     /**
      * {@inheritDoc}
      *
-     * wbw_core:
-     *      commands: true
-     *      event_listeners:          true
-     *      providers:                true
-     *      twig:                     false
-     *      locales:
-     *          jquery_select2: "en"
-     *      plugins:
-     *          - "jquery_select2"
-     *      quote_providers:
-     *          worlds_wisdom: false
-     *      security_event_listeners: false
+     * @see https://github.com/webeweb/core-bundle/blob/master/Tests/Fixtures/app/config/config_test.yml
      */
     public function getConfigTreeBuilder() {
 
@@ -52,8 +41,9 @@ class Configuration implements ConfigurationInterface {
                 ->booleanNode("event_listeners")->defaultTrue()->info("Load event listeners")->end()
                 ->booleanNode("providers")->defaultTrue()->info("Load providers")->end()
                 ->booleanNode("twig")->defaultTrue()->info("Load Twig extensions")->end()
-                ->arrayNode("quote_providers")->addDefaultsIfNotSet()->children()
-                    ->booleanNode("worlds_wisdom")->defaultFalse()->info("Load World's wisdom")->end()
+                ->arrayNode("quote_providers")->addDefaultsIfNotSet()
+                    ->children()
+                        ->booleanNode("worlds_wisdom")->defaultFalse()->info("Load World's wisdom")->end()
                     ->end()
                 ->end()
                 ->booleanNode("security_event_listener")->defaultFalse()->info("Load Security event listener")->end()
@@ -71,6 +61,28 @@ class Configuration implements ConfigurationInterface {
                             ->validate()
                                 ->ifNotInArray($plugins["jquery_select2"]["locales"])
                                 ->thenInvalid("The jQuery Select2 locale %s is not supported. Please choose one of " . json_encode($plugins["jquery_select2"]["locales"]))
+                            ->end()
+                        ->end()
+                    ->end()
+                ->end()
+                ->arrayNode("themes")->addDefaultsIfNotSet()
+                    ->children()
+                        ->variableNode("syntax_highlighter")->defaultValue("Default")->info("SyntaxHighlighter theme")
+                            ->validate()
+                                ->ifNotInArray($plugins["syntax_highlighter"]["themes"])
+                                ->thenInvalid("The SyntaxHighlighter theme %s is not supported. Please choose one of " . json_encode($plugins["syntax_highlighter"]["themes"]))
+                            ->end()
+                        ->end()
+                    ->end()
+                ->end()
+                ->arrayNode("brushes")
+                    ->children()
+                        ->arrayNode("syntax_highlighter")->info("SyntaxHighlighter brushes")
+                            ->prototype("scalar")
+                                ->validate()
+                                    ->ifNotInArray($plugins["syntax_highlighter"]["brushes"])
+                                    ->thenInvalid("The SyntaxHighlighter brush %s is not supported. Please choose one of " . json_encode($plugins["syntax_highlighter"]["brushes"]))
+                                ->end()
                             ->end()
                         ->end()
                     ->end()

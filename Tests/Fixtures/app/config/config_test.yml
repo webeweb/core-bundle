@@ -64,8 +64,9 @@ twig:
     strict_variables: "%kernel.debug%"
 
 wbw_core:
-    locales:
-        jquery_select2: "fr"
+    quote_providers:
+        worlds_wisdom: true
+    security_event_listener: true
     plugins:
         - "animate_css"
         - "clippy_js"
@@ -79,7 +80,36 @@ wbw_core:
         - "material_design_iconic_font"
         - "meteocons"
         - "sweet_alert"
+        - "syntax_highlighter"
         - "wait_me"
-    quote_providers:
-        worlds_wisdom: true
-    security_event_listener: true
+    locales:
+        jquery_select2: "fr"
+    themes:
+        syntax_highlighter: "Default"
+    brushes:
+        syntax_highlighter:
+            - "AppleScript"
+            - "AS3"
+            - "Bash"
+            - "ColdFusion"
+            - "Cpp"
+            - "CSharp"
+            - "Css"
+            - "Delphi"
+            - "Diff"
+            - "Erlang"
+            - "Groovy"
+            - "Java"
+            - "JavaFX"
+            - "JScript"
+            - "Perl"
+            - "Php"
+            - "Plain"
+            - "PowerShell"
+            - "Python"
+            - "Ruby"
+            - "Sass"
+            - "Scala"
+            - "Sql"
+            - "Vb"
+            - "Xml"

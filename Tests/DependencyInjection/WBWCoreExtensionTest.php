@@ -45,6 +45,7 @@ use WBW\Bundle\CoreBundle\Helper\RepositoryReportHelper;
 use WBW\Bundle\CoreBundle\Manager\ColorManager;
 use WBW\Bundle\CoreBundle\Manager\QuoteManager;
 use WBW\Bundle\CoreBundle\Manager\ThemeManager;
+use WBW\Bundle\CoreBundle\Provider\Asset\SyntaxHighlighterStringsProvider;
 use WBW\Bundle\CoreBundle\Quote\YamlQuoteProvider;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Twig\Extension\Asset\FontAwesomeTwigExtension;
@@ -52,6 +53,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Asset\JQueryInputMaskTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\Asset\MaterialDesignColorPaletteTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\Asset\MaterialDesignIconicFontTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\Asset\MeteoconsTwigExtension;
+use WBW\Bundle\CoreBundle\Twig\Extension\Asset\SyntaxHighlighterTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\ContainerTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\QuoteTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension;
@@ -88,7 +90,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
 
         // Set a configs array mock.
         $this->configs = [
-            "wbw_core" => [
+            WBWCoreExtension::EXTENSION_ALIAS => [
                 "commands"        => true,
                 "event_listeners" => true,
                 "providers"       => true,
@@ -162,6 +164,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(ThemeManager::class, $this->containerBuilder->get(ThemeManager::SERVICE_NAME));
 
         // Providers
+        $this->assertInstanceOf(SyntaxHighlighterStringsProvider::class, $this->containerBuilder->get(SyntaxHighlighterStringsProvider::SERVICE_NAME));
         $this->assertInstanceOf(AmberColorProvider::class, $this->containerBuilder->get(AmberColorProvider::SERVICE_NAME));
         $this->assertInstanceOf(BlueColorProvider::class, $this->containerBuilder->get(BlueColorProvider::SERVICE_NAME));
         $this->assertInstanceOf(BlueGreyColorProvider::class, $this->containerBuilder->get(BlueGreyColorProvider::SERVICE_NAME));
@@ -204,6 +207,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(MaterialDesignColorPaletteTwigExtension::class, $this->containerBuilder->get(MaterialDesignColorPaletteTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(MaterialDesignIconicFontTwigExtension::class, $this->containerBuilder->get(MaterialDesignIconicFontTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(MeteoconsTwigExtension::class, $this->containerBuilder->get(MeteoconsTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(SyntaxHighlighterTwigExtension::class, $this->containerBuilder->get(SyntaxHighlighterTwigExtension::SERVICE_NAME));
     }
 
     /**
