@@ -1,0 +1,3 @@
+SyntaxHighlighter.config.bloggerMode = true;
+SyntaxHighlighter.config.stripBrs = true;
+SyntaxHighlighter.config.tagName = "blockquote";

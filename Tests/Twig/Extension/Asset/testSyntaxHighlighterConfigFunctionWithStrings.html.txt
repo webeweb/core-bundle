@@ -1,0 +1,14 @@
+SyntaxHighlighter.config.bloggerMode = true;
+SyntaxHighlighter.config.stripBrs = true;
+SyntaxHighlighter.config.tagName = "blockquote";
+SyntaxHighlighter.config.strings.alert = "SyntaxHighlighter
+
+";
+SyntaxHighlighter.config.strings.brushNotHtmlScript = "Brush wasn't made for html-script option:";
+SyntaxHighlighter.config.strings.copyToClipboard = "copy to clipboard";
+SyntaxHighlighter.config.strings.copyToClipboardConfirmation = "The code is in your clipboard now";
+SyntaxHighlighter.config.strings.expandSource = "+ expand source";
+SyntaxHighlighter.config.strings.help = "?";
+SyntaxHighlighter.config.strings.noBrush = "Can't find brush for:";
+SyntaxHighlighter.config.strings.print = "print";
+SyntaxHighlighter.config.strings.viewSource = "view source";
