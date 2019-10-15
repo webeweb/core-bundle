@@ -66,7 +66,7 @@ class SyntaxHighlighterStringsProvider implements ProviderInterface {
     /**
      * Translate.
      *
-     * @param strign $id The id.
+     * @param string $id The id.
      * @return string Returns the translation.
      */
     protected function translate($id) {
