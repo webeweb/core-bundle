@@ -13,9 +13,23 @@ navigation:
             import: "Import"
             index:  "Index"
             new:    "New"
-        dashboard:   "Dashboard"
-        events:      "Events"
-        parameters:  "Parameters"
-        settings:    "Settings"
-        users:       "Users"
-        usersGroups: "Users groups"
+        dashboard:    "Dashboard"
+        events:       "Events"
+        parameters:   "Parameters"
+        settings:     "Settings"
+        users:        "Users"
+        users_groups: "Users groups"
+
+syntax_highlighter:
+    strings:
+        alert:                           |
+                                         SyntaxHighlighter
+
+        brush_no_html_script:            "Brush wasn't made for html-script option:"
+        copy_to_clipboard:               "copy to clipboard"
+        copy_to_clipboard_confirmation:  "The code is in your clipboard now"
+        expand_source:                   "+ expand source"
+        help:                            "?"
+        no_brush:                        "Can't find brush for:"
+        print:                           "print"
+        view_source:                     "view source"
