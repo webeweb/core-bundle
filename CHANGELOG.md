@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [2.14.1](https://github.com/webeweb/core-bundle/tree/v2.14.1) (2019-10-15)
+
+- Fix (deprecated) plug-ins Twig extension traits
+
 ### [2.14.0](https://github.com/webeweb/core-bundle/tree/v2.14.0) (2019-10-10)
 
 - Improve Configuration

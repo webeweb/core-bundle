@@ -11,6 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Twig\Extension\Plugin;
 
+use WBW\Bundle\CoreBundle\Twig\Extension\Asset\MaterialDesignIconicFontTwigExtension as BaseMaterialDesignIconicFontTwigExtension;
+
 /**
  * Material Design Iconic font Twig extension trait.
  *
@@ -23,14 +25,14 @@ trait MaterialDesignIconicFontTwigExtensionTrait {
     /**
      * Material Design Iconic font Twig extension.
      *
-     * @var MaterialDesignIconicFontTwigExtension
+     * @var BaseMaterialDesignIconicFontTwigExtension
      */
     private $materialDesignIconicFontTwigExtension;
 
     /**
      * Get the Material Design Iconic font Twig extension.
      *
-     * @return MaterialDesignIconicFontTwigExtension Returns the Material Design Iconic font Twig extension.
+     * @return BaseMaterialDesignIconicFontTwigExtension Returns the Material Design Iconic font Twig extension.
      */
     public function getMaterialDesignIconicFontTwigExtension() {
         return $this->materialDesignIconicFontTwigExtension;
@@ -39,9 +41,9 @@ trait MaterialDesignIconicFontTwigExtensionTrait {
     /**
      * Set the Material Design Iconic font Twig extension.
      *
-     * @param MaterialDesignIconicFontTwigExtension|null $materialDesignIconicFontTwigExtension The Material Design Iconic font Twig extension.
+     * @param BaseMaterialDesignIconicFontTwigExtension|null $materialDesignIconicFontTwigExtension The Material Design Iconic font Twig extension.
      */
-    protected function setMaterialDesignIconicFontTwigExtension(MaterialDesignIconicFontTwigExtension $materialDesignIconicFontTwigExtension = null) {
+    protected function setMaterialDesignIconicFontTwigExtension(BaseMaterialDesignIconicFontTwigExtension $materialDesignIconicFontTwigExtension = null) {
         $this->materialDesignIconicFontTwigExtension = $materialDesignIconicFontTwigExtension;
         return $this;
     }

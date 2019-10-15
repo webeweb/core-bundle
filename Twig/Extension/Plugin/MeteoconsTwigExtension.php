@@ -11,9 +11,6 @@
 
 namespace WBW\Bundle\CoreBundle\Twig\Extension\Plugin;
 
-use Twig\TwigFunction;
-use WBW\Bundle\CoreBundle\Renderer\IconRendererInterface;
-use WBW\Library\Core\Argument\ArrayHelper;
 use WBW\Bundle\CoreBundle\Twig\Extension\Asset\MeteoconsTwigExtension as BaseMeteoconsTwigExtension;
 
 /**
