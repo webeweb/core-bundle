@@ -1,6 +1,11 @@
 # Resources/config/providers.yml
 services:
 
+    wbw.core.provider.asset.syntax_highlighter_strings:
+        class:     WBW\Bundle\CoreBundle\Provider\Asset\SyntaxHighlighterStringsProvider
+        arguments: ["@translator"]
+        public:    true
+
     wbw.core.provider.color.amber:
         class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\AmberColorProvider
         public: true
