@@ -11,9 +11,8 @@ services:
         public:    true
 
     wbw.core.helper.repository_report:
-        class:     WBW\Bundle\CoreBundle\Helper\RepositoryReportHelper
-        arguments: ["@doctrine.orm.entity_manager"]
-        public:    true
+        alias: "wbw.core.repository.repository_helper"
+        public: true
 
     wbw.core.manager.color:
         class:     WBW\Bundle\CoreBundle\Manager\ColorManager
@@ -39,6 +38,11 @@ services:
             - ["setSearchThemeProvider",                ["@?wbw.core.provider.theme.search"]]
             - ["setTasksDropDownThemeProvider",         ["@?wbw.core.provider.theme.tasks_drop_down"]]
             - ["setUserInfoThemeProvider",              ["@?wbw.core.provider.theme.user_info"]]
+
+    wbw.core.repository.repository_helper:
+        class:     WBW\Bundle\CoreBundle\Repository\RepositoryHelper
+        arguments: ["@doctrine.orm.entity_manager"]
+        public:    true
 
     wbw.core.twig.extension.container:
         class:     WBW\Bundle\CoreBundle\Twig\Extension\ContainerTwigExtension

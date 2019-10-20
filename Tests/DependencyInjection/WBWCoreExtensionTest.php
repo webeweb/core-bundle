@@ -47,6 +47,7 @@ use WBW\Bundle\CoreBundle\Manager\QuoteManager;
 use WBW\Bundle\CoreBundle\Manager\ThemeManager;
 use WBW\Bundle\CoreBundle\Provider\Asset\SyntaxHighlighterStringsProvider;
 use WBW\Bundle\CoreBundle\Quote\YamlQuoteProvider;
+use WBW\Bundle\CoreBundle\Repository\RepositoryHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Twig\Extension\Asset\FontAwesomeTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\Asset\JQueryInputMaskTwigExtension;
@@ -156,7 +157,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
 
         // Helpers
         $this->assertInstanceOf(FormHelper::class, $this->containerBuilder->get(FormHelper::SERVICE_NAME));
-        $this->assertInstanceOf(RepositoryReportHelper::class, $this->containerBuilder->get(RepositoryReportHelper::SERVICE_NAME));
+        $this->assertInstanceOf(RepositoryHelper::class, $this->containerBuilder->get(RepositoryHelper::SERVICE_NAME));
 
         // Managers
         $this->assertInstanceOf(ColorManager::class, $this->containerBuilder->get(ColorManager::SERVICE_NAME));
