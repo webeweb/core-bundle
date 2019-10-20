@@ -15,6 +15,7 @@ CHANGELOG
 - Add float Quantity trait
 - Add float Rate trait
 - Add float Size trait
+- Add Image
 - Add integer Count trait
 - Add integer Height trait
 - Add integer Id trait
