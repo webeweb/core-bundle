@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Twig\Extension\Plugin;
 
-use WBW\Bundle\CoreBundle\Twig\Extension\Asset\FontAwesomeTwigExtension as BaseFontAwesomeTwigExtension;
+use WBW\Bundle\CoreBundle\Twig\Extension\Asset\FontAwesomeTwigExtensionTrait as BaseFontAwesomeTwigExtensionTrait;
 
 /**
  * Font Awesome Twig extension trait.
@@ -22,29 +22,5 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Asset\FontAwesomeTwigExtension as BaseF
  */
 trait FontAwesomeTwigExtensionTrait {
 
-    /**
-     * Font Awesome Twig extension.
-     *
-     * @var BaseFontAwesomeTwigExtension
-     */
-    private $fontAwesomeTwigExtension;
-
-    /**
-     * Get the Font Awesome Twig extension.
-     *
-     * @return BaseFontAwesomeTwigExtension Returns the Font Awesome Twig extension.
-     */
-    public function getFontAwesomeTwigExtension() {
-        return $this->fontAwesomeTwigExtension;
-    }
-
-    /**
-     * Set the Font Awesome Twig extension.
-     *
-     * @param BaseFontAwesomeTwigExtension|null $fontAwesomeTwigExtension The Font Awesome Twig extension.
-     */
-    protected function setFontAwesomeTwigExtension(BaseFontAwesomeTwigExtension $fontAwesomeTwigExtension = null) {
-        $this->fontAwesomeTwigExtension = $fontAwesomeTwigExtension;
-        return $this;
-    }
+    use BaseFontAwesomeTwigExtensionTrait;
 }
