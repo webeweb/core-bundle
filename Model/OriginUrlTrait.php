@@ -11,37 +11,16 @@
 
 namespace WBW\Bundle\CoreBundle\Model;
 
+use WBW\Bundle\CoreBundle\Model\Attribute\StringOriginUrlTrait;
+
 /**
  * Origin URL trait.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Model
+ * @deprecated since 2.15.0, use {@see WBW\Bundle\CoreBundle\Model\Attribute\StringOriginUrlTrait} instead.
  */
 trait OriginUrlTrait {
 
-    /**
-     * Origin URL.
-     *
-     * @var string
-     */
-    private $originUrl;
-
-    /**
-     * Get the origin URL.
-     *
-     * @return string Returns the origin URL.
-     */
-    public function getOriginUrl() {
-        return $this->originUrl;
-    }
-
-    /**
-     * Set the origin URL.
-     *
-     * @param string $originUrl The origin URL.
-     */
-    protected function setOriginUrl($originUrl) {
-        $this->originUrl = $originUrl;
-        return $this;
-    }
+    use StringOriginUrlTrait;
 }
