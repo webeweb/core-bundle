@@ -28,6 +28,7 @@ use WBW\Bundle\CoreBundle\Helper\FormHelper;
 use WBW\Bundle\CoreBundle\Helper\RepositoryReportHelper;
 use WBW\Bundle\CoreBundle\Helper\UserHelper;
 use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
+use WBW\Bundle\CoreBundle\Repository\RepositoryHelper;
 use WBW\Bundle\CoreBundle\Toast\ToastInterface;
 
 /**
@@ -97,9 +98,19 @@ abstract class AbstractController extends BaseController {
     }
 
     /**
+     * Get the repository helper.
+     *
+     * @return RepositoryHelper|null Returns the repository helper in case of success, null otherwise.
+     */
+    protected function getRepositoryHelper() {
+        return $this->get(RepositoryHelper::SERVICE_NAME);
+    }
+
+    /**
      * Get the repository report helper.
      *
-     * @return RepositoryReportHelper|null Returns the repository report helper in case of success, null otherwise.
+     * @return RepositoryHelper|null Returns the repository helper in case of success, null otherwise.
+     * @deprecated since 2.15.0, use {@see WBW\Bundle\CoreBundle\Controller\AbstractController::getRepositoryHelper()} instead.
      */
     protected function getRepositoryReportHelper() {
         return $this->get(RepositoryReportHelper::SERVICE_NAME);
