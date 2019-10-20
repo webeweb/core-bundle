@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Twig\Extension\Plugin;
 
-use WBW\Bundle\CoreBundle\Twig\Extension\Asset\MeteoconsTwigExtension as BaseMeteoconsTwigExtension;
+use WBW\Bundle\CoreBundle\Twig\Extension\Asset\MeteoconsTwigExtensionTrait as BaseMeteoconsTwigExtensionTrait;
 
 /**
  * Meteocons Twig extension trait.
@@ -22,29 +22,5 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Asset\MeteoconsTwigExtension as BaseMet
  */
 trait MeteoconsTwigExtensionTrait {
 
-    /**
-     * Meteocons Twig extension.
-     *
-     * @var BaseMeteoconsTwigExtension
-     */
-    private $meteoconsTwigExtension;
-
-    /**
-     * Get the Meteocons Twig extension.
-     *
-     * @return BaseMeteoconsTwigExtension Returns the Meteocons Twig extension.
-     */
-    public function getMeteoconsTwigExtension() {
-        return $this->meteoconsTwigExtension;
-    }
-
-    /**
-     * Set the Meteocons Twig extension.
-     *
-     * @param BaseMeteoconsTwigExtension|null $meteoconsTwigExtension The Meteocons Twig extension.
-     */
-    protected function setMeteoconsTwigExtension(BaseMeteoconsTwigExtension $meteoconsTwigExtension = null) {
-        $this->meteoconsTwigExtension = $meteoconsTwigExtension;
-        return $this;
-    }
+    use BaseMeteoconsTwigExtensionTrait;
 }
