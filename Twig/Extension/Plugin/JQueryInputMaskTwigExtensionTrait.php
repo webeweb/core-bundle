@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Twig\Extension\Plugin;
 
-use WBW\Bundle\CoreBundle\Twig\Extension\Asset\JQueryInputMaskTwigExtension as BaseJQueryInputMaskTwigExtension;
+use WBW\Bundle\CoreBundle\Twig\Extension\Asset\JQueryInputMaskTwigExtensionTrait as BaseJQueryInputMaskTwigExtensionTrait;
 
 /**
  * jQuery InputMask Twig extension trait.
@@ -22,29 +22,5 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Asset\JQueryInputMaskTwigExtension as B
  */
 trait JQueryInputMaskTwigExtensionTrait {
 
-    /**
-     * jQuery InputMask Twig extension.
-     *
-     * @var BaseJQueryInputMaskTwigExtension
-     */
-    private $jQueryInputMaskTwigExtension;
-
-    /**
-     * Get the jQuery InputMask Twig extension.
-     *
-     * @return BaseJQueryInputMaskTwigExtension Returns the jQuery InputMask Twig extension.
-     */
-    public function getJQueryInputMaskTwigExtension() {
-        return $this->jQueryInputMaskTwigExtension;
-    }
-
-    /**
-     * Set the jQuery InputMask Twig extension.
-     *
-     * @param BaseJQueryInputMaskTwigExtension|null $jQueryInputMaskTwigExtension The jQuery InputMask Twig extension.
-     */
-    protected function setJQueryInputMaskTwigExtension(BaseJQueryInputMaskTwigExtension $jQueryInputMaskTwigExtension = null) {
-        $this->jQueryInputMaskTwigExtension = $jQueryInputMaskTwigExtension;
-        return $this;
-    }
+    use BaseJQueryInputMaskTwigExtensionTrait;
 }
