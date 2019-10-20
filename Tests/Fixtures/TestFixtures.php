@@ -81,6 +81,20 @@ class TestFixtures {
     }
 
     /**
+     * Get the images.
+     *
+     * @return string[]
+     */
+    public static function getImages() {
+        return [
+            getcwd() . "/Tests/Fixtures/Model/TestImage_1920x1037.jpg",
+            getcwd() . "/Tests/Fixtures/Model/TestImage_1920x1037.png",
+            getcwd() . "/Tests/Fixtures/Model/TestImage_1920x1920.png",
+            getcwd() . "/Tests/Fixtures/Model/TestImage_1920x3554.png",
+        ];
+    }
+
+    /**
      * Get the users.
      *
      * @return UserInterface[] Returns the users.
