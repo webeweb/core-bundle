@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Form\Renderer;
+namespace WBW\Bundle\CoreBundle\Tests\Renderer;
 
 use DateTime;
 use Exception;
@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
  * Date/time renderer test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Form\Renderer
+ * @package WBW\Bundle\CoreBundle\Tests\Renderer
  */
 class DateTimeRendererTest extends AbstractTestCase {
 
