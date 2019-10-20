@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Twig\Extension\Plugin;
 
-use WBW\Bundle\CoreBundle\Twig\Extension\Asset\MaterialDesignColorPaletteTwigExtension as BaseMaterialDesignColorPaletteTwigExtension;
+use WBW\Bundle\CoreBundle\Twig\Extension\Asset\MaterialDesignColorPaletteTwigExtensionTrait as BaseMaterialDesignColorPaletteTwigExtensionTrait;
 
 /**
  * Material Design color palette Twig extension trait.
@@ -22,29 +22,5 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Asset\MaterialDesignColorPaletteTwigExt
  */
 trait MaterialDesignColorPaletteTwigExtensionTrait {
 
-    /**
-     * Material Design color palette Twig extension.
-     *
-     * @var BaseMaterialDesignColorPaletteTwigExtension
-     */
-    private $materialDesignColorPaletteTwigExtension;
-
-    /**
-     * Get the Material Design color palette Twig extension.
-     *
-     * @return BaseMaterialDesignColorPaletteTwigExtension Returns the Material Design color palette Twig extension.
-     */
-    public function getMaterialDesignColorPaletteTwigExtension() {
-        return $this->materialDesignColorPaletteTwigExtension;
-    }
-
-    /**
-     * Set the Material Design color palette Twig extension.
-     *
-     * @param BaseMaterialDesignColorPaletteTwigExtension|null $materialDesignColorPaletteTwigExtension The Material Design color palette Twig extension.
-     */
-    protected function setMaterialDesignColorPaletteTwigExtension(BaseMaterialDesignColorPaletteTwigExtension $materialDesignColorPaletteTwigExtension = null) {
-        $this->materialDesignColorPaletteTwigExtension = $materialDesignColorPaletteTwigExtension;
-        return $this;
-    }
+    use BaseMaterialDesignColorPaletteTwigExtensionTrait;
 }
