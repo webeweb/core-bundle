@@ -3,6 +3,42 @@ CHANGELOG
 
 ### master
 
+- Add date/time Birthdate trait
+- Add date/time Created at trait
+- Add date/time Updated at trait
+- Add float Average trait
+- Add float Discount rate trait
+- Add float Excluding VAT price trait
+- Add float Excluding VAT total trait
+- Add float Including VAT price trait
+- Add float Including VAT total trait
+- Add float Quantity trait
+- Add float Rate trait
+- Add float Size trait
+- Add integer Count trait
+- Add integer Height trait
+- Add integer Id trait
+- Add integer Maximum trait
+- Add integer Minimum trait
+- Add integer Position trait
+- Add integer Size trait
+- Add integer Type trait
+- Add integer Width trait
+- Add string Comment trait
+- Add string Description trait
+- Add string Directory trait
+- Add string Environment trait
+- Add string Firstname trait
+- Add string Label trait
+- Add string Lastname trait
+- Add string Name trait
+- Add string Pathname trait
+- Add string Filename trait
+- Add string OriginUrl trait
+- Add string RedirectUrl trait
+- Add string Reference trait
+- Add string Source trait
+- Add Timestampable trait
 - Merge SyntaxHighlighter bundle
 
 ### [2.14.1](https://github.com/webeweb/core-bundle/tree/v2.14.1) (2019-10-15)
