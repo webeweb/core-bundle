@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Exception;
 
-use WBW\Bundle\CoreBundle\Model\OriginUrlTrait;
-use WBW\Bundle\CoreBundle\Model\RedirectUrlTrait;
+use WBW\Bundle\CoreBundle\Model\Attribute\StringOriginUrlTrait;
+use WBW\Bundle\CoreBundle\Model\Attribute\StringRedirectUrlTrait;
 use WBW\Library\Core\Network\HTTP\HTTPInterface;
 
 /**
@@ -23,8 +23,8 @@ use WBW\Library\Core\Network\HTTP\HTTPInterface;
  */
 class RedirectResponseException extends AbstractException {
 
-    use OriginUrlTrait;
-    use RedirectUrlTrait;
+    use StringOriginUrlTrait;
+    use StringRedirectUrlTrait;
 
     /**
      * Constructor.
