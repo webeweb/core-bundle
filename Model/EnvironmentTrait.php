@@ -11,37 +11,16 @@
 
 namespace WBW\Bundle\CoreBundle\Model;
 
+use WBW\Bundle\CoreBundle\Model\Attribute\StringEnvironmentTrait;
+
 /**
  * Environment trait.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Model
+ * @deprecated since 2.15.0, use {@see WBW\Bundle\CoreBundle\Model\Attribute\StringEnvironmentTrait} instead.
  */
 trait EnvironmentTrait {
 
-    /**
-     * Environment.
-     *
-     * @var string
-     */
-    private $environment;
-
-    /**
-     * Get the environment.
-     *
-     * @return string Returns the environment.
-     */
-    public function getEnvironment() {
-        return $this->environment;
-    }
-
-    /**
-     * Set the environment.
-     *
-     * @param string $environment The environment.
-     */
-    protected function setEnvironment($environment) {
-        $this->environment = $environment;
-        return $this;
-    }
+    use StringEnvironmentTrait;
 }
