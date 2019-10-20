@@ -11,37 +11,16 @@
 
 namespace WBW\Bundle\CoreBundle\Model;
 
+use WBW\Bundle\CoreBundle\Model\Attribute\StringRedirectUrlTrait;
+
 /**
  * Redirect URL trait.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Model
+ * @deprecated since 2.15.0, use {@see WBW\Bundle\CoreBundle\Model\Attribute\StringRedirectUrlTrait} instead.
  */
 trait RedirectUrlTrait {
 
-    /**
-     * Redirect URL.
-     *
-     * @var string
-     */
-    private $redirectUrl;
-
-    /**
-     * Get the redirect URL.
-     *
-     * @return string Returns the redirect URL.
-     */
-    public function getRedirectUrl() {
-        return $this->redirectUrl;
-    }
-
-    /**
-     * Set the redirect URL.
-     *
-     * @param string $redirectUrl The redirect URL.
-     */
-    protected function setRedirectUrl($redirectUrl) {
-        $this->redirectUrl = $redirectUrl;
-        return $this;
-    }
+    use StringRedirectUrlTrait;
 }
