@@ -12,8 +12,9 @@
 namespace WBW\Bundle\CoreBundle\Exception;
 
 use Symfony\Component\Security\Core\User\UserInterface;
-use WBW\Bundle\CoreBundle\Model\OriginUrlTrait;
-use WBW\Bundle\CoreBundle\Model\RedirectUrlTrait;
+use WBW\Bundle\CoreBundle\Model\Attribute\StringOriginUrlTrait;
+use WBW\Bundle\CoreBundle\Model\Attribute\StringRedirectUrlTrait;
+use WBW\Bundle\CoreBundle\Model\UserTrait;
 use WBW\Library\Core\Network\HTTP\HTTPInterface;
 
 /**
@@ -24,8 +25,9 @@ use WBW\Library\Core\Network\HTTP\HTTPInterface;
  */
 class BadUserRoleException extends AbstractException {
 
-    use OriginUrlTrait;
-    use RedirectUrlTrait;
+    use StringOriginUrlTrait;
+    use StringRedirectUrlTrait;
+    use UserTrait;
 
     /**
      * Roles.
@@ -33,13 +35,6 @@ class BadUserRoleException extends AbstractException {
      * @var array
      */
     private $roles;
-
-    /**
-     * User.
-     *
-     * @var UserInterface
-     */
-    private $user;
 
     /**
      * Constructor.
@@ -68,15 +63,6 @@ class BadUserRoleException extends AbstractException {
     }
 
     /**
-     * Get the user.
-     *
-     * @return UserInterface Returns the user.
-     */
-    public function getUser() {
-        return $this->user;
-    }
-
-    /**
      * Set the roles;
      *
      * @param array $roles The roles.
@@ -84,17 +70,6 @@ class BadUserRoleException extends AbstractException {
      */
     protected function setRoles(array $roles) {
         $this->roles = $roles;
-        return $this;
-    }
-
-    /**
-     * Set the user.
-     *
-     * @param UserInterface $user The user.
-     * @return BadUserRoleException Returns this bad user role exception.
-     */
-    protected function setUser(UserInterface $user) {
-        $this->user = $user;
         return $this;
     }
 }
