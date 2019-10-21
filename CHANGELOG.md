@@ -25,13 +25,14 @@ CHANGELOG
 - Add integer Size trait
 - Add integer Type trait
 - Add integer Width trait
+- Add string Accounting code trait
 - Add string Comment trait
 - Add string Description trait
 - Add string Directory trait
 - Add string Environment trait
-- Add string Firstname trait
+- Add string First name trait
 - Add string Label trait
-- Add string Lastname trait
+- Add string Last name trait
 - Add string Name trait
 - Add string Pathname trait
 - Add string Filename trait
