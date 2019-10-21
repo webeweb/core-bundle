@@ -75,7 +75,7 @@ class Configuration implements ConfigurationInterface {
                         ->end()
                     ->end()
                 ->end()
-                ->arrayNode("brushes")
+                ->arrayNode("brushes")->addDefaultsIfNotSet()
                     ->children()
                         ->arrayNode("syntax_highlighter")->info("SyntaxHighlighter brushes")
                             ->prototype("scalar")
