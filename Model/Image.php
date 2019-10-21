@@ -21,6 +21,12 @@ use WBW\Bundle\CoreBundle\Model\Attribute\StringExtensionTrait;
 use WBW\Bundle\CoreBundle\Model\Attribute\StringFilenameTrait;
 use WBW\Bundle\CoreBundle\Model\Attribute\StringPathnameTrait;
 
+/**
+ * Image.
+ *
+ * @author webeweb <https://github.com/webeweb/>
+ * @package WBW\Bundle\CoreBundle\Model
+ */
 class Image {
 
     use IntegerHeightTrait;
@@ -84,7 +90,7 @@ class Image {
     /**
      * Initialize.
      *
-     * @return void
+     * @return Image Returns this image.
      */
     public function init() {
 
@@ -99,6 +105,8 @@ class Image {
         $this->setWidth($width);
 
         $this->setSize(filesize($this->getPathname()));
+
+        return $this;
     }
 
     /**
@@ -118,10 +126,13 @@ class Image {
 
         $input  = ImageHelper::newInputStream($this);
         $output = ImageHelper::newOutputStream($this, $w, $h);
+        if (null === $output) {
+            throw new RuntimeException("Failed to create true color image");
+        }
 
         $result = imagecopyresampled($output, $input, 0, 0, 0, 0, $w, $h, $this->getWidth(), $this->getHeight());
         if (false === $result) {
-            throw new RuntimeException("The re-sampled copy failed");
+            throw new RuntimeException("Failed to copy re-sampled image");
         }
 
         return ImageHelper::saveOutputStream($this, $output, $pathname);
@@ -136,7 +147,7 @@ class Image {
      */
     protected function setPathname($pathname) {
         if (false === realpath($pathname)) {
-            throw new InvalidArgumentException(sprintf("The pathname \"%s\" was not found", $pathname));
+            throw new InvalidArgumentException(sprintf("The image \"%s\" was not found", $pathname));
         }
         $this->pathname = realpath($pathname);
         return $this;

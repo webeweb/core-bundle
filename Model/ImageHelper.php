@@ -44,9 +44,9 @@ class ImageHelper {
         $height = $maxHeight;
 
         if (Image::ORIENTATION_HORIZONTAL === $image->getOrientation()) {
-            $height = abs($width / $ratio);
+            $height = intval($width / $ratio);
         } else {
-            $width = abs($height * $ratio);
+            $width = intval($height * $ratio);
         }
 
         return [$width, $height];

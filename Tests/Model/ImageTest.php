@@ -26,11 +26,11 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\TestFixtures;
 class ImageTest extends AbstractTestCase {
 
     /**
-     * Pathnames.
+     * Images.
      *
      * @var string[]
      */
-    private $pathnames;
+    private $images;
 
     /**
      * {@inheritDoc}
@@ -38,8 +38,8 @@ class ImageTest extends AbstractTestCase {
     protected function setUp() {
         parent::setUp();
 
-        // Set the pathnames mock.
-        $this->pathnames = TestFixtures::getImages();
+        // Set the images mock.
+        $this->images = TestFixtures::getImages();
     }
 
     /**
@@ -52,9 +52,9 @@ class ImageTest extends AbstractTestCase {
         $this->assertEquals("horizontal", Image::ORIENTATION_HORIZONTAL);
         $this->assertEquals("vertical", Image::ORIENTATION_VERTICAL);
 
-        $obj = new Image($this->pathnames[0]);
+        $obj = new Image($this->images[0]);
 
-        $this->assertEquals($this->pathnames[0], $obj->getPathname());
+        $this->assertEquals($this->images[0], $obj->getPathname());
 
         $this->assertEquals([null, null], $obj->getDimensions());
         $this->assertNull($obj->getDirectory());
@@ -82,7 +82,7 @@ class ImageTest extends AbstractTestCase {
         } catch (Exception $ex) {
 
             $this->assertInstanceOf(InvalidArgumentException::class, $ex);
-            $this->assertEquals("The pathname \"${pathname}\" was not found", $ex->getMessage());
+            $this->assertEquals("The image \"${pathname}\" was not found", $ex->getMessage());
         }
     }
 
@@ -93,7 +93,7 @@ class ImageTest extends AbstractTestCase {
      */
     public function testInit() {
 
-        $obj = new Image($this->pathnames[1]);
+        $obj = new Image($this->images[1]);
 
         $obj->init();
         $this->assertEquals([1920, 1037], $obj->getDimensions());
@@ -113,84 +113,15 @@ class ImageTest extends AbstractTestCase {
      */
     public function testResize() {
 
-        $pathname = str_replace(".jpg", "_thumb.jpg", $this->pathnames[0]);
+        // Set a pathname mock.
+        $pathname = str_replace(".jpg", "_thumb.jpg", $this->images[0]);
         if (true === file_exists($pathname)) {
             unlink($pathname);
         }
 
-        $obj = new Image($this->pathnames[0]);
+        $obj = new Image($this->images[0]);
 
-        $obj->resize(1920 * 2, 1037 * 2, $pathname);
-        $this->assertFileExists($pathname);
-
-        list($w, $h) = getimagesize($pathname);
-        $this->assertEquals(1920, $w);
-        $this->assertEquals(1037, $h);
-    }
-
-    /**
-     * Tests the resize() method.
-     *
-     * @return void
-     */
-    public function testResizeWithHoritontalPNG() {
-
-        $pathname = str_replace(".png", "_thumb.png", $this->pathnames[1]);
-        if (true === file_exists($pathname)) {
-            unlink($pathname);
-        }
-
-        $obj = new Image($this->pathnames[1]);
-
-        $obj->resize(1280, 768, $pathname);
-        $this->assertFileExists($pathname);
-
-        list($w, $h) = getimagesize($pathname);
-        $this->assertEquals(1280, $w);
-        $this->assertEquals(691, $h);
-    }
-
-    /**
-     * Tests the resize() method.
-     *
-     * @return void
-     */
-    public function testResizeWithSquarePNG() {
-
-        $pathname = str_replace(".png", "_thumb.png", $this->pathnames[2]);
-        if (true === file_exists($pathname)) {
-            unlink($pathname);
-        }
-
-        $obj = new Image($this->pathnames[2]);
-
-        $obj->resize(1280, 768, $pathname);
-        $this->assertFileExists($pathname);
-
-        list($w, $h) = getimagesize($pathname);
-        $this->assertEquals(1280, $w);
-        $this->assertEquals(1280, $h);
-    }
-
-    /**
-     * Tests the resize() method.
-     *
-     * @return void
-     */
-    public function testResizeWithVerticalPNG() {
-
-        $pathname = str_replace(".png", "_thumb.png", $this->pathnames[3]);
-        if (true === file_exists($pathname)) {
-            unlink($pathname);
-        }
-
-        $obj = new Image($this->pathnames[3]);
-
-        $obj->resize(1280, 768, $pathname);
-        $this->assertFileExists($pathname);
-
-        list($w, $h) = getimagesize($pathname);
-        $this->assertEquals(414, $w);
-        $this->assertEquals(768, $h);
+        $res = $obj->resize(1000, 500, $pathname);
+        $this->assertTrue($res);
     }
 }
