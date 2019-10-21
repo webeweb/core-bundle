@@ -11,6 +11,11 @@
 
 namespace WBW\Bundle\CoreBundle\Model;
 
+use WBW\Bundle\CoreBundle\Model\Attribute\FloatAverageTrait;
+use WBW\Bundle\CoreBundle\Model\Attribute\IntegerCountTrait;
+use WBW\Bundle\CoreBundle\Model\Attribute\IntegerMaximumTrait;
+use WBW\Bundle\CoreBundle\Model\Attribute\IntegerMinimumTrait;
+
 /**
  * Repository report.
  *
@@ -18,6 +23,11 @@ namespace WBW\Bundle\CoreBundle\Model;
  * @package WBW\Bundle\CoreBundle\Model
  */
 class RepositoryReport {
+
+    use FloatAverageTrait;
+    use IntegerCountTrait;
+    use IntegerMaximumTrait;
+    use IntegerMinimumTrait;
 
     /**
      * Available
@@ -27,25 +37,11 @@ class RepositoryReport {
     private $available;
 
     /**
-     * Average.
-     *
-     * @var float
-     */
-    private $average;
-
-    /**
      * Column.
      *
      * @var string
      */
     private $column;
-
-    /**
-     * Count.
-     *
-     * @var int
-     */
-    private $count;
 
     /**
      * Entity.
@@ -60,20 +56,6 @@ class RepositoryReport {
      * @var string
      */
     private $field;
-
-    /**
-     * Maximum.
-     *
-     * @var int
-     */
-    private $maximum;
-
-    /**
-     * Minimum.
-     *
-     * @var int
-     */
-    private $minimum;
 
     /**
      * Table.
@@ -99,30 +81,12 @@ class RepositoryReport {
     }
 
     /**
-     * Get the average.
-     *
-     * @return float Returns the average.
-     */
-    public function getAverage() {
-        return $this->average;
-    }
-
-    /**
      * Get the column.
      *
      * @return string Returns the column.
      */
     public function getColumn() {
         return $this->column;
-    }
-
-    /**
-     * Get the count.
-     *
-     * @return int Returns the count.
-     */
-    public function getCount() {
-        return $this->count;
     }
 
     /**
@@ -141,24 +105,6 @@ class RepositoryReport {
      */
     public function getField() {
         return $this->field;
-    }
-
-    /**
-     * Get the maximum.
-     *
-     * @return int Returns the maximum.
-     */
-    public function getMaximum() {
-        return $this->maximum;
-    }
-
-    /**
-     * Get the minimum.
-     *
-     * @return int Returns the minimum.
-     */
-    public function getMinimum() {
-        return $this->minimum;
     }
 
     /**
@@ -182,17 +128,6 @@ class RepositoryReport {
     }
 
     /**
-     * Set the average.
-     *
-     * @param float $average The average.
-     * @return RepositoryReport Returns this repository report.
-     */
-    public function setAverage($average) {
-        $this->average = $average;
-        return $this;
-    }
-
-    /**
      * Set the column.
      *
      * @param string $column The column.
@@ -200,17 +135,6 @@ class RepositoryReport {
      */
     public function setColumn($column) {
         $this->column = $column;
-        return $this;
-    }
-
-    /**
-     * Set the count.
-     *
-     * @param int $count The count.
-     * @return RepositoryReport Returns this repository report.
-     */
-    public function setCount($count) {
-        $this->count = $count;
         return $this;
     }
 
@@ -233,28 +157,6 @@ class RepositoryReport {
      */
     public function setField($field) {
         $this->field = $field;
-        return $this;
-    }
-
-    /**
-     * Set the maximum.
-     *
-     * @param int $maximum The maximum.
-     * @return RepositoryReport Returns this repository report.
-     */
-    public function setMaximum($maximum) {
-        $this->maximum = $maximum;
-        return $this;
-    }
-
-    /**
-     * Set the minimum.
-     *
-     * @param int $minimum The minimum.
-     * @return RepositoryReport Returns this repository report.
-     */
-    public function setMinimum($minimum) {
-        $this->minimum = $minimum;
         return $this;
     }
 
