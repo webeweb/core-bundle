@@ -71,10 +71,10 @@ class ImageHelperTest extends AbstractTestCase {
         $jpg = new Image($this->images[0]);
         $png = new Image($this->images[1]);
 
-        $this->assertIsResource(ImageHelper::newInputStream($jpg->init()));
+        $this->assertNotNull(ImageHelper::newInputStream($jpg->init()));
 
         $this->assertNull(ImageHelper::newInputStream($png));
-        $this->assertIsResource(ImageHelper::newInputStream($png->init()));
+        $this->assertNotNull(ImageHelper::newInputStream($png->init()));
     }
 
     /**
@@ -87,8 +87,8 @@ class ImageHelperTest extends AbstractTestCase {
         $jpg = new Image($this->images[0]);
         $png = new Image($this->images[1]);
 
-        $this->assertIsResource(ImageHelper::newOutputStream($jpg, 1920, 1080));
-        $this->assertIsResource(ImageHelper::newOutputStream($png->init(), 1920, 1080));
+        $this->assertNotNull(ImageHelper::newOutputStream($jpg, 1920, 1080));
+        $this->assertNotNull(ImageHelper::newOutputStream($png->init(), 1920, 1080));
     }
 
     /**
