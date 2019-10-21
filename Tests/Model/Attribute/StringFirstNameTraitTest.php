@@ -12,15 +12,15 @@
 namespace WBW\Bundle\CoreBundle\Tests\Model\Attribute;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\Attribute\TestStringFirstnameTrait;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\Attribute\TestStringFirstNameTrait;
 
 /**
- * String firstname trait test.
+ * String first name trait test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Model\Attribute
  */
-class StringFirstnameTraitTest extends AbstractTestCase {
+class StringFirstNameTraitTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.
@@ -29,21 +29,21 @@ class StringFirstnameTraitTest extends AbstractTestCase {
      */
     public function testConstructor() {
 
-        $obj = new TestStringFirstnameTrait();
+        $obj = new TestStringFirstNameTrait();
 
-        $this->assertNull($obj->getFirstname());
+        $this->assertNull($obj->getFirstName());
     }
 
     /**
-     * Tests the setFirstname() method.
+     * Tests the setFirstName() method.
      *
      * @return void
      */
-    public function testSetFirstname() {
+    public function testSetFirstName() {
 
-        $obj = new TestStringFirstnameTrait();
+        $obj = new TestStringFirstNameTrait();
 
-        $obj->setFirstname("firstname");
-        $this->assertEquals("firstname", $obj->getFirstname());
+        $obj->setFirstName("firstname");
+        $this->assertEquals("firstname", $obj->getFirstName());
     }
 }

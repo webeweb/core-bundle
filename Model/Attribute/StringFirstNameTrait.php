@@ -17,31 +17,31 @@ namespace WBW\Bundle\CoreBundle\Model\Attribute;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Model\Attribute
  */
-trait StringFirstnameTrait {
+trait StringFirstNameTrait {
 
     /**
-     * Firstname.
+     * First name.
      *
      * @var string
      */
-    private $firstname;
+    private $firstName;
 
     /**
-     * Get the firstname.
+     * Get the first name.
      *
-     * @return string Returns the firstname.
+     * @return string Returns the first name.
      */
-    public function getFirstname() {
-        return $this->firstname;
+    public function getFirstName() {
+        return $this->firstName;
     }
 
     /**
-     * Set the firstname.
+     * Set the first name.
      *
-     * @param string $firstname The firstname.
+     * @param string $firstName The first name.
      */
-    public function setFirstname($firstname) {
-        $this->firstname = $firstname;
+    public function setFirstName($firstName) {
+        $this->firstName = $firstName;
         return $this;
     }
 }

@@ -11,15 +11,15 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Model\Attribute;
 
-use WBW\Bundle\CoreBundle\Model\Attribute\StringFirstnameTrait;
+use WBW\Bundle\CoreBundle\Model\Attribute\StringFirstNameTrait;
 
 /**
- * Test string firstname trait.
+ * Test string first name trait.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Model\Attribute
  */
-class TestStringFirstnameTrait {
+class TestStringFirstNameTrait {
 
-    use StringFirstnameTrait;
+    use StringFirstNameTrait;
 }
