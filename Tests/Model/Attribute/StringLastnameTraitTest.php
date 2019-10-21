@@ -12,10 +12,10 @@
 namespace WBW\Bundle\CoreBundle\Tests\Model\Attribute;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\Attribute\TestStringLastnameTrait;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\Attribute\TestStringLastNameTrait;
 
 /**
- * String lastname trait test.
+ * String last name trait test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Model\Attribute
@@ -29,21 +29,21 @@ class StringLastnameTraitTest extends AbstractTestCase {
      */
     public function testConstructor() {
 
-        $obj = new TestStringLastnameTrait();
+        $obj = new TestStringLastNameTrait();
 
-        $this->assertNull($obj->getLastname());
+        $this->assertNull($obj->getLastName());
     }
 
     /**
-     * Tests the setLastname() method.
+     * Tests the setLastName() method.
      *
      * @return void
      */
-    public function testSetLastname() {
+    public function testSetLastName() {
 
-        $obj = new TestStringLastnameTrait();
+        $obj = new TestStringLastNameTrait();
 
-        $obj->setLastname("lastname");
-        $this->assertEquals("lastname", $obj->getLastname());
+        $obj->setLastName("lastname");
+        $this->assertEquals("lastname", $obj->getLastName());
     }
 }

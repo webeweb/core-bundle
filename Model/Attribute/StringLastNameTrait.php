@@ -12,36 +12,36 @@
 namespace WBW\Bundle\CoreBundle\Model\Attribute;
 
 /**
- * String lastname trait.
+ * String last name trait.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Model\Attribute
  */
-trait StringLastnameTrait {
+trait StringLastNameTrait {
 
     /**
-     * Lastname.
+     * Last name.
      *
      * @var string
      */
-    private $lastname;
+    private $lastName;
 
     /**
-     * Get the lastName.
+     * Get the last name.
      *
-     * @return string Returns the lastName.
+     * @return string Returns the last name.
      */
-    public function getLastname() {
-        return $this->lastname;
+    public function getLastName() {
+        return $this->lastName;
     }
 
     /**
-     * Set the lastName.
+     * Set the last name.
      *
-     * @param string $lastname The lastName.
+     * @param string $last name The last name.
      */
-    public function setLastname($lastname) {
-        $this->lastname = $lastname;
+    public function setLastName($lastName) {
+        $this->lastName = $lastName;
         return $this;
     }
 }
