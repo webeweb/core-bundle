@@ -24,7 +24,7 @@ trait FloatExcludingVatPriceTrait {
      *
      * @var float
      */
-    private $excludingVatPrice;
+    protected $excludingVatPrice;
 
     /**
      * Get the excluding VAT price.

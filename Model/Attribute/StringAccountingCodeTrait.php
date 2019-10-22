@@ -24,7 +24,7 @@ trait StringAccountingCodeTrait {
      *
      * @var string
      */
-    private $accountingCode;
+    protected $accountingCode;
 
     /**
      * Get the accounting code.

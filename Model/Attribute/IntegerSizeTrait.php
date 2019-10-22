@@ -24,7 +24,7 @@ trait IntegerSizeTrait {
      *
      * @var integer
      */
-    private $size;
+    protected $size;
 
     /**
      * Get the size.

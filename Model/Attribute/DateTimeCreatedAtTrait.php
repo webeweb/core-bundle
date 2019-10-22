@@ -26,7 +26,7 @@ trait DateTimeCreatedAtTrait {
      *
      * @var DateTime
      */
-    private $createdAt;
+    protected $createdAt;
 
     /**
      * Get the created at.

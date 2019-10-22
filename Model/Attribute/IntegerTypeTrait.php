@@ -24,7 +24,7 @@ trait IntegerTypeTrait {
      *
      * @var integer
      */
-    private $type;
+    protected $type;
 
     /**
      * Get the type.

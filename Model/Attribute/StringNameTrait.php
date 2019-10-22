@@ -24,7 +24,7 @@ trait StringNameTrait {
      *
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * Get the name.

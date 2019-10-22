@@ -24,7 +24,7 @@ trait StringFilenameTrait {
      *
      * @var string
      */
-    private $filename;
+    protected $filename;
 
     /**
      * Get the filename.

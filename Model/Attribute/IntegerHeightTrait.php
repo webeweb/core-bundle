@@ -24,7 +24,7 @@ trait IntegerHeightTrait {
      *
      * @var integer
      */
-    private $height;
+    protected $height;
 
     /**
      * Get the height.

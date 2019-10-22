@@ -24,7 +24,7 @@ trait IntegerPositionTrait {
      *
      * @var integer
      */
-    private $position;
+    protected $position;
 
     /**
      * Get the position.

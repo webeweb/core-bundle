@@ -24,7 +24,7 @@ trait StringPathnameTrait {
      *
      * @var string
      */
-    private $pathname;
+    protected $pathname;
 
     /**
      * Get the pathname.

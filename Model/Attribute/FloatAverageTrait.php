@@ -24,7 +24,7 @@ trait FloatAverageTrait {
      *
      * @var float
      */
-    private $average;
+    protected $average;
 
     /**
      * Get the average.

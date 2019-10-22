@@ -24,7 +24,7 @@ trait StringExtensionTrait {
      *
      * @var string
      */
-    private $extension;
+    protected $extension;
 
     /**
      * Get the extension.

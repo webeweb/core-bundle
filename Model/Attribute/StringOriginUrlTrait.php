@@ -24,7 +24,7 @@ trait StringOriginUrlTrait {
      *
      * @var string
      */
-    private $originUrl;
+    protected $originUrl;
 
     /**
      * Get the origin URL.

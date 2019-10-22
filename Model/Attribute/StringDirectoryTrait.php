@@ -24,7 +24,7 @@ trait StringDirectoryTrait {
      *
      * @var string
      */
-    private $directory;
+    protected $directory;
 
     /**
      * Get the directory.

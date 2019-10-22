@@ -26,7 +26,7 @@ trait DateTimeUpdatedAtTrait {
      *
      * @var DateTime
      */
-    private $updatedAt;
+    protected $updatedAt;
 
     /**
      * Get the updated at.

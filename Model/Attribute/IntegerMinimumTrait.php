@@ -24,7 +24,7 @@ trait IntegerMinimumTrait {
      *
      * @var integer
      */
-    private $minimum;
+    protected $minimum;
 
     /**
      * Get the minimum.

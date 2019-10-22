@@ -24,7 +24,7 @@ trait IntegerMaximumTrait {
      *
      * @var integer
      */
-    private $maximum;
+    protected $maximum;
 
     /**
      * Get the maximum.

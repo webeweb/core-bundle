@@ -24,7 +24,7 @@ trait IntegerCountTrait {
      *
      * @var integer
      */
-    private $count;
+    protected $count;
 
     /**
      * Get the count.

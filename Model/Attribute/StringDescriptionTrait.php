@@ -24,7 +24,7 @@ trait StringDescriptionTrait {
      *
      * @var string
      */
-    private $description;
+    protected $description;
 
     /**
      * Get the description.

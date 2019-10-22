@@ -24,7 +24,7 @@ trait FloatIncludingVatTotalTrait {
      *
      * @var float
      */
-    private $includingVatTotal;
+    protected $includingVatTotal;
 
     /**
      * Get the including VAT total.

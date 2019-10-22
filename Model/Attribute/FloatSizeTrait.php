@@ -24,7 +24,7 @@ trait FloatSizeTrait {
      *
      * @var float
      */
-    private $size;
+    protected $size;
 
     /**
      * Get the size.

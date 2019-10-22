@@ -24,7 +24,7 @@ trait StringFirstNameTrait {
      *
      * @var string
      */
-    private $firstName;
+    protected $firstName;
 
     /**
      * Get the first name.

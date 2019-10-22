@@ -26,7 +26,7 @@ trait DateTimeBirthdateTrait {
      *
      * @var DateTime
      */
-    private $birthdate;
+    protected $birthdate;
 
     /**
      * Get the birth date.

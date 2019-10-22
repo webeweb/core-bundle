@@ -24,7 +24,7 @@ trait FloatRateTrait {
      *
      * @var float
      */
-    private $rate;
+    protected $rate;
 
     /**
      * Get the rate.

@@ -24,7 +24,7 @@ trait StringEnvironmentTrait {
      *
      * @var string
      */
-    private $environment;
+    protected $environment;
 
     /**
      * Get the environment.

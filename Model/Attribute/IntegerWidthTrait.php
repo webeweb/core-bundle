@@ -24,7 +24,7 @@ trait IntegerWidthTrait {
      *
      * @var integer
      */
-    private $width;
+    protected $width;
 
     /**
      * Get the width.

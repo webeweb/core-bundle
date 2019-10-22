@@ -24,7 +24,7 @@ trait StringRedirectUrlTrait {
      *
      * @var string
      */
-    private $redirectUrl;
+    protected $redirectUrl;
 
     /**
      * Get the redirect URL.

@@ -24,7 +24,7 @@ trait StringReferenceTrait {
      *
      * @var string
      */
-    private $reference;
+    protected $reference;
 
     /**
      * Get the reference.

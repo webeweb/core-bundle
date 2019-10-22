@@ -24,7 +24,7 @@ trait StringSourceTrait {
      *
      * @var string
      */
-    private $source;
+    protected $source;
 
     /**
      * Get the source.

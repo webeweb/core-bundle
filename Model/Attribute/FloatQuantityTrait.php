@@ -24,7 +24,7 @@ trait FloatQuantityTrait {
      *
      * @var float
      */
-    private $quantity;
+    protected $quantity;
 
     /**
      * Get the quantity.

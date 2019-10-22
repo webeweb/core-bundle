@@ -24,7 +24,7 @@ trait StringLabelTrait {
      *
      * @var string
      */
-    private $label;
+    protected $label;
 
     /**
      * Get the label.

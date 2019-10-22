@@ -24,7 +24,7 @@ trait StringCommentTrait {
      *
      * @var string
      */
-    private $comment;
+    protected $comment;
 
     /**
      * Get the comment.
