@@ -3,6 +3,7 @@ CHANGELOG
 
 ### master
 
+- Add Action response
 - Add date/time Birthdate trait
 - Add date/time Created at trait
 - Add date/time Updated at trait
