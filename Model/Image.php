@@ -101,8 +101,8 @@ class Image {
         $this->setExtension(end($parts));
 
         list($width, $height) = getimagesize($this->getPathname());
-        $this->setHeight($height);
         $this->setWidth($width);
+        $this->setHeight($height);
 
         $this->setSize(filesize($this->getPathname()));
 
