@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Repository;
 
+use Closure;
 use Doctrine\DBAL\DBALException;
 use Doctrine\DBAL\Driver\Statement;
 use Doctrine\ORM\EntityManagerInterface;
