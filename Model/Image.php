@@ -115,7 +115,7 @@ class Image {
      * @param int $newWidth The new width.
      * @param int $newHeight The new height.
      * @param string $pathname The pathname.
-     * @return bool Returns true in case os success, false otherwise.
+     * @return bool Returns true in case of success, false otherwise.
      * @throws RuntimeException Throws a runtime exception if the re-sampled copy failed.
      */
     public function resize($newWidth, $newHeight, $pathname) {
