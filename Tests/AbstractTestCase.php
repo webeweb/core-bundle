@@ -244,7 +244,7 @@ abstract class AbstractTestCase extends TestCase {
 
         // Set a Parameter bag mock.
         $parameterBag = new ParameterBag([
-            "kernel.environment" => "dev",
+            "kernel.environment" => "test",
             "kernel.root_dir"    => getcwd() . "/Fixtures/app",
         ]);
 
