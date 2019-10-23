@@ -4,8 +4,9 @@ CHANGELOG
 ### master
 
 - Add Action response
-- Add date/time Birthdate trait
+- Add date/time Birth date trait
 - Add date/time Created at trait
+- Add date/time Date trait
 - Add date/time Updated at trait
 - Add float Average trait
 - Add float Discount rate trait
@@ -28,11 +29,13 @@ CHANGELOG
 - Add integer Width trait
 - Add string Accounting code trait
 - Add string Comment trait
+- Add string Content trait
 - Add string Description trait
 - Add string Directory trait
 - Add string Environment trait
 - Add string First name trait
 - Add string Label trait
+- Add string Lang trait
 - Add string Last name trait
 - Add string Name trait
 - Add string Pathname trait
