@@ -19,31 +19,31 @@ use DateTime;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Model\Attribute
  */
-trait DateTimeBirthdateTrait {
+trait DateTimeBirthDateTrait {
 
     /**
      * Birth date.
      *
      * @var DateTime
      */
-    protected $birthdate;
+    protected $birthDate;
 
     /**
      * Get the birth date.
      *
      * @return DateTime Returns the birth date.
      */
-    public function getBirthdate() {
-        return $this->birthdate;
+    public function getBirthDate() {
+        return $this->birthDate;
     }
 
     /**
      * Set the birth date.
      *
-     * @param DateTime|null $birthdate The birth date.
+     * @param DateTime|null $birthDate The birth date.
      */
-    public function setBirthdate(DateTime $birthdate = null) {
-        $this->birthdate = $birthdate;
+    public function setBirthDate(DateTime $birthDate = null) {
+        $this->birthDate = $birthDate;
         return $this;
     }
 }

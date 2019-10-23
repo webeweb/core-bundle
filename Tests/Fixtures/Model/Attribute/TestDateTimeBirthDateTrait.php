@@ -11,15 +11,15 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Model\Attribute;
 
-use WBW\Bundle\CoreBundle\Model\Attribute\DateTimeBirthdateTrait;
+use WBW\Bundle\CoreBundle\Model\Attribute\DateTimeBirthDateTrait;
 
 /**
- * Test date/time birthdate trait.
+ * Test date/time birth date trait.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Model\Attribute
  */
-class TestDateTimeBirthdateTrait {
+class TestDateTimeBirthDateTrait {
 
-    use DateTimeBirthdateTrait;
+    use DateTimeBirthDateTrait;
 }

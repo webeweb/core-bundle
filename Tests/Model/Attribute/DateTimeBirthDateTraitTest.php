@@ -14,15 +14,15 @@ namespace WBW\Bundle\CoreBundle\Tests\Model\Attribute;
 use DateTime;
 use Exception;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\Attribute\TestDateTimeBirthdateTrait;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\Attribute\TestDateTimeBirthDateTrait;
 
 /**
- * Date/time birthdate trait test.
+ * Date/time birth date trait test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Model\Attribute
  */
-class DateTimeBirthdateTraitTest extends AbstractTestCase {
+class DateTimeBirthDateTraitTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.
@@ -31,9 +31,9 @@ class DateTimeBirthdateTraitTest extends AbstractTestCase {
      */
     public function testConstructor() {
 
-        $obj = new TestDateTimeBirthdateTrait();
+        $obj = new TestDateTimeBirthDateTrait();
 
-        $this->assertNull($obj->getBirthdate());
+        $this->assertNull($obj->getBirthDate());
     }
 
     /**
@@ -45,11 +45,11 @@ class DateTimeBirthdateTraitTest extends AbstractTestCase {
     public function testSetBirthdate() {
 
         // Set a date/time mock.
-        $birthdate = new DateTime();
+        $birthDate = new DateTime();
 
-        $obj = new TestDateTimeBirthdateTrait();
+        $obj = new TestDateTimeBirthDateTrait();
 
-        $obj->setBirthdate($birthdate);
-        $this->assertSame($birthdate, $obj->getBirthdate());
+        $obj->setBirthDate($birthDate);
+        $this->assertSame($birthDate, $obj->getBirthDate());
     }
 }
