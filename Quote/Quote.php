@@ -11,7 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Quote;
 
-use DateTime;
+use WBW\Bundle\CoreBundle\Model\Attribute\DateTimeDateTrait;
+use WBW\Bundle\CoreBundle\Model\Attribute\StringContentTrait;
 
 /**
  * Quote.
@@ -21,26 +22,15 @@ use DateTime;
  */
 class Quote implements QuoteInterface {
 
+    use DateTimeDateTrait;
+    use StringContentTrait;
+
     /**
      * Author.
      *
      * @var string
      */
     private $author;
-
-    /**
-     * Content.
-     *
-     * @var string
-     */
-    private $content;
-
-    /**
-     * Date.
-     *
-     * @var DateTime
-     */
-    private $date;
 
     /**
      * Constructor.
@@ -57,20 +47,6 @@ class Quote implements QuoteInterface {
     }
 
     /**
-     * {@inheritDoc}
-     */
-    public function getContent() {
-        return $this->content;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getDate() {
-        return $this->date;
-    }
-
-    /**
      * Set the author.
      *
      * @param string $author The author.
@@ -78,28 +54,6 @@ class Quote implements QuoteInterface {
      */
     public function setAuthor($author) {
         $this->author = $author;
-        return $this;
-    }
-
-    /**
-     * Set the content.
-     *
-     * @param string $content The content.
-     * @return Quote Returns this quote.
-     */
-    public function setContent($content) {
-        $this->content = $content;
-        return $this;
-    }
-
-    /**
-     * Set the date.
-     *
-     * @param DateTime $date The date.
-     * @return Quote Returns this quote.
-     */
-    public function setDate(DateTime $date = null) {
-        $this->date = $date;
         return $this;
     }
 }

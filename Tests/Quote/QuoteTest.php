@@ -11,8 +11,6 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Quote;
 
-use DateTime;
-use Exception;
 use WBW\Bundle\CoreBundle\Quote\Quote;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
@@ -49,35 +47,5 @@ class QuoteTest extends AbstractTestCase {
 
         $obj->setAuthor("author");
         $this->assertEquals("author", $obj->getAuthor());
-    }
-
-    /**
-     * Tests the setContent() method.
-     *
-     * @return void
-     */
-    public function testSetContent() {
-
-        $obj = new Quote();
-
-        $obj->setContent("content");
-        $this->assertEquals("content", $obj->getContent());
-    }
-
-    /**
-     * Tests the setDate() method.
-     *
-     * @return void
-     * @throws Exception Throws an exception if an error occurs.
-     */
-    public function testSetDate() {
-
-        // Set a Date mock.
-        $date = new DateTime();
-
-        $obj = new Quote();
-
-        $obj->setDate($date);
-        $this->assertSame($date, $obj->getDate());
     }
 }
