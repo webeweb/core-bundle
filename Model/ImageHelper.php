@@ -29,6 +29,8 @@ class ImageHelper {
      */
     public static function newDimensions(Image $image, $maxWidth, $maxHeight) {
 
+        $image->init();
+
         if ($image->getWidth() < $maxWidth || $image->getHeight() < $maxHeight) {
             return [$image->getWidth(), $image->getHeight()];
         }
@@ -62,15 +64,13 @@ class ImageHelper {
 
         $stream = null;
 
-        switch ($image->getExtension()) {
+        switch ($image->init()->getMimeType()) {
 
-            case "jpe":
-            case "jpeg":
-            case "jpg":
+            case "image/jpeg":
                 $stream = imagecreatefromjpeg($image->getPathname());
                 break;
 
-            case "png":
+            case "image/png":
                 $stream = imagecreatefrompng($image->getPathname());
                 if (false !== $stream) {
                     imagealphablending($stream, true);
@@ -93,9 +93,9 @@ class ImageHelper {
 
         $stream = imagecreatetruecolor($width, $height);
 
-        switch ($image->getExtension()) {
+        switch ($image->init()->getMimeType()) {
 
-            case "png":
+            case "image/png":
                 if (false !== $stream) {
                     imagealphablending($stream, false);
                     imagesavealpha($stream, true);
@@ -116,14 +116,12 @@ class ImageHelper {
      */
     public static function saveOutputStream(Image $image, $outputStream, $pathname) {
 
-        switch ($image->getExtension()) {
+        switch ($image->init()->getMimeType()) {
 
-            case "jpe":
-            case "jpeg":
-            case "jpg":
+            case "image/jpeg":
                 return imagejpeg($outputStream, $pathname);
 
-            case "png":
+            case "image/png":
                 return imagepng($outputStream, $pathname);
         }
 

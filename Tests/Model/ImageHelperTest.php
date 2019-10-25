@@ -52,13 +52,13 @@ class ImageHelperTest extends AbstractTestCase {
         $sImage = new Image($this->images[2]); // Square image
         $vImage = new Image($this->images[3]); // Vertical image
 
-        $this->assertEquals([1920, 1037], ImageHelper::newDimensions($hImage->init(), 2000, 1100));
-        $this->assertEquals([1000, 540], ImageHelper::newDimensions($hImage->init(), 1000, 900));
+        $this->assertEquals([1920, 1037], ImageHelper::newDimensions($hImage, 2000, 1100));
+        $this->assertEquals([1000, 540], ImageHelper::newDimensions($hImage, 1000, 900));
 
-        $this->assertEquals([1600, 1600], ImageHelper::newDimensions($sImage->init(), 1600, 1200));
+        $this->assertEquals([1600, 1600], ImageHelper::newDimensions($sImage, 1600, 1200));
         $this->assertEquals([1600, 1600], ImageHelper::newDimensions($sImage, 1200, 1600));
 
-        $this->assertEquals([540, 1000], ImageHelper::newDimensions($vImage->init(), 900, 1000));
+        $this->assertEquals([540, 1000], ImageHelper::newDimensions($vImage, 900, 1000));
     }
 
     /**
@@ -71,10 +71,8 @@ class ImageHelperTest extends AbstractTestCase {
         $jpg = new Image($this->images[0]);
         $png = new Image($this->images[1]);
 
-        $this->assertNotNull(ImageHelper::newInputStream($jpg->init()));
-
-        $this->assertNull(ImageHelper::newInputStream($png));
-        $this->assertNotNull(ImageHelper::newInputStream($png->init()));
+        $this->assertNotNull(ImageHelper::newInputStream($jpg));
+        $this->assertNotNull(ImageHelper::newInputStream($png));
     }
 
     /**
@@ -88,7 +86,7 @@ class ImageHelperTest extends AbstractTestCase {
         $png = new Image($this->images[1]);
 
         $this->assertNotNull(ImageHelper::newOutputStream($jpg, 1920, 1080));
-        $this->assertNotNull(ImageHelper::newOutputStream($png->init(), 1920, 1080));
+        $this->assertNotNull(ImageHelper::newOutputStream($png, 1920, 1080));
     }
 
     /**
@@ -108,12 +106,9 @@ class ImageHelperTest extends AbstractTestCase {
         $png = new Image($this->images[1]);
 
         $outJpg = ImageHelper::newOutputStream($jpg, 100, 100);
-        $this->assertFalse(ImageHelper::saveOutputStream($jpg, $outJpg, $paths[0]));
-
-        $outJpg = ImageHelper::newOutputStream($jpg->init(), 100, 100);
         $this->assertTrue(ImageHelper::saveOutputStream($jpg, $outJpg, $paths[0]));
 
-        $outPng = ImageHelper::newOutputStream($png->init(), 100, 100);
+        $outPng = ImageHelper::newOutputStream($png, 100, 100);
         $this->assertTrue(ImageHelper::saveOutputStream($png, $outPng, $paths[1]));
 
         // Clean up

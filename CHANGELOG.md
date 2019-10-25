@@ -37,6 +37,7 @@ CHANGELOG
 - Add string Label trait
 - Add string Lang trait
 - Add string Last name trait
+- Add string Mime type trait
 - Add string Name trait
 - Add string Pathname trait
 - Add string Filename trait
