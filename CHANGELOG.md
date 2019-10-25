@@ -40,8 +40,9 @@ CHANGELOG
 - Add string Name trait
 - Add string Pathname trait
 - Add string Filename trait
-- Add string OriginUrl trait
-- Add string RedirectUrl trait
+- Add string Mime type trait
+- Add string Origin URL trait
+- Add string Redirect URL trait
 - Add string Reference trait
 - Add string Source trait
 - Add Timestampable trait
