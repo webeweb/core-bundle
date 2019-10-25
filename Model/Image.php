@@ -19,6 +19,7 @@ use WBW\Bundle\CoreBundle\Model\Attribute\IntegerWidthTrait;
 use WBW\Bundle\CoreBundle\Model\Attribute\StringDirectoryTrait;
 use WBW\Bundle\CoreBundle\Model\Attribute\StringExtensionTrait;
 use WBW\Bundle\CoreBundle\Model\Attribute\StringFilenameTrait;
+use WBW\Bundle\CoreBundle\Model\Attribute\StringMimeTypeTrait;
 use WBW\Bundle\CoreBundle\Model\Attribute\StringPathnameTrait;
 
 /**
@@ -35,6 +36,7 @@ class Image {
     use StringDirectoryTrait;
     use StringExtensionTrait;
     use StringFilenameTrait;
+    use StringMimeTypeTrait;
     use StringPathnameTrait;
 
     /**
@@ -94,11 +96,17 @@ class Image {
      */
     public function init() {
 
+        if (null !== $this->getDirectory()) {
+            return $this;
+        }
+
         $this->setDirectory(dirname($this->getPathname()));
         $this->setFilename(basename($this->getPathname()));
 
         $parts = explode(".", $this->getFilename());
         $this->setExtension(end($parts));
+
+        $this->setMimeType(mime_content_type($this->getPathname()));
 
         list($width, $height) = getimagesize($this->getPathname());
         $this->setWidth($width);
@@ -119,8 +127,6 @@ class Image {
      * @throws RuntimeException Throws a runtime exception if the re-sampled copy failed.
      */
     public function resize($newWidth, $newHeight, $pathname) {
-
-        $this->init();
 
         list($w, $h) = ImageHelper::newDimensions($this, $newWidth, $newHeight);
 

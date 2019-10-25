@@ -60,6 +60,7 @@ class ImageTest extends AbstractTestCase {
         $this->assertNull($obj->getDirectory());
         $this->assertNull($obj->getExtension());
         $this->assertNull($obj->getFilename());
+        $this->assertNull($obj->getMimeType());
         $this->assertNull($obj->getOrientation());
         $this->assertNull($obj->getHeight());
         $this->assertNull($obj->getSize());
@@ -101,6 +102,7 @@ class ImageTest extends AbstractTestCase {
         $this->assertEquals("png", $obj->getExtension());
         $this->assertEquals("TestImage_1920x1037.png", $obj->getFilename());
         $this->assertEquals(1037, $obj->getHeight());
+        $this->assertEquals("image/png", $obj->getMimeType());
         $this->assertEquals(Image::ORIENTATION_HORIZONTAL, $obj->getOrientation());
         $this->assertEquals(127373, $obj->getSize());
         $this->assertEquals(1920, $obj->getWidth());
