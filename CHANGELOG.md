@@ -8,6 +8,7 @@ CHANGELOG
 - Add date/time Created at trait
 - Add date/time Date trait
 - Add date/time Updated at trait
+- Add File size renderer
 - Add float Average trait
 - Add float Discount rate trait
 - Add float Excluding VAT price trait
