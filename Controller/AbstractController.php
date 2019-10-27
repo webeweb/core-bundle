@@ -187,4 +187,17 @@ abstract class AbstractController extends BaseController {
     protected function toast($eventName, ToastInterface $toast) {
         return $this->dispatchEvent($eventName, new ToastEvent($eventName, $toast));
     }
+
+    /**
+     * Translate.
+     *
+     * @param string $id The id.
+     * @param array $parameters The parameters.
+     * @param string|null $domain The domain.
+     * @param string|null $locale The locale.
+     * @return string Returns the translation in case of success, $id otherwise.
+     */
+    protected function translate($id, array $parameters = [], $domain = null, $locale = null) {
+        return $this->getTranslator()->trans($id, $parameters, $domain, $locale);
+    }
 }

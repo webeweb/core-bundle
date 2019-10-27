@@ -363,4 +363,17 @@ class AbstractControllerTest extends AbstractTestCase {
         $res = $obj->toast("eventName", $toast);
         $this->assertNull($res);
     }
+
+    /**
+     * Tests the translate() method.
+     *
+     * @return void
+     */
+    public function testTranslate() {
+
+        $obj = new TestAbstractController();
+        $obj->setContainer($this->containerBuilder);
+
+        $this->assertEquals("id", $obj->translate("id"));
+    }
 }

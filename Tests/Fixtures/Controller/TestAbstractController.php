@@ -113,4 +113,11 @@ class TestAbstractController extends AbstractController {
     public function toast($eventName, ToastInterface $toast) {
         return parent::toast($eventName, $toast);
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function translate($id, array $parameters = [], $domain = null, $locale = null) {
+        return parent::translate($id, $parameters, $domain, $locale);
+    }
 }
