@@ -18,6 +18,8 @@ CHANGELOG
 - Add float Quantity trait
 - Add float Rate trait
 - Add float Size trait
+- Add float VAT amount trait
+- Add float VAT total trait
 - Add Image
 - Add integer Count trait
 - Add integer Height trait
@@ -40,6 +42,7 @@ CHANGELOG
 - Add string Last name trait
 - Add string Mime type trait
 - Add string Name trait
+- Add string Number trait
 - Add string Pathname trait
 - Add string Filename trait
 - Add string Mime type trait
