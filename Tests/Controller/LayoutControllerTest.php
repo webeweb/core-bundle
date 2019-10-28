@@ -38,10 +38,8 @@ class LayoutControllerTest extends AbstractWebTestCase {
      */
     public function testEmailAction() {
 
-        // Create a client.
         $client = $this->client;
 
-        // Make a GET request.
         $client->request("GET", "/email");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
@@ -54,10 +52,8 @@ class LayoutControllerTest extends AbstractWebTestCase {
      */
     public function testJavascriptsAction() {
 
-        // Create a client.
         $client = $this->client;
 
-        // Make a GET request.
         $client->request("GET", "/javascripts");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
@@ -70,10 +66,8 @@ class LayoutControllerTest extends AbstractWebTestCase {
      */
     public function testStylesheetsAction() {
 
-        // Create a client.
         $client = static::createClient();
 
-        // Make a GET request.
         $client->request("GET", "/stylesheets");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
