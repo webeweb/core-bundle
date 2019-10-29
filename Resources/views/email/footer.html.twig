@@ -1,4 +1,5 @@
 {# Resources/views/email/footer.html.twig #}
+{% set _domain = constant("WBW\\Bundle\\CoreBundle\\Translation\\TranslationInterface::TRANSLATION_DOMAIN") %}
 <table class="footer center" width="602" border="0" cellspacing="0" cellpadding="0">
     <tbody>
         <tr>
@@ -7,29 +8,29 @@
         <tr>
             <td class="signature" width="300">
                 <p>
-                    {{ emailLayout.bestRegards|default("label.with_best_regards"|trans({}, "WBWCoreBundle")) }},<br/>
-                    {{ emailLayout.companyName|default("WEBEWEB") }}<br/>
-                    {{ emailLayout.supportPhone|default("+33 6 xx xx xx xx") }}, {{ emailLayout.supportName|default("label.support"|trans({}, "WBWCoreBundle")) }}<br/>
+                    {{ emailLayout.bestRegards | default("label.with_best_regards" | trans([], _domain)) }},<br/>
+                    {{ emailLayout.companyName | default("") }}<br/>
+                    {{ emailLayout.supportPhone | default("") }}, {{ emailLayout.supportName | default("label.support" | trans([], _domain)) }}<br/>
                 </p>
                 <p>
-                    {{ "label.support"|trans({}, "WBWCoreBundle") }}: <a class="strong" href="{{ emailLayout.supportEmail|default("https://github.com/webeweb/") }}" target="_blank">
-                        {{ emailLayout.supportName|default("https://github.com/webeweb/") }}
+                    {{ "label.support" | trans([], _domain) }}: <a class="strong" href="{{ emailLayout.supportEmail | default("https://github.com/webeweb/") }}" target="_blank">
+                        {{ emailLayout.supportName | default("https://github.com/webeweb/") }}
                     </a>
                 </p>
             </td>
             <td class="subscription" width="300">
                 <div class="logo-image">
-                    <a href="{{ emailLayout.companyURL|default("https://github.com/webeweb/") }}" target="_blank">
-                        <img src="{{ emailLayout.companyLogo|default("https://github.com/webeweb/bootstrap-bundle/blob/master/Resources/public/favicons/favicon-96x96.png?raw=true") }}" alt="logo-alt" height="70">
+                    <a href="{{ emailLayout.companyURL | default("https://github.com/webeweb/") }}" target="_blank">
+                        <img src="{{ emailLayout.companyLogo | default("https://github.com/webeweb/bootstrap-bundle/blob/master/Resources/public/favicons/favicon-96x96.png?raw=true") }}" alt="logo-alt" height="70">
                     </a>
                 </div>
                 <p>
-                    <a class="strong block" href="{{ emailLayout.unsubscribeURL|default("#") }}" target="_blank">
-                        {{ "label.unsubscribe"|trans({}, "WBWCoreBundle") }}
+                    <a class="strong block" href="{{ emailLayout.unsubscribeURL | default("#") }}" target="_blank">
+                        {{ "label.unsubscribe" | trans([], _domain) }}
                     </a>
                     <span class="hide">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                    <a class="strong block" href="{{ emailLayout.accountSettingsURL|default("#") }}" target="_blank">
-                        {{ "label.account_settings"|trans({}, "WBWCoreBundle") }}
+                    <a class="strong block" href="{{ emailLayout.accountSettingsURL | default("#") }}" target="_blank">
+                        {{ "label.account_settings" | trans([], _domain) }}
                     </a>
                 </p>
             </td>

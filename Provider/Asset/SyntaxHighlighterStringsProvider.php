@@ -15,6 +15,7 @@ use Symfony\Component\Translation\TranslatorInterface;
 use WBW\Bundle\CoreBundle\Asset\SyntaxHighlighterStrings;
 use WBW\Bundle\CoreBundle\Provider\ProviderInterface;
 use WBW\Bundle\CoreBundle\Service\TranslatorTrait;
+use WBW\Bundle\CoreBundle\Translation\TranslationInterface;
 
 /**
  * SyntaxHighlighter strings provider.
@@ -70,6 +71,6 @@ class SyntaxHighlighterStringsProvider implements ProviderInterface {
      * @return string Returns the translation.
      */
     protected function translate($id) {
-        return $this->getTranslator()->trans($id, [], "WBWCoreBundle");
+        return $this->getTranslator()->trans($id, [], TranslationInterface::TRANSLATION_DOMAIN);
     }
 }
