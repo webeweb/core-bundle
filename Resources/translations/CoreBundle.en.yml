@@ -5,6 +5,9 @@ label:
     unsubscribe:       "Unsubscribe"
     with_best_regards: "With best regards"
 
+message:
+    welcome: "Welcome {{ username }}"
+
 navigation:
     node:
         action:
