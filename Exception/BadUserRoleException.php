@@ -15,7 +15,6 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use WBW\Bundle\CoreBundle\Model\Attribute\StringOriginUrlTrait;
 use WBW\Bundle\CoreBundle\Model\Attribute\StringRedirectUrlTrait;
 use WBW\Bundle\CoreBundle\Model\UserTrait;
-use WBW\Library\Core\Network\HTTP\HTTPInterface;
 
 /**
  * Bad user role exception.
@@ -46,7 +45,7 @@ class BadUserRoleException extends AbstractException {
      */
     public function __construct(UserInterface $user, array $roles, $redirectUrl, $originUrl) {
         $format = "User \"%s\" is not allowed to access to \"%s\" with roles [%s]";
-        parent::__construct(sprintf($format, $user->getUsername(), $originUrl, implode(",", $roles)), HTTPInterface::HTTP_STATUS_FORBIDDEN);
+        parent::__construct(sprintf($format, $user->getUsername(), $originUrl, implode(",", $roles)), 403);
         $this->setOriginUrl($originUrl);
         $this->setRedirectUrl($redirectUrl);
         $this->setRoles($roles);
