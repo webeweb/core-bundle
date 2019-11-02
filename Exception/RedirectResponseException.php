@@ -13,7 +13,6 @@ namespace WBW\Bundle\CoreBundle\Exception;
 
 use WBW\Bundle\CoreBundle\Model\Attribute\StringOriginUrlTrait;
 use WBW\Bundle\CoreBundle\Model\Attribute\StringRedirectUrlTrait;
-use WBW\Library\Core\Network\HTTP\HTTPInterface;
 
 /**
  * Redirect response exception.
@@ -34,7 +33,7 @@ class RedirectResponseException extends AbstractException {
      */
     public function __construct($redirectUrl, $originUrl) {
         $format = "You're not allowed to access to \"%s\"";
-        parent::__construct(sprintf($format, $originUrl), HTTPInterface::HTTP_STATUS_FORBIDDEN);
+        parent::__construct(sprintf($format, $originUrl), 403);
         $this->setOriginUrl($originUrl);
         $this->setRedirectUrl($redirectUrl);
     }
