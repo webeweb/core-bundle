@@ -11,14 +11,13 @@
 
 namespace WBW\Bundle\CoreBundle\Twig\Extension\Asset;
 
+use Symfony\Component\Filesystem\Exception\FileNotFoundException;
 use Twig\TwigFilter;
 use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\Asset\SyntaxHighlighterConfig;
 use WBW\Bundle\CoreBundle\Asset\SyntaxHighlighterDefaults;
 use WBW\Bundle\CoreBundle\Asset\SyntaxHighlighterStrings;
 use WBW\Library\Core\Argument\ArrayHelper;
-use WBW\Library\Core\Exception\FileSystem\FileNotFoundException;
-use WBW\Library\Core\FileSystem\FileHelper;
 
 /**
  * SyntaxHighlighter Twig extension.
@@ -96,7 +95,10 @@ class SyntaxHighlighterTwigExtension extends AbstractSyntaxHighlighterTwigExtens
         $content  = ArrayHelper::get($args, "content");
 
         if (null !== $filename) {
-            $content = FileHelper::getContents($filename);
+            if (false === file_exists($filename)) {
+                throw new FileNotFoundException(null, 500, null, $filename);
+            }
+            $content = file_get_contents($filename);
         }
 
         return $this->syntaxHighlighterContent($tag, $language, $content);

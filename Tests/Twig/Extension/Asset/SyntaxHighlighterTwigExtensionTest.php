@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension\Asset;
 
 use Exception;
+use Symfony\Component\Filesystem\Exception\FileNotFoundException;
 use Twig\Node\Node;
 use Twig\TwigFilter;
 use Twig\TwigFunction;
@@ -20,7 +21,6 @@ use WBW\Bundle\CoreBundle\Asset\SyntaxHighlighterDefaults;
 use WBW\Bundle\CoreBundle\Asset\SyntaxHighlighterStrings;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Twig\Extension\Asset\SyntaxHighlighterTwigExtension;
-use WBW\Library\Core\Exception\FileSystem\FileNotFoundException;
 
 /**
  * SyntaxHighlighter Twig extension test.
@@ -240,7 +240,7 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
         } catch (Exception $ex) {
 
             $this->assertInstanceOf(FileNotFoundException::class, $ex);
-            $this->assertContains("core-bundle/Tests/Twig/Extension/Asset/SyntaxHighlighterTwigExtensionTest\" is not found", $ex->getMessage());
+            $this->assertContains("core-bundle/Tests/Twig/Extension/Asset/SyntaxHighlighterTwigExtensionTest\" could not be found", $ex->getMessage());
         }
     }
 
