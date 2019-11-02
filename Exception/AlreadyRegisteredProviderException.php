@@ -11,9 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Exception;
 
-use ReflectionException;
 use WBW\Bundle\CoreBundle\Provider\ProviderInterface;
-use WBW\Library\Core\Argument\ObjectHelper;
 
 /**
  * Already registered provider exception.
@@ -27,10 +25,9 @@ class AlreadyRegisteredProviderException extends AbstractException {
      * Constructor.
      *
      * @param ProviderInterface $provider The provider.
-     * @throws ReflectionException Throws a reflection exception if an error occurs.
      */
     public function __construct(ProviderInterface $provider) {
         $format = "The provider \"%s\" is already registered";
-        parent::__construct(sprintf($format, ObjectHelper::getName($provider)), 500);
+        parent::__construct(sprintf($format, get_class($provider)), 500);
     }
 }
