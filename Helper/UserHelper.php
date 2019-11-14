@@ -42,11 +42,14 @@ class UserHelper {
         $result = 1 <= count($roles);
 
         foreach ($roles as $role) {
+
             $buffer = in_array($role, $user->getRoles());
+
             if (true === $buffer && true === $or) {
                 $result = $buffer;
                 break;
             }
+
             $result &= $buffer;
         }
 
