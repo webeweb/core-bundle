@@ -28,7 +28,7 @@
         "symfony/framework-bundle": "^2.7|^3.0|^4.0",
         "symfony/security-core": "^2.7|^3.0|^4.0",
         "symfony/translation": "^2.7|^3.0|^4.0",
-        "swiftmailer/swiftmailer": "*",
+        "swiftmailer/swiftmailer": "^5.0|^6.0",
         "twig/twig": "^1.0||^2.0",
         "webeweb/core-library": "^5.1"
     },
