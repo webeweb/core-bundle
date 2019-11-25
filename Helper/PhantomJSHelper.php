@@ -34,14 +34,14 @@ class PhantomJSHelper {
     private $binaryPath;
 
     /**
-     * OutputPath.
+     * Output path.
      *
      * @var string
      */
     private $outputPath;
 
     /**
-     * ScriptsPath.
+     * Scripts path.
      *
      * @var string
      */
@@ -76,11 +76,9 @@ class PhantomJSHelper {
      */
     public function getCommand() {
 
-        // Initialize the command.
         $command = $this->getBinaryPath();
         $command .= true === OSHelper::isWindows() ? ".exe" : "";
 
-        // Return the command.
         return realpath($command);
     }
 
