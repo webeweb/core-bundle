@@ -60,6 +60,7 @@ class ToastEventListenerTest extends AbstractTestCase {
 
         // Set a Toast mock.
         $toast = $this->getMockBuilder(ToastInterface::class)->getMock();
+        $toast->expects($this->any())->method("getType")->willReturn("type");
 
         $obj = new ToastEventListener($this->session);
 

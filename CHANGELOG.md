@@ -52,6 +52,7 @@ CHANGELOG
 - Add string Source trait
 - Add Timestampable trait
 - Merge SyntaxHighlighter bundle
+- Update dependencies (Symfony 5)
 
 ### [2.14.1](https://github.com/webeweb/core-bundle/tree/v2.14.1) (2019-10-15)
 

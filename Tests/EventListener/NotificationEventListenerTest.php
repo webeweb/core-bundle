@@ -60,6 +60,7 @@ class NotificationEventListenerTest extends AbstractTestCase {
 
         // Set a Notification mock.
         $notification = $this->getMockBuilder(NotificationInterface::class)->getMock();
+        $notification->expects($this->any())->method("getType")->willReturn("type");
 
         $obj = new NotificationEventListener($this->session);
 
