@@ -35,8 +35,6 @@ matrix:
             env: "SYMFONY_VERSION=4.3.*"
         -   php: "7.1"
             env: "SYMFONY_VERSION=4.4.*"
-        -   php: "7.2"
-            env: "SYMFONY_VERSION=5.0.*"
     allow_failures:
         -   php: "nightly"
 
@@ -46,7 +44,7 @@ before_install:
 
 install:
     - composer update
-    - wget -c -nc --retry-connrefused --tries=0 https://github.com/php-coveralls/php-coveralls/releases/download/v2.1.0/php-coveralls.phar -O coveralls.phar
+    - wget -c -nc --retry-connrefused --tries=0 https://github.com/php-coveralls/php-coveralls/releases/download/v2.2.0/php-coveralls.phar -O coveralls.phar
     - chmod +x coveralls.phar
     - php coveralls.phar --version
 
