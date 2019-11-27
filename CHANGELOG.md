@@ -6,7 +6,7 @@ CHANGELOG
 - Add Action response
 - Add string Environment trait- Add string Origin URL trait
 - Merge SyntaxHighlighter bundle
-- Update dependencies (Symfony 5)
+- Update dependencies
 
 ### [2.14.1](https://github.com/webeweb/core-bundle/tree/v2.14.1) (2019-10-15)
 
