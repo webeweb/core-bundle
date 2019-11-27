@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Manager\QuoteManager;
 use WBW\Bundle\CoreBundle\Manager\QuoteManagerTrait;
 use WBW\Bundle\CoreBundle\Provider\QuoteProviderInterface;
 use WBW\Bundle\CoreBundle\Quote\QuoteInterface;
-use WBW\Library\Core\Argument\ArrayHelper;
+use WBW\Library\Core\Argument\Helper\ArrayHelper;
 
 /**
  * Quote Twig extension.

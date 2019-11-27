@@ -15,7 +15,6 @@ use Psr\Log\LoggerInterface;
 use Twig\Environment;
 use WBW\Bundle\CoreBundle\Manager\AbstractThemeManager;
 use WBW\Bundle\CoreBundle\Provider\ThemeProviderInterface;
-use WBW\Library\Core\Argument\ObjectHelper;
 
 /**
  * Test theme manager.
@@ -44,7 +43,7 @@ class TestThemeManager extends AbstractThemeManager {
      */
     protected function initIndex() {
         return [
-            ObjectHelper::getShortName(ThemeProviderInterface::class) => null,
+            ThemeProviderInterface::class => null,
         ];
     }
 

@@ -14,8 +14,8 @@ namespace WBW\Bundle\CoreBundle\Form\Renderer;
 use Symfony\Component\Translation\TranslatorInterface;
 use WBW\Bundle\CoreBundle\Entity\ChoiceLabelInterface;
 use WBW\Bundle\CoreBundle\Entity\TranslatedChoiceLabelInterface;
-use WBW\Library\Core\Sorting\AlphabeticalTreeNodeHelper;
-use WBW\Library\Core\Sorting\AlphabeticalTreeNodeInterface;
+use WBW\Library\Core\Sorter\AlphabeticalTreeNodeHelper;
+use WBW\Library\Core\Sorter\AlphabeticalTreeNodeInterface;
 
 /**
  * Form renderer.

@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Navigation;
 
-use WBW\Library\Core\Sorting\AlphabeticalTreeNodeInterface;
+use WBW\Library\Core\Sorter\AlphabeticalTreeNodeInterface;
 
 /**
  * Abstract navigation node.

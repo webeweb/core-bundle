@@ -12,11 +12,9 @@
 namespace WBW\Bundle\CoreBundle\Manager;
 
 use Psr\Log\LoggerInterface;
-use ReflectionException;
 use Twig\Environment;
 use WBW\Bundle\CoreBundle\Provider\ThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Service\TwigEnvironmentTrait;
-use WBW\Library\Core\Argument\ObjectHelper;
 
 /**
  * Abstract theme manager.
@@ -54,11 +52,15 @@ abstract class AbstractThemeManager extends AbstractManager {
      * @return void
      */
     public function addGlobal() {
+
         foreach ($this->getIndex() as $k => $v) {
+
             if (null === $v) {
                 continue;
             }
-            $this->getTwigEnvironment()->addGlobal(str_replace("Interface", "", $k), $this->getProviders()[$v]);
+
+            $parts = explode("\\", $k);
+            $this->getTwigEnvironment()->addGlobal(str_replace("Interface", "", end($parts)), $this->getProviders()[$v]);
         }
     }
 
@@ -76,14 +78,14 @@ abstract class AbstractThemeManager extends AbstractManager {
      *
      * @param string $name The name.
      * @return ThemeProviderInterface|null Returns the theme provider in case of success, null otherwise.
-     * @throws ReflectionException Throws a reflection exception if an error occurs.
      */
     protected function getProvider($name) {
-        $k = ObjectHelper::getShortName($name);
-        $v = $this->getIndex()[$k];
+
+        $v = $this->getIndex()[$name];
         if (null === $v) {
             return null;
         }
+
         return $this->getProviders()[$v];
     }
 
@@ -111,16 +113,17 @@ abstract class AbstractThemeManager extends AbstractManager {
      * @param mixed $name The name.
      * @param ThemeProviderInterface $provider The provider.
      * @return ManagerInterface Returns this manager.
-     * @throws ReflectionException Throws a reflection exception if an error occurs.
      */
     protected function setProvider($name, ThemeProviderInterface $provider) {
-        $k = ObjectHelper::getShortName($name);
-        $v = $this->getIndex()[$k];
+
+        $v = $this->getIndex()[$name];
         if (null !== $v) {
             $this->getProviders()[$v] = $provider;
             return $this;
         }
-        $this->index[$k] = count($this->getProviders());
+
+        $this->index[$name] = count($this->getProviders());
+
         return $this->addProvider($provider);
     }
 }

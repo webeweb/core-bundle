@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Entity;
 
 use WBW\Bundle\CoreBundle\Entity\Select2ItemInterface;
-use WBW\Library\Core\Model\Node\AbstractNode;
+use WBW\Library\Core\Model\AbstractNode;
 
 /**
  * Test Select2 item.

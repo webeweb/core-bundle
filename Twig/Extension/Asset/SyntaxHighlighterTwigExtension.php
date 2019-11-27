@@ -17,7 +17,7 @@ use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\Asset\SyntaxHighlighterConfig;
 use WBW\Bundle\CoreBundle\Asset\SyntaxHighlighterDefaults;
 use WBW\Bundle\CoreBundle\Asset\SyntaxHighlighterStrings;
-use WBW\Library\Core\Argument\ArrayHelper;
+use WBW\Library\Core\Argument\Helper\ArrayHelper;
 
 /**
  * SyntaxHighlighter Twig extension.

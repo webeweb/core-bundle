@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\CoreBundle\Manager;
 
-use ReflectionException;
 use WBW\Bundle\CoreBundle\Provider\Theme\ApplicationThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\Theme\BreadcrumbsThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\Theme\FooterThemeProviderInterface;
@@ -21,7 +20,6 @@ use WBW\Bundle\CoreBundle\Provider\Theme\NotificationsDropDownThemeProviderInter
 use WBW\Bundle\CoreBundle\Provider\Theme\SearchThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\Theme\TasksDropDownThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\Theme\UserInfoThemeProviderInterface;
-use WBW\Library\Core\Argument\ObjectHelper;
 
 /**
  * Theme manager.
@@ -42,7 +40,6 @@ class ThemeManager extends AbstractThemeManager {
      * Get the application theme provider.
      *
      * @return ApplicationThemeProviderInterface Returns the application theme provider.
-     * @throws ReflectionException Throws a reflection exception if an error occurs.
      */
     public function getApplicationThemeProvider() {
         return $this->getProvider(ApplicationThemeProviderInterface::class);
@@ -52,7 +49,6 @@ class ThemeManager extends AbstractThemeManager {
      * Get the breadcrumbs theme provider.
      *
      * @return BreadcrumbsThemeProviderInterface Returns the breadcrumbs theme provider.
-     * @throws ReflectionException Throws a reflection exception if an error occurs.
      */
     public function getBreadcrumbsThemeProvider() {
         return $this->getProvider(BreadcrumbsThemeProviderInterface::class);
@@ -62,7 +58,6 @@ class ThemeManager extends AbstractThemeManager {
      * Get the footer theme provider.
      *
      * @return FooterThemeProviderInterface Returns the footer theme provider.
-     * @throws ReflectionException Throws a reflection exception if an error occurs.
      */
     public function getFooterThemeProvider() {
         return $this->getProvider(FooterThemeProviderInterface::class);
@@ -72,7 +67,6 @@ class ThemeManager extends AbstractThemeManager {
      * Get the hook drop down theme provider.
      *
      * @return HookDropDownThemeProviderInterface Returns the hook drop down theme provider.
-     * @throws ReflectionException Throws a reflection exception if an error occurs.
      */
     public function getHookDropDownThemeProvider() {
         return $this->getProvider(HookDropDownThemeProviderInterface::class);
@@ -82,7 +76,6 @@ class ThemeManager extends AbstractThemeManager {
      * Get the navigation theme provider.
      *
      * @return NavigationThemeProviderInterface Returns the navigation theme provider.
-     * @throws ReflectionException Throws a reflection exception if an error occurs.
      */
     public function getNavigationThemeProvider() {
         return $this->getProvider(NavigationThemeProviderInterface::class);
@@ -92,7 +85,6 @@ class ThemeManager extends AbstractThemeManager {
      * Get the notifications drop down theme provider.
      *
      * @return NotificationsDropDownThemeProviderInterface Returns the Notifications drop down theme provider.
-     * @throws ReflectionException Throws a reflection exception if an error occurs.
      */
     public function getNotificationsDropDownThemeProvider() {
         return $this->getProvider(NotificationsDropDownThemeProviderInterface::class);
@@ -102,7 +94,6 @@ class ThemeManager extends AbstractThemeManager {
      * Get the search theme provider.
      *
      * @return SearchThemeProviderInterface Returns the search theme provider.
-     * @throws ReflectionException Throws a reflection exception if an error occurs.
      */
     public function getSearchThemeProvider() {
         return $this->getProvider(SearchThemeProviderInterface::class);
@@ -112,7 +103,6 @@ class ThemeManager extends AbstractThemeManager {
      * Get the tasks drop down theme provider.
      *
      * @return TasksDropDownThemeProviderInterface Returns the tasks drop down theme provider.
-     * @throws ReflectionException Throws a reflection exception if an error occurs.
      */
     public function getTasksDropDownThemeProvider() {
         return $this->getProvider(TasksDropDownThemeProviderInterface::class);
@@ -122,7 +112,6 @@ class ThemeManager extends AbstractThemeManager {
      * Get the user info theme provider.
      *
      * @return UserInfoThemeProviderInterface Returns the user info theme provider.
-     * @throws ReflectionException Throws a reflection exception if an error occurs.
      */
     public function getUserInfoThemeProvider() {
         return $this->getProvider(UserInfoThemeProviderInterface::class);
@@ -133,15 +122,15 @@ class ThemeManager extends AbstractThemeManager {
      */
     protected function initIndex() {
         return [
-            ObjectHelper::getShortName(ApplicationThemeProviderInterface::class)           => null,
-            ObjectHelper::getShortName(BreadcrumbsThemeProviderInterface::class)           => null,
-            ObjectHelper::getShortName(FooterThemeProviderInterface::class)                => null,
-            ObjectHelper::getShortName(HookDropDownThemeProviderInterface::class)          => null,
-            ObjectHelper::getShortName(NavigationThemeProviderInterface::class)            => null,
-            ObjectHelper::getShortName(NotificationsDropDownThemeProviderInterface::class) => null,
-            ObjectHelper::getShortName(SearchThemeProviderInterface::class)                => null,
-            ObjectHelper::getShortName(TasksDropDownThemeProviderInterface::class)         => null,
-            ObjectHelper::getShortName(UserInfoThemeProviderInterface::class)              => null,
+            ApplicationThemeProviderInterface::class           => null,
+            BreadcrumbsThemeProviderInterface::class           => null,
+            FooterThemeProviderInterface::class                => null,
+            HookDropDownThemeProviderInterface::class          => null,
+            NavigationThemeProviderInterface::class            => null,
+            NotificationsDropDownThemeProviderInterface::class => null,
+            SearchThemeProviderInterface::class                => null,
+            TasksDropDownThemeProviderInterface::class         => null,
+            UserInfoThemeProviderInterface::class              => null,
         ];
     }
 
@@ -150,7 +139,6 @@ class ThemeManager extends AbstractThemeManager {
      *
      * @param ApplicationThemeProviderInterface $provider The application theme provider.
      * @return ManagerInterface Returns this manager.
-     * @throws ReflectionException Throws a reflection exception if an error occurs.
      */
     public function setApplicationThemeProvider(ApplicationThemeProviderInterface $provider) {
         $this->setProvider(ApplicationThemeProviderInterface::class, $provider);
@@ -162,7 +150,6 @@ class ThemeManager extends AbstractThemeManager {
      *
      * @param BreadcrumbsThemeProviderInterface $provider The breadcrumbs theme provider.
      * @return ManagerInterface Returns this manager.
-     * @throws ReflectionException Throws a reflection exception if an error occurs.
      */
     public function setBreadcrumbsThemeProvider(BreadcrumbsThemeProviderInterface $provider) {
         $this->setProvider(BreadcrumbsThemeProviderInterface::class, $provider);
@@ -174,7 +161,6 @@ class ThemeManager extends AbstractThemeManager {
      *
      * @param FooterThemeProviderInterface $provider The footer theme provider.
      * @return ManagerInterface Returns this manager.
-     * @throws ReflectionException Throws a reflection exception if an error occurs.
      */
     public function setFooterThemeProvider(FooterThemeProviderInterface $provider) {
         $this->setProvider(FooterThemeProviderInterface::class, $provider);
@@ -186,7 +172,6 @@ class ThemeManager extends AbstractThemeManager {
      *
      * @param HookDropDownThemeProviderInterface $provider The hook drop down theme provider.
      * @return ManagerInterface Returns this manager.
-     * @throws ReflectionException Throws a reflection exception if an error occurs.
      */
     public function setHookDropDownThemeProvider(HookDropDownThemeProviderInterface $provider) {
         $this->setProvider(HookDropDownThemeProviderInterface::class, $provider);
@@ -198,7 +183,6 @@ class ThemeManager extends AbstractThemeManager {
      *
      * @param NavigationThemeProviderInterface $provider The navigation theme provider.
      * @return ManagerInterface Returns this manager.
-     * @throws ReflectionException Throws a reflection exception if an error occurs.
      */
     public function setNavigationThemeProvider(NavigationThemeProviderInterface $provider) {
         $this->setProvider(NavigationThemeProviderInterface::class, $provider);
@@ -210,7 +194,6 @@ class ThemeManager extends AbstractThemeManager {
      *
      * @param NotificationsDropDownThemeProviderInterface $provider The notifications drop down theme provider.
      * @return ManagerInterface Returns this manager.
-     * @throws ReflectionException Throws a reflection exception if an error occurs.
      */
     public function setNotificationsDropDownThemeProvider(NotificationsDropDownThemeProviderInterface $provider) {
         $this->setProvider(NotificationsDropDownThemeProviderInterface::class, $provider);
@@ -222,7 +205,6 @@ class ThemeManager extends AbstractThemeManager {
      *
      * @param SearchThemeProviderInterface $provider The search theme provider.
      * @return ManagerInterface Returns this manager.
-     * @throws ReflectionException Throws a reflection exception if an error occurs.
      */
     public function setSearchThemeProvider(SearchThemeProviderInterface $provider) {
         $this->setProvider(SearchThemeProviderInterface::class, $provider);
@@ -234,7 +216,6 @@ class ThemeManager extends AbstractThemeManager {
      *
      * @param TasksDropDownThemeProviderInterface $provider The tasks drop down theme provider.
      * @return ManagerInterface Returns this manager.
-     * @throws ReflectionException Throws a reflection exception if an error occurs.
      */
     public function setTasksDropDownThemeProvider(TasksDropDownThemeProviderInterface $provider) {
         $this->setProvider(TasksDropDownThemeProviderInterface::class, $provider);
@@ -246,7 +227,6 @@ class ThemeManager extends AbstractThemeManager {
      *
      * @param UserInfoThemeProviderInterface $provider The user info theme provider.
      * @return ManagerInterface Returns this manager.
-     * @throws ReflectionException Throws a reflection exception if an error occurs.
      */
     public function setUserInfoThemeProvider(UserInfoThemeProviderInterface $provider) {
         $this->setProvider(UserInfoThemeProviderInterface::class, $provider);

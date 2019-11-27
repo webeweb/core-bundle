@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Twig\Extension\Asset;
 
 use Twig\TwigFunction;
-use WBW\Library\Core\Argument\ArrayHelper;
+use WBW\Library\Core\Argument\Helper\ArrayHelper;
 
 /**
  * jQuery Input mask Twig Extension.
