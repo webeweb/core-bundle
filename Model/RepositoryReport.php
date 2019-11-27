@@ -11,10 +11,10 @@
 
 namespace WBW\Bundle\CoreBundle\Model;
 
-use WBW\Bundle\CoreBundle\Model\Attribute\FloatAverageTrait;
-use WBW\Bundle\CoreBundle\Model\Attribute\IntegerCountTrait;
-use WBW\Bundle\CoreBundle\Model\Attribute\IntegerMaximumTrait;
-use WBW\Bundle\CoreBundle\Model\Attribute\IntegerMinimumTrait;
+use WBW\Library\Core\Model\Attribute\FloatAverageTrait;
+use WBW\Library\Core\Model\Attribute\IntegerCountTrait;
+use WBW\Library\Core\Model\Attribute\IntegerMaximumTrait;
+use WBW\Library\Core\Model\Attribute\IntegerMinimumTrait;
 
 /**
  * Repository report.

@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Quote;
 
-use WBW\Bundle\CoreBundle\Model\Attribute\DateTimeDateTrait;
-use WBW\Bundle\CoreBundle\Model\Attribute\StringContentTrait;
+use WBW\Library\Core\Model\Attribute\DateTimeDateTrait;
+use WBW\Library\Core\Model\Attribute\StringContentTrait;
 
 /**
  * Quote.
