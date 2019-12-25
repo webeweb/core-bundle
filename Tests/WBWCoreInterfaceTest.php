@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\CoreBundle\Tests;
 
-use WBW\Bundle\CoreBundle\CoreInterface;
 use WBW\Bundle\CoreBundle\WBWCoreInterface;
 
 /**
@@ -20,7 +19,7 @@ use WBW\Bundle\CoreBundle\WBWCoreInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests
  */
-class CoreInterfaceTest extends AbstractTestCase {
+class WBWCoreInterfaceTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.
@@ -29,9 +28,9 @@ class CoreInterfaceTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals(WBWCoreInterface::CORE_DANGER, CoreInterface::CORE_DANGER);
-        $this->assertEquals(WBWCoreInterface::CORE_INFO, CoreInterface::CORE_INFO);
-        $this->assertEquals(WBWCoreInterface::CORE_SUCCESS, CoreInterface::CORE_SUCCESS);
-        $this->assertEquals(WBWCoreInterface::CORE_WARNING, CoreInterface::CORE_WARNING);
+        $this->assertEquals("danger", WBWCoreInterface::CORE_DANGER);
+        $this->assertEquals("info", WBWCoreInterface::CORE_INFO);
+        $this->assertEquals("success", WBWCoreInterface::CORE_SUCCESS);
+        $this->assertEquals("warning", WBWCoreInterface::CORE_WARNING);
     }
 }

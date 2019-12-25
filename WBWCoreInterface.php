@@ -8,43 +8,40 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
 namespace WBW\Bundle\CoreBundle;
-
 /**
- * Core interface.
+ * Core interface
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle
- * @deprecated since 2.15.0, use {WBW\Bundle\CoreBundle\WBWCoreInterface} instead.
  */
-interface CoreInterface {
+interface WBWCoreInterface {
 
     /**
      * Core "danger".
      *
      * @var string
      */
-    const CORE_DANGER = WBWCoreInterface::CORE_DANGER;
+    const CORE_DANGER = "danger";
 
     /**
      * Core "info".
      *
      * @var string
      */
-    const CORE_INFO = WBWCoreInterface::CORE_INFO;
+    const CORE_INFO = "info";
 
     /**
      * Core "success".
      *
      * @var string
      */
-    const CORE_SUCCESS = WBWCoreInterface::CORE_SUCCESS;
+    const CORE_SUCCESS = "success";
 
     /**
      * Core "warning".
      *
      * @var string
      */
-    const CORE_WARNING = WBWCoreInterface::CORE_WARNING;
+    const CORE_WARNING = "warning";
 }

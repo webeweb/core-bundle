@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Toast;
 
-use WBW\Bundle\CoreBundle\CoreInterface;
+use WBW\Bundle\CoreBundle\WBWCoreInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Toast\ToastInterface;
 
@@ -30,9 +30,9 @@ class ToastInterfaceTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals(CoreInterface::CORE_DANGER, ToastInterface::TOAST_DANGER);
-        $this->assertEquals(CoreInterface::CORE_INFO, ToastInterface::TOAST_INFO);
-        $this->assertEquals(CoreInterface::CORE_SUCCESS, ToastInterface::TOAST_SUCCESS);
-        $this->assertEquals(CoreInterface::CORE_WARNING, ToastInterface::TOAST_WARNING);
+        $this->assertEquals(WBWCoreInterface::CORE_DANGER, ToastInterface::TOAST_DANGER);
+        $this->assertEquals(WBWCoreInterface::CORE_INFO, ToastInterface::TOAST_INFO);
+        $this->assertEquals(WBWCoreInterface::CORE_SUCCESS, ToastInterface::TOAST_SUCCESS);
+        $this->assertEquals(WBWCoreInterface::CORE_WARNING, ToastInterface::TOAST_WARNING);
     }
 }

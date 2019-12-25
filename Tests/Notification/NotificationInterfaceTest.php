@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Notification;
 
-use WBW\Bundle\CoreBundle\CoreInterface;
 use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
+use WBW\Bundle\CoreBundle\WBWCoreInterface;
 
 /**
  * Notification interface test.
@@ -30,9 +30,9 @@ class NotificationInterfaceTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals(CoreInterface::CORE_DANGER, NotificationInterface::NOTIFICATION_DANGER);
-        $this->assertEquals(CoreInterface::CORE_INFO, NotificationInterface::NOTIFICATION_INFO);
-        $this->assertEquals(CoreInterface::CORE_SUCCESS, NotificationInterface::NOTIFICATION_SUCCESS);
-        $this->assertEquals(CoreInterface::CORE_WARNING, NotificationInterface::NOTIFICATION_WARNING);
+        $this->assertEquals(WBWCoreInterface::CORE_DANGER, NotificationInterface::NOTIFICATION_DANGER);
+        $this->assertEquals(WBWCoreInterface::CORE_INFO, NotificationInterface::NOTIFICATION_INFO);
+        $this->assertEquals(WBWCoreInterface::CORE_SUCCESS, NotificationInterface::NOTIFICATION_SUCCESS);
+        $this->assertEquals(WBWCoreInterface::CORE_WARNING, NotificationInterface::NOTIFICATION_WARNING);
     }
 }

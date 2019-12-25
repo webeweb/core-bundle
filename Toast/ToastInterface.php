@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Toast;
 
-use WBW\Bundle\CoreBundle\CoreInterface;
+use WBW\Bundle\CoreBundle\WBWCoreInterface;
 
 /**
  * Toast interface.
@@ -26,28 +26,28 @@ interface ToastInterface {
      *
      * @var string
      */
-    const TOAST_DANGER = CoreInterface::CORE_DANGER;
+    const TOAST_DANGER = WBWCoreInterface::CORE_DANGER;
 
     /**
      * Toast "Info".
      *
      * @var string
      */
-    const TOAST_INFO = CoreInterface::CORE_INFO;
+    const TOAST_INFO = WBWCoreInterface::CORE_INFO;
 
     /**
      * Toast "Success".
      *
      * @var string
      */
-    const TOAST_SUCCESS = CoreInterface::CORE_SUCCESS;
+    const TOAST_SUCCESS = WBWCoreInterface::CORE_SUCCESS;
 
     /**
      * Toast "Warning".
      *
      * @var string
      */
-    const TOAST_WARNING = CoreInterface::CORE_WARNING;
+    const TOAST_WARNING = WBWCoreInterface::CORE_WARNING;
 
     /**
      * Get the content.
