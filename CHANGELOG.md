@@ -3,6 +3,9 @@ CHANGELOG
 
 ### master
 
+> IMPORTANT NOTICE: The following classes has been deprecated
+> - WBW\Bundle\CoreBundle\CoreInterface
+
 - Add Action response
 - Add string Environment trait- Add string Origin URL trait
 - Merge SyntaxHighlighter bundle
