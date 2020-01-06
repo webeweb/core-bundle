@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [2.15.1](https://github.com/webeweb/core-bundle/tree/v2.15.1) (2020-01-06)
+
+- Fix dependencies
+
 ### [2.15.0](https://github.com/webeweb/core-bundle/tree/v2.15.0) (2020-01-06)
 
 > IMPORTANT NOTICE: The following classes has been deprecated
