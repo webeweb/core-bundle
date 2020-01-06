@@ -16,7 +16,7 @@ namespace WBW\Bundle\CoreBundle;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle
- * @deprecated since 2.15.0, use {WBW\Bundle\CoreBundle\WBWCoreInterface} instead.
+ * @deprecated since 2.15.0, use {@see WBW\Bundle\CoreBundle\WBWCoreInterface} instead.
  */
 interface CoreInterface {
 

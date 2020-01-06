@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\WBWCoreEvents;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Event
- * @deprecated since 2.7.0 use "WBW\Bundle\CoreBundle\WBWCoreEvents" instead.
+ * @deprecated since 2.7.0, use {@see WBW\Bundle\CoreBundle\WBWCoreEvents} instead.
  */
 class NotificationEvents {
 
