@@ -17,7 +17,7 @@ assets:
                 javascripts:
                     - "/clippy.js/clippy.min.js"
             font_awesome:
-                version: "5.10.1"
+                version: "5.12.0"
                 description: "Font Awesome"
                 stylesheets:
                     - "/fontawesome-{{ version }}/css/all.min.css"

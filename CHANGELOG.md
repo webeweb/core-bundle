@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Update Font Awesome to 5.12.0
+
 ### [2.15.1](https://github.com/webeweb/core-bundle/tree/v2.15.1) (2020-01-06)
 
 - Fix dependencies
