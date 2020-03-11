@@ -60,16 +60,6 @@ abstract class AbstractTwigExtension extends AbstractExtension {
      * @return string Returns the HTML element.
      */
     public static function coreHTMLElement($element, $content, array $attrs = []) {
-
-        $template = "<%element%%attributes%>%innerHTML%</%element%>";
-
-        $attributes = trim(StringHelper::parseArray($attrs));
-        if (0 < strlen($attributes)) {
-            $attributes = " " . $attributes;
-        }
-
-        $innerHTML = null !== $content ? trim($content, " ") : "";
-
-        return str_replace(["%element%", "%attributes%", "%innerHTML%"], [trim($element), $attributes, $innerHTML], $template);
+        return StringHelper::domNode($element, $content, $attrs);
     }
 }
