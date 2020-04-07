@@ -13,6 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Theme;
 
 use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Theme\TestDefaultNavigationThemeProvider;
 use WBW\Bundle\CoreBundle\Theme\DefaultNavigationThemeProvider;
 
 /**
@@ -34,5 +35,20 @@ class DefaultNavigationThemeProviderTest extends AbstractTestCase {
 
         $this->assertNull($obj->getView());
         $this->assertInstanceOf(NavigationTree::class, $obj->getTree());
+    }
+
+    /**
+     * Tests the translate() method.
+     *
+     * @return void
+     */
+    public function testTranslate() {
+
+        $obj = new TestDefaultNavigationThemeProvider();
+
+        $this->assertEquals("id", $obj->translate("id"));
+
+        $obj->setTranslator($this->translator);
+        $this->assertEquals("id", $obj->translate("id"));
     }
 }
