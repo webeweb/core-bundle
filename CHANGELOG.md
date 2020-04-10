@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Improve unit tests
+
 ### [2.16.0](https://github.com/webeweb/core-bundle/tree/v2.16.0) (2020-03-11)
 
 - Update dependencies
