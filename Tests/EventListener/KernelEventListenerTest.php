@@ -50,21 +50,6 @@ class KernelEventListenerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.core.event_listener.kernel", KernelEventListener::SERVICE_NAME);
-
-        $obj = new KernelEventListener($this->tokenStorage, $this->themeManager);
-
-        $this->assertNull($obj->getRequest());
-        $this->assertNull($obj->getUser());
-    }
-
-    /**
      * Tests the getUser() method.
      *
      * @return void
@@ -143,5 +128,20 @@ class KernelEventListenerTest extends AbstractTestCase {
 
         $obj->onKernelRequest(new GetResponseEvent($this->kernel, new Request(), HttpKernelInterface::MASTER_REQUEST));
         $this->assertInstanceOf(Request::class, $obj->getRequest());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.core.event_listener.kernel", KernelEventListener::SERVICE_NAME);
+
+        $obj = new KernelEventListener($this->tokenStorage, $this->themeManager);
+
+        $this->assertNull($obj->getRequest());
+        $this->assertNull($obj->getUser());
     }
 }

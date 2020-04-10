@@ -23,20 +23,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Twig\Extension\TestTwigExtension;
 class AbstractTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new TestTwigExtension($this->twigEnvironment);
-
-        $this->assertEquals("&nbsp;", TestTwigExtension::DEFAULT_CONTENT);
-        $this->assertEquals("javascript:void(0);", TestTwigExtension::DEFAULT_HREF);
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-
-    /**
      * Tests the coreHTMLElement() method.
      *
      * @return void
@@ -59,5 +45,19 @@ class AbstractTwigExtensionTest extends AbstractTestCase {
 
         $res = $obj->getFilters();
         $this->assertCount(0, $res);
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__constructor() {
+
+        $obj = new TestTwigExtension($this->twigEnvironment);
+
+        $this->assertEquals("&nbsp;", TestTwigExtension::DEFAULT_CONTENT);
+        $this->assertEquals("javascript:void(0);", TestTwigExtension::DEFAULT_HREF);
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 }

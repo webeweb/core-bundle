@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\Theme\TestFooterThemeProviderT
 class FooterThemeProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestFooterThemeProviderTrait();
-
-        $this->assertNull($obj->getFooterThemeProvider());
-    }
-
-    /**
      * Tests the setFooterThemeProvider() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class FooterThemeProviderTraitTest extends AbstractTestCase {
 
         $obj->setFooterThemeProvider($footerThemeProvider);
         $this->assertSame($footerThemeProvider, $obj->getFooterThemeProvider());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestFooterThemeProviderTrait();
+
+        $this->assertNull($obj->getFooterThemeProvider());
     }
 }

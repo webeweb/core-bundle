@@ -25,19 +25,6 @@ use WBW\Bundle\CoreBundle\Theme\DefaultNavigationThemeProvider;
 class DefaultNavigationThemeProviderTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new DefaultNavigationThemeProvider();
-
-        $this->assertNull($obj->getView());
-        $this->assertInstanceOf(NavigationTree::class, $obj->getTree());
-    }
-
-    /**
      * Tests the translate() method.
      *
      * @return void
@@ -50,5 +37,18 @@ class DefaultNavigationThemeProviderTest extends AbstractTestCase {
 
         $obj->setTranslator($this->translator);
         $this->assertEquals("id", $obj->translate("id"));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new DefaultNavigationThemeProvider();
+
+        $this->assertNull($obj->getView());
+        $this->assertInstanceOf(NavigationTree::class, $obj->getTree());
     }
 }

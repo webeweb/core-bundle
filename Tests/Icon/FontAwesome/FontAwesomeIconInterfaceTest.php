@@ -27,7 +27,7 @@ class FontAwesomeIconInterfaceTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testConstruct() {
+    public function test__construct() {
 
         $this->assertEquals("pulse", FontAwesomeIconInterface::FONT_AWESOME_ANIMATION_PULSE);
         $this->assertEquals("spin", FontAwesomeIconInterface::FONT_AWESOME_ANIMATION_SPIN);

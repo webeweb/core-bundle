@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\FontAwesomeTwigExtension;
 class FontAwesomeTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new TestFontAwesomeTwigExtensionTrait();
-
-        $this->assertNull($obj->getFontAwesomeTwigExtension());
-    }
-
-    /**
      * Tests the setFontAwesomeTwigExtension() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class FontAwesomeTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setFontAwesomeTwigExtension($fontAwesomeTwigExtension);
         $this->assertSame($fontAwesomeTwigExtension, $obj->getFontAwesomeTwigExtension());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__constructor() {
+
+        $obj = new TestFontAwesomeTwigExtensionTrait();
+
+        $this->assertNull($obj->getFontAwesomeTwigExtension());
     }
 }

@@ -63,32 +63,6 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestNavigationNode("id");
-
-        $this->assertFalse($obj->getActive());
-        $this->assertNotEquals("", $obj->getAlphabeticalTreeNodeLabel());
-        $this->assertNull($obj->getAlphabeticalTreeNodeParent());
-        $this->assertFalse($obj->getEnable());
-        $this->assertNull($obj->getFirstNode());
-        $this->assertNull($obj->getIcon());
-        $this->assertNotEquals("", $obj->getId());
-        $this->assertEquals("id", $obj->getLabel());
-        $this->assertNull($obj->getLastNode());
-        $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
-        $this->assertEquals([], $obj->getNodes());
-        $this->assertNull($obj->getParent());
-        $this->assertNull($obj->getTarget());
-        $this->assertNull($obj->getUri());
-        $this->assertTrue($obj->getVisible());
-    }
-
-    /**
      * Tests the getFirstNode() method.
      *
      * @return void
@@ -296,5 +270,31 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
 
         $this->assertSame($obj, $obj->addNode($node));
         $this->assertEquals(1, $obj->size());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestNavigationNode("id");
+
+        $this->assertFalse($obj->getActive());
+        $this->assertNotEquals("", $obj->getAlphabeticalTreeNodeLabel());
+        $this->assertNull($obj->getAlphabeticalTreeNodeParent());
+        $this->assertFalse($obj->getEnable());
+        $this->assertNull($obj->getFirstNode());
+        $this->assertNull($obj->getIcon());
+        $this->assertNotEquals("", $obj->getId());
+        $this->assertEquals("id", $obj->getLabel());
+        $this->assertNull($obj->getLastNode());
+        $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
+        $this->assertEquals([], $obj->getNodes());
+        $this->assertNull($obj->getParent());
+        $this->assertNull($obj->getTarget());
+        $this->assertNull($obj->getUri());
+        $this->assertTrue($obj->getVisible());
     }
 }

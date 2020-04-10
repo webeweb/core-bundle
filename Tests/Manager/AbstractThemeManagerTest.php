@@ -63,23 +63,6 @@ class AbstractThemeManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     * @throws Exception Throws an exception if an error occurs.
-     */
-    public function testConstruct() {
-
-        $obj = new TestThemeManager($this->logger, $this->twigEnvironment);
-
-        $this->assertSame($this->logger, $obj->getLogger());
-        $this->assertNull($obj->getProvider(ThemeProviderInterface::class));
-        $this->assertCount(0, $obj->getProviders());
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-
-    /**
      * Tests the setProvider() method.
      *
      * @return void
@@ -115,5 +98,22 @@ class AbstractThemeManagerTest extends AbstractTestCase {
 
         $obj->setProvider(ThemeProviderInterface::class, $provider2);
         $this->assertSame($provider2, $obj->getProvider(ThemeProviderInterface::class));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     * @throws Exception Throws an exception if an error occurs.
+     */
+    public function test__construct() {
+
+        $obj = new TestThemeManager($this->logger, $this->twigEnvironment);
+
+        $this->assertSame($this->logger, $obj->getLogger());
+        $this->assertNull($obj->getProvider(ThemeProviderInterface::class));
+        $this->assertCount(0, $obj->getProviders());
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 }

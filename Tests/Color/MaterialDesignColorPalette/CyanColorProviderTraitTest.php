@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette\TestCy
 class CyanColorProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestCyanColorProviderTrait();
-
-        $this->assertNull($obj->getCyanColorProvider());
-    }
-
-    /**
      * Tests the setCyanColorProvider() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class CyanColorProviderTraitTest extends AbstractTestCase {
 
         $obj->setCyanColorProvider($cyanColorProvider);
         $this->assertSame($cyanColorProvider, $obj->getCyanColorProvider());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestCyanColorProviderTrait();
+
+        $this->assertNull($obj->getCyanColorProvider());
     }
 }

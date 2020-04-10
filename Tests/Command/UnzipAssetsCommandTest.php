@@ -24,22 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Command\TestUnzipAssetsCommand;
 class UnzipAssetsCommandTest extends AbstractCommandTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.core.command.unzip_assets", UnzipAssetsCommand::SERVICE_NAME);
-
-        $obj = new UnzipAssetsCommand();
-
-        $this->assertEquals("Unzip assets under a public directory", $obj->getDescription());
-        $this->assertEquals(UnzipAssetsCommand::COMMAND_HELP, $obj->getHelp());
-        $this->assertEquals("wbw:core:unzip-assets", $obj->getName());
-    }
-
-    /**
      * Tests the displayFooter() method.
      *
      * @return void
@@ -103,5 +87,21 @@ class UnzipAssetsCommandTest extends AbstractCommandTestCase {
             ],
         ];
         $this->assertEquals(1, $obj->displayResult($this->style, $arg));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.core.command.unzip_assets", UnzipAssetsCommand::SERVICE_NAME);
+
+        $obj = new UnzipAssetsCommand();
+
+        $this->assertEquals("Unzip assets under a public directory", $obj->getDescription());
+        $this->assertEquals(UnzipAssetsCommand::COMMAND_HELP, $obj->getHelp());
+        $this->assertEquals("wbw:core:unzip-assets", $obj->getName());
     }
 }

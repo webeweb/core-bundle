@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Asset\MaterialDesignIconicFontTwigExten
 class MaterialDesignIconicFontTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new TestMaterialDesignIconicFontTwigExtensionTrait();
-
-        $this->assertNull($obj->getMaterialDesignIconicFontTwigExtension());
-    }
-
-    /**
      * Tests the setMaterialDesignIconicFontTwigExtension() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class MaterialDesignIconicFontTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setMaterialDesignIconicFontTwigExtension($materialDesignIconicFontTwigExtension);
         $this->assertSame($materialDesignIconicFontTwigExtension, $obj->getMaterialDesignIconicFontTwigExtension());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__constructor() {
+
+        $obj = new TestMaterialDesignIconicFontTwigExtensionTrait();
+
+        $this->assertNull($obj->getMaterialDesignIconicFontTwigExtension());
     }
 }

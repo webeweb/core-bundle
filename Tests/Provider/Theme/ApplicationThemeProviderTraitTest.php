@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\Theme\TestApplicationThemeProv
 class ApplicationThemeProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestApplicationThemeProviderTrait();
-
-        $this->assertNull($obj->getApplicationThemeProvider());
-    }
-
-    /**
      * Tests the setApplicationThemeProvider() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class ApplicationThemeProviderTraitTest extends AbstractTestCase {
 
         $obj->setApplicationThemeProvider($applicationThemeProvider);
         $this->assertSame($applicationThemeProvider, $obj->getApplicationThemeProvider());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestApplicationThemeProviderTrait();
+
+        $this->assertNull($obj->getApplicationThemeProvider());
     }
 }

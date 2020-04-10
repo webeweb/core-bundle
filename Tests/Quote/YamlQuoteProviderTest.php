@@ -43,38 +43,6 @@ class YamlQuoteProviderTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new YamlQuoteProvider($this->filename);
-
-        $this->assertEquals($this->filename, $obj->getFilename());
-        $this->assertEquals([], $obj->getAuthors());
-        $this->assertEquals("WorldsWisdom.fr", $obj->getDomain());
-        $this->assertEquals([], $obj->getQuotes());
-    }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructWithFileNotFoundException() {
-
-        try {
-
-            new YamlQuoteProvider("exception");
-        } catch (Exception $ex) {
-
-            $this->assertInstanceOf(FileNotFoundException::class, $ex);
-            $this->assertEquals("The file \"exception\" was not found", $ex->getMessage());
-        }
-    }
-
-    /**
      * Tests the init() method.
      *
      * @return void
@@ -104,5 +72,37 @@ class YamlQuoteProviderTest extends AbstractTestCase {
 
             $date->add(new DateInterval("P1D"));
         } while ("2017" !== $date->format("Y"));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new YamlQuoteProvider($this->filename);
+
+        $this->assertEquals($this->filename, $obj->getFilename());
+        $this->assertEquals([], $obj->getAuthors());
+        $this->assertEquals("WorldsWisdom.fr", $obj->getDomain());
+        $this->assertEquals([], $obj->getQuotes());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__constructWithFileNotFoundException() {
+
+        try {
+
+            new YamlQuoteProvider("exception");
+        } catch (Exception $ex) {
+
+            $this->assertInstanceOf(FileNotFoundException::class, $ex);
+            $this->assertEquals("The file \"exception\" was not found", $ex->getMessage());
+        }
     }
 }

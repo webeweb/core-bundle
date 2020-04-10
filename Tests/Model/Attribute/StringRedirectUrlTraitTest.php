@@ -23,18 +23,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\Attribute\TestStringRedirectUrlTr
 class StringRedirectUrlTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new TestStringRedirectUrlTrait();
-
-        $this->assertNull($obj->getRedirectUrl());
-    }
-
-    /**
      * Tests the setRedirectUrl() method.
      *
      * @return void
@@ -45,5 +33,17 @@ class StringRedirectUrlTraitTest extends AbstractTestCase {
 
         $obj->setRedirectUrl("redirectUrl");
         $this->assertEquals("redirectUrl", $obj->getRedirectUrl());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestStringRedirectUrlTrait();
+
+        $this->assertNull($obj->getRedirectUrl());
     }
 }

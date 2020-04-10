@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette\TestDe
 class DeepPurpleColorProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestDeepPurpleColorProviderTrait();
-
-        $this->assertNull($obj->getDeepPurpleColorProvider());
-    }
-
-    /**
      * Tests the setDeepPurpleColorProvider() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class DeepPurpleColorProviderTraitTest extends AbstractTestCase {
 
         $obj->setDeepPurpleColorProvider($deepPurpleColorProvider);
         $this->assertSame($deepPurpleColorProvider, $obj->getDeepPurpleColorProvider());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestDeepPurpleColorProviderTrait();
+
+        $this->assertNull($obj->getDeepPurpleColorProvider());
     }
 }

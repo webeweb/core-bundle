@@ -59,21 +59,6 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.core.twig.extension.quote", QuoteTwigExtension::SERVICE_NAME);
-
-        $obj = new QuoteTwigExtension($this->twigEnvironment, $this->quoteManager);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-        $this->assertSame($this->quoteManager, $obj->getQuoteManager());
-    }
-
-    /**
      * Tests the getFunctions() method.
      *
      * @return void
@@ -194,5 +179,20 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
         $obj = new QuoteTwigExtension($this->twigEnvironment, new QuoteManager($this->logger));
 
         $this->assertNull($obj->quoteFunction());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.core.twig.extension.quote", QuoteTwigExtension::SERVICE_NAME);
+
+        $obj = new QuoteTwigExtension($this->twigEnvironment, $this->quoteManager);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+        $this->assertSame($this->quoteManager, $obj->getQuoteManager());
     }
 }

@@ -49,19 +49,6 @@ class ActionResponseTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new ActionResponse();
-
-        $this->assertNull($obj->getNotify());
-        $this->assertNull($obj->getStatus());
-    }
-
-    /**
      * Tests the jsonSerialize() method.
      *
      * @return void
@@ -72,5 +59,18 @@ class ActionResponseTest extends AbstractTestCase {
 
         $res = ["status" => null, "notify" => null];
         $this->assertEquals($res, $obj->jsonSerialize());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__constructor() {
+
+        $obj = new ActionResponse();
+
+        $this->assertNull($obj->getNotify());
+        $this->assertNull($obj->getStatus());
     }
 }

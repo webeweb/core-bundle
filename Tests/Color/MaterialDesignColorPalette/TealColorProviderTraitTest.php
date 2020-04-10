@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette\TestTe
 class TealColorProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestTealColorProviderTrait();
-
-        $this->assertNull($obj->getTealColorProvider());
-    }
-
-    /**
      * Tests the setTealColorProvider() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class TealColorProviderTraitTest extends AbstractTestCase {
 
         $obj->setTealColorProvider($tealColorProvider);
         $this->assertSame($tealColorProvider, $obj->getTealColorProvider());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestTealColorProviderTrait();
+
+        $this->assertNull($obj->getTealColorProvider());
     }
 }

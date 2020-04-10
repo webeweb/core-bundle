@@ -27,7 +27,7 @@ class SkeletonProviderInterfaceTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testConstruct() {
+    public function test__construct() {
 
         $this->assertEquals("/Resources/skeleton", SkeletonProviderInterface::SKELETON_RELATIVE_DIRECTORY);
     }

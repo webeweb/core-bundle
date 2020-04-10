@@ -38,20 +38,6 @@ class NotificationEventListenerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.core.event_listener.notification", NotificationEventListener::SERVICE_NAME);
-
-        $obj = new NotificationEventListener($this->session);
-
-        $this->assertSame($this->session, $obj->getSession());
-    }
-
-    /**
      * Tests the onNotify() method.
      *
      * @return void
@@ -67,5 +53,19 @@ class NotificationEventListenerTest extends AbstractTestCase {
         $arg = new NotificationEvent("eventName", $notification);
 
         $this->assertSame($arg, $obj->onNotify($arg));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.core.event_listener.notification", NotificationEventListener::SERVICE_NAME);
+
+        $obj = new NotificationEventListener($this->session);
+
+        $this->assertSame($this->session, $obj->getSession());
     }
 }

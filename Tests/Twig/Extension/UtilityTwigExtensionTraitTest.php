@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Twig\Extension\UtilityTwigExtension;
 class UtilityTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new TestUtilityTwigExtensionTrait();
-
-        $this->assertNull($obj->getUtilityTwigExtension());
-    }
-
-    /**
      * Tests the setUtilityTwigExtension() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class UtilityTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setUtilityTwigExtension($utilityTwigExtension);
         $this->assertSame($utilityTwigExtension, $obj->getUtilityTwigExtension());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__constructor() {
+
+        $obj = new TestUtilityTwigExtensionTrait();
+
+        $this->assertNull($obj->getUtilityTwigExtension());
     }
 }

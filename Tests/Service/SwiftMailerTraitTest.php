@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Service\TestSwiftMailerTrait;
 class SwiftMailerTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new TestSwiftMailerTrait();
-
-        $this->assertNull($obj->getSwiftMailer());
-    }
-
-    /**
      * Tests the setSwiftMailer() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class SwiftMailerTraitTest extends AbstractTestCase {
 
         $obj->setSwiftMailer($swiftMailer);
         $this->assertSame($swiftMailer, $obj->getSwiftMailer());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestSwiftMailerTrait();
+
+        $this->assertNull($obj->getSwiftMailer());
     }
 }

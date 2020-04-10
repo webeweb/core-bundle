@@ -23,18 +23,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Service\TestObjectManagerTrait;
 class ObjectManagerTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new TestObjectManagerTrait();
-
-        $this->assertNull($obj->getObjectManager());
-    }
-
-    /**
      * Tests the setObjectManager() method.
      *
      * @return void
@@ -45,5 +33,17 @@ class ObjectManagerTraitTest extends AbstractTestCase {
 
         $obj->setObjectManager($this->objectManager);
         $this->assertSame($this->objectManager, $obj->getObjectManager());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestObjectManagerTrait();
+
+        $this->assertNull($obj->getObjectManager());
     }
 }

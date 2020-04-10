@@ -23,18 +23,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Service\TestTranslatorTrait;
 class TranslatorTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new TestTranslatorTrait();
-
-        $this->assertNull($obj->getTranslator());
-    }
-
-    /**
      * Tests the setTranslator() method.
      *
      * @return void
@@ -45,5 +33,17 @@ class TranslatorTraitTest extends AbstractTestCase {
 
         $obj->setTranslator($this->translator);
         $this->assertSame($this->translator, $obj->getTranslator());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestTranslatorTrait();
+
+        $this->assertNull($obj->getTranslator());
     }
 }

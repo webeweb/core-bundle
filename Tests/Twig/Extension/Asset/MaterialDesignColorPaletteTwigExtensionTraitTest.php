@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Asset\MaterialDesignColorPaletteTwigExt
 class MaterialDesignColorPaletteTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new TestMaterialDesignColorPaletteTwigExtensionTrait();
-
-        $this->assertNull($obj->getMaterialDesignColorPaletteTwigExtension());
-    }
-
-    /**
      * Tests the setMaterialDesignColorPaletteTwigExtension() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class MaterialDesignColorPaletteTwigExtensionTraitTest extends AbstractTestCase 
 
         $obj->setMaterialDesignColorPaletteTwigExtension($materialDesignColorPaletteTwigExtension);
         $this->assertSame($materialDesignColorPaletteTwigExtension, $obj->getMaterialDesignColorPaletteTwigExtension());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__constructor() {
+
+        $obj = new TestMaterialDesignColorPaletteTwigExtensionTrait();
+
+        $this->assertNull($obj->getMaterialDesignColorPaletteTwigExtension());
     }
 }

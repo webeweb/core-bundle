@@ -25,19 +25,6 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class AmberColorProviderTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new AmberColorProvider();
-
-        $this->assertEquals("wbw.core.provider.color.amber", AmberColorProvider::SERVICE_NAME);
-        $this->assertEquals(MaterialDesignColorPaletteInterface::COLOR_DOMAIN, $obj->getDomain());
-    }
-
-    /**
      * Tests the getColors() method.
      *
      * @return void
@@ -87,5 +74,18 @@ class AmberColorProviderTest extends AbstractTestCase {
         $obj = new AmberColorProvider();
 
         $this->assertEquals(AmberColorProviderInterface::AMBER_COLOR_NAME, $obj->getName());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new AmberColorProvider();
+
+        $this->assertEquals("wbw.core.provider.color.amber", AmberColorProvider::SERVICE_NAME);
+        $this->assertEquals(MaterialDesignColorPaletteInterface::COLOR_DOMAIN, $obj->getDomain());
     }
 }

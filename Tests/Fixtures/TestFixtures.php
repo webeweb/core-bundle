@@ -31,6 +31,20 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Entity\TestUser;
 class TestFixtures {
 
     /**
+     * Get the images.
+     *
+     * @return string[]
+     */
+    public static function getImages() {
+        return [
+            getcwd() . "/Tests/Fixtures/Model/TestImage_1920x1037.jpg",
+            getcwd() . "/Tests/Fixtures/Model/TestImage_1920x1037.png",
+            getcwd() . "/Tests/Fixtures/Model/TestImage_1920x1920.png",
+            getcwd() . "/Tests/Fixtures/Model/TestImage_1920x3554.png",
+        ];
+    }
+
+    /**
      * Get a navigation tree.
      * GitHub
      * |- AdminBSB Material Design bundle
@@ -78,20 +92,6 @@ class TestFixtures {
         $tree->getLastNode()->addNode(new NavigationNode("sMsmode library", null, "https://github.com/webeweb/smsmode-library", NavigationInterface::NAVIGATION_MATCHER_ROUTER));
 
         return $tree;
-    }
-
-    /**
-     * Get the images.
-     *
-     * @return string[]
-     */
-    public static function getImages() {
-        return [
-            getcwd() . "/Tests/Fixtures/Model/TestImage_1920x1037.jpg",
-            getcwd() . "/Tests/Fixtures/Model/TestImage_1920x1037.png",
-            getcwd() . "/Tests/Fixtures/Model/TestImage_1920x1920.png",
-            getcwd() . "/Tests/Fixtures/Model/TestImage_1920x3554.png",
-        ];
     }
 
     /**

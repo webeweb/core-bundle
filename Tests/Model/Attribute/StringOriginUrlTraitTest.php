@@ -23,18 +23,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\Attribute\TestStringOriginUrlTrai
 class StringOriginUrlTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new TestStringOriginUrlTrait();
-
-        $this->assertNull($obj->getOriginUrl());
-    }
-
-    /**
      * Tests the setOriginUrl() method.
      *
      * @return void
@@ -45,5 +33,17 @@ class StringOriginUrlTraitTest extends AbstractTestCase {
 
         $obj->setOriginUrl("originUrl");
         $this->assertEquals("originUrl", $obj->getOriginUrl());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestStringOriginUrlTrait();
+
+        $this->assertNull($obj->getOriginUrl());
     }
 }

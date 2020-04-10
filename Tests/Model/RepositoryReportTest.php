@@ -23,26 +23,6 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class RepositoryReportTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new RepositoryReport();
-
-        $this->assertNull($obj->getAvailable());
-        $this->assertNull($obj->getAverage());
-        $this->assertNull($obj->getColumn());
-        $this->assertNull($obj->getCount());
-        $this->assertNull($obj->getEntity());
-        $this->assertNull($obj->getField());
-        $this->assertNull($obj->getMaximum());
-        $this->assertNull($obj->getMinimum());
-        $this->assertNull($obj->getTable());
-    }
-
-    /**
      * Tests the setAvailable() method.
      *
      * @return void
@@ -157,5 +137,25 @@ class RepositoryReportTest extends AbstractTestCase {
 
         $obj->setTable("table");
         $this->assertEquals("table", $obj->getTable());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new RepositoryReport();
+
+        $this->assertNull($obj->getAvailable());
+        $this->assertNull($obj->getAverage());
+        $this->assertNull($obj->getColumn());
+        $this->assertNull($obj->getCount());
+        $this->assertNull($obj->getEntity());
+        $this->assertNull($obj->getField());
+        $this->assertNull($obj->getMaximum());
+        $this->assertNull($obj->getMinimum());
+        $this->assertNull($obj->getTable());
     }
 }

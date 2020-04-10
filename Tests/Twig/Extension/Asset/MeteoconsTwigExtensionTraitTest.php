@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Asset\MeteoconsTwigExtension;
 class MeteoconsTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new TestMeteoconsTwigExtensionTrait();
-
-        $this->assertNull($obj->getMeteoconsTwigExtension());
-    }
-
-    /**
      * Tests the setMeteoconsTwigExtension() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class MeteoconsTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setMeteoconsTwigExtension($meteoconsTwigExtension);
         $this->assertSame($meteoconsTwigExtension, $obj->getMeteoconsTwigExtension());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__constructor() {
+
+        $obj = new TestMeteoconsTwigExtensionTrait();
+
+        $this->assertNull($obj->getMeteoconsTwigExtension());
     }
 }

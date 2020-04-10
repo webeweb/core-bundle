@@ -68,20 +68,6 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.core.twig.extension.asset.syntax_highlighter", SyntaxHighlighterTwigExtension::SERVICE_NAME);
-
-        $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-
-    /**
      * Tests the getFilters() method.
      *
      * @return void
@@ -322,5 +308,19 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
 
         $res = file_get_contents(__DIR__ . "/testSyntaxHighlighterStringsFunction.html.txt");
         $this->assertEquals($res, $obj->syntaxHighlighterStringsFunction($this->syntaxHighlighterStrings) . "\n");
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.core.twig.extension.asset.syntax_highlighter", SyntaxHighlighterTwigExtension::SERVICE_NAME);
+
+        $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 }

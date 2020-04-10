@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette\TestAm
 class AmberColorProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestAmberColorProviderTrait();
-
-        $this->assertNull($obj->getAmberColorProvider());
-    }
-
-    /**
      * Tests the setAmberColorProvider() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class AmberColorProviderTraitTest extends AbstractTestCase {
 
         $obj->setAmberColorProvider($amberColorProvider);
         $this->assertSame($amberColorProvider, $obj->getAmberColorProvider());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestAmberColorProviderTrait();
+
+        $this->assertNull($obj->getAmberColorProvider());
     }
 }

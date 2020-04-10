@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\Theme\TestSearchThemeProviderT
 class SearchThemeProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestSearchThemeProviderTrait();
-
-        $this->assertNull($obj->getSearchThemeProvider());
-    }
-
-    /**
      * Tests the setSearchThemeProvider() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class SearchThemeProviderTraitTest extends AbstractTestCase {
 
         $obj->setSearchThemeProvider($searchThemeProvider);
         $this->assertSame($searchThemeProvider, $obj->getSearchThemeProvider());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestSearchThemeProviderTrait();
+
+        $this->assertNull($obj->getSearchThemeProvider());
     }
 }

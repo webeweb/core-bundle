@@ -27,7 +27,7 @@ class ColorProviderInterfaceTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testConstruct() {
+    public function test__construct() {
 
         $this->assertEquals("wbw.core.provider.color", ColorProviderInterface::COLOR_TAG_NAME);
     }

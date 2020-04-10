@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette\TestIn
 class IndigoColorProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestIndigoColorProviderTrait();
-
-        $this->assertNull($obj->getIndigoColorProvider());
-    }
-
-    /**
      * Tests the setIndigoColorProvider() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class IndigoColorProviderTraitTest extends AbstractTestCase {
 
         $obj->setIndigoColorProvider($indigoColorProvider);
         $this->assertSame($indigoColorProvider, $obj->getIndigoColorProvider());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestIndigoColorProviderTrait();
+
+        $this->assertNull($obj->getIndigoColorProvider());
     }
 }

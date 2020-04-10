@@ -36,21 +36,6 @@ class SecurityEventListenerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.core.event_listener.security", SecurityEventListener::SERVICE_NAME);
-
-        $obj = new SecurityEventListener($this->translator, $this->user);
-
-        $this->assertSame($this->translator, $obj->getTranslator());
-        $this->assertSame($this->user, $obj->getUser());
-    }
-
-    /**
      * Tests the onInteractiveLogin() method.
      *
      * @return void
@@ -74,5 +59,20 @@ class SecurityEventListenerTest extends AbstractTestCase {
         $obj = new SecurityEventListener($this->translator, $this->user);
 
         $this->assertSame($event, $obj->onInteractiveLogin($event));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.core.event_listener.security", SecurityEventListener::SERVICE_NAME);
+
+        $obj = new SecurityEventListener($this->translator, $this->user);
+
+        $this->assertSame($this->translator, $obj->getTranslator());
+        $this->assertSame($this->user, $obj->getUser());
     }
 }

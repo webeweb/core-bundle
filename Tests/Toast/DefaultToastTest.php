@@ -27,7 +27,7 @@ class DefaultToastTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testConstruct() {
+    public function test__construct() {
 
         $obj = new DefaultToast("type", "default");
 

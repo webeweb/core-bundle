@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\TestQuoteManagerTrait;
 class QuoteManagerTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new TestQuoteManagerTrait();
-
-        $this->assertNull($obj->getQuoteManager());
-    }
-
-    /**
      * Tests the setQuoteManager() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class QuoteManagerTraitTest extends AbstractTestCase {
 
         $obj->setQuoteManager($quoteManager);
         $this->assertSame($quoteManager, $obj->getQuoteManager());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestQuoteManagerTrait();
+
+        $this->assertNull($obj->getQuoteManager());
     }
 }

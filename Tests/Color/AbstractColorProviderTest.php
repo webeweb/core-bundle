@@ -23,18 +23,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\TestColorProvider;
 class AbstractColorProviderTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestColorProvider();
-
-        $this->assertNull($obj->getDomain());
-    }
-
-    /**
      * Tests the setDomain() method.
      *
      * @return void
@@ -45,5 +33,17 @@ class AbstractColorProviderTest extends AbstractTestCase {
 
         $obj->setDomain("domain");
         $this->assertEquals("domain", $obj->getDomain());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestColorProvider();
+
+        $this->assertNull($obj->getDomain());
     }
 }

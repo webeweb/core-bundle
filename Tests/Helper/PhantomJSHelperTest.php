@@ -60,20 +60,6 @@ class PhantomJSHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new PhantomJSHelper($this->binaryPath, $this->scriptsPath, $this->outputPath);
-
-        $this->assertEquals($this->binaryPath, $obj->getBinaryPath());
-        $this->assertEquals($this->outputPath, $obj->getOutputPath());
-        $this->assertEquals($this->scriptsPath, $obj->getScriptsPath());
-    }
-
-    /**
      * Tests the getCommand() method.
      *
      * @return void.
@@ -87,5 +73,19 @@ class PhantomJSHelperTest extends AbstractTestCase {
             $res .= ".exe";
         }
         $this->assertEquals($res, $obj->getCommand());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new PhantomJSHelper($this->binaryPath, $this->scriptsPath, $this->outputPath);
+
+        $this->assertEquals($this->binaryPath, $obj->getBinaryPath());
+        $this->assertEquals($this->outputPath, $obj->getOutputPath());
+        $this->assertEquals($this->scriptsPath, $obj->getScriptsPath());
     }
 }

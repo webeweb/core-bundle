@@ -24,20 +24,6 @@ use WBW\Bundle\CoreBundle\Twig\Extension\ContainerTwigExtension;
 class ContainerTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.core.twig.extension.container", ContainerTwigExtension::SERVICE_NAME);
-
-        $obj = new ContainerTwigExtension($this->containerBuilder);
-
-        $this->assertSame($this->containerBuilder, $obj->getContainer());
-    }
-
-    /**
      * Tests the getContainerParameterFunction() method.
      *
      * @return void
@@ -77,5 +63,19 @@ class ContainerTwigExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(TwigFunction::class, $res[0]);
         $this->assertEquals("getContainerParameter", $res[0]->getName());
         $this->assertEquals([$obj, "getContainerParameterFunction"], $res[0]->getCallable());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.core.twig.extension.container", ContainerTwigExtension::SERVICE_NAME);
+
+        $obj = new ContainerTwigExtension($this->containerBuilder);
+
+        $this->assertSame($this->containerBuilder, $obj->getContainer());
     }
 }

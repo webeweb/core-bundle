@@ -23,20 +23,6 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class QuoteTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new Quote();
-
-        $this->assertNull($obj->getAuthor());
-        $this->assertNull($obj->getContent());
-        $this->assertNull($obj->getDate());
-    }
-
-    /**
      * Tests the setAuthor() method.
      *
      * @return void
@@ -47,5 +33,19 @@ class QuoteTest extends AbstractTestCase {
 
         $obj->setAuthor("author");
         $this->assertEquals("author", $obj->getAuthor());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new Quote();
+
+        $this->assertNull($obj->getAuthor());
+        $this->assertNull($obj->getContent());
+        $this->assertNull($obj->getDate());
     }
 }

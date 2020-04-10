@@ -25,19 +25,6 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class LimeColorProviderTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new LimeColorProvider();
-
-        $this->assertEquals("wbw.core.provider.color.lime", LimeColorProvider::SERVICE_NAME);
-        $this->assertEquals(MaterialDesignColorPaletteInterface::COLOR_DOMAIN, $obj->getDomain());
-    }
-
-    /**
      * Tests the getColors() method.
      *
      * @return void
@@ -87,5 +74,18 @@ class LimeColorProviderTest extends AbstractTestCase {
         $obj = new LimeColorProvider();
 
         $this->assertEquals(LimeColorProviderInterface::LIME_COLOR_NAME, $obj->getName());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new LimeColorProvider();
+
+        $this->assertEquals("wbw.core.provider.color.lime", LimeColorProvider::SERVICE_NAME);
+        $this->assertEquals(MaterialDesignColorPaletteInterface::COLOR_DOMAIN, $obj->getDomain());
     }
 }

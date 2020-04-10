@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestRequestTrait;
 class RequestTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new TestRequestTrait();
-
-        $this->assertNull($obj->getRequest());
-    }
-
-    /**
      * Tests the setRequest() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class RequestTraitTest extends AbstractTestCase {
 
         $obj->setRequest($request);
         $this->assertSame($request, $obj->getRequest());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestRequestTrait();
+
+        $this->assertNull($obj->getRequest());
     }
 }

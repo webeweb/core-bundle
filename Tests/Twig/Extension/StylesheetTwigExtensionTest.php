@@ -26,20 +26,6 @@ use WBW\Bundle\CoreBundle\Twig\Extension\StylesheetTwigExtension;
 class StylesheetTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.core.twig.extension.stylesheet", StylesheetTwigExtension::SERVICE_NAME);
-
-        $obj = new StylesheetTwigExtension($this->twigEnvironment);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-
-    /**
      * Tests the cssRGBA() method.
      *
      * @return void
@@ -105,5 +91,19 @@ class StylesheetTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("cssRGBA", $res[0]->getName());
         $this->assertEquals([$obj, "cssRGBA"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.core.twig.extension.stylesheet", StylesheetTwigExtension::SERVICE_NAME);
+
+        $obj = new StylesheetTwigExtension($this->twigEnvironment);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 }

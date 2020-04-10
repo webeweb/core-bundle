@@ -26,20 +26,6 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Asset\FontAwesomeTwigExtension;
 class FontAwesomeTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.core.twig.extension.asset.font_awesome", FontAwesomeTwigExtension::SERVICE_NAME);
-
-        $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-
-    /**
      * Tests the fontAwesomeIconFunction() method.
      *
      * @return void
@@ -176,5 +162,19 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
 
         $res = '<i class="fa fa-camera-retro" style="color: #FFFFFF;"></i>';
         $this->assertEquals($res, $obj->renderIcon("camera-retro", "color: #FFFFFF;"));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.core.twig.extension.asset.font_awesome", FontAwesomeTwigExtension::SERVICE_NAME);
+
+        $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 }

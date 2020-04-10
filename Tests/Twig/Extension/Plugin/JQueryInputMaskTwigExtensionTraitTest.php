@@ -25,18 +25,6 @@ use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension;
 class JQueryInputMaskTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new TestJQueryInputMaskTwigExtensionTrait();
-
-        $this->assertNull($obj->getJQueryInputMaskTwigExtension());
-    }
-
-    /**
      * Tests the setJQueryInputMaskTwigExtension() method.
      *
      * @return void
@@ -50,5 +38,17 @@ class JQueryInputMaskTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setJQueryInputMaskTwigExtension($jQueryInputMaskTwigExtension);
         $this->assertSame($jQueryInputMaskTwigExtension, $obj->getJQueryInputMaskTwigExtension());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__constructor() {
+
+        $obj = new TestJQueryInputMaskTwigExtensionTrait();
+
+        $this->assertNull($obj->getJQueryInputMaskTwigExtension());
     }
 }

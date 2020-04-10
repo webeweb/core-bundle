@@ -25,20 +25,6 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MaterialDesignColorPaletteTwigEx
 class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.core.twig.extension.asset.material_design_color_palette", MaterialDesignColorPaletteTwigExtension::SERVICE_NAME);
-
-        $obj = new MaterialDesignColorPaletteTwigExtension($this->twigEnvironment);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-
-    /**
      * Tests the getFilters() method.
      *
      * @return void
@@ -194,5 +180,19 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
         $arg = [];
         $res = "mdc-text-red";
         $this->assertEquals($res, $obj->materialDesignColorPaletteTextFunction($arg));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.core.twig.extension.asset.material_design_color_palette", MaterialDesignColorPaletteTwigExtension::SERVICE_NAME);
+
+        $obj = new MaterialDesignColorPaletteTwigExtension($this->twigEnvironment);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 }

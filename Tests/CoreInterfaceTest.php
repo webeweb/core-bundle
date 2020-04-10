@@ -27,7 +27,7 @@ class CoreInterfaceTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testConstruct() {
+    public function test__construct() {
 
         $this->assertEquals(WBWCoreInterface::CORE_DANGER, CoreInterface::CORE_DANGER);
         $this->assertEquals(WBWCoreInterface::CORE_INFO, CoreInterface::CORE_INFO);

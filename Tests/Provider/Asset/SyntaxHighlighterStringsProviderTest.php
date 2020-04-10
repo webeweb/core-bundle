@@ -44,16 +44,6 @@ class SyntaxHighlighterStringsProviderTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.core.provider.asset.syntax_highlighter_strings", SyntaxHighlighterStringsProvider::SERVICE_NAME);
-    }
-
-    /**
      * Tests the getSyntaxHighlighterStrings() method.
      *
      * @return void
@@ -63,5 +53,15 @@ class SyntaxHighlighterStringsProviderTest extends AbstractTestCase {
         $obj = new SyntaxHighlighterStringsProvider($this->translator);
 
         $this->assertInstanceOf(SyntaxHighlighterStrings::class, $obj->getSyntaxHighlighterStrings());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.core.provider.asset.syntax_highlighter_strings", SyntaxHighlighterStringsProvider::SERVICE_NAME);
     }
 }

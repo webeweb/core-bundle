@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\TestColorManagerTrait;
 class ColorManagerTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new TestColorManagerTrait();
-
-        $this->assertNull($obj->getColorManager());
-    }
-
-    /**
      * Tests the setColorManager() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class ColorManagerTraitTest extends AbstractTestCase {
 
         $obj->setColorManager($colorManager);
         $this->assertSame($colorManager, $obj->getColorManager());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestColorManagerTrait();
+
+        $this->assertNull($obj->getColorManager());
     }
 }

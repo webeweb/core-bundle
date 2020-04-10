@@ -23,26 +23,6 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class EmailLayoutTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new EmailLayout();
-
-        $this->assertNull($obj->getAccountSettingsURL());
-        $this->assertNull($obj->getBestRegards());
-        $this->assertNull($obj->getCompanyLogo());
-        $this->assertNull($obj->getCompanyName());
-        $this->assertNull($obj->getCompanyURL());
-        $this->assertNull($obj->getSupportEmail());
-        $this->assertNull($obj->getSupportName());
-        $this->assertNull($obj->getSupportPhone());
-        $this->assertNull($obj->getUnsubscribeURL());
-    }
-
-    /**
      * Tests the setAccountSettingsURL() method.
      *
      * @return void
@@ -157,5 +137,25 @@ class EmailLayoutTest extends AbstractTestCase {
 
         $obj->setUnsubscribeURL("unsubscribeURL");
         $this->assertEquals("unsubscribeURL", $obj->getUnsubscribeURL());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new EmailLayout();
+
+        $this->assertNull($obj->getAccountSettingsURL());
+        $this->assertNull($obj->getBestRegards());
+        $this->assertNull($obj->getCompanyLogo());
+        $this->assertNull($obj->getCompanyName());
+        $this->assertNull($obj->getCompanyURL());
+        $this->assertNull($obj->getSupportEmail());
+        $this->assertNull($obj->getSupportName());
+        $this->assertNull($obj->getSupportPhone());
+        $this->assertNull($obj->getUnsubscribeURL());
     }
 }

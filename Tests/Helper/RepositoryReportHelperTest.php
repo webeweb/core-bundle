@@ -27,23 +27,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Entity\TestUser;
 class RepositoryReportHelperTest extends AbstractWebTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        // Set an Entity manager mock.
-        $entityManager = $this->getMockBuilder(EntityManagerInterface::class)->getMock();
-
-        $this->assertEquals("wbw.core.helper.repository_report", RepositoryReportHelper::SERVICE_NAME);
-
-        $obj = new RepositoryReportHelper($entityManager);
-
-        $this->assertSame($entityManager, $obj->getEntityManager());
-    }
-
-    /**
      * Tests the readRepositories() method.
      *
      * @throws Exception Throws an exception if an error occurs.
@@ -132,5 +115,22 @@ class RepositoryReportHelperTest extends AbstractWebTestCase {
         $this->assertEquals(7, $res[6]->getMinimum());
         $this->assertEquals(7, $res[6]->getMaximum());
         $this->assertEquals("fos_user", $res[6]->getTable());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        // Set an Entity manager mock.
+        $entityManager = $this->getMockBuilder(EntityManagerInterface::class)->getMock();
+
+        $this->assertEquals("wbw.core.helper.repository_report", RepositoryReportHelper::SERVICE_NAME);
+
+        $obj = new RepositoryReportHelper($entityManager);
+
+        $this->assertSame($entityManager, $obj->getEntityManager());
     }
 }

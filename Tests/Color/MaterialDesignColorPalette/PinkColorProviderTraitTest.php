@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette\TestPi
 class PinkColorProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestPinkColorProviderTrait();
-
-        $this->assertNull($obj->getPinkColorProvider());
-    }
-
-    /**
      * Tests the setPinkColorProvider() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class PinkColorProviderTraitTest extends AbstractTestCase {
 
         $obj->setPinkColorProvider($pinkColorProvider);
         $this->assertSame($pinkColorProvider, $obj->getPinkColorProvider());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestPinkColorProviderTrait();
+
+        $this->assertNull($obj->getPinkColorProvider());
     }
 }

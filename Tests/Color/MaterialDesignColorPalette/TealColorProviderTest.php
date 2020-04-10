@@ -25,19 +25,6 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class TealColorProviderTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TealColorProvider();
-
-        $this->assertEquals("wbw.core.provider.color.teal", TealColorProvider::SERVICE_NAME);
-        $this->assertEquals(MaterialDesignColorPaletteInterface::COLOR_DOMAIN, $obj->getDomain());
-    }
-
-    /**
      * Tests the getColors() method.
      *
      * @return void
@@ -87,5 +74,18 @@ class TealColorProviderTest extends AbstractTestCase {
         $obj = new TealColorProvider();
 
         $this->assertEquals(TealColorProviderInterface::TEAL_COLOR_NAME, $obj->getName());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TealColorProvider();
+
+        $this->assertEquals("wbw.core.provider.color.teal", TealColorProvider::SERVICE_NAME);
+        $this->assertEquals(MaterialDesignColorPaletteInterface::COLOR_DOMAIN, $obj->getDomain());
     }
 }

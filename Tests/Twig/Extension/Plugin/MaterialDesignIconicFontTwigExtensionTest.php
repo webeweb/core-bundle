@@ -26,20 +26,6 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MaterialDesignIconicFontTwigExte
 class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.core.twig.extension.asset.material_design_iconic_font", MaterialDesignIconicFontTwigExtension::SERVICE_NAME);
-
-        $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-
-    /**
      * Tests the getFilters() method.
      *
      * @return void
@@ -176,5 +162,19 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
 
         $res = '<i class="zmdi zmdi-camera-retro" style="color: #FFFFFF;"></i>';
         $this->assertEquals($res, $obj->renderIcon("camera-retro", "color: #FFFFFF;"));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.core.twig.extension.asset.material_design_iconic_font", MaterialDesignIconicFontTwigExtension::SERVICE_NAME);
+
+        $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 }

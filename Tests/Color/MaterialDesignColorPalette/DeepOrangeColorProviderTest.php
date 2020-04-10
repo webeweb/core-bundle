@@ -25,19 +25,6 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class DeepOrangeColorProviderTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new DeepOrangeColorProvider();
-
-        $this->assertEquals("wbw.core.provider.color.deep_orange", DeepOrangeColorProvider::SERVICE_NAME);
-        $this->assertEquals(MaterialDesignColorPaletteInterface::COLOR_DOMAIN, $obj->getDomain());
-    }
-
-    /**
      * Tests the getColors() method.
      *
      * @return void
@@ -87,5 +74,18 @@ class DeepOrangeColorProviderTest extends AbstractTestCase {
         $obj = new DeepOrangeColorProvider();
 
         $this->assertEquals(DeepOrangeColorProviderInterface::DEEP_ORANGE_COLOR_NAME, $obj->getName());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new DeepOrangeColorProvider();
+
+        $this->assertEquals("wbw.core.provider.color.deep_orange", DeepOrangeColorProvider::SERVICE_NAME);
+        $this->assertEquals(MaterialDesignColorPaletteInterface::COLOR_DOMAIN, $obj->getDomain());
     }
 }

@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Twig\Extension\StylesheetTwigExtension;
 class StylesheetTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new TestStylesheetTwigExtensionTrait();
-
-        $this->assertNull($obj->getStylesheetTwigExtension());
-    }
-
-    /**
      * Tests the setStylesheetTwigExtension() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class StylesheetTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setStylesheetTwigExtension($stylesheetTwigExtension);
         $this->assertSame($stylesheetTwigExtension, $obj->getStylesheetTwigExtension());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__constructor() {
+
+        $obj = new TestStylesheetTwigExtensionTrait();
+
+        $this->assertNull($obj->getStylesheetTwigExtension());
     }
 }

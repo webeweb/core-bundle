@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette\TestOr
 class OrangeColorProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestOrangeColorProviderTrait();
-
-        $this->assertNull($obj->getOrangeColorProvider());
-    }
-
-    /**
      * Tests the setOrangeColorProvider() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class OrangeColorProviderTraitTest extends AbstractTestCase {
 
         $obj->setOrangeColorProvider($orangeColorProvider);
         $this->assertSame($orangeColorProvider, $obj->getOrangeColorProvider());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestOrangeColorProviderTrait();
+
+        $this->assertNull($obj->getOrangeColorProvider());
     }
 }

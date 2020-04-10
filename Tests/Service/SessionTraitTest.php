@@ -23,18 +23,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Service\TestSessionTrait;
 class SessionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new TestSessionTrait();
-
-        $this->assertNull($obj->getSession());
-    }
-
-    /**
      * Tests the setSession() method.
      *
      * @return void
@@ -45,5 +33,17 @@ class SessionTraitTest extends AbstractTestCase {
 
         $obj->setSession($this->session);
         $this->assertSame($this->session, $obj->getSession());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__constructor() {
+
+        $obj = new TestSessionTrait();
+
+        $this->assertNull($obj->getSession());
     }
 }

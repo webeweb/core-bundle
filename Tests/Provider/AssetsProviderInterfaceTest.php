@@ -27,7 +27,7 @@ class AssetsProviderInterfaceTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testConstruct() {
+    public function test__construct() {
 
         $this->assertEquals("/Resources/assets", AssetsProviderInterface::ASSETS_RELATIVE_DIRECTORY);
     }

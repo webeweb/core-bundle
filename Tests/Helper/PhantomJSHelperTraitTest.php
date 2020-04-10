@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Helper\TestPhantomJSHelperTrait;
 class PhantomJSHelperTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new TestPhantomJSHelperTrait();
-
-        $this->assertNull($obj->getPhantomJSHelper());
-    }
-
-    /**
      * Tests the setPhantomJSHelper() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class PhantomJSHelperTraitTest extends AbstractTestCase {
 
         $obj->setPhantomJSHelper($phantomJSHelper);
         $this->assertSame($phantomJSHelper, $obj->getPhantomJSHelper());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestPhantomJSHelperTrait();
+
+        $this->assertNull($obj->getPhantomJSHelper());
     }
 }

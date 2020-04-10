@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette\TestDe
 class DeepOrangeColorProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestDeepOrangeColorProviderTrait();
-
-        $this->assertNull($obj->getDeepOrangeColorProvider());
-    }
-
-    /**
      * Tests the setDeepOrangeColorProvider() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class DeepOrangeColorProviderTraitTest extends AbstractTestCase {
 
         $obj->setDeepOrangeColorProvider($deepOrangeColorProvider);
         $this->assertSame($deepOrangeColorProvider, $obj->getDeepOrangeColorProvider());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestDeepOrangeColorProviderTrait();
+
+        $this->assertNull($obj->getDeepOrangeColorProvider());
     }
 }

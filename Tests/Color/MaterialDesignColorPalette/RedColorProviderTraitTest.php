@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette\TestRe
 class RedColorProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestRedColorProviderTrait();
-
-        $this->assertNull($obj->getRedColorProvider());
-    }
-
-    /**
      * Tests the setRedColorProvider() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class RedColorProviderTraitTest extends AbstractTestCase {
 
         $obj->setRedColorProvider($redColorProvider);
         $this->assertSame($redColorProvider, $obj->getRedColorProvider());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestRedColorProviderTrait();
+
+        $this->assertNull($obj->getRedColorProvider());
     }
 }

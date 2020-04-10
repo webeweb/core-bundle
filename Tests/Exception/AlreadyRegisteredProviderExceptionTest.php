@@ -30,7 +30,7 @@ class AlreadyRegisteredProviderExceptionTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testConstruct() {
+    public function test__construct() {
 
         // Set a Provider mock.
         $provider = new DefaultApplicationThemeProvider();

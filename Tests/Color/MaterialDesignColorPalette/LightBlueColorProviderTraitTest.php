@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette\TestLi
 class LightBlueColorProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestLightBlueColorProviderTrait();
-
-        $this->assertNull($obj->getLightBlueColorProvider());
-    }
-
-    /**
      * Tests the setLightBlueColorProvider() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class LightBlueColorProviderTraitTest extends AbstractTestCase {
 
         $obj->setLightBlueColorProvider($lightBlueColorProvider);
         $this->assertSame($lightBlueColorProvider, $obj->getLightBlueColorProvider());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestLightBlueColorProviderTrait();
+
+        $this->assertNull($obj->getLightBlueColorProvider());
     }
 }

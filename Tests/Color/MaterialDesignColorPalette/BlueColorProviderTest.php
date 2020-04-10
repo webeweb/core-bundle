@@ -25,19 +25,6 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class BlueColorProviderTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new BlueColorProvider();
-
-        $this->assertEquals("wbw.core.provider.color.blue", BlueColorProvider::SERVICE_NAME);
-        $this->assertEquals(MaterialDesignColorPaletteInterface::COLOR_DOMAIN, $obj->getDomain());
-    }
-
-    /**
      * Tests the getColors() method.
      *
      * @return void
@@ -87,5 +74,18 @@ class BlueColorProviderTest extends AbstractTestCase {
         $obj = new BlueColorProvider();
 
         $this->assertEquals(BlueColorProviderInterface::BLUE_COLOR_NAME, $obj->getName());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new BlueColorProvider();
+
+        $this->assertEquals("wbw.core.provider.color.blue", BlueColorProvider::SERVICE_NAME);
+        $this->assertEquals(MaterialDesignColorPaletteInterface::COLOR_DOMAIN, $obj->getDomain());
     }
 }

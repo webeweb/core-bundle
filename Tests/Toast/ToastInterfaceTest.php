@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Toast;
 
-use WBW\Bundle\CoreBundle\WBWCoreInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Toast\ToastInterface;
+use WBW\Bundle\CoreBundle\WBWCoreInterface;
 
 /**
  * Toast interface test.
@@ -28,7 +28,7 @@ class ToastInterfaceTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testConstruct() {
+    public function test__construct() {
 
         $this->assertEquals(WBWCoreInterface::CORE_DANGER, ToastInterface::TOAST_DANGER);
         $this->assertEquals(WBWCoreInterface::CORE_INFO, ToastInterface::TOAST_INFO);

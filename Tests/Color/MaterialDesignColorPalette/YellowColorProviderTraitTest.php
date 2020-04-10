@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette\TestYe
 class YellowColorProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestYellowColorProviderTrait();
-
-        $this->assertNull($obj->getYellowColorProvider());
-    }
-
-    /**
      * Tests the setYellowColorProvider() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class YellowColorProviderTraitTest extends AbstractTestCase {
 
         $obj->setYellowColorProvider($yellowColorProvider);
         $this->assertSame($yellowColorProvider, $obj->getYellowColorProvider());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestYellowColorProviderTrait();
+
+        $this->assertNull($obj->getYellowColorProvider());
     }
 }

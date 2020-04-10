@@ -25,20 +25,6 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MeteoconsTwigExtension;
 class MeteoconsTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.core.twig.extension.asset.meteocons", MeteoconsTwigExtension::SERVICE_NAME);
-
-        $obj = new MeteoconsTwigExtension($this->twigEnvironment);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-
-    /**
      * Tests the getFilters() method.
      *
      * @return void
@@ -136,5 +122,19 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
 
         $res = '<i class="meteocons" data-meteocons="B" style="color: #FFFFFF;"></i>';
         $this->assertEquals($res, $obj->renderIcon("B", "color: #FFFFFF;"));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.core.twig.extension.asset.meteocons", MeteoconsTwigExtension::SERVICE_NAME);
+
+        $obj = new MeteoconsTwigExtension($this->twigEnvironment);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 }

@@ -23,18 +23,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Service\TestEventDispatcherTrait;
 class EventDispatcherTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new TestEventDispatcherTrait();
-
-        $this->assertNull($obj->getEventDispatcher());
-    }
-
-    /**
      * Tests the setEventDispatcher() method.
      *
      * @return void
@@ -45,5 +33,17 @@ class EventDispatcherTraitTest extends AbstractTestCase {
 
         $obj->setEventDispatcher($this->eventDispatcher);
         $this->assertSame($this->eventDispatcher, $obj->getEventDispatcher());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__constructor() {
+
+        $obj = new TestEventDispatcherTrait();
+
+        $this->assertNull($obj->getEventDispatcher());
     }
 }

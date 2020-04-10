@@ -23,18 +23,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\DependencyInjection\TestContainerTrait;
 class ContainerTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new TestContainerTrait();
-
-        $this->assertNull($obj->getContainer());
-    }
-
-    /**
      * Tests the setContainer() method.
      *
      * @return void
@@ -45,5 +33,17 @@ class ContainerTraitTest extends AbstractTestCase {
 
         $obj->setContainer($this->containerBuilder);
         $this->assertSame($this->containerBuilder, $obj->getContainer());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__constructor() {
+
+        $obj = new TestContainerTrait();
+
+        $this->assertNull($obj->getContainer());
     }
 }

@@ -27,7 +27,7 @@ class IndigoColorProviderInterfaceTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testConstruct() {
+    public function test__construct() {
 
         $this->assertEquals("indigo", IndigoColorProviderInterface::INDIGO_COLOR_NAME);
 

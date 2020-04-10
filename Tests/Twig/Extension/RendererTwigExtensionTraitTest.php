@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension;
 class RendererTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new TestRendererTwigExtensionTrait();
-
-        $this->assertNull($obj->getRendererTwigExtension());
-    }
-
-    /**
      * Tests the setRendererTwigExtension() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class RendererTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setRendererTwigExtension($rendererTwigExtension);
         $this->assertSame($rendererTwigExtension, $obj->getRendererTwigExtension());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__constructor() {
+
+        $obj = new TestRendererTwigExtensionTrait();
+
+        $this->assertNull($obj->getRendererTwigExtension());
     }
 }

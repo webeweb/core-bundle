@@ -55,19 +55,6 @@ class AbstractManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestManager($this->logger);
-
-        $this->assertEquals([], $obj->getProviders());
-        $this->assertEquals(0, $obj->size());
-    }
-
-    /**
      * Tests the contains() method.
      *
      * @return void
@@ -114,5 +101,18 @@ class AbstractManagerTest extends AbstractTestCase {
 
         $obj->addProvider($this->provider);
         $this->assertEquals(1, $obj->indexOf($this->provider));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestManager($this->logger);
+
+        $this->assertEquals([], $obj->getProviders());
+        $this->assertEquals(0, $obj->size());
     }
 }

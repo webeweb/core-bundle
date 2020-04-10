@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette\TestGr
 class GreenColorProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestGreenColorProviderTrait();
-
-        $this->assertNull($obj->getGreenColorProvider());
-    }
-
-    /**
      * Tests the setGreenColorProvider() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class GreenColorProviderTraitTest extends AbstractTestCase {
 
         $obj->setGreenColorProvider($greenColorProvider);
         $this->assertSame($greenColorProvider, $obj->getGreenColorProvider());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestGreenColorProviderTrait();
+
+        $this->assertNull($obj->getGreenColorProvider());
     }
 }

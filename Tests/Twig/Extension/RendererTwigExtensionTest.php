@@ -25,20 +25,6 @@ use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension;
 class RendererTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.core.twig.extension.renderer", RendererTwigExtension::SERVICE_NAME);
-
-        $obj = new RendererTwigExtension($this->twigEnvironment);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-
-    /**
      * Tests the coreScriptFilter() method.
      *
      * @return void
@@ -111,5 +97,19 @@ class RendererTwigExtensionTest extends AbstractTestCase {
 
         $res = '<i class="meteocons" data-meteocons="A"></i>';
         $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "mc:A"));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.core.twig.extension.renderer", RendererTwigExtension::SERVICE_NAME);
+
+        $obj = new RendererTwigExtension($this->twigEnvironment);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 }

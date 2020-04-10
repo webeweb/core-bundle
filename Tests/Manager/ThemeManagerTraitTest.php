@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\TestThemeManagerTrait;
 class ThemeManagerTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new TestThemeManagerTrait();
-
-        $this->assertNull($obj->getThemeManager());
-    }
-
-    /**
      * Tests the setThemeManager() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class ThemeManagerTraitTest extends AbstractTestCase {
 
         $obj->setThemeManager($themeManager);
         $this->assertSame($themeManager, $obj->getThemeManager());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestThemeManagerTrait();
+
+        $this->assertNull($obj->getThemeManager());
     }
 }

@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette\TestPu
 class PurpleColorProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestPurpleColorProviderTrait();
-
-        $this->assertNull($obj->getPurpleColorProvider());
-    }
-
-    /**
      * Tests the setPurpleColorProvider() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class PurpleColorProviderTraitTest extends AbstractTestCase {
 
         $obj->setPurpleColorProvider($purpleColorProvider);
         $this->assertSame($purpleColorProvider, $obj->getPurpleColorProvider());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestPurpleColorProviderTrait();
+
+        $this->assertNull($obj->getPurpleColorProvider());
     }
 }

@@ -25,18 +25,6 @@ use WBW\Bundle\CoreBundle\Twig\Extension\QuoteTwigExtension;
 class QuoteTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new TestQuoteTwigExtensionTrait();
-
-        $this->assertNull($obj->getQuoteTwigExtension());
-    }
-
-    /**
      * Tests the setQuoteTwigExtension() method.
      *
      * @return void
@@ -50,5 +38,17 @@ class QuoteTwigExtensionTraitTest extends AbstractTestCase {
 
         $obj->setQuoteTwigExtension($quoteTwigExtension);
         $this->assertSame($quoteTwigExtension, $obj->getQuoteTwigExtension());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__constructor() {
+
+        $obj = new TestQuoteTwigExtensionTrait();
+
+        $this->assertNull($obj->getQuoteTwigExtension());
     }
 }

@@ -29,22 +29,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Command\TestCopySkeletonCommand;
 class CopySkeletonCommandTest extends AbstractCommandTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.core.command.copy_skeleton", CopySkeletonCommand::SERVICE_NAME);
-
-        $obj = new CopySkeletonCommand();
-
-        $this->assertEquals("Copy skeleton under the app/Resources directory", $obj->getDescription());
-        $this->assertEquals(CopySkeletonCommand::COMMAND_HELP, $obj->getHelp());
-        $this->assertEquals("wbw:core:copy-skeleton", $obj->getName());
-    }
-
-    /**
      * Tests the displayFooter() method.
      *
      * @return void
@@ -160,5 +144,21 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
             $this->assertInstanceOf(InvalidArgumentException::class, $ex);
             $this->assertEquals("The application kernel is null", $ex->getMessage());
         }
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.core.command.copy_skeleton", CopySkeletonCommand::SERVICE_NAME);
+
+        $obj = new CopySkeletonCommand();
+
+        $this->assertEquals("Copy skeleton under the app/Resources directory", $obj->getDescription());
+        $this->assertEquals(CopySkeletonCommand::COMMAND_HELP, $obj->getHelp());
+        $this->assertEquals("wbw:core:copy-skeleton", $obj->getName());
     }
 }

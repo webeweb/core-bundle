@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette\TestBl
 class BlackColorProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestBlackColorProviderTrait();
-
-        $this->assertNull($obj->getBlackColorProvider());
-    }
-
-    /**
      * Tests the setBlackColorProvider() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class BlackColorProviderTraitTest extends AbstractTestCase {
 
         $obj->setBlackColorProvider($blackColorProvider);
         $this->assertSame($blackColorProvider, $obj->getBlackColorProvider());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestBlackColorProviderTrait();
+
+        $this->assertNull($obj->getBlackColorProvider());
     }
 }

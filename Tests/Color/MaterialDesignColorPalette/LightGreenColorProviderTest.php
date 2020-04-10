@@ -25,19 +25,6 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class LightGreenColorProviderTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new LightGreenColorProvider();
-
-        $this->assertEquals("wbw.core.provider.color.light_green", LightGreenColorProvider::SERVICE_NAME);
-        $this->assertEquals(MaterialDesignColorPaletteInterface::COLOR_DOMAIN, $obj->getDomain());
-    }
-
-    /**
      * Tests the getColors() method.
      *
      * @return void
@@ -87,5 +74,18 @@ class LightGreenColorProviderTest extends AbstractTestCase {
         $obj = new LightGreenColorProvider();
 
         $this->assertEquals(LightGreenColorProviderInterface::LIGHT_GREEN_COLOR_NAME, $obj->getName());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new LightGreenColorProvider();
+
+        $this->assertEquals("wbw.core.provider.color.light_green", LightGreenColorProvider::SERVICE_NAME);
+        $this->assertEquals(MaterialDesignColorPaletteInterface::COLOR_DOMAIN, $obj->getDomain());
     }
 }

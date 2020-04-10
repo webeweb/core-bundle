@@ -38,20 +38,6 @@ class ToastEventListenerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.core.event_listener.toast", ToastEventListener::SERVICE_NAME);
-
-        $obj = new ToastEventListener($this->session);
-
-        $this->assertSame($this->session, $obj->getSession());
-    }
-
-    /**
      * Tests the onToast() method.
      *
      * @return void
@@ -67,5 +53,19 @@ class ToastEventListenerTest extends AbstractTestCase {
         $arg = new ToastEvent("eventName", $toast);
 
         $this->assertSame($arg, $obj->onToast($arg));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.core.event_listener.toast", ToastEventListener::SERVICE_NAME);
+
+        $obj = new ToastEventListener($this->session);
+
+        $this->assertSame($this->session, $obj->getSession());
     }
 }

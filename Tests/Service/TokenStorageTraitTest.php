@@ -23,18 +23,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Service\TestTokenStorageTrait;
 class TokenStorageTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new TestTokenStorageTrait();
-
-        $this->assertNull($obj->getTokenStorage());
-    }
-
-    /**
      * Tests the setTokenStorage() method.
      *
      * @return void
@@ -45,5 +33,17 @@ class TokenStorageTraitTest extends AbstractTestCase {
 
         $obj->setTokenStorage($this->tokenStorage);
         $this->assertSame($this->tokenStorage, $obj->getTokenStorage());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__constructor() {
+
+        $obj = new TestTokenStorageTrait();
+
+        $this->assertNull($obj->getTokenStorage());
     }
 }

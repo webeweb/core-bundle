@@ -23,23 +23,6 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class FontAwesomeIconTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new FontAwesomeIcon();
-
-        $this->assertNull($obj->getAnimation());
-        $this->assertFalse($obj->getBordered());
-        $this->assertFalse($obj->getFixedWidth());
-        $this->assertEquals(FontAwesomeIcon::FONT_AWESOME_FONT, $obj->getFont());
-        $this->assertNull($obj->getPull());
-        $this->assertNull($obj->getSize());
-    }
-
-    /**
      * Tests the setAnimation() method.
      *
      * @return void
@@ -167,5 +150,22 @@ class FontAwesomeIconTest extends AbstractTestCase {
 
         $obj->setSize("exception");
         $this->assertNotEquals("exception", $obj->getSize());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new FontAwesomeIcon();
+
+        $this->assertNull($obj->getAnimation());
+        $this->assertFalse($obj->getBordered());
+        $this->assertFalse($obj->getFixedWidth());
+        $this->assertEquals(FontAwesomeIcon::FONT_AWESOME_FONT, $obj->getFont());
+        $this->assertNull($obj->getPull());
+        $this->assertNull($obj->getSize());
     }
 }

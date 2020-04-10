@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\Theme\TestTasksDropDownThemePr
 class TasksDropDownThemeProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestTasksDropDownThemeProviderTrait();
-
-        $this->assertNull($obj->getTasksDropDownThemeProvider());
-    }
-
-    /**
      * Tests the setTasksDropDownThemeProvider() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class TasksDropDownThemeProviderTraitTest extends AbstractTestCase {
 
         $obj->setTasksDropDownThemeProvider($tasksDropDownThemeProvider);
         $this->assertSame($tasksDropDownThemeProvider, $obj->getTasksDropDownThemeProvider());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestTasksDropDownThemeProviderTrait();
+
+        $this->assertNull($obj->getTasksDropDownThemeProvider());
     }
 }

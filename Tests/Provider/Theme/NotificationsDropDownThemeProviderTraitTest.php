@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\Theme\TestNotificationsDropDow
 class NotificationsDropDownThemeProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestNotificationsDropDownThemeProviderTrait();
-
-        $this->assertNull($obj->getNotificationsDropDownThemeProvider());
-    }
-
-    /**
      * Tests the setNotificationsDropDownThemeProvider() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class NotificationsDropDownThemeProviderTraitTest extends AbstractTestCase {
 
         $obj->setNotificationsDropDownThemeProvider($notificationsDropDownThemeProvider);
         $this->assertSame($notificationsDropDownThemeProvider, $obj->getNotificationsDropDownThemeProvider());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestNotificationsDropDownThemeProviderTrait();
+
+        $this->assertNull($obj->getNotificationsDropDownThemeProvider());
     }
 }

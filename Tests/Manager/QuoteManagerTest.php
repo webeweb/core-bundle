@@ -80,21 +80,6 @@ class QuoteManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.core.manager.quote", QuoteManager::SERVICE_NAME);
-
-        $obj = new QuoteManager($this->logger);
-
-        $this->assertSame($this->logger, $obj->getLogger());
-        $this->assertEquals([], $obj->getProviders());
-    }
-
-    /**
      * Tests the contains() method.
      *
      * @return void
@@ -145,5 +130,20 @@ class QuoteManagerTest extends AbstractTestCase {
 
         $this->assertSame($this->quoteProvider, $obj->getProvider("domain"));
         $this->assertNull($obj->getProvider("github"));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.core.manager.quote", QuoteManager::SERVICE_NAME);
+
+        $obj = new QuoteManager($this->logger);
+
+        $this->assertSame($this->logger, $obj->getLogger());
+        $this->assertEquals([], $obj->getProviders());
     }
 }

@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\Theme\TestUserInfoThemeProvide
 class UserInfoThemeProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestUserInfoThemeProviderTrait();
-
-        $this->assertNull($obj->getUserInfoThemeProvider());
-    }
-
-    /**
      * Tests the setUserInfoThemeProvider() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class UserInfoThemeProviderTraitTest extends AbstractTestCase {
 
         $obj->setUserInfoThemeProvider($userInfoThemeProvider);
         $this->assertSame($userInfoThemeProvider, $obj->getUserInfoThemeProvider());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestUserInfoThemeProviderTrait();
+
+        $this->assertNull($obj->getUserInfoThemeProvider());
     }
 }

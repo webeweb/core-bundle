@@ -23,18 +23,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUserTrait;
 class UserTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new TestUserTrait();
-
-        $this->assertNull($obj->getUser());
-    }
-
-    /**
      * Tests the setUser() method.
      *
      * @return void
@@ -45,5 +33,17 @@ class UserTraitTest extends AbstractTestCase {
 
         $obj->setUser($this->user);
         $this->assertSame($this->user, $obj->getUser());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__constructor() {
+
+        $obj = new TestUserTrait();
+
+        $this->assertNull($obj->getUser());
     }
 }

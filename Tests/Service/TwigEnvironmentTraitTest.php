@@ -23,18 +23,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Service\TestTwigEnvironmentTrait;
 class TwigEnvironmentTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new TestTwigEnvironmentTrait();
-
-        $this->assertNull($obj->getTwigEnvironment());
-    }
-
-    /**
      * Tests the setTwigEnvironment() method.
      *
      * @return void
@@ -45,5 +33,17 @@ class TwigEnvironmentTraitTest extends AbstractTestCase {
 
         $obj->setTwigEnvironment($this->twigEnvironment);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__constructor() {
+
+        $obj = new TestTwigEnvironmentTrait();
+
+        $this->assertNull($obj->getTwigEnvironment());
     }
 }

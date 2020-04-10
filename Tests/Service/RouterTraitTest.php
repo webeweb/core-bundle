@@ -23,18 +23,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Service\TestRouterTrait;
 class RouterTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new TestRouterTrait();
-
-        $this->assertNull($obj->getRouter());
-    }
-
-    /**
      * Tests the setRouter() method.
      *
      * @return void
@@ -45,5 +33,17 @@ class RouterTraitTest extends AbstractTestCase {
 
         $obj->setRouter($this->router);
         $this->assertSame($this->router, $obj->getRouter());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__constructor() {
+
+        $obj = new TestRouterTrait();
+
+        $this->assertNull($obj->getRouter());
     }
 }

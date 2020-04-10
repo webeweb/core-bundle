@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette\TestLi
 class LimeColorProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestLimeColorProviderTrait();
-
-        $this->assertNull($obj->getLimeColorProvider());
-    }
-
-    /**
      * Tests the setLimeColorProvider() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class LimeColorProviderTraitTest extends AbstractTestCase {
 
         $obj->setLimeColorProvider($limeColorProvider);
         $this->assertSame($limeColorProvider, $obj->getLimeColorProvider());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestLimeColorProviderTrait();
+
+        $this->assertNull($obj->getLimeColorProvider());
     }
 }

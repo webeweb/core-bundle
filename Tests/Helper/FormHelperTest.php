@@ -103,19 +103,6 @@ class FormHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new FormHelper($this->objectManager, $this->eventDispatcher);
-
-        $this->assertEquals("wbw.core.helper.form", FormHelper::SERVICE_NAME);
-        $this->assertSame($this->objectManager, $obj->getObjectManager());
-    }
-
-    /**
      * Tests the onPostHandleRequestWithCollection() method.
      *
      * @return void
@@ -156,5 +143,18 @@ class FormHelperTest extends AbstractTestCase {
         for ($i = 0; $i < 10; ++$i) {
             $this->assertSame($this->collection->get($i), $res->get($i));
         }
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new FormHelper($this->objectManager, $this->eventDispatcher);
+
+        $this->assertEquals("wbw.core.helper.form", FormHelper::SERVICE_NAME);
+        $this->assertSame($this->objectManager, $obj->getObjectManager());
     }
 }

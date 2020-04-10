@@ -43,20 +43,6 @@ class UtilityTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.core.twig.extension.utility", UtilityTwigExtension::SERVICE_NAME);
-
-        $obj = new UtilityTwigExtension($this->twigEnvironment);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-    }
-
-    /**
      * Tests the formatDate() method.
      *
      * @return void
@@ -230,5 +216,19 @@ class UtilityTwigExtensionTest extends AbstractTestCase {
 
         $this->assertEquals("", $obj->md5(null));
         $this->assertEquals("d41d8cd98f00b204e9800998ecf8427e", $obj->md5(""));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.core.twig.extension.utility", UtilityTwigExtension::SERVICE_NAME);
+
+        $obj = new UtilityTwigExtension($this->twigEnvironment);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 }

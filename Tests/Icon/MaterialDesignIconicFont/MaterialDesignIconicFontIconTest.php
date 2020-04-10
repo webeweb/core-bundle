@@ -23,24 +23,6 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class MaterialDesignIconicFontIconTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new MaterialDesignIconicFontIcon();
-
-        $this->assertNull($obj->getBorder());
-        $this->assertFalse($obj->getFixedWidth());
-        $this->assertNull($obj->getFlip());
-        $this->assertNull($obj->getPull());
-        $this->assertNull($obj->getRotate());
-        $this->assertNull($obj->getSize());
-        $this->assertNull($obj->getSpin());
-    }
-
-    /**
      * Tests the setBorder() method.
      *
      * @return void
@@ -207,5 +189,23 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
 
         $obj->setSpin("exception");
         $this->assertNotEquals("exception", $obj->getSpin());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new MaterialDesignIconicFontIcon();
+
+        $this->assertNull($obj->getBorder());
+        $this->assertFalse($obj->getFixedWidth());
+        $this->assertNull($obj->getFlip());
+        $this->assertNull($obj->getPull());
+        $this->assertNull($obj->getRotate());
+        $this->assertNull($obj->getSize());
+        $this->assertNull($obj->getSpin());
     }
 }

@@ -24,18 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\EventListener\TestNotificationEventList
 class NotificationEventListenerTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new TestNotificationEventListenerTrait();
-
-        $this->assertNull($obj->getNotificationEventListener());
-    }
-
-    /**
      * Tests the setNotificationEventListener() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class NotificationEventListenerTraitTest extends AbstractTestCase {
 
         $obj->setNotificationEventListener($notificationEventListener);
         $this->assertSame($notificationEventListener, $obj->getNotificationEventListener());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__constructor() {
+
+        $obj = new TestNotificationEventListenerTrait();
+
+        $this->assertNull($obj->getNotificationEventListener());
     }
 }

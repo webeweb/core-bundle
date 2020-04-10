@@ -23,18 +23,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\Attribute\TestStringEnvironmentTr
 class StringEnvironmentTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new TestStringEnvironmentTrait();
-
-        $this->assertNull($obj->getEnvironment());
-    }
-
-    /**
      * Tests the setEnvironment() method.
      *
      * @return void
@@ -45,5 +33,17 @@ class StringEnvironmentTraitTest extends AbstractTestCase {
 
         $obj->setEnvironment("environment");
         $this->assertEquals("environment", $obj->getEnvironment());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__constructor() {
+
+        $obj = new TestStringEnvironmentTrait();
+
+        $this->assertNull($obj->getEnvironment());
     }
 }

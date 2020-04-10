@@ -23,19 +23,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Icon\TestIcon;
 class AbstractIconTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestIcon();
-
-        $this->assertNull($obj->getName());
-        $this->assertNull($obj->getStyle());
-    }
-
-    /**
      * Tests the setName() method.
      *
      * @return void
@@ -59,5 +46,18 @@ class AbstractIconTest extends AbstractTestCase {
 
         $obj->setStyle("style");
         $this->assertEquals("style", $obj->getStyle());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestIcon();
+
+        $this->assertNull($obj->getName());
+        $this->assertNull($obj->getStyle());
     }
 }

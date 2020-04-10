@@ -23,18 +23,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Service\TestLoggerTrait;
 class LoggerTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new TestLoggerTrait();
-
-        $this->assertNull($obj->getLogger());
-    }
-
-    /**
      * Tests the setLogger() method.
      *
      * @return void
@@ -45,5 +33,17 @@ class LoggerTraitTest extends AbstractTestCase {
 
         $obj->setLogger($this->logger);
         $this->assertSame($this->logger, $obj->getLogger());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestLoggerTrait();
+
+        $this->assertNull($obj->getLogger());
     }
 }

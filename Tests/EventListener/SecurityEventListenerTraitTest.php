@@ -25,18 +25,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\EventListener\TestSecurityEventListener
 class SecurityEventListenerTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
-
-        $obj = new TestSecurityEventListenerTrait();
-
-        $this->assertNull($obj->getSecurityEventListener());
-    }
-
-    /**
      * Tests the setSecurityEventListener() method.
      *
      * @return void
@@ -53,5 +41,17 @@ class SecurityEventListenerTraitTest extends AbstractTestCase {
 
         $obj->setSecurityEventListener($securityEventListener);
         $this->assertSame($securityEventListener, $obj->getSecurityEventListener());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__constructor() {
+
+        $obj = new TestSecurityEventListenerTrait();
+
+        $this->assertNull($obj->getSecurityEventListener());
     }
 }

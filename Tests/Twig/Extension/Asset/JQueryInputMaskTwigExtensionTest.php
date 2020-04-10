@@ -43,21 +43,6 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.core.twig.extension.asset.jquery_inputmask", JQueryInputMaskTwigExtension::SERVICE_NAME);
-
-        $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->rendererTwigExtension);
-
-        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-        $this->assertSame($this->rendererTwigExtension, $obj->getRendererTwigExtension());
-    }
-
-    /**
      * Tests the getFilters() method.
      *
      * @return void
@@ -228,5 +213,20 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
         $arg = ["selector" => "#selector"];
         $res = "$('#selector').inputmask(\"**999 999 999 99\",{\"autoUnmask\":true,\"removeMaskOnSubmit\":true,\"placeholder\":\"_____ ___ ___ __\"});";
         $this->assertEquals($res, $obj->jQueryInputMaskVATNumberFunction($arg));
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.core.twig.extension.asset.jquery_inputmask", JQueryInputMaskTwigExtension::SERVICE_NAME);
+
+        $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->rendererTwigExtension);
+
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+        $this->assertSame($this->rendererTwigExtension, $obj->getRendererTwigExtension());
     }
 }

@@ -23,19 +23,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Toast\TestToast;
 class AbstractToastTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestToast();
-
-        $this->assertNull($obj->getContent());
-        $this->assertNull($obj->getType());
-    }
-
-    /**
      * Tests the setContent() method.
      *
      * @return void
@@ -59,5 +46,18 @@ class AbstractToastTest extends AbstractTestCase {
 
         $obj->setType("type");
         $this->assertEquals("type", $obj->getType());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestToast();
+
+        $this->assertNull($obj->getContent());
+        $this->assertNull($obj->getType());
     }
 }

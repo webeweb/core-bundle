@@ -80,20 +80,6 @@ class ColorManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.core.manager.color", ColorManager::SERVICE_NAME);
-
-        $obj = new ColorManager($this->logger);
-
-        $this->assertEquals([], $obj->getProviders());
-    }
-
-    /**
      * Tests the contains() method.
      *
      * @return void
@@ -129,5 +115,19 @@ class ColorManagerTest extends AbstractTestCase {
             $this->assertInstanceOf(InvalidArgumentException::class, $ex);
             $this->assertEquals("The provider must implements ColorProviderInterface", $ex->getMessage());
         }
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.core.manager.color", ColorManager::SERVICE_NAME);
+
+        $obj = new ColorManager($this->logger);
+
+        $this->assertEquals([], $obj->getProviders());
     }
 }
