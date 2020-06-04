@@ -1,9 +1,10 @@
 CHANGELOG
 =========
 
-### master
+### [2.17.0](https://github.com/webeweb/core-bundle/tree/v2.17.0) (2020-06-04)
 
 - Improve unit tests
+- Update default Navigation theme provider.
 
 ### [2.16.0](https://github.com/webeweb/core-bundle/tree/v2.16.0) (2020-03-11)
 
