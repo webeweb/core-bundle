@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Navigation;
 
+use Symfony\Component\HttpFoundation\ParameterBag;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
@@ -102,7 +103,7 @@ class NavigationTreeHelper {
                 break;
 
             case NavigationInterface::NAVIGATION_MATCHER_ROUTER:
-                $result = $request->get("_route") === $node->getUri();
+                $result = $request->get("_route") === $node->getUri() || $request->get("_forwarded", new ParameterBag())->get("_route") === $node->getUri();
                 break;
 
             case NavigationInterface::NAVIGATION_MATCHER_URL:
