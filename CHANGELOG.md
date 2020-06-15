@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Add forwarded request support into Navigation tree helper
+
 ### [2.17.0](https://github.com/webeweb/core-bundle/tree/v2.17.0) (2020-06-04)
 
 - Improve unit tests
