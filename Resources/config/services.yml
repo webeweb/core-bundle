@@ -16,13 +16,13 @@ services:
 
     wbw.core.manager.color:
         class:     WBW\Bundle\CoreBundle\Manager\ColorManager
-        public:    true
         arguments: ["@logger"]
+        public:    true
 
     wbw.core.manager.quote:
         class:     WBW\Bundle\CoreBundle\Manager\QuoteManager
-        public:    true
         arguments: ["@logger"]
+        public:    true
 
     wbw.core.manager.theme:
         class:     WBW\Bundle\CoreBundle\Manager\ThemeManager
