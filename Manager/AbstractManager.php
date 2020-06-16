@@ -92,7 +92,7 @@ abstract class AbstractManager implements ManagerInterface {
      *
      * @param string $message The message.
      * @param array $context The context.
-     * @return AbstractManager Returns this manager.
+     * @return ManagerInterface Returns this manager.
      */
     protected function logInfo($message, array $context) {
         if (null !== $this->getLogger()) {
