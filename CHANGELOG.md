@@ -1,9 +1,10 @@
 CHANGELOG
 =========
 
-### master
+### [2.18.0](https://github.com/webeweb/core-bundle/tree/v2.18.0) (2020-06-16)
 
 - Add forwarded request support into Navigation tree helper
+- Update Font Awesome to 5.13.0
 
 ### [2.17.0](https://github.com/webeweb/core-bundle/tree/v2.17.0) (2020-06-04)
 
