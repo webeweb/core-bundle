@@ -24,7 +24,7 @@ trait KernelEventListenerTrait {
      *
      * @var KernelEventListener
      */
-    private $KernelEventListener;
+    private $kernelEventListener;
 
     /**
      * Get the kernel event listener.
@@ -32,7 +32,7 @@ trait KernelEventListenerTrait {
      * @return KernelEventListener Returns the kernel event listener.
      */
     public function getKernelEventListener() {
-        return $this->KernelEventListener;
+        return $this->kernelEventListener;
     }
 
     /**
@@ -41,7 +41,7 @@ trait KernelEventListenerTrait {
      * @param KernelEventListener|null $kernelEventListener The kernel event listener.
      */
     protected function setKernelEventListener(KernelEventListener $kernelEventListener = null) {
-        $this->KernelEventListener = $kernelEventListener;
+        $this->kernelEventListener = $kernelEventListener;
         return $this;
     }
 }
