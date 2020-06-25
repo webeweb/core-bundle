@@ -55,6 +55,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Asset\MaterialDesignIconicFontTwigExten
 use WBW\Bundle\CoreBundle\Twig\Extension\Asset\MeteoconsTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\Asset\SyntaxHighlighterTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\ContainerTwigExtension;
+use WBW\Bundle\CoreBundle\Twig\Extension\JavascriptTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\QuoteTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\StylesheetTwigExtension;
@@ -196,6 +197,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
 
         // Twig extensions
         $this->assertInstanceOf(ContainerTwigExtension::class, $this->containerBuilder->get(ContainerTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(JavascriptTwigExtension::class, $this->containerBuilder->get(JavascriptTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(QuoteTwigExtension::class, $this->containerBuilder->get(QuoteTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(RendererTwigExtension::class, $this->containerBuilder->get(RendererTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(StylesheetTwigExtension::class, $this->containerBuilder->get(StylesheetTwigExtension::SERVICE_NAME));
