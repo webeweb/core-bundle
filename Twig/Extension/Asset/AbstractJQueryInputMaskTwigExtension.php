@@ -49,7 +49,7 @@ abstract class AbstractJQueryInputMaskTwigExtension extends AbstractTwigExtensio
      */
     protected function jQueryInputMask($selector, $mask, array $options, $scriptTag) {
 
-        $template = "$('%selector%').inputmask(\"%mask%\",%arguments%);";
+        $template = '$(\'%selector%\').inputmask("%mask%",%arguments%);';
 
         $innerHTML = str_replace(["%selector%", "%mask%", "%arguments%"], [$selector, $mask, json_encode($options)], $template);
 

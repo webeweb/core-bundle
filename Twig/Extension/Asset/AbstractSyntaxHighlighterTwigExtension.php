@@ -47,7 +47,7 @@ abstract class AbstractSyntaxHighlighterTwigExtension extends AbstractTwigExtens
         $template = [
             "SyntaxHighlighter.config.bloggerMode = " . StringHelper::parseBoolean($config->getBloggerMode()) . ";",
             "SyntaxHighlighter.config.stripBrs = " . StringHelper::parseBoolean($config->getStripBrs()) . ";",
-            "SyntaxHighlighter.config.tagName = \"" . $config->getTagName() . "\";",
+            'SyntaxHighlighter.config.tagName = "' . $config->getTagName() . '";',
         ];
 
         if (null !== $config->getStrings()) {
@@ -85,7 +85,7 @@ abstract class AbstractSyntaxHighlighterTwigExtension extends AbstractTwigExtens
 
         $template = [
             "SyntaxHighlighter.defaults['auto-links'] = " . StringHelper::parseBoolean($defaults->getAutoLinks()) . ";",
-            "SyntaxHighlighter.defaults['class-name'] = \"" . $defaults->getClassName() . "\";",
+            'SyntaxHighlighter.defaults[\'class-name\'] = "' . $defaults->getClassName() . '";',
             "SyntaxHighlighter.defaults['collapse'] = " . StringHelper::parseBoolean($defaults->getCollapse()) . ";",
             "SyntaxHighlighter.defaults['first-line'] = " . $defaults->getFirstLine() . ";",
             "SyntaxHighlighter.defaults['gutter'] = " . StringHelper::parseBoolean($defaults->getGutter()) . ";",
@@ -108,15 +108,15 @@ abstract class AbstractSyntaxHighlighterTwigExtension extends AbstractTwigExtens
     protected function syntaxHighlighterStrings(SyntaxHighlighterStrings $strings) {
 
         $template = [
-            "SyntaxHighlighter.config.strings.alert = \"" . $strings->getAlert() . "\";",
-            "SyntaxHighlighter.config.strings.brushNotHtmlScript = \"" . $strings->getBrushNotHtmlScript() . "\";",
-            "SyntaxHighlighter.config.strings.copyToClipboard = \"" . $strings->getCopyToClipboard() . "\";",
-            "SyntaxHighlighter.config.strings.copyToClipboardConfirmation = \"" . $strings->getCopyToClipboardConfirmation() . "\";",
-            "SyntaxHighlighter.config.strings.expandSource = \"" . $strings->getExpandSource() . "\";",
-            "SyntaxHighlighter.config.strings.help = \"" . $strings->getHelp() . "\";",
-            "SyntaxHighlighter.config.strings.noBrush = \"" . $strings->getNoBrush() . "\";",
-            "SyntaxHighlighter.config.strings.print = \"" . $strings->getPrint() . "\";",
-            "SyntaxHighlighter.config.strings.viewSource = \"" . $strings->getViewSource() . "\";",
+            'SyntaxHighlighter.config.strings.alert = "' . $strings->getAlert() . '";',
+            'SyntaxHighlighter.config.strings.brushNotHtmlScript = "' . $strings->getBrushNotHtmlScript() . '";',
+            'SyntaxHighlighter.config.strings.copyToClipboard = "' . $strings->getCopyToClipboard() . '";',
+            'SyntaxHighlighter.config.strings.copyToClipboardConfirmation = "' . $strings->getCopyToClipboardConfirmation() . '";',
+            'SyntaxHighlighter.config.strings.expandSource = "' . $strings->getExpandSource() . '";',
+            'SyntaxHighlighter.config.strings.help = "' . $strings->getHelp() . '";',
+            'SyntaxHighlighter.config.strings.noBrush = "' . $strings->getNoBrush() . '";',
+            'SyntaxHighlighter.config.strings.print = "' . $strings->getPrint() . '";',
+            'SyntaxHighlighter.config.strings.viewSource = "' . $strings->getViewSource() . '";',
         ];
 
         return implode("\n", $template);

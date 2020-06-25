@@ -270,7 +270,7 @@ class AbstractControllerTest extends AbstractTestCase {
         } catch (Exception $ex) {
 
             $this->assertInstanceOf(BadUserRoleException::class, $ex);
-            $this->assertEquals("User \"anonymous\" is not allowed to access to \"\" with roles [ROLE_GITHUB]", $ex->getMessage());
+            $this->assertEquals('User "anonymous" is not allowed to access to "" with roles [ROLE_GITHUB]', $ex->getMessage());
         }
     }
 

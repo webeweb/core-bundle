@@ -27,7 +27,7 @@ class AlreadyRegisteredProviderException extends AbstractException {
      * @param ProviderInterface $provider The provider.
      */
     public function __construct(ProviderInterface $provider) {
-        $format = "The provider \"%s\" is already registered";
+        $format = 'The provider "%s" is already registered';
         parent::__construct(sprintf($format, get_class($provider)), 500);
     }
 }

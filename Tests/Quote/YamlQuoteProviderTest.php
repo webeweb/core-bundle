@@ -102,7 +102,7 @@ class YamlQuoteProviderTest extends AbstractTestCase {
         } catch (Exception $ex) {
 
             $this->assertInstanceOf(FileNotFoundException::class, $ex);
-            $this->assertEquals("The file \"exception\" was not found", $ex->getMessage());
+            $this->assertEquals('The file "exception" was not found', $ex->getMessage());
         }
     }
 }

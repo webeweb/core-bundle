@@ -102,7 +102,7 @@ class AssetsHelperTest extends AbstractTestCase {
         } catch (Exception $ex) {
 
             $this->assertInstanceOf(InvalidArgumentException::class, $ex);
-            $this->assertEquals("\"" . $this->directoryIllegal . "\" is not a directory", $ex->getMessage());
+            $this->assertEquals('"' . $this->directoryIllegal . '" is not a directory', $ex->getMessage());
         }
     }
 
@@ -136,7 +136,7 @@ class AssetsHelperTest extends AbstractTestCase {
         } catch (Exception $ex) {
 
             $this->assertInstanceOf(InvalidArgumentException::class, $ex);
-            $this->assertEquals("\"" . $this->directoryIllegal . "\" is not a directory", $ex->getMessage());
+            $this->assertEquals('"' . $this->directoryIllegal . '" is not a directory', $ex->getMessage());
         }
     }
 }

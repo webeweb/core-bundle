@@ -70,7 +70,7 @@ abstract class AbstractMaterialDesignIconicFontTwigExtension extends AbstractTwi
      */
     protected function materialDesignIconicFontListIcon($icon, $content) {
 
-        $glyphicon = null !== $icon ? str_replace(["class=\"zmdi"], ["class=\"zmdi-hc-li zmdi"], $icon) : "";
+        $glyphicon = null !== $icon ? str_replace(['class="zmdi'], ['class="zmdi-hc-li zmdi'], $icon) : "";
         $innerHTML = null !== $content ? $content : "";
 
         return static::coreHTMLElement("li", $glyphicon . $innerHTML);

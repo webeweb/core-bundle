@@ -37,6 +37,6 @@ class AlreadyRegisteredProviderExceptionTest extends AbstractTestCase {
 
         $obj = new AlreadyRegisteredProviderException($provider);
 
-        $this->assertEquals("The provider \"WBW\\Bundle\\CoreBundle\\Theme\\DefaultApplicationThemeProvider\" is already registered", $obj->getMessage());
+        $this->assertEquals('The provider "WBW\\Bundle\\CoreBundle\\Theme\\DefaultApplicationThemeProvider" is already registered', $obj->getMessage());
     }
 }

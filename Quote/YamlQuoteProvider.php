@@ -90,7 +90,7 @@ class YamlQuoteProvider extends AbstractQuoteProvider {
      */
     protected function setFilename($filename) {
         if (false === realpath($filename)) {
-            throw new FileNotFoundException(sprintf("The file \"%s\" was not found", $filename));
+            throw new FileNotFoundException(sprintf('The file "%s" was not found', $filename));
         }
         $this->filename = realpath($filename);
         return $this;

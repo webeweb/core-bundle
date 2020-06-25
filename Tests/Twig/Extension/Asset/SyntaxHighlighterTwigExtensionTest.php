@@ -226,7 +226,7 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
         } catch (Exception $ex) {
 
             $this->assertInstanceOf(FileNotFoundException::class, $ex);
-            $this->assertContains("core-bundle/Tests/Twig/Extension/Asset/SyntaxHighlighterTwigExtensionTest\" could not be found", $ex->getMessage());
+            $this->assertContains('core-bundle/Tests/Twig/Extension/Asset/SyntaxHighlighterTwigExtensionTest" could not be found', $ex->getMessage());
         }
     }
 

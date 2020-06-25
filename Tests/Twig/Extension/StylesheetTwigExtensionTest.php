@@ -26,7 +26,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\StylesheetTwigExtension;
 class StylesheetTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the cssRGBA() method.
+     * Tests the cssRgba() method.
      *
      * @return void
      */
@@ -34,27 +34,27 @@ class StylesheetTwigExtensionTest extends AbstractTestCase {
 
         $obj = new StylesheetTwigExtension($this->twigEnvironment);
 
-        $this->assertEquals("", $obj->cssRGBA(null));
+        $this->assertEquals("", $obj->cssRgba(null));
 
-        $this->assertEquals("rgba(0, 0, 0, 0.00)", $obj->cssRGBA("#000000", 0.00));
-        $this->assertEquals("rgba(0, 0, 0, 0.00)", $obj->cssRGBA("000000", 0.00));
-        $this->assertEquals("rgba(0, 0, 0, 0.00)", $obj->cssRGBA("#000", 0.00));
-        $this->assertEquals("rgba(0, 0, 0, 0.00)", $obj->cssRGBA("000", 0.00));
+        $this->assertEquals("rgba(0, 0, 0, 0.00)", $obj->cssRgba("#000000", 0.00));
+        $this->assertEquals("rgba(0, 0, 0, 0.00)", $obj->cssRgba("000000", 0.00));
+        $this->assertEquals("rgba(0, 0, 0, 0.00)", $obj->cssRgba("#000", 0.00));
+        $this->assertEquals("rgba(0, 0, 0, 0.00)", $obj->cssRgba("000", 0.00));
 
-        $this->assertEquals("rgba(170, 170, 170, 0.50)", $obj->cssRGBA("#AAAAAA", 0.50));
-        $this->assertEquals("rgba(170, 170, 170, 0.50)", $obj->cssRGBA("AAAAAA", 0.50));
-        $this->assertEquals("rgba(170, 170, 170, 0.50)", $obj->cssRGBA("#AAA", 0.50));
-        $this->assertEquals("rgba(170, 170, 170, 0.50)", $obj->cssRGBA("AAA", 0.50));
+        $this->assertEquals("rgba(170, 170, 170, 0.50)", $obj->cssRgba("#AAAAAA", 0.50));
+        $this->assertEquals("rgba(170, 170, 170, 0.50)", $obj->cssRgba("AAAAAA", 0.50));
+        $this->assertEquals("rgba(170, 170, 170, 0.50)", $obj->cssRgba("#AAA", 0.50));
+        $this->assertEquals("rgba(170, 170, 170, 0.50)", $obj->cssRgba("AAA", 0.50));
 
-        $this->assertEquals("rgba(170, 170, 170, 0.50)", $obj->cssRGBA("#aaaaaa", 0.50));
-        $this->assertEquals("rgba(170, 170, 170, 0.50)", $obj->cssRGBA("aaaaaa", 0.50));
-        $this->assertEquals("rgba(170, 170, 170, 0.50)", $obj->cssRGBA("#aaa", 0.50));
-        $this->assertEquals("rgba(170, 170, 170, 0.50)", $obj->cssRGBA("aaa", 0.50));
+        $this->assertEquals("rgba(170, 170, 170, 0.50)", $obj->cssRgba("#aaaaaa", 0.50));
+        $this->assertEquals("rgba(170, 170, 170, 0.50)", $obj->cssRgba("aaaaaa", 0.50));
+        $this->assertEquals("rgba(170, 170, 170, 0.50)", $obj->cssRgba("#aaa", 0.50));
+        $this->assertEquals("rgba(170, 170, 170, 0.50)", $obj->cssRgba("aaa", 0.50));
 
-        $this->assertEquals("rgba(255, 255, 255, 1.00)", $obj->cssRGBA("#FFFFFF", 1.00));
-        $this->assertEquals("rgba(255, 255, 255, 1.00)", $obj->cssRGBA("FFFFFF", 1.00));
-        $this->assertEquals("rgba(255, 255, 255, 1.00)", $obj->cssRGBA("#FFF", 1.00));
-        $this->assertEquals("rgba(255, 255, 255, 1.00)", $obj->cssRGBA("FFF", 1.00));
+        $this->assertEquals("rgba(255, 255, 255, 1.00)", $obj->cssRgba("#FFFFFF", 1.00));
+        $this->assertEquals("rgba(255, 255, 255, 1.00)", $obj->cssRgba("FFFFFF", 1.00));
+        $this->assertEquals("rgba(255, 255, 255, 1.00)", $obj->cssRgba("#FFF", 1.00));
+        $this->assertEquals("rgba(255, 255, 255, 1.00)", $obj->cssRgba("FFF", 1.00));
     }
 
     /**
@@ -70,8 +70,8 @@ class StylesheetTwigExtensionTest extends AbstractTestCase {
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(TwigFilter::class, $res[0]);
-        $this->assertEquals("cssRGBA", $res[0]->getName());
-        $this->assertEquals([$obj, "cssRGBA"], $res[0]->getCallable());
+        $this->assertEquals("cssRgba", $res[0]->getName());
+        $this->assertEquals([$obj, "cssRgba"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
     }
 
@@ -88,8 +88,8 @@ class StylesheetTwigExtensionTest extends AbstractTestCase {
         $this->assertCount(1, $res);
 
         $this->assertInstanceOf(TwigFunction::class, $res[0]);
-        $this->assertEquals("cssRGBA", $res[0]->getName());
-        $this->assertEquals([$obj, "cssRGBA"], $res[0]->getCallable());
+        $this->assertEquals("cssRgba", $res[0]->getName());
+        $this->assertEquals([$obj, "cssRgba"], $res[0]->getCallable());
         $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
     }
 
