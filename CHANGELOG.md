@@ -1,6 +1,14 @@
 CHANGELOG
 =========
 
+### [2.19.0](https://github.com/webeweb/core-bundle/tree/v2.19.0) (2020-06-25)
+
+- Add Javascript Twig extension
+- Add Javascript Twig extension trait
+- Fix translations
+- Improve code quality
+- Improve services configuration
+
 ### [2.18.0](https://github.com/webeweb/core-bundle/tree/v2.18.0) (2020-06-16)
 
 - Add forwarded request support into Navigation tree helper
