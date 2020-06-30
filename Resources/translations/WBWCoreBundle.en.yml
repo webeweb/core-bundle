@@ -1,4 +1,4 @@
-# Resources/translations/CoreBundle.en.yml
+# Resources/translations/WBWCoreBundle.en.yml
 label:
     account_settings:  "Account settings"
     support:           "Support"
