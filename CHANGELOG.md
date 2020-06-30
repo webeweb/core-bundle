@@ -3,6 +3,7 @@ CHANGELOG
 
 ### [2.19.1](https://github.com/webeweb/core-bundle/tree/v2.19.1) (2020-06-30)
 
+- Fix email templates
 - Fix translations
 
 ### [2.19.0](https://github.com/webeweb/core-bundle/tree/v2.19.0) (2020-06-25)
