@@ -9,17 +9,11 @@
     </head>
     <body>
         <center class="wrapper">
-            {% block coreEmailHeader %}
-                {% include "@WBWCore/email/header.html.twig" %}
-            {% endblock %}
+            {% include "@WBWCore/email/header.html.twig" %}
             <div class="spacer">&nbsp;</div>
-            {% block coreEmailContent %}
-                {% include "@WBWCore/email/content.html.twig" %}
-            {% endblock %}
+            {% include "@WBWCore/email/content.html.twig" %}
             <div class="spacer">&nbsp;</div>
-            {% block coreEmailFooter %}
-                {% include "@WBWCore/email/footer.html.twig" %}
-            {% endblock %}
+            {% include "@WBWCore/email/footer.html.twig" %}
         </center>
     </body>
 </html>
