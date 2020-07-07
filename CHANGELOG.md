@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [2.19.2](https://github.com/webeweb/core-bundle/tree/v2.19.2) (2020-07-07)
+
+- Fix gTag Twig function when id is null or empty
+
 ### [2.19.1](https://github.com/webeweb/core-bundle/tree/v2.19.1) (2020-06-30)
 
 - Fix email templates
