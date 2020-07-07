@@ -86,6 +86,9 @@ class JavascriptTwigExtensionTest extends AbstractTestCase {
 EOTXT;
 
         $this->assertEquals($res, $obj->jsGtag("UA-123456789-0"));
+
+        $this->assertEquals("", $obj->jsGtag(null));
+        $this->assertEquals("", $obj->jsGtag(""));
     }
 
     /**

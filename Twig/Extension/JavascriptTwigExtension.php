@@ -59,6 +59,10 @@ class JavascriptTwigExtension extends AbstractTwigExtension {
      */
     public function jsGtag($id) {
 
+        if (null === $id || "" === $id) {
+            return "";
+        }
+
         $content = file_get_contents(__DIR__ . "/JavascriptTwigExtension.jsGtag.html");
 
         return str_replace("{id}", $id, $content);
