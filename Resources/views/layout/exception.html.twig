@@ -1,0 +1,58 @@
+{# Resources/views/email.html.twig #}
+{% import "@WBWCore/layout/exception.html.twig" as myself %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        {% include "@WBWCore/email/stylesheet.html.twig" %}
+        {% block coreEmailStylesheets %}
+            <style type="text/css">
+                .content p,
+                .content .caption {
+                    font-size: 0.85em !important;
+                }
+            </style>
+        {% endblock %}
+    </head>
+    <body>
+        <center class="wrapper">
+            {% include "@WBWCore/email/header.html.twig" %}
+            <div class="spacer">&nbsp;</div>
+            <table class="main center" width="602" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr>
+                        <td class="column">
+                            <div class="column-top">&nbsp;</div>
+                            <table class="content" border="0" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="padded">
+                                            {{ myself.printStackTrace(exception) }}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="column-bottom">&nbsp;</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="spacer">&nbsp;</div>
+            {% include "@WBWCore/email/footer.html.twig" %}
+        </center>
+    </body>
+</html>
+{% macro printStackTrace(ex, isChild) %}
+    {% set _heading = '' %}
+    <h1>{{ true == isChild ? "Caused by: " : "" }}{{ ex.message }}:</h1>
+    <p>
+        <strong>at</strong> {{ ex.file }}:{{ ex.line }}<br/>
+        {% for stackTrace in ex.trace %}
+            <strong>at</strong> {{ stackTrace.class }}{{ stackTrace.type }}{{ stackTrace.function }}()<br/>
+            &nbsp;&nbsp;&nbsp;<span class="caption">({{ stackTrace.file }}:{{ stackTrace.line }})</span><br/>
+        {% endfor %}
+    </p>
+    {% if (null != ex.previous) %}
+        {{ myself.printStackTrace(ex.previous, true) }}
+    {% endif %}
+{% endmacro %}

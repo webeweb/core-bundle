@@ -47,7 +47,7 @@ class CopySkeletonCommandWebTest extends AbstractWebTestCase {
         $this->assertEquals(0, $res);
 
         $output = $commandTester->getDisplay();
-        $this->assertContains("Trying to copy skeletons", $output);
-        $this->assertContains("[OK] No skeleton were provided by any bundle", $output);
+        $this->assertStringContainsString("Trying to copy skeletons", $output);
+        $this->assertStringContainsString("[OK] No skeleton were provided by any bundle", $output);
     }
 }

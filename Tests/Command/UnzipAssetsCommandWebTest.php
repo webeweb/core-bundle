@@ -47,7 +47,7 @@ class UnzipAssetsCommandWebTest extends AbstractWebTestCase {
         $this->assertEquals(0, $res);
 
         $output = $commandTester->getDisplay();
-        $this->assertContains("Trying to unzip assets", $output);
+        $this->assertStringContainsString("Trying to unzip assets", $output);
         $this->assertRegexp("/animate\.css\-.*\.zip/", $output);
         $this->assertRegexp("/fontawesome\-.*\.zip/", $output);
         $this->assertRegexp("/jquery\-.*\.zip/", $output);
@@ -60,6 +60,6 @@ class UnzipAssetsCommandWebTest extends AbstractWebTestCase {
         $this->assertRegexp("/meteocons\.zip/", $output);
         $this->assertRegexp("/sweetalert\-.*\.zip/", $output);
         $this->assertRegexp("/waitme\-.*\.zip/", $output);
-        $this->assertContains("[OK] All assets were successfully unzipped", $output);
+        $this->assertStringContainsString("[OK] All assets were successfully unzipped", $output);
     }
 }

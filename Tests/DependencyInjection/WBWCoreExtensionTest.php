@@ -152,7 +152,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         } catch (Exception $ex) {
 
             $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
-            $this->assertContains(SecurityEventListener::SERVICE_NAME, $ex->getMessage());
+            $this->assertStringContainsString(SecurityEventListener::SERVICE_NAME, $ex->getMessage());
         }
 
         // Helpers
@@ -192,7 +192,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         } catch (Exception $ex) {
 
             $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
-            $this->assertContains(self::WORLDS_WISDOM_QUOTE_PROVIDER_SERVICE_NAME, $ex->getMessage());
+            $this->assertStringContainsString(self::WORLDS_WISDOM_QUOTE_PROVIDER_SERVICE_NAME, $ex->getMessage());
         }
 
         // Twig extensions
@@ -268,7 +268,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         } catch (Exception $ex) {
 
             $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
-            $this->assertContains(UnzipAssetsCommand::SERVICE_NAME, $ex->getMessage());
+            $this->assertStringContainsString(UnzipAssetsCommand::SERVICE_NAME, $ex->getMessage());
         }
     }
 
@@ -292,7 +292,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         } catch (Exception $ex) {
 
             $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
-            $this->assertContains(KernelEventListener::SERVICE_NAME, $ex->getMessage());
+            $this->assertStringContainsString(KernelEventListener::SERVICE_NAME, $ex->getMessage());
         }
     }
 
@@ -316,7 +316,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         } catch (Exception $ex) {
 
             $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
-            $this->assertContains(RedColorProvider::SERVICE_NAME, $ex->getMessage());
+            $this->assertStringContainsString(RedColorProvider::SERVICE_NAME, $ex->getMessage());
         }
     }
 
@@ -340,7 +340,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         } catch (Exception $ex) {
 
             $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
-            $this->assertContains(QuoteTwigExtension::SERVICE_NAME, $ex->getMessage());
+            $this->assertStringContainsString(QuoteTwigExtension::SERVICE_NAME, $ex->getMessage());
         }
     }
 }
