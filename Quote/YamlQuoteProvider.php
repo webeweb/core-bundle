@@ -28,17 +28,17 @@ class YamlQuoteProvider extends AbstractQuoteProvider {
     /**
      * Filename.
      *
-     * @var string
+     * @var string|null
      */
     private $filename;
 
     /**
      * Constructor.
      *
-     * @param string $filename The filename.
+     * @param string|null $filename The filename.
      * @throws FileNotFoundException Throws a file not found exception.
      */
-    public function __construct(string $filename) {
+    public function __construct(?string $filename) {
         $this->setFilename($filename);
         $this->setQuotes([]);
     }
@@ -53,9 +53,9 @@ class YamlQuoteProvider extends AbstractQuoteProvider {
     /**
      * Get the filename.
      *
-     * @return string Returns the filename.
+     * @return string|null Returns the filename.
      */
-    public function getFilename(): string {
+    public function getFilename(): ?string {
         return $this->filename;
     }
 
@@ -63,6 +63,10 @@ class YamlQuoteProvider extends AbstractQuoteProvider {
      * {@inheritDoc}
      */
     public function init(): void {
+
+        if (false === file_exists($this->filename)){
+            return;
+        }
 
         $fileContent = file_get_contents($this->filename);
 
@@ -85,11 +89,11 @@ class YamlQuoteProvider extends AbstractQuoteProvider {
     /**
      * Set the filename.
      *
-     * @param string $filename The filename.
+     * @param string|null $filename The filename.
      * @return YamlQuoteProvider Returns this quote provider.
      * @throws FileNotFoundException Throws a file not found exception.
      */
-    protected function setFilename(string $filename): QuoteProviderInterface {
+    protected function setFilename(?string $filename): QuoteProviderInterface {
         if (false === realpath($filename)) {
             throw new FileNotFoundException(sprintf('The file "%s" was not found', $filename));
         }

@@ -92,8 +92,8 @@ class SkeletonHelperTest extends AbstractTestCase {
         $this->assertEquals($this->directorySkeleton . "/email/layout.html.twig", $res[3]);
         $this->assertEquals($this->directorySkeleton . "/email/stylesheet.html.twig", $res[4]);
         $this->assertEquals($this->directorySkeleton . "/layout/exception.html.twig", $res[5]);
-        $this->assertEquals($this->directorySkeleton . "/layout/javascripts.html.twig", $res[5]);
-        $this->assertEquals($this->directorySkeleton . "/layout/stylesheets.html.twig", $res[6]);
+        $this->assertEquals($this->directorySkeleton . "/layout/javascripts.html.twig", $res[6]);
+        $this->assertEquals($this->directorySkeleton . "/layout/stylesheets.html.twig", $res[7]);
     }
 
     /**
