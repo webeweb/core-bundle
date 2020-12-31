@@ -16,6 +16,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ORM\EntityManagerInterface;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\LoggerInterface;
+use Swift_Mailer;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
@@ -111,6 +112,13 @@ abstract class AbstractTestCase extends TestCase {
      * @var SessionBagInterface
      */
     protected $sessionBag;
+
+    /**
+     * Swift mailer.
+     *
+     * @var Swift_Mailer
+     */
+    protected $swiftMailer;
 
     /**
      * Token
@@ -214,6 +222,9 @@ abstract class AbstractTestCase extends TestCase {
         // Set a Session bag mock.
         $this->sessionBag = $this->getMockBuilder(SessionBagInterface::class)->getMock();
 
+        // Set a Swift mailer mock.
+        $this->swiftMailer = $this->getMockBuilder(Swift_Mailer::class)->disableOriginalConstructor()->getMock();
+
         // Set a Translator mock.
         $this->translator = $this->getMockBuilder(TranslatorInterface::class)->getMock();
         $this->translator->expects($this->any())->method("trans")->willReturnCallback(function($id, array $parameters = [], $domain = null, $locale = null) {
@@ -257,6 +268,7 @@ abstract class AbstractTestCase extends TestCase {
         $this->containerBuilder->set("router", $this->router);
         $this->containerBuilder->set("session", $this->session);
         $this->containerBuilder->set("security.token_storage", $this->tokenStorage);
+        $this->containerBuilder->set("swiftmailer.mailer", $this->swiftMailer);
         $this->containerBuilder->set("translator", $this->translator);
         $this->containerBuilder->set("twig", $this->twigEnvironment);
     }
