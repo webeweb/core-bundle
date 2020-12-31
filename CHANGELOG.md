@@ -1,6 +1,26 @@
 CHANGELOG
 =========
 
+### master
+
+> IMPORTANT NOTICE: The following Symfony versions are now not supported
+> - Symfony 2.7
+> - Symfony 2.8
+> - Symfony 3.0
+> - Symfony 3.1
+> - Symfony 3.2
+> - Symfony 3.3
+> - Symfony 3.4
+
+> IMPORTANT NOTICE: The following PHP versions are now not supported
+> - PHP 5.6
+> - PHP 7.0
+
+- Add PHP 8.0 support
+- Improve PHP doc
+- Improve unit tests
+- Migrating from PHP 5.6 to PHP 7.1
+
 ### [2.19.2](https://github.com/webeweb/core-bundle/tree/v2.19.2) (2020-07-07)
 
 - Fix gTag Twig function when id is null or empty
