@@ -16,9 +16,9 @@ framework:
     session:
         storage_id: "session.storage.mock_file"
     templating:
-        engines: ["twig"]
+        engines: [ "twig" ]
     test:           ~
-    translator:     { fallbacks: ["%locale%"] }
+    translator: { fallbacks: [ "%locale%" ] }
     validation:
         enabled: false
 
@@ -59,7 +59,7 @@ monolog:
 swiftmailer:
     host:      "localhost"
     password:  null
-    spool:     { type: "memory" }
+    spool: { type: "memory" }
     transport: "smtp"
     username:  "no-reply@github.com"
 

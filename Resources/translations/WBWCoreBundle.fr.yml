@@ -25,14 +25,14 @@ navigation:
 
 syntax_highlighter:
     strings:
-        alert:                           |
-                                         SyntaxHighlighter
+        alert:                          |
+                                        SyntaxHighlighter
 
-        brush_no_html_script:            "L'interpréteur n'a pas été fait pour l'option html-script:"
-        copy_to_clipboard:               "copié dans le presse-papier"
-        copy_to_clipboard_confirmation:  "Le code est dans le presse-papier maintenant"
-        expand_source:                   "+ développer le source"
-        help:                            "?"
-        no_brush:                        "Ne trouve pas d'interpréteur pour:"
-        print:                           "imprimer"
-        view_source:                     "voir le source"
+        brush_no_html_script:           "L'interpréteur n'a pas été fait pour l'option html-script:"
+        copy_to_clipboard:              "copié dans le presse-papier"
+        copy_to_clipboard_confirmation: "Le code est dans le presse-papier maintenant"
+        expand_source:                  "+ développer le source"
+        help:                           "?"
+        no_brush:                       "Ne trouve pas d'interpréteur pour:"
+        print:                          "imprimer"
+        view_source:                    "voir le source"

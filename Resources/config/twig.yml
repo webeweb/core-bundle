@@ -2,44 +2,44 @@
 services:
 
     wbw.core.twig.extension.asset.font_awesome:
-        class:     WBW\Bundle\CoreBundle\Twig\Extension\Asset\FontAwesomeTwigExtension
-        arguments: ["@twig"]
-        public:    true
+        class:  WBW\Bundle\CoreBundle\Twig\Extension\Asset\FontAwesomeTwigExtension
+        arguments: [ "@twig" ]
+        public: true
         tags:
             - { name: "twig.extension" }
 
     wbw.core.twig.extension.asset.jquery_inputmask:
-        class:     WBW\Bundle\CoreBundle\Twig\Extension\Asset\JQueryInputMaskTwigExtension
-        arguments: ["@twig", "@wbw.core.twig.extension.renderer"]
-        public:    true
+        class:  WBW\Bundle\CoreBundle\Twig\Extension\Asset\JQueryInputMaskTwigExtension
+        arguments: [ "@twig", "@wbw.core.twig.extension.renderer" ]
+        public: true
         tags:
             - { name: "twig.extension" }
 
     wbw.core.twig.extension.asset.material_design_color_palette:
-        class:     WBW\Bundle\CoreBundle\Twig\Extension\Asset\MaterialDesignColorPaletteTwigExtension
-        arguments: ["@twig"]
-        public:    true
+        class:  WBW\Bundle\CoreBundle\Twig\Extension\Asset\MaterialDesignColorPaletteTwigExtension
+        arguments: [ "@twig" ]
+        public: true
         tags:
             - { name: "twig.extension" }
 
     wbw.core.twig.extension.asset.material_design_iconic_font:
-        class:     WBW\Bundle\CoreBundle\Twig\Extension\Asset\MaterialDesignIconicFontTwigExtension
-        arguments: ["@twig"]
-        public:    true
+        class:  WBW\Bundle\CoreBundle\Twig\Extension\Asset\MaterialDesignIconicFontTwigExtension
+        arguments: [ "@twig" ]
+        public: true
         tags:
             - { name: "twig.extension" }
 
     wbw.core.twig.extension.asset.meteocons:
-        class:      WBW\Bundle\CoreBundle\Twig\Extension\Asset\MeteoconsTwigExtension
-        arguments: ["@twig"]
-        public:     true
+        class:  WBW\Bundle\CoreBundle\Twig\Extension\Asset\MeteoconsTwigExtension
+        arguments: [ "@twig" ]
+        public: true
         tags:
             - { name: "twig.extension" }
 
     wbw.core.twig.extension.asset.syntax_highlighter:
-        class:     WBW\Bundle\CoreBundle\Twig\Extension\Asset\SyntaxHighlighterTwigExtension
-        arguments: ["@twig"]
-        public:    true
+        class:  WBW\Bundle\CoreBundle\Twig\Extension\Asset\SyntaxHighlighterTwigExtension
+        arguments: [ "@twig" ]
+        public: true
         tags:
             - { name: "twig.extension" }
 
@@ -64,36 +64,36 @@ services:
         public: true
 
     wbw.core.twig.extension.javascript:
-        class:     WBW\Bundle\CoreBundle\Twig\Extension\JavascriptTwigExtension
-        arguments: ["@twig"]
-        public:    true
+        class:  WBW\Bundle\CoreBundle\Twig\Extension\JavascriptTwigExtension
+        arguments: [ "@twig" ]
+        public: true
         tags:
             - { name: "twig.extension" }
 
     wbw.core.twig.extension.quote:
-        class:     WBW\Bundle\CoreBundle\Twig\Extension\QuoteTwigExtension
-        arguments: ["@twig", "@wbw.core.manager.quote"]
-        public:    true
+        class:  WBW\Bundle\CoreBundle\Twig\Extension\QuoteTwigExtension
+        arguments: [ "@twig", "@wbw.core.manager.quote" ]
+        public: true
         tags:
             - { name: "twig.extension" }
 
     wbw.core.twig.extension.renderer:
-        class:     WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension
-        arguments: ["@twig"]
-        public:    true
+        class:  WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension
+        arguments: [ "@twig" ]
+        public: true
         tags:
             - { name: "twig.extension" }
 
     wbw.core.twig.extension.stylesheet:
-        class:     WBW\Bundle\CoreBundle\Twig\Extension\StylesheetTwigExtension
-        arguments: ["@twig"]
-        public:    true
+        class:  WBW\Bundle\CoreBundle\Twig\Extension\StylesheetTwigExtension
+        arguments: [ "@twig" ]
+        public: true
         tags:
             - { name: "twig.extension" }
 
     wbw.core.twig.extension.utility:
-        class:     WBW\Bundle\CoreBundle\Twig\Extension\UtilityTwigExtension
-        arguments: ["@twig"]
-        public:    true
+        class:  WBW\Bundle\CoreBundle\Twig\Extension\UtilityTwigExtension
+        arguments: [ "@twig" ]
+        public: true
         tags:
             - { name: "twig.extension" }

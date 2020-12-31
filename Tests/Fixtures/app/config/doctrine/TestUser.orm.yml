@@ -6,6 +6,6 @@ WBW\Bundle\CoreBundle\Tests\Fixtures\Entity\TestUser:
 
     id:
         id:
-            name:      "id"
-            type:      "integer"
+            name: "id"
+            type: "integer"
             generator: { strategy: "auto" }

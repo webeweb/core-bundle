@@ -6,47 +6,47 @@ services:
         public: true
 
     wbw.core.helper.form:
-        class:     WBW\Bundle\CoreBundle\Helper\FormHelper
-        arguments: ["@doctrine.orm.entity_manager", "@event_dispatcher"]
-        public:    true
+        class:  WBW\Bundle\CoreBundle\Helper\FormHelper
+        arguments: [ "@doctrine.orm.entity_manager", "@event_dispatcher" ]
+        public: true
 
     wbw.core.helper.repository_report:
-        alias: "wbw.core.repository.repository_helper"
+        alias:  "wbw.core.repository.repository_helper"
         public: true
 
     wbw.core.manager.color:
-        class:     WBW\Bundle\CoreBundle\Manager\ColorManager
-        arguments: ["@logger"]
-        public:    true
+        class:  WBW\Bundle\CoreBundle\Manager\ColorManager
+        arguments: [ "@logger" ]
+        public: true
 
     wbw.core.manager.quote:
-        class:     WBW\Bundle\CoreBundle\Manager\QuoteManager
-        arguments: ["@logger"]
-        public:    true
+        class:  WBW\Bundle\CoreBundle\Manager\QuoteManager
+        arguments: [ "@logger" ]
+        public: true
 
     wbw.core.manager.theme:
-        class:     WBW\Bundle\CoreBundle\Manager\ThemeManager
-        arguments: ["@logger", "@twig"]
-        public:    true
+        class:  WBW\Bundle\CoreBundle\Manager\ThemeManager
+        arguments: [ "@logger", "@twig" ]
+        public: true
         calls:
-            - ["setApplicationThemeProvider",           ["@?wbw.core.provider.theme.application"]]
-            - ["setBreadcrumbsThemeProvider",           ["@?wbw.core.provider.theme.breadcrumbs"]]
-            - ["setHookDropDownThemeProvider",          ["@?wbw.core.provider.theme.hook_drop_down"]]
-            - ["setFooterThemeProvider",                ["@?wbw.core.provider.theme.footer"]]
-            - ["setNavigationThemeProvider",            ["@?wbw.core.provider.theme.navigation"]]
-            - ["setNotificationsDropDownThemeProvider", ["@?wbw.core.provider.theme.notifications_drop_down"]]
-            - ["setSearchThemeProvider",                ["@?wbw.core.provider.theme.search"]]
-            - ["setTasksDropDownThemeProvider",         ["@?wbw.core.provider.theme.tasks_drop_down"]]
-            - ["setUserInfoThemeProvider",              ["@?wbw.core.provider.theme.user_info"]]
+            - [ "setApplicationThemeProvider",           [ "@?wbw.core.provider.theme.application" ] ]
+            - [ "setBreadcrumbsThemeProvider",           [ "@?wbw.core.provider.theme.breadcrumbs" ] ]
+            - [ "setHookDropDownThemeProvider",          [ "@?wbw.core.provider.theme.hook_drop_down" ] ]
+            - [ "setFooterThemeProvider",                [ "@?wbw.core.provider.theme.footer" ] ]
+            - [ "setNavigationThemeProvider",            [ "@?wbw.core.provider.theme.navigation" ] ]
+            - [ "setNotificationsDropDownThemeProvider", [ "@?wbw.core.provider.theme.notifications_drop_down" ] ]
+            - [ "setSearchThemeProvider",                [ "@?wbw.core.provider.theme.search" ] ]
+            - [ "setTasksDropDownThemeProvider",         [ "@?wbw.core.provider.theme.tasks_drop_down" ] ]
+            - [ "setUserInfoThemeProvider",              [ "@?wbw.core.provider.theme.user_info" ] ]
 
     wbw.core.repository.repository_helper:
-        class:     WBW\Bundle\CoreBundle\Repository\RepositoryHelper
-        arguments: ["@doctrine.orm.entity_manager"]
-        public:    true
+        class:  WBW\Bundle\CoreBundle\Repository\RepositoryHelper
+        arguments: [ "@doctrine.orm.entity_manager" ]
+        public: true
 
     wbw.core.twig.extension.container:
-        class:     WBW\Bundle\CoreBundle\Twig\Extension\ContainerTwigExtension
-        arguments: ["@service_container"]
-        public:    true
+        class:  WBW\Bundle\CoreBundle\Twig\Extension\ContainerTwigExtension
+        arguments: [ "@service_container" ]
+        public: true
         tags:
             - { name: "twig.extension" }
