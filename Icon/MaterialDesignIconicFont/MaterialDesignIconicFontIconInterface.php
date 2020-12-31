@@ -136,105 +136,105 @@ interface MaterialDesignIconicFontIconInterface extends IconInterface {
     /**
      * Get the border.
      *
-     * @return string Returns the border.
+     * @return string|null Returns the border.
      */
-    public function getBorder();
+    public function getBorder(): ?string;
 
     /**
      * Get the fixed width.
      *
-     * @return bool Returns the fixed width.
+     * @return bool|null Returns the fixed width.
      */
-    public function getFixedWidth();
+    public function getFixedWidth(): ?bool;
 
     /**
      * Get the flip.
      *
-     * @return string Returns the flip.
+     * @return string|null Returns the flip.
      */
-    public function getFlip();
+    public function getFlip(): ?string;
 
     /**
      * Get the pull.
      *
-     * @return string Returns the pull.
+     * @return string|null Returns the pull.
      */
-    public function getPull();
+    public function getPull(): ?string;
 
     /**
      * Get the rotate.
      *
-     * @return string Returns the rotate.
+     * @return string|null Returns the rotate.
      */
-    public function getRotate();
+    public function getRotate(): ?string;
 
     /**
      * Get the size.
      *
-     * @return string Returns the size.
+     * @return string|null Returns the size.
      */
-    public function getSize();
+    public function getSize(): ?string;
 
     /**
      * Get the spin.
      *
-     * @return string Returns the spin.
+     * @return string|null Returns the spin.
      */
-    public function getSpin();
+    public function getSpin(): ?string;
 
     /**
      * Set the border.
      *
-     * @param string $border The border.
+     * @param string|null $border The border.
      * @return MaterialDesignIconicFontIconInterface Returns this icon.
      */
-    public function setBorder($border);
+    public function setBorder(?string $border): MaterialDesignIconicFontIconInterface;
 
     /**
      * Set the fixed width.
      *
-     * @param bool $fixedWidth Fixed width ?
+     * @param bool|null $fixedWidth Fixed width ?
      * @return MaterialDesignIconicFontIconInterface Returns this icon.
      */
-    public function setFixedWidth($fixedWidth);
+    public function setFixedWidth(?bool $fixedWidth): MaterialDesignIconicFontIconInterface;
 
     /**
      * Set the flip.
      *
-     * @param string $flip The flip.
+     * @param string|null $flip The flip.
      * @return MaterialDesignIconicFontIconInterface Returns this icon.
      */
-    public function setFlip($flip);
+    public function setFlip(?string $flip): MaterialDesignIconicFontIconInterface;
 
     /**
      * Set the pull.
      *
-     * @param string $pull The pull.
+     * @param string|null $pull The pull.
      * @return MaterialDesignIconicFontIconInterface Returns this icon.
      */
-    public function setPull($pull);
+    public function setPull(?string $pull): MaterialDesignIconicFontIconInterface;
 
     /**
      * Set the rotate.
      *
-     * @param string $rotate The rotate.
+     * @param string|null $rotate The rotate.
      * @return MaterialDesignIconicFontIconInterface Returns this icon.
      */
-    public function setRotate($rotate);
+    public function setRotate(?string $rotate): MaterialDesignIconicFontIconInterface;
 
     /**
      * Set the size.
      *
-     * @param string $size The size.
+     * @param string|null $size The size.
      * @return MaterialDesignIconicFontIconInterface Returns this icon.
      */
-    public function setSize($size);
+    public function setSize(?string $size): MaterialDesignIconicFontIconInterface;
 
     /**
      * Set the spin.
      *
-     * @param string $spin The spin.
+     * @param string|null $spin The spin.
      * @return MaterialDesignIconicFontIconInterface Returns this icon.
      */
-    public function setSpin($spin);
+    public function setSpin(?string $spin): MaterialDesignIconicFontIconInterface;
 }

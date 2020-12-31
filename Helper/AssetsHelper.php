@@ -30,7 +30,7 @@ class AssetsHelper {
      * @return array Returns the assets.
      * @throws InvalidArgumentException Throw an invalid argument exception if the directory is not a directory.
      */
-    protected static function listAssets($directory) {
+    protected static function listAssets(string $directory): array {
 
         if (false === is_dir($directory)) {
             throw new InvalidArgumentException(sprintf('"%s" is not a directory', $directory));
@@ -61,7 +61,7 @@ class AssetsHelper {
      * @return bool[] Returns the assets.
      * @throws InvalidArgumentException Throws an invalid argument if a directory is not a directory.
      */
-    public static function unzipAssets($src, $dst) {
+    public static function unzipAssets(string $src, string $dst): array {
 
         if (false === is_dir($dst)) {
             throw new InvalidArgumentException(sprintf('"%s" is not a directory', $dst));

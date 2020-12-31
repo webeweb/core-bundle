@@ -30,7 +30,7 @@ class FormRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderOption() {
+    public function testRenderOption(): void {
 
         $this->assertEquals("This option must implements [Translated]ChoiceLabelInterface", FormRenderer::renderOption($this));
     }
@@ -40,7 +40,7 @@ class FormRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderWithAlphabeticalTreeNodeInterface() {
+    public function testRenderWithAlphabeticalTreeNodeInterface(): void {
 
         // Set a Alphabetical tree node mock.
         $arg = $this->getMockBuilder(AlphabeticalTreeNodeInterface::class)->getMock();
@@ -54,7 +54,7 @@ class FormRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderWithChoiceInterface() {
+    public function testRenderWithChoiceInterface(): void {
 
         // Set a Choice label mock.
         $arg = $this->getMockBuilder(ChoiceLabelInterface::class)->getMock();
@@ -68,7 +68,7 @@ class FormRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderWithNull() {
+    public function testRenderWithNull(): void {
 
         $this->assertEquals("Empty selection", FormRenderer::renderOption(null));
     }
@@ -78,7 +78,7 @@ class FormRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderWithTranslatedChoiceInterface() {
+    public function testRenderWithTranslatedChoiceInterface(): void {
 
         // Set a Translated choice label mock.
         $arg = $this->getMockBuilder(TranslatedChoiceLabelInterface::class)->getMock();

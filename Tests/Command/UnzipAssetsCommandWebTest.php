@@ -29,7 +29,7 @@ class UnzipAssetsCommandWebTest extends AbstractWebTestCase {
      *
      * @return void
      */
-    public function testExecute() {
+    public function testExecute(): void {
 
         // Set an Application mock.
         $application = new Application(static::$kernel);

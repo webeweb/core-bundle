@@ -29,7 +29,7 @@ class ToastEventListenerTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a Session mock.
@@ -42,7 +42,7 @@ class ToastEventListenerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testOnToast() {
+    public function testOnToast(): void {
 
         // Set a Toast mock.
         $toast = $this->getMockBuilder(ToastInterface::class)->getMock();
@@ -60,7 +60,7 @@ class ToastEventListenerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.core.event_listener.toast", ToastEventListener::SERVICE_NAME);
 

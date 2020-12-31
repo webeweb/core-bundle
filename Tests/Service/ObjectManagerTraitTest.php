@@ -27,7 +27,7 @@ class ObjectManagerTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetObjectManager() {
+    public function testSetObjectManager(): void {
 
         $obj = new TestObjectManagerTrait();
 
@@ -40,7 +40,7 @@ class ObjectManagerTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestObjectManagerTrait();
 

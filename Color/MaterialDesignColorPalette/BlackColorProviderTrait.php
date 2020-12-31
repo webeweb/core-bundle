@@ -22,16 +22,16 @@ trait BlackColorProviderTrait {
     /**
      * Black color provider.
      *
-     * @var BlackColorProvider
+     * @var BlackColorProvider|null
      */
     private $blackColorProvider;
 
     /**
      * Get the black color provider.
      *
-     * @return BlackColorProvider Returns the black color provider.
+     * @return BlackColorProvider|null Returns the black color provider.
      */
-    public function getBlackColorProvider() {
+    public function getBlackColorProvider(): ?BlackColorProvider {
         return $this->blackColorProvider;
     }
 
@@ -40,7 +40,7 @@ trait BlackColorProviderTrait {
      *
      * @param BlackColorProvider|null $blackColorProvider The black color provider.
      */
-    protected function setBlackColorProvider(BlackColorProvider $blackColorProvider = null) {
+    protected function setBlackColorProvider(?BlackColorProvider $blackColorProvider): self {
         $this->blackColorProvider = $blackColorProvider;
         return $this;
     }

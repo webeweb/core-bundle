@@ -30,7 +30,7 @@ class IconFactory {
      *
      * @return FontAwesomeIconInterface Returns the Font Awesome icon.
      */
-    public static function newFontAwesomeIcon() {
+    public static function newFontAwesomeIcon(): FontAwesomeIconInterface {
         return new FontAwesomeIcon();
     }
 
@@ -39,7 +39,7 @@ class IconFactory {
      *
      * @return MaterialDesignIconicFontIconInterface Returns the Material Design Iconic Font icon.
      */
-    public static function newMaterialDesignIconicFontIcon() {
+    public static function newMaterialDesignIconicFontIcon(): MaterialDesignIconicFontIconInterface {
         return new MaterialDesignIconicFontIcon();
     }
 
@@ -49,7 +49,7 @@ class IconFactory {
      * @param array $args The arguments.
      * @return FontAwesomeIconInterface Returns the parsed Font Awesome icon.
      */
-    public static function parseFontAwesomeIcon(array $args) {
+    public static function parseFontAwesomeIcon(array $args): FontAwesomeIconInterface {
 
         $icon = static::newFontAwesomeIcon();
 
@@ -72,7 +72,7 @@ class IconFactory {
      * @param array $args The arguments.
      * @return MaterialDesignIconicFontIconInterface Returns the parsed Material Design Iconic Font icon.
      */
-    public static function parseMaterialDesignIconicFontIcon(array $args) {
+    public static function parseMaterialDesignIconicFontIcon(array $args): MaterialDesignIconicFontIconInterface {
 
         $icon = static::newMaterialDesignIconicFontIcon();
 

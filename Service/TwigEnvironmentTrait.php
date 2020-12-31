@@ -24,16 +24,16 @@ trait TwigEnvironmentTrait {
     /**
      * Twig environment.
      *
-     * @var Environment
+     * @var Environment|null
      */
     private $twigEnvironment;
 
     /**
      * Get the Twig environment.
      *
-     * @return Environment Returns the Twig environment.
+     * @return Environment|null Returns the Twig environment.
      */
-    public function getTwigEnvironment() {
+    public function getTwigEnvironment(): ?Environment {
         return $this->twigEnvironment;
     }
 
@@ -42,7 +42,7 @@ trait TwigEnvironmentTrait {
      *
      * @param Environment|null $twigEnvironment The Twig environment.
      */
-    protected function setTwigEnvironment(Environment $twigEnvironment = null) {
+    protected function setTwigEnvironment(?Environment $twigEnvironment): self {
         $this->twigEnvironment = $twigEnvironment;
         return $this;
     }

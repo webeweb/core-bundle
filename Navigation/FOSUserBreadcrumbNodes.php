@@ -24,7 +24,7 @@ class FOSUserBreadcrumbNodes {
      *
      * @return BreadcrumbNode[] Returns the FOSUser breadcrumb nodes.
      */
-    public static function getFontAwesomeBreadcrumbNodes() {
+    public static function getFontAwesomeBreadcrumbNodes(): array {
 
         $nodes = [];
 
@@ -40,7 +40,7 @@ class FOSUserBreadcrumbNodes {
      *
      * @return BreadcrumbNode[] Returns the FOSUser breadcrumb nodes.
      */
-    public static function getMaterialDesignIconicFontBreadcrumbNodes() {
+    public static function getMaterialDesignIconicFontBreadcrumbNodes(): array {
 
         $nodes = [];
 

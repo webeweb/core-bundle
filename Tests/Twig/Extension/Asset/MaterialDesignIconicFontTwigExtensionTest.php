@@ -30,7 +30,7 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFilters() {
+    public function testGetFilters(): void {
 
         $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
 
@@ -63,7 +63,7 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
 
@@ -86,7 +86,7 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testMaterialDesignIconicFontIconFunction() {
+    public function testMaterialDesignIconicFontIconFunction(): void {
 
         $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
 
@@ -100,7 +100,7 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testMaterialDesignIconicFontIconFunctionWithoutArguments() {
+    public function testMaterialDesignIconicFontIconFunctionWithoutArguments(): void {
 
         $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
 
@@ -114,7 +114,7 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testMaterialDesignIconicFontListFilter() {
+    public function testMaterialDesignIconicFontListFilter(): void {
 
         $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
 
@@ -128,7 +128,7 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testMaterialDesignIconicFontListIconFilter() {
+    public function testMaterialDesignIconicFontListIconFilter(): void {
 
         $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
 
@@ -142,7 +142,7 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testMaterialDesignIconicFontListIconFilterWithContent() {
+    public function testMaterialDesignIconicFontListIconFilterWithContent(): void {
 
         $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
 
@@ -156,7 +156,7 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderIcon() {
+    public function testRenderIcon(): void {
 
         $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
 
@@ -169,7 +169,7 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.core.twig.extension.asset.material_design_iconic_font", MaterialDesignIconicFontTwigExtension::SERVICE_NAME);
 

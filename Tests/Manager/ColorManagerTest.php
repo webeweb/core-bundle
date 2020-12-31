@@ -38,7 +38,7 @@ class ColorManagerTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a Color provider mock.
@@ -51,7 +51,7 @@ class ColorManagerTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testAddProvider() {
+    public function testAddProvider(): void {
 
         $obj = new ColorManager($this->logger);
 
@@ -65,7 +65,7 @@ class ColorManagerTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testAddProviderWithAlreadyRegisteredException() {
+    public function testAddProviderWithAlreadyRegisteredException(): void {
 
         $obj = new ColorManager($this->logger);
         $obj->addProvider($this->colorProvider);
@@ -85,7 +85,7 @@ class ColorManagerTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testContains() {
+    public function testContains(): void {
 
         $obj = new ColorManager($this->logger);
 
@@ -100,7 +100,7 @@ class ColorManagerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testContainsWithInvalidArgumentException() {
+    public function testContainsWithInvalidArgumentException(): void {
 
         // Set a Quote provider mock.
         $quoteProvider = $this->getMockBuilder(QuoteProviderInterface::class)->getMock();
@@ -122,7 +122,7 @@ class ColorManagerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.core.manager.color", ColorManager::SERVICE_NAME);
 

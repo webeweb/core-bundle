@@ -29,9 +29,9 @@ trait PurpleColorProviderTrait {
     /**
      * Get the purple color provider.
      *
-     * @return PurpleColorProvider Returns the purple color provider.
+     * @return PurpleColorProvider|null Returns the purple color provider.
      */
-    public function getPurpleColorProvider() {
+    public function getPurpleColorProvider(): ?PurpleColorProvider {
         return $this->purpleColorProvider;
     }
 
@@ -40,7 +40,7 @@ trait PurpleColorProviderTrait {
      *
      * @param PurpleColorProvider|null $purpleColorProvider The purple color provider.
      */
-    protected function setPurpleColorProvider(PurpleColorProvider $purpleColorProvider = null) {
+    protected function setPurpleColorProvider(?PurpleColorProvider $purpleColorProvider): self {
         $this->purpleColorProvider = $purpleColorProvider;
         return $this;
     }

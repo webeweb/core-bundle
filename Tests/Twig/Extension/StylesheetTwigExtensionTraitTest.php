@@ -28,7 +28,7 @@ class StylesheetTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetStylesheetTwigExtension() {
+    public function testSetStylesheetTwigExtension(): void {
 
         // Set a Stylesheet Twig extension mock.
         $stylesheetTwigExtension = new StylesheetTwigExtension($this->twigEnvironment);
@@ -44,7 +44,7 @@ class StylesheetTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__constructor() {
+    public function test__constructor(): void {
 
         $obj = new TestStylesheetTwigExtensionTrait();
 

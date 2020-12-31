@@ -22,16 +22,16 @@ trait SearchThemeProviderTrait {
     /**
      * Search theme provider.
      *
-     * @var SearchThemeProviderInterface
+     * @var SearchThemeProviderInterface|null
      */
     private $searchThemeProvider;
 
     /**
      * Get the search theme provider.
      *
-     * @return SearchThemeProviderInterface Returns the search theme provider.
+     * @return SearchThemeProviderInterface|null Returns the search theme provider.
      */
-    public function getSearchThemeProvider() {
+    public function getSearchThemeProvider(): ?SearchThemeProviderInterface {
         return $this->searchThemeProvider;
     }
 
@@ -40,7 +40,7 @@ trait SearchThemeProviderTrait {
      *
      * @param SearchThemeProviderInterface|null $searchThemeProvider The search theme provider.
      */
-    protected function setSearchThemeProvider(SearchThemeProviderInterface $searchThemeProvider = null) {
+    protected function setSearchThemeProvider(?SearchThemeProviderInterface $searchThemeProvider): self {
         $this->searchThemeProvider = $searchThemeProvider;
         return $this;
     }

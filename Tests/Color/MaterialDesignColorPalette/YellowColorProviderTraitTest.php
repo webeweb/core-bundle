@@ -28,7 +28,7 @@ class YellowColorProviderTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetYellowColorProvider() {
+    public function testSetYellowColorProvider(): void {
 
         // Set a Yellow color provider mock.
         $yellowColorProvider = new YellowColorProvider();
@@ -44,7 +44,7 @@ class YellowColorProviderTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestYellowColorProviderTrait();
 

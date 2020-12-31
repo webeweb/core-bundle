@@ -27,7 +27,7 @@ interface ManagerInterface {
      * @param ProviderInterface $provider The provider.
      * @return ManagerInterface Returns this manager.
      */
-    public function addProvider(ProviderInterface $provider);
+    public function addProvider(ProviderInterface $provider): ManagerInterface;
 
     /**
      * Determines if this manager contains a provider.
@@ -35,14 +35,14 @@ interface ManagerInterface {
      * @param ProviderInterface $provider The provider.
      * @return bool Returns true in case of success, false otherwise.
      */
-    public function contains(ProviderInterface $provider);
+    public function contains(ProviderInterface $provider): bool;
 
     /**
      * Determines if this manager contains providers.
      *
      * @return bool Returns true in case of success, false otherwise.
      */
-    public function hasProviders();
+    public function hasProviders(): bool;
 
     /**
      * Index of a provider.
@@ -50,12 +50,12 @@ interface ManagerInterface {
      * @param ProviderInterface $provider The provider.
      * @return int Returns the index of in case of success, -1 otherwise.
      */
-    public function indexOf(ProviderInterface $provider);
+    public function indexOf(ProviderInterface $provider): int;
 
     /**
      * Size.
      *
      * @return int Returns the providers count
      */
-    public function size();
+    public function size(): int;
 }

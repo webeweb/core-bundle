@@ -22,25 +22,25 @@ trait StringEnvironmentTrait {
     /**
      * Environment.
      *
-     * @var string
+     * @var string|null
      */
     protected $environment;
 
     /**
      * Get the environment.
      *
-     * @return string Returns the environment.
+     * @return string|null Returns the environment.
      */
-    public function getEnvironment() {
+    public function getEnvironment(): ?string {
         return $this->environment;
     }
 
     /**
      * Set the environment.
      *
-     * @param string $environment The environment.
+     * @param string|null $environment The environment.
      */
-    public function setEnvironment($environment) {
+    public function setEnvironment(?string $environment): self {
         $this->environment = $environment;
         return $this;
     }

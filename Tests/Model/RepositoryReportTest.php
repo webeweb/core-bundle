@@ -27,7 +27,7 @@ class RepositoryReportTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetAvailable() {
+    public function testSetAvailable(): void {
 
         $obj = new RepositoryReport();
 
@@ -40,7 +40,7 @@ class RepositoryReportTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetAverage() {
+    public function testSetAverage(): void {
 
         $obj = new RepositoryReport();
 
@@ -53,7 +53,7 @@ class RepositoryReportTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetColumn() {
+    public function testSetColumn(): void {
 
         $obj = new RepositoryReport();
 
@@ -66,7 +66,7 @@ class RepositoryReportTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetCount() {
+    public function testSetCount(): void {
 
         $obj = new RepositoryReport();
 
@@ -79,7 +79,7 @@ class RepositoryReportTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetEntity() {
+    public function testSetEntity(): void {
 
         $obj = new RepositoryReport();
 
@@ -92,7 +92,7 @@ class RepositoryReportTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetField() {
+    public function testSetField(): void {
 
         $obj = new RepositoryReport();
 
@@ -105,7 +105,7 @@ class RepositoryReportTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetMaximum() {
+    public function testSetMaximum(): void {
 
         $obj = new RepositoryReport();
 
@@ -118,7 +118,7 @@ class RepositoryReportTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetMinimum() {
+    public function testSetMinimum(): void {
 
         $obj = new RepositoryReport();
 
@@ -131,7 +131,7 @@ class RepositoryReportTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetTable() {
+    public function testSetTable(): void {
 
         $obj = new RepositoryReport();
 
@@ -144,7 +144,7 @@ class RepositoryReportTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new RepositoryReport();
 

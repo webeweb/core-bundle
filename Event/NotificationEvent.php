@@ -34,7 +34,7 @@ class NotificationEvent extends AbstractEvent {
      * @param string $eventName The event name.
      * @param NotificationInterface $notification The notification.
      */
-    public function __construct($eventName, NotificationInterface $notification) {
+    public function __construct(string $eventName, NotificationInterface $notification) {
         parent::__construct($eventName);
         $this->setNotification($notification);
     }
@@ -44,7 +44,7 @@ class NotificationEvent extends AbstractEvent {
      *
      * @return NotificationInterface Returns the notification.
      */
-    public function getNotification() {
+    public function getNotification(): NotificationInterface {
         return $this->notification;
     }
 
@@ -54,7 +54,7 @@ class NotificationEvent extends AbstractEvent {
      * @param NotificationInterface $notification The notification.
      * @return NotificationEvent Returns this notification event.
      */
-    protected function setNotification(NotificationInterface $notification) {
+    protected function setNotification(NotificationInterface $notification): NotificationEvent {
         $this->notification = $notification;
         return $this;
     }

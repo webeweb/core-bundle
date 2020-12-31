@@ -22,16 +22,16 @@ trait ThemeManagerTrait {
     /**
      * Theme manager.
      *
-     * @var ThemeManager
+     * @var ThemeManager|null
      */
     private $themeManager;
 
     /**
      * Get the theme manager.
      *
-     * @return ThemeManager Returns the theme manager.
+     * @return ThemeManager|null Returns the theme manager.
      */
-    public function getThemeManager() {
+    public function getThemeManager(): ?ThemeManager {
         return $this->themeManager;
     }
 
@@ -40,7 +40,7 @@ trait ThemeManagerTrait {
      *
      * @param ThemeManager|null $themeManager The theme manager.
      */
-    protected function setThemeManager(ThemeManager $themeManager = null) {
+    protected function setThemeManager(?ThemeManager $themeManager): self {
         $this->themeManager = $themeManager;
         return $this;
     }

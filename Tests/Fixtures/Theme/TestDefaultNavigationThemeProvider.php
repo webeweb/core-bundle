@@ -24,7 +24,7 @@ class TestDefaultNavigationThemeProvider extends DefaultNavigationThemeProvider 
     /**
      * {@inheritDoc}
      */
-    public function translate($id, array $parameters = [], $domain = null, $locale = null) {
+    public function translate(string $id, array $parameters = [], string $domain = null, string $locale = null): string {
         return parent::translate($id, $parameters, $domain, $locale);
     }
 }

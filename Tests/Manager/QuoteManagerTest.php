@@ -37,7 +37,7 @@ class QuoteManagerTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a Quote provider mock.
@@ -51,7 +51,7 @@ class QuoteManagerTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testAddProvider() {
+    public function testAddProvider(): void {
 
         $obj = new QuoteManager($this->logger);
 
@@ -65,7 +65,7 @@ class QuoteManagerTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testAddProviderWithAlreadyRegisteredException() {
+    public function testAddProviderWithAlreadyRegisteredException(): void {
 
         $obj = new QuoteManager($this->logger);
         $obj->addProvider($this->quoteProvider);
@@ -85,7 +85,7 @@ class QuoteManagerTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testContains() {
+    public function testContains(): void {
 
         $obj = new QuoteManager($this->logger);
 
@@ -100,7 +100,7 @@ class QuoteManagerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testContainsWithInvalidArgumentException() {
+    public function testContainsWithInvalidArgumentException(): void {
 
         // Set a Color provider mock.
         $colorProvider = new RedColorProvider();
@@ -123,7 +123,7 @@ class QuoteManagerTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testGetProvider() {
+    public function testGetProvider(): void {
 
         $obj = new QuoteManager($this->logger);
         $obj->addProvider($this->quoteProvider);
@@ -137,7 +137,7 @@ class QuoteManagerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.core.manager.quote", QuoteManager::SERVICE_NAME);
 

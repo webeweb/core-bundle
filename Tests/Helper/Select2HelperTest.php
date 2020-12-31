@@ -36,7 +36,7 @@ class Select2HelperTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set an Items array mock.
@@ -52,7 +52,7 @@ class Select2HelperTest extends AbstractTestCase {
      *
      * @retrurn void
      */
-    public function testToResults() {
+    public function testToResults(): void {
 
         $res = [
             [
@@ -76,7 +76,7 @@ class Select2HelperTest extends AbstractTestCase {
      *
      * @retrurn void
      */
-    public function testToResultsWithInvalidArgumentException() {
+    public function testToResultsWithInvalidArgumentException(): void {
 
         try {
 

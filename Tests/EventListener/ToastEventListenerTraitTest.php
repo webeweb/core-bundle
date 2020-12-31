@@ -28,7 +28,7 @@ class ToastEventListenerTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetToastEventListener() {
+    public function testSetToastEventListener(): void {
 
         // Set a Toast event listener mock.
         $toastEventListener = new ToastEventListener($this->session);
@@ -44,7 +44,7 @@ class ToastEventListenerTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__constructor() {
+    public function test__constructor(): void {
 
         $obj = new TestToastEventListenerTrait();
 

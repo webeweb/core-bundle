@@ -48,7 +48,7 @@ class ColorHelper {
      * @param ColorProviderInterface $colorProvider The color provider.
      * @return string Returns the identifier.
      */
-    public static function getIdentifier(ColorProviderInterface $colorProvider) {
+    public static function getIdentifier(ColorProviderInterface $colorProvider): string {
         return implode(":", [$colorProvider->getDomain(), $colorProvider->getName()]);
     }
 
@@ -57,7 +57,7 @@ class ColorHelper {
      *
      * @return ColorProviderInterface[] Returns the Material Design Color Palette.
      */
-    public static function getMaterialDesignColorPalette() {
+    public static function getMaterialDesignColorPalette(): array {
         return [
             new RedColorProvider(),
             new PinkColorProvider(),

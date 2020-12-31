@@ -29,9 +29,9 @@ trait YellowColorProviderTrait {
     /**
      * Get the yellow color provider.
      *
-     * @return YellowColorProvider Returns the yellow color provider.
+     * @return YellowColorProvider|null Returns the yellow color provider.
      */
-    public function getYellowColorProvider() {
+    public function getYellowColorProvider(): ?YellowColorProvider {
         return $this->yellowColorProvider;
     }
 
@@ -40,7 +40,7 @@ trait YellowColorProviderTrait {
      *
      * @param YellowColorProvider|null $yellowColorProvider The yellow color provider.
      */
-    protected function setYellowColorProvider(YellowColorProvider $yellowColorProvider = null) {
+    protected function setYellowColorProvider(?YellowColorProvider $yellowColorProvider): self {
         $this->yellowColorProvider = $yellowColorProvider;
         return $this;
     }

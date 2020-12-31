@@ -22,16 +22,16 @@ trait NavigationThemeProviderTrait {
     /**
      * Navigation theme provider.
      *
-     * @var NavigationThemeProviderInterface
+     * @var NavigationThemeProviderInterface|null
      */
     private $navigationThemeProvider;
 
     /**
      * Get the navigation theme provider.
      *
-     * @return NavigationThemeProviderInterface Returns the navigation theme provider.
+     * @return NavigationThemeProviderInterface|null Returns the navigation theme provider.
      */
-    public function getNavigationThemeProvider() {
+    public function getNavigationThemeProvider(): ?NavigationThemeProviderInterface {
         return $this->navigationThemeProvider;
     }
 
@@ -40,7 +40,7 @@ trait NavigationThemeProviderTrait {
      *
      * @param NavigationThemeProviderInterface|null $navigationThemeProvider The navigation theme provider.
      */
-    protected function setNavigationThemeProvider(NavigationThemeProviderInterface $navigationThemeProvider = null) {
+    protected function setNavigationThemeProvider(?NavigationThemeProviderInterface $navigationThemeProvider): self {
         $this->navigationThemeProvider = $navigationThemeProvider;
         return $this;
     }

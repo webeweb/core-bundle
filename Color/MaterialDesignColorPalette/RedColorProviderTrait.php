@@ -29,9 +29,9 @@ trait RedColorProviderTrait {
     /**
      * Get the red color provider.
      *
-     * @return RedColorProvider Returns the red color provider.
+     * @return RedColorProvider|null Returns the red color provider.
      */
-    public function getRedColorProvider() {
+    public function getRedColorProvider(): ?RedColorProvider {
         return $this->redColorProvider;
     }
 
@@ -40,7 +40,7 @@ trait RedColorProviderTrait {
      *
      * @param RedColorProvider|null $redColorProvider The red color provider.
      */
-    protected function setRedColorProvider(RedColorProvider $redColorProvider = null) {
+    protected function setRedColorProvider(?RedColorProvider $redColorProvider): self {
         $this->redColorProvider = $redColorProvider;
         return $this;
     }

@@ -29,7 +29,7 @@ class FOSUserBreadcrumbNodesTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFontAwesomeBreadcrumbNodes() {
+    public function testGetFontAwesomeBreadcrumbNodes(): void {
 
         $res = FOSUserBreadcrumbNodes::getFontAwesomeBreadcrumbNodes();
         $this->assertCount(3, $res);
@@ -58,7 +58,7 @@ class FOSUserBreadcrumbNodesTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetMaterialDesignIconicFontBreadcrumbNodes() {
+    public function testGetMaterialDesignIconicFontBreadcrumbNodes(): void {
 
         $res = FOSUserBreadcrumbNodes::getMaterialDesignIconicFontBreadcrumbNodes();
         $this->assertCount(3, $res);

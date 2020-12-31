@@ -29,9 +29,9 @@ trait IndigoColorProviderTrait {
     /**
      * Get the indigo color provider.
      *
-     * @return IndigoColorProvider Returns the indigo color provider.
+     * @return IndigoColorProvider|null Returns the indigo color provider.
      */
-    public function getIndigoColorProvider() {
+    public function getIndigoColorProvider(): ?IndigoColorProvider {
         return $this->indigoColorProvider;
     }
 
@@ -40,7 +40,7 @@ trait IndigoColorProviderTrait {
      *
      * @param IndigoColorProvider|null $indigoColorProvider The indigo color provider.
      */
-    protected function setIndigoColorProvider(IndigoColorProvider $indigoColorProvider = null) {
+    protected function setIndigoColorProvider(?IndigoColorProvider $indigoColorProvider): self {
         $this->indigoColorProvider = $indigoColorProvider;
         return $this;
     }

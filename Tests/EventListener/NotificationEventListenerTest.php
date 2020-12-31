@@ -29,7 +29,7 @@ class NotificationEventListenerTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a Session mock.
@@ -42,7 +42,7 @@ class NotificationEventListenerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testOnNotify() {
+    public function testOnNotify(): void {
 
         // Set a Notification mock.
         $notification = $this->getMockBuilder(NotificationInterface::class)->getMock();
@@ -60,7 +60,7 @@ class NotificationEventListenerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.core.event_listener.notification", NotificationEventListener::SERVICE_NAME);
 

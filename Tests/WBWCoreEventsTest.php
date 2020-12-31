@@ -26,7 +26,7 @@ class WBWCoreEventsTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.core.event.notification.danger", WBWCoreEvents::NOTIFICATION_DANGER);
         $this->assertEquals("wbw.core.event.notification.info", WBWCoreEvents::NOTIFICATION_INFO);

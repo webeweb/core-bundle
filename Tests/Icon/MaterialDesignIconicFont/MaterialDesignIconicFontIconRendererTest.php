@@ -34,7 +34,7 @@ class MaterialDesignIconicFontIconRendererTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a Font Awesome icon mock.
@@ -56,7 +56,7 @@ class MaterialDesignIconicFontIconRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderBorder() {
+    public function testRenderBorder(): void {
 
         $res = MaterialDesignIconicFontIconRenderer::renderBorder($this->icon);
         $this->assertEquals("zmdi-hc-border", $res);
@@ -67,7 +67,7 @@ class MaterialDesignIconicFontIconRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderFixedWidth() {
+    public function testRenderFixedWidth(): void {
 
         $res = MaterialDesignIconicFontIconRenderer::renderFixedWidth($this->icon);
         $this->assertEquals("zmdi-hc-fw", $res);
@@ -78,7 +78,7 @@ class MaterialDesignIconicFontIconRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderFlip() {
+    public function testRenderFlip(): void {
 
         $res = MaterialDesignIconicFontIconRenderer::renderFlip($this->icon);
         $this->assertEquals("zmdi-hc-flip-horizontal", $res);
@@ -89,7 +89,7 @@ class MaterialDesignIconicFontIconRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderName() {
+    public function testRenderName(): void {
 
         $res = MaterialDesignIconicFontIconRenderer::renderName($this->icon);
         $this->assertEquals("zmdi-home", $res);
@@ -100,7 +100,7 @@ class MaterialDesignIconicFontIconRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderPull() {
+    public function testRenderPull(): void {
 
         $res = MaterialDesignIconicFontIconRenderer::renderPull($this->icon);
         $this->assertEquals("pull-left", $res);
@@ -111,7 +111,7 @@ class MaterialDesignIconicFontIconRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderRotate() {
+    public function testRenderRotate(): void {
 
         $res = MaterialDesignIconicFontIconRenderer::renderRotate($this->icon);
         $this->assertEquals("zmdi-hc-rotate-90", $res);
@@ -122,7 +122,7 @@ class MaterialDesignIconicFontIconRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderSize() {
+    public function testRenderSize(): void {
 
         $res = MaterialDesignIconicFontIconRenderer::renderSize($this->icon);
         $this->assertEquals("zmdi-hc-lg", $res);
@@ -133,7 +133,7 @@ class MaterialDesignIconicFontIconRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderSpin() {
+    public function testRenderSpin(): void {
 
         $res = MaterialDesignIconicFontIconRenderer::renderSpin($this->icon);
         $this->assertEquals("zmdi-hc-spin", $res);

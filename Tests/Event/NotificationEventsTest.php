@@ -27,7 +27,7 @@ class NotificationEventsTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.core.event.notification.danger", NotificationEvents::NOTIFICATION_DANGER);
         $this->assertEquals("wbw.core.event.notification.info", NotificationEvents::NOTIFICATION_INFO);

@@ -49,7 +49,7 @@ class AssetsHelperTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set the directories.
@@ -64,7 +64,7 @@ class AssetsHelperTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testListAssets() {
+    public function testListAssets(): void {
 
         // Load the YAML configuration.
         $config  = ConfigurationHelper::loadYamlConfig(getcwd() . "/DependencyInjection", "assets");
@@ -94,7 +94,7 @@ class AssetsHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testListAssetsWithInvalidArgumentException() {
+    public function testListAssetsWithInvalidArgumentException(): void {
 
         try {
 
@@ -112,7 +112,7 @@ class AssetsHelperTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testUnzipAssets() {
+    public function testUnzipAssets(): void {
 
         $res = TestAssetsHelper::unzipAssets($this->directoryAssets, $this->directoryPublic);
         $this->assertCount(14, $res);
@@ -128,7 +128,7 @@ class AssetsHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testUnzipAssetsWithInvalidArgumentException() {
+    public function testUnzipAssetsWithInvalidArgumentException(): void {
 
         try {
 

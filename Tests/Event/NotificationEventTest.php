@@ -28,7 +28,7 @@ class NotificationEventTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__constructor() {
+    public function test__constructor(): void {
 
         // Set a Notification mock.
         $notification = $this->getMockBuilder(NotificationInterface::class)->getMock();

@@ -28,7 +28,7 @@ class ToastFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewDangerToast() {
+    public function testNewDangerToast(): void {
 
         $obj = ToastFactory::newDangerToast("content");
 
@@ -42,7 +42,7 @@ class ToastFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewDefaultToast() {
+    public function testNewDefaultToast(): void {
 
         $obj = ToastFactory::newDefaultToast("content", "type");
 
@@ -56,7 +56,7 @@ class ToastFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewInfoToast() {
+    public function testNewInfoToast(): void {
 
         $obj = ToastFactory::newInfoToast("content");
 
@@ -70,7 +70,7 @@ class ToastFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewSuccessToast() {
+    public function testNewSuccessToast(): void {
 
         $obj = ToastFactory::newSuccessToast("content");
 
@@ -84,7 +84,7 @@ class ToastFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewWarningToast() {
+    public function testNewWarningToast(): void {
 
         $obj = ToastFactory::newWarningToast("content");
 

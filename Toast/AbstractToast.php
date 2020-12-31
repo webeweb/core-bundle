@@ -40,7 +40,7 @@ abstract class AbstractToast implements ToastInterface {
      * @param string $type The type.
      * @param string $content The content.
      */
-    protected function __construct($type, $content) {
+    protected function __construct(string $type, string $content) {
         $this->setContent($content);
         $this->setType($type);
     }
@@ -48,14 +48,14 @@ abstract class AbstractToast implements ToastInterface {
     /**
      * {@inheritDoc}
      */
-    public function getContent() {
+    public function getContent(): string {
         return $this->content;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getType() {
+    public function getType(): string {
         return $this->type;
     }
 
@@ -65,7 +65,7 @@ abstract class AbstractToast implements ToastInterface {
      * @param string $content The content.
      * @return ToastInterface Returns this toast.
      */
-    protected function setContent($content) {
+    protected function setContent(string $content): ToastInterface {
         $this->content = $content;
         return $this;
     }
@@ -76,7 +76,7 @@ abstract class AbstractToast implements ToastInterface {
      * @param string $type The type.
      * @return ToastInterface Returns this toast.
      */
-    protected function setType($type) {
+    protected function setType(string $type): ToastInterface {
         $this->type = $type;
         return $this;
     }

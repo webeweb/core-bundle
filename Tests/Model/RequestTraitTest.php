@@ -28,7 +28,7 @@ class RequestTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetRequest() {
+    public function testSetRequest(): void {
 
         // Set a Request mock.
         $request = new Request();
@@ -44,7 +44,7 @@ class RequestTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestRequestTrait();
 

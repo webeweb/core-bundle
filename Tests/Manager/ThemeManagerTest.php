@@ -38,7 +38,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testAddGlobal() {
+    public function testAddGlobal(): void {
 
         $obj = new ThemeManager($this->logger, $this->twigEnvironment);
 
@@ -92,7 +92,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testHasProviders() {
+    public function testHasProviders(): void {
 
         $obj = new ThemeManager($this->logger, $this->twigEnvironment);
 
@@ -108,7 +108,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testSetApplicationThemeProvider() {
+    public function testSetApplicationThemeProvider(): void {
 
         // Set a Application theme provider mock.
         $provider = $this->getMockBuilder(ApplicationThemeProviderInterface::class)->getMock();
@@ -128,7 +128,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testSetBreadcrumbsThemeProvider() {
+    public function testSetBreadcrumbsThemeProvider(): void {
 
         // Set a Breadcrumbs theme provider mock.
         $provider = $this->getMockBuilder(BreadcrumbsThemeProviderInterface::class)->getMock();
@@ -145,7 +145,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testSetFooterThemeProvider() {
+    public function testSetFooterThemeProvider(): void {
 
         // Set a Footer theme provider mock.
         $provider = $this->getMockBuilder(FooterThemeProviderInterface::class)->getMock();
@@ -162,7 +162,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testSetHookDropDownThemeProvider() {
+    public function testSetHookDropDownThemeProvider(): void {
 
         // Set a Hook drop down theme provider mock.
         $provider = $this->getMockBuilder(HookDropDownThemeProviderInterface::class)->getMock();
@@ -179,7 +179,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testSetNavigationThemeProvider() {
+    public function testSetNavigationThemeProvider(): void {
 
         // Set a Navigation theme provider mock.
         $provider = $this->getMockBuilder(NavigationThemeProviderInterface::class)->getMock();
@@ -196,7 +196,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testSetNotificationsDropDownThemeProvider() {
+    public function testSetNotificationsDropDownThemeProvider(): void {
 
         // Set a Notifications drop down theme provider mock.
         $provider = $this->getMockBuilder(NotificationsDropDownThemeProviderInterface::class)->getMock();
@@ -213,7 +213,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testSetSearchThemeProvider() {
+    public function testSetSearchThemeProvider(): void {
 
         // Set a Search theme provider mock.
         $provider = $this->getMockBuilder(SearchThemeProviderInterface::class)->getMock();
@@ -230,7 +230,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testSetTasksDropDownThemeProvider() {
+    public function testSetTasksDropDownThemeProvider(): void {
 
         // Set a Tasks drop down theme provider mock.
         $provider = $this->getMockBuilder(TasksDropDownThemeProviderInterface::class)->getMock();
@@ -247,7 +247,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testSetUserInfoThemeProvider() {
+    public function testSetUserInfoThemeProvider(): void {
 
         // Set the mocks.
         $provider = $this->getMockBuilder(UserInfoThemeProviderInterface::class)->getMock();
@@ -264,7 +264,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.core.manager.theme", ThemeManager::SERVICE_NAME);
 

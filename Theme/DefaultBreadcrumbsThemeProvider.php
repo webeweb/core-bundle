@@ -31,7 +31,7 @@ class DefaultBreadcrumbsThemeProvider implements BreadcrumbsThemeProviderInterfa
     /**
      * {@inheritDoc}
      */
-    public function getView() {
+    public function getView(): ?string {
         return null;
     }
 }

@@ -22,9 +22,9 @@ interface IconRendererInterface {
     /**
      * Render an icon.
      *
-     * @param string $name The icon name.
-     * @param string $style The icon style.
+     * @param string|null $name The icon name.
+     * @param string|null $style The icon style.
      * @return string Returns a rendered icon.
      */
-    public function renderIcon($name, $style);
+    public function renderIcon(?string $name, ?string $style): string;
 }

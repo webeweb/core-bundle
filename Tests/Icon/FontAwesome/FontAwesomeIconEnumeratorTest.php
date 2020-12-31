@@ -28,7 +28,7 @@ class FontAwesomeIconEnumeratorTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testEnumAnimations() {
+    public function testEnumAnimations(): void {
 
         $res = [
             FontAwesomeIconInterface::FONT_AWESOME_ANIMATION_PULSE,
@@ -42,7 +42,7 @@ class FontAwesomeIconEnumeratorTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testEnumFonts() {
+    public function testEnumFonts(): void {
 
         $res = [
             FontAwesomeIconInterface::FONT_AWESOME_FONT,
@@ -59,7 +59,7 @@ class FontAwesomeIconEnumeratorTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testEnumPulls() {
+    public function testEnumPulls(): void {
 
         $res = [
             FontAwesomeIconInterface::FONT_AWESOME_PULL_LEFT,
@@ -73,7 +73,7 @@ class FontAwesomeIconEnumeratorTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testEnumSizes() {
+    public function testEnumSizes(): void {
 
         $res = [
             FontAwesomeIconInterface::FONT_AWESOME_SIZE_LG,

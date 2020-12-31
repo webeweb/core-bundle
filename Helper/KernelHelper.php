@@ -27,7 +27,7 @@ class KernelHelper {
      * @param KernelInterface $kernel The kernel.
      * @return string Returns the project directory.
      */
-    public static function getProjectDir(KernelInterface $kernel) {
+    public static function getProjectDir(KernelInterface $kernel): string {
 
         $method = "getProjectDir";
         if (true === method_exists($kernel, $method)) {

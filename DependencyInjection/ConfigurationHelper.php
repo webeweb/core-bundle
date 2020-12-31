@@ -32,7 +32,7 @@ class ConfigurationHelper {
      * @param string $nodeName The node name.
      * @return ArrayNodeDefinition|NodeDefinition Returns the root node.
      */
-    public static function getRootNode(TreeBuilder $treeBuilder, $nodeName) {
+    public static function getRootNode(TreeBuilder $treeBuilder, string $nodeName): NodeDefinition {
 
         $method = "getRootNode";
         if (true === method_exists($treeBuilder, $method)) {
@@ -51,7 +51,7 @@ class ConfigurationHelper {
      * @param string $filename The filename.
      * @return array Returns the YAML configuration.
      */
-    public static function loadYamlConfig($directory, $filename) {
+    public static function loadYamlConfig(string $directory, string $filename): array {
 
         $pathname = realpath($directory . "/../Resources/config/" . $filename . ".yml");
         if (false === $pathname) {
@@ -70,7 +70,7 @@ class ConfigurationHelper {
      * @param string $key The key.
      * @return void
      */
-    public static function registerContainerParameter(Container $container, array $config, $alias, $key) {
+    public static function registerContainerParameter(Container $container, array $config, string $alias, string $key): void {
         if (false === array_key_exists($key, $config)) {
             return;
         }
@@ -84,7 +84,7 @@ class ConfigurationHelper {
      * @param array $config The configuration.
      * @return void
      */
-    public static function registerContainerParameters(Container $container, array $config) {
+    public static function registerContainerParameters(Container $container, array $config): void {
         foreach ($config as $k => $v) {
             $container->setParameter($k, $v);
         }

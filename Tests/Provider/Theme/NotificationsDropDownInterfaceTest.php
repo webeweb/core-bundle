@@ -27,7 +27,7 @@ class NotificationsDropDownThemeProviderInterfaceTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.core.provider.theme.notifications_drop_down", NotificationsDropDownThemeProviderInterface::SERVICE_NAME);
     }

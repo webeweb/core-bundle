@@ -24,7 +24,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
     /**
      * {@inheritDoc}
      */
-    public static function setUpBeforeClass() {
+    public static function setUpBeforeClass(): void {
         parent::setUpBeforeClass();
 
         parent::setUpSchemaTool();
@@ -36,7 +36,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
      *
      * @return void
      */
-    public function testEmailAction() {
+    public function testEmailAction(): void {
 
         $client = $this->client;
 
@@ -50,7 +50,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
      *
      * @return void
      */
-    public function testJavascriptsAction() {
+    public function testJavascriptsAction(): void {
 
         $client = $this->client;
 
@@ -64,7 +64,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
      *
      * @return void
      */
-    public function testStylesheetsAction() {
+    public function testStylesheetsAction(): void {
 
         $client = static::createClient();
 

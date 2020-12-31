@@ -48,7 +48,7 @@ class SyntaxHighlighterStringsProvider implements ProviderInterface {
      *
      * @return SyntaxHighlighterStrings Returns the strings.
      */
-    public function getSyntaxHighlighterStrings() {
+    public function getSyntaxHighlighterStrings(): SyntaxHighlighterStrings {
 
         $strings = new SyntaxHighlighterStrings();
         $strings->setAlert($this->translate("syntax_highlighter.strings.alert"));
@@ -70,7 +70,7 @@ class SyntaxHighlighterStringsProvider implements ProviderInterface {
      * @param string $id The id.
      * @return string Returns the translation.
      */
-    protected function translate($id) {
+    protected function translate($id): string {
         return $this->getTranslator()->trans($id, [], TranslationInterface::TRANSLATION_DOMAIN);
     }
 }

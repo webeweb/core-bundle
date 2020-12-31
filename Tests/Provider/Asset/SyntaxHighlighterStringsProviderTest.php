@@ -34,7 +34,7 @@ class SyntaxHighlighterStringsProviderTest extends AbstractTestCase {
     /**
      * @{inheritdoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a Translator mock.
@@ -48,7 +48,7 @@ class SyntaxHighlighterStringsProviderTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetSyntaxHighlighterStrings() {
+    public function testGetSyntaxHighlighterStrings(): void {
 
         $obj = new SyntaxHighlighterStringsProvider($this->translator);
 
@@ -60,7 +60,7 @@ class SyntaxHighlighterStringsProviderTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.core.provider.asset.syntax_highlighter_strings", SyntaxHighlighterStringsProvider::SERVICE_NAME);
     }

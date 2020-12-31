@@ -29,9 +29,9 @@ trait PinkColorProviderTrait {
     /**
      * Get the pink color provider.
      *
-     * @return PinkColorProvider Returns the pink color provider.
+     * @return PinkColorProvider|null Returns the pink color provider.
      */
-    public function getPinkColorProvider() {
+    public function getPinkColorProvider(): ?PinkColorProvider {
         return $this->pinkColorProvider;
     }
 
@@ -40,7 +40,7 @@ trait PinkColorProviderTrait {
      *
      * @param PinkColorProvider|null $pinkColorProvider The pink color provider.
      */
-    protected function setPinkColorProvider(PinkColorProvider $pinkColorProvider = null) {
+    protected function setPinkColorProvider(?PinkColorProvider $pinkColorProvider): self {
         $this->pinkColorProvider = $pinkColorProvider;
         return $this;
     }

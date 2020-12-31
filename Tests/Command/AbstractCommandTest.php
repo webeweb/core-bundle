@@ -31,7 +31,7 @@ class AbstractCommandTest extends AbstractCommandTestCase {
      *
      * @return void
      */
-    public function testDisplayHeader() {
+    public function testDisplayHeader(): void {
 
         $obj = new TestAbstractCommand();
 
@@ -43,7 +43,7 @@ class AbstractCommandTest extends AbstractCommandTestCase {
      *
      * @return void
      */
-    public function testDisplayTitle() {
+    public function testDisplayTitle(): void {
 
         $obj = new TestAbstractCommand();
 
@@ -55,7 +55,7 @@ class AbstractCommandTest extends AbstractCommandTestCase {
      *
      * @return void
      */
-    public function testGetCheckbox() {
+    public function testGetCheckbox(): void {
 
         $obj = new TestAbstractCommand();
 
@@ -76,7 +76,7 @@ class AbstractCommandTest extends AbstractCommandTestCase {
      *
      * @return void
      */
-    public function testGetKernel() {
+    public function testGetKernel(): void {
 
         // Set an Helper set mock.
         $helperSet = $this->getMockBuilder(HelperSet::class)->disableOriginalConstructor()->getMock();
@@ -99,7 +99,7 @@ class AbstractCommandTest extends AbstractCommandTestCase {
      *
      * @return void
      */
-    public function testGetKernelWithBaseApplication() {
+    public function testGetKernelWithBaseApplication(): void {
 
         // Set an Helper set mock.
         $helperSet = $this->getMockBuilder(HelperSet::class)->disableOriginalConstructor()->getMock();
@@ -119,7 +119,7 @@ class AbstractCommandTest extends AbstractCommandTestCase {
      *
      * @return void
      */
-    public function testNewStyle() {
+    public function testNewStyle(): void {
 
         $obj = new TestAbstractCommand();
 

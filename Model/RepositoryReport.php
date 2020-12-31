@@ -32,35 +32,35 @@ class RepositoryReport {
     /**
      * Available
      *
-     * @var int
+     * @var int|null
      */
     private $available;
 
     /**
      * Column.
      *
-     * @var string
+     * @var string|null
      */
     private $column;
 
     /**
      * Entity.
      *
-     * @var string
+     * @var string|null
      */
     private $entity;
 
     /**
      * Field.
      *
-     * @var string
+     * @var string|null
      */
     private $field;
 
     /**
      * Table.
      *
-     * @var string
+     * @var string|null
      */
     private $table;
 
@@ -74,55 +74,55 @@ class RepositoryReport {
     /**
      * Get the available.
      *
-     * @return int Returns the available.
+     * @return int|null Returns the available.
      */
-    public function getAvailable() {
+    public function getAvailable(): ?int {
         return $this->available;
     }
 
     /**
      * Get the column.
      *
-     * @return string Returns the column.
+     * @return string|null Returns the column.
      */
-    public function getColumn() {
+    public function getColumn(): ?string {
         return $this->column;
     }
 
     /**
      * Get the entity.
      *
-     * @return string Returns the entity.
+     * @return string|null Returns the entity.
      */
-    public function getEntity() {
+    public function getEntity(): ?string {
         return $this->entity;
     }
 
     /**
      * Get the field.
      *
-     * @return string Returns the field.
+     * @return string|null Returns the field.
      */
-    public function getField() {
+    public function getField(): ?string {
         return $this->field;
     }
 
     /**
      * Get the table.
      *
-     * @return string Returns the table.
+     * @return string|null Returns the table.
      */
-    public function getTable() {
+    public function getTable(): ?string {
         return $this->table;
     }
 
     /**
      * Set the available.
      *
-     * @param int $available The available.
+     * @param int|null $available The available.
      * @return RepositoryReport Returns this repository report.
      */
-    public function setAvailable($available) {
+    public function setAvailable(?int $available): RepositoryReport {
         $this->available = $available;
         return $this;
     }
@@ -130,10 +130,10 @@ class RepositoryReport {
     /**
      * Set the column.
      *
-     * @param string $column The column.
+     * @param string|null $column The column.
      * @return RepositoryReport Returns this repository report.
      */
-    public function setColumn($column) {
+    public function setColumn(?string $column): RepositoryReport {
         $this->column = $column;
         return $this;
     }
@@ -141,10 +141,10 @@ class RepositoryReport {
     /**
      * Set the entity.
      *
-     * @param string $entity The entity.
+     * @param string|null $entity The entity.
      * @return RepositoryReport Returns this repository report.
      */
-    public function setEntity($entity) {
+    public function setEntity(?string $entity): RepositoryReport {
         $this->entity = $entity;
         return $this;
     }
@@ -152,10 +152,10 @@ class RepositoryReport {
     /**
      * Set the field.
      *
-     * @param string $field The field.
+     * @param string|null $field The field.
      * @return RepositoryReport Returns this repository report.
      */
-    public function setField($field) {
+    public function setField(?string $field): RepositoryReport {
         $this->field = $field;
         return $this;
     }
@@ -163,10 +163,10 @@ class RepositoryReport {
     /**
      * Set the table.
      *
-     * @param string $table The table.
+     * @param string|null $table The table.
      * @return RepositoryReport Returns this repository report.
      */
-    public function setTable($table) {
+    public function setTable(?string $table): RepositoryReport {
         $this->table = $table;
         return $this;
     }

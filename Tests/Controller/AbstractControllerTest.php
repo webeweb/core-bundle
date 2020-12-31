@@ -61,9 +61,16 @@ class AbstractControllerTest extends AbstractTestCase {
     private $repositoryHelper;
 
     /**
+     * Repository helper.
+     *
+     * @var RepositoryReportHelper
+     */
+    private $repositoryReportHelper;
+
+    /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a Form helper mock.
@@ -75,11 +82,14 @@ class AbstractControllerTest extends AbstractTestCase {
         // Set a Repository helper mock.
         $this->repositoryHelper = $this->getMockBuilder(RepositoryHelper::class)->disableOriginalConstructor()->getMock();
 
+        // Set a Repository report helper mock.
+        $this->repositoryReportHelper = $this->getMockBuilder(RepositoryReportHelper::class)->disableOriginalConstructor()->getMock();
+
         // Set the Container builder mock.
         $this->containerBuilder->set(FormHelper::SERVICE_NAME, $this->formHelper);
         $this->containerBuilder->set(KernelEventListener::SERVICE_NAME, $this->kernelEventListener);
         $this->containerBuilder->set(RepositoryHelper::SERVICE_NAME, $this->repositoryHelper);
-        $this->containerBuilder->set(RepositoryReportHelper::SERVICE_NAME, $this->repositoryHelper);
+        $this->containerBuilder->set(RepositoryReportHelper::SERVICE_NAME, $this->repositoryReportHelper);
     }
 
     /**
@@ -87,7 +97,7 @@ class AbstractControllerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetContainer() {
+    public function testGetContainer(): void {
 
         $obj = new TestAbstractController();
         $obj->setContainer($this->containerBuilder);
@@ -102,7 +112,7 @@ class AbstractControllerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetEventDispatcher() {
+    public function testGetEventDispatcher(): void {
 
         $obj = new TestAbstractController();
         $obj->setContainer($this->containerBuilder);
@@ -117,7 +127,7 @@ class AbstractControllerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFormHelper() {
+    public function testGetFormHelper(): void {
 
         $obj = new TestAbstractController();
         $obj->setContainer($this->containerBuilder);
@@ -132,7 +142,7 @@ class AbstractControllerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetKernelEventListener() {
+    public function testGetKernelEventListener(): void {
 
         $obj = new TestAbstractController();
         $obj->setContainer($this->containerBuilder);
@@ -147,7 +157,7 @@ class AbstractControllerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetLogger() {
+    public function testGetLogger(): void {
 
         $obj = new TestAbstractController();
         $obj->setContainer($this->containerBuilder);
@@ -162,7 +172,7 @@ class AbstractControllerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetRepositoryHelper() {
+    public function testGetRepositoryHelper(): void {
 
         $obj = new TestAbstractController();
         $obj->setContainer($this->containerBuilder);
@@ -177,14 +187,14 @@ class AbstractControllerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetRepositoryReportHelper() {
+    public function testGetRepositoryReportHelper(): void {
 
         $obj = new TestAbstractController();
         $obj->setContainer($this->containerBuilder);
 
         $res = $obj->getRepositoryReportHelper();
         $this->assertInstanceOf(RepositoryHelper::class, $res);
-        $this->assertSame($this->repositoryHelper, $res);
+        $this->assertSame($this->repositoryReportHelper, $res);
     }
 
     /**
@@ -192,7 +202,7 @@ class AbstractControllerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetRouter() {
+    public function testGetRouter(): void {
 
         $obj = new TestAbstractController();
         $obj->setContainer($this->containerBuilder);
@@ -207,7 +217,7 @@ class AbstractControllerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetSession() {
+    public function testGetSession(): void {
 
         $obj = new TestAbstractController();
         $obj->setContainer($this->containerBuilder);
@@ -222,7 +232,7 @@ class AbstractControllerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetTranslator() {
+    public function testGetTranslator(): void {
 
         $obj = new TestAbstractController();
         $obj->setContainer($this->containerBuilder);
@@ -238,7 +248,7 @@ class AbstractControllerTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testHasRoleOrRedirect() {
+    public function testHasRoleOrRedirect(): void {
 
         // Set the User mock.
         $this->user = $this->getMockBuilder(UserInterface::class)->getMock();
@@ -259,7 +269,7 @@ class AbstractControllerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testHasRoleOrRedirectWithBadUserRoleException() {
+    public function testHasRoleOrRedirectWithBadUserRoleException(): void {
 
         $obj = new TestAbstractController();
         $obj->setContainer($this->containerBuilder);
@@ -279,7 +289,7 @@ class AbstractControllerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNotify() {
+    public function testNotify(): void {
 
         // Set a Notification mock.
         $notification = $this->getMockBuilder(NotificationInterface::class)->getMock();
@@ -304,7 +314,7 @@ class AbstractControllerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNotifyWithoutListener() {
+    public function testNotifyWithoutListener(): void {
 
         // Set a Notification mock.
         $notification = $this->getMockBuilder(NotificationInterface::class)->getMock();
@@ -324,7 +334,7 @@ class AbstractControllerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testToast() {
+    public function testToast(): void {
 
         // Set a Toast mock.
         $toast = $this->getMockBuilder(ToastInterface::class)->getMock();
@@ -349,7 +359,7 @@ class AbstractControllerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testToastWithoutListener() {
+    public function testToastWithoutListener(): void {
 
         // Set a Toast mock.
         $toast = $this->getMockBuilder(ToastInterface::class)->getMock();
@@ -369,7 +379,7 @@ class AbstractControllerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testTranslate() {
+    public function testTranslate(): void {
 
         $obj = new TestAbstractController();
         $obj->setContainer($this->containerBuilder);

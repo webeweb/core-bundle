@@ -35,7 +35,7 @@ class TestFixtures {
      *
      * @return string[]
      */
-    public static function getImages() {
+    public static function getImages(): array {
         return [
             getcwd() . "/Tests/Fixtures/Model/TestImage_1920x1037.jpg",
             getcwd() . "/Tests/Fixtures/Model/TestImage_1920x1037.png",
@@ -63,7 +63,7 @@ class TestFixtures {
      *
      * @return NavigationTree Returns the navigation tree.
      */
-    public static function getNavigationTree() {
+    public static function getNavigationTree(): NavigationTree {
 
         $tree = new NavigationTree("tree");
 
@@ -100,7 +100,7 @@ class TestFixtures {
      * @return UserInterface[] Returns the users.
      * @throws Exception Throws an exception if an error occurs.
      */
-    public static function getUsers() {
+    public static function getUsers(): array {
 
         $fixtures   = [];
         $fixtures[] = (new TestUser())

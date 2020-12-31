@@ -46,7 +46,7 @@ class PhantomJSHelperTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a Binary path mock.
@@ -64,7 +64,7 @@ class PhantomJSHelperTest extends AbstractTestCase {
      *
      * @return void.
      */
-    public function testGetCommand() {
+    public function testGetCommand(): void {
 
         $obj = new PhantomJSHelper($this->binaryPath, $this->scriptsPath, $this->outputPath);
 
@@ -80,7 +80,7 @@ class PhantomJSHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new PhantomJSHelper($this->binaryPath, $this->scriptsPath, $this->outputPath);
 

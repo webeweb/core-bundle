@@ -28,7 +28,7 @@ class ThemeManagerTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetThemeManager() {
+    public function testSetThemeManager(): void {
 
         // Set a Theme manager mock.
         $themeManager = new ThemeManager($this->logger, $this->twigEnvironment);
@@ -44,7 +44,7 @@ class ThemeManagerTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestThemeManagerTrait();
 

@@ -22,16 +22,16 @@ trait NotificationEventListenerTrait {
     /**
      * Notification event listener.
      *
-     * @var NotificationEventListener
+     * @var NotificationEventListener|null
      */
     private $notificationEventListener;
 
     /**
      * Get the Notification event listener.
      *
-     * @return NotificationEventListener Returns the notification event listener.
+     * @return NotificationEventListener|null Returns the notification event listener.
      */
-    public function getNotificationEventListener() {
+    public function getNotificationEventListener(): ?NotificationEventListener {
         return $this->notificationEventListener;
     }
 
@@ -40,7 +40,7 @@ trait NotificationEventListenerTrait {
      *
      * @param NotificationEventListener|null $notificationEventListener The notification event listener.
      */
-    protected function setNotificationEventListener(NotificationEventListener $notificationEventListener = null) {
+    protected function setNotificationEventListener(?NotificationEventListener $notificationEventListener ): self {
         $this->notificationEventListener = $notificationEventListener;
         return $this;
     }

@@ -22,7 +22,7 @@ interface ChoiceLabelInterface {
     /**
      * Get the choice label.
      *
-     * @return string Returns the choice label.
+     * @return string|null Returns the choice label.
      */
-    public function getChoiceLabel();
+    public function getChoiceLabel(): ?string;
 }

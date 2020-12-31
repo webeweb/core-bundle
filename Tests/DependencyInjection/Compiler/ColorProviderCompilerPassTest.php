@@ -42,7 +42,7 @@ class ColorProviderCompilerPassTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a Color manager mock.
@@ -57,7 +57,7 @@ class ColorProviderCompilerPassTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testProcess() {
+    public function testProcess(): void {
 
         $obj = new ColorProviderCompilerPass();
 

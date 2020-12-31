@@ -25,21 +25,21 @@ class TestCopySkeletonCommand extends CopySkeletonCommand {
     /**
      * {@inheritDoc}
      */
-    public function displayFooter(StyleInterface $io, $exitCode, $count) {
-        return parent::displayFooter($io, $exitCode, $count);
+    public function displayFooter(StyleInterface $io, int $exitCode, int $count): void {
+        parent::displayFooter($io, $exitCode, $count);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function displayResult(StyleInterface $io, array $results) {
+    public function displayResult(StyleInterface $io, array $results): int {
         return parent::displayResult($io, $results);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getResourcesDirectory() {
+    public function getResourcesDirectory(): string {
         return parent::getResourcesDirectory();
     }
 }

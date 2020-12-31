@@ -24,24 +24,24 @@ class ActionResponse implements JsonSerializable {
     /**
      * Notify.
      *
-     * @var string
+     * @var string|null
      */
     private $notify;
 
     /**
      * Status.
      *
-     * @var int
+     * @var int|null
      */
     private $status;
 
     /**
      * Constructor.
      *
-     * @param int $status The status.
-     * @param string $notify The notify.
+     * @param int|null $status The status.
+     * @param string|null $notify The notify.
      */
-    public function __construct($status = null, $notify = null) {
+    public function __construct(int $status = null, string $notify = null) {
         $this->setNotify($notify);
         $this->setStatus($status);
     }
@@ -49,25 +49,25 @@ class ActionResponse implements JsonSerializable {
     /**
      * Get the notify.
      *
-     * @return string Returns the notify.
+     * @return string|null Returns the notify.
      */
-    public function getNotify() {
+    public function getNotify(): ?string {
         return $this->notify;
     }
 
     /**
      * Get the status.
      *
-     * @return int Returns the status.
+     * @return int|null Returns the status.
      */
-    public function getStatus() {
+    public function getStatus(): ?int {
         return $this->status;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
         return [
             "status" => $this->getStatus(),
             "notify" => $this->getNotify(),
@@ -77,10 +77,10 @@ class ActionResponse implements JsonSerializable {
     /**
      * Set the notify.
      *
-     * @param string $notify The notify.
+     * @param string|null $notify The notify.
      * @return ActionResponse Returns this action response.
      */
-    public function setNotify($notify) {
+    public function setNotify(?string $notify): ActionResponse {
         $this->notify = $notify;
         return $this;
     }
@@ -88,10 +88,10 @@ class ActionResponse implements JsonSerializable {
     /**
      * Set the status.
      *
-     * @param int $status The status.
+     * @param int|null $status The status.
      * @return ActionResponse Returns this action response.
      */
-    public function setStatus($status) {
+    public function setStatus(?int $status): ActionResponse {
         $this->status = $status;
         return $this;
     }

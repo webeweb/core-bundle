@@ -49,7 +49,7 @@ class SkeletonHelperTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set the directories.
@@ -65,10 +65,10 @@ class SkeletonHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testCopySkeleton() {
+    public function testCopySkeleton(): void {
 
         $res = SkeletonHelper::copySkeleton($this->directorySkeleton, $this->directoryResources);
-        $this->assertCount(7, $res);
+        $this->assertCount(8, $res);
 
         foreach ($res as $current) {
             $this->assertTrue($current);
@@ -81,16 +81,17 @@ class SkeletonHelperTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testListSkeleton() {
+    public function testListSkeleton(): void {
 
         $res = SkeletonHelper::listSkeleton($this->directorySkeleton);
-        $this->assertCount(7, $res);
+        $this->assertCount(8, $res);
 
         $this->assertEquals($this->directorySkeleton . "/email/content.html.twig", $res[0]);
         $this->assertEquals($this->directorySkeleton . "/email/footer.html.twig", $res[1]);
         $this->assertEquals($this->directorySkeleton . "/email/header.html.twig", $res[2]);
         $this->assertEquals($this->directorySkeleton . "/email/layout.html.twig", $res[3]);
         $this->assertEquals($this->directorySkeleton . "/email/stylesheet.html.twig", $res[4]);
+        $this->assertEquals($this->directorySkeleton . "/layout/exception.html.twig", $res[5]);
         $this->assertEquals($this->directorySkeleton . "/layout/javascripts.html.twig", $res[5]);
         $this->assertEquals($this->directorySkeleton . "/layout/stylesheets.html.twig", $res[6]);
     }
@@ -100,7 +101,7 @@ class SkeletonHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testListSkeletonWithDirectoryNotFoundException() {
+    public function testListSkeletonWithDirectoryNotFoundException(): void {
 
         try {
 

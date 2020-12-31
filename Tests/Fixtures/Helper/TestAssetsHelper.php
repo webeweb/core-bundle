@@ -24,7 +24,7 @@ class TestAssetsHelper extends AssetsHelper {
     /**
      * {@inheritDoc}
      */
-    public static function listAssets($directory) {
+    public static function listAssets(string $directory): array {
         return parent::listAssets($directory);
     }
 }

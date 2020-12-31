@@ -22,16 +22,16 @@ trait UserInfoThemeProviderTrait {
     /**
      * User info theme provider.
      *
-     * @var UserInfoThemeProviderInterface
+     * @var UserInfoThemeProviderInterface|null
      */
     private $userInfoThemeProvider;
 
     /**
      * Get the user info theme provider.
      *
-     * @return UserInfoThemeProviderInterface Returns the user info theme provider.
+     * @return UserInfoThemeProviderInterface|null Returns the user info theme provider.
      */
-    public function getUserInfoThemeProvider() {
+    public function getUserInfoThemeProvider(): ?UserInfoThemeProviderInterface {
         return $this->userInfoThemeProvider;
     }
 
@@ -40,7 +40,7 @@ trait UserInfoThemeProviderTrait {
      *
      * @param UserInfoThemeProviderInterface|null $userInfoThemeProvider The user info theme provider.
      */
-    protected function setUserInfoThemeProvider(UserInfoThemeProviderInterface $userInfoThemeProvider = null) {
+    protected function setUserInfoThemeProvider(?UserInfoThemeProviderInterface $userInfoThemeProvider): self {
         $this->userInfoThemeProvider = $userInfoThemeProvider;
         return $this;
     }

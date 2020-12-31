@@ -28,7 +28,7 @@ class ColorManagerTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetColorManager() {
+    public function testSetColorManager(): void {
 
         // Set a Color manager mock.
         $colorManager = new ColorManager($this->logger);
@@ -44,7 +44,7 @@ class ColorManagerTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestColorManagerTrait();
 

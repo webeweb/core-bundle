@@ -27,7 +27,7 @@ class AbstractIconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetName() {
+    public function testSetName(): void {
 
         $obj = new TestIcon();
 
@@ -40,7 +40,7 @@ class AbstractIconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetStyle() {
+    public function testSetStyle(): void {
 
         $obj = new TestIcon();
 
@@ -53,7 +53,7 @@ class AbstractIconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestIcon();
 

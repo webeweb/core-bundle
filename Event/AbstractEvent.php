@@ -34,7 +34,7 @@ abstract class AbstractEvent extends BaseEvent {
      *
      * @param string $eventName The event name.
      */
-    protected function __construct($eventName) {
+    protected function __construct(string $eventName) {
         $this->setEventName($eventName);
     }
 
@@ -43,7 +43,7 @@ abstract class AbstractEvent extends BaseEvent {
      *
      * @return string Returns the event name.
      */
-    public function getEventName() {
+    public function getEventName(): string {
         return $this->eventName;
     }
 
@@ -53,7 +53,7 @@ abstract class AbstractEvent extends BaseEvent {
      * @param string $eventName The event name.
      * @return AbstractEvent Returns this event.
      */
-    protected function setEventName($eventName) {
+    protected function setEventName(string $eventName): AbstractEvent {
         $this->eventName = $eventName;
         return $this;
     }

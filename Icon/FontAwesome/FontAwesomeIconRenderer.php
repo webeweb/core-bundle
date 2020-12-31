@@ -27,7 +27,7 @@ class FontAwesomeIconRenderer extends IconRenderer {
      * @param FontAwesomeIconInterface $icon The icon.
      * @return string|null Returns the rendered animation in case of success, null otherwise.
      */
-    public static function renderAnimation(FontAwesomeIconInterface $icon) {
+    public static function renderAnimation(FontAwesomeIconInterface $icon): ?string {
         return null !== $icon->getAnimation() ? "fa-" . $icon->getAnimation() : null;
     }
 
@@ -37,7 +37,7 @@ class FontAwesomeIconRenderer extends IconRenderer {
      * @param FontAwesomeIconInterface $icon The icon.
      * @return string|null Returns the rendered bordered in case of success, null otherwise.
      */
-    public static function renderBordered(FontAwesomeIconInterface $icon) {
+    public static function renderBordered(FontAwesomeIconInterface $icon): ?string {
         return true === $icon->getBordered() ? "fa-border" : null;
     }
 
@@ -47,7 +47,7 @@ class FontAwesomeIconRenderer extends IconRenderer {
      * @param FontAwesomeIconInterface $icon The icon.
      * @return string|null Returns the rendered fixed width in case of success, null otherwise.
      */
-    public static function renderFixedWidth(FontAwesomeIconInterface $icon) {
+    public static function renderFixedWidth(FontAwesomeIconInterface $icon): ?string {
         return true === $icon->getFixedWidth() ? "fa-fw" : null;
     }
 
@@ -57,7 +57,7 @@ class FontAwesomeIconRenderer extends IconRenderer {
      * @param FontAwesomeIconInterface $icon The icon.
      * @return string Returns the rendered font.
      */
-    public static function renderFont(FontAwesomeIconInterface $icon) {
+    public static function renderFont(FontAwesomeIconInterface $icon): ?string {
         return "fa" . $icon->getFont();
     }
 
@@ -67,7 +67,7 @@ class FontAwesomeIconRenderer extends IconRenderer {
      * @param FontAwesomeIconInterface $icon The icon.
      * @return string|null Returns the rendered name in case of success, false otherwise.
      */
-    public static function renderName(FontAwesomeIconInterface $icon) {
+    public static function renderName(FontAwesomeIconInterface $icon): ?string {
         return null !== $icon->getName() ? "fa-" . $icon->getName() : null;
     }
 
@@ -77,7 +77,7 @@ class FontAwesomeIconRenderer extends IconRenderer {
      * @param FontAwesomeIconInterface $icon The icon.
      * @return string|null Returns the rendered pull in case of success, null otherwise.
      */
-    public static function renderPull(FontAwesomeIconInterface $icon) {
+    public static function renderPull(FontAwesomeIconInterface $icon): ?string {
         return null !== $icon->getPull() ? "fa-pull-" . $icon->getPull() : null;
     }
 
@@ -87,7 +87,7 @@ class FontAwesomeIconRenderer extends IconRenderer {
      * @param FontAwesomeIconInterface $icon The icon.
      * @return string|null Returns the rendered size in case of success, null otherwise.
      */
-    public static function renderSize(FontAwesomeIconInterface $icon) {
+    public static function renderSize(FontAwesomeIconInterface $icon): ?string {
         return null !== $icon->getSize() ? "fa-" . $icon->getSize() : null;
     }
 }

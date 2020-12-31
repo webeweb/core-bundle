@@ -22,63 +22,63 @@ class EmailLayout {
     /**
      * Account settings URL.
      *
-     * @var string
+     * @var string|null
      */
     private $accountSettingsURL;
 
     /**
      * Best regards.
      *
-     * @var string
+     * @var string|null
      */
     private $bestRegards;
 
     /**
      * Company logo.
      *
-     * @var string
+     * @var string|null
      */
     private $companyLogo;
 
     /**
      * Company name.
      *
-     * @var string
+     * @var string|null
      */
     private $companyName;
 
     /**
      * Company URL.
      *
-     * @var string
+     * @var string|null
      */
     private $companyURL;
 
     /**
      * Support email.
      *
-     * @var string
+     * @var string|null
      */
     private $supportEmail;
 
     /**
      * Support name.
      *
-     * @var string
+     * @var string|null
      */
     private $supportName;
 
     /**
      * Support phone.
      *
-     * @var string
+     * @var string|null
      */
     private $supportPhone;
 
     /**
      * Unsubscribe URL.
      *
-     * @var string
+     * @var string|null
      */
     private $unsubscribeURL;
 
@@ -92,91 +92,91 @@ class EmailLayout {
     /**
      * Get the account settings URL.
      *
-     * @return string Returns the account settings URL.
+     * @return string|null Returns the account settings URL.
      */
-    public function getAccountSettingsURL() {
+    public function getAccountSettingsURL(): ?string {
         return $this->accountSettingsURL;
     }
 
     /**
      * Get the best regards.
      *
-     * @return string Returns the best regards.
+     * @return string|null Returns the best regards.
      */
-    public function getBestRegards() {
+    public function getBestRegards(): ?string {
         return $this->bestRegards;
     }
 
     /**
      * Get the company logo.
      *
-     * @return string Returns the company logo.
+     * @return string|null Returns the company logo.
      */
-    public function getCompanyLogo() {
+    public function getCompanyLogo(): ?string {
         return $this->companyLogo;
     }
 
     /**
      * Get the company name.
      *
-     * @return string Returns the company name.
+     * @return string|null Returns the company name.
      */
-    public function getCompanyName() {
+    public function getCompanyName(): ?string {
         return $this->companyName;
     }
 
     /**
      * Get the company URL.
      *
-     * @return string Returns the company URL.
+     * @return string|null Returns the company URL.
      */
-    public function getCompanyURL() {
+    public function getCompanyURL(): ?string {
         return $this->companyURL;
     }
 
     /**
      * Get the support email.
      *
-     * @return string Returns the support email.
+     * @return string|null Returns the support email.
      */
-    public function getSupportEmail() {
+    public function getSupportEmail(): ?string {
         return $this->supportEmail;
     }
 
     /**
      * Get the support name.
      *
-     * @return string Returns the support name.
+     * @return string|null Returns the support name.
      */
-    public function getSupportName() {
+    public function getSupportName(): ?string {
         return $this->supportName;
     }
 
     /**
      * Get the support phone.
      *
-     * @return string Returns the support phone.
+     * @return string|null Returns the support phone.
      */
-    public function getSupportPhone() {
+    public function getSupportPhone(): ?string {
         return $this->supportPhone;
     }
 
     /**
      * Get the unsubscribe URL.
      *
-     * @return string Returns the unsubscribe URL.
+     * @return string|null Returns the unsubscribe URL.
      */
-    public function getUnsubscribeURL() {
+    public function getUnsubscribeURL(): ?string {
         return $this->unsubscribeURL;
     }
 
     /**
      * Set the account settings URL.
      *
-     * @param string $accountSettingsURL The account settings URL.
+     * @param string|null $accountSettingsURL The account settings URL.
      * @return EmailLayout Returns this email layout.
      */
-    public function setAccountSettingsURL($accountSettingsURL) {
+    public function setAccountSettingsURL(?string $accountSettingsURL): EmailLayout {
         $this->accountSettingsURL = $accountSettingsURL;
         return $this;
     }
@@ -184,10 +184,10 @@ class EmailLayout {
     /**
      * Set the best regards.
      *
-     * @param string $bestRegards The best regards.
+     * @param string|null $bestRegards The best regards.
      * @return EmailLayout Returns this email layout.
      */
-    public function setBestRegards($bestRegards) {
+    public function setBestRegards(?string $bestRegards): EmailLayout {
         $this->bestRegards = $bestRegards;
         return $this;
     }
@@ -195,10 +195,10 @@ class EmailLayout {
     /**
      * Set the company logo.
      *
-     * @param string $companyLogo The company logo.
+     * @param string|null $companyLogo The company logo.
      * @return EmailLayout Returns this email layout.
      */
-    public function setCompanyLogo($companyLogo) {
+    public function setCompanyLogo(?string $companyLogo): EmailLayout {
         $this->companyLogo = $companyLogo;
         return $this;
     }
@@ -206,10 +206,10 @@ class EmailLayout {
     /**
      * Set the company name.
      *
-     * @param string $companyName The company name.
+     * @param string|null $companyName The company name.
      * @return EmailLayout Returns this email layout.
      */
-    public function setCompanyName($companyName) {
+    public function setCompanyName(?string $companyName): EmailLayout {
         $this->companyName = $companyName;
         return $this;
     }
@@ -217,10 +217,10 @@ class EmailLayout {
     /**
      * Set the company URL.
      *
-     * @param string $companyURL The company URL.
+     * @param string|null $companyURL The company URL.
      * @return EmailLayout Returns this email layout.
      */
-    public function setCompanyURL($companyURL) {
+    public function setCompanyURL(?string $companyURL): EmailLayout {
         $this->companyURL = $companyURL;
         return $this;
     }
@@ -228,10 +228,10 @@ class EmailLayout {
     /**
      * Set the support email.
      *
-     * @param string $supportEmail The support email.
+     * @param string|null $supportEmail The support email.
      * @return EmailLayout Returns this email layout.
      */
-    public function setSupportEmail($supportEmail) {
+    public function setSupportEmail(?string $supportEmail): EmailLayout {
         $this->supportEmail = $supportEmail;
         return $this;
     }
@@ -239,10 +239,10 @@ class EmailLayout {
     /**
      * Set the support name.
      *
-     * @param string $supportName The support name.
+     * @param string|null $supportName The support name.
      * @return EmailLayout Returns this email layout.
      */
-    public function setSupportName($supportName) {
+    public function setSupportName(?string $supportName): EmailLayout {
         $this->supportName = $supportName;
         return $this;
     }
@@ -250,10 +250,10 @@ class EmailLayout {
     /**
      * Set the support phone.
      *
-     * @param string $supportPhone The support phone.
+     * @param string|null $supportPhone The support phone.
      * @return EmailLayout Returns this email layout.
      */
-    public function setSupportPhone($supportPhone) {
+    public function setSupportPhone(?string $supportPhone): EmailLayout {
         $this->supportPhone = $supportPhone;
         return $this;
     }
@@ -261,10 +261,10 @@ class EmailLayout {
     /**
      * Set the unsubscribe URL.
      *
-     * @param string $unsubscribeURL The unsubscribe URL.
+     * @param string|null $unsubscribeURL The unsubscribe URL.
      * @return EmailLayout Returns this email layout.
      */
-    public function setUnsubscribeURL($unsubscribeURL) {
+    public function setUnsubscribeURL(?string $unsubscribeURL): EmailLayout {
         $this->unsubscribeURL = $unsubscribeURL;
         return $this;
     }

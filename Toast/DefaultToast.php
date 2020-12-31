@@ -25,7 +25,7 @@ class DefaultToast extends AbstractToast {
      * @param string $type The type.
      * @param string $content The content.
      */
-    public function __construct($type, $content) {
+    public function __construct(string $type, string $content) {
         parent::__construct($type, $content);
     }
 }

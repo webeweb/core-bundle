@@ -26,21 +26,21 @@ abstract class AbstractKernel extends Kernel {
     /**
      * {@inheritDoc}
      */
-    public function getCacheDir() {
+    public function getCacheDir(): string {
         return getcwd() . "/Tests/Fixtures/app/var/cache";
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getLogDir() {
+    public function getLogDir(): string {
         return getcwd() . "/Tests/Fixtures/app/var/logs";
     }
 
     /**
      * {@inheritDoc}
      */
-    public function registerContainerConfiguration(LoaderInterface $loader) {
+    public function registerContainerConfiguration(LoaderInterface $loader): void {
         $loader->load(getcwd() . "/Tests/Fixtures/app/config/config_test.yml");
     }
 }

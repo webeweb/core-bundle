@@ -61,10 +61,11 @@ class FormHelper {
      * @param string $notification The notification.
      * @param string $redirectURL The redirect URL.
      * @param int $expected The expected count.
+     * @return void
      * @throws InvalidArgumentException Throws an invalid argument exception if collection is null.
      * @throws RedirectResponseException Throws a redirect response exception if the collection count is less than $expected.
      */
-    public function checkCollection($collection, $notification, $redirectURL, $expected = 1) {
+    public function checkCollection($collection, string $notification, string $redirectURL, int $expected = 1): void {
 
         if (null === $collection || (false === is_array($collection) && false === ($collection instanceof Countable))) {
             throw new InvalidArgumentException("The collection must be a countable");
@@ -89,7 +90,7 @@ class FormHelper {
      * @param Collection $newCollection The new collection.
      * @return int Returns the deleted count.
      */
-    public function onPostHandleRequestWithCollection(Collection $oldCollection, Collection $newCollection) {
+    public function onPostHandleRequestWithCollection(Collection $oldCollection, Collection $newCollection): int {
         $deleted = 0;
         foreach ($oldCollection as $current) {
             if (true === $newCollection->contains($current)) {
@@ -107,7 +108,7 @@ class FormHelper {
      * @param Collection $collection The collection.
      * @return Collection Returns the cloned collection.
      */
-    public function onPreHandleRequestWithCollection(Collection $collection) {
+    public function onPreHandleRequestWithCollection(Collection $collection): Collection {
         $output = new ArrayCollection();
         foreach ($collection as $current) {
             $output->add($current);

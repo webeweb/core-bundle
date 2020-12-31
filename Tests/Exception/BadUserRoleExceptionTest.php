@@ -28,7 +28,7 @@ class BadUserRoleExceptionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $user        = new User("anonymous", "empty");
         $roles       = ["ROLE_ADMIN", "ROLE_USER"];

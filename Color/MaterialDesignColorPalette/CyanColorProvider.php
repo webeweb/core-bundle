@@ -39,7 +39,7 @@ class CyanColorProvider extends AbstractColorProvider implements CyanColorProvid
     /**
      * {@inheritDoc}
      */
-    public function getColors() {
+    public function getColors(): array {
         return [
             self::COLOR_50   => self::CYAN_COLOR_50,
             self::COLOR_100  => self::CYAN_COLOR_100,
@@ -59,7 +59,7 @@ class CyanColorProvider extends AbstractColorProvider implements CyanColorProvid
     /**
      *{@inheritDoc}
      */
-    public function getName() {
+    public function getName(): string {
         return self::CYAN_COLOR_NAME;
     }
 }

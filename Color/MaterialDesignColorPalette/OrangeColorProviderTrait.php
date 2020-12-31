@@ -29,9 +29,9 @@ trait OrangeColorProviderTrait {
     /**
      * Get the orange color provider.
      *
-     * @return OrangeColorProvider Returns the orange color provider.
+     * @return OrangeColorProvider|null Returns the orange color provider.
      */
-    public function getOrangeColorProvider() {
+    public function getOrangeColorProvider(): ?OrangeColorProvider {
         return $this->orangeColorProvider;
     }
 
@@ -40,7 +40,7 @@ trait OrangeColorProviderTrait {
      *
      * @param OrangeColorProvider|null $orangeColorProvider The orange color provider.
      */
-    protected function setOrangeColorProvider(OrangeColorProvider $orangeColorProvider = null) {
+    protected function setOrangeColorProvider(?OrangeColorProvider $orangeColorProvider): self {
         $this->orangeColorProvider = $orangeColorProvider;
         return $this;
     }

@@ -22,16 +22,16 @@ trait BreadcrumbsThemeProviderTrait {
     /**
      * Breadcrumbs theme provider.
      *
-     * @var BreadcrumbsThemeProviderInterface
+     * @var BreadcrumbsThemeProviderInterface|null
      */
     private $breadcrumbsThemeProvider;
 
     /**
      * Get the breadcrumbs theme provider.
      *
-     * @return BreadcrumbsThemeProviderInterface Returns the breadcrumbs theme provider.
+     * @return BreadcrumbsThemeProviderInterface|null Returns the breadcrumbs theme provider.
      */
-    public function getBreadcrumbsThemeProvider() {
+    public function getBreadcrumbsThemeProvider(): ?BreadcrumbsThemeProviderInterface {
         return $this->breadcrumbsThemeProvider;
     }
 
@@ -40,7 +40,7 @@ trait BreadcrumbsThemeProviderTrait {
      *
      * @param BreadcrumbsThemeProviderInterface|null $breadcrumbsThemeProvider The breadcrumbs theme provider.
      */
-    protected function setBreadcrumbsThemeProvider(BreadcrumbsThemeProviderInterface $breadcrumbsThemeProvider = null) {
+    protected function setBreadcrumbsThemeProvider(?BreadcrumbsThemeProviderInterface $breadcrumbsThemeProvider): self {
         $this->breadcrumbsThemeProvider = $breadcrumbsThemeProvider;
         return $this;
     }

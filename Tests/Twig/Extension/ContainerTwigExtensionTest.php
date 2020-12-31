@@ -28,7 +28,7 @@ class ContainerTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetContainerParameterFunction() {
+    public function testGetContainerParameterFunction(): void {
 
         $obj = new ContainerTwigExtension($this->containerBuilder);
 
@@ -40,7 +40,7 @@ class ContainerTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFilters() {
+    public function testGetFilters(): void {
 
         $obj = new ContainerTwigExtension($this->containerBuilder);
 
@@ -53,7 +53,7 @@ class ContainerTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new ContainerTwigExtension($this->containerBuilder);
 
@@ -70,7 +70,7 @@ class ContainerTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.core.twig.extension.container", ContainerTwigExtension::SERVICE_NAME);
 

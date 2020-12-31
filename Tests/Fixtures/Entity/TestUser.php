@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Entity;
 
 use FOS\UserBundle\Model\User as BaseUser;
+use WBW\Library\Core\Model\Attribute\IntegerIdTrait;
 
 /**
  * Test user.
@@ -21,26 +22,12 @@ use FOS\UserBundle\Model\User as BaseUser;
  */
 class TestUser extends BaseUser {
 
-    /**
-     * Id.
-     *
-     * @var int
-     */
-    protected $id;
+    use IntegerIdTrait;
 
     /**
      * Constructor.
      */
     public function __construct() {
         parent::__construct();
-    }
-
-    /**
-     * Get the id.
-     *
-     * @return int Returns the id.
-     */
-    public function getId() {
-        return $this->id;
     }
 }

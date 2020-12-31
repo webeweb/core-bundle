@@ -22,28 +22,28 @@ class SyntaxHighlighterConfig {
     /**
      * Blogger mode.
      *
-     * @var bool
+     * @var bool|null
      */
     private $bloggerMode;
 
     /**
      * Strings
      *
-     * @var SyntaxHighlighterStrings
+     * @var SyntaxHighlighterStrings|null
      */
     private $strings;
 
     /**
      * Strip BRs.
      *
-     * @var bool
+     * @var bool|null
      */
     private $stripBrs;
 
     /**
      * Tag name.
      *
-     * @var string
+     * @var string|null
      */
     private $tagName;
 
@@ -59,46 +59,46 @@ class SyntaxHighlighterConfig {
     /**
      * Get the blogger mode.
      *
-     * @return bool Returns the blogger mode.
+     * @return bool|null Returns the blogger mode.
      */
-    public function getBloggerMode() {
+    public function getBloggerMode(): ?bool {
         return $this->bloggerMode;
     }
 
     /**
      * Get the strings.
      *
-     * @return SyntaxHighlighterStrings Returns the strings
+     * @return SyntaxHighlighterStrings|null Returns the strings
      */
-    public function getStrings() {
+    public function getStrings(): ?SyntaxHighlighterStrings {
         return $this->strings;
     }
 
     /**
      * Get the strip BRs.
      *
-     * @return bool Returns the strip BRs.
+     * @return bool|null Returns the strip BRs.
      */
-    public function getStripBrs() {
+    public function getStripBrs(): ?bool {
         return $this->stripBrs;
     }
 
     /**
      * Get the tag name.
      *
-     * @return string Returns the tag name.
+     * @return string|null Returns the tag name.
      */
-    public function getTagName() {
+    public function getTagName(): ?string {
         return $this->tagName;
     }
 
     /**
      * Set the blogger mode.
      *
-     * @param bool $bloggerMode The blogger mode.
+     * @param bool|null $bloggerMode The blogger mode.
      * @return SyntaxHighlighterConfig Returns this config.
      */
-    public function setBloggerMode($bloggerMode) {
+    public function setBloggerMode(?bool $bloggerMode): SyntaxHighlighterConfig {
         $this->bloggerMode = $bloggerMode;
         return $this;
     }
@@ -109,7 +109,7 @@ class SyntaxHighlighterConfig {
      * @param SyntaxHighlighterStrings|null $strings The strings.
      * @return SyntaxHighlighterConfig Returns this config.
      */
-    public function setStrings(SyntaxHighlighterStrings $strings = null) {
+    public function setStrings(?SyntaxHighlighterStrings $strings): SyntaxHighlighterConfig {
         $this->strings = $strings;
         return $this;
     }
@@ -120,7 +120,7 @@ class SyntaxHighlighterConfig {
      * @param bool $stripBrs The strip BRs.
      * @return SyntaxHighlighterConfig Returns this config.
      */
-    public function setStripBrs($stripBrs) {
+    public function setStripBrs(?string $stripBrs): SyntaxHighlighterConfig {
         $this->stripBrs = $stripBrs;
         return $this;
     }
@@ -128,10 +128,10 @@ class SyntaxHighlighterConfig {
     /**
      * Set the tag name.
      *
-     * @param string $tagName The tag name.
+     * @param string|null $tagName The tag name.
      * @return SyntaxHighlighterConfig Returns this config.
      */
-    public function setTagName($tagName) {
+    public function setTagName(?string $tagName): SyntaxHighlighterConfig {
         $this->tagName = $tagName;
         return $this;
     }

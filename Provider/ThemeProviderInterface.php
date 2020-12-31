@@ -25,5 +25,5 @@ interface ThemeProviderInterface extends ProviderInterface {
      * @return string|null Returns the view.
      * @deprecated since 2.13.0
      */
-    public function getView();
+    public function getView(): ?string;
 }

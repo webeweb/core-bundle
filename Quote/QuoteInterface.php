@@ -24,21 +24,21 @@ interface QuoteInterface {
     /**
      * Get the author.
      *
-     * @return string Returns the author.
+     * @return string|null Returns the author.
      */
-    public function getAuthor();
+    public function getAuthor(): ?string;
 
     /**
      * Get the content.
      *
-     * @return string Returns the content.
+     * @return string|null Returns the content.
      */
-    public function getContent();
+    public function getContent(): ?string;
 
     /**
      * Get the date.
      *
-     * @return DateTime Returns the date.
+     * @return DateTime|null Returns the date.
      */
-    public function getDate();
+    public function getDate(): ?DateTime;
 }

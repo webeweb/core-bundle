@@ -27,7 +27,7 @@ class TwigEnvironmentTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetTwigEnvironment() {
+    public function testSetTwigEnvironment(): void {
 
         $obj = new TestTwigEnvironmentTrait();
 
@@ -40,7 +40,7 @@ class TwigEnvironmentTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__constructor() {
+    public function test__constructor(): void {
 
         $obj = new TestTwigEnvironmentTrait();
 

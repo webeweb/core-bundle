@@ -22,16 +22,16 @@ trait FooterThemeProviderTrait {
     /**
      * Footer theme provider.
      *
-     * @var FooterThemeProviderInterface
+     * @var FooterThemeProviderInterface|null
      */
     private $footerThemeProvider;
 
     /**
      * Get the footer theme provider.
      *
-     * @return FooterThemeProviderInterface Returns the footer theme provider.
+     * @return FooterThemeProviderInterface|null Returns the footer theme provider.
      */
-    public function getFooterThemeProvider() {
+    public function getFooterThemeProvider(): ?FooterThemeProviderInterface {
         return $this->footerThemeProvider;
     }
 
@@ -40,7 +40,7 @@ trait FooterThemeProviderTrait {
      *
      * @param FooterThemeProviderInterface|null $footerThemeProvider The footer theme provider.
      */
-    protected function setFooterThemeProvider(FooterThemeProviderInterface $footerThemeProvider = null) {
+    protected function setFooterThemeProvider(?FooterThemeProviderInterface $footerThemeProvider): self {
         $this->footerThemeProvider = $footerThemeProvider;
         return $this;
     }

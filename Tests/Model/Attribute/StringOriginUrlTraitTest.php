@@ -27,7 +27,7 @@ class StringOriginUrlTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetOriginUrl() {
+    public function testSetOriginUrl(): void {
 
         $obj = new TestStringOriginUrlTrait();
 
@@ -40,7 +40,7 @@ class StringOriginUrlTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestStringOriginUrlTrait();
 

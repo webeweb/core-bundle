@@ -22,16 +22,16 @@ trait TasksDropDownThemeProviderTrait {
     /**
      * Tasks drop down theme provider.
      *
-     * @var TasksDropDownThemeProviderInterface
+     * @var TasksDropDownThemeProviderInterface|null
      */
     private $tasksDropDownThemeProvider;
 
     /**
      * Get the tasks drop down theme provider.
      *
-     * @return TasksDropDownThemeProviderInterface Returns the tasks drop down theme provider.
+     * @return TasksDropDownThemeProviderInterface|null Returns the tasks drop down theme provider.
      */
-    public function getTasksDropDownThemeProvider() {
+    public function getTasksDropDownThemeProvider(): ?TasksDropDownThemeProviderInterface {
         return $this->tasksDropDownThemeProvider;
     }
 
@@ -40,7 +40,7 @@ trait TasksDropDownThemeProviderTrait {
      *
      * @param TasksDropDownThemeProviderInterface|null $tasksDropDownThemeProvider The tasks drop down theme provider.
      */
-    protected function setTasksDropDownThemeProvider(TasksDropDownThemeProviderInterface $tasksDropDownThemeProvider = null) {
+    protected function setTasksDropDownThemeProvider(?TasksDropDownThemeProviderInterface $tasksDropDownThemeProvider): self {
         $this->tasksDropDownThemeProvider = $tasksDropDownThemeProvider;
         return $this;
     }

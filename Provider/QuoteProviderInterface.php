@@ -33,26 +33,26 @@ interface QuoteProviderInterface extends ProviderInterface {
      *
      * @return string[] Returns the authors.
      */
-    public function getAuthors();
+    public function getAuthors(): array;
 
     /**
      * Get the domain.
      *
      * @return string Returns the domain.
      */
-    public function getDomain();
+    public function getDomain(): string;
 
     /**
      * Get the quotes.
      *
      * @return QuoteInterface[] Returns the quotes.
      */
-    public function getQuotes();
+    public function getQuotes(): array;
 
     /**
      * Initializes.
      *
      * @return void
      */
-    public function init();
+    public function init(): void;
 }

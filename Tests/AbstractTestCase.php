@@ -166,7 +166,7 @@ abstract class AbstractTestCase extends TestCase {
      *
      * @return Closure Returns the dispatch() method for an EventDispatcher.
      */
-    public static function getEventDispatcherDispatchFunction() {
+    public static function getEventDispatcherDispatchFunction(): Closure {
 
         $dispatchFunction = function(BaseEvent $event, $eventName) {
             return $event;
@@ -184,7 +184,7 @@ abstract class AbstractTestCase extends TestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set an Entity manager mock.

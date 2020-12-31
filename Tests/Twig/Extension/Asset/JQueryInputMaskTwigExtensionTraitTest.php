@@ -29,7 +29,7 @@ class JQueryInputMaskTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetJQueryInputMaskTwigExtension() {
+    public function testSetJQueryInputMaskTwigExtension(): void {
 
         // Set a jQuery InputMask Twig extension mock.
         $jQueryInputMaskTwigExtension = new JQueryInputMaskTwigExtension($this->twigEnvironment, new RendererTwigExtension($this->twigEnvironment));
@@ -45,7 +45,7 @@ class JQueryInputMaskTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__constructor() {
+    public function test__constructor(): void {
 
         $obj = new TestJQueryInputMaskTwigExtensionTrait();
 

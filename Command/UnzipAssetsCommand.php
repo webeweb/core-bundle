@@ -47,7 +47,7 @@ EOT;
     /**
      * {@inheritDoc}
      */
-    protected function configure() {
+    protected function configure(): void {
         $this
             ->setName("wbw:core:unzip-assets")
             ->setDescription("Unzip assets under a public directory")
@@ -62,7 +62,7 @@ EOT;
      * @param int $count The count.
      * @return void
      */
-    protected function displayFooter(StyleInterface $io, $exitCode, $count) {
+    protected function displayFooter(StyleInterface $io, int $exitCode, int $count): void {
         if (0 < $exitCode) {
             $io->error("Some errors occurred while unzipping assets");
             return;
@@ -81,7 +81,7 @@ EOT;
      * @param array $results The results.
      * @return int Returns the exit code.
      */
-    protected function displayResult(StyleInterface $io, array $results) {
+    protected function displayResult(StyleInterface $io, array $results): int {
 
         $exitCode = 0;
 
@@ -111,7 +111,7 @@ EOT;
     /**
      * {@inheritDoc}
      */
-    protected function execute(InputInterface $input, OutputInterface $output) {
+    protected function execute(InputInterface $input, OutputInterface $output): int {
 
         $io = $this->newStyle($input, $output);
         $this->displayTitle($io, $this->getDescription());

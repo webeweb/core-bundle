@@ -37,14 +37,14 @@ class DefaultNavigationThemeProvider implements NavigationThemeProviderInterface
     /**
      * {@inheritDoc}
      */
-    public function getTree() {
+    public function getTree(): NavigationTree {
         return new NavigationTree("");
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getView() {
+    public function getView(): ?string {
         return null;
     }
 
@@ -57,7 +57,7 @@ class DefaultNavigationThemeProvider implements NavigationThemeProviderInterface
      * @param string $locale The locale.
      * @return string Returns the translated id in case of success, id otherwise.
      */
-    protected function translate($id, array $parameters = [], $domain = null, $locale = null) {
+    protected function translate(string $id, array $parameters = [], string $domain = null, string $locale = null): string {
 
         if (null === $this->getTranslator()) {
             return $id;

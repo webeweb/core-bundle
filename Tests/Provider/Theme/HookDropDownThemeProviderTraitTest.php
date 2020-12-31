@@ -28,7 +28,7 @@ class HookDropDownThemeProviderTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetHookDropDownThemeProvider() {
+    public function testSetHookDropDownThemeProvider(): void {
 
         // Set an Hook drop down theme provider mock.
         $hookDropDownThemeProvider = $this->getMockBuilder(HookDropDownThemeProviderInterface::class)->getMock();
@@ -44,7 +44,7 @@ class HookDropDownThemeProviderTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestHookDropDownThemeProviderTrait();
 

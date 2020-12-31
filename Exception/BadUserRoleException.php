@@ -43,7 +43,7 @@ class BadUserRoleException extends AbstractException {
      * @param string $redirectUrl The redirect.
      * @param string $originUrl The route.
      */
-    public function __construct(UserInterface $user, array $roles, $redirectUrl, $originUrl) {
+    public function __construct(UserInterface $user, array $roles, string $redirectUrl, string $originUrl) {
         $format = 'User "%s" is not allowed to access to "%s" with roles [%s]';
         parent::__construct(sprintf($format, $user->getUsername(), $originUrl, implode(",", $roles)), 403);
         $this->setOriginUrl($originUrl);
@@ -57,7 +57,7 @@ class BadUserRoleException extends AbstractException {
      *
      * @return array Returns the roles.
      */
-    public function getRoles() {
+    public function getRoles(): array {
         return $this->roles;
     }
 
@@ -67,7 +67,7 @@ class BadUserRoleException extends AbstractException {
      * @param array $roles The roles.
      * @return BadUserRoleException Returns this bad user role exception.
      */
-    protected function setRoles(array $roles) {
+    protected function setRoles(array $roles): BadUserRoleException {
         $this->roles = $roles;
         return $this;
     }

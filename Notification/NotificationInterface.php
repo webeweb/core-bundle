@@ -54,12 +54,12 @@ interface NotificationInterface {
      *
      * @return string Returns the content.
      */
-    public function getContent();
+    public function getContent(): string;
 
     /**
      * Get the type.
      *
      * @return string Returns the type.
      */
-    public function getType();
+    public function getType(): string;
 }

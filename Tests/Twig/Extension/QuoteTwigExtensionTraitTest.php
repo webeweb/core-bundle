@@ -29,7 +29,7 @@ class QuoteTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetQuoteTwigExtension() {
+    public function testSetQuoteTwigExtension(): void {
 
         // Set a Quote Twig extension mock.
         $quoteTwigExtension = new QuoteTwigExtension($this->twigEnvironment, new QuoteManager($this->logger));
@@ -45,7 +45,7 @@ class QuoteTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__constructor() {
+    public function test__constructor(): void {
 
         $obj = new TestQuoteTwigExtensionTrait();
 

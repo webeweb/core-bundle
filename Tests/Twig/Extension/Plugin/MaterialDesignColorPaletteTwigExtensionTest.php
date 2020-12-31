@@ -29,7 +29,7 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFilters() {
+    public function testGetFilters(): void {
 
         $obj = new MaterialDesignColorPaletteTwigExtension($this->twigEnvironment);
 
@@ -42,7 +42,7 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new MaterialDesignColorPaletteTwigExtension($this->twigEnvironment);
 
@@ -75,7 +75,7 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testMaterialDesignColorPaletteBackgroundFunction() {
+    public function testMaterialDesignColorPaletteBackgroundFunction(): void {
 
         $obj = new MaterialDesignColorPaletteTwigExtension($this->twigEnvironment);
 
@@ -89,7 +89,7 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testMaterialDesignColorPaletteBackgroundFunctionWithName() {
+    public function testMaterialDesignColorPaletteBackgroundFunctionWithName(): void {
 
         $obj = new MaterialDesignColorPaletteTwigExtension($this->twigEnvironment);
 
@@ -103,7 +103,7 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testMaterialDesignColorPaletteBackgroundFunctionWithValue() {
+    public function testMaterialDesignColorPaletteBackgroundFunctionWithValue(): void {
 
         $obj = new MaterialDesignColorPaletteTwigExtension($this->twigEnvironment);
 
@@ -117,7 +117,7 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testMaterialDesignColorPaletteBackgroundFunctionWithoutArguments() {
+    public function testMaterialDesignColorPaletteBackgroundFunctionWithoutArguments(): void {
 
         $obj = new MaterialDesignColorPaletteTwigExtension($this->twigEnvironment);
 
@@ -131,7 +131,7 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testMaterialDesignColorPaletteTextFunction() {
+    public function testMaterialDesignColorPaletteTextFunction(): void {
 
         $obj = new MaterialDesignColorPaletteTwigExtension($this->twigEnvironment);
 
@@ -145,7 +145,7 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testMaterialDesignColorPaletteTextFunctionWithName() {
+    public function testMaterialDesignColorPaletteTextFunctionWithName(): void {
 
         $obj = new MaterialDesignColorPaletteTwigExtension($this->twigEnvironment);
 
@@ -159,7 +159,7 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testMaterialDesignColorPaletteTextFunctionWithValue() {
+    public function testMaterialDesignColorPaletteTextFunctionWithValue(): void {
 
         $obj = new MaterialDesignColorPaletteTwigExtension($this->twigEnvironment);
 
@@ -173,7 +173,7 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testMaterialDesignColorPaletteTextFunctionWithoutArguments() {
+    public function testMaterialDesignColorPaletteTextFunctionWithoutArguments(): void {
 
         $obj = new MaterialDesignColorPaletteTwigExtension($this->twigEnvironment);
 
@@ -187,7 +187,7 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.core.twig.extension.asset.material_design_color_palette", MaterialDesignColorPaletteTwigExtension::SERVICE_NAME);
 

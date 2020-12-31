@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Toast;
 
 use WBW\Bundle\CoreBundle\Toast\AbstractToast;
+use WBW\Bundle\CoreBundle\Toast\ToastInterface;
 
 /**
  * Test toast.
@@ -25,20 +26,20 @@ class TestToast extends AbstractToast {
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(null, null);
+        parent::__construct("t", "c");
     }
 
     /**
      * {@inheritDoc}
      */
-    public function setContent($content) {
+    public function setContent(string $content): ToastInterface {
         return parent::setContent($content);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function setType($type) {
+    public function setType(string $type): ToastInterface {
         return parent::setType($type);
     }
 }

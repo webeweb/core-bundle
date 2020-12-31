@@ -46,7 +46,7 @@ abstract class AbstractManager implements ManagerInterface {
     /**
      * {@inheritDoc}
      */
-    public function addProvider(ProviderInterface $provider) {
+    public function addProvider(ProviderInterface $provider): ManagerInterface {
         $this->providers[] = $provider;
         return $this->logInfo("A manager add a provider", ["_manager" => get_class($this), "_provider" => get_class($provider)]);
     }
@@ -54,7 +54,7 @@ abstract class AbstractManager implements ManagerInterface {
     /**
      * {@inheritDoc}
      */
-    public function contains(ProviderInterface $provider) {
+    public function contains(ProviderInterface $provider): bool {
         return -1 !== $this->indexOf($provider);
     }
 
@@ -63,21 +63,21 @@ abstract class AbstractManager implements ManagerInterface {
      *
      * @return ProviderInterface[] Returns the provider.
      */
-    public function &getProviders() {
+    public function &getProviders(): array {
         return $this->providers;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function hasProviders() {
+    public function hasProviders(): bool {
         return 0 < $this->size();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function indexOf(ProviderInterface $provider) {
+    public function indexOf(ProviderInterface $provider): int {
         for ($i = count($this->providers) - 1; 0 <= $i; --$i) {
             if ($provider !== $this->providers[$i]) {
                 continue;
@@ -94,7 +94,7 @@ abstract class AbstractManager implements ManagerInterface {
      * @param array $context The context.
      * @return ManagerInterface Returns this manager.
      */
-    protected function logInfo($message, array $context) {
+    protected function logInfo(string $message, array $context): ManagerInterface {
         if (null !== $this->getLogger()) {
             $this->getLogger()->info($message, $context);
         }
@@ -107,7 +107,7 @@ abstract class AbstractManager implements ManagerInterface {
      * @param ProviderInterface[] $providers The providers.
      * @return ManagerInterface Returns this manager.
      */
-    protected function setProviders(array $providers) {
+    protected function setProviders(array $providers): ManagerInterface {
         $this->providers = $providers;
         return $this;
     }
@@ -115,7 +115,7 @@ abstract class AbstractManager implements ManagerInterface {
     /**
      * {@inheritDoc}
      */
-    public function size() {
+    public function size(): int {
         return count($this->providers);
     }
 }

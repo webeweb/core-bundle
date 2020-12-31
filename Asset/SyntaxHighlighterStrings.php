@@ -22,63 +22,63 @@ class SyntaxHighlighterStrings {
     /**
      * Alert.
      *
-     * @var string
+     * @var string|null
      */
     private $alert;
 
     /**
      * Brush not HTML script.
      *
-     * @var string
+     * @var string|null
      */
     private $brushNotHtmlScript;
 
     /**
      * Copy to clipboard.
      *
-     * @var string
+     * @var string|null
      */
     private $copyToClipboard;
 
     /**
      * Copy to clipboard confirmation.
      *
-     * @var string
+     * @var string|null
      */
     private $copyToClipboardConfirmation;
 
     /**
      * Expand source.
      *
-     * @var string
+     * @var string|null
      */
     private $expandSource;
 
     /**
      * Help.
      *
-     * @var string
+     * @var string|null
      */
     private $help;
 
     /**
      * No brush.
      *
-     * @var string
+     * @var string|null
      */
     private $noBrush;
 
     /**
      * Print.
      *
-     * @var string
+     * @var string|null
      */
     private $print;
 
     /**
      * View source.
      *
-     * @var string
+     * @var string|null
      */
     private $viewSource;
 
@@ -100,91 +100,91 @@ class SyntaxHighlighterStrings {
     /**
      * Get the alert.
      *
-     * @return string Returns the alert.
+     * @return string|null Returns the alert.
      */
-    public function getAlert() {
+    public function getAlert(): ?string {
         return $this->alert;
     }
 
     /**
      * Get the brush not HTML script.
      *
-     * @return string Returns the brush not HTML script.
+     * @return string|null Returns the brush not HTML script.
      */
-    public function getBrushNotHtmlScript() {
+    public function getBrushNotHtmlScript(): ?string {
         return $this->brushNotHtmlScript;
     }
 
     /**
      * Get the copy to clipboard.
      *
-     * @return string Returns the copy to clipboard.
+     * @return string|null Returns the copy to clipboard.
      */
-    public function getCopyToClipboard() {
+    public function getCopyToClipboard(): ?string {
         return $this->copyToClipboard;
     }
 
     /**
      * Get the copy to clipboard confirmation.
      *
-     * @return string Returns the copy to clipboard confirmation.
+     * @return string|null Returns the copy to clipboard confirmation.
      */
-    public function getCopyToClipboardConfirmation() {
+    public function getCopyToClipboardConfirmation(): ?string {
         return $this->copyToClipboardConfirmation;
     }
 
     /**
      * Get the expand source.
      *
-     * @return string Returns the expand source.
+     * @return string|null Returns the expand source.
      */
-    public function getExpandSource() {
+    public function getExpandSource(): ?string {
         return $this->expandSource;
     }
 
     /**
      * Get the help.
      *
-     * @return string Returns the help.
+     * @return string|null Returns the help.
      */
-    public function getHelp() {
+    public function getHelp(): ?string {
         return $this->help;
     }
 
     /**
      * Get the no brush.
      *
-     * @return string Returns the no brush.
+     * @return string|null Returns the no brush.
      */
-    public function getNoBrush() {
+    public function getNoBrush(): ?string {
         return $this->noBrush;
     }
 
     /**
      * Get the print.
      *
-     * @return string Returns the print.
+     * @return string|null Returns the print.
      */
-    public function getPrint() {
+    public function getPrint(): ?string {
         return $this->print;
     }
 
     /**
      * Get the view source.
      *
-     * @return string Returns the view source.
+     * @return string|null Returns the view source.
      */
-    public function getViewSource() {
+    public function getViewSource(): ?string {
         return $this->viewSource;
     }
 
     /**
      * Set the alert.
      *
-     * @param string $alert The alert.
+     * @param string|null $alert The alert.
      * @return SyntaxHighlighterStrings Returns this strings.
      */
-    public function setAlert($alert) {
+    public function setAlert(?string $alert): SyntaxHighlighterStrings {
         $this->alert = $alert;
         return $this;
     }
@@ -192,10 +192,10 @@ class SyntaxHighlighterStrings {
     /**
      * Set the brush not HTML script.
      *
-     * @param string $brushNotHtmlScript The brush not HTML script.
+     * @param string|null $brushNotHtmlScript The brush not HTML script.
      * @return SyntaxHighlighterStrings Returns this strings.
      */
-    public function setBrushNotHtmlScript($brushNotHtmlScript) {
+    public function setBrushNotHtmlScript(?string $brushNotHtmlScript): SyntaxHighlighterStrings {
         $this->brushNotHtmlScript = $brushNotHtmlScript;
         return $this;
     }
@@ -203,10 +203,10 @@ class SyntaxHighlighterStrings {
     /**
      * Set the copy to clipboard.
      *
-     * @param string $copyToClipboard The copy to clipboard.
+     * @param string|null $copyToClipboard The copy to clipboard.
      * @return SyntaxHighlighterStrings Returns this strings.
      */
-    public function setCopyToClipboard($copyToClipboard) {
+    public function setCopyToClipboard(?string $copyToClipboard): SyntaxHighlighterStrings {
         $this->copyToClipboard = $copyToClipboard;
         return $this;
     }
@@ -214,10 +214,10 @@ class SyntaxHighlighterStrings {
     /**
      * Set the copy to clipboard confirmation.
      *
-     * @param string $copyToClipboardConfirmation The copy to clipboard confirmation.
+     * @param string|null $copyToClipboardConfirmation The copy to clipboard confirmation.
      * @return SyntaxHighlighterStrings Returns this strings.
      */
-    public function setCopyToClipboardConfirmation($copyToClipboardConfirmation) {
+    public function setCopyToClipboardConfirmation(?string $copyToClipboardConfirmation): SyntaxHighlighterStrings {
         $this->copyToClipboardConfirmation = $copyToClipboardConfirmation;
         return $this;
     }
@@ -225,10 +225,10 @@ class SyntaxHighlighterStrings {
     /**
      * Set the expand source.
      *
-     * @param string $expandSource The expand source.
+     * @param string|null $expandSource The expand source.
      * @return SyntaxHighlighterStrings Returns this strings.
      */
-    public function setExpandSource($expandSource) {
+    public function setExpandSource(?string $expandSource): SyntaxHighlighterStrings {
         $this->expandSource = $expandSource;
         return $this;
     }
@@ -236,10 +236,10 @@ class SyntaxHighlighterStrings {
     /**
      * Set the help.
      *
-     * @param string $help The help.
+     * @param string|null $help The help.
      * @return SyntaxHighlighterStrings Returns this strings.
      */
-    public function setHelp($help) {
+    public function setHelp(?string $help): SyntaxHighlighterStrings {
         $this->help = $help;
         return $this;
     }
@@ -247,10 +247,10 @@ class SyntaxHighlighterStrings {
     /**
      * Set the no brush.
      *
-     * @param string $noBrush The no brush.
+     * @param string|null $noBrush The no brush.
      * @return SyntaxHighlighterStrings Returns this strings.
      */
-    public function setNoBrush($noBrush) {
+    public function setNoBrush(?string $noBrush): SyntaxHighlighterStrings {
         $this->noBrush = $noBrush;
         return $this;
     }
@@ -258,10 +258,10 @@ class SyntaxHighlighterStrings {
     /**
      * Set the print.
      *
-     * @param string $print The print.
+     * @param string|null $print The print.
      * @return SyntaxHighlighterStrings Returns this strings.
      */
-    public function setPrint($print) {
+    public function setPrint(?string $print): SyntaxHighlighterStrings {
         $this->print = $print;
         return $this;
     }
@@ -269,10 +269,10 @@ class SyntaxHighlighterStrings {
     /**
      * Set the view source.
      *
-     * @param string $viewSource The view source.
+     * @param string|null $viewSource The view source.
      * @return SyntaxHighlighterStrings Returns this strings.
      */
-    public function setViewSource($viewSource) {
+    public function setViewSource(?string $viewSource): SyntaxHighlighterStrings {
         $this->viewSource = $viewSource;
         return $this;
     }

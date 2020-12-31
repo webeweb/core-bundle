@@ -28,7 +28,7 @@ class NotificationInterfaceTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals(WBWCoreInterface::CORE_DANGER, NotificationInterface::NOTIFICATION_DANGER);
         $this->assertEquals(WBWCoreInterface::CORE_INFO, NotificationInterface::NOTIFICATION_INFO);

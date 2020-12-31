@@ -28,7 +28,7 @@ class UserHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testHasRoles() {
+    public function testHasRoles(): void {
 
         $arg = new User("github", "github", ["ROLE_USER"]);
 

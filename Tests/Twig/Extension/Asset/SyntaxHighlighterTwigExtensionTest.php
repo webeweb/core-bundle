@@ -54,7 +54,7 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a SyntaxHighlighter config mock.
@@ -72,7 +72,7 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFilters() {
+    public function testGetFilters(): void {
 
         $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
@@ -95,7 +95,7 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
@@ -158,7 +158,7 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSyntaxHighlighterConfigFunction() {
+    public function testSyntaxHighlighterConfigFunction(): void {
 
         // Set the SyntaxHighlighter config mock.
         $this->syntaxHighlighterConfig->setBloggerMode(true);
@@ -176,7 +176,7 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSyntaxHighlighterConfigFunctionWithStrings() {
+    public function testSyntaxHighlighterConfigFunctionWithStrings(): void {
 
         // Set the SyntaxHighlighter config mock.
         $this->syntaxHighlighterConfig->setBloggerMode(true);
@@ -197,7 +197,7 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testSyntaxHighlighterContentFunction() {
+    public function testSyntaxHighlighterContentFunction(): void {
 
         $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
@@ -211,7 +211,7 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSyntaxHighlighterContentFunctionWithFileNotFoundException() {
+    public function testSyntaxHighlighterContentFunctionWithFileNotFoundException(): void {
 
         // Set a Filename mock.
         $filename = getcwd() . "/Tests/Twig/Extension/Asset/SyntaxHighlighterTwigExtensionTest";
@@ -236,7 +236,7 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testSyntaxHighlighterContentFunctionWithFilename() {
+    public function testSyntaxHighlighterContentFunctionWithFilename(): void {
 
         // Set a Filename mock.
         $filename = getcwd() . "/Tests/Twig/Extension/Asset/SyntaxHighlighterTwigExtensionTest.txt";
@@ -253,7 +253,7 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSyntaxHighlighterDefaultsFunction() {
+    public function testSyntaxHighlighterDefaultsFunction(): void {
 
         // Set the SyntaxHighlighter defaults mock.
         $this->syntaxHighlighterDefaults->setAutoLinks(false);
@@ -278,7 +278,7 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSyntaxHighlighterScriptFilter() {
+    public function testSyntaxHighlighterScriptFilter(): void {
 
         $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
@@ -291,7 +291,7 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSyntaxHighlighterStringsFunction() {
+    public function testSyntaxHighlighterStringsFunction(): void {
 
         // Set the SyntaxHighlighter strings mock.
         $this->syntaxHighlighterStrings->setAlert("SyntaxHighlighter bundle");
@@ -315,7 +315,7 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.core.twig.extension.asset.syntax_highlighter", SyntaxHighlighterTwigExtension::SERVICE_NAME);
 

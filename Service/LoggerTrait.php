@@ -24,16 +24,16 @@ trait LoggerTrait {
     /**
      * Logger.
      *
-     * @var LoggerInterface
+     * @var LoggerInterface|null
      */
     private $logger;
 
     /**
      * Get the logger.
      *
-     * @return LoggerInterface Returns the logger.
+     * @return LoggerInterface|null Returns the logger.
      */
-    public function getLogger() {
+    public function getLogger(): ?LoggerInterface {
         return $this->logger;
     }
 
@@ -42,7 +42,7 @@ trait LoggerTrait {
      *
      * @param LoggerInterface|null $logger The logger.
      */
-    protected function setLogger(LoggerInterface $logger = null) {
+    protected function setLogger(?LoggerInterface $logger): self {
         $this->logger = $logger;
         return $this;
     }

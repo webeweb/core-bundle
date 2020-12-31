@@ -33,7 +33,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a Font Awesome icon mock.
@@ -54,7 +54,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderAnimation() {
+    public function testRenderAnimation(): void {
 
         $res = FontAwesomeIconRenderer::renderAnimation($this->icon);
         $this->assertEquals("fa-spin", $res);
@@ -65,7 +65,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderBordered() {
+    public function testRenderBordered(): void {
 
         $res = FontAwesomeIconRenderer::renderBordered($this->icon);
         $this->assertEquals("fa-border", $res);
@@ -76,7 +76,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderFixedWidth() {
+    public function testRenderFixedWidth(): void {
 
         $res = FontAwesomeIconRenderer::renderFixedWidth($this->icon);
         $this->assertEquals("fa-fw", $res);
@@ -87,7 +87,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderFont() {
+    public function testRenderFont(): void {
 
         $res = FontAwesomeIconRenderer::renderFont($this->icon);
         $this->assertEquals("fas", $res);
@@ -98,7 +98,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderName() {
+    public function testRenderName(): void {
 
         $res = FontAwesomeIconRenderer::renderName($this->icon);
         $this->assertEquals("fa-home", $res);
@@ -109,7 +109,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderPull() {
+    public function testRenderPull(): void {
 
         $res = FontAwesomeIconRenderer::renderPull($this->icon);
         $this->assertEquals("fa-pull-left", $res);
@@ -120,7 +120,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderSize() {
+    public function testRenderSize(): void {
 
         $res = FontAwesomeIconRenderer::renderSize($this->icon);
         $this->assertEquals("fa-lg", $res);

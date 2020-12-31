@@ -28,7 +28,7 @@ class NotificationFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewDangerNotification() {
+    public function testNewDangerNotification(): void {
 
         $obj = NotificationFactory::newDangerNotification("content");
 
@@ -42,7 +42,7 @@ class NotificationFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewDefaultNotification() {
+    public function testNewDefaultNotification(): void {
 
         $obj = NotificationFactory::newDefaultNotification("content", "type");
 
@@ -56,7 +56,7 @@ class NotificationFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewInfoNotification() {
+    public function testNewInfoNotification(): void {
 
         $obj = NotificationFactory::newInfoNotification("content");
 
@@ -70,7 +70,7 @@ class NotificationFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewSuccessNotification() {
+    public function testNewSuccessNotification(): void {
 
         $obj = NotificationFactory::newSuccessNotification("content");
 
@@ -84,7 +84,7 @@ class NotificationFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewWarningNotification() {
+    public function testNewWarningNotification(): void {
 
         $obj = NotificationFactory::newWarningNotification("content");
 

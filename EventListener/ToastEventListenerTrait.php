@@ -22,16 +22,16 @@ trait ToastEventListenerTrait {
     /**
      * Toast event listener.
      *
-     * @var ToastEventListener
+     * @var ToastEventListener|null
      */
     private $toastEventListener;
 
     /**
      * Get the Toast event listener.
      *
-     * @return ToastEventListener Returns the toast event listener.
+     * @return ToastEventListener|null Returns the toast event listener.
      */
-    public function getToastEventListener() {
+    public function getToastEventListener(): ?ToastEventListener {
         return $this->toastEventListener;
     }
 
@@ -40,7 +40,7 @@ trait ToastEventListenerTrait {
      *
      * @param ToastEventListener|null $toastEventListener The toast event listener.
      */
-    protected function setToastEventListener(ToastEventListener $toastEventListener = null) {
+    protected function setToastEventListener(?ToastEventListener $toastEventListener ): self {
         $this->toastEventListener = $toastEventListener;
         return $this;
     }

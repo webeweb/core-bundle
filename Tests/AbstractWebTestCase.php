@@ -43,7 +43,7 @@ abstract class AbstractWebTestCase extends WebTestCase {
     /**
      * {@inheritDoc}
      */
-    protected static function getKernelClass() {
+    protected static function getKernelClass(): string {
         require_once getcwd() . "/Tests/Fixtures/app/TestKernel.php";
         return TestKernel::class;
     }
@@ -51,7 +51,7 @@ abstract class AbstractWebTestCase extends WebTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a Client mock.
@@ -61,7 +61,7 @@ abstract class AbstractWebTestCase extends WebTestCase {
     /**
      * {@inheritDoc}
      */
-    public static function setUpBeforeClass() {
+    public static function setUpBeforeClass(): void {
         parent::setUpBeforeClass();
 
         static::$kernel = static::createKernel();
@@ -82,7 +82,7 @@ abstract class AbstractWebTestCase extends WebTestCase {
      * @param string $firewallContext The firewall context.
      * @return Cookie Returns the cookie.
      */
-    protected function setUpCookie($user = "webeweb", $roles = ["ROLE_SUPER_ADMIN"], $firewallName = "main", $firewallContext = "main") {
+    protected function setUpCookie($user = "webeweb", array $roles = ["ROLE_SUPER_ADMIN"], string $firewallName = "main", string $firewallContext = "main"): Cookie {
 
         $token = new UsernamePasswordToken($user, null, $firewallName, $roles);
 
@@ -102,7 +102,7 @@ abstract class AbstractWebTestCase extends WebTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    protected static function setUpSchemaTool() {
+    protected static function setUpSchemaTool(): void {
 
         /** @var EntityManagerInterface $em */
         $em = static::$kernel->getContainer()->get("doctrine.orm.entity_manager");
@@ -120,7 +120,7 @@ abstract class AbstractWebTestCase extends WebTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    protected static function setUpUserFixtures() {
+    protected static function setUpUserFixtures(): void {
 
         /** @var EntityManagerInterface $em */
         $em = static::$kernel->getContainer()->get("doctrine.orm.entity_manager");
@@ -135,7 +135,7 @@ abstract class AbstractWebTestCase extends WebTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function tearDown() {
+    protected function tearDown(): void {
         static::$kernel->shutdown();
     }
 }

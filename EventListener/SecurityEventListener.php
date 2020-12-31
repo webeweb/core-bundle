@@ -53,7 +53,7 @@ class SecurityEventListener {
      * @param InteractiveLoginEvent $event The event.
      * @return InteractiveLoginEvent Returns the event.
      */
-    public function onInteractiveLogin(InteractiveLoginEvent $event) {
+    public function onInteractiveLogin(InteractiveLoginEvent $event): InteractiveLoginEvent {
 
         $message = $this->getTranslator()->trans("message.welcome", ["{{ username }}" => $this->getUser()->getUsername()], TranslationInterface::TRANSLATION_DOMAIN);
 

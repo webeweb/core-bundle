@@ -24,7 +24,7 @@ class DangerToast extends AbstractToast {
      *
      * @param string $content The content.
      */
-    public function __construct($content) {
+    public function __construct(string $content) {
         parent::__construct(self::TOAST_DANGER, $content);
     }
 }

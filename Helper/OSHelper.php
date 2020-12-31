@@ -24,7 +24,7 @@ class OSHelper {
      *
      * @return bool Returns true in case of success, false otherwise.
      */
-    public static function isLinux() {
+    public static function isLinux(): bool {
         return !static::isWindows();
     }
 
@@ -33,7 +33,7 @@ class OSHelper {
      *
      * @return bool Returns true in case of success, false otherwise.
      */
-    public static function isWindows() {
+    public static function isWindows(): bool {
         return "\\" === DIRECTORY_SEPARATOR;
     }
 }

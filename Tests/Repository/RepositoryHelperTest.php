@@ -31,7 +31,7 @@ class RepositoryHelperTest extends AbstractWebTestCase {
      *
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testReadRepositories() {
+    public function testReadRepositories(): void {
 
         /** @var RepositoryHelper $obj */
         $obj = static::$kernel->getContainer()->get(RepositoryHelper::SERVICE_NAME);
@@ -122,7 +122,7 @@ class RepositoryHelperTest extends AbstractWebTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         // Set an Entity manager mock.
         $entityManager = $this->getMockBuilder(EntityManagerInterface::class)->getMock();

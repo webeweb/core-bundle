@@ -20,16 +20,16 @@ namespace WBW\Bundle\CoreBundle\Entity;
 interface Select2ItemInterface {
 
     /**
-     * Get a Select2 item "Id".
+     * Get a Select2 item "id".
      *
-     * @return mixed Returns the Select2 item "Id".
+     * @return mixed Returns the Select2 item "id".
      */
     public function getSelect2ItemId();
 
     /**
-     * Get a Select2 item "Text".
+     * Get a Select2 item "text".
      *
-     * @return string Returns the Select2 item "Text".
+     * @return string Returns the Select2 item "text".
      */
-    public function getSelect2ItemText();
+    public function getSelect2ItemText(): ?string;
 }

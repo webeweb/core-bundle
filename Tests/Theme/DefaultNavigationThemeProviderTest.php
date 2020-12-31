@@ -29,7 +29,7 @@ class DefaultNavigationThemeProviderTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testTranslate() {
+    public function testTranslate(): void {
 
         $obj = new TestDefaultNavigationThemeProvider();
 
@@ -44,7 +44,7 @@ class DefaultNavigationThemeProviderTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new DefaultNavigationThemeProvider();
 

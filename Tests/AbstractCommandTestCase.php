@@ -49,7 +49,7 @@ abstract class AbstractCommandTestCase extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set an Output formatter mock.

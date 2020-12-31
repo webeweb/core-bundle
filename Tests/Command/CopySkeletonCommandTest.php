@@ -33,7 +33,7 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
      *
      * @return void
      */
-    public function testDisplayFooter() {
+    public function testDisplayFooter(): void {
 
         $obj = new TestCopySkeletonCommand();
 
@@ -45,7 +45,7 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
      *
      * @return void
      */
-    public function testDisplayFooterWithExitCode0() {
+    public function testDisplayFooterWithExitCode0(): void {
 
         $obj = new TestCopySkeletonCommand();
 
@@ -57,7 +57,7 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
      *
      * @return void
      */
-    public function testDisplayFooterWithExitCode1() {
+    public function testDisplayFooterWithExitCode1(): void {
 
         $obj = new TestCopySkeletonCommand();
 
@@ -69,7 +69,7 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
      *
      * @return void
      */
-    public function testDisplayResult() {
+    public function testDisplayResult(): void {
 
         $obj = new TestCopySkeletonCommand();
 
@@ -82,7 +82,7 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
      *
      * @return void
      */
-    public function testDisplayResultWithExitCode() {
+    public function testDisplayResultWithExitCode(): void {
 
         $obj = new TestCopySkeletonCommand();
 
@@ -99,7 +99,7 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
      *
      * @return void
      */
-    public function testGetResourcesDirectory() {
+    public function testGetResourcesDirectory(): void {
 
         // Set an Helper set mock.
         $helperSet = $this->getMockBuilder(HelperSet::class)->disableOriginalConstructor()->getMock();
@@ -124,7 +124,7 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
      *
      * @return void
      */
-    public function testGetResourcesDirectoryWithInvalidArgumentException() {
+    public function testGetResourcesDirectoryWithInvalidArgumentException(): void {
 
         // Set an Helper set mock.
         $helperSet = $this->getMockBuilder(HelperSet::class)->disableOriginalConstructor()->getMock();
@@ -151,7 +151,7 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.core.command.copy_skeleton", CopySkeletonCommand::SERVICE_NAME);
 

@@ -31,7 +31,7 @@ class DefaultFooterThemeProvider implements FooterThemeProviderInterface {
     /**
      * {@inheritDoc}
      */
-    public function getView() {
+    public function getView(): ?string {
         return null;
     }
 }

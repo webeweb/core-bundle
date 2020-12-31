@@ -28,7 +28,7 @@ class UserInfoThemeProviderTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetUserInfoThemeProvider() {
+    public function testSetUserInfoThemeProvider(): void {
 
         // Set an User info theme provider mock.
         $userInfoThemeProvider = $this->getMockBuilder(UserInfoThemeProviderInterface::class)->getMock();
@@ -44,7 +44,7 @@ class UserInfoThemeProviderTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestUserInfoThemeProviderTrait();
 

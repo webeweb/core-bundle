@@ -27,7 +27,7 @@ class EventDispatcherTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetEventDispatcher() {
+    public function testSetEventDispatcher(): void {
 
         $obj = new TestEventDispatcherTrait();
 
@@ -40,7 +40,7 @@ class EventDispatcherTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__constructor() {
+    public function test__constructor(): void {
 
         $obj = new TestEventDispatcherTrait();
 

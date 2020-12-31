@@ -31,5 +31,5 @@ interface AssetsProviderInterface extends ProviderInterface {
      *
      * @return string Returns the assets relative directory.
      */
-    public function getAssetsRelativeDirectory();
+    public function getAssetsRelativeDirectory(): string;
 }

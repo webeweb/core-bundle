@@ -29,9 +29,9 @@ trait BlueGreyColorProviderTrait {
     /**
      * Get the blue grey color provider.
      *
-     * @return BlueGreyColorProvider Returns the blue grey color provider.
+     * @return BlueGreyColorProvider|null Returns the blue grey color provider.
      */
-    public function getBlueGreyColorProvider() {
+    public function getBlueGreyColorProvider(): ?BlueGreyColorProvider {
         return $this->blueGreyColorProvider;
     }
 
@@ -40,7 +40,7 @@ trait BlueGreyColorProviderTrait {
      *
      * @param BlueGreyColorProvider|null $blueGreyColorProvider The blue grey color provider.
      */
-    protected function setBlueGreyColorProvider(BlueGreyColorProvider $blueGreyColorProvider = null) {
+    protected function setBlueGreyColorProvider(?BlueGreyColorProvider $blueGreyColorProvider): self {
         $this->blueGreyColorProvider = $blueGreyColorProvider;
         return $this;
     }

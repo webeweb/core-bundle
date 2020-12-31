@@ -33,7 +33,7 @@ class UtilityTwigExtensionTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testCalcAge() {
+    public function testCalcAge(): void {
 
         $obj = new UtilityTwigExtension($this->twigEnvironment);
 
@@ -48,7 +48,7 @@ class UtilityTwigExtensionTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testFormatDate() {
+    public function testFormatDate(): void {
 
         $obj = new UtilityTwigExtension($this->twigEnvironment);
 
@@ -62,7 +62,7 @@ class UtilityTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testFormatString() {
+    public function testFormatString(): void {
 
         $obj = new UtilityTwigExtension($this->twigEnvironment);
 
@@ -78,7 +78,7 @@ class UtilityTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFilters() {
+    public function testGetFilters(): void {
 
         $obj = new UtilityTwigExtension($this->twigEnvironment);
 
@@ -131,7 +131,7 @@ class UtilityTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new UtilityTwigExtension($this->twigEnvironment);
 
@@ -184,7 +184,7 @@ class UtilityTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testHtmlEntityDecode() {
+    public function testHtmlEntityDecode(): void {
 
         $obj = new UtilityTwigExtension($this->twigEnvironment);
 
@@ -197,7 +197,7 @@ class UtilityTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testHtmlEntityEncode() {
+    public function testHtmlEntityEncode(): void {
 
         $obj = new UtilityTwigExtension($this->twigEnvironment);
 
@@ -210,7 +210,7 @@ class UtilityTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testMd5() {
+    public function testMd5(): void {
 
         $obj = new UtilityTwigExtension($this->twigEnvironment);
 
@@ -223,7 +223,7 @@ class UtilityTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.core.twig.extension.utility", UtilityTwigExtension::SERVICE_NAME);
 

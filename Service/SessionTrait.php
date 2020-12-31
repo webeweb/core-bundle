@@ -24,16 +24,16 @@ trait SessionTrait {
     /**
      * Session.
      *
-     * @var SessionInterface
+     * @var SessionInterface|null
      */
     private $session;
 
     /**
      * Get the session.
      *
-     * @return SessionInterface Returns the session.
+     * @return SessionInterface|null Returns the session.
      */
-    public function getSession() {
+    public function getSession(): ?SessionInterface {
         return $this->session;
     }
 
@@ -42,7 +42,7 @@ trait SessionTrait {
      *
      * @param SessionInterface|null $session The session.
      */
-    protected function setSession(SessionInterface $session = null) {
+    protected function setSession(?SessionInterface $session): self {
         $this->session = $session;
         return $this;
     }

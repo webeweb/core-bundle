@@ -29,32 +29,32 @@ class PhantomJSHelper {
     /**
      * Binary path.
      *
-     * @var string
+     * @var string|null
      */
     private $binaryPath;
 
     /**
      * Output path.
      *
-     * @var string
+     * @var string|null
      */
     private $outputPath;
 
     /**
      * Scripts path.
      *
-     * @var string
+     * @var string|null
      */
     private $scriptsPath;
 
     /**
      * Constructor.
      *
-     * @param string $binaryPath The binary path.
-     * @param string $scriptsPath The scripts path.
+     * @param string|null $binaryPath The binary path.
+     * @param string|null $scriptsPath The scripts path.
      * @param string|null $outputPath The output path.
      */
-    public function __construct($binaryPath, $scriptsPath, $outputPath = null) {
+    public function __construct(?string $binaryPath, ?string $scriptsPath, $outputPath = null) {
         $this->setBinaryPath($binaryPath);
         $this->setScriptsPath($scriptsPath);
         $this->setOutputPath($outputPath);
@@ -63,18 +63,18 @@ class PhantomJSHelper {
     /**
      * Get the binary path.
      *
-     * @return string Returns the binary path.
+     * @return string|null Returns the binary path.
      */
-    public function getBinaryPath() {
+    public function getBinaryPath(): ?string {
         return $this->binaryPath;
     }
 
     /**
      * Get the command.
      *
-     * @return string Returns the command.
+     * @return string|null Returns the command.
      */
-    public function getCommand() {
+    public function getCommand(): ?string {
 
         $command = $this->getBinaryPath();
         $command .= true === OSHelper::isWindows() ? ".exe" : "";
@@ -85,28 +85,28 @@ class PhantomJSHelper {
     /**
      * Get the output path.
      *
-     * @return string Returns the output path.
+     * @return string|null Returns the output path.
      */
-    public function getOutputPath() {
+    public function getOutputPath(): ?string {
         return $this->outputPath;
     }
 
     /**
      * Get the scriptsPath.
      *
-     * @return string Returns the scriptsPath.
+     * @return string|null Returns the scriptsPath.
      */
-    public function getScriptsPath() {
+    public function getScriptsPath(): ?string {
         return $this->scriptsPath;
     }
 
     /**
      * Set the binary path.
      *
-     * @param string $binaryPath The binary path.
+     * @param string|null $binaryPath The binary path.
      * @return PhantomJSHelper Returns this PhantomJS helper.
      */
-    protected function setBinaryPath($binaryPath) {
+    protected function setBinaryPath(?string $binaryPath): PhantomJSHelper {
         $this->binaryPath = $binaryPath;
         return $this;
     }
@@ -114,10 +114,10 @@ class PhantomJSHelper {
     /**
      * Set the output path.
      *
-     * @param string $outputPath The output path.
+     * @param string|null $outputPath The output path.
      * @return PhantomJSHelper Returns this PhantomJS helper.
      */
-    protected function setOutputPath($outputPath) {
+    protected function setOutputPath(?string $outputPath): PhantomJSHelper {
         $this->outputPath = $outputPath;
         return $this;
     }
@@ -125,10 +125,10 @@ class PhantomJSHelper {
     /**
      * Set the scripts path.
      *
-     * @param string $scriptsPath The scripts path.
+     * @param string|null $scriptsPath The scripts path.
      * @return PhantomJSHelper Returns this PhantomJS helper.
      */
-    protected function setScriptsPath($scriptsPath) {
+    protected function setScriptsPath(?string $scriptsPath): PhantomJSHelper {
         $this->scriptsPath = $scriptsPath;
         return $this;
     }

@@ -31,56 +31,56 @@ class DefaultApplicationThemeProvider implements ApplicationThemeProviderInterfa
     /**
      * {@inheritDoc}
      */
-    public function getDescription() {
+    public function getDescription(): string {
         return "Core bundle";
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getHome() {
+    public function getHome(): string {
         return "/";
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getName() {
+    public function getName(): string {
         return "Core<b>bundle</b>";
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getRoute() {
+    public function getRoute(): string {
         return "/";
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getTitle() {
+    public function getTitle(): string {
         return "Core bundle";
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getVersion() {
+    public function getVersion(): string {
         return "dev-master";
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getView() {
+    public function getView(): ?string {
         return null;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getYear() {
+    public function getYear(): string {
         $today = date("Y");
         $years = ["2018"];
         if ($years[0] !== $today) {

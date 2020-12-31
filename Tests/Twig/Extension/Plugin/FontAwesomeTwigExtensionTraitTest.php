@@ -28,7 +28,7 @@ class FontAwesomeTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetFontAwesomeTwigExtension() {
+    public function testSetFontAwesomeTwigExtension(): void {
 
         // Set a Font Awesome Twig extension mock.
         $fontAwesomeTwigExtension = new FontAwesomeTwigExtension($this->twigEnvironment);
@@ -44,7 +44,7 @@ class FontAwesomeTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__constructor() {
+    public function test__constructor(): void {
 
         $obj = new TestFontAwesomeTwigExtensionTrait();
 

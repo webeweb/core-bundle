@@ -24,16 +24,16 @@ trait ObjectManagerTrait {
     /**
      * Object manager.
      *
-     * @var ObjectManager
+     * @var ObjectManager|null
      */
     private $objectManager;
 
     /**
      * Get the object manager.
      *
-     * @return ObjectManager Returns the object manager.
+     * @return ObjectManager|null Returns the object manager.
      */
-    public function getObjectManager() {
+    public function getObjectManager(): ?ObjectManager {
         return $this->objectManager;
     }
 
@@ -42,7 +42,7 @@ trait ObjectManagerTrait {
      *
      * @param ObjectManager|null $objectManager The object manager.
      */
-    protected function setObjectManager(ObjectManager $objectManager = null) {
+    protected function setObjectManager(?ObjectManager $objectManager): self {
         $this->objectManager = $objectManager;
         return $this;
     }

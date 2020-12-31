@@ -36,7 +36,7 @@ class YamlQuoteProviderTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         $this->filename = getcwd() . "/Resources/translations/WorldsWisdom.fr.yml";
@@ -48,7 +48,7 @@ class YamlQuoteProviderTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testInit() {
+    public function testInit(): void {
 
         // Set a Date mock.
         $date = new DateTime("2016-01-01");
@@ -79,7 +79,7 @@ class YamlQuoteProviderTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new YamlQuoteProvider($this->filename);
 
@@ -94,7 +94,7 @@ class YamlQuoteProviderTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__constructWithFileNotFoundException() {
+    public function test__constructWithFileNotFoundException(): void {
 
         try {
 

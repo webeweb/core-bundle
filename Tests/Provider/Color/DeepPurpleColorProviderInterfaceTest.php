@@ -27,7 +27,7 @@ class DeepPurpleColorProviderInterfaceTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("deep-purple", DeepPurpleColorProviderInterface::DEEP_PURPLE_COLOR_NAME);
 

@@ -25,7 +25,7 @@ class NotificationFactory {
      * @param string $content The content.
      * @return NotificationInterface Returns the danger notification.
      */
-    public static function newDangerNotification($content) {
+    public static function newDangerNotification(string $content): NotificationInterface {
         return new DangerNotification($content);
     }
 
@@ -36,7 +36,7 @@ class NotificationFactory {
      * @param string $type The type.
      * @return NotificationInterface Returns the default notification.
      */
-    public static function newDefaultNotification($content, $type) {
+    public static function newDefaultNotification(string $content, string $type): NotificationInterface {
         return new DefaultNotification($type, $content);
     }
 
@@ -46,7 +46,7 @@ class NotificationFactory {
      * @param string $content The content.
      * @return NotificationInterface Returns the info notification.
      */
-    public static function newInfoNotification($content) {
+    public static function newInfoNotification(string $content): NotificationInterface {
         return new InfoNotification($content);
     }
 
@@ -56,7 +56,7 @@ class NotificationFactory {
      * @param string $content The content.
      * @return NotificationInterface Returns the success notification.
      */
-    public static function newSuccessNotification($content) {
+    public static function newSuccessNotification(string $content): NotificationInterface {
         return new SuccessNotification($content);
     }
 
@@ -66,7 +66,7 @@ class NotificationFactory {
      * @param string $content The content.
      * @return NotificationInterface Returns the warning notification.
      */
-    public static function newWarningNotification($content) {
+    public static function newWarningNotification(string $content): NotificationInterface {
         return new WarningNotification($content);
     }
 }

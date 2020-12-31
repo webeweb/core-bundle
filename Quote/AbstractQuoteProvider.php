@@ -39,7 +39,7 @@ abstract class AbstractQuoteProvider implements QuoteProviderInterface {
     /**
      *{@inheritDoc}
      */
-    public function getAuthors() {
+    public function getAuthors(): array {
 
         $authors = [];
 
@@ -58,7 +58,7 @@ abstract class AbstractQuoteProvider implements QuoteProviderInterface {
     /**
      * {@onheritDoc}
      */
-    public function getQuotes() {
+    public function getQuotes(): array {
         return $this->quotes;
     }
 
@@ -68,7 +68,7 @@ abstract class AbstractQuoteProvider implements QuoteProviderInterface {
      * @param QuoteInterface[] $quotes The quotes.
      * @return QuoteProviderInterface Returns this quote provider.
      */
-    protected function setQuotes(array $quotes) {
+    protected function setQuotes(array $quotes): QuoteProviderInterface {
         $this->quotes = $quotes;
         return $this;
     }

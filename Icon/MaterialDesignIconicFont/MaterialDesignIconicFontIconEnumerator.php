@@ -22,9 +22,9 @@ class MaterialDesignIconicFontIconEnumerator {
     /**
      * Enumerates the borders.
      *
-     * @return array Returns the borders enumeration.
+     * @return string[] Returns the borders enumeration.
      */
-    public static function enumBorders() {
+    public static function enumBorders(): array {
         return [
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_BORDER,
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_BORDER_CIRCLE,
@@ -34,9 +34,9 @@ class MaterialDesignIconicFontIconEnumerator {
     /**
      * Enumerates the flips.
      *
-     * @return array Returns the flips enumeration.
+     * @return string[] Returns the flips enumeration.
      */
-    public static function enumFlips() {
+    public static function enumFlips(): array {
         return [
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_FLIP_HORIZONTAL,
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_FLIP_VERTICAL,
@@ -46,9 +46,9 @@ class MaterialDesignIconicFontIconEnumerator {
     /**
      * Enumerates the pulls.
      *
-     * @return array Returns the pulls enumeration.
+     * @return string[] Returns the pulls enumeration.
      */
-    public static function enumPulls() {
+    public static function enumPulls(): array {
         return [
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_PULL_LEFT,
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_PULL_RIGHT,
@@ -58,9 +58,9 @@ class MaterialDesignIconicFontIconEnumerator {
     /**
      * Enumerates the rotates.
      *
-     * @return array Returns the rotates enumeration.
+     * @return string[] Returns the rotates enumeration.
      */
-    public static function enumRotates() {
+    public static function enumRotates(): array {
         return [
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_ROTATE_90,
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_ROTATE_180,
@@ -71,9 +71,9 @@ class MaterialDesignIconicFontIconEnumerator {
     /**
      * Enumerates the sizes.
      *
-     * @return array Returns the sizes enumeration.
+     * @return string[] Returns the sizes enumeration.
      */
-    public static function enumSizes() {
+    public static function enumSizes(): array {
         return [
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SIZE_LG,
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SIZE_2X,
@@ -86,9 +86,9 @@ class MaterialDesignIconicFontIconEnumerator {
     /**
      * Enumerates the spins.
      *
-     * @return array Returns the spins enumeration.
+     * @return string[] Returns the spins enumeration.
      */
-    public static function enumSpins() {
+    public static function enumSpins(): array {
         return [
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SPIN,
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SPIN_REVERSE,

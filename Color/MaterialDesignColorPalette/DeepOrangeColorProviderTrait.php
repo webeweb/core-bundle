@@ -29,9 +29,9 @@ trait DeepOrangeColorProviderTrait {
     /**
      * Get the deep orange color provider.
      *
-     * @return DeepOrangeColorProvider Returns the deep orange color provider.
+     * @return DeepOrangeColorProvider|null Returns the deep orange color provider.
      */
-    public function getDeepOrangeColorProvider() {
+    public function getDeepOrangeColorProvider(): ?DeepOrangeColorProvider {
         return $this->deepOrangeColorProvider;
     }
 
@@ -40,7 +40,7 @@ trait DeepOrangeColorProviderTrait {
      *
      * @param DeepOrangeColorProvider|null $deepOrangeColorProvider The deep orange color provider.
      */
-    protected function setDeepOrangeColorProvider(DeepOrangeColorProvider $deepOrangeColorProvider = null) {
+    protected function setDeepOrangeColorProvider(?DeepOrangeColorProvider $deepOrangeColorProvider): self {
         $this->deepOrangeColorProvider = $deepOrangeColorProvider;
         return $this;
     }

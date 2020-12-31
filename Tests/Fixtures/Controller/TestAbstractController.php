@@ -11,8 +11,20 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Controller;
 
+use Psr\Log\LoggerInterface;
+use Symfony\Component\DependencyInjection\Container;
+use Symfony\Component\EventDispatcher\EventDispatcherInterface;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Component\Routing\RouterInterface;
+use Symfony\Component\Translation\TranslatorInterface;
 use WBW\Bundle\CoreBundle\Controller\AbstractController;
+use WBW\Bundle\CoreBundle\Event\NotificationEvent;
+use WBW\Bundle\CoreBundle\Event\ToastEvent;
+use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
+use WBW\Bundle\CoreBundle\Helper\FormHelper;
+use WBW\Bundle\CoreBundle\Helper\RepositoryReportHelper;
 use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
+use WBW\Bundle\CoreBundle\Repository\RepositoryHelper;
 use WBW\Bundle\CoreBundle\Toast\ToastInterface;
 
 /**
@@ -26,98 +38,98 @@ class TestAbstractController extends AbstractController {
     /**
      * {@inheritDoc}
      */
-    public function getContainer() {
+    public function getContainer(): ?Container {
         return parent::getContainer();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getEventDispatcher() {
+    public function getEventDispatcher(): ?EventDispatcherInterface {
         return parent::getEventDispatcher();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getFormHelper() {
+    public function getFormHelper(): ?FormHelper {
         return parent::getFormHelper();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getKernelEventListener() {
+    public function getKernelEventListener(): ?KernelEventListener {
         return parent::getKernelEventListener();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getLogger() {
+    public function getLogger(): ?LoggerInterface {
         return parent::getLogger();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getRepositoryHelper() {
+    public function getRepositoryHelper(): ?RepositoryHelper {
         return parent::getRepositoryHelper();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getRepositoryReportHelper() {
+    public function getRepositoryReportHelper(): ?RepositoryReportHelper {
         return parent::getRepositoryReportHelper();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getRouter() {
+    public function getRouter(): ?RouterInterface {
         return parent::getRouter();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getSession() {
+    public function getSession(): ?SessionInterface {
         return parent::getSession();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getTranslator() {
+    public function getTranslator(): ?TranslatorInterface {
         return parent::getTranslator();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function hasRolesOrRedirect(array $roles, $or, $redirectUrl, $originUrl = "") {
+    public function hasRolesOrRedirect(array $roles, bool $or, string $redirectUrl, string $originUrl = ""): bool {
         return parent::hasRolesOrRedirect($roles, $or, $redirectUrl, $originUrl);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function notify($eventName, NotificationInterface $notification) {
+    public function notify(string $eventName, NotificationInterface $notification): ?NotificationEvent {
         return parent::notify($eventName, $notification);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function toast($eventName, ToastInterface $toast) {
+    public function toast(string $eventName, ToastInterface $toast): ?ToastEvent {
         return parent::toast($eventName, $toast);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function translate($id, array $parameters = [], $domain = null, $locale = null) {
+    public function translate(string $id, array $parameters = [], string $domain = null, string $locale = null): string {
         return parent::translate($id, $parameters, $domain, $locale);
     }
 }

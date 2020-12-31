@@ -27,7 +27,7 @@ class EntityManagerTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetEntityManager() {
+    public function testSetEntityManager(): void {
 
         $obj = new TestEntityManagerTrait();
 
@@ -40,7 +40,7 @@ class EntityManagerTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__constructor() {
+    public function test__constructor(): void {
 
         $obj = new TestEntityManagerTrait();
 

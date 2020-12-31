@@ -22,9 +22,9 @@ class FontAwesomeIconEnumerator {
     /**
      * Enumerates the animations.
      *
-     * @return array Returns the animations enumeration.
+     * @return string[] Returns the animations enumeration.
      */
-    public static function enumAnimations() {
+    public static function enumAnimations(): array {
         return [
             FontAwesomeIconInterface::FONT_AWESOME_ANIMATION_PULSE,
             FontAwesomeIconInterface::FONT_AWESOME_ANIMATION_SPIN,
@@ -34,9 +34,9 @@ class FontAwesomeIconEnumerator {
     /**
      * Enumerates the fonts.
      *
-     * @return array Returns the fonts enumeration.
+     * @return string[] Returns the fonts enumeration.
      */
-    public static function enumFonts() {
+    public static function enumFonts(): array {
         return [
             FontAwesomeIconInterface::FONT_AWESOME_FONT,
             FontAwesomeIconInterface::FONT_AWESOME_FONT_BOLD,
@@ -49,9 +49,9 @@ class FontAwesomeIconEnumerator {
     /**
      * Enumerates the pulls.
      *
-     * @return array Returns the pulls enumeration.
+     * @return string[] Returns the pulls enumeration.
      */
-    public static function enumPulls() {
+    public static function enumPulls(): array {
         return [
             FontAwesomeIconInterface::FONT_AWESOME_PULL_LEFT,
             FontAwesomeIconInterface::FONT_AWESOME_PULL_RIGHT,
@@ -61,9 +61,9 @@ class FontAwesomeIconEnumerator {
     /**
      * Enumerates the sizes.
      *
-     * @return array Returns the sizes enumeration.
+     * @return string[] Returns the sizes enumeration.
      */
-    public static function enumSizes() {
+    public static function enumSizes(): array {
         return [
             FontAwesomeIconInterface::FONT_AWESOME_SIZE_LG,
             FontAwesomeIconInterface::FONT_AWESOME_SIZE_SM,

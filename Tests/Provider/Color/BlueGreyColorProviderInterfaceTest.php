@@ -27,7 +27,7 @@ class BlueGreyColorProviderInterfaceTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("blue-grey", BlueGreyColorProviderInterface::BLUE_GREY_COLOR_NAME);
 

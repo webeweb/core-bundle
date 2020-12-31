@@ -28,7 +28,7 @@ class RendererTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetRendererTwigExtension() {
+    public function testSetRendererTwigExtension(): void {
 
         // Set a Renderer Twig extension mock.
         $rendererTwigExtension = new RendererTwigExtension($this->twigEnvironment);
@@ -44,7 +44,7 @@ class RendererTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__constructor() {
+    public function test__constructor(): void {
 
         $obj = new TestRendererTwigExtensionTrait();
 

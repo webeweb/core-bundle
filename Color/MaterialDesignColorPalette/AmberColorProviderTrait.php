@@ -22,16 +22,16 @@ trait AmberColorProviderTrait {
     /**
      * Amber color provider.
      *
-     * @var AmberColorProvider
+     * @var AmberColorProvider|null
      */
     private $amberColorProvider;
 
     /**
      * Get the amber color provider.
      *
-     * @return AmberColorProvider Returns the amber color provider.
+     * @return AmberColorProvider|null Returns the amber color provider.
      */
-    public function getAmberColorProvider() {
+    public function getAmberColorProvider(): ?AmberColorProvider {
         return $this->amberColorProvider;
     }
 
@@ -40,7 +40,7 @@ trait AmberColorProviderTrait {
      *
      * @param AmberColorProvider|null $amberColorProvider The amber color provider.
      */
-    protected function setAmberColorProvider(AmberColorProvider $amberColorProvider = null) {
+    protected function setAmberColorProvider(AmberColorProvider $amberColorProvider): self {
         $this->amberColorProvider = $amberColorProvider;
         return $this;
     }

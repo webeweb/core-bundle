@@ -25,27 +25,27 @@ class TestColorProvider extends AbstractColorProvider {
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(null);
+        parent::__construct("test");
     }
 
     /**
      *{@inheritDoc}
      */
-    public function getColors() {
+    public function getColors(): array {
         return [];
     }
 
     /**
      *{@inheritDoc}
      */
-    public function getName() {
-        return null;
+    public function getName(): string {
+        return "test";
     }
 
     /**
      *{@inheritDoc}
      */
-    public function setDomain($domain) {
+    public function setDomain(?string $domain): AbstractColorProvider {
         return parent::setDomain($domain);
     }
 }

@@ -27,7 +27,7 @@ class UserTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetUser() {
+    public function testSetUser(): void {
 
         $obj = new TestUserTrait();
 
@@ -40,7 +40,7 @@ class UserTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__constructor() {
+    public function test__constructor(): void {
 
         $obj = new TestUserTrait();
 

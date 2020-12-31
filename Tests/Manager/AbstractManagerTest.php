@@ -33,7 +33,7 @@ class AbstractManagerTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a Color provider mock.
@@ -45,7 +45,7 @@ class AbstractManagerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddProvider() {
+    public function testAddProvider(): void {
 
         $obj = new TestManager($this->logger);
 
@@ -59,7 +59,7 @@ class AbstractManagerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testContains() {
+    public function testContains(): void {
 
         $obj = new TestManager($this->logger);
 
@@ -74,7 +74,7 @@ class AbstractManagerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testHasProviders() {
+    public function testHasProviders(): void {
 
         $obj = new TestManager($this->logger);
 
@@ -89,7 +89,7 @@ class AbstractManagerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testIndexOf() {
+    public function testIndexOf(): void {
 
         // Set a Provider mock.
         $provider = $this->getMockBuilder(ProviderInterface::class)->getMock();
@@ -108,7 +108,7 @@ class AbstractManagerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestManager($this->logger);
 

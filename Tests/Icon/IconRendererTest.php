@@ -33,7 +33,7 @@ class IconRendererTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set an Icon mock.
@@ -46,7 +46,7 @@ class IconRendererTest extends AbstractTestCase {
      *
      * @return void.
      */
-    public function testRenderStyle() {
+    public function testRenderStyle(): void {
 
         $res = IconRenderer::renderStyle($this->icon);
         $this->assertEquals("color: #000000;", $res);

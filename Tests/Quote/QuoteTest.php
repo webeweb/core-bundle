@@ -27,7 +27,7 @@ class QuoteTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetAuthor() {
+    public function testSetAuthor(): void {
 
         $obj = new Quote();
 
@@ -40,7 +40,7 @@ class QuoteTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new Quote();
 

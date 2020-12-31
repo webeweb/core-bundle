@@ -23,14 +23,14 @@ abstract class AbstractIcon implements IconInterface {
     /**
      * Name.
      *
-     * @var string
+     * @var string|null
      */
     private $name;
 
     /**
      * Style.
      *
-     * @var string
+     * @var string|null
      */
     private $style;
 
@@ -44,21 +44,21 @@ abstract class AbstractIcon implements IconInterface {
     /**
      * {@inheritDoc}
      */
-    public function getName() {
+    public function getName(): ?string {
         return $this->name;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getStyle() {
+    public function getStyle(): ?string {
         return $this->style;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function setName($name) {
+    public function setName(?string $name): IconInterface {
         $this->name = $name;
         return $this;
     }
@@ -66,7 +66,7 @@ abstract class AbstractIcon implements IconInterface {
     /**
      * {@inheritDoc}
      */
-    public function setStyle($style) {
+    public function setStyle(?string $style): IconInterface {
         $this->style = $style;
         return $this;
     }

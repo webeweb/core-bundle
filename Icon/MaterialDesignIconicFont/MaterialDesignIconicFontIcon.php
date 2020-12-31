@@ -24,49 +24,49 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
     /**
      * Border.
      *
-     * @var string
+     * @var string|null
      */
     private $border;
 
     /**
      * Fixed width.
      *
-     * @var bool
+     * @var bool|null
      */
     private $fixedWidth;
 
     /**
      * Flip.
      *
-     * @var string
+     * @var string|null
      */
     private $flip;
 
     /**
      * Pull.
      *
-     * @var string
+     * @var string|null
      */
     private $pull;
 
     /**
      * Rotate.
      *
-     * @var string
+     * @var string|null
      */
     private $rotate;
 
     /**
      * Size.
      *
-     * @var string
+     * @var string|null
      */
     private $size;
 
     /**
      * Spin.
      *
-     * @var string
+     * @var string|null
      */
     private $spin;
 
@@ -81,56 +81,56 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
     /**
      * {@inheritDoc}
      */
-    public function getBorder() {
+    public function getBorder(): ?string {
         return $this->border;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getFixedWidth() {
+    public function getFixedWidth(): ?bool {
         return $this->fixedWidth;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getFlip() {
+    public function getFlip(): ?string {
         return $this->flip;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getPull() {
+    public function getPull(): ?string {
         return $this->pull;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getRotate() {
+    public function getRotate(): ?string {
         return $this->rotate;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getSize() {
+    public function getSize(): ?string {
         return $this->size;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getSpin() {
+    public function getSpin(): ?string {
         return $this->spin;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function setBorder($border) {
+    public function setBorder(?string $border): MaterialDesignIconicFontIconInterface {
         if (false === in_array($border, MaterialDesignIconicFontIconEnumerator::enumBorders())) {
             $border = null;
         }
@@ -141,7 +141,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
     /**
      * {@inheritDoc}
      */
-    public function setFixedWidth($fixedWidth) {
+    public function setFixedWidth(?bool $fixedWidth): MaterialDesignIconicFontIconInterface {
         $this->fixedWidth = $fixedWidth;
         return $this;
     }
@@ -149,7 +149,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
     /**
      *{@inheritDoc}
      */
-    public function setFlip($flip) {
+    public function setFlip(?string $flip): MaterialDesignIconicFontIconInterface {
         if (false === in_array($flip, MaterialDesignIconicFontIconEnumerator::enumFlips())) {
             $flip = null;
         }
@@ -160,7 +160,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
     /**
      * {@inheritDoc}
      */
-    public function setPull($pull) {
+    public function setPull(?string $pull): MaterialDesignIconicFontIconInterface {
         if (false === in_array($pull, MaterialDesignIconicFontIconEnumerator::enumPulls())) {
             $pull = null;
         }
@@ -171,7 +171,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
     /**
      * {@inheritDoc}
      */
-    public function setRotate($rotate) {
+    public function setRotate(?string $rotate): MaterialDesignIconicFontIconInterface {
         if (false === in_array($rotate, MaterialDesignIconicFontIconEnumerator::enumRotates())) {
             $rotate = null;
         }
@@ -182,7 +182,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
     /**
      * {@inheritDoc}
      */
-    public function setSize($size) {
+    public function setSize(?string $size): MaterialDesignIconicFontIconInterface {
         if (false === in_array($size, MaterialDesignIconicFontIconEnumerator::enumSizes())) {
             $size = null;
         }
@@ -193,7 +193,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
     /**
      * {@inheritDoc}
      */
-    public function setSpin($spin) {
+    public function setSpin(?string $spin): MaterialDesignIconicFontIconInterface {
         if (false === in_array($spin, MaterialDesignIconicFontIconEnumerator::enumSpins())) {
             $spin = null;
         }

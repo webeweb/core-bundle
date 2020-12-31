@@ -29,9 +29,9 @@ trait LimeColorProviderTrait {
     /**
      * Get the lime color provider.
      *
-     * @return LimeColorProvider Returns the lime color provider.
+     * @return LimeColorProvider|null Returns the lime color provider.
      */
-    public function getLimeColorProvider() {
+    public function getLimeColorProvider(): ?LimeColorProvider {
         return $this->limeColorProvider;
     }
 
@@ -40,7 +40,7 @@ trait LimeColorProviderTrait {
      *
      * @param LimeColorProvider|null $limeColorProvider The lime color provider.
      */
-    protected function setLimeColorProvider(LimeColorProvider $limeColorProvider = null) {
+    protected function setLimeColorProvider(?LimeColorProvider $limeColorProvider): self {
         $this->limeColorProvider = $limeColorProvider;
         return $this;
     }

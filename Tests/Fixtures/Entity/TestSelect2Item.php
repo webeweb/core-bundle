@@ -25,17 +25,17 @@ class TestSelect2Item extends AbstractNode implements Select2ItemInterface {
     /**
      * Name.
      *
-     * @var string
+     * @var string|null
      */
     private $name;
 
     /**
      * Constructor.
      *
-     * @param string $id The id.
-     * @param string $name The name.
+     * @param string|null $id The id.
+     * @param string|null $name The name.
      */
-    public function __construct($id, $name) {
+    public function __construct(?string $id, ?string $name) {
         parent::__construct($id);
         $this->setName($name);
     }
@@ -43,33 +43,33 @@ class TestSelect2Item extends AbstractNode implements Select2ItemInterface {
     /**
      * Get the name.
      *
-     * @return string Returns the name.
+     * @return string|null Returns the name.
      */
-    public function getName() {
+    public function getName(): ?string {
         return $this->name;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getSelect2ItemId() {
+    public function getSelect2ItemId(): ?string {
         return $this->getId();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getSelect2ItemText() {
+    public function getSelect2ItemText(): ?string {
         return $this->getName();
     }
 
     /**
      * Set the name.
      *
-     * @param string $name The name.
+     * @param string|null $name The name.
      * @return TestSelect2Item Returns this Select2 item.
      */
-    public function setName($name) {
+    public function setName(?string $name): TestSelect2Item {
         $this->name = $name;
         return $this;
     }

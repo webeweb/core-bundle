@@ -27,7 +27,7 @@ class Configuration implements ConfigurationInterface {
      *
      * @see https://github.com/webeweb/core-bundle/blob/master/Tests/Fixtures/app/config/config_test.yml
      */
-    public function getConfigTreeBuilder() {
+    public function getConfigTreeBuilder(): TreeBuilder {
 
         $assets  = ConfigurationHelper::loadYamlConfig(__DIR__, "assets");
         $plugins = $assets["assets"]["wbw.core.asset.core"]["plugins"];

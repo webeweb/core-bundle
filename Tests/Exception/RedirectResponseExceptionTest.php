@@ -27,7 +27,7 @@ class RedirectResponseExceptionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $originUrl   = "https://github.com/webeweb";
         $redirectUrl = "https://github.com";

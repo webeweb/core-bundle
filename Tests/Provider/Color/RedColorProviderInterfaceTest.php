@@ -27,7 +27,7 @@ class RedColorProviderInterfaceTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("red", RedColorProviderInterface::RED_COLOR_NAME);
 

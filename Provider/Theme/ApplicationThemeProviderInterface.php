@@ -33,47 +33,47 @@ interface ApplicationThemeProviderInterface extends ThemeProviderInterface {
      *
      * @return string Returns the description.
      */
-    public function getDescription();
+    public function getDescription(): string;
 
     /**
      * Get the home.
      *
      * @return string Returns the home.
      */
-    public function getHome();
+    public function getHome(): string;
 
     /**
      * Get the name.
      *
      * @return string Returns the name.
      */
-    public function getName();
+    public function getName(): string;
 
     /**
      * Get the route.
      *
      * @return string Returns the route.
      */
-    public function getRoute();
+    public function getRoute(): string;
 
     /**
      * Get the title.
      *
      * @return string Returns the title.
      */
-    public function getTitle();
+    public function getTitle(): string;
 
     /**
      * Get the version.
      *
      * @return string Returns the version.
      */
-    public function getVersion();
+    public function getVersion(): string;
 
     /**
      * Get the year.
      *
      * @return string Returns the year.
      */
-    public function getYear();
+    public function getYear(): string;
 }

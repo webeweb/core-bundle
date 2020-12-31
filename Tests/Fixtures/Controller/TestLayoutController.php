@@ -27,7 +27,7 @@ class TestLayoutController extends AbstractController {
      *
      * @return Response Returns the response.
      */
-    public function emailAction() {
+    public function emailAction(): Response {
         return $this->render("@WBWCore/email/layout.html.twig");
     }
 
@@ -36,7 +36,7 @@ class TestLayoutController extends AbstractController {
      *
      * @return Response Returns the response.
      */
-    public function javascriptsAction() {
+    public function javascriptsAction(): Response {
         return $this->render("@WBWCore/layout/javascripts.html.twig");
     }
 
@@ -45,7 +45,7 @@ class TestLayoutController extends AbstractController {
      *
      * @return Response Returns the response.
      */
-    public function stylesheetsAction() {
+    public function stylesheetsAction(): Response {
         return $this->render("@WBWCore/layout/stylesheets.html.twig");
     }
 }

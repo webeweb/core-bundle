@@ -22,16 +22,16 @@ trait HookDropDownThemeProviderTrait {
     /**
      * Hook drop down theme provider.
      *
-     * @var HookDropDownThemeProviderInterface
+     * @var HookDropDownThemeProviderInterface|null
      */
     private $hookDropDownThemeProvider;
 
     /**
      * Get the hook drop down theme provider.
      *
-     * @return HookDropDownThemeProviderInterface Returns the hook drop down theme provider.
+     * @return HookDropDownThemeProviderInterface|null Returns the hook drop down theme provider.
      */
-    public function getHookDropDownThemeProvider() {
+    public function getHookDropDownThemeProvider(): ?HookDropDownThemeProviderInterface {
         return $this->hookDropDownThemeProvider;
     }
 
@@ -40,7 +40,7 @@ trait HookDropDownThemeProviderTrait {
      *
      * @param HookDropDownThemeProviderInterface|null $hookDropDownThemeProvider The hook drop down theme provider.
      */
-    protected function setHookDropDownThemeProvider(HookDropDownThemeProviderInterface $hookDropDownThemeProvider = null) {
+    protected function setHookDropDownThemeProvider(?HookDropDownThemeProviderInterface $hookDropDownThemeProvider): self {
         $this->hookDropDownThemeProvider = $hookDropDownThemeProvider;
         return $this;
     }

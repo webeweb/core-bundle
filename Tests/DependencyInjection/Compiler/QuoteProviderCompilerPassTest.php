@@ -41,7 +41,7 @@ class QuoteProviderCompilerPassTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a Quote manager mock.
@@ -56,7 +56,7 @@ class QuoteProviderCompilerPassTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testProcess() {
+    public function testProcess(): void {
 
         // Set a Service name mock.
         $serviceName = "wbw.core.provider.quote";

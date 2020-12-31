@@ -28,7 +28,7 @@ class UnzipAssetsCommandTest extends AbstractCommandTestCase {
      *
      * @return void
      */
-    public function testDisplayFooter() {
+    public function testDisplayFooter(): void {
 
         $obj = new TestUnzipAssetsCommand();
 
@@ -40,7 +40,7 @@ class UnzipAssetsCommandTest extends AbstractCommandTestCase {
      *
      * @return void
      */
-    public function testDisplayFooterWithExitCode0() {
+    public function testDisplayFooterWithExitCode0(): void {
 
         $obj = new TestUnzipAssetsCommand();
 
@@ -52,7 +52,7 @@ class UnzipAssetsCommandTest extends AbstractCommandTestCase {
      *
      * @return void
      */
-    public function testDisplayFooterWithExitCode1() {
+    public function testDisplayFooterWithExitCode1(): void {
 
         $obj = new TestUnzipAssetsCommand();
 
@@ -64,7 +64,7 @@ class UnzipAssetsCommandTest extends AbstractCommandTestCase {
      *
      * @return void
      */
-    public function testDisplayResult() {
+    public function testDisplayResult(): void {
 
         $obj = new TestUnzipAssetsCommand();
 
@@ -77,7 +77,7 @@ class UnzipAssetsCommandTest extends AbstractCommandTestCase {
      *
      * @return void
      */
-    public function testDisplayResultWithExitCode() {
+    public function testDisplayResultWithExitCode(): void {
 
         $obj = new TestUnzipAssetsCommand();
 
@@ -94,7 +94,7 @@ class UnzipAssetsCommandTest extends AbstractCommandTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.core.command.unzip_assets", UnzipAssetsCommand::SERVICE_NAME);
 

@@ -35,7 +35,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a Renderer Twig extension mock.
@@ -47,7 +47,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFilters() {
+    public function testGetFilters(): void {
 
         $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->rendererTwigExtension);
 
@@ -60,7 +60,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->rendererTwigExtension);
 
@@ -108,7 +108,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testJQueryInputMaskFunction() {
+    public function testJQueryInputMaskFunction(): void {
 
         $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->rendererTwigExtension);
 
@@ -122,7 +122,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testJQueryInputMaskFunctionWithoutOptions() {
+    public function testJQueryInputMaskFunctionWithoutOptions(): void {
 
         $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->rendererTwigExtension);
 
@@ -136,7 +136,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testJQueryInputMaskPhoneNumberFunction() {
+    public function testJQueryInputMaskPhoneNumberFunction(): void {
 
         $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->rendererTwigExtension);
 
@@ -150,7 +150,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testJQueryInputMaskSIRETNumberFunction() {
+    public function testJQueryInputMaskSIRETNumberFunction(): void {
 
         $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->rendererTwigExtension);
 
@@ -164,7 +164,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testJQueryInputMaskSocialSecurityNumberFunction() {
+    public function testJQueryInputMaskSocialSecurityNumberFunction(): void {
 
         $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->rendererTwigExtension);
 
@@ -178,7 +178,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testJQueryInputMaskTime12Function() {
+    public function testJQueryInputMaskTime12Function(): void {
 
         $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->rendererTwigExtension);
 
@@ -192,7 +192,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testJQueryInputMaskTime24Function() {
+    public function testJQueryInputMaskTime24Function(): void {
 
         $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->rendererTwigExtension);
 
@@ -206,7 +206,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testJQueryInputMaskVATNumberFunction() {
+    public function testJQueryInputMaskVATNumberFunction(): void {
 
         $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->rendererTwigExtension);
 
@@ -220,7 +220,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.core.twig.extension.asset.jquery_inputmask", JQueryInputMaskTwigExtension::SERVICE_NAME);
 

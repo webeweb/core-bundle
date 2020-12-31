@@ -32,9 +32,9 @@ abstract class AbstractColorProvider implements ColorProviderInterface {
     /**
      * Constructor.
      *
-     * @param string $domain The domain.
+     * @param string|null $domain The domain.
      */
-    protected function __construct($domain) {
+    protected function __construct(?string $domain) {
         $this->setDomain($domain);
     }
 
@@ -43,7 +43,7 @@ abstract class AbstractColorProvider implements ColorProviderInterface {
      *
      * @return string Returns the domain.
      */
-    public function getDomain() {
+    public function getDomain(): string {
         return $this->domain;
     }
 
@@ -53,7 +53,7 @@ abstract class AbstractColorProvider implements ColorProviderInterface {
      * @param string $domain The domain.
      * @return AbstractColorProvider Returns this color provider.
      */
-    protected function setDomain($domain) {
+    protected function setDomain(string $domain): AbstractColorProvider {
         $this->domain = $domain;
         return $this;
     }

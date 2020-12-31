@@ -24,16 +24,16 @@ trait RouterTrait {
     /**
      * Router.
      *
-     * @var RouterInterface
+     * @var RouterInterface|null
      */
     private $router;
 
     /**
      * Get the router.
      *
-     * @return RouterInterface Returns the router.
+     * @return RouterInterface|null Returns the router.
      */
-    public function getRouter() {
+    public function getRouter(): ?RouterInterface {
         return $this->router;
     }
 
@@ -42,7 +42,7 @@ trait RouterTrait {
      *
      * @param RouterInterface|null $router The router.
      */
-    protected function setRouter(RouterInterface $router = null) {
+    protected function setRouter(?RouterInterface $router): self {
         $this->router = $router;
         return $this;
     }

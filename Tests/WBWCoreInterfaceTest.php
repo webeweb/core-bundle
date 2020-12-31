@@ -26,7 +26,7 @@ class WBWCoreInterfaceTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("danger", WBWCoreInterface::CORE_DANGER);
         $this->assertEquals("info", WBWCoreInterface::CORE_INFO);

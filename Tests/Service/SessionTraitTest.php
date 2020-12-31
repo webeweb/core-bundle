@@ -27,7 +27,7 @@ class SessionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetSession() {
+    public function testSetSession(): void {
 
         $obj = new TestSessionTrait();
 
@@ -40,7 +40,7 @@ class SessionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__constructor() {
+    public function test__constructor(): void {
 
         $obj = new TestSessionTrait();
 

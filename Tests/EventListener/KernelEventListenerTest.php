@@ -42,7 +42,7 @@ class KernelEventListenerTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a Theme manager mock.
@@ -54,7 +54,7 @@ class KernelEventListenerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetUser() {
+    public function testGetUser(): void {
 
         $obj = new KernelEventListener($this->tokenStorage, $this->themeManager);
 
@@ -70,7 +70,7 @@ class KernelEventListenerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testOnKernelException() {
+    public function testOnKernelException(): void {
 
         $obj = new KernelEventListener($this->tokenStorage, $this->themeManager);
 
@@ -83,7 +83,7 @@ class KernelEventListenerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testOnKernelExceptionWithBadUserRoleException() {
+    public function testOnKernelExceptionWithBadUserRoleException(): void {
 
         // Set an User mock.
         $this->user = $this->getMockBuilder(UserInterface::class)->getMock();
@@ -104,7 +104,7 @@ class KernelEventListenerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testOnKernelExceptionWithRedirectResponseException() {
+    public function testOnKernelExceptionWithRedirectResponseException(): void {
 
         // Set a Redirect response exception mock.
         $ex = new RedirectResponseException("redirectUrl", "originUrl");
@@ -122,7 +122,7 @@ class KernelEventListenerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testOnKernelRequest() {
+    public function testOnKernelRequest(): void {
 
         $obj = new KernelEventListener($this->tokenStorage, $this->themeManager);
 
@@ -135,7 +135,7 @@ class KernelEventListenerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.core.event_listener.kernel", KernelEventListener::SERVICE_NAME);
 

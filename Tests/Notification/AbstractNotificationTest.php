@@ -27,7 +27,7 @@ class AbstractNotificationTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetContent() {
+    public function testSetContent(): void {
 
         $obj = new TestNotification();
 
@@ -40,7 +40,7 @@ class AbstractNotificationTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetType() {
+    public function testSetType(): void {
 
         $obj = new TestNotification();
 
@@ -53,11 +53,11 @@ class AbstractNotificationTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestNotification();
 
-        $this->assertNull($obj->getContent());
-        $this->assertNull($obj->getType());
+        $this->assertEquals("t", $obj->getType());
+        $this->assertEquals("c", $obj->getContent());
     }
 }

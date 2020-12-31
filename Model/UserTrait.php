@@ -24,16 +24,16 @@ trait UserTrait {
     /**
      * User.
      *
-     * @var UserInterface
+     * @var UserInterface|null
      */
     private $user;
 
     /**
      * Get the user.
      *
-     * @return UserInterface Returns the user.
+     * @return UserInterface|null Returns the user.
      */
-    public function getUser() {
+    public function getUser(): ?UserInterface {
         return $this->user;
     }
 
@@ -42,7 +42,7 @@ trait UserTrait {
      *
      * @param UserInterface|null $user The user.
      */
-    protected function setUser(UserInterface $user = null) {
+    protected function setUser(?UserInterface $user): ?self {
         $this->user = $user;
         return $this;
     }

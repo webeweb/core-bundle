@@ -43,11 +43,21 @@ class ContainerTwigExtension extends AbstractTwigExtension {
     }
 
     /**
+     * Get a container parameter.
+     *
+     * @param string $name The name.
+     * @return mixed|null Returns the container parameter in case of success, null otherwise.
+     */
+    public function getContainerParameterFunction($name) {
+        return $this->getContainer()->getParameter($name);
+    }
+
+    /**
      * Get the Twig filters.
      *
      * @return TwigFilter[] Returns the Twig filters.
      */
-    public function getFilters() {
+    public function getFilters(): array {
         return [];
     }
 
@@ -56,19 +66,9 @@ class ContainerTwigExtension extends AbstractTwigExtension {
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction("getContainerParameter", [$this, "getContainerParameterFunction"]),
         ];
-    }
-
-    /**
-     * Get a container parameter.
-     *
-     * @param string $name The name.
-     * @return mixed|null Returns the container parameter in case of success, null otherwise.
-     */
-    public function getContainerParameterFunction($name) {
-        return $this->getContainer()->getParameter($name);
     }
 }

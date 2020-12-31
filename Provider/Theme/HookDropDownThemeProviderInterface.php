@@ -33,5 +33,5 @@ interface HookDropDownThemeProviderInterface extends ThemeProviderInterface {
      *
      * @return array Returns the items.
      */
-    public function getItems();
+    public function getItems(): array;
 }

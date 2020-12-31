@@ -29,7 +29,7 @@ class IconFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewFontAwesomeIcon() {
+    public function testNewFontAwesomeIcon(): void {
 
         $obj = IconFactory::newFontAwesomeIcon();
         $this->assertInstanceOf(FontAwesomeIconInterface::class, $obj);
@@ -40,7 +40,7 @@ class IconFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewMaterialDesignIconicFontIcon() {
+    public function testNewMaterialDesignIconicFontIcon(): void {
 
         $obj = IconFactory::newMaterialDesignIconicFontIcon();
         $this->assertInstanceOf(MaterialDesignIconicFontIconInterface::class, $obj);
@@ -51,7 +51,7 @@ class IconFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseFontAwesomeIcon() {
+    public function testParseFontAwesomeIcon(): void {
 
         // Set the Arguments mock.
         $arg = [
@@ -84,7 +84,7 @@ class IconFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParseMaterialDesignIconicFontIcon() {
+    public function testParseMaterialDesignIconicFontIcon(): void {
 
         // Set the Arguments mock.
         $arg = [

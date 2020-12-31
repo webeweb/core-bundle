@@ -27,7 +27,7 @@ class RedirectUrlTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetRedirectUrl() {
+    public function testSetRedirectUrl(): void {
 
         $obj = new TestRedirectUrlTrait();
 
@@ -40,7 +40,7 @@ class RedirectUrlTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__constructor() {
+    public function test__constructor(): void {
 
         $obj = new TestRedirectUrlTrait();
 

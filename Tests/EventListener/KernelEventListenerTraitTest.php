@@ -34,7 +34,7 @@ class EventDispatcherTraitTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a Theme manager mock.
@@ -46,7 +46,7 @@ class EventDispatcherTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetEventDispatcher() {
+    public function testSetEventDispatcher(): void {
 
         // Set a Kernel event listener mock.
         $kernelEventListener = new KernelEventListener($this->tokenStorage, $this->themeManager);
@@ -62,7 +62,7 @@ class EventDispatcherTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__constructor() {
+    public function test__constructor(): void {
 
         $obj = new TestKernelEventListenerTrait();
 

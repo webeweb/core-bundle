@@ -14,6 +14,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Manager;
 use Psr\Log\LoggerInterface;
 use Twig\Environment;
 use WBW\Bundle\CoreBundle\Manager\AbstractThemeManager;
+use WBW\Bundle\CoreBundle\Manager\ManagerInterface;
 use WBW\Bundle\CoreBundle\Provider\ThemeProviderInterface;
 
 /**
@@ -34,14 +35,14 @@ class TestThemeManager extends AbstractThemeManager {
     /**
      * {@inheritDoc}
      */
-    public function getProvider($name) {
+    public function getProvider(string $name): ?ThemeProviderInterface {
         return parent::getProvider($name);
     }
 
     /**
      * {@inheritDoc}
      */
-    protected function initIndex() {
+    protected function initIndex(): array {
         return [
             ThemeProviderInterface::class => null,
         ];
@@ -50,7 +51,7 @@ class TestThemeManager extends AbstractThemeManager {
     /**
      * {@inheritDoc}
      */
-    public function setProvider($name, ThemeProviderInterface $provider) {
+    public function setProvider(string $name, ThemeProviderInterface $provider): ManagerInterface {
         return parent::setProvider($name, $provider);
     }
 }

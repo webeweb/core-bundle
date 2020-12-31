@@ -27,7 +27,7 @@ class TranslationInterfaceTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("WBWCoreBundle", TranslationInterface::TRANSLATION_DOMAIN);
     }

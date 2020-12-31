@@ -49,7 +49,7 @@ class ColorHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetIdentifier() {
+    public function testGetIdentifier(): void {
 
         // Set a Color provider mock.
         $colorProvider = new RedColorProvider();
@@ -63,7 +63,7 @@ class ColorHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetMaterialDesignColorPalette() {
+    public function testGetMaterialDesignColorPalette(): void {
 
         $res = ColorHelper::getMaterialDesignColorPalette();
         $this->assertCount(21, $res);

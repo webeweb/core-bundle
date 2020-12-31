@@ -54,7 +54,7 @@ class MeteoconsTwigExtension extends AbstractMeteoconsTwigExtension implements I
     /**
      * {@inheritDoc}
      */
-    public function renderIcon($name, $style) {
+    public function renderIcon(?string $name, ?string $style): string {
         return $this->meteoconsIconFunction(["name" => $name, "style" => $style]);
     }
 }

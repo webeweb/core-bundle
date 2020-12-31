@@ -71,7 +71,7 @@ EOT;
      * @param Statement $statement The statement.
      * @return RepositoryReport|null Returns the repository report in case of success, null otherwise.
      */
-    protected function executeStatement(Statement $statement) {
+    protected function executeStatement(Statement $statement): ?RepositoryReport {
 
         $result = $statement->execute();
         if (false === $result) {
@@ -99,7 +99,7 @@ EOT;
      *
      * @return Closure Returns the repository report sort closure.
      */
-    public static function getRepositoryReportSortClosure() {
+    public static function getRepositoryReportSortClosure(): Closure {
 
         return function(RepositoryReport $a, RepositoryReport $b) {
 
@@ -122,7 +122,7 @@ EOT;
      * @return Statement Returns the statement.
      * @throws DBALException Throws a DBAL exception.
      */
-    protected function prepareStatement($table, $entity, $field, $available, $column) {
+    protected function prepareStatement(string $table, string $entity, string $field, int $available, string $column): Statement {
 
         $searches = ["%table%", "%entity%", "%field%", "%available%", "%column%"];
         $replaces = [$table, $entity, $field, $available, $column];
@@ -139,7 +139,7 @@ EOT;
      * @throws DBALException Throws a DBAL exception.
      * @throws MappingException Throws a mapping exception.
      */
-    public function readRepositories() {
+    public function readRepositories(): array {
 
         /** @var RepositoryReport[] $reports */
         $reports = [];
@@ -167,7 +167,7 @@ EOT;
      * @throws DBALException Throws a DBAL exception.
      * @throws MappingException Throws a mapping exception.
      */
-    protected function readRepository(ClassMetadata $classMetadata) {
+    protected function readRepository(ClassMetadata $classMetadata): array {
 
         /** @var RepositoryReport[] $reports */
         $reports = [];

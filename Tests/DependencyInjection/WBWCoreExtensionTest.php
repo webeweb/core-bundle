@@ -86,7 +86,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a configs array mock.
@@ -106,7 +106,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetAlias() {
+    public function testGetAlias(): void {
 
         $obj = new WBWCoreExtension();
 
@@ -118,7 +118,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetConfiguration() {
+    public function testGetConfiguration(): void {
 
         $obj = new WBWCoreExtension();
 
@@ -131,7 +131,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testLoad() {
+    public function testLoad(): void {
 
         $obj = new WBWCoreExtension();
 
@@ -218,25 +218,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testLoadWitWorldsWisdomQuoteProvider() {
-
-        // Set the configs mock.
-        $this->configs["wbw_core"]["quote_providers"]["worlds_wisdom"] = true;
-
-        $obj = new WBWCoreExtension();
-
-        $this->assertNull($obj->load($this->configs, $this->containerBuilder));
-
-        $this->assertInstanceOf(YamlQuoteProvider::class, $this->containerBuilder->get(self::WORLDS_WISDOM_QUOTE_PROVIDER_SERVICE_NAME));
-    }
-
-    /**
-     * Tests the load() method.
-     *
-     * @return void
-     * @throws Exception Throws an exception if an error occurs.
-     */
-    public function testLoadWithSecurityEventListener() {
+    public function testLoadWithSecurityEventListener(): void {
 
         // Set the configs mock.
         $this->configs["wbw_core"]["security_event_listener"] = true;
@@ -252,8 +234,26 @@ class WBWCoreExtensionTest extends AbstractTestCase {
      * Tests the load() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
-    public function testLoadWithoutCommands() {
+    public function testLoadWithWorldsWisdomQuoteProvider(): void {
+
+        // Set the configs mock.
+        $this->configs["wbw_core"]["quote_providers"]["worlds_wisdom"] = true;
+
+        $obj = new WBWCoreExtension();
+
+        $this->assertNull($obj->load($this->configs, $this->containerBuilder));
+
+        $this->assertInstanceOf(YamlQuoteProvider::class, $this->containerBuilder->get(self::WORLDS_WISDOM_QUOTE_PROVIDER_SERVICE_NAME));
+    }
+
+    /**
+     * Tests the load() method.
+     *
+     * @return void
+     */
+    public function testLoadWithoutCommands(): void {
 
         // Set the configs mock.
         $this->configs["wbw_core"]["commands"] = false;
@@ -277,7 +277,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testLoadWithoutEventListeners() {
+    public function testLoadWithoutEventListeners(): void {
 
         // Set the configs mock.
         $this->configs["wbw_core"]["event_listeners"] = false;
@@ -301,7 +301,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testLoadWithoutProviders() {
+    public function testLoadWithoutProviders(): void {
 
         // Set the configs mock.
         $this->configs["wbw_core"]["providers"] = false;
@@ -325,7 +325,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testLoadWithoutTwig() {
+    public function testLoadWithoutTwig(): void {
 
         // Set the configs mock.
         $this->configs["wbw_core"]["twig"] = false;

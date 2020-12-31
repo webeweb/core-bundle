@@ -27,7 +27,7 @@ class ActionResponseTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function tesSetNotify() {
+    public function tesSetNotify(): void {
 
         $obj = new ActionResponse();
 
@@ -40,7 +40,7 @@ class ActionResponseTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function tesSetStatus() {
+    public function tesSetStatus(): void {
 
         $obj = new ActionResponse();
 
@@ -53,7 +53,7 @@ class ActionResponseTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testJsonSerialize() {
+    public function testJsonSerialize(): void {
 
         $obj = new ActionResponse();
 
@@ -66,7 +66,7 @@ class ActionResponseTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__constructor() {
+    public function test__constructor(): void {
 
         $obj = new ActionResponse();
 

@@ -27,7 +27,7 @@ class AbstractColorProviderTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetDomain() {
+    public function testSetDomain(): void {
 
         $obj = new TestColorProvider();
 
@@ -40,10 +40,10 @@ class AbstractColorProviderTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestColorProvider();
 
-        $this->assertNull($obj->getDomain());
+        $this->assertEquals("test", $obj->getDomain());
     }
 }

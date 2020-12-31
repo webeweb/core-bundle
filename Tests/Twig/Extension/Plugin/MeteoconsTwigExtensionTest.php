@@ -29,7 +29,7 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFilters() {
+    public function testGetFilters(): void {
 
         $obj = new MeteoconsTwigExtension($this->twigEnvironment);
 
@@ -42,7 +42,7 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new MeteoconsTwigExtension($this->twigEnvironment);
 
@@ -60,7 +60,7 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testMeteoconsIconFunction() {
+    public function testMeteoconsIconFunction(): void {
 
         $obj = new MeteoconsTwigExtension($this->twigEnvironment);
 
@@ -74,7 +74,7 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testMeteoconsIconFunctionWithName() {
+    public function testMeteoconsIconFunctionWithName(): void {
 
         $obj = new MeteoconsTwigExtension($this->twigEnvironment);
 
@@ -88,7 +88,7 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testMeteoconsIconFunctionWithStyle() {
+    public function testMeteoconsIconFunctionWithStyle(): void {
 
         $obj = new MeteoconsTwigExtension($this->twigEnvironment);
 
@@ -102,7 +102,7 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testMeteoconsIconFunctionWithoutArguments() {
+    public function testMeteoconsIconFunctionWithoutArguments(): void {
 
         $obj = new MeteoconsTwigExtension($this->twigEnvironment);
 
@@ -116,7 +116,7 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderIcon() {
+    public function testRenderIcon(): void {
 
         $obj = new MeteoconsTwigExtension($this->twigEnvironment);
 
@@ -129,7 +129,7 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.core.twig.extension.asset.meteocons", MeteoconsTwigExtension::SERVICE_NAME);
 

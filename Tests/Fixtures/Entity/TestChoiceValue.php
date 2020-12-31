@@ -24,7 +24,7 @@ class TestChoiceValue implements ChoiceValueInterface {
     /**
      * {@inheritDoc}
      */
-    public function getChoiceValue() {
+    public function getChoiceValue(): ?string {
         return null;
     }
 }

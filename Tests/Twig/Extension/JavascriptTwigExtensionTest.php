@@ -30,7 +30,7 @@ class JavascriptTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFilters() {
+    public function testGetFilters(): void {
 
         $obj = new JavascriptTwigExtension($this->twigEnvironment);
 
@@ -48,7 +48,7 @@ class JavascriptTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new JavascriptTwigExtension($this->twigEnvironment);
 
@@ -66,7 +66,7 @@ class JavascriptTwigExtensionTest extends AbstractTestCase {
      *
      * @returns void
      */
-    public function testJsGtag() {
+    public function testJsGtag(): void {
 
         $obj = new JavascriptTwigExtension($this->twigEnvironment);
 
@@ -96,7 +96,7 @@ EOTXT;
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.core.twig.extension.javascript", JavascriptTwigExtension::SERVICE_NAME);
 

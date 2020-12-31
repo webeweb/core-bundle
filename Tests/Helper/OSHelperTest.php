@@ -27,7 +27,7 @@ class OSHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testIsLinux() {
+    public function testIsLinux(): void {
 
         // Determines the operating system.
         if ("\\" !== DIRECTORY_SEPARATOR) {
@@ -44,7 +44,7 @@ class OSHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testIsWindows() {
+    public function testIsWindows(): void {
 
         // Determines the operating system.
         if ("\\" !== DIRECTORY_SEPARATOR) {

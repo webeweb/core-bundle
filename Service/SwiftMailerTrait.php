@@ -24,16 +24,16 @@ trait SwiftMailerTrait {
     /**
      * Swift mailer.
      *
-     * @var Swift_Mailer
+     * @var Swift_Mailer|null
      */
     private $swiftMailer;
 
     /**
      * Get the swift mailer.
      *
-     * @return Swift_Mailer Returns the swift mailer.
+     * @return Swift_Mailer|null Returns the swift mailer.
      */
-    public function getSwiftMailer() {
+    public function getSwiftMailer(): ?Swift_Mailer {
         return $this->swiftMailer;
     }
 
@@ -42,7 +42,7 @@ trait SwiftMailerTrait {
      *
      * @param Swift_Mailer|null $swiftMailer The swift mailer.
      */
-    protected function setSwiftMailer(Swift_Mailer $swiftMailer = null) {
+    protected function setSwiftMailer(?Swift_Mailer $swiftMailer): self {
         $this->swiftMailer = $swiftMailer;
         return $this;
     }

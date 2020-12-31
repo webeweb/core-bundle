@@ -28,7 +28,7 @@ class QuoteProviderCompilerPass implements CompilerPassInterface {
     /**
      *{@inheritDoc}
      */
-    public function process(ContainerBuilder $container) {
+    public function process(ContainerBuilder $container): void {
 
         if (false === $container->has(QuoteManager::SERVICE_NAME)) {
             return;

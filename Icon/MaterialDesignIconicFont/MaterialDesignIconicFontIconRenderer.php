@@ -27,7 +27,7 @@ class MaterialDesignIconicFontIconRenderer extends IconRenderer {
      * @param MaterialDesignIconicFontIconInterface $icon The icon.
      * @return string|null Returns the rendered border in case of success, null otherwise.
      */
-    public static function renderBorder(MaterialDesignIconicFontIconInterface $icon) {
+    public static function renderBorder(MaterialDesignIconicFontIconInterface $icon): ?string {
         return null !== $icon->getBorder() ? "zmdi-hc-" . $icon->getBorder() : null;
     }
 
@@ -37,7 +37,7 @@ class MaterialDesignIconicFontIconRenderer extends IconRenderer {
      * @param MaterialDesignIconicFontIconInterface $icon The icon.
      * @return string|null Returns the rendered fixed width in case of success, null otherwise.
      */
-    public static function renderFixedWidth(MaterialDesignIconicFontIconInterface $icon) {
+    public static function renderFixedWidth(MaterialDesignIconicFontIconInterface $icon): ?string {
         return true === $icon->getFixedWidth() ? "zmdi-hc-fw" : null;
     }
 
@@ -47,7 +47,7 @@ class MaterialDesignIconicFontIconRenderer extends IconRenderer {
      * @param MaterialDesignIconicFontIconInterface $icon The icon.
      * @return string|null Returns the rendered flip.
      */
-    public static function renderFlip(MaterialDesignIconicFontIconInterface $icon) {
+    public static function renderFlip(MaterialDesignIconicFontIconInterface $icon): ?string {
         return null !== $icon->getFlip() ? "zmdi-hc-flip-" . $icon->getFlip() : null;
     }
 
@@ -57,7 +57,7 @@ class MaterialDesignIconicFontIconRenderer extends IconRenderer {
      * @param MaterialDesignIconicFontIconInterface $icon The icon.
      * @return string|null Returns the rendered name in case of success, false otherwise.
      */
-    public static function renderName(MaterialDesignIconicFontIconInterface $icon) {
+    public static function renderName(MaterialDesignIconicFontIconInterface $icon): ?string {
         return null !== $icon->getName() ? "zmdi-" . $icon->getName() : null;
     }
 
@@ -67,7 +67,7 @@ class MaterialDesignIconicFontIconRenderer extends IconRenderer {
      * @param MaterialDesignIconicFontIconInterface $icon The icon.
      * @return string|null Returns the rendered pull in case of success, null otherwise.
      */
-    public static function renderPull(MaterialDesignIconicFontIconInterface $icon) {
+    public static function renderPull(MaterialDesignIconicFontIconInterface $icon): ?string {
         return null !== $icon->getPull() ? "pull-" . $icon->getPull() : null;
     }
 
@@ -77,7 +77,7 @@ class MaterialDesignIconicFontIconRenderer extends IconRenderer {
      * @param MaterialDesignIconicFontIconInterface $icon The icon.
      * @return string|null Returns the rendered rotate in case of success, null otherwise.
      */
-    public static function renderRotate(MaterialDesignIconicFontIconInterface $icon) {
+    public static function renderRotate(MaterialDesignIconicFontIconInterface $icon): ?string {
         return null !== $icon->getRotate() ? "zmdi-hc-rotate-" . $icon->getRotate() : null;
     }
 
@@ -87,7 +87,7 @@ class MaterialDesignIconicFontIconRenderer extends IconRenderer {
      * @param MaterialDesignIconicFontIconInterface $icon The icon.
      * @return string|null Returns the rendered size in case of success, null otherwise.
      */
-    public static function renderSize(MaterialDesignIconicFontIconInterface $icon) {
+    public static function renderSize(MaterialDesignIconicFontIconInterface $icon): ?string {
         return null !== $icon->getSize() ? "zmdi-hc-" . $icon->getSize() : null;
     }
 
@@ -97,8 +97,7 @@ class MaterialDesignIconicFontIconRenderer extends IconRenderer {
      * @param MaterialDesignIconicFontIconInterface $icon The icon.
      * @return string|null Returns the rendered spin in case of success, null otherwise.
      */
-    public static function renderSpin(MaterialDesignIconicFontIconInterface $icon) {
+    public static function renderSpin(MaterialDesignIconicFontIconInterface $icon): ?string {
         return null !== $icon->getSpin() ? "zmdi-hc-" . $icon->getSpin() : null;
     }
-
 }

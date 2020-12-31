@@ -24,16 +24,16 @@ trait EventDispatcherTrait {
     /**
      * Event dispatcher.
      *
-     * @var EventDispatcherInterface
+     * @var EventDispatcherInterface|null
      */
     private $eventDispatcher;
 
     /**
      * Get the event dispatcher.
      *
-     * @return EventDispatcherInterface Returns the event dispatcher.
+     * @return EventDispatcherInterface|null Returns the event dispatcher.
      */
-    public function getEventDispatcher() {
+    public function getEventDispatcher(): ?EventDispatcherInterface {
         return $this->eventDispatcher;
     }
 
@@ -42,7 +42,7 @@ trait EventDispatcherTrait {
      *
      * @param EventDispatcherInterface|null $eventDispatcher The event dispatcher.
      */
-    protected function setEventDispatcher(EventDispatcherInterface $eventDispatcher = null) {
+    protected function setEventDispatcher(?EventDispatcherInterface $eventDispatcher): self {
         $this->eventDispatcher = $eventDispatcher;
         return $this;
     }

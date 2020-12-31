@@ -30,7 +30,7 @@ class StylesheetTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testCssRGBA() {
+    public function testCssRGBA(): void {
 
         $obj = new StylesheetTwigExtension($this->twigEnvironment);
 
@@ -62,7 +62,7 @@ class StylesheetTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFilters() {
+    public function testGetFilters(): void {
 
         $obj = new StylesheetTwigExtension($this->twigEnvironment);
 
@@ -80,7 +80,7 @@ class StylesheetTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new StylesheetTwigExtension($this->twigEnvironment);
 
@@ -98,7 +98,7 @@ class StylesheetTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.core.twig.extension.stylesheet", StylesheetTwigExtension::SERVICE_NAME);
 

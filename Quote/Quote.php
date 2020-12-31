@@ -42,7 +42,7 @@ class Quote implements QuoteInterface {
     /**
      * {@inheritDoc}
      */
-    public function getAuthor() {
+    public function getAuthor(): ?string {
         return $this->author;
     }
 
@@ -52,7 +52,7 @@ class Quote implements QuoteInterface {
      * @param string $author The author.
      * @return Quote Returns this quote.
      */
-    public function setAuthor($author) {
+    public function setAuthor(string $author): QuoteInterface {
         $this->author = $author;
         return $this;
     }

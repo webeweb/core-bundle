@@ -48,7 +48,7 @@ class NotificationEventListener {
      * @param NotificationEvent $event The event.
      * @return NotificationEvent Returns the event.
      */
-    public function onNotify(NotificationEvent $event) {
+    public function onNotify(NotificationEvent $event): NotificationEvent {
         if (true === ($this->getSession() instanceof Session)) {
             $this->getSession()->getFlashBag()->add($event->getNotification()->getType(), $event->getNotification()->getContent());
         }

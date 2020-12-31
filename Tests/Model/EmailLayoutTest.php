@@ -27,7 +27,7 @@ class EmailLayoutTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetAccountSeetings() {
+    public function testSetAccountSeetings(): void {
 
         $obj = new EmailLayout();
 
@@ -40,7 +40,7 @@ class EmailLayoutTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetBestRegards() {
+    public function testSetBestRegards(): void {
 
         $obj = new EmailLayout();
 
@@ -53,7 +53,7 @@ class EmailLayoutTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetCompanyLogo() {
+    public function testSetCompanyLogo(): void {
 
         $obj = new EmailLayout();
 
@@ -66,7 +66,7 @@ class EmailLayoutTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetCompanyName() {
+    public function testSetCompanyName(): void {
 
         $obj = new EmailLayout();
 
@@ -79,7 +79,7 @@ class EmailLayoutTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetCompanyURL() {
+    public function testSetCompanyURL(): void {
 
         $obj = new EmailLayout();
 
@@ -92,7 +92,7 @@ class EmailLayoutTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetSupportEmail() {
+    public function testSetSupportEmail(): void {
 
         $obj = new EmailLayout();
 
@@ -105,7 +105,7 @@ class EmailLayoutTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetSupportName() {
+    public function testSetSupportName(): void {
 
         $obj = new EmailLayout();
 
@@ -118,7 +118,7 @@ class EmailLayoutTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetSupportPhone() {
+    public function testSetSupportPhone(): void {
 
         $obj = new EmailLayout();
 
@@ -131,7 +131,7 @@ class EmailLayoutTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetUnsubscribeURL() {
+    public function testSetUnsubscribeURL(): void {
 
         $obj = new EmailLayout();
 
@@ -144,7 +144,7 @@ class EmailLayoutTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new EmailLayout();
 

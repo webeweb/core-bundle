@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Form\Factory;
 
+use Closure;
 use WBW\Bundle\CoreBundle\Form\Factory\FormFactory;
 
 /**
@@ -24,7 +25,7 @@ class TestFormFactory extends FormFactory {
     /**
      * {@inheritDoc}
      */
-    public static function getChoiceLabelClosure(array $options) {
+    public static function getChoiceLabelClosure(array $options): Closure {
         return parent::getChoiceLabelClosure($options);
     }
 }

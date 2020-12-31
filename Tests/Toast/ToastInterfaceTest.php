@@ -28,7 +28,7 @@ class ToastInterfaceTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals(WBWCoreInterface::CORE_DANGER, ToastInterface::TOAST_DANGER);
         $this->assertEquals(WBWCoreInterface::CORE_INFO, ToastInterface::TOAST_INFO);

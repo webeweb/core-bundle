@@ -31,7 +31,7 @@ class CommandHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetCheckbox() {
+    public function testGetCheckbox(): void {
 
         // Determines the operating system.
         if ("\\" !== DIRECTORY_SEPARATOR) {
@@ -50,7 +50,7 @@ class CommandHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewSymfonyStyle() {
+    public function testNewSymfonyStyle(): void {
 
         // Set an Ouput formatter mock.
         $outputFormatter = $this->getMockBuilder(OutputFormatterInterface::class)->getMock();

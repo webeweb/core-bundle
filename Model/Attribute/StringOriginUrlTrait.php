@@ -22,25 +22,25 @@ trait StringOriginUrlTrait {
     /**
      * Origin URL.
      *
-     * @var string
+     * @var string|null
      */
     protected $originUrl;
 
     /**
      * Get the origin URL.
      *
-     * @return string Returns the origin URL.
+     * @return string|null Returns the origin URL.
      */
-    public function getOriginUrl() {
+    public function getOriginUrl(): ?string {
         return $this->originUrl;
     }
 
     /**
      * Set the origin URL.
      *
-     * @param string $originUrl The origin URL.
+     * @param string|null $originUrl The origin URL.
      */
-    public function setOriginUrl($originUrl) {
+    public function setOriginUrl(?string $originUrl): self {
         $this->originUrl = $originUrl;
         return $this;
     }

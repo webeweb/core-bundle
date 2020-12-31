@@ -30,7 +30,7 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testFontAwesomeIconFunction() {
+    public function testFontAwesomeIconFunction(): void {
 
         $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
 
@@ -44,7 +44,7 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testFontAwesomeIconFunctionWithoutArguments() {
+    public function testFontAwesomeIconFunctionWithoutArguments(): void {
 
         $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
 
@@ -58,7 +58,7 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testFontAwesomeListFilter() {
+    public function testFontAwesomeListFilter(): void {
 
         $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
 
@@ -72,7 +72,7 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testFontAwesomeListIconFilter() {
+    public function testFontAwesomeListIconFilter(): void {
 
         $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
 
@@ -86,7 +86,7 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testFontAwesomeListIconFilterWithContent() {
+    public function testFontAwesomeListIconFilterWithContent(): void {
 
         $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
 
@@ -100,7 +100,7 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFilters() {
+    public function testGetFilters(): void {
 
         $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
 
@@ -133,7 +133,7 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
 
@@ -156,7 +156,7 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderIcon() {
+    public function testRenderIcon(): void {
 
         $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
 
@@ -169,7 +169,7 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.core.twig.extension.asset.font_awesome", FontAwesomeTwigExtension::SERVICE_NAME);
 

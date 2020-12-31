@@ -30,7 +30,7 @@ class NavigationTreeHelper {
      * @param int $level The node level.
      * @return bool Returns true in case of success, false otherwise.
      */
-    protected static function activeNodes(Request $request, array $nodes = [], $level = 0) {
+    protected static function activeNodes(Request $request, array $nodes = [], int $level = 0): bool {
 
         $result = false;
 
@@ -60,7 +60,7 @@ class NavigationTreeHelper {
      * @param Request $request The request.
      * @return void
      */
-    public static function activeTree(NavigationTree $tree, Request $request) {
+    public static function activeTree(NavigationTree $tree, Request $request): void {
         self::activeNodes($request, $tree->getNodes());
     }
 
@@ -70,7 +70,7 @@ class NavigationTreeHelper {
      * @param AbstractNavigationNode $node The navigation node.
      * @return AbstractNavigationNode[] Returns the breadcrumbs.
      */
-    public static function getBreadcrumbs(AbstractNavigationNode $node) {
+    public static function getBreadcrumbs(AbstractNavigationNode $node): array {
 
         $breadcrumbs = [];
 
@@ -92,7 +92,7 @@ class NavigationTreeHelper {
      * @param Request $request The request.
      * @return bool Returns true in case of success, false otherwise.
      */
-    protected static function nodeMatch(AbstractNavigationNode $node, Request $request) {
+    protected static function nodeMatch(AbstractNavigationNode $node, Request $request): bool {
 
         $result = false;
 

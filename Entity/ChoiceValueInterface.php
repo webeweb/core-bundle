@@ -22,7 +22,7 @@ interface ChoiceValueInterface {
     /**
      * Get the choice value.
      *
-     * @return string Returns the choice value.
+     * @return string|null Returns the choice value.
      */
-    public function getChoiceValue();
+    public function getChoiceValue(): ?string;
 }

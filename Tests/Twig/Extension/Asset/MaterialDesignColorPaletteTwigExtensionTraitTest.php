@@ -28,7 +28,7 @@ class MaterialDesignColorPaletteTwigExtensionTraitTest extends AbstractTestCase 
      *
      * @return void
      */
-    public function testSetMaterialDesignColorPaletteTwigExtension() {
+    public function testSetMaterialDesignColorPaletteTwigExtension(): void {
 
         // Set a Material Design color palette Twig extension mock.
         $materialDesignColorPaletteTwigExtension = new MaterialDesignColorPaletteTwigExtension($this->twigEnvironment);
@@ -44,7 +44,7 @@ class MaterialDesignColorPaletteTwigExtensionTraitTest extends AbstractTestCase 
      *
      * @return void
      */
-    public function test__constructor() {
+    public function test__constructor(): void {
 
         $obj = new TestMaterialDesignColorPaletteTwigExtensionTrait();
 

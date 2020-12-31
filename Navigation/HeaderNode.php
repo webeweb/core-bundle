@@ -23,9 +23,9 @@ class HeaderNode extends AbstractNavigationNode {
      * Constructor.
      *
      * @param string $label The label.
-     * @param string $icon The icon.
+     * @param string|null $icon The icon.
      */
-    public function __construct($label, $icon = null) {
+    public function __construct(string $label, string $icon = null) {
         parent::__construct($label, $icon, null, null);
         $this->setEnable(true);
     }
@@ -33,7 +33,7 @@ class HeaderNode extends AbstractNavigationNode {
     /**
      * {@inheritDoc}
      */
-    public function addNode(AbstractNavigationNode $node) {
+    public function addNode(AbstractNavigationNode $node): AbstractNavigationNode {
         return $this;
     }
 }

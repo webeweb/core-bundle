@@ -28,7 +28,7 @@ class PhantomJSHelperTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetPhantomJSHelper() {
+    public function testSetPhantomJSHelper(): void {
 
         // Set a PhantomJS helper mock.
         $phantomJSHelper = new PhantomJSHelper("path", "base");
@@ -44,7 +44,7 @@ class PhantomJSHelperTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestPhantomJSHelperTrait();
 

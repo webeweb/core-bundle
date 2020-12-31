@@ -34,5 +34,5 @@ interface NavigationThemeProviderInterface extends ThemeProviderInterface {
      *
      * @return NavigationTree Returns the tree.
      */
-    public function getTree();
+    public function getTree(): NavigationTree;
 }

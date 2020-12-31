@@ -51,7 +51,7 @@ abstract class AbstractThemeManager extends AbstractManager {
      *
      * @return void
      */
-    public function addGlobal() {
+    public function addGlobal(): void {
 
         foreach ($this->getIndex() as $k => $v) {
 
@@ -69,7 +69,7 @@ abstract class AbstractThemeManager extends AbstractManager {
      *
      * @return array Returns the index.
      */
-    protected function getIndex() {
+    protected function getIndex(): array {
         return $this->index;
     }
 
@@ -79,7 +79,7 @@ abstract class AbstractThemeManager extends AbstractManager {
      * @param string $name The name.
      * @return ThemeProviderInterface|null Returns the theme provider in case of success, null otherwise.
      */
-    protected function getProvider($name) {
+    protected function getProvider(string $name): ?ThemeProviderInterface {
 
         $v = $this->getIndex()[$name];
         if (null === $v) {
@@ -94,7 +94,7 @@ abstract class AbstractThemeManager extends AbstractManager {
      *
      * @return array Returns the initialized index.
      */
-    abstract protected function initIndex();
+    abstract protected function initIndex(): array;
 
     /**
      * Set the index.
@@ -102,7 +102,7 @@ abstract class AbstractThemeManager extends AbstractManager {
      * @param array $index The index.
      * @return ManagerInterface Returns this manager.
      */
-    protected function setIndex(array $index) {
+    protected function setIndex(array $index): ManagerInterface {
         $this->index = $index;
         return $this;
     }
@@ -110,11 +110,11 @@ abstract class AbstractThemeManager extends AbstractManager {
     /**
      * Set a provider.
      *
-     * @param mixed $name The name.
+     * @param string $name The name.
      * @param ThemeProviderInterface $provider The provider.
      * @return ManagerInterface Returns this manager.
      */
-    protected function setProvider($name, ThemeProviderInterface $provider) {
+    protected function setProvider(string $name, ThemeProviderInterface $provider): ManagerInterface {
 
         $v = $this->getIndex()[$name];
         if (null !== $v) {

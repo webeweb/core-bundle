@@ -27,7 +27,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetBorder() {
+    public function testSetBorder(): void {
 
         $obj = new MaterialDesignIconicFontIcon();
 
@@ -40,7 +40,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetBorderWithBadArgument() {
+    public function testSetBorderWithBadArgument(): void {
 
         $obj = new MaterialDesignIconicFontIcon();
 
@@ -53,7 +53,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetFixedWidth() {
+    public function testSetFixedWidth(): void {
 
         $obj = new MaterialDesignIconicFontIcon();
 
@@ -66,7 +66,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetFlip() {
+    public function testSetFlip(): void {
 
         $obj = new MaterialDesignIconicFontIcon();
 
@@ -79,7 +79,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetFlipWithBadArgument() {
+    public function testSetFlipWithBadArgument(): void {
 
         $obj = new MaterialDesignIconicFontIcon();
 
@@ -92,7 +92,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetPull() {
+    public function testSetPull(): void {
 
         $obj = new MaterialDesignIconicFontIcon();
 
@@ -105,7 +105,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetPullWithBadArgument() {
+    public function testSetPullWithBadArgument(): void {
 
         $obj = new MaterialDesignIconicFontIcon();
 
@@ -118,7 +118,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetRotate() {
+    public function testSetRotate(): void {
 
         $obj = new MaterialDesignIconicFontIcon();
 
@@ -131,7 +131,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetRotateWithBadArgument() {
+    public function testSetRotateWithBadArgument(): void {
 
         $obj = new MaterialDesignIconicFontIcon();
 
@@ -144,7 +144,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetSize() {
+    public function testSetSize(): void {
 
         $obj = new MaterialDesignIconicFontIcon();
 
@@ -157,7 +157,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetSizeWithBadArgument() {
+    public function testSetSizeWithBadArgument(): void {
 
         $obj = new MaterialDesignIconicFontIcon();
 
@@ -170,7 +170,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetSpin() {
+    public function testSetSpin(): void {
 
         $obj = new MaterialDesignIconicFontIcon();
 
@@ -183,7 +183,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetSpinWithBadArgument() {
+    public function testSetSpinWithBadArgument(): void {
 
         $obj = new MaterialDesignIconicFontIcon();
 
@@ -196,7 +196,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new MaterialDesignIconicFontIcon();
 

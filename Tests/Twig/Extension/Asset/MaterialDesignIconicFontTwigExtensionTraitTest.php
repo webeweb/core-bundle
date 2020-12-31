@@ -28,7 +28,7 @@ class MaterialDesignIconicFontTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetMaterialDesignIconicFontTwigExtension() {
+    public function testSetMaterialDesignIconicFontTwigExtension(): void {
 
         // Set a Material Design Iconic font Twig extension mock.
         $materialDesignIconicFontTwigExtension = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
@@ -44,7 +44,7 @@ class MaterialDesignIconicFontTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__constructor() {
+    public function test__constructor(): void {
 
         $obj = new TestMaterialDesignIconicFontTwigExtensionTrait();
 

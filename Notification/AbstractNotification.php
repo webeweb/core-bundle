@@ -40,7 +40,7 @@ abstract class AbstractNotification implements NotificationInterface {
      * @param string $type The type.
      * @param string $content The content.
      */
-    protected function __construct($type, $content) {
+    protected function __construct(string $type, string $content) {
         $this->setContent($content);
         $this->setType($type);
     }
@@ -48,14 +48,14 @@ abstract class AbstractNotification implements NotificationInterface {
     /**
      * {@inheritDoc}
      */
-    public function getContent() {
+    public function getContent(): string {
         return $this->content;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getType() {
+    public function getType(): string {
         return $this->type;
     }
 
@@ -65,7 +65,7 @@ abstract class AbstractNotification implements NotificationInterface {
      * @param string $content The content.
      * @return NotificationInterface Returns this notification.
      */
-    protected function setContent($content) {
+    protected function setContent(string $content): NotificationInterface {
         $this->content = $content;
         return $this;
     }
@@ -76,7 +76,7 @@ abstract class AbstractNotification implements NotificationInterface {
      * @param string $type The type.
      * @return NotificationInterface Returns this notification.
      */
-    protected function setType($type) {
+    protected function setType(string $type): NotificationInterface {
         $this->type = $type;
         return $this;
     }

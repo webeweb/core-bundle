@@ -29,7 +29,7 @@ class GreyColorProviderTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetColors() {
+    public function testGetColors(): void {
 
         $obj = new GreyColorProvider();
 
@@ -61,7 +61,7 @@ class GreyColorProviderTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetName() {
+    public function testGetName(): void {
 
         $obj = new GreyColorProvider();
 
@@ -73,7 +73,7 @@ class GreyColorProviderTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new GreyColorProvider();
 

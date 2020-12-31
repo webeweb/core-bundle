@@ -28,7 +28,7 @@ class SecurityEventListenerTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set an User mock.
@@ -40,7 +40,7 @@ class SecurityEventListenerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testOnInteractiveLogin() {
+    public function testOnInteractiveLogin(): void {
 
         // Set the Flash bag mock.
         $this->flashBag->expects($this->any())->method("add")->willReturn($this->flashBag);
@@ -66,7 +66,7 @@ class SecurityEventListenerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.core.event_listener.security", SecurityEventListener::SERVICE_NAME);
 

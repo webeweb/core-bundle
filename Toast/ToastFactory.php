@@ -25,7 +25,7 @@ class ToastFactory {
      * @param string $content The content.
      * @return ToastInterface Returns the danger toast.
      */
-    public static function newDangerToast($content) {
+    public static function newDangerToast(string $content): ToastInterface {
         return new DangerToast($content);
     }
 
@@ -36,7 +36,7 @@ class ToastFactory {
      * @param string $type The type.
      * @return ToastInterface Returns the default toast.
      */
-    public static function newDefaultToast($content, $type) {
+    public static function newDefaultToast(string $content, string $type): ToastInterface {
         return new DefaultToast($type, $content);
     }
 
@@ -46,7 +46,7 @@ class ToastFactory {
      * @param string $content The content.
      * @return ToastInterface Returns the info toast.
      */
-    public static function newInfoToast($content) {
+    public static function newInfoToast(string $content): ToastInterface {
         return new InfoToast($content);
     }
 
@@ -56,7 +56,7 @@ class ToastFactory {
      * @param string $content The content.
      * @return ToastInterface Returns the success toast.
      */
-    public static function newSuccessToast($content) {
+    public static function newSuccessToast(string $content): ToastInterface {
         return new SuccessToast($content);
     }
 
@@ -66,7 +66,7 @@ class ToastFactory {
      * @param string $content The content.
      * @return ToastInterface Returns the warning toast.
      */
-    public static function newWarningToast($content) {
+    public static function newWarningToast(string $content): ToastInterface {
         return new WarningToast($content);
     }
 }

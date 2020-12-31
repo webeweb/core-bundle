@@ -28,7 +28,7 @@ class ApplicationThemeProviderTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetApplicationThemeProvider() {
+    public function testSetApplicationThemeProvider(): void {
 
         // Set an Application theme provider mock.
         $applicationThemeProvider = $this->getMockBuilder(ApplicationThemeProviderInterface::class)->getMock();
@@ -44,7 +44,7 @@ class ApplicationThemeProviderTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestApplicationThemeProviderTrait();
 

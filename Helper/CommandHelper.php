@@ -30,7 +30,7 @@ class CommandHelper {
      * @param bool $checked Checked ?
      * @return string Returns the checkbox.
      */
-    public static function getCheckbox($checked) {
+    public static function getCheckbox(bool $checked): string {
         if (true === $checked) {
             return sprintf("<fg=green;options=bold>%s</>", OSHelper::isWindows() ? "OK" : "\xE2\x9C\x94");
         }
@@ -44,7 +44,7 @@ class CommandHelper {
      * @param OutputInterface $output The output.
      * @return StyleInterface Returns the Symfony style.
      */
-    public static function newSymfonyStyle(InputInterface $input, OutputInterface $output) {
+    public static function newSymfonyStyle(InputInterface $input, OutputInterface $output): StyleInterface {
         return new SymfonyStyle($input, $output);
     }
 }

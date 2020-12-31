@@ -28,7 +28,7 @@ class KernelHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetProjectDir() {
+    public function testGetProjectDir(): void {
 
         // Set a Kernel mock.
         $kernel = new TestKernel("test", true);

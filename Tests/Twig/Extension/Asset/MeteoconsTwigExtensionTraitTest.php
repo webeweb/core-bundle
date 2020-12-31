@@ -28,7 +28,7 @@ class MeteoconsTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetMeteoconsTwigExtension() {
+    public function testSetMeteoconsTwigExtension(): void {
 
         // Set a Meteocons Twig extension mock.
         $meteoconsTwigExtension = new MeteoconsTwigExtension($this->twigEnvironment);
@@ -44,7 +44,7 @@ class MeteoconsTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__constructor() {
+    public function test__constructor(): void {
 
         $obj = new TestMeteoconsTwigExtensionTrait();
 

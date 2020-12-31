@@ -51,7 +51,7 @@ class FormFactoryTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a choice values mock.
@@ -83,7 +83,7 @@ class FormFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetChoiceLabelClosure() {
+    public function testGetChoiceLabelClosure(): void {
 
         $res = TestFormFactory::getChoiceLabelClosure([]);
         $this->assertInstanceOf(Closure::class, $res);
@@ -105,7 +105,7 @@ class FormFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetChoiceValueClosure() {
+    public function testGetChoiceValueClosure(): void {
 
         $res = FormFactory::getChoiceValueClosure();
         $this->assertInstanceOf(Closure::class, $res);
@@ -119,7 +119,7 @@ class FormFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewChoiceType() {
+    public function testNewChoiceType(): void {
 
         $res = FormFactory::newChoiceType($this->choices);
         $this->assertCount(1, $res);
@@ -140,7 +140,7 @@ class FormFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewEntityType() {
+    public function testNewEntityType(): void {
 
         $res = FormFactory::newEntityType(NavigationNode::class, $this->entities);
         $this->assertCount(3, $res);
@@ -166,7 +166,7 @@ class FormFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewEntityTypeWithChoiceValueInterface() {
+    public function testNewEntityTypeWithChoiceValueInterface(): void {
 
         $arg = [
             new TestChoiceValue(),
@@ -196,7 +196,7 @@ class FormFactoryTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testNewEntityTypeWithEmpty() {
+    public function testNewEntityTypeWithEmpty(): void {
 
         $res = FormFactory::newEntityType(NavigationNode::class, $this->entities, ["empty" => true]);
         $this->assertCount(3, $res);

@@ -35,7 +35,7 @@ abstract class AbstractCommand extends Command {
      * @param string $header The header.
      * @return void
      */
-    protected function displayHeader(StyleInterface $io, $header) {
+    protected function displayHeader(StyleInterface $io, string $header): void {
         $io->text($header);
         $io->newLine();
     }
@@ -47,7 +47,7 @@ abstract class AbstractCommand extends Command {
      * @param string $title The title.
      * @return void
      */
-    protected function displayTitle(StyleInterface $io, $title) {
+    protected function displayTitle(StyleInterface $io, string $title): void {
         $io->title($title);
     }
 
@@ -57,7 +57,7 @@ abstract class AbstractCommand extends Command {
      * @param bool $checked Checked ?
      * @return string Returns the checkbox.
      */
-    protected function getCheckbox($checked) {
+    protected function getCheckbox(bool $checked): string {
         return CommandHelper::getCheckbox($checked);
     }
 
@@ -66,7 +66,7 @@ abstract class AbstractCommand extends Command {
      *
      * @return KernelInterface|null Returns the kernel in case of success, null othrewise.
      */
-    protected function getKernel() {
+    protected function getKernel(): ?KernelInterface {
         if (false === ($this->getApplication() instanceof Application)) {
             return null;
         }
@@ -80,7 +80,7 @@ abstract class AbstractCommand extends Command {
      * @param OutputInterface $output The output.
      * @return StyleInterface Returns the style.
      */
-    protected function newStyle(InputInterface $input, OutputInterface $output) {
+    protected function newStyle(InputInterface $input, OutputInterface $output): StyleInterface {
         return CommandHelper::newSymfonyStyle($input, $output);
     }
 }

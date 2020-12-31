@@ -24,16 +24,16 @@ trait ContainerTrait {
     /**
      * Container.
      *
-     * @var Container.
+     * @var Container|null
      */
     private $container;
 
     /**
      * Get the container.
      *
-     * @return Container Returns the container.
+     * @return Container|null Returns the container.
      */
-    public function getContainer() {
+    public function getContainer(): ?Container {
         return $this->container;
     }
 
@@ -42,7 +42,7 @@ trait ContainerTrait {
      *
      * @param Container|null $container The container.
      */
-    protected function setContainer(Container $container = null) {
+    protected function setContainer(?Container $container): self {
         $this->container = $container;
         return $this;
     }

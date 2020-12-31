@@ -28,7 +28,7 @@ class NotificationsDropDownThemeProviderTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetNotificationsDropDownThemeProvider() {
+    public function testSetNotificationsDropDownThemeProvider(): void {
 
         // Set a Notifications drop down theme provider mock.
         $notificationsDropDownThemeProvider = $this->getMockBuilder(NotificationsDropDownThemeProviderInterface::class)->getMock();
@@ -44,7 +44,7 @@ class NotificationsDropDownThemeProviderTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestNotificationsDropDownThemeProviderTrait();
 

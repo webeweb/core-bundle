@@ -30,7 +30,7 @@ class AbstractThemeManagerTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testAddGlobal() {
+    public function testAddGlobal(): void {
 
         // Set a Theme provider mock.
         $provider = $this->getMockBuilder(ThemeProviderInterface::class)->getMock();
@@ -52,7 +52,7 @@ class AbstractThemeManagerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddGlobalWithNull() {
+    public function testAddGlobalWithNull(): void {
 
         $obj = new TestThemeManager($this->logger, $this->twigEnvironment);
 
@@ -68,7 +68,7 @@ class AbstractThemeManagerTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testSetProvider() {
+    public function testSetProvider(): void {
 
         // Set a Theme provider mock.
         $provider = $this->getMockBuilder(ThemeProviderInterface::class)->getMock();
@@ -85,7 +85,7 @@ class AbstractThemeManagerTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testSetProviderWithOverwrite() {
+    public function testSetProviderWithOverwrite(): void {
 
         // Set a Theme provider mock.
         $provider1 = $this->getMockBuilder(ThemeProviderInterface::class)->getMock();
@@ -106,7 +106,7 @@ class AbstractThemeManagerTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestThemeManager($this->logger, $this->twigEnvironment);
 

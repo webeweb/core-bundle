@@ -32,7 +32,7 @@ class FormFactory {
      * @param array $options The options
      * @return Closure Returns the choice label closure.
      */
-    protected static function getChoiceLabelClosure(array $options) {
+    protected static function getChoiceLabelClosure(array $options): Closure {
 
         $options["translator"] = ArrayHelper::get($options, "translator", null);
 
@@ -46,7 +46,7 @@ class FormFactory {
      *
      * @return Closure Returns the choice value closure.
      */
-    public static function getChoiceValueClosure() {
+    public static function getChoiceValueClosure(): Closure {
         return function(ChoiceValueInterface $entity = null) {
             return null !== $entity ? $entity->getChoiceValue() : "";
         };
@@ -58,7 +58,7 @@ class FormFactory {
      * @param string $class The class.
      * @return bool Returns true in case of success, false otherwise.
      */
-    protected static function isChoiceValueInterface($class) {
+    protected static function isChoiceValueInterface(string $class): bool {
         try {
             return (new ReflectionClass($class))->implementsInterface(ChoiceValueInterface::class);
         } catch (ReflectionException $ex) {
@@ -72,7 +72,7 @@ class FormFactory {
      * @param array $choices The choices.
      * @return array Returns the choice type.
      */
-    public static function newChoiceType(array $choices = []) {
+    public static function newChoiceType(array $choices = []): array {
         return [
             "choices" => array_flip($choices),
         ];
@@ -86,7 +86,7 @@ class FormFactory {
      * @param array $options The options.
      * @return array $choices Returns the entity type.
      */
-    public static function newEntityType($class, array $choices = [], array $options = []) {
+    public static function newEntityType(string $class, array $choices = [], array $options = []): array {
 
         $output = [
             "class"        => $class,

@@ -24,16 +24,16 @@ trait EntityManagerTrait {
     /**
      * Entity manager.
      *
-     * @var EntityManagerInterface
+     * @var EntityManagerInterface|null
      */
     private $entityManager;
 
     /**
      * Get the entity manager.
      *
-     * @return EntityManagerInterface Returns the entity manager.
+     * @return EntityManagerInterface|null Returns the entity manager.
      */
-    public function getEntityManager() {
+    public function getEntityManager(): ?EntityManagerInterface {
         return $this->entityManager;
     }
 
@@ -42,7 +42,7 @@ trait EntityManagerTrait {
      *
      * @param EntityManagerInterface|null $entityManager The entity manager.
      */
-    protected function setEntityManager(EntityManagerInterface $entityManager = null) {
+    protected function setEntityManager(?EntityManagerInterface $entityManager): self {
         $this->entityManager = $entityManager;
         return $this;
     }

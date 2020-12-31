@@ -29,9 +29,9 @@ trait WhiteColorProviderTrait {
     /**
      * Get the white color provider.
      *
-     * @return WhiteColorProvider Returns the white color provider.
+     * @return WhiteColorProvider|null Returns the white color provider.
      */
-    public function getWhiteColorProvider() {
+    public function getWhiteColorProvider(): ?WhiteColorProvider {
         return $this->whiteColorProvider;
     }
 
@@ -40,7 +40,7 @@ trait WhiteColorProviderTrait {
      *
      * @param WhiteColorProvider|null $whiteColorProvider The white color provider.
      */
-    protected function setWhiteColorProvider(WhiteColorProvider $whiteColorProvider = null) {
+    protected function setWhiteColorProvider(?WhiteColorProvider $whiteColorProvider): self {
         $this->whiteColorProvider = $whiteColorProvider;
         return $this;
     }

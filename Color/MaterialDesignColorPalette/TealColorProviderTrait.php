@@ -29,9 +29,9 @@ trait TealColorProviderTrait {
     /**
      * Get the teal color provider.
      *
-     * @return TealColorProvider Returns the teal color provider.
+     * @return TealColorProvider|null Returns the teal color provider.
      */
-    public function getTealColorProvider() {
+    public function getTealColorProvider(): ?TealColorProvider {
         return $this->tealColorProvider;
     }
 
@@ -40,7 +40,7 @@ trait TealColorProviderTrait {
      *
      * @param TealColorProvider|null $tealColorProvider The teal color provider.
      */
-    protected function setTealColorProvider(TealColorProvider $tealColorProvider = null) {
+    protected function setTealColorProvider(?TealColorProvider $tealColorProvider): self {
         $this->tealColorProvider = $tealColorProvider;
         return $this;
     }

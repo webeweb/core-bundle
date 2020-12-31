@@ -30,13 +30,12 @@ class SkeletonHelper {
      * @return bool[] Returns the assets.
      * @throws InvalidArgumentException Throws an invalid argument exception if the directory does not exist.
      */
-    public static function copySkeleton($src, $dst) {
+    public static function copySkeleton(string $src, string $dst): array {
 
         $files = static::listSkeleton($src);
 
         $result = [];
 
-        /** @var string $current */
         foreach ($files as $current) {
 
             $pathname = str_replace($src, $dst, dirname($current));
@@ -58,7 +57,7 @@ class SkeletonHelper {
      * @return string[] Returns the skeletons.
      * @throws InvalidArgumentException Throws an invalid argument exception if the directory does not exist.
      */
-    public static function listSkeleton($directory) {
+    public static function listSkeleton(string $directory): array {
 
         $finder = new Finder();
         $finder->sortByName()->files()->in($directory);

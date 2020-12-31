@@ -22,16 +22,16 @@ trait PhantomJSHelperTrait {
     /**
      * PhantomJS helper.
      *
-     * @var PhantomJSHelper
+     * @var PhantomJSHelper|null
      */
     private $phantomJSHelper;
 
     /**
      * Get the phantomJS helper.
      *
-     * @return PhantomJSHelper Returns the phantomJS helper.
+     * @return PhantomJSHelper|null Returns the phantomJS helper.
      */
-    public function getPhantomJSHelper() {
+    public function getPhantomJSHelper(): ?PhantomJSHelper {
         return $this->phantomJSHelper;
     }
 
@@ -40,7 +40,7 @@ trait PhantomJSHelperTrait {
      *
      * @param PhantomJSHelper|null $phantomJSHelper The phantomJS helper.
      */
-    protected function setPhantomJSHelper(PhantomJSHelper $phantomJSHelper = null) {
+    protected function setPhantomJSHelper(?PhantomJSHelper $phantomJSHelper): self {
         $this->phantomJSHelper = $phantomJSHelper;
         return $this;
     }

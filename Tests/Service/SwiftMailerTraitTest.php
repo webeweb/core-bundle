@@ -28,7 +28,7 @@ class SwiftMailerTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetSwiftMailer() {
+    public function testSetSwiftMailer(): void {
 
         // Set a Swift mailer mock.
         $swiftMailer = $this->getMockBuilder(Swift_Mailer::class)->disableOriginalConstructor()->getMock();
@@ -44,7 +44,7 @@ class SwiftMailerTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestSwiftMailerTrait();
 

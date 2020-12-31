@@ -29,7 +29,7 @@ class TestNavigationNode extends AbstractNavigationNode {
      * @param string|null $uri The URI.
      * @param string $matcher The matcher.
      */
-    public function __construct($label, $icon = null, $uri = null, $matcher = self::NAVIGATION_MATCHER_URL) {
+    public function __construct(string $label, string $icon = null, string $uri = null, string $matcher = self::NAVIGATION_MATCHER_URL) {
         parent::__construct($label, $icon, $uri, $matcher);
     }
 }

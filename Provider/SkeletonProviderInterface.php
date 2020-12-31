@@ -31,5 +31,5 @@ interface SkeletonProviderInterface extends ProviderInterface {
      *
      * @return string Returns the skeleton relative directory.
      */
-    public function getSkeletonRelativeDirectory();
+    public function getSkeletonRelativeDirectory(): string;
 }

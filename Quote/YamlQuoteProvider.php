@@ -14,6 +14,7 @@ namespace WBW\Bundle\CoreBundle\Quote;
 use DateTime;
 use Symfony\Component\Filesystem\Exception\FileNotFoundException;
 use Symfony\Component\Yaml\Yaml;
+use WBW\Bundle\CoreBundle\Provider\QuoteProviderInterface;
 use WBW\Library\Core\Argument\Helper\ArrayHelper;
 
 /**
@@ -37,7 +38,7 @@ class YamlQuoteProvider extends AbstractQuoteProvider {
      * @param string $filename The filename.
      * @throws FileNotFoundException Throws a file not found exception.
      */
-    public function __construct($filename) {
+    public function __construct(string $filename) {
         $this->setFilename($filename);
         $this->setQuotes([]);
     }
@@ -45,7 +46,7 @@ class YamlQuoteProvider extends AbstractQuoteProvider {
     /**
      * {@inheritDoc}
      */
-    public function getDomain() {
+    public function getDomain(): string {
         return basename($this->getFilename(), ".yml");
     }
 
@@ -54,14 +55,14 @@ class YamlQuoteProvider extends AbstractQuoteProvider {
      *
      * @return string Returns the filename.
      */
-    public function getFilename() {
+    public function getFilename(): string {
         return $this->filename;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function init() {
+    public function init(): void {
 
         $fileContent = file_get_contents($this->filename);
 
@@ -88,7 +89,7 @@ class YamlQuoteProvider extends AbstractQuoteProvider {
      * @return YamlQuoteProvider Returns this quote provider.
      * @throws FileNotFoundException Throws a file not found exception.
      */
-    protected function setFilename($filename) {
+    protected function setFilename(string $filename): QuoteProviderInterface {
         if (false === realpath($filename)) {
             throw new FileNotFoundException(sprintf('The file "%s" was not found', $filename));
         }

@@ -22,30 +22,30 @@ interface IconInterface {
     /**
      * Get the name.
      *
-     * @return string Returns the name.
+     * @return string|null Returns the name.
      */
-    public function getName();
+    public function getName(): ?string;
 
     /**
      * Get the style.
      *
-     * @return string Returns the style.
+     * @return string|null Returns the style.
      */
-    public function getStyle();
+    public function getStyle(): ?string;
 
     /**
      * Set the name.
      *
-     * @param string $name The name.
+     * @param string|null $name The name.
      * @return IconInterface Returns this icon.
      */
-    public function setName($name);
+    public function setName(?string $name): IconInterface;
 
     /**
      * Set the style.
      *
-     * @param string $style The style.
+     * @param string|null $style The style.
      * @return IconInterface Returns this icon.
      */
-    public function setStyle($style);
+    public function setStyle(?string $style): IconInterface;
 }

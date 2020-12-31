@@ -27,7 +27,7 @@ class TranslatorTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetTranslator() {
+    public function testSetTranslator(): void {
 
         $obj = new TestTranslatorTrait();
 
@@ -40,7 +40,7 @@ class TranslatorTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestTranslatorTrait();
 

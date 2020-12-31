@@ -28,7 +28,7 @@ class IndigoColorProviderTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetIndigoColorProvider() {
+    public function testSetIndigoColorProvider(): void {
 
         // Set an Indigo color provider mock.
         $indigoColorProvider = new IndigoColorProvider();
@@ -44,7 +44,7 @@ class IndigoColorProviderTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestIndigoColorProviderTrait();
 

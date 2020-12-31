@@ -24,16 +24,16 @@ trait TokenStorageTrait {
     /**
      * Token storage.
      *
-     * @var TokenStorageInterface
+     * @var TokenStorageInterface|null
      */
     private $tokenStorage;
 
     /**
      * Get the token storage.
      *
-     * @return TokenStorageInterface Returns the token storage.
+     * @return TokenStorageInterface|null Returns the token storage.
      */
-    public function getTokenStorage() {
+    public function getTokenStorage(): ?TokenStorageInterface {
         return $this->tokenStorage;
     }
 
@@ -42,7 +42,7 @@ trait TokenStorageTrait {
      *
      * @param TokenStorageInterface|null $tokenStorage The token storage.
      */
-    protected function setTokenStorage(TokenStorageInterface $tokenStorage = null) {
+    protected function setTokenStorage(?TokenStorageInterface $tokenStorage): self {
         $this->tokenStorage = $tokenStorage;
         return $this;
     }

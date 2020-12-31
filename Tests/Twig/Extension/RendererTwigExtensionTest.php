@@ -29,7 +29,7 @@ class RendererTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testCoreScriptFilter() {
+    public function testCoreScriptFilter(): void {
 
         $obj = new RendererTwigExtension($this->twigEnvironment);
 
@@ -42,7 +42,7 @@ class RendererTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFilters() {
+    public function testGetFilters(): void {
 
         $obj = new RendererTwigExtension($this->twigEnvironment);
 
@@ -60,7 +60,7 @@ class RendererTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderIcon() {
+    public function testRenderIcon(): void {
 
         $res = "";
         $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "::"));
@@ -71,7 +71,7 @@ class RendererTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderIconWithFontAwesome() {
+    public function testRenderIconWithFontAwesome(): void {
 
         $res = '<i class="fa fa-home"></i>';
         $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "fa:home"));
@@ -82,7 +82,7 @@ class RendererTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderIconWithMaterialDesignIconicFont() {
+    public function testRenderIconWithMaterialDesignIconicFont(): void {
 
         $res = '<i class="zmdi zmdi-home"></i>';
         $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "zmdi:home"));
@@ -93,7 +93,7 @@ class RendererTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRenderIconWithMeteocons() {
+    public function testRenderIconWithMeteocons(): void {
 
         $res = '<i class="meteocons" data-meteocons="A"></i>';
         $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "mc:A"));
@@ -104,7 +104,7 @@ class RendererTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.core.twig.extension.renderer", RendererTwigExtension::SERVICE_NAME);
 

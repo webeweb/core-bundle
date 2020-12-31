@@ -24,16 +24,16 @@ trait TranslatorTrait {
     /**
      * Translator.
      *
-     * @var TranslatorInterface
+     * @var TranslatorInterface|null
      */
     private $translator;
 
     /**
      * Get the translator.
      *
-     * @return TranslatorInterface Returns the translator.
+     * @return TranslatorInterface|null Returns the translator.
      */
-    public function getTranslator() {
+    public function getTranslator(): ?TranslatorInterface {
         return $this->translator;
     }
 
@@ -42,7 +42,7 @@ trait TranslatorTrait {
      *
      * @param TranslatorInterface|null $translator The translator.
      */
-    protected function setTranslator(TranslatorInterface $translator = null) {
+    protected function setTranslator(TranslatorInterface $translator): self {
         $this->translator = $translator;
         return $this;
     }

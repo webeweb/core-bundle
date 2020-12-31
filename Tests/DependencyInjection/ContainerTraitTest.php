@@ -27,7 +27,7 @@ class ContainerTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetContainer() {
+    public function testSetContainer(): void {
 
         $obj = new TestContainerTrait();
 
@@ -40,7 +40,7 @@ class ContainerTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__constructor() {
+    public function test__constructor(): void {
 
         $obj = new TestContainerTrait();
 

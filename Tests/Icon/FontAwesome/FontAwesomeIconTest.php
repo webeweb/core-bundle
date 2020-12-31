@@ -27,7 +27,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetAnimation() {
+    public function testSetAnimation(): void {
 
         $obj = new FontAwesomeIcon();
 
@@ -40,7 +40,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetAnimationWithBadArgument() {
+    public function testSetAnimationWithBadArgument(): void {
 
         $obj = new FontAwesomeIcon();
 
@@ -53,7 +53,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetBordered() {
+    public function testSetBordered(): void {
 
         $obj = new FontAwesomeIcon();
 
@@ -66,7 +66,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetFixedWidth() {
+    public function testSetFixedWidth(): void {
 
         $obj = new FontAwesomeIcon();
 
@@ -79,7 +79,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetFont() {
+    public function testSetFont(): void {
 
         $obj = new FontAwesomeIcon();
 
@@ -92,7 +92,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetFontWithBadArgument() {
+    public function testSetFontWithBadArgument(): void {
 
         $obj = new FontAwesomeIcon();
 
@@ -105,7 +105,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetPull() {
+    public function testSetPull(): void {
 
         $obj = new FontAwesomeIcon();
 
@@ -118,7 +118,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetPullWithBadArgument() {
+    public function testSetPullWithBadArgument(): void {
 
         $obj = new FontAwesomeIcon();
 
@@ -131,7 +131,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetSize() {
+    public function testSetSize(): void {
 
         $obj = new FontAwesomeIcon();
 
@@ -144,7 +144,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetSizeWithBadArgument() {
+    public function testSetSizeWithBadArgument(): void {
 
         $obj = new FontAwesomeIcon();
 
@@ -157,7 +157,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new FontAwesomeIcon();
 

@@ -22,16 +22,16 @@ trait SecurityEventListenerTrait {
     /**
      * Security event listener.
      *
-     * @var SecurityEventListener
+     * @var SecurityEventListener|null
      */
     private $securityEventListener;
 
     /**
      * Get the security event listener.
      *
-     * @return SecurityEventListener Returns the security event listener.
+     * @return SecurityEventListener|null Returns the security event listener.
      */
-    public function getSecurityEventListener() {
+    public function getSecurityEventListener(): ?SecurityEventListener {
         return $this->securityEventListener;
     }
 
@@ -40,7 +40,7 @@ trait SecurityEventListenerTrait {
      *
      * @param SecurityEventListener|null $securityEventListener The security event listener.
      */
-    protected function setSecurityEventListener(SecurityEventListener $securityEventListener = null) {
+    protected function setSecurityEventListener(?SecurityEventListener $securityEventListener ): self {
         $this->securityEventListener = $securityEventListener;
         return $this;
     }

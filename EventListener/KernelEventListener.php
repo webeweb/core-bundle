@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\EventListener;
 
+use Exception;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
@@ -22,6 +23,7 @@ use WBW\Bundle\CoreBundle\Manager\ThemeManager;
 use WBW\Bundle\CoreBundle\Manager\ThemeManagerTrait;
 use WBW\Bundle\CoreBundle\Model\RequestTrait;
 use WBW\Bundle\CoreBundle\Model\UserTrait;
+use WBW\Bundle\CoreBundle\Service\SwiftMailerTrait;
 use WBW\Bundle\CoreBundle\Service\TokenStorageTrait;
 
 /**
@@ -33,6 +35,9 @@ use WBW\Bundle\CoreBundle\Service\TokenStorageTrait;
 class KernelEventListener {
 
     use RequestTrait;
+    use SwiftMailerTrait{
+        setSwiftMailer as public;
+    }
     use ThemeManagerTrait;
     use TokenStorageTrait;
     use UserTrait;
@@ -60,17 +65,21 @@ class KernelEventListener {
      *
      * @return UserInterface|null Returns the current user in case of success, null otherwise.
      */
-    public function getUser() {
+    public function getUser(): ?UserInterface {
+
         $token = null;
         if (null === $this->user) {
             $token = $this->getTokenStorage()->getToken();
         }
+
         if (null !== $token) {
             $this->user = $token->getUser();
         }
+
         if (true === ($this->user instanceof UserInterface)) {
             return $this->user;
         }
+
         return null;
     }
 
@@ -81,7 +90,7 @@ class KernelEventListener {
      * @param BadUserRoleException $ex The exception.
      * @return GetResponseForExceptionEvent Returns the event.
      */
-    protected function handleBadUserRoleException(GetResponseForExceptionEvent $event, BadUserRoleException $ex) {
+    protected function handleBadUserRoleException(GetResponseForExceptionEvent $event, BadUserRoleException $ex): GetResponseForExceptionEvent {
         if (null !== $ex->getRedirectUrl()) {
             $event->setResponse(new RedirectResponse($ex->getRedirectUrl()));
         }
@@ -95,11 +104,35 @@ class KernelEventListener {
      * @param RedirectResponseException $ex The exception.
      * @return GetResponseForExceptionEvent Returns the event.
      */
-    protected function handleRedirectResponseException(GetResponseForExceptionEvent $event, RedirectResponseException $ex) {
+    protected function handleRedirectResponseException(GetResponseForExceptionEvent $event, RedirectResponseException $ex): GetResponseForExceptionEvent {
         if (null !== $ex->getRedirectUrl()) {
             $event->setResponse(new RedirectResponse($ex->getRedirectUrl()));
         }
         return $event;
+    }
+
+    /**
+     * Handle an unexpected exception.
+     *
+     * @param GetResponseForExceptionEvent $event The event.
+     * @param Exception $ex The exception.
+     * @return void
+     */
+    protected function handleUnexpectedException(GetResponseForExceptionEvent $event, Exception $ex): void {
+
+        $mailer = $this->getSwiftMailer();
+        if (null === $mailer) {
+            return;
+        }
+
+        $twig = $this->getThemeManager()->getTwigEnvironment();
+
+        $body = $twig->render("@WBWCore/layout/exception.html.twig", [
+            "exception" => $ex,
+        ]);
+
+        $message = new \Swift_Message();
+        $message->setBody($body, "text/html");
     }
 
     /**
@@ -108,7 +141,7 @@ class KernelEventListener {
      * @param GetResponseForExceptionEvent $event The event.
      * @return GetResponseForExceptionEvent Returns the event.
      */
-    public function onKernelException(GetResponseForExceptionEvent $event) {
+    public function onKernelException(GetResponseForExceptionEvent $event): GetResponseForExceptionEvent {
 
         $ex = $event->getException();
 
@@ -120,6 +153,10 @@ class KernelEventListener {
             $this->handleRedirectResponseException($event, $ex);
         }
 
+        if (null === $event->getResponse()) {
+            $this->handleUnexpectedException($event, $ex);
+        }
+
         return $event;
     }
 
@@ -129,7 +166,7 @@ class KernelEventListener {
      * @param GetResponseEvent $event The event.
      * @return GetResponseEvent Returns the event.
      */
-    public function onKernelRequest(GetResponseEvent $event) {
+    public function onKernelRequest(GetResponseEvent $event): GetResponseEvent {
 
         $this->setRequest($event->getRequest());
 

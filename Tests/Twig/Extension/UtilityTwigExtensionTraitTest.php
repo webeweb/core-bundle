@@ -28,7 +28,7 @@ class UtilityTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetUtilityTwigExtension() {
+    public function testSetUtilityTwigExtension(): void {
 
         // Set a Utility Twig extension mock.
         $utilityTwigExtension = new UtilityTwigExtension($this->twigEnvironment);
@@ -44,7 +44,7 @@ class UtilityTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__constructor() {
+    public function test__constructor(): void {
 
         $obj = new TestUtilityTwigExtensionTrait();
 

@@ -22,16 +22,16 @@ trait ApplicationThemeProviderTrait {
     /**
      * Application theme provider.
      *
-     * @var ApplicationThemeProviderInterface
+     * @var ApplicationThemeProviderInterface|null
      */
     private $applicationThemeProvider;
 
     /**
      * Get the application theme provider.
      *
-     * @return ApplicationThemeProviderInterface Returns the application theme provider.
+     * @return ApplicationThemeProviderInterface|null Returns the application theme provider.
      */
-    public function getApplicationThemeProvider() {
+    public function getApplicationThemeProvider(): ?ApplicationThemeProviderInterface {
         return $this->applicationThemeProvider;
     }
 
@@ -40,7 +40,7 @@ trait ApplicationThemeProviderTrait {
      *
      * @param ApplicationThemeProviderInterface|null $applicationThemeProvider The application theme provider.
      */
-    protected function setApplicationThemeProvider(ApplicationThemeProviderInterface $applicationThemeProvider = null) {
+    protected function setApplicationThemeProvider(?ApplicationThemeProviderInterface $applicationThemeProvider): self {
         $this->applicationThemeProvider = $applicationThemeProvider;
         return $this;
     }

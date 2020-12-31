@@ -45,7 +45,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         $filename = getcwd() . "/Resources/translations/WorldsWisdom.fr.yml";
@@ -63,7 +63,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFunctions() {
+    public function testGetFunctions(): void {
 
         $obj = new QuoteTwigExtension($this->twigEnvironment, $this->quoteManager);
 
@@ -92,7 +92,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testQuoteAuthorFunction() {
+    public function testQuoteAuthorFunction(): void {
 
         $obj = new QuoteTwigExtension($this->twigEnvironment, $this->quoteManager);
 
@@ -105,7 +105,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testQuoteAuthorFunctionWithBadDomain() {
+    public function testQuoteAuthorFunctionWithBadDomain(): void {
 
         $obj = new QuoteTwigExtension($this->twigEnvironment, $this->quoteManager);
 
@@ -118,7 +118,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testQuoteContentFunction() {
+    public function testQuoteContentFunction(): void {
 
         $obj = new QuoteTwigExtension($this->twigEnvironment, $this->quoteManager);
 
@@ -131,7 +131,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testQuoteContentFunctionWithBadDomain() {
+    public function testQuoteContentFunctionWithBadDomain(): void {
 
         $obj = new QuoteTwigExtension($this->twigEnvironment, $this->quoteManager);
 
@@ -144,7 +144,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testQuoteFunction() {
+    public function testQuoteFunction(): void {
 
         $obj = new QuoteTwigExtension($this->twigEnvironment, $this->quoteManager);
 
@@ -161,7 +161,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testQuoteFunctionWithBadDomain() {
+    public function testQuoteFunctionWithBadDomain(): void {
 
         $obj = new QuoteTwigExtension($this->twigEnvironment, $this->quoteManager);
 
@@ -174,7 +174,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testQuoteFunctionWithoutProvider() {
+    public function testQuoteFunctionWithoutProvider(): void {
 
         $obj = new QuoteTwigExtension($this->twigEnvironment, new QuoteManager($this->logger));
 
@@ -186,7 +186,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.core.twig.extension.quote", QuoteTwigExtension::SERVICE_NAME);
 

@@ -27,7 +27,7 @@ class AbstractTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testCoreHTMLElement() {
+    public function testCoreHTMLElement(): void {
 
         $arg = ["type" => "text/javascript"];
         $res = file_get_contents(__DIR__ . "/AbstractTwigExtensionTest.testCoreHTMLElement.html.txt");
@@ -39,7 +39,7 @@ class AbstractTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFilters() {
+    public function testGetFilters(): void {
 
         $obj = new TestTwigExtension($this->twigEnvironment);
 
@@ -52,7 +52,7 @@ class AbstractTwigExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__constructor() {
+    public function test__constructor(): void {
 
         $obj = new TestTwigExtension($this->twigEnvironment);
 

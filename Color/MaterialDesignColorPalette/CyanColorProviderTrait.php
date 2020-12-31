@@ -29,9 +29,9 @@ trait CyanColorProviderTrait {
     /**
      * Get the cyan color provider.
      *
-     * @return CyanColorProvider Returns the cyan color provider.
+     * @return CyanColorProvider|null Returns the cyan color provider.
      */
-    public function getCyanColorProvider() {
+    public function getCyanColorProvider(): ?CyanColorProvider {
         return $this->cyanColorProvider;
     }
 
@@ -40,7 +40,7 @@ trait CyanColorProviderTrait {
      *
      * @param CyanColorProvider|null $cyanColorProvider The cyan color provider.
      */
-    protected function setCyanColorProvider(CyanColorProvider $cyanColorProvider = null) {
+    protected function setCyanColorProvider(?CyanColorProvider $cyanColorProvider): self {
         $this->cyanColorProvider = $cyanColorProvider;
         return $this;
     }

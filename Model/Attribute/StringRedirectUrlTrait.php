@@ -22,25 +22,25 @@ trait StringRedirectUrlTrait {
     /**
      * Redirect URL.
      *
-     * @var string
+     * @var string|null
      */
     protected $redirectUrl;
 
     /**
      * Get the redirect URL.
      *
-     * @return string Returns the redirect URL.
+     * @return string|null Returns the redirect URL.
      */
-    public function getRedirectUrl() {
+    public function getRedirectUrl(): ?string {
         return $this->redirectUrl;
     }
 
     /**
      * Set the redirect URL.
      *
-     * @param string $redirectUrl The redirect URL.
+     * @param string|null $redirectUrl The redirect URL.
      */
-    public function setRedirectUrl($redirectUrl) {
+    public function setRedirectUrl(?string $redirectUrl): self {
         $this->redirectUrl = $redirectUrl;
         return $this;
     }

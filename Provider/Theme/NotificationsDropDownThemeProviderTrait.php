@@ -22,16 +22,16 @@ trait NotificationsDropDownThemeProviderTrait {
     /**
      * Notifications drop down theme provider.
      *
-     * @var NotificationsDropDownThemeProviderInterface
+     * @var NotificationsDropDownThemeProviderInterface|null
      */
     private $notificationsDropDownThemeProvider;
 
     /**
      * Get the notifications drop down theme provider.
      *
-     * @return NotificationsDropDownThemeProviderInterface Returns the notifications drop down theme provider.
+     * @return NotificationsDropDownThemeProviderInterface|null Returns the notifications drop down theme provider.
      */
-    public function getNotificationsDropDownThemeProvider() {
+    public function getNotificationsDropDownThemeProvider(): ?NotificationsDropDownThemeProviderInterface {
         return $this->notificationsDropDownThemeProvider;
     }
 
@@ -40,7 +40,7 @@ trait NotificationsDropDownThemeProviderTrait {
      *
      * @param NotificationsDropDownThemeProviderInterface|null $notificationsDropDownThemeProvider The notifications drop down theme provider.
      */
-    protected function setNotificationsDropDownThemeProvider(NotificationsDropDownThemeProviderInterface $notificationsDropDownThemeProvider = null) {
+    protected function setNotificationsDropDownThemeProvider(?NotificationsDropDownThemeProviderInterface $notificationsDropDownThemeProvider): self {
         $this->notificationsDropDownThemeProvider = $notificationsDropDownThemeProvider;
         return $this;
     }

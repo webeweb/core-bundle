@@ -34,7 +34,7 @@ class QuoteManager extends AbstractManager {
     /**
      * {@inheritDoc}
      */
-    public function addProvider(ProviderInterface $provider) {
+    public function addProvider(ProviderInterface $provider): ManagerInterface {
         if (true === $this->contains($provider)) {
             throw new AlreadyRegisteredProviderException($provider);
         }
@@ -45,7 +45,7 @@ class QuoteManager extends AbstractManager {
     /**
      * {@inheritDoc}
      */
-    public function contains(ProviderInterface $provider) {
+    public function contains(ProviderInterface $provider): bool {
         if (false === ($provider instanceof QuoteProviderInterface)) {
             throw new InvalidArgumentException("The provider must implements QuoteProviderInterface");
         }
@@ -63,7 +63,7 @@ class QuoteManager extends AbstractManager {
      * @param string $domain The domain.
      * @return ProviderInterface|null Returns the quote provider.
      */
-    public function getProvider($domain) {
+    public function getProvider($domain): ?ProviderInterface {
         foreach ($this->getProviders() as $current) {
             if ($domain === $current->getDomain()) {
                 return $current;

@@ -25,28 +25,28 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
     /**
      * Active ?
      *
-     * @var bool
+     * @var bool|null
      */
     private $active;
 
     /**
      * Enable ?
      *
-     * @var bool
+     * @var bool|null
      */
     private $enable;
 
     /**
      * Icon.
      *
-     * @var string
+     * @var string|null
      */
     private $icon;
 
     /**
      * Id.
      *
-     * @var string
+     * @var string|null
      */
     private $id;
 
@@ -60,14 +60,14 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
     /**
      * Label.
      *
-     * @var string
+     * @var string|null
      */
     private $label;
 
     /**
      * Matcher.
      *
-     * @var string
+     * @var string|null
      */
     private $matcher;
 
@@ -81,28 +81,28 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
     /**
      * Parent.
      *
-     * @var AbstractNavigationNode
+     * @var AbstractNavigationNode|null
      */
     private $parent;
 
     /**
      * Target.
      *
-     * @var string
+     * @var string|null
      */
     private $target;
 
     /**
      * URI.
      *
-     * @var string
+     * @var string|null
      */
     private $uri;
 
     /**
      * Visible ?
      *
-     * @var bool
+     * @var bool|null
      */
     private $visible;
 
@@ -112,9 +112,9 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
      * @param string $label The label.
      * @param string|null $icon The icon.
      * @param string|null $uri The URI.
-     * @param string $matcher The matcher.
+     * @param string|null $matcher The matcher.
      */
-    protected function __construct($label, $icon = null, $uri = null, $matcher = self::NAVIGATION_MATCHER_URL) {
+    protected function __construct(string $label, string $icon = null, string $uri = null, ?string $matcher = self::NAVIGATION_MATCHER_URL) {
         $this->setActive(false);
         $this->setEnable(false);
         $this->setIcon($icon);
@@ -135,7 +135,7 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
      * @param AbstractNavigationNode $node The navigation node.
      * @return AbstractNavigationNode Returns this navigation node.
      */
-    public function addNode(AbstractNavigationNode $node) {
+    public function addNode(AbstractNavigationNode $node): AbstractNavigationNode {
         $this->index[$node->getId()] = $this->size();
         $this->nodes[]               = $node->setParent($this);
         return $this;
@@ -146,7 +146,7 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
      *
      * @return AbstractNavigationNode Returns this navigation node.
      */
-    public function clearNodes() {
+    public function clearNodes(): AbstractNavigationNode {
         foreach ($this->getNodes() as $node) {
             $this->removeNode($node);
         }
@@ -156,32 +156,32 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
     /**
      * Get the active.
      *
-     * @return bool Returns the active.
+     * @return bool|null Returns the active.
      */
-    public function getActive() {
+    public function getActive(): ?bool {
         return $this->active;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function getAlphabeticalTreeNodeLabel() {
+    public function getAlphabeticalTreeNodeLabel(): string {
         return $this->getId();
     }
 
     /**
      * {@inheritdoc}
      */
-    public function getAlphabeticalTreeNodeParent() {
+    public function getAlphabeticalTreeNodeParent(): ?AlphabeticalTreeNodeInterface {
         return $this->getParent();
     }
 
     /**
      * Get the enable.
      *
-     * @return bool Returns the enable.
+     * @return bool|null Returns the enable.
      */
-    public function getEnable() {
+    public function getEnable(): ?bool {
         return $this->enable;
     }
 
@@ -190,34 +190,34 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
      *
      * @return AbstractNavigationNode|null Returns the first navigation node in case of success, null otherwise.
      */
-    public function getFirstNode() {
+    public function getFirstNode(): ?AbstractNavigationNode {
         return $this->getNodeAt(0);
     }
 
     /**
      * Get the icon.
      *
-     * @return string Returns the icon.
+     * @return string|null Returns the icon.
      */
-    public function getIcon() {
+    public function getIcon(): ?string {
         return $this->icon;
     }
 
     /**
      * Get the id.
      *
-     * @return string Returns the id.
+     * @return string|null Returns the id.
      */
-    public function getId() {
+    public function getId(): ?string {
         return $this->id;
     }
 
     /**
      * Get the label.
      *
-     * @return string Returns the label.
+     * @return string|null Returns the label.
      */
-    public function getLabel() {
+    public function getLabel(): ?string {
         return $this->label;
     }
 
@@ -226,16 +226,16 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
      *
      * @return AbstractNavigationNode|null Returns the last navigation node in case of success, null otherwise.
      */
-    public function getLastNode() {
+    public function getLastNode(): ?AbstractNavigationNode {
         return $this->getNodeAt($this->size() - 1);
     }
 
     /**
      * Get the matcher.
      *
-     * @return string Returns the matcher.
+     * @return string|null Returns the matcher.
      */
-    public function getMatcher() {
+    public function getMatcher(): ?string {
         return $this->matcher;
     }
 
@@ -245,7 +245,7 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
      * @param int $position The position.
      * @return AbstractNavigationNode|null Returns the navigation node in case of success, null otherwise.
      */
-    public function getNodeAt($position) {
+    public function getNodeAt(int $position): ?AbstractNavigationNode {
 
         if ($position < 0 || $this->size() <= $position) {
             return null;
@@ -261,7 +261,7 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
      * @param bool $recursively Recursively ?
      * @return AbstractNavigationNode|null Returns the navigation node in case of success, null otherwise.
      */
-    public function getNodeById($id, $recursively = false) {
+    public function getNodeById(string $id, bool $recursively = false): ?AbstractNavigationNode {
 
         if (true === array_key_exists($id, $this->index)) {
             return $this->getNodeAt($this->index[$id]);
@@ -289,43 +289,43 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
      *
      * @return AbstractNavigationNode[] Returns the navigation nodes.
      */
-    public function getNodes() {
+    public function getNodes(): array {
         return $this->nodes;
     }
 
     /**
      * Get the parent.
      *
-     * @return AbstractNavigationNode Returns the parent.
+     * @return AbstractNavigationNode|null Returns the parent.
      */
-    public function getParent() {
+    public function getParent(): ?AbstractNavigationNode {
         return $this->parent;
     }
 
     /**
      * Get the target.
      *
-     * @return string Returns the target.
+     * @return string|null Returns the target.
      */
-    public function getTarget() {
+    public function getTarget(): ?string {
         return $this->target;
     }
 
     /**
      * Get the URI.
      *
-     * @return string Returns the URI.
+     * @return string|null Returns the URI.
      */
-    public function getUri() {
+    public function getUri(): ?string {
         return $this->uri;
     }
 
     /**
      * Get the visible.
      *
-     * @return bool Returns the visible.
+     * @return bool|null Returns the visible.
      */
-    public function getVisible() {
+    public function getVisible(): ?bool {
         return $this->visible;
     }
 
@@ -334,7 +334,7 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
      *
      * @return bool Returns true in case of success, false otherwise.
      */
-    public function isDisplayable() {
+    public function isDisplayable(): bool {
 
         if (true === $this->getEnable() && $this->getVisible()) {
             return true;
@@ -356,7 +356,7 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
      * @param AbstractNavigationNode $node The navigation node.
      * @return AbstractNavigationNode Returns this navigation node.
      */
-    public function removeNode(AbstractNavigationNode $node) {
+    public function removeNode(AbstractNavigationNode $node): AbstractNavigationNode {
 
         if (false === array_key_exists($node->getId(), $this->index)) {
             return $this;
@@ -371,10 +371,10 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
     /**
      * Set the active.
      *
-     * @param bool $active Active ?
+     * @param bool|null $active Active ?
      * @return AbstractNavigationNode Returns this navigation node.
      */
-    public function setActive($active) {
+    public function setActive(?bool $active): AbstractNavigationNode {
         $this->active = $active;
         return $this;
     }
@@ -382,10 +382,10 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
     /**
      * Set the enable.
      *
-     * @param bool $enable Enable ?
+     * @param bool|null $enable Enable ?
      * @return AbstractNavigationNode Returns this navigation node.
      */
-    public function setEnable($enable) {
+    public function setEnable(?bool $enable): AbstractNavigationNode {
         $this->enable = $enable;
         return $this;
     }
@@ -393,10 +393,10 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
     /**
      * Set the icon.
      *
-     * @param string $icon The icon.
+     * @param string|null $icon The icon.
      * @return AbstractNavigationNode Returns this navigation node.
      */
-    public function setIcon($icon) {
+    public function setIcon(?string $icon): AbstractNavigationNode {
         $this->icon = $icon;
         return $this;
     }
@@ -404,10 +404,10 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
     /**
      * Set the id.
      *
-     * @param string $id The id.
+     * @param string|null $id The id.
      * @return AbstractNavigationNode Returns this navigation node.
      */
-    protected function setId($id) {
+    protected function setId(?string $id): AbstractNavigationNode {
         $this->id = $id;
         return $this;
     }
@@ -418,7 +418,7 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
      * @param array $index The index.
      * @return AbstractNavigationNode Returns this navigation node.
      */
-    protected function setIndex(array $index) {
+    protected function setIndex(array $index): AbstractNavigationNode {
         $this->index = $index;
         return $this;
     }
@@ -426,10 +426,10 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
     /**
      * Set the label.
      *
-     * @param string $label The label.
+     * @param string|null $label The label.
      * @return AbstractNavigationNode Returns this navigation node.
      */
-    public function setLabel($label) {
+    public function setLabel(?string $label): AbstractNavigationNode {
         $this->label = $label;
         return $this;
     }
@@ -437,10 +437,10 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
     /**
      * Set the mather.
      *
-     * @param string $matcher The matcher.
+     * @param string|null $matcher The matcher.
      * @return AbstractNavigationNode Returns this navigation node.
      */
-    public function setMatcher($matcher) {
+    public function setMatcher(?string $matcher): AbstractNavigationNode {
         $this->matcher = $matcher;
         return $this;
     }
@@ -451,7 +451,7 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
      * @param AbstractNavigationNode[] $nodes The navigation nodes.
      * @return AbstractNavigationNode Returns this navigation node.
      */
-    protected function setNodes(array $nodes) {
+    protected function setNodes(array $nodes): AbstractNavigationNode {
         $this->nodes = $nodes;
         return $this;
     }
@@ -459,10 +459,10 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
     /**
      * Set the parent.
      *
-     * @param AbstractNavigationNode $parent The parent.
+     * @param AbstractNavigationNode|null $parent The parent.
      * @return AbstractNavigationNode Returns this navigation node.
      */
-    protected function setParent(AbstractNavigationNode $parent = null) {
+    protected function setParent(?AbstractNavigationNode $parent): AbstractNavigationNode {
         $this->parent = $parent;
         return $this;
     }
@@ -470,10 +470,10 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
     /**
      * Set the target.
      *
-     * @param string $target The target.
+     * @param string|null $target The target.
      * @return AbstractNavigationNode Returns this navigation node.
      */
-    public function setTarget($target) {
+    public function setTarget(?string $target): AbstractNavigationNode {
         $this->target = $target;
         return $this;
     }
@@ -481,10 +481,10 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
     /**
      * Set the URI.
      *
-     * @param string $uri The URI.
+     * @param string|null $uri The URI.
      * @return AbstractNavigationNode Returns this navigation node.
      */
-    public function setUri($uri) {
+    public function setUri(?string $uri): AbstractNavigationNode {
         $this->uri = $uri;
         return $this;
     }
@@ -492,10 +492,10 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
     /**
      * Set the visible.
      *
-     * @param bool $visible Visible ?
+     * @param bool|null $visible Visible ?
      * @return AbstractNavigationNode Returns this navigation node.
      */
-    protected function setVisible($visible) {
+    protected function setVisible(?bool $visible): AbstractNavigationNode {
         $this->visible = $visible;
         return $this;
     }
@@ -505,7 +505,7 @@ abstract class AbstractNavigationNode implements NavigationInterface, Alphabetic
      *
      * @return int Returns the size.
      */
-    public function size() {
+    public function size(): int {
         return count($this->getNodes());
     }
 }

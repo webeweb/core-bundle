@@ -47,7 +47,7 @@ abstract class AbstractController extends BaseController {
      * @param BaseEvent $event The event.
      * @return BaseEvent|null Returns the event in case of success, null otherwise.
      */
-    protected function dispatchEvent($eventName, BaseEvent $event) {
+    protected function dispatchEvent(string $eventName, BaseEvent $event): ?BaseEvent {
         $this->getLogger()->debug(sprintf('A controller dispatch an event with name "%s"', $eventName, ["_controller" => get_class($this), "_event" => get_class($event)]));
         return EventDispatcherHelper::dispatch($this->getEventDispatcher(), $eventName, $event);
     }
@@ -57,7 +57,7 @@ abstract class AbstractController extends BaseController {
      *
      * @return Container|null Returns the container in case of success, null otherwise.
      */
-    protected function getContainer() {
+    protected function getContainer(): ?Container {
         return $this->get("service_container");
     }
 
@@ -66,7 +66,7 @@ abstract class AbstractController extends BaseController {
      *
      * @return EventDispatcherInterface|null Returns the event dispatcher in case of success, null otherwise.
      */
-    protected function getEventDispatcher() {
+    protected function getEventDispatcher(): ?EventDispatcherInterface {
         return $this->get("event_dispatcher");
     }
 
@@ -75,7 +75,7 @@ abstract class AbstractController extends BaseController {
      *
      * @return FormHelper|null Returns the form helper in case of success, null otherwise.
      */
-    protected function getFormHelper() {
+    protected function getFormHelper(): ?FormHelper {
         return $this->get(FormHelper::SERVICE_NAME);
     }
 
@@ -84,7 +84,7 @@ abstract class AbstractController extends BaseController {
      *
      * @return KernelEventListener|null Returns the kernel event listener in case of success, null otherwise.
      */
-    protected function getKernelEventListener() {
+    protected function getKernelEventListener(): ?KernelEventListener {
         return $this->get(KernelEventListener::SERVICE_NAME);
     }
 
@@ -93,7 +93,7 @@ abstract class AbstractController extends BaseController {
      *
      * @return LoggerInterface|null Returns the logger in case of success, null otherwise.
      */
-    protected function getLogger() {
+    protected function getLogger(): ?LoggerInterface {
         return $this->get("logger");
     }
 
@@ -102,7 +102,7 @@ abstract class AbstractController extends BaseController {
      *
      * @return RepositoryHelper|null Returns the repository helper in case of success, null otherwise.
      */
-    protected function getRepositoryHelper() {
+    protected function getRepositoryHelper(): ?RepositoryHelper {
         return $this->get(RepositoryHelper::SERVICE_NAME);
     }
 
@@ -112,7 +112,7 @@ abstract class AbstractController extends BaseController {
      * @return RepositoryHelper|null Returns the repository helper in case of success, null otherwise.
      * @deprecated since 2.15.0, use {@see WBW\Bundle\CoreBundle\Controller\AbstractController::getRepositoryHelper()} instead.
      */
-    protected function getRepositoryReportHelper() {
+    protected function getRepositoryReportHelper(): ?RepositoryReportHelper {
         return $this->get(RepositoryReportHelper::SERVICE_NAME);
     }
 
@@ -121,7 +121,7 @@ abstract class AbstractController extends BaseController {
      *
      * @return RouterInterface|null Returns the router in case of success, null otherwise.
      */
-    protected function getRouter() {
+    protected function getRouter(): ?RouterInterface {
         return $this->get("router");
     }
 
@@ -130,7 +130,7 @@ abstract class AbstractController extends BaseController {
      *
      * @return SessionInterface|null Returns the session in case of success, null otherwise.
      */
-    protected function getSession() {
+    protected function getSession(): ?SessionInterface {
         return $this->get("session");
     }
 
@@ -139,7 +139,7 @@ abstract class AbstractController extends BaseController {
      *
      * @return TranslatorInterface|null Returns the translator in case of success, null otherwise.
      */
-    protected function getTranslator() {
+    protected function getTranslator(): ?TranslatorInterface {
         return $this->get("translator");
     }
 
@@ -153,7 +153,7 @@ abstract class AbstractController extends BaseController {
      * @return bool Returns true.
      * @throws BadUserRoleException Throws a bad user role exception.
      */
-    protected function hasRolesOrRedirect(array $roles, $or, $redirectUrl, $originUrl = "") {
+    protected function hasRolesOrRedirect(array $roles, bool $or, string $redirectUrl, string $originUrl = ""): bool {
 
         $user = $this->getKernelEventListener()->getUser();
         if (false === UserHelper::hasRoles($user, $roles, $or)) {
@@ -173,7 +173,7 @@ abstract class AbstractController extends BaseController {
      * @param NotificationInterface $notification The notification.
      * @return NotificationEvent|null Returns the event in case of success, null otherwise.
      */
-    protected function notify($eventName, NotificationInterface $notification) {
+    protected function notify(string $eventName, NotificationInterface $notification): ?NotificationEvent {
         return $this->dispatchEvent($eventName, new NotificationEvent($eventName, $notification));
     }
 
@@ -184,7 +184,7 @@ abstract class AbstractController extends BaseController {
      * @param ToastInterface $toast The toast.
      * @return ToastEvent|null Returns the event in case of success, null otherwise.
      */
-    protected function toast($eventName, ToastInterface $toast) {
+    protected function toast(string $eventName, ToastInterface $toast): ?ToastEvent {
         return $this->dispatchEvent($eventName, new ToastEvent($eventName, $toast));
     }
 
@@ -197,7 +197,7 @@ abstract class AbstractController extends BaseController {
      * @param string|null $locale The locale.
      * @return string Returns the translation in case of success, $id otherwise.
      */
-    protected function translate($id, array $parameters = [], $domain = null, $locale = null) {
+    protected function translate(string $id, array $parameters = [], string $domain = null, string $locale = null): string {
         return $this->getTranslator()->trans($id, $parameters, $domain, $locale);
     }
 }

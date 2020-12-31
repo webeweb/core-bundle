@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Navigation;
 
 use Symfony\Component\HttpFoundation\Request;
+use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
 use WBW\Bundle\CoreBundle\Navigation\NavigationTreeHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\TestFixtures;
@@ -34,7 +35,7 @@ class NavigationTreeHelperTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set up a Navigation tree mock.
@@ -46,7 +47,7 @@ class NavigationTreeHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testActiveTree() {
+    public function testActiveTree(): void {
 
         NavigationTreeHelper::activeTree($this->tree, Request::create("https://github.com/webeweb/core-bundle"));
 
@@ -79,7 +80,7 @@ class NavigationTreeHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetBreadcrumbs() {
+    public function testGetBreadcrumbs(): void {
 
         NavigationTreeHelper::activeTree($this->tree, Request::create("https://github.com/webeweb/core-bundle"));
 

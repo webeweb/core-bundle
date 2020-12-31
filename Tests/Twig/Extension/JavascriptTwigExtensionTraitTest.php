@@ -28,7 +28,7 @@ class JavascriptTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetJavascriptTwigExtension() {
+    public function testSetJavascriptTwigExtension(): void {
 
         // Set a Javascript Twig extension mock.
         $javascriptTwigExtension = new JavascriptTwigExtension($this->twigEnvironment);
@@ -44,7 +44,7 @@ class JavascriptTwigExtensionTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__constructor() {
+    public function test__constructor(): void {
 
         $obj = new TestJavascriptTwigExtensionTrait();
 

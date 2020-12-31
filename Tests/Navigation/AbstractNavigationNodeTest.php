@@ -29,7 +29,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddNode() {
+    public function testAddNode(): void {
 
         // Set a Navigation node mock.
         $node = new TestNavigationNode("node");
@@ -48,7 +48,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testClearNode() {
+    public function testClearNode(): void {
 
         // Set a Navigation node mock.
         $node = new TestNavigationNode("node");
@@ -67,7 +67,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetFirstNode() {
+    public function testGetFirstNode(): void {
 
         // Set a Navigation node mock.
         $node = new TestNavigationNode("node");
@@ -83,7 +83,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetLastNode() {
+    public function testGetLastNode(): void {
 
         // Set a Navigation node mock.
         $node = new TestNavigationNode("node");
@@ -99,7 +99,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetNodeAt() {
+    public function testGetNodeAt(): void {
 
         // Set a Navigation node mock.
         $node = new TestNavigationNode("node");
@@ -117,7 +117,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetNodeById() {
+    public function testGetNodeById(): void {
 
         // Set the Navigation mocks.
         $node1 = new TestNavigationNode("id1");
@@ -142,7 +142,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testIsDisplayable() {
+    public function testIsDisplayable(): void {
 
         $obj = new TestNavigationNode("id");
 
@@ -160,7 +160,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testRemoveNode() {
+    public function testRemoveNode(): void {
 
         // Set a Navigation node mock.
         $node = new TestNavigationNode("node");
@@ -181,7 +181,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetActive() {
+    public function testSetActive(): void {
 
         $obj = new TestNavigationNode("id");
 
@@ -194,7 +194,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetEnable() {
+    public function testSetEnable(): void {
 
         $obj = new TestNavigationNode("id");
 
@@ -207,7 +207,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetIcon() {
+    public function testSetIcon(): void {
 
         $obj = new TestNavigationNode("id");
 
@@ -220,7 +220,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetMatcher() {
+    public function testSetMatcher(): void {
 
         $obj = new TestNavigationNode("id");
 
@@ -233,7 +233,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetTarget() {
+    public function testSetTarget(): void {
 
         $obj = new TestNavigationNode("id");
 
@@ -246,7 +246,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetUri() {
+    public function testSetUri(): void {
 
         $obj = new TestNavigationNode("id");
 
@@ -259,7 +259,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSize() {
+    public function testSize(): void {
 
         // Set a Navigation node mock.
         $node = new TestNavigationNode("node");
@@ -277,7 +277,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestNavigationNode("id");
 

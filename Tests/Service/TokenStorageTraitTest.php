@@ -27,7 +27,7 @@ class TokenStorageTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetTokenStorage() {
+    public function testSetTokenStorage(): void {
 
         $obj = new TestTokenStorageTrait();
 
@@ -40,7 +40,7 @@ class TokenStorageTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__constructor() {
+    public function test__constructor(): void {
 
         $obj = new TestTokenStorageTrait();
 

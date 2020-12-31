@@ -36,7 +36,7 @@ class FormHelperTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a Collection mock.
@@ -52,7 +52,7 @@ class FormHelperTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testCheckCollection() {
+    public function testCheckCollection(): void {
 
         $obj = new FormHelper($this->objectManager, $this->eventDispatcher);
 
@@ -65,7 +65,7 @@ class FormHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testCheckCollectionWithIllegalArgumentException() {
+    public function testCheckCollectionWithIllegalArgumentException(): void {
 
         $obj = new FormHelper($this->objectManager, $this->eventDispatcher);
 
@@ -84,7 +84,7 @@ class FormHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testCheckCollectionWithRedirectResponseException() {
+    public function testCheckCollectionWithRedirectResponseException(): void {
 
         // Set the Event dispatcher mock.
         $this->eventDispatcher->expects($this->any())->method("hasListeners")->willReturn(true);
@@ -107,7 +107,7 @@ class FormHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testOnPostRequestWithCollection() {
+    public function testOnPostRequestWithCollection(): void {
 
         $obj = new FormHelper($this->objectManager, $this->eventDispatcher);
 
@@ -131,7 +131,7 @@ class FormHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testOnPreHandleRequestWithCollection() {
+    public function testOnPreHandleRequestWithCollection(): void {
 
         $obj = new FormHelper($this->objectManager, $this->eventDispatcher);
 
@@ -150,7 +150,7 @@ class FormHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new FormHelper($this->objectManager, $this->eventDispatcher);
 

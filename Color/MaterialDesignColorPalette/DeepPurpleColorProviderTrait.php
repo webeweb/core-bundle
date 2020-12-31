@@ -29,9 +29,9 @@ trait DeepPurpleColorProviderTrait {
     /**
      * Get the deep purple color provider.
      *
-     * @return DeepPurpleColorProvider Returns the deep purple color provider.
+     * @return DeepPurpleColorProvider|null Returns the deep purple color provider.
      */
-    public function getDeepPurpleColorProvider() {
+    public function getDeepPurpleColorProvider(): ?DeepPurpleColorProvider {
         return $this->deepPurpleColorProvider;
     }
 
@@ -40,7 +40,7 @@ trait DeepPurpleColorProviderTrait {
      *
      * @param DeepPurpleColorProvider|null $deepPurpleColorProvider The deep purple color provider.
      */
-    protected function setDeepPurpleColorProvider(DeepPurpleColorProvider $deepPurpleColorProvider = null) {
+    protected function setDeepPurpleColorProvider(?DeepPurpleColorProvider $deepPurpleColorProvider): self {
         $this->deepPurpleColorProvider = $deepPurpleColorProvider;
         return $this;
     }

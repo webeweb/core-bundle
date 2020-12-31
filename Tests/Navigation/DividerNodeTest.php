@@ -28,7 +28,7 @@ class DividerNodeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddNode() {
+    public function testAddNode(): void {
 
         // Set a Navigation node mock.
         $node = new TestNavigationNode("node");
@@ -47,7 +47,7 @@ class DividerNodeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new DividerNode("id");
 

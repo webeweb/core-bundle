@@ -27,7 +27,7 @@ class RouterTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetRouter() {
+    public function testSetRouter(): void {
 
         $obj = new TestRouterTrait();
 
@@ -40,7 +40,7 @@ class RouterTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__constructor() {
+    public function test__constructor(): void {
 
         $obj = new TestRouterTrait();
 

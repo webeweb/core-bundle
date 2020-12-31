@@ -171,90 +171,90 @@ interface FontAwesomeIconInterface extends IconInterface {
     /**
      * Get the animation.
      *
-     * @return string Returns the animation.
+     * @return string|null Returns the animation.
      */
-    public function getAnimation();
+    public function getAnimation(): ?string;
 
     /**
      * Get the bordered.
      *
-     * @return bool Returns the bordered.
+     * @return bool|null Returns the bordered.
      */
-    public function getBordered();
+    public function getBordered(): ?bool;
 
     /**
      * Get the fixed width.
      *
-     * @return bool Returns the fixed width.
+     * @return bool|null Returns the fixed width.
      */
-    public function getFixedWidth();
+    public function getFixedWidth(): ?bool;
 
     /**
      * Get the font.
      *
-     * @return string Returns the font.
+     * @return string|null Returns the font.
      */
-    public function getFont();
+    public function getFont(): ?string;
 
     /**
      * Get the pull.
      *
-     * @return string Returns the pull.
+     * @return string|null Returns the pull.
      */
-    public function getPull();
+    public function getPull(): ?string;
 
     /**
      * Get the size.
      *
-     * @return string Returns the size.
+     * @return string|null Returns the size.
      */
-    public function getSize();
+    public function getSize(): ?string;
 
     /**
      * Set the animation.
      *
-     * @param string $animation The animation.
+     * @param string|null $animation The animation.
      * @return FontAwesomeIconInterface Returns this icon.
      */
-    public function setAnimation($animation);
+    public function setAnimation(?string $animation): FontAwesomeIconInterface;
 
     /**
      * Set the bordered.
      *
-     * @param bool $bordered Bordered ?
+     * @param bool|null $bordered Bordered ?
      * @return FontAwesomeIconInterface Returns this icon.
      */
-    public function setBordered($bordered);
+    public function setBordered(?bool $bordered): FontAwesomeIconInterface;
 
     /**
      * Set the fixed width.
      *
-     * @param bool $fixedWidth Fixed width ?
+     * @param bool|null $fixedWidth Fixed width ?
      * @return FontAwesomeIconInterface Returns this icon.
      */
-    public function setFixedWidth($fixedWidth);
+    public function setFixedWidth(?bool $fixedWidth): FontAwesomeIconInterface;
 
     /**
      * Set the font.
      *
-     * @param string $font The font.
+     * @param string|null $font The font.
      * @return FontAwesomeIconInterface Returns this icon.
      */
-    public function setFont($font);
+    public function setFont(?string $font): FontAwesomeIconInterface;
 
     /**
      * Set the pull.
      *
-     * @param string $pull The pull.
+     * @param string|null $pull The pull.
      * @return FontAwesomeIconInterface Returns this icon.
      */
-    public function setPull($pull);
+    public function setPull(?string $pull): FontAwesomeIconInterface;
 
     /**
      * Set the size.
      *
-     * @param string $size The size.
+     * @param string|null $size The size.
      * @return FontAwesomeIconInterface Returns this icon.
      */
-    public function setSize($size);
+    public function setSize(?string $size): FontAwesomeIconInterface;
 }

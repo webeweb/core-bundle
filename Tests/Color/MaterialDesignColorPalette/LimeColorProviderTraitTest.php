@@ -28,7 +28,7 @@ class LimeColorProviderTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetLimeColorProvider() {
+    public function testSetLimeColorProvider(): void {
 
         // Set a Lime color provider mock.
         $limeColorProvider = new LimeColorProvider();
@@ -44,7 +44,7 @@ class LimeColorProviderTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestLimeColorProviderTrait();
 

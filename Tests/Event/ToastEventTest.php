@@ -28,7 +28,7 @@ class ToastEventTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__constructor() {
+    public function test__constructor(): void {
 
         // Set a Toast mock.
         $toast = $this->getMockBuilder(ToastInterface::class)->getMock();

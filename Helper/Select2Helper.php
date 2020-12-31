@@ -29,7 +29,7 @@ class Select2Helper {
      * @return array Returns the "results" array.
      * @throws InvalidArgumentException Throws an invalid argument exception if an item does not implement Select2ItemInterface.
      */
-    public static function toResults(array $items) {
+    public static function toResults(array $items): array {
 
         $output = [];
 

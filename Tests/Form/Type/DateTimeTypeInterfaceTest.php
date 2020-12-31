@@ -27,7 +27,7 @@ class DateTimeTypeInterfaceTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("dd/MM/yyyy", DateTimeTypeInterface::FORMAT_DATE);
         $this->assertEquals("HH:mm", DateTimeTypeInterface::FORMAT_TIME);

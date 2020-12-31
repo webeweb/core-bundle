@@ -28,7 +28,7 @@ class MaterialDesignIconicFontIconEnumeratorTest extends AbstractTestCase {
      *
      * @return void.
      */
-    public function testEnumBorders() {
+    public function testEnumBorders(): void {
 
         $res = [
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_BORDER,
@@ -42,7 +42,7 @@ class MaterialDesignIconicFontIconEnumeratorTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testEnumFlips() {
+    public function testEnumFlips(): void {
 
         $res = [
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_FLIP_HORIZONTAL,
@@ -56,7 +56,7 @@ class MaterialDesignIconicFontIconEnumeratorTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testEnumPulls() {
+    public function testEnumPulls(): void {
 
         $res = [
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_PULL_LEFT,
@@ -70,7 +70,7 @@ class MaterialDesignIconicFontIconEnumeratorTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testEnumRotates() {
+    public function testEnumRotates(): void {
 
         $res = [
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_ROTATE_90,
@@ -85,7 +85,7 @@ class MaterialDesignIconicFontIconEnumeratorTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testEnumSizes() {
+    public function testEnumSizes(): void {
 
         $res = [
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SIZE_LG,
@@ -102,7 +102,7 @@ class MaterialDesignIconicFontIconEnumeratorTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testEnumSpins() {
+    public function testEnumSpins(): void {
 
         $res = [
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SPIN,

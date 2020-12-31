@@ -27,7 +27,7 @@ class EnvironmentTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetEnvironment() {
+    public function testSetEnvironment(): void {
 
         $obj = new TestEnvironmentTrait();
 
@@ -40,7 +40,7 @@ class EnvironmentTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__constructor() {
+    public function test__constructor(): void {
 
         $obj = new TestEnvironmentTrait();
 

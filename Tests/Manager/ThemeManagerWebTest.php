@@ -35,7 +35,7 @@ class ThemeManagerWebTest extends AbstractWebTestCase {
      *
      * @return void
      */
-    public function testDependencyInjection() {
+    public function testDependencyInjection(): void {
 
         $obj = static::$kernel->getContainer()->get(ThemeManager::SERVICE_NAME);
 

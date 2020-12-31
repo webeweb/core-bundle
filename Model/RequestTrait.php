@@ -24,25 +24,25 @@ trait RequestTrait {
     /**
      * Request.
      *
-     * @var Request
+     * @var Request|null
      */
     private $request;
 
     /**
      * Get the request.
      *
-     * @return Request Returns the request.
+     * @return Request|null Returns the request.
      */
-    public function getRequest() {
+    public function getRequest(): ?Request {
         return $this->request;
     }
 
     /**
      * Set the request.
      *
-     * @param Request $request The request.
+     * @param Request|null $request The request.
      */
-    protected function setRequest(Request $request) {
+    protected function setRequest(?Request $request): self {
         $this->request = $request;
         return $this;
     }

@@ -29,9 +29,9 @@ trait LightGreenColorProviderTrait {
     /**
      * Get the light green color provider.
      *
-     * @return LightGreenColorProvider Returns the light green color provider.
+     * @return LightGreenColorProvider|null Returns the light green color provider.
      */
-    public function getLightGreenColorProvider() {
+    public function getLightGreenColorProvider(): ?LightGreenColorProvider {
         return $this->lightGreenColorProvider;
     }
 
@@ -40,7 +40,7 @@ trait LightGreenColorProviderTrait {
      *
      * @param LightGreenColorProvider|null $lightGreenColorProvider The light green color provider.
      */
-    protected function setLightGreenColorProvider(LightGreenColorProvider $lightGreenColorProvider = null) {
+    protected function setLightGreenColorProvider(?LightGreenColorProvider $lightGreenColorProvider): self {
         $this->lightGreenColorProvider = $lightGreenColorProvider;
         return $this;
     }
