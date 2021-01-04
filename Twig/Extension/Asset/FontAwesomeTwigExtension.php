@@ -37,7 +37,7 @@ class FontAwesomeTwigExtension extends AbstractFontAwesomeTwigExtension implemen
      * @param array $args The arguments.
      * @return string Returns the Font Awesome icon.
      */
-    public function fontAwesomeIconFunction(array $args = []) {
+    public function fontAwesomeIconFunction(array $args = []): string {
         return $this->fontAwesomeIcon(IconFactory::parseFontAwesomeIcon($args));
     }
 
@@ -47,7 +47,7 @@ class FontAwesomeTwigExtension extends AbstractFontAwesomeTwigExtension implemen
      * @param array|string $items The items.
      * @return string Returns the Font Awesome list.
      */
-    public function fontAwesomeListFilter($items) {
+    public function fontAwesomeListFilter($items): string {
         return $this->fontAwesomeList($items);
     }
 
@@ -55,10 +55,10 @@ class FontAwesomeTwigExtension extends AbstractFontAwesomeTwigExtension implemen
      * Displays a Font Awesome list icon.
      *
      * @param string $icon The icon.
-     * @param string $content The content.
+     * @param string|null $content The content.
      * @return string Returns the Font Awesome list icon.
      */
-    public function fontAwesomeListIconFilter($icon, $content) {
+    public function fontAwesomeListIconFilter(string $icon, ?string $content): string {
         return $this->fontAwesomeListIcon($icon, $content);
     }
 
@@ -67,7 +67,7 @@ class FontAwesomeTwigExtension extends AbstractFontAwesomeTwigExtension implemen
      *
      * @return TwigFilter[] Returns the Twig filters.
      */
-    public function getFilters() {
+    public function getFilters(): array {
         return [
             new TwigFilter("fontAwesomeList", [$this, "fontAwesomeListFilter"], ["is_safe" => ["html"]]),
             new TwigFilter("faList", [$this, "fontAwesomeListFilter"], ["is_safe" => ["html"]]),
@@ -82,7 +82,7 @@ class FontAwesomeTwigExtension extends AbstractFontAwesomeTwigExtension implemen
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction("fontAwesomeIcon", [$this, "fontAwesomeIconFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("faIcon", [$this, "fontAwesomeIconFunction"], ["is_safe" => ["html"]]),

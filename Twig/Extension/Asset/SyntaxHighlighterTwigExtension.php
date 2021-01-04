@@ -39,7 +39,7 @@ class SyntaxHighlighterTwigExtension extends AbstractSyntaxHighlighterTwigExtens
      *
      * @return TwigFilter[] Returns the Twig filters.
      */
-    public function getFilters() {
+    public function getFilters(): array {
         return [
             new TwigFilter("syntaxHighlighterScript", [$this, "syntaxHighlighterScriptFilter"], ["is_safe" => ["html"]]),
             new TwigFilter("shScript", [$this, "syntaxHighlighterScriptFilter"], ["is_safe" => ["html"]]),
@@ -51,7 +51,7 @@ class SyntaxHighlighterTwigExtension extends AbstractSyntaxHighlighterTwigExtens
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction("syntaxHighlighterConfig", [$this, "syntaxHighlighterConfigFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("shConfig", [$this, "syntaxHighlighterConfigFunction"], ["is_safe" => ["html"]]),
@@ -76,7 +76,7 @@ class SyntaxHighlighterTwigExtension extends AbstractSyntaxHighlighterTwigExtens
      * @param SyntaxHighlighterConfig $config The SyntaxHighlighter config.
      * @return string Returns the SyntaxHighlighter config.
      */
-    public function syntaxHighlighterConfigFunction(SyntaxHighlighterConfig $config) {
+    public function syntaxHighlighterConfigFunction(SyntaxHighlighterConfig $config): string {
         return $this->syntaxHighlighterConfig($config);
     }
 
@@ -87,7 +87,7 @@ class SyntaxHighlighterTwigExtension extends AbstractSyntaxHighlighterTwigExtens
      * @return string Returns the SyntaxHighlighter content.
      * @throws FileNotFoundException Throws a file not found exception if the file does not exists.
      */
-    public function syntaxHighlighterContentFunction(array $args = []) {
+    public function syntaxHighlighterContentFunction(array $args = []): string {
 
         $tag      = ArrayHelper::get($args, "tag", "pre");
         $language = ArrayHelper::get($args, "language", "php");
@@ -110,7 +110,7 @@ class SyntaxHighlighterTwigExtension extends AbstractSyntaxHighlighterTwigExtens
      * @param SyntaxHighlighterDefaults $defaults The SyntaxHighlighter defaults.
      * @return string Returns the SyntaxHighlighter defaults.
      */
-    public function syntaxHighlighterDefaultsFunction(SyntaxHighlighterDefaults $defaults) {
+    public function syntaxHighlighterDefaultsFunction(SyntaxHighlighterDefaults $defaults): string {
         return $this->syntaxHighlighterDefaults($defaults);
     }
 
@@ -120,7 +120,7 @@ class SyntaxHighlighterTwigExtension extends AbstractSyntaxHighlighterTwigExtens
      * @param string $content The content.
      * @return string Returns the SyntaxHighlighter script.
      */
-    public function syntaxHighlighterScriptFilter($content) {
+    public function syntaxHighlighterScriptFilter(string $content): string {
         return static::coreHTMLElement("script", "\n" . $content . "\n", ["type" => "text/javascript"]);
     }
 
@@ -130,7 +130,7 @@ class SyntaxHighlighterTwigExtension extends AbstractSyntaxHighlighterTwigExtens
      * @param SyntaxHighlighterStrings $strings The SyntaxHighlighter strings.
      * @return string Returns the SyntaxHighlighter strings.
      */
-    public function syntaxHighlighterStringsFunction(SyntaxHighlighterStrings $strings) {
+    public function syntaxHighlighterStringsFunction(SyntaxHighlighterStrings $strings): string {
         return $this->syntaxHighlighterStrings($strings);
     }
 }

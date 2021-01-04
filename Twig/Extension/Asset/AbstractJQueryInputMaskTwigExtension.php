@@ -47,7 +47,7 @@ abstract class AbstractJQueryInputMaskTwigExtension extends AbstractTwigExtensio
      * @param bool $scriptTag Script tag ?
      * @return string Returns the jQuery input mask.
      */
-    protected function jQueryInputMask($selector, $mask, array $options, $scriptTag) {
+    protected function jQueryInputMask(string $selector, string $mask, array $options, bool $scriptTag): string {
 
         $template = '$(\'%selector%\').inputmask("%mask%",%arguments%);';
 

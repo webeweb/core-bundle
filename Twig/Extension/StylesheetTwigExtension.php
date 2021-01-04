@@ -32,11 +32,11 @@ class StylesheetTwigExtension extends AbstractTwigExtension {
     /**
      * Displays a rgba().
      *
-     * @param string $color The hexadecimal color.
+     * @param string|null $color The hexadecimal color.
      * @param float $alpha The alpha channel.
      * @return string Returns the rgba().
      */
-    public function cssRgba($color, $alpha = 1.00) {
+    public function cssRgba(?string $color, float $alpha = 1.00): string {
 
         if (0 === preg_match_all("/^#?([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/", strtolower($color), $hex)) {
             return "";
@@ -63,7 +63,7 @@ class StylesheetTwigExtension extends AbstractTwigExtension {
      *
      * @return TwigFilter[] Returns the Twig filters.
      */
-    public function getFilters() {
+    public function getFilters(): array {
         return [
             new TwigFilter("cssRgba", [$this, "cssRgba"], ["is_safe" => ["html"]]),
         ];
@@ -74,7 +74,7 @@ class StylesheetTwigExtension extends AbstractTwigExtension {
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction("cssRgba", [$this, "cssRgba"], ["is_safe" => ["html"]]),
         ];

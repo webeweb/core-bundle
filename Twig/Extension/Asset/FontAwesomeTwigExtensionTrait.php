@@ -22,16 +22,16 @@ trait FontAwesomeTwigExtensionTrait {
     /**
      * Font Awesome Twig extension.
      *
-     * @var FontAwesomeTwigExtension
+     * @var FontAwesomeTwigExtension|null
      */
     private $fontAwesomeTwigExtension;
 
     /**
      * Get the Font Awesome Twig extension.
      *
-     * @return FontAwesomeTwigExtension Returns the Font Awesome Twig extension.
+     * @return FontAwesomeTwigExtension|null Returns the Font Awesome Twig extension.
      */
-    public function getFontAwesomeTwigExtension() {
+    public function getFontAwesomeTwigExtension(): ?FontAwesomeTwigExtension {
         return $this->fontAwesomeTwigExtension;
     }
 
@@ -40,7 +40,7 @@ trait FontAwesomeTwigExtensionTrait {
      *
      * @param FontAwesomeTwigExtension|null $fontAwesomeTwigExtension The Font Awesome Twig extension.
      */
-    protected function setFontAwesomeTwigExtension(FontAwesomeTwigExtension $fontAwesomeTwigExtension = null) {
+    protected function setFontAwesomeTwigExtension(?FontAwesomeTwigExtension $fontAwesomeTwigExtension): self {
         $this->fontAwesomeTwigExtension = $fontAwesomeTwigExtension;
         return $this;
     }

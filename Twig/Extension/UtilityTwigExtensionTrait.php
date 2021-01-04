@@ -22,16 +22,16 @@ trait UtilityTwigExtensionTrait {
     /**
      * Utility Twig extension.
      *
-     * @var UtilityTwigExtension
+     * @var UtilityTwigExtension|null
      */
     private $utilityTwigExtension;
 
     /**
      * Get the utility Twig extension.
      *
-     * @return UtilityTwigExtension Returns the utility Twig extension.
+     * @return UtilityTwigExtension|null Returns the utility Twig extension.
      */
-    public function getUtilityTwigExtension() {
+    public function getUtilityTwigExtension(): ?UtilityTwigExtension {
         return $this->utilityTwigExtension;
     }
 
@@ -40,7 +40,7 @@ trait UtilityTwigExtensionTrait {
      *
      * @param UtilityTwigExtension|null $utilityTwigExtension The utility Twig extension.
      */
-    protected function setUtilityTwigExtension(UtilityTwigExtension $utilityTwigExtension = null) {
+    protected function setUtilityTwigExtension(?UtilityTwigExtension $utilityTwigExtension): self {
         $this->utilityTwigExtension = $utilityTwigExtension;
         return $this;
     }

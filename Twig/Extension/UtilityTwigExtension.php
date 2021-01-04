@@ -37,10 +37,10 @@ class UtilityTwigExtension extends AbstractTwigExtension {
      *
      * @param DateTime $birthDate The birth date.
      * @param DateTime|null $refDate The reference date.
-     * @return int Returns teh age.
+     * @return int Returns the age.
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function calcAge(DateTime $birthDate, DateTime $refDate = null) {
+    public function calcAge(DateTime $birthDate, DateTime $refDate = null): int {
         return DateTimeRenderer::renderAge($birthDate, $refDate);
     }
 
@@ -51,18 +51,18 @@ class UtilityTwigExtension extends AbstractTwigExtension {
      * @param string $format The format.
      * @return string Returns the formatted date/time.
      */
-    public function formatDate(DateTime $dateTime = null, $format = DateTimeRenderer::DATETIME_FORMAT) {
+    public function formatDate(DateTime $dateTime = null, string $format = DateTimeRenderer::DATETIME_FORMAT): string {
         return DateTimeRenderer::renderDateTime($dateTime, $format);
     }
 
     /**
      * Format a string.
      *
-     * @param string $string The string.
-     * @param string $format The format.
+     * @param string|null $string The string.
+     * @param string|null $format The format.
      * @return string Returns the formatted string.
      */
-    public function formatString($string, $format) {
+    public function formatString(?string $string, ?string $format): string {
 
         if (null === $string || null === $format) {
             return "";
@@ -79,7 +79,7 @@ class UtilityTwigExtension extends AbstractTwigExtension {
      *
      * @return TwigFilter[] Returns the Twig filters.
      */
-    public function getFilters() {
+    public function getFilters(): array {
         return [
             new TwigFilter("calcAge", [$this, "calcAge"], ["is_safe" => ["html"]]),
 
@@ -102,7 +102,7 @@ class UtilityTwigExtension extends AbstractTwigExtension {
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction("calcAge", [$this, "calcAge"], ["is_safe" => ["html"]]),
 
@@ -123,10 +123,10 @@ class UtilityTwigExtension extends AbstractTwigExtension {
     /**
      * Decodes HTML entities.
      *
-     * @param string $string The string.
+     * @param string|null $string The string.
      * @return string Returns the decoded HTML entities.
      */
-    public function htmlEntityDecode($string) {
+    public function htmlEntityDecode(?string $string): string {
         if (null === $string) {
             return "";
         }
@@ -136,10 +136,10 @@ class UtilityTwigExtension extends AbstractTwigExtension {
     /**
      * Encodes HTML entities.
      *
-     * @param string $string The string.
+     * @param string|null $string The string.
      * @return string Returns the encoded HTML entities.
      */
-    public function htmlEntityEncode($string) {
+    public function htmlEntityEncode(?string $string): string {
         if (null === $string) {
             return "";
         }
@@ -149,10 +149,10 @@ class UtilityTwigExtension extends AbstractTwigExtension {
     /**
      * MD5.
      *
-     * @param string $string The string.
+     * @param string|null $string The string.
      * @return string Returns the MD5.
      */
-    public function md5($string) {
+    public function md5(?string $string): string {
         if (null === $string) {
             return "";
         }

@@ -22,16 +22,16 @@ trait MeteoconsTwigExtensionTrait {
     /**
      * Meteocons Twig extension.
      *
-     * @var MeteoconsTwigExtension
+     * @var MeteoconsTwigExtension|null
      */
     private $meteoconsTwigExtension;
 
     /**
      * Get the Meteocons Twig extension.
      *
-     * @return MeteoconsTwigExtension Returns the Meteocons Twig extension.
+     * @return MeteoconsTwigExtension|null Returns the Meteocons Twig extension.
      */
-    public function getMeteoconsTwigExtension() {
+    public function getMeteoconsTwigExtension(): ?MeteoconsTwigExtension {
         return $this->meteoconsTwigExtension;
     }
 
@@ -40,7 +40,7 @@ trait MeteoconsTwigExtensionTrait {
      *
      * @param MeteoconsTwigExtension|null $meteoconsTwigExtension The Meteocons Twig extension.
      */
-    protected function setMeteoconsTwigExtension(MeteoconsTwigExtension $meteoconsTwigExtension = null) {
+    protected function setMeteoconsTwigExtension(?MeteoconsTwigExtension $meteoconsTwigExtension): self {
         $this->meteoconsTwigExtension = $meteoconsTwigExtension;
         return $this;
     }

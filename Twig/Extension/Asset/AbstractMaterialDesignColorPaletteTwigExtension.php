@@ -47,7 +47,7 @@ abstract class AbstractMaterialDesignColorPaletteTwigExtension extends AbstractT
      *
      * @return ColorProviderInterface[] Returns the colors.
      */
-    protected function getColors() {
+    protected function getColors(): array {
         return $this->colors;
     }
 
@@ -55,11 +55,11 @@ abstract class AbstractMaterialDesignColorPaletteTwigExtension extends AbstractT
      * Displays a Material Design Color Palette.
      *
      * @param string $type The type.
-     * @param string $name The name.
-     * @param string $value The value.
+     * @param string|null $name The name.
+     * @param string|null $value The value.
      * @return string Returns the Material Design Color Palette.
      */
-    protected function materialDesignColorPalette($type, $name, $value) {
+    protected function materialDesignColorPalette(string $type, ?string $name, ?string $value): string {
 
         $color = $this->getColors()[0];
 
@@ -88,7 +88,7 @@ abstract class AbstractMaterialDesignColorPaletteTwigExtension extends AbstractT
      * @param ColorProviderInterface[] $colors The colors.
      * @return AbstractMaterialDesignColorPaletteTwigExtension Returns this Material Design Color Palette Twig extension.
      */
-    protected function setColors(array $colors) {
+    protected function setColors(array $colors): AbstractMaterialDesignColorPaletteTwigExtension {
         $this->colors = $colors;
         return $this;
     }

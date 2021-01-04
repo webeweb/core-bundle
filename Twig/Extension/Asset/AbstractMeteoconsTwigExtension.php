@@ -26,10 +26,10 @@ abstract class AbstractMeteoconsTwigExtension extends AbstractTwigExtension {
      * Displays a Meteocons icon.
      *
      * @param string $name The name.
-     * @param string $style The style.
+     * @param string|null $style The style.
      * @return string Returns the Meteocons icon.
      */
-    protected function meteoconsIcon($name, $style) {
+    protected function meteoconsIcon(string $name, ?string $style): string {
 
         $attributes = [];
 

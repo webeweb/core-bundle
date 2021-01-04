@@ -22,16 +22,16 @@ trait RendererTwigExtensionTrait {
     /**
      * Renderer Twig extension.
      *
-     * @var RendererTwigExtension
+     * @var RendererTwigExtension|null
      */
     private $rendererTwigExtension;
 
     /**
      * Get the renderer Twig extension.
      *
-     * @return RendererTwigExtension Returns the renderer Twig extension.
+     * @return RendererTwigExtension|null Returns the renderer Twig extension.
      */
-    public function getRendererTwigExtension() {
+    public function getRendererTwigExtension(): ?RendererTwigExtension {
         return $this->rendererTwigExtension;
     }
 
@@ -40,7 +40,7 @@ trait RendererTwigExtensionTrait {
      *
      * @param RendererTwigExtension|null $rendererTwigExtension The renderer Twig extension.
      */
-    protected function setRendererTwigExtension(RendererTwigExtension $rendererTwigExtension = null) {
+    protected function setRendererTwigExtension(?RendererTwigExtension $rendererTwigExtension): self {
         $this->rendererTwigExtension = $rendererTwigExtension;
         return $this;
     }

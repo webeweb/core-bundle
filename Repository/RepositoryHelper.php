@@ -101,7 +101,7 @@ EOT;
      */
     public static function getRepositoryReportSortClosure(): Closure {
 
-        return function(RepositoryReport $a, RepositoryReport $b) {
+        return function(RepositoryReport $a, RepositoryReport $b): int {
 
             if ($a->getEntity() === $b->getEntity()) {
                 return strcmp($a->getField(), $b->getField());

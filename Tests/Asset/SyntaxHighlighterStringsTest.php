@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\API;
+namespace WBW\Bundle\CoreBundle\Tests\Asset;
 
 use WBW\Bundle\CoreBundle\Asset\SyntaxHighlighterStrings;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;

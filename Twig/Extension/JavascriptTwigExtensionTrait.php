@@ -22,16 +22,16 @@ trait JavascriptTwigExtensionTrait {
     /**
      * Javascript Twig extension.
      *
-     * @var JavascriptTwigExtension
+     * @var JavascriptTwigExtension|null
      */
     private $javascriptTwigExtension;
 
     /**
      * Get the javascript Twig extension.
      *
-     * @return JavascriptTwigExtension Returns the javascript Twig extension.
+     * @return JavascriptTwigExtension|null Returns the javascript Twig extension.
      */
-    public function getJavascriptTwigExtension() {
+    public function getJavascriptTwigExtension(): ?JavascriptTwigExtension {
         return $this->javascriptTwigExtension;
     }
 
@@ -40,7 +40,7 @@ trait JavascriptTwigExtensionTrait {
      *
      * @param JavascriptTwigExtension|null $javascriptTwigExtension The javascript Twig extension.
      */
-    protected function setJavascriptTwigExtension(JavascriptTwigExtension $javascriptTwigExtension = null) {
+    protected function setJavascriptTwigExtension(?JavascriptTwigExtension $javascriptTwigExtension): ?self {
         $this->javascriptTwigExtension = $javascriptTwigExtension;
         return $this;
     }

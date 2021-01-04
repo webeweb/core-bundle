@@ -42,7 +42,7 @@ abstract class AbstractSyntaxHighlighterTwigExtension extends AbstractTwigExtens
      * @param SyntaxHighlighterConfig $config The configuration.
      * @return string Returns the SyntaxHighlighter config.
      */
-    protected function syntaxHighlighterConfig(SyntaxHighlighterConfig $config) {
+    protected function syntaxHighlighterConfig(SyntaxHighlighterConfig $config): string {
 
         $template = [
             "SyntaxHighlighter.config.bloggerMode = " . StringHelper::parseBoolean($config->getBloggerMode()) . ";",
@@ -65,7 +65,7 @@ abstract class AbstractSyntaxHighlighterTwigExtension extends AbstractTwigExtens
      * @param string $content The content.
      * @return string Returns the SyntaxHightlighter content.
      */
-    protected function syntaxHighlighterContent($tag, $language, $content) {
+    protected function syntaxHighlighterContent(string $tag, string $language, string $content): string {
 
         $attributes = [];
 
@@ -81,7 +81,7 @@ abstract class AbstractSyntaxHighlighterTwigExtension extends AbstractTwigExtens
      * @param SyntaxHighlighterDefaults $defaults The defaults.
      * @return string Returns the SyntaxHighlighter defaults.
      */
-    protected function syntaxHighlighterDefaults(SyntaxHighlighterDefaults $defaults) {
+    protected function syntaxHighlighterDefaults(SyntaxHighlighterDefaults $defaults): string {
 
         $template = [
             "SyntaxHighlighter.defaults['auto-links'] = " . StringHelper::parseBoolean($defaults->getAutoLinks()) . ";",
@@ -105,7 +105,7 @@ abstract class AbstractSyntaxHighlighterTwigExtension extends AbstractTwigExtens
      * @param SyntaxHighlighterStrings $strings The strings.
      * @return string Returns the SyntaxHighlighter strings.
      */
-    protected function syntaxHighlighterStrings(SyntaxHighlighterStrings $strings) {
+    protected function syntaxHighlighterStrings(SyntaxHighlighterStrings $strings): string {
 
         $template = [
             'SyntaxHighlighter.config.strings.alert = "' . $strings->getAlert() . '";',

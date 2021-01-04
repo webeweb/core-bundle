@@ -22,16 +22,16 @@ trait MaterialDesignIconicFontTwigExtensionTrait {
     /**
      * Material Design Iconic font Twig extension.
      *
-     * @var MaterialDesignIconicFontTwigExtension
+     * @var MaterialDesignIconicFontTwigExtension|null
      */
     private $materialDesignIconicFontTwigExtension;
 
     /**
      * Get the Material Design Iconic font Twig extension.
      *
-     * @return MaterialDesignIconicFontTwigExtension Returns the Material Design Iconic font Twig extension.
+     * @return MaterialDesignIconicFontTwigExtension|null Returns the Material Design Iconic font Twig extension.
      */
-    public function getMaterialDesignIconicFontTwigExtension() {
+    public function getMaterialDesignIconicFontTwigExtension(): ?MaterialDesignIconicFontTwigExtension {
         return $this->materialDesignIconicFontTwigExtension;
     }
 
@@ -40,7 +40,7 @@ trait MaterialDesignIconicFontTwigExtensionTrait {
      *
      * @param MaterialDesignIconicFontTwigExtension|null $materialDesignIconicFontTwigExtension The Material Design Iconic font Twig extension.
      */
-    protected function setMaterialDesignIconicFontTwigExtension(MaterialDesignIconicFontTwigExtension $materialDesignIconicFontTwigExtension = null) {
+    protected function setMaterialDesignIconicFontTwigExtension(?MaterialDesignIconicFontTwigExtension $materialDesignIconicFontTwigExtension): self {
         $this->materialDesignIconicFontTwigExtension = $materialDesignIconicFontTwigExtension;
         return $this;
     }

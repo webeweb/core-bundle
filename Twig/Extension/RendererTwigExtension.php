@@ -38,7 +38,7 @@ class RendererTwigExtension extends AbstractTwigExtension {
      * @param string $content The content.
      * @return string Returns a script.
      */
-    public function coreScriptFilter($content) {
+    public function coreScriptFilter(string $content): string {
 
         $attributes = [];
 
@@ -54,7 +54,7 @@ class RendererTwigExtension extends AbstractTwigExtension {
      *
      * @return TwigFilter[] Returns the Twig filters.
      */
-    public function getFilters() {
+    public function getFilters(): array {
         return [
             new TwigFilter("coreScript", [$this, "coreScriptFilter"], ["is_safe" => ["html"]]),
         ];
@@ -68,7 +68,7 @@ class RendererTwigExtension extends AbstractTwigExtension {
      * @param string|null $style The style.
      * @return string Returns the rendered icon.
      */
-    public static function renderIcon(Environment $twigEnvironment, $name, $style = null) {
+    public static function renderIcon(Environment $twigEnvironment, string $name, string $style = null): string {
 
         $handler = explode(":", $name);
         if (2 !== count($handler)) {

@@ -30,7 +30,7 @@ abstract class AbstractMaterialDesignIconicFontTwigExtension extends AbstractTwi
      * @param MaterialDesignIconicFontIconInterface $icon The icon.
      * @return string Returns the Material Design Iconic Font icon.
      */
-    protected function materialDesignIconicFontIcon(MaterialDesignIconicFontIconInterface $icon) {
+    protected function materialDesignIconicFontIcon(MaterialDesignIconicFontIconInterface $icon): string {
 
         $attributes = [];
 
@@ -54,7 +54,7 @@ abstract class AbstractMaterialDesignIconicFontTwigExtension extends AbstractTwi
      * @param array|string $items The items.
      * @return string Returns the Material Design Iconic Font list.
      */
-    protected function materialDesignIconicFontList($items) {
+    protected function materialDesignIconicFontList($items): string {
 
         $innerHTML = true === is_array($items) ? implode("\n", $items) : $items;
 
@@ -64,11 +64,11 @@ abstract class AbstractMaterialDesignIconicFontTwigExtension extends AbstractTwi
     /**
      * Displays a Material Design Iconic Font list icon.
      *
-     * @param string $icon The icon.
-     * @param string $content The content.
+     * @param string|null $icon The icon.
+     * @param string|null $content The content.
      * @return string Returns the Material Design Iconic Font list icon.
      */
-    protected function materialDesignIconicFontListIcon($icon, $content) {
+    protected function materialDesignIconicFontListIcon(?string $icon, ?string $content): string {
 
         $glyphicon = null !== $icon ? str_replace(['class="zmdi'], ['class="zmdi-hc-li zmdi'], $icon) : "";
         $innerHTML = null !== $content ? $content : "";

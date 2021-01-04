@@ -30,7 +30,7 @@ abstract class AbstractFontAwesomeTwigExtension extends AbstractTwigExtension {
      * @param FontAwesomeIconInterface $icon The icon.
      * @return string Returns the Font Awesome icon.
      */
-    protected function fontAwesomeIcon(FontAwesomeIconInterface $icon) {
+    protected function fontAwesomeIcon(FontAwesomeIconInterface $icon): string {
 
         $attributes = [];
 
@@ -52,7 +52,7 @@ abstract class AbstractFontAwesomeTwigExtension extends AbstractTwigExtension {
      * @param array|string $items The items.
      * @return string Returns the Font Awesome list.
      */
-    protected function fontAwesomeList($items) {
+    protected function fontAwesomeList($items): string {
 
         $innerHTML = true === is_array($items) ? implode("\n", $items) : $items;
 
@@ -63,10 +63,10 @@ abstract class AbstractFontAwesomeTwigExtension extends AbstractTwigExtension {
      * Displays a Font Awesome list icon.
      *
      * @param string $icon The icon.
-     * @param string $content The content.
+     * @param string|null $content The content.
      * @return string Returns the Font Awesome list icon.
      */
-    protected function fontAwesomeListIcon($icon, $content) {
+    protected function fontAwesomeListIcon(string $icon, ?string $content): string {
 
         $glyphicon = static::coreHTMLElement("span", $icon, ["class" => "fa-li"]);
         $innerHTML = null !== $content ? $content : "";

@@ -36,7 +36,7 @@ class FormFactory {
 
         $options["translator"] = ArrayHelper::get($options, "translator", null);
 
-        return function($entity) use ($options) {
+        return function($entity) use ($options): string {
             return FormRenderer::renderOption($entity, $options["translator"]);
         };
     }
@@ -47,7 +47,7 @@ class FormFactory {
      * @return Closure Returns the choice value closure.
      */
     public static function getChoiceValueClosure(): Closure {
-        return function(ChoiceValueInterface $entity = null) {
+        return function(ChoiceValueInterface $entity = null): ?string {
             return null !== $entity ? $entity->getChoiceValue() : "";
         };
     }

@@ -34,7 +34,7 @@ class JavascriptTwigExtension extends AbstractTwigExtension {
      *
      * @return TwigFilter[] Returns the Twig filters.
      */
-    public function getFilters() {
+    public function getFilters(): array {
         return [
             new TwigFilter("jsGtag", [$this, "jsGtag"], ["is_safe" => ["html"]]),
         ];
@@ -45,7 +45,7 @@ class JavascriptTwigExtension extends AbstractTwigExtension {
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction("jsGtag", [$this, "jsGtag"], ["is_safe" => ["html"]]),
         ];
@@ -54,10 +54,10 @@ class JavascriptTwigExtension extends AbstractTwigExtension {
     /**
      * Displays a Google tag manager.
      *
-     * @param string $id The id.
+     * @param string|null $id The id.
      * @return string Returns the Google tag manager.
      */
-    public function jsGtag($id) {
+    public function jsGtag(?string $id): string {
 
         if (null === $id || "" === $id) {
             return "";

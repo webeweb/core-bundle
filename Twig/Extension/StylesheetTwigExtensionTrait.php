@@ -22,16 +22,16 @@ trait StylesheetTwigExtensionTrait {
     /**
      * Stylesheet Twig extension.
      *
-     * @var StylesheetTwigExtension
+     * @var StylesheetTwigExtension|null
      */
     private $stylesheetTwigExtension;
 
     /**
      * Get the stylesheet Twig extension.
      *
-     * @return StylesheetTwigExtension Returns the stylesheet Twig extension.
+     * @return StylesheetTwigExtension|null Returns the stylesheet Twig extension.
      */
-    public function getStylesheetTwigExtension() {
+    public function getStylesheetTwigExtension(): ?StylesheetTwigExtension {
         return $this->stylesheetTwigExtension;
     }
 
@@ -40,7 +40,7 @@ trait StylesheetTwigExtensionTrait {
      *
      * @param StylesheetTwigExtension|null $stylesheetTwigExtension The stylesheet Twig extension.
      */
-    protected function setStylesheetTwigExtension(StylesheetTwigExtension $stylesheetTwigExtension = null) {
+    protected function setStylesheetTwigExtension(?StylesheetTwigExtension $stylesheetTwigExtension): self {
         $this->stylesheetTwigExtension = $stylesheetTwigExtension;
         return $this;
     }

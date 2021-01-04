@@ -54,7 +54,7 @@ class QuoteTwigExtension extends AbstractTwigExtension {
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction("quote", [$this, "quoteFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("quoteAuthor", [$this, "quoteAuthorFunction"], ["is_safe" => ["html"]]),
@@ -68,7 +68,7 @@ class QuoteTwigExtension extends AbstractTwigExtension {
      * @param string|null $domain The domain.
      * @return QuoteProviderInterface|null Returns the quote provider.
      */
-    protected function getQuoteProvider($domain = null) {
+    protected function getQuoteProvider(string $domain = null): ?QuoteProviderInterface {
 
         if (false === $this->getQuoteManager()->hasProviders()) {
             return null;
@@ -84,11 +84,11 @@ class QuoteTwigExtension extends AbstractTwigExtension {
     /**
      * Displays a quote author.
      *
-     * @param string $domain The domain.
+     * @param string|null $domain The domain.
      * @return string Returns the quote author.
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function quoteAuthorFunction($domain = null) {
+    public function quoteAuthorFunction(string $domain = null): string {
 
         $quote = $this->quoteFunction($domain);
         if (null === $quote) {
@@ -101,11 +101,11 @@ class QuoteTwigExtension extends AbstractTwigExtension {
     /**
      * Displays a quote content.
      *
-     * @param string $domain The domain.
+     * @param string|null $domain The domain.
      * @return string Returns the quote content.
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function quoteContentFunction($domain = null) {
+    public function quoteContentFunction(string $domain = null): ?string {
 
         $quote = $this->quoteFunction($domain);
         if (null === $quote) {
@@ -122,7 +122,7 @@ class QuoteTwigExtension extends AbstractTwigExtension {
      * @return QuoteInterface|null Returns the quote.
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function quoteFunction($domain = null) {
+    public function quoteFunction(string $domain = null): ?QuoteInterface {
 
         $provider = $this->getQuoteProvider($domain);
         if (null === $provider) {

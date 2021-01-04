@@ -39,8 +39,8 @@ class YamlQuoteProvider extends AbstractQuoteProvider {
      * @throws FileNotFoundException Throws a file not found exception.
      */
     public function __construct(?string $filename) {
+        parent::__construct();
         $this->setFilename($filename);
-        $this->setQuotes([]);
     }
 
     /**

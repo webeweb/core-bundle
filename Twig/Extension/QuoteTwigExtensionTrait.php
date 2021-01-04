@@ -22,16 +22,16 @@ trait QuoteTwigExtensionTrait {
     /**
      * Quote Twig extension.
      *
-     * @var QuoteTwigExtension
+     * @var QuoteTwigExtension|null
      */
     private $stylesheetTwigExtension;
 
     /**
      * Get the quote Twig extension.
      *
-     * @return QuoteTwigExtension Returns the quote Twig extension.
+     * @return QuoteTwigExtension|null Returns the quote Twig extension.
      */
-    public function getQuoteTwigExtension() {
+    public function getQuoteTwigExtension(): ?QuoteTwigExtension {
         return $this->stylesheetTwigExtension;
     }
 
@@ -40,7 +40,7 @@ trait QuoteTwigExtensionTrait {
      *
      * @param QuoteTwigExtension|null $quoteTwigExtension The quote Twig extension.
      */
-    protected function setQuoteTwigExtension(QuoteTwigExtension $quoteTwigExtension = null) {
+    protected function setQuoteTwigExtension(?QuoteTwigExtension $quoteTwigExtension): self {
         $this->stylesheetTwigExtension = $quoteTwigExtension;
         return $this;
     }

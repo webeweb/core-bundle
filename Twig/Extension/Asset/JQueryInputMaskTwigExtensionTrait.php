@@ -22,16 +22,16 @@ trait JQueryInputMaskTwigExtensionTrait {
     /**
      * jQuery InputMask Twig extension.
      *
-     * @var JQueryInputMaskTwigExtension
+     * @var JQueryInputMaskTwigExtension|null
      */
     private $jQueryInputMaskTwigExtension;
 
     /**
      * Get the jQuery InputMask Twig extension.
      *
-     * @return JQueryInputMaskTwigExtension Returns the jQuery InputMask Twig extension.
+     * @return JQueryInputMaskTwigExtension|null Returns the jQuery InputMask Twig extension.
      */
-    public function getJQueryInputMaskTwigExtension() {
+    public function getJQueryInputMaskTwigExtension(): ?JQueryInputMaskTwigExtension {
         return $this->jQueryInputMaskTwigExtension;
     }
 
@@ -40,7 +40,7 @@ trait JQueryInputMaskTwigExtensionTrait {
      *
      * @param JQueryInputMaskTwigExtension|null $jQueryInputMaskTwigExtension The jQuery InputMask Twig extension.
      */
-    protected function setJQueryInputMaskTwigExtension(JQueryInputMaskTwigExtension $jQueryInputMaskTwigExtension = null) {
+    protected function setJQueryInputMaskTwigExtension(?JQueryInputMaskTwigExtension $jQueryInputMaskTwigExtension): self {
         $this->jQueryInputMaskTwigExtension = $jQueryInputMaskTwigExtension;
         return $this;
     }

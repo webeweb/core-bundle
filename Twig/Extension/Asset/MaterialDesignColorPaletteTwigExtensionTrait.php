@@ -22,16 +22,16 @@ trait MaterialDesignColorPaletteTwigExtensionTrait {
     /**
      * Material Design color palette Twig extension.
      *
-     * @var MaterialDesignColorPaletteTwigExtension
+     * @var MaterialDesignColorPaletteTwigExtension|null
      */
     private $materialDesignColorPaletteTwigExtension;
 
     /**
      * Get the Material Design color palette Twig extension.
      *
-     * @return MaterialDesignColorPaletteTwigExtension Returns the Material Design color palette Twig extension.
+     * @return MaterialDesignColorPaletteTwigExtension|null Returns the Material Design color palette Twig extension.
      */
-    public function getMaterialDesignColorPaletteTwigExtension() {
+    public function getMaterialDesignColorPaletteTwigExtension(): ?MaterialDesignColorPaletteTwigExtension {
         return $this->materialDesignColorPaletteTwigExtension;
     }
 
@@ -40,7 +40,7 @@ trait MaterialDesignColorPaletteTwigExtensionTrait {
      *
      * @param MaterialDesignColorPaletteTwigExtension|null $materialDesignColorPaletteTwigExtension The Material Design color palette Twig extension.
      */
-    protected function setMaterialDesignColorPaletteTwigExtension(MaterialDesignColorPaletteTwigExtension $materialDesignColorPaletteTwigExtension = null) {
+    protected function setMaterialDesignColorPaletteTwigExtension(?MaterialDesignColorPaletteTwigExtension $materialDesignColorPaletteTwigExtension): self {
         $this->materialDesignColorPaletteTwigExtension = $materialDesignColorPaletteTwigExtension;
         return $this;
     }

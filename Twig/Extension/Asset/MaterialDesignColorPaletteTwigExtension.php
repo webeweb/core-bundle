@@ -34,7 +34,7 @@ class MaterialDesignColorPaletteTwigExtension extends AbstractMaterialDesignColo
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction("materialDesignColorPaletteBackground", [$this, "materialDesignColorPaletteBackgroundFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("mdcBackground", [$this, "materialDesignColorPaletteBackgroundFunction"], ["is_safe" => ["html"]]),
@@ -50,7 +50,7 @@ class MaterialDesignColorPaletteTwigExtension extends AbstractMaterialDesignColo
      * @param array $args The arguments.
      * @return string Returns the Material Design Color Palette background.
      */
-    public function materialDesignColorPaletteBackgroundFunction(array $args = []) {
+    public function materialDesignColorPaletteBackgroundFunction(array $args = []): string {
         return $this->materialDesignColorPalette("bg", ArrayHelper::get($args, "name"), ArrayHelper::get($args, "value"));
     }
 
@@ -60,7 +60,7 @@ class MaterialDesignColorPaletteTwigExtension extends AbstractMaterialDesignColo
      * @param array $args The arguments.
      * @return string Returns the Material Design Color Palette text.
      */
-    public function materialDesignColorPaletteTextFunction(array $args = []) {
+    public function materialDesignColorPaletteTextFunction(array $args = []): string {
         return $this->materialDesignColorPalette("text", ArrayHelper::get($args, "name"), ArrayHelper::get($args, "value"));
     }
 }

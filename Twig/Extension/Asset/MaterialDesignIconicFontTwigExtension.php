@@ -36,7 +36,7 @@ class MaterialDesignIconicFontTwigExtension extends AbstractMaterialDesignIconic
      *
      * @return TwigFilter[] Returns the Twig filters.
      */
-    public function getFilters() {
+    public function getFilters(): array {
         return [
             new TwigFilter("materialDesignIconicFontList", [$this, "materialDesignIconicFontListFilter"], ["is_safe" => ["html"]]),
             new TwigFilter("mdiFontList", [$this, "materialDesignIconicFontListFilter"], ["is_safe" => ["html"]]),
@@ -51,7 +51,7 @@ class MaterialDesignIconicFontTwigExtension extends AbstractMaterialDesignIconic
      *
      * @return TwigFunction[] Returns the Twig functions.
      */
-    public function getFunctions() {
+    public function getFunctions(): array {
         return [
             new TwigFunction("materialDesignIconicFontIcon", [$this, "materialDesignIconicFontIconFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("mdiIcon", [$this, "materialDesignIconicFontIconFunction"], ["is_safe" => ["html"]]),
@@ -64,7 +64,7 @@ class MaterialDesignIconicFontTwigExtension extends AbstractMaterialDesignIconic
      * @param array $args The arguments.
      * @return string Returns the Material Design Iconic Font icon.
      */
-    public function materialDesignIconicFontIconFunction(array $args = []) {
+    public function materialDesignIconicFontIconFunction(array $args = []): string {
         return $this->materialDesignIconicFontIcon(IconFactory::parseMaterialDesignIconicFontIcon($args));
     }
 
@@ -74,7 +74,7 @@ class MaterialDesignIconicFontTwigExtension extends AbstractMaterialDesignIconic
      * @param array|string $items The items.
      * @return string Returns the Material Design Iconic Font list.
      */
-    public function materialDesignIconicFontListFilter($items) {
+    public function materialDesignIconicFontListFilter($items): string {
         return $this->materialDesignIconicFontList($items);
     }
 
@@ -82,10 +82,10 @@ class MaterialDesignIconicFontTwigExtension extends AbstractMaterialDesignIconic
      * Displays a Material Design Iconic Font list icon.
      *
      * @param string $icon The icon.
-     * @param string $content The content.
+     * @param string|null $content The content.
      * @return string Returns the Material Design Iconic Font list icon.
      */
-    public function materialDesignIconicFontListIconFilter($icon, $content) {
+    public function materialDesignIconicFontListIconFilter(string $icon, ?string $content): string {
         return $this->materialDesignIconicFontListIcon($icon, $content);
     }
 
