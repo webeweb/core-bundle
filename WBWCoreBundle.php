@@ -28,7 +28,7 @@ class WBWCoreBundle extends Bundle implements AssetsProviderInterface {
     /**
      * {@inheritDoc}
      */
-    public function build(ContainerBuilder $container) {
+    public function build(ContainerBuilder $container): void {
         $container->addCompilerPass(new ColorProviderCompilerPass());
         $container->addCompilerPass(new QuoteProviderCompilerPass());
     }
