@@ -64,7 +64,7 @@ class YamlQuoteProvider extends AbstractQuoteProvider {
      */
     public function init(): void {
 
-        if (false === file_exists($this->filename)){
+        if (false === file_exists($this->filename)) {
             return;
         }
 
