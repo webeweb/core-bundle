@@ -31,42 +31,42 @@ class DefaultApplicationThemeProvider implements ApplicationThemeProviderInterfa
     /**
      * {@inheritDoc}
      */
-    public function getDescription(): string {
+    public function getDescription(): ?string {
         return "Core bundle";
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getHome(): string {
+    public function getHome(): ?string {
         return "/";
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getName(): string {
+    public function getName(): ?string {
         return "Core<b>bundle</b>";
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getRoute(): string {
+    public function getRoute(): ?string {
         return "/";
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getTitle(): string {
+    public function getTitle(): ?string {
         return "Core bundle";
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getVersion(): string {
+    public function getVersion(): ?string {
         return "dev-master";
     }
 
@@ -80,7 +80,7 @@ class DefaultApplicationThemeProvider implements ApplicationThemeProviderInterfa
     /**
      * {@inheritDoc}
      */
-    public function getYear(): string {
+    public function getYear(): ?string {
         $today = date("Y");
         $years = ["2018"];
         if ($years[0] !== $today) {

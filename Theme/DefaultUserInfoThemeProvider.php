@@ -38,14 +38,14 @@ class DefaultUserInfoThemeProvider implements UserInfoThemeProviderInterface {
     /**
      * {@inheritDoc}
      */
-    public function provideRegisterLink(): bool {
+    public function provideRegisterLink(): ?bool {
         return false;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function provideResettingLink(): bool {
+    public function provideResettingLink(): ?bool {
         return false;
     }
 }

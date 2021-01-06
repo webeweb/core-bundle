@@ -53,8 +53,8 @@ class DefaultNavigationThemeProvider implements NavigationThemeProviderInterface
      *
      * @param string $id The id.
      * @param array $parameters Teh parameters.
-     * @param string $domain The domain.
-     * @param string $locale The locale.
+     * @param string|null $domain The domain.
+     * @param string|null $locale The locale.
      * @return string Returns the translated id in case of success, id otherwise.
      */
     protected function translate(string $id, array $parameters = [], string $domain = null, string $locale = null): string {

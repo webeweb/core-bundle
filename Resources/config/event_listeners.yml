@@ -2,17 +2,19 @@
 services:
 
     wbw.core.event_listener.kernel:
-        class:     WBW\Bundle\CoreBundle\EventListener\KernelEventListener
-        arguments: ["@security.token_storage", "@wbw.core.manager.theme"]
-        public:    true
+        class:  WBW\Bundle\CoreBundle\EventListener\KernelEventListener
+        arguments: [ "@security.token_storage", "@wbw.core.manager.theme" ]
+        public: true
+        calls:
+            - [ "setSwiftMailer", [ "@swiftmailer.mailer" ] ]
         tags:
             - { name: "kernel.event_listener", event: "kernel.exception", method: "onKernelException" }
             - { name: "kernel.event_listener", event: "kernel.request",   method: "onKernelRequest" }
 
     wbw.core.event_listener.notification:
-        class:     WBW\Bundle\CoreBundle\EventListener\NotificationEventListener
-        arguments: ["@session"]
-        public:    true
+        class:  WBW\Bundle\CoreBundle\EventListener\NotificationEventListener
+        arguments: [ "@session" ]
+        public: true
         tags:
             - { name: "kernel.event_listener", event: "wbw.core.event.notification.danger",  method: "onNotify" }
             - { name: "kernel.event_listener", event: "wbw.core.event.notification.info",    method: "onNotify" }
@@ -20,9 +22,9 @@ services:
             - { name: "kernel.event_listener", event: "wbw.core.event.notification.warning", method: "onNotify" }
 
     wbw.core.event_listener.toast:
-        class:     WBW\Bundle\CoreBundle\EventListener\ToastEventListener
-        arguments: ["@session"]
-        public:    true
+        class:  WBW\Bundle\CoreBundle\EventListener\ToastEventListener
+        arguments: [ "@session" ]
+        public: true
         tags:
             - { name: "kernel.event_listener", event: "wbw.core.event.toast.danger",  method: "onToast" }
             - { name: "kernel.event_listener", event: "wbw.core.event.toast.info",    method: "onToast" }

@@ -31,14 +31,14 @@ interface UserInfoThemeProviderInterface extends ThemeProviderInterface {
     /**
      * Provides a register link.
      *
-     * @return bool Returns true in case of success, false otherwise.
+     * @return bool|null Returns true in case of success, false otherwise.
      */
-    public function provideRegisterLink(): bool;
+    public function provideRegisterLink(): ?bool;
 
     /**
-     * Provides a resseting link.
+     * Provides a resetting link.
      *
-     * @return bool Returns true in case of success, false otherwise.
+     * @return bool|null Returns true in case of success, false otherwise.
      */
-    public function provideResettingLink(): bool;
+    public function provideResettingLink(): ?bool;
 }
