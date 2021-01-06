@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### master
+### [2.20.0](https://github.com/webeweb/core-bundle/tree/v2.20.0) (2021-01-06)
 
 > IMPORTANT NOTICE: The following Symfony versions are now not supported
 > - Symfony 2.7
