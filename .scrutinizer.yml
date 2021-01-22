@@ -16,6 +16,31 @@ build:
         'PHP8.0':
             environment:
                 php: 8.0.0
+        'SYMFONY3.0':
+            environment:
+                php: 7.1.27
+                variables:
+                    SYMFONY_VERSION: 3.0.*
+        'SYMFONY3.1':
+            environment:
+                php: 7.1.27
+                variables:
+                    SYMFONY_VERSION: 3.1.*
+        'SYMFONY3.2':
+            environment:
+                php: 7.1.27
+                variables:
+                    SYMFONY_VERSION: 3.2.*
+        'SYMFONY3.3':
+            environment:
+                php: 7.1.27
+                variables:
+                    SYMFONY_VERSION: 3.3.*
+        'SYMFONY3.4':
+            environment:
+                php: 7.1.27
+                variables:
+                    SYMFONY_VERSION: 4.4.*
         'SYMFONY4.0':
             environment:
                 php: 7.1.27
@@ -41,12 +66,9 @@ build:
                 php: 7.1.27
                 variables:
                     SYMFONY_VERSION: 4.4.*
-    environment:
-        php:
-            ini:
-                'xdebug.mode': "coverage"
     dependencies:
         before:
+            - sed -i 's/zend_extension_ts/zend_extension/' ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
             - if [ "" == "$(php -m | grep zip)" ]; then pecl install zip; fi;
         override:
             - if [ "" != "$SYMFONY_VERSION" ]; then composer require "symfony/symfony:$SYMFONY_VERSION" --no-update; else composer require "symfony/symfony:4.4.*" --no-update; fi;
