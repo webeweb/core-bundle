@@ -10,7 +10,6 @@ CHANGELOG
 > - Symfony 3.1
 > - Symfony 3.2
 > - Symfony 3.3
-> - Symfony 3.4
 
 > IMPORTANT NOTICE: The following PHP versions are now not supported
 > - PHP 5.6
