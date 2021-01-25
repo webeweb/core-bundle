@@ -13,6 +13,16 @@ build:
         'PHP7.4':
             environment:
                 php: 7.4.13
+        'SYMFONY3.3':
+            environment:
+                php: 7.1.27
+                variables:
+                    SYMFONY_VERSION: 3.3.*
+        'SYMFONY3.4':
+            environment:
+                php: 7.1.27
+                variables:
+                    SYMFONY_VERSION: 3.4.*
         'SYMFONY4.0':
             environment:
                 php: 7.1.27
