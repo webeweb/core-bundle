@@ -41,6 +41,7 @@ trait RequestTrait {
      * Set the request.
      *
      * @param Request|null $request The request.
+     * @return self Returns this instance.
      */
     protected function setRequest(?Request $request): self {
         $this->request = $request;

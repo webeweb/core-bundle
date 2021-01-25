@@ -39,6 +39,7 @@ trait GreyColorProviderTrait {
      * Set the grey color provider.
      *
      * @param GreyColorProvider|null $greyColorProvider The grey color provider.
+     * @return self Returns this instance.
      */
     protected function setGreyColorProvider(?GreyColorProvider $greyColorProvider): self {
         $this->greyColorProvider = $greyColorProvider;

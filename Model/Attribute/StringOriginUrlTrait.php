@@ -39,6 +39,7 @@ trait StringOriginUrlTrait {
      * Set the origin URL.
      *
      * @param string|null $originUrl The origin URL.
+     * @return self Returns this instance.
      */
     public function setOriginUrl(?string $originUrl): self {
         $this->originUrl = $originUrl;

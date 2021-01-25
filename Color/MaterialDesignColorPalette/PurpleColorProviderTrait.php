@@ -39,6 +39,7 @@ trait PurpleColorProviderTrait {
      * Set the purple color provider.
      *
      * @param PurpleColorProvider|null $purpleColorProvider The purple color provider.
+     * @return self Returns this instance.
      */
     protected function setPurpleColorProvider(?PurpleColorProvider $purpleColorProvider): self {
         $this->purpleColorProvider = $purpleColorProvider;

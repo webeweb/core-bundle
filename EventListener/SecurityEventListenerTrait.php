@@ -39,6 +39,7 @@ trait SecurityEventListenerTrait {
      * Set the security event listener.
      *
      * @param SecurityEventListener|null $securityEventListener The security event listener.
+     * @return self Returns this instance.
      */
     protected function setSecurityEventListener(?SecurityEventListener $securityEventListener ): self {
         $this->securityEventListener = $securityEventListener;

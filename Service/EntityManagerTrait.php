@@ -41,6 +41,7 @@ trait EntityManagerTrait {
      * Set the entity manager.
      *
      * @param EntityManagerInterface|null $entityManager The entity manager.
+     * @return self Returns this instance.
      */
     protected function setEntityManager(?EntityManagerInterface $entityManager): self {
         $this->entityManager = $entityManager;

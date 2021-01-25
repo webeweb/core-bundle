@@ -41,6 +41,7 @@ trait LoggerTrait {
      * Set the logger.
      *
      * @param LoggerInterface|null $logger The logger.
+     * @return self Returns this instance.
      */
     protected function setLogger(?LoggerInterface $logger): self {
         $this->logger = $logger;

@@ -39,6 +39,7 @@ trait ColorManagerTrait {
      * Set the color manager.
      *
      * @param ColorManager|null $colorManager The color manager.
+     * @return self Returns this instance.
      */
     protected function setColorManager(?ColorManager $colorManager): self {
         $this->colorManager = $colorManager;

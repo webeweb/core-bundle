@@ -63,7 +63,7 @@ class QuoteManager extends AbstractManager {
      * @param string $domain The domain.
      * @return ProviderInterface|null Returns the quote provider.
      */
-    public function getProvider($domain): ?ProviderInterface {
+    public function getProvider(string $domain): ?ProviderInterface {
         foreach ($this->getProviders() as $current) {
             if ($domain === $current->getDomain()) {
                 return $current;

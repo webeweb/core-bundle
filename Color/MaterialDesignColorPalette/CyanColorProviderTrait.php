@@ -39,6 +39,7 @@ trait CyanColorProviderTrait {
      * Set the cyan color provider.
      *
      * @param CyanColorProvider|null $cyanColorProvider The cyan color provider.
+     * @return self Returns this instance.
      */
     protected function setCyanColorProvider(?CyanColorProvider $cyanColorProvider): self {
         $this->cyanColorProvider = $cyanColorProvider;

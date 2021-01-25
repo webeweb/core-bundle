@@ -41,6 +41,7 @@ trait SwiftMailerTrait {
      * Set the swift mailer.
      *
      * @param Swift_Mailer|null $swiftMailer The swift mailer.
+     * @return self Returns this instance.
      */
     protected function setSwiftMailer(?Swift_Mailer $swiftMailer): self {
         $this->swiftMailer = $swiftMailer;

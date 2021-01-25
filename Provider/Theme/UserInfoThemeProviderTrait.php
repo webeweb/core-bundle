@@ -39,6 +39,7 @@ trait UserInfoThemeProviderTrait {
      * Set the user info theme provider.
      *
      * @param UserInfoThemeProviderInterface|null $userInfoThemeProvider The user info theme provider.
+     * @return self Returns this instance.
      */
     protected function setUserInfoThemeProvider(?UserInfoThemeProviderInterface $userInfoThemeProvider): self {
         $this->userInfoThemeProvider = $userInfoThemeProvider;

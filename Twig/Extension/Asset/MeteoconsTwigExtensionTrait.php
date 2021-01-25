@@ -39,6 +39,7 @@ trait MeteoconsTwigExtensionTrait {
      * Set the Meteocons Twig extension.
      *
      * @param MeteoconsTwigExtension|null $meteoconsTwigExtension The Meteocons Twig extension.
+     * @return self Returns this instance.
      */
     protected function setMeteoconsTwigExtension(?MeteoconsTwigExtension $meteoconsTwigExtension): self {
         $this->meteoconsTwigExtension = $meteoconsTwigExtension;

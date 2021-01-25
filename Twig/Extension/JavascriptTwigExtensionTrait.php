@@ -39,6 +39,7 @@ trait JavascriptTwigExtensionTrait {
      * Set the javascript Twig extension.
      *
      * @param JavascriptTwigExtension|null $javascriptTwigExtension The javascript Twig extension.
+     * @return self Returns this instance.
      */
     protected function setJavascriptTwigExtension(?JavascriptTwigExtension $javascriptTwigExtension): ?self {
         $this->javascriptTwigExtension = $javascriptTwigExtension;

@@ -48,7 +48,7 @@ abstract class AbstractController extends BaseController {
      * @return BaseEvent|null Returns the event in case of success, null otherwise.
      */
     protected function dispatchEvent(string $eventName, BaseEvent $event): ?BaseEvent {
-        $this->getLogger()->debug(sprintf('A controller dispatch an event with name "%s"', $eventName, ["_controller" => get_class($this), "_event" => get_class($event)]));
+        $this->getLogger()->debug(sprintf('A controller dispatch an event with name "%s"', $eventName), ["_controller" => get_class($this), "_event" => get_class($event)]);
         return EventDispatcherHelper::dispatch($this->getEventDispatcher(), $eventName, $event);
     }
 

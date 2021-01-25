@@ -39,6 +39,7 @@ trait MaterialDesignColorPaletteTwigExtensionTrait {
      * Set the Material Design color palette Twig extension.
      *
      * @param MaterialDesignColorPaletteTwigExtension|null $materialDesignColorPaletteTwigExtension The Material Design color palette Twig extension.
+     * @return self Returns this instance.
      */
     protected function setMaterialDesignColorPaletteTwigExtension(?MaterialDesignColorPaletteTwigExtension $materialDesignColorPaletteTwigExtension): self {
         $this->materialDesignColorPaletteTwigExtension = $materialDesignColorPaletteTwigExtension;

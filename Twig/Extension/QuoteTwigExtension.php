@@ -129,6 +129,6 @@ class QuoteTwigExtension extends AbstractTwigExtension {
             return null;
         }
 
-        return ArrayHelper::get($provider->getQuotes(), (new DateTime())->format("m.d"), null);
+        return ArrayHelper::get($provider->getQuotes(), (new DateTime())->format("m.d"));
     }
 }

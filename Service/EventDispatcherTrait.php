@@ -41,6 +41,7 @@ trait EventDispatcherTrait {
      * Set the event dispatcher.
      *
      * @param EventDispatcherInterface|null $eventDispatcher The event dispatcher.
+     * @return self Returns this instance.
      */
     protected function setEventDispatcher(?EventDispatcherInterface $eventDispatcher): self {
         $this->eventDispatcher = $eventDispatcher;

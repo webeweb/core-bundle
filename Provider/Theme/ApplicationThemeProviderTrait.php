@@ -39,6 +39,7 @@ trait ApplicationThemeProviderTrait {
      * Set the application theme provider.
      *
      * @param ApplicationThemeProviderInterface|null $applicationThemeProvider The application theme provider.
+     * @return self Returns this instance.
      */
     protected function setApplicationThemeProvider(?ApplicationThemeProviderInterface $applicationThemeProvider): self {
         $this->applicationThemeProvider = $applicationThemeProvider;

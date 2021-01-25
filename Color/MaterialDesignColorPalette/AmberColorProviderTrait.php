@@ -39,6 +39,7 @@ trait AmberColorProviderTrait {
      * Set the amber color provider.
      *
      * @param AmberColorProvider|null $amberColorProvider The amber color provider.
+     * @return self Returns this instance.
      */
     protected function setAmberColorProvider(AmberColorProvider $amberColorProvider): self {
         $this->amberColorProvider = $amberColorProvider;

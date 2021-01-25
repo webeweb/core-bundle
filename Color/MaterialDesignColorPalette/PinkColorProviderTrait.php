@@ -39,6 +39,7 @@ trait PinkColorProviderTrait {
      * Set the pink color provider.
      *
      * @param PinkColorProvider|null $pinkColorProvider The pink color provider.
+     * @return self Returns this instance.
      */
     protected function setPinkColorProvider(?PinkColorProvider $pinkColorProvider): self {
         $this->pinkColorProvider = $pinkColorProvider;

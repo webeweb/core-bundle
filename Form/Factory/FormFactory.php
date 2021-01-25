@@ -34,7 +34,7 @@ class FormFactory {
      */
     protected static function getChoiceLabelClosure(array $options): Closure {
 
-        $options["translator"] = ArrayHelper::get($options, "translator", null);
+        $options["translator"] = ArrayHelper::get($options, "translator");
 
         return function($entity) use ($options): string {
             return FormRenderer::renderOption($entity, $options["translator"]);

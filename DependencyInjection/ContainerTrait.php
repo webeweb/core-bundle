@@ -41,6 +41,7 @@ trait ContainerTrait {
      * Set the container.
      *
      * @param Container|null $container The container.
+     * @return self Returns this instance.
      */
     protected function setContainer(?Container $container): self {
         $this->container = $container;

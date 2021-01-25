@@ -41,6 +41,7 @@ trait ObjectManagerTrait {
      * Set the object manager.
      *
      * @param ObjectManager|null $objectManager The object manager.
+     * @return self Returns this instance.
      */
     protected function setObjectManager(?ObjectManager $objectManager): self {
         $this->objectManager = $objectManager;

@@ -70,7 +70,7 @@ class SyntaxHighlighterStringsProvider implements ProviderInterface {
      * @param string $id The id.
      * @return string Returns the translation.
      */
-    protected function translate($id): string {
+    protected function translate(string $id): string {
         return $this->getTranslator()->trans($id, [], TranslationInterface::TRANSLATION_DOMAIN);
     }
 }

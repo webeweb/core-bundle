@@ -117,7 +117,7 @@ class SyntaxHighlighterConfig {
     /**
      * Set the strip BRs.
      *
-     * @param bool $stripBrs The strip BRs.
+     * @param string|null $stripBrs The strip BRs.
      * @return SyntaxHighlighterConfig Returns this config.
      */
     public function setStripBrs(?string $stripBrs): SyntaxHighlighterConfig {

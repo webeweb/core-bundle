@@ -39,6 +39,7 @@ trait PhantomJSHelperTrait {
      * Set the phantomJS helper.
      *
      * @param PhantomJSHelper|null $phantomJSHelper The phantomJS helper.
+     * @return self Returns this instance.
      */
     protected function setPhantomJSHelper(?PhantomJSHelper $phantomJSHelper): self {
         $this->phantomJSHelper = $phantomJSHelper;

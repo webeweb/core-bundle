@@ -136,7 +136,7 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
         $options["autoUnmask"]         = ArrayHelper::get($options, "autoUnmask", true);
         $options["removeMaskOnSubmit"] = ArrayHelper::get($options, "removeMaskOnSubmit", true);
         if (null !== $defaultMask) {
-            $options["placeholder"] = preg_replace("/[^\ ][.]*/", "_", $defaultMask);
+            $options["placeholder"] = preg_replace("/[^ ][.]*/", "_", $defaultMask);
         }
 
         return $options;

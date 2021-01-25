@@ -41,6 +41,7 @@ trait TwigEnvironmentTrait {
      * Set the Twig environment.
      *
      * @param Environment|null $twigEnvironment The Twig environment.
+     * @return self Returns this instance.
      */
     protected function setTwigEnvironment(?Environment $twigEnvironment): self {
         $this->twigEnvironment = $twigEnvironment;

@@ -41,6 +41,7 @@ trait RouterTrait {
      * Set the router.
      *
      * @param RouterInterface|null $router The router.
+     * @return self Returns this instance.
      */
     protected function setRouter(?RouterInterface $router): self {
         $this->router = $router;

@@ -39,6 +39,7 @@ trait FooterThemeProviderTrait {
      * Set the footer theme provider.
      *
      * @param FooterThemeProviderInterface|null $footerThemeProvider The footer theme provider.
+     * @return self Returns this instance.
      */
     protected function setFooterThemeProvider(?FooterThemeProviderInterface $footerThemeProvider): self {
         $this->footerThemeProvider = $footerThemeProvider;

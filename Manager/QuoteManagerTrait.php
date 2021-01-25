@@ -39,6 +39,7 @@ trait QuoteManagerTrait {
      * Set the quote manager.
      *
      * @param QuoteManager|null $quoteManager The quote manager.
+     * @return self Returns this instance.
      */
     protected function setQuoteManager(?QuoteManager $quoteManager): self {
         $this->quoteManager = $quoteManager;

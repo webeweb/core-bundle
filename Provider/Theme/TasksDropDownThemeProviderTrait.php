@@ -39,6 +39,7 @@ trait TasksDropDownThemeProviderTrait {
      * Set the tasks drop down theme provider.
      *
      * @param TasksDropDownThemeProviderInterface|null $tasksDropDownThemeProvider The tasks drop down theme provider.
+     * @return self Returns this instance.
      */
     protected function setTasksDropDownThemeProvider(?TasksDropDownThemeProviderInterface $tasksDropDownThemeProvider): self {
         $this->tasksDropDownThemeProvider = $tasksDropDownThemeProvider;

@@ -39,6 +39,7 @@ trait ToastEventListenerTrait {
      * Set the toast event listener.
      *
      * @param ToastEventListener|null $toastEventListener The toast event listener.
+     * @return self Returns this instance.
      */
     protected function setToastEventListener(?ToastEventListener $toastEventListener ): self {
         $this->toastEventListener = $toastEventListener;

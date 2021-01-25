@@ -41,6 +41,7 @@ trait SessionTrait {
      * Set the session.
      *
      * @param SessionInterface|null $session The session.
+     * @return self Returns this instance.
      */
     protected function setSession(?SessionInterface $session): self {
         $this->session = $session;

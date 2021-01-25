@@ -39,6 +39,7 @@ trait QuoteTwigExtensionTrait {
      * Set the quote Twig extension.
      *
      * @param QuoteTwigExtension|null $quoteTwigExtension The quote Twig extension.
+     * @return self Returns this instance.
      */
     protected function setQuoteTwigExtension(?QuoteTwigExtension $quoteTwigExtension): self {
         $this->stylesheetTwigExtension = $quoteTwigExtension;

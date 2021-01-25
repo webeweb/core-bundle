@@ -39,6 +39,7 @@ trait StylesheetTwigExtensionTrait {
      * Set the stylesheet Twig extension.
      *
      * @param StylesheetTwigExtension|null $stylesheetTwigExtension The stylesheet Twig extension.
+     * @return self Returns this instance.
      */
     protected function setStylesheetTwigExtension(?StylesheetTwigExtension $stylesheetTwigExtension): self {
         $this->stylesheetTwigExtension = $stylesheetTwigExtension;

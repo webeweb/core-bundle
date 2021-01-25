@@ -39,6 +39,7 @@ trait MaterialDesignIconicFontTwigExtensionTrait {
      * Set the Material Design Iconic font Twig extension.
      *
      * @param MaterialDesignIconicFontTwigExtension|null $materialDesignIconicFontTwigExtension The Material Design Iconic font Twig extension.
+     * @return self Returns this instance.
      */
     protected function setMaterialDesignIconicFontTwigExtension(?MaterialDesignIconicFontTwigExtension $materialDesignIconicFontTwigExtension): self {
         $this->materialDesignIconicFontTwigExtension = $materialDesignIconicFontTwigExtension;

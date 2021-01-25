@@ -40,7 +40,7 @@ class SecurityEventListener {
      * Constructor.
      *
      * @param TranslatorInterface $translator The translator.
-     * @param UserInterface $user The user.
+     * @param UserInterface|null $user The user.
      */
     public function __construct(TranslatorInterface $translator, UserInterface $user = null) {
         $this->setTranslator($translator);

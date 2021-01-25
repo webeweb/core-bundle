@@ -39,6 +39,7 @@ trait NotificationsDropDownThemeProviderTrait {
      * Set the notifications drop down theme provider.
      *
      * @param NotificationsDropDownThemeProviderInterface|null $notificationsDropDownThemeProvider The notifications drop down theme provider.
+     * @return self Returns this instance.
      */
     protected function setNotificationsDropDownThemeProvider(?NotificationsDropDownThemeProviderInterface $notificationsDropDownThemeProvider): self {
         $this->notificationsDropDownThemeProvider = $notificationsDropDownThemeProvider;

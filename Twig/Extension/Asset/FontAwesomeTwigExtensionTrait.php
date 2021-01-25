@@ -39,6 +39,7 @@ trait FontAwesomeTwigExtensionTrait {
      * Set the Font Awesome Twig extension.
      *
      * @param FontAwesomeTwigExtension|null $fontAwesomeTwigExtension The Font Awesome Twig extension.
+     * @return self Returns this instance.
      */
     protected function setFontAwesomeTwigExtension(?FontAwesomeTwigExtension $fontAwesomeTwigExtension): self {
         $this->fontAwesomeTwigExtension = $fontAwesomeTwigExtension;

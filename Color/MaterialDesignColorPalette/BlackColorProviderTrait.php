@@ -39,6 +39,7 @@ trait BlackColorProviderTrait {
      * Set the black color provider.
      *
      * @param BlackColorProvider|null $blackColorProvider The black color provider.
+     * @return self Returns this instance.
      */
     protected function setBlackColorProvider(?BlackColorProvider $blackColorProvider): self {
         $this->blackColorProvider = $blackColorProvider;

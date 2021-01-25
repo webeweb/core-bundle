@@ -39,6 +39,7 @@ trait RendererTwigExtensionTrait {
      * Set the renderer Twig extension.
      *
      * @param RendererTwigExtension|null $rendererTwigExtension The renderer Twig extension.
+     * @return self Returns this instance.
      */
     protected function setRendererTwigExtension(?RendererTwigExtension $rendererTwigExtension): self {
         $this->rendererTwigExtension = $rendererTwigExtension;

@@ -41,6 +41,7 @@ trait TokenStorageTrait {
      * Set the token storage.
      *
      * @param TokenStorageInterface|null $tokenStorage The token storage.
+     * @return self Returns this instance.
      */
     protected function setTokenStorage(?TokenStorageInterface $tokenStorage): self {
         $this->tokenStorage = $tokenStorage;

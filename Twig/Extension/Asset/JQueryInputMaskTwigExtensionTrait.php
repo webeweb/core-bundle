@@ -39,6 +39,7 @@ trait JQueryInputMaskTwigExtensionTrait {
      * Set the jQuery InputMask Twig extension.
      *
      * @param JQueryInputMaskTwigExtension|null $jQueryInputMaskTwigExtension The jQuery InputMask Twig extension.
+     * @return self Returns this instance.
      */
     protected function setJQueryInputMaskTwigExtension(?JQueryInputMaskTwigExtension $jQueryInputMaskTwigExtension): self {
         $this->jQueryInputMaskTwigExtension = $jQueryInputMaskTwigExtension;

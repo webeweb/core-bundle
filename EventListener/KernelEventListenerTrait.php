@@ -39,6 +39,7 @@ trait KernelEventListenerTrait {
      * Set the kernel event listener.
      *
      * @param KernelEventListener|null $kernelEventListener The kernel event listener.
+     * @return self Returns this instance.
      */
     protected function setKernelEventListener(?KernelEventListener $kernelEventListener): self {
         $this->kernelEventListener = $kernelEventListener;

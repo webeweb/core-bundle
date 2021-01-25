@@ -39,6 +39,7 @@ trait StringRedirectUrlTrait {
      * Set the redirect URL.
      *
      * @param string|null $redirectUrl The redirect URL.
+     * @return self Returns this instance.
      */
     public function setRedirectUrl(?string $redirectUrl): self {
         $this->redirectUrl = $redirectUrl;

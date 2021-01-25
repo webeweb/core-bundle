@@ -39,6 +39,7 @@ trait StringEnvironmentTrait {
      * Set the environment.
      *
      * @param string|null $environment The environment.
+     * @return self Returns this instance.
      */
     public function setEnvironment(?string $environment): self {
         $this->environment = $environment;

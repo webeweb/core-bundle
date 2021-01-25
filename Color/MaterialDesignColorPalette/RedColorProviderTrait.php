@@ -39,6 +39,7 @@ trait RedColorProviderTrait {
      * Set the red color provider.
      *
      * @param RedColorProvider|null $redColorProvider The red color provider.
+     * @return self Returns this instance.
      */
     protected function setRedColorProvider(?RedColorProvider $redColorProvider): self {
         $this->redColorProvider = $redColorProvider;

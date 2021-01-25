@@ -39,6 +39,7 @@ trait LimeColorProviderTrait {
      * Set the lime color provider.
      *
      * @param LimeColorProvider|null $limeColorProvider The lime color provider.
+     * @return self Returns this instance.
      */
     protected function setLimeColorProvider(?LimeColorProvider $limeColorProvider): self {
         $this->limeColorProvider = $limeColorProvider;

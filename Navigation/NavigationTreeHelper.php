@@ -34,7 +34,6 @@ class NavigationTreeHelper {
 
         $result = false;
 
-        /** @var AbstractNavigationNode $n */
         foreach ($nodes as $n) {
 
             if (true === self::nodeMatch($n, $request)) {
