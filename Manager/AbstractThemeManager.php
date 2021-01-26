@@ -111,10 +111,10 @@ abstract class AbstractThemeManager extends AbstractManager {
      * Set a provider.
      *
      * @param string $name The name.
-     * @param ThemeProviderInterface $provider The provider.
+     * @param ThemeProviderInterface|null $provider The provider.
      * @return ManagerInterface Returns this manager.
      */
-    protected function setProvider(string $name, ThemeProviderInterface $provider): ManagerInterface {
+    protected function setProvider(string $name, ?ThemeProviderInterface $provider): ManagerInterface {
 
         $v = $this->getIndex()[$name];
         if (null !== $v) {
