@@ -37,7 +37,7 @@ If you like this package, pay me a beer (or a coffee)
 ## Compatibility
 
 [![PHP](https://img.shields.io/packagist/php-v/webeweb/core-bundle.svg?style=flat-square)](http://php.net)
-[![Symfony](https://img.shields.io/badge/symfony-4.0-brightness.svg?style=flat-square)](https://symfony.com)
+[![Symfony](https://img.shields.io/badge/symfony-%5E3.4%7C%5E4.0-brightness.svg?style=flat-square)](https://symfony.com)
 
 ## Installation
 
