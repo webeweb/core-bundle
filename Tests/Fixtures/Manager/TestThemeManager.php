@@ -51,7 +51,7 @@ class TestThemeManager extends AbstractThemeManager {
     /**
      * {@inheritDoc}
      */
-    public function setProvider(string $name, ThemeProviderInterface $provider): ManagerInterface {
+    public function setProvider(string $name, ?ThemeProviderInterface $provider): ManagerInterface {
         return parent::setProvider($name, $provider);
     }
 }
