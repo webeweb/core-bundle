@@ -15,6 +15,16 @@ CHANGELOG
 > - PHP 5.6
 > - PHP 7.0
 
+> IMPORTANT NOTICE: The following deprecated classes has been removed
+> - WBW\Bundle\CoreBundle\Event\NotificationEvents
+> - WBW\Bundle\CoreBundle\Helper\RepositoryHelper
+> - WBW\Bundle\CoreBundle\Model\EnvironmentTrait
+> - WBW\Bundle\CoreBundle\Model\OriginUrlTrait
+> - WBW\Bundle\CoreBundle\Model\RedirectUrlTrait
+> - WBW\Bundle\CoreBundle\Renderer\DateTimeRenderer
+> - WBW\Bundle\CoreBundle\Tests\Form\Type\AbstractFormTypeTest
+> - WBW\Bundle\CoreBundle\CoreInterface
+
 - Add PHP 8.0 support
 - Improve PHP doc
 - Improve unit tests
@@ -78,7 +88,7 @@ CHANGELOG
 
 ### [2.13.0](https://github.com/webeweb/core-bundle/tree/v2.13.0) (2019-10-09)
 
-> IMPORTANT NOTICE: The following classes has been removed
+> IMPORTANT NOTICE: The following deprecated classes has been removed
 > - WBW\Bundle\CoreBundle\Navigation\NavigationItem
 
 > IMPORTANT NOTICE: The following classes has been deprecated
@@ -230,7 +240,7 @@ CHANGELOG
 
 ### [2.0.0](https://github.com/webeweb/core-bundle/tree/v2.0.0) (2019-05-11)
 
-> IMPORTANT NOTICE: The following classes has been removed
+> IMPORTANT NOTICE: The following deprecated classes has been removed
 > - WBW\Bundle\CoreBundle\Color\AmberColorProvider
 > - WBW\Bundle\CoreBundle\Color\AmberColorProviderTrait
 > - WBW\Bundle\CoreBundle\Color\BlueColorProvider
