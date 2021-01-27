@@ -13,8 +13,8 @@ namespace WBW\Bundle\CoreBundle\Tests\EventListener;
 
 use Exception;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
+use WBW\Bundle\CoreBundle\Component\HttpKernel\Event\BaseExceptionEvent;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
 
@@ -39,7 +39,7 @@ class KernelEventListenerWebTest extends AbstractWebTestCase {
         /** @var KernelEventListener $em */
         $obj = static::$kernel->getContainer()->get(KernelEventListener::SERVICE_NAME);
 
-        $arg = new GetResponseForExceptionEvent(static::$kernel, new Request(), HttpKernelInterface::MASTER_REQUEST, $ex);
+        $arg = new BaseExceptionEvent(static::$kernel, new Request(), HttpKernelInterface::MASTER_REQUEST, $ex);
         $this->assertSame($arg, $obj->onKernelException($arg));
         $this->assertNull($arg->getResponse());
     }
