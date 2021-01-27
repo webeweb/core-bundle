@@ -11,13 +11,15 @@
 
 namespace WBW\Bundle\CoreBundle\Provider;
 
+use Symfony\Component\HttpKernel\Bundle\BundleInterface;
+
 /**
  * Assets provider interface.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Provider
  */
-interface AssetsProviderInterface extends ProviderInterface {
+interface AssetsProviderInterface extends ProviderInterface, BundleInterface {
 
     /**
      * Assets relative directory.
