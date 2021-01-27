@@ -11,13 +11,15 @@
 
 namespace WBW\Bundle\CoreBundle\Provider;
 
+use Symfony\Component\HttpKernel\Bundle\BundleInterface;
+
 /**
  * Skeleton provider interface.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Provider
  */
-interface SkeletonProviderInterface extends ProviderInterface {
+interface SkeletonProviderInterface extends ProviderInterface, BundleInterface {
 
     /**
      * Skeleton relative directory.
