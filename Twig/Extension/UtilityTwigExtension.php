@@ -15,7 +15,7 @@ use DateTime;
 use Exception;
 use Twig\TwigFilter;
 use Twig\TwigFunction;
-use WBW\Bundle\CoreBundle\Renderer\DateTimeRenderer;
+use WBW\Library\Core\Renderer\DateTimeRenderer;
 
 /**
  * Utility Twig extension.

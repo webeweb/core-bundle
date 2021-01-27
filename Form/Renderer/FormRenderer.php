@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Form\Renderer;
 
-use Symfony\Component\Translation\TranslatorInterface;
+use WBW\Bundle\CoreBundle\Component\Translation\BaseTranslatorInterface;
 use WBW\Bundle\CoreBundle\Entity\ChoiceLabelInterface;
 use WBW\Bundle\CoreBundle\Entity\TranslatedChoiceLabelInterface;
 use WBW\Library\Core\Sorter\AlphabeticalTreeNodeHelper;
@@ -29,10 +29,10 @@ class FormRenderer {
      * Render an option.
      *
      * @param mixed $option The option.
-     * @param TranslatorInterface|null $translator The translator service.
+     * @param BaseTranslatorInterface|null $translator The translator service.
      * @return string Returns the rendered option.
      */
-    public static function renderOption($option, TranslatorInterface $translator = null): string {
+    public static function renderOption($option, BaseTranslatorInterface $translator = null): string {
 
         if (null === $option) {
             return null !== $translator ? $translator->trans("label.empty_selection") : "Empty selection";

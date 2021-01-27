@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Service;
 
-use Symfony\Component\Translation\TranslatorInterface;
+use WBW\Bundle\CoreBundle\Component\Translation\BaseTranslatorInterface;
 
 /**
  * Translator trait.
@@ -24,26 +24,26 @@ trait TranslatorTrait {
     /**
      * Translator.
      *
-     * @var TranslatorInterface|null
+     * @var BaseTranslatorInterface|null
      */
     private $translator;
 
     /**
      * Get the translator.
      *
-     * @return TranslatorInterface|null Returns the translator.
+     * @return BaseTranslatorInterface|null Returns the translator.
      */
-    public function getTranslator(): ?TranslatorInterface {
+    public function getTranslator(): ?BaseTranslatorInterface {
         return $this->translator;
     }
 
     /**
      * Set the translator.
      *
-     * @param TranslatorInterface|null $translator The translator.
+     * @param BaseTranslatorInterface|null $translator The translator.
      * @return self Returns this instance.
      */
-    protected function setTranslator(TranslatorInterface $translator): self {
+    protected function setTranslator(BaseTranslatorInterface $translator): self {
         $this->translator = $translator;
         return $this;
     }

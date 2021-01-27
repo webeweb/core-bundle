@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Entity;
 
-use Symfony\Component\Translation\TranslatorInterface;
+use WBW\Bundle\CoreBundle\Component\Translation\BaseTranslatorInterface;
 
 /**
  * Translated choice renderer.
@@ -24,8 +24,8 @@ interface TranslatedChoiceLabelInterface {
     /**
      * Get the translated choice label.
      *
-     * @param TranslatorInterface|null $translator The translator service.
+     * @param BaseTranslatorInterface|null $translator The translator service.
      * @return string|null Returns the translated choice label.
      */
-    public function getTranslatedChoiceLabel(?TranslatorInterface $translator): ?string;
+    public function getTranslatedChoiceLabel(?BaseTranslatorInterface $translator): ?string;
 }

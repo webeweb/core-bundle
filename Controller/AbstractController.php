@@ -17,8 +17,8 @@ use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Security\Core\User\User;
-use Symfony\Component\Translation\TranslatorInterface;
-use WBW\Bundle\CoreBundle\Component\BaseEvent;
+use WBW\Bundle\CoreBundle\Component\EventDispatcher\BaseEvent;
+use WBW\Bundle\CoreBundle\Component\Translation\BaseTranslatorInterface;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\Event\ToastEvent;
 use WBW\Bundle\CoreBundle\EventDispatcher\EventDispatcherHelper;
@@ -107,16 +107,6 @@ abstract class AbstractController extends BaseController {
     }
 
     /**
-     * Get the repository report helper.
-     *
-     * @return RepositoryHelper|null Returns the repository helper in case of success, null otherwise.
-     * @deprecated since 2.15.0, use {@see WBW\Bundle\CoreBundle\Controller\AbstractController::getRepositoryHelper()} instead.
-     */
-    protected function getRepositoryReportHelper(): ?RepositoryReportHelper {
-        return $this->get(RepositoryReportHelper::SERVICE_NAME);
-    }
-
-    /**
      * Get the router.
      *
      * @return RouterInterface|null Returns the router in case of success, null otherwise.
@@ -137,9 +127,9 @@ abstract class AbstractController extends BaseController {
     /**
      * Get the translator.
      *
-     * @return TranslatorInterface|null Returns the translator in case of success, null otherwise.
+     * @return BaseTranslatorInterface|null Returns the translator in case of success, null otherwise.
      */
-    protected function getTranslator(): ?TranslatorInterface {
+    protected function getTranslator(): ?BaseTranslatorInterface {
         return $this->get("translator");
     }
 

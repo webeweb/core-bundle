@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Provider\Asset;
 
-use Symfony\Component\Translation\TranslatorInterface;
 use WBW\Bundle\CoreBundle\Asset\SyntaxHighlighterStrings;
+use WBW\Bundle\CoreBundle\Component\Translation\BaseTranslatorInterface;
 use WBW\Bundle\CoreBundle\Provider\ProviderInterface;
 use WBW\Bundle\CoreBundle\Service\TranslatorTrait;
 use WBW\Bundle\CoreBundle\Translation\TranslationInterface;
@@ -37,9 +37,9 @@ class SyntaxHighlighterStringsProvider implements ProviderInterface {
     /**
      * Constructor.
      *
-     * @param TranslatorInterface $translator The translator.
+     * @param BaseTranslatorInterface $translator The translator.
      */
-    public function __construct(TranslatorInterface $translator) {
+    public function __construct(BaseTranslatorInterface $translator) {
         $this->setTranslator($translator);
     }
 

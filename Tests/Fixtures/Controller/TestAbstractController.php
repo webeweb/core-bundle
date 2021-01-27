@@ -16,7 +16,7 @@ use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\RouterInterface;
-use Symfony\Component\Translation\TranslatorInterface;
+use WBW\Bundle\CoreBundle\Component\Translation\BaseTranslatorInterface;
 use WBW\Bundle\CoreBundle\Controller\AbstractController;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\Event\ToastEvent;
@@ -80,13 +80,6 @@ class TestAbstractController extends AbstractController {
     /**
      * {@inheritDoc}
      */
-    public function getRepositoryReportHelper(): ?RepositoryReportHelper {
-        return parent::getRepositoryReportHelper();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function getRouter(): ?RouterInterface {
         return parent::getRouter();
     }
@@ -101,7 +94,7 @@ class TestAbstractController extends AbstractController {
     /**
      * {@inheritDoc}
      */
-    public function getTranslator(): ?TranslatorInterface {
+    public function getTranslator(): ?BaseTranslatorInterface {
         return parent::getTranslator();
     }
 

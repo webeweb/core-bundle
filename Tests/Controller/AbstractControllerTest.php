@@ -18,13 +18,12 @@ use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
-use Symfony\Component\Translation\TranslatorInterface;
+use WBW\Bundle\CoreBundle\Component\Translation\BaseTranslatorInterface;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\Event\ToastEvent;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
 use WBW\Bundle\CoreBundle\Helper\FormHelper;
-use WBW\Bundle\CoreBundle\Helper\RepositoryReportHelper;
 use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
 use WBW\Bundle\CoreBundle\Repository\RepositoryHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
@@ -82,14 +81,10 @@ class AbstractControllerTest extends AbstractTestCase {
         // Set a Repository helper mock.
         $this->repositoryHelper = $this->getMockBuilder(RepositoryHelper::class)->disableOriginalConstructor()->getMock();
 
-        // Set a Repository report helper mock.
-        $this->repositoryReportHelper = $this->getMockBuilder(RepositoryReportHelper::class)->disableOriginalConstructor()->getMock();
-
         // Set the Container builder mock.
         $this->containerBuilder->set(FormHelper::SERVICE_NAME, $this->formHelper);
         $this->containerBuilder->set(KernelEventListener::SERVICE_NAME, $this->kernelEventListener);
         $this->containerBuilder->set(RepositoryHelper::SERVICE_NAME, $this->repositoryHelper);
-        $this->containerBuilder->set(RepositoryReportHelper::SERVICE_NAME, $this->repositoryReportHelper);
     }
 
     /**
@@ -183,21 +178,6 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getRepositoryReportHelper() method.
-     *
-     * @return void
-     */
-    public function testGetRepositoryReportHelper(): void {
-
-        $obj = new TestAbstractController();
-        $obj->setContainer($this->containerBuilder);
-
-        $res = $obj->getRepositoryReportHelper();
-        $this->assertInstanceOf(RepositoryHelper::class, $res);
-        $this->assertSame($this->repositoryReportHelper, $res);
-    }
-
-    /**
      * Tests the getRouter() method.
      *
      * @return void
@@ -238,7 +218,7 @@ class AbstractControllerTest extends AbstractTestCase {
         $obj->setContainer($this->containerBuilder);
 
         $res = $obj->getTranslator();
-        $this->assertInstanceOf(TranslatorInterface::class, $res);
+        $this->assertInstanceOf(BaseTranslatorInterface::class, $res);
         $this->assertSame($this->translator, $res);
     }
 

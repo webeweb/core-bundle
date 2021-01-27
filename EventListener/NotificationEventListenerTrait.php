@@ -41,7 +41,7 @@ trait NotificationEventListenerTrait {
      * @param NotificationEventListener|null $notificationEventListener The notification event listener.
      * @return self Returns this instance.
      */
-    protected function setNotificationEventListener(?NotificationEventListener $notificationEventListener ): self {
+    protected function setNotificationEventListener(?NotificationEventListener $notificationEventListener): self {
         $this->notificationEventListener = $notificationEventListener;
         return $this;
     }
