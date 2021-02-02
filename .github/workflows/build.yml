@@ -17,6 +17,9 @@ jobs:
                     - "7.3"
                     - "7.4"
                     - "8.0"
+                include:
+                    -   php-version:     "7.1"
+                        SYMFONY_VERSION: "3.4.*"
 
         steps:
             -   name: "Checkout"
@@ -32,6 +35,8 @@ jobs:
                 run:  |
                       php --version
                       composer --version
+                      if [ "" == "$SYMFONY_VERSION" ]; then SYMFONY_VERSION=3.4; fi;
+                      COMPOSER_MEMORY_LIMIT=-1 composer require "symfony/symfony:${SYMFONY_VERSION}" --no-update
                       COMPOSER_MEMORY_LIMIT=-1 composer update
 
             -   name: "Application"
