@@ -33,7 +33,7 @@ jobs:
                 run:  |
                       php --version
                       composer --version
-                      if [ "" != "${{ matrix.env }}" ]; then ${{ matrix.symfony-version }}; else SYMFONY_VERSION="4.4.*"; fi;
+                      if [ "" != "${{ matrix.env }}" ]; then ${{ matrix.env }}; else SYMFONY_VERSION="4.4.*"; fi;
                       COMPOSER_MEMORY_LIMIT=-1 composer require "symfony/symfony:${SYMFONY_VERSION}" --no-update
                       COMPOSER_MEMORY_LIMIT=-1 composer update
 
