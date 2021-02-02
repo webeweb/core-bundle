@@ -1,8 +1,8 @@
 core-bundle
 ===========
 
-[![Build Status](https://img.shields.io/scrutinizer/build/g/webeweb/core-bundle/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/webeweb/core-bundle/build-status/master)
-[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/webeweb/core-bundle/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/webeweb/core-bundle/?branch=master)
+[![Build Status](https://img.shields.io/github/workflow/status/webeweb/core-bundle/build?style=flat-square)](https://github.com/webeweb/core-bundle/actions)
+[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/webeweb/core-bundle/master.svg?style=flat-square)](https://coveralls.io/github/webeweb/core-bundle?branch=master)
 [![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/quality/g/webeweb/core-bundle/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/webeweb/core-bundle/?branch=master)
 [![Latest Stable Version](https://img.shields.io/packagist/v/webeweb/core-bundle.svg?style=flat-square)](https://packagist.org/packages/webeweb/core-bundle)
 [![Latest Unstable Version](https://img.shields.io/packagist/vpre/webeweb/core-bundle.svg?style=flat-square)](https://packagist.org/packages/webeweb/core-bundle)
