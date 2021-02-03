@@ -9,7 +9,7 @@ core-bundle
 [![License](https://img.shields.io/packagist/l/webeweb/core-bundle.svg?style=flat-square)](https://packagist.org/packages/webeweb/core-bundle)
 [![composer.lock](https://img.shields.io/badge/.lock-uncommited-important.svg?style=flat-square)](https://packagist.org/packages/webeweb/core-bundle)
 
-Core bundle for Symfony 4 and more.
+Core bundle for Symfony 3.4 and more.
 
 `core-bundle` provides some useful classes to build another bundles. We use it
 into all our bundles and Symfony applications.
