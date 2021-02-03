@@ -1,7 +1,7 @@
 {
     "name": "webeweb/core-bundle",
     "type": "symfony-bundle",
-    "description": "Core bundle for Symfony 4 and more",
+    "description": "Core bundle for Symfony 3.4 and more",
     "keywords": [
         "core",
         "bundle",
