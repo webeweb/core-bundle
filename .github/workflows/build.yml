@@ -111,7 +111,7 @@ jobs:
                       php phpstan.phar --version
 
             -   name: "Analyses"
-                run:  php phpstan.phar analyse . --error-format=github
+                run:  php phpstan.phar analyse . --error-format=github --configuration phpstan.neon
 
     metrics:
         name:    "Metrics"
