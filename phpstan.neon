@@ -1,5 +1,0 @@
-parameters:
-    excludePaths:
-        - "Resources/*"
-        - "Tests/*"
-        - "vendor/*"
