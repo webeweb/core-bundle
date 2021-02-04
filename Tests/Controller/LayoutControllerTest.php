@@ -32,7 +32,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests the Resources/views/email/layout.html.twig template.
+     * Tests the emailAction() method..
      *
      * @return void
      */
@@ -46,7 +46,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests the Resources/views/layout/javascripts.html.twig template.
+     * Tests the javascriptsAction() method..
      *
      * @return void
      */
@@ -60,7 +60,21 @@ class LayoutControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests the Resources/views/layout/stylesheets.html.twig template.
+     * Tests the kernelExceptionAction() method.
+     *
+     * @return void
+     */
+    public function testKernelExceptionAction(): void {
+
+        $client = $this->client;
+
+        $client->request("GET", "/kernel-exception");
+        $this->assertEquals(500, $client->getResponse()->getStatusCode());
+        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
+    }
+
+    /**
+     * Tests the stylesheetsAction() method.
      *
      * @return void
      */

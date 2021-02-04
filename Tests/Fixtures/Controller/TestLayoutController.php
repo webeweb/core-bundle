@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Controller;
 
+use RuntimeException;
 use Symfony\Component\HttpFoundation\Response;
 use WBW\Bundle\CoreBundle\Controller\AbstractController;
 
@@ -38,6 +39,15 @@ class TestLayoutController extends AbstractController {
      */
     public function javascriptsAction(): Response {
         return $this->render("@WBWCore/layout/javascripts.html.twig");
+    }
+
+    /**
+     * Throws an exception.
+     *
+     * @return Response Returns the response.
+     */
+    public function kernelExceptionAction(): Response {
+        throw new RuntimeException();
     }
 
     /**

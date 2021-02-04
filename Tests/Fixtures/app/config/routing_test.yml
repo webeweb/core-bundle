@@ -9,6 +9,11 @@ wbw_core_javascripts:
     defaults: { _controller: "WBW\\Bundle\\CoreBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::javascriptsAction" }
     methods: [ "GET" ]
 
+wbw_core_kernel_exception:
+    path: "/kernel-exception"
+    defaults: { _controller: "WBW\\Bundle\\CoreBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::kernelExceptionAction" }
+    methods: [ "GET" ]
+
 wbw_core_stylesheets:
     path: "/stylesheets"
     defaults: { _controller: "WBW\\Bundle\\CoreBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::stylesheetsAction" }
