@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+### [2.20.1](https://github.com/webeweb/core-bundle/tree/v2.20.1) (2021-02-03)
+
+- Fix Kernel event listener
+- Improve PHP doc
+- Improve unit tests
+
 ### [2.20.0](https://github.com/webeweb/core-bundle/tree/v2.20.0) (2021-01-29)
 
 > IMPORTANT NOTICE: The following Symfony versions are now not supported
