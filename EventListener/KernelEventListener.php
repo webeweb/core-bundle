@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\EventListener;
 
 use Exception;
+use Swift_Message;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -88,13 +89,12 @@ class KernelEventListener {
      *
      * @param BaseExceptionEvent $event The event.
      * @param BadUserRoleException $ex The exception.
-     * @return BaseExceptionEvent Returns the event.
+     * @return void
      */
-    protected function handleBadUserRoleException(BaseExceptionEvent $event, BadUserRoleException $ex): BaseExceptionEvent {
+    protected function handleBadUserRoleException($event, BadUserRoleException $ex): void {
         if (null !== $ex->getRedirectUrl()) {
             $event->setResponse(new RedirectResponse($ex->getRedirectUrl()));
         }
-        return $event;
     }
 
     /**
@@ -102,13 +102,12 @@ class KernelEventListener {
      *
      * @param BaseExceptionEvent $event The event.
      * @param RedirectResponseException $ex The exception.
-     * @return BaseExceptionEvent Returns the event.
+     * @return void
      */
-    protected function handleRedirectResponseException(BaseExceptionEvent $event, RedirectResponseException $ex): BaseExceptionEvent {
+    protected function handleRedirectResponseException($event, RedirectResponseException $ex): void {
         if (null !== $ex->getRedirectUrl()) {
             $event->setResponse(new RedirectResponse($ex->getRedirectUrl()));
         }
-        return $event;
     }
 
     /**
@@ -118,7 +117,7 @@ class KernelEventListener {
      * @param Exception $ex The exception.
      * @return void
      */
-    protected function handleUnexpectedException(BaseExceptionEvent $event, Exception $ex): void {
+    protected function handleUnexpectedException($event, Exception $ex): void {
 
         $mailer = $this->getSwiftMailer();
         if (null === $mailer) {
@@ -131,7 +130,7 @@ class KernelEventListener {
             "exception" => $ex,
         ]);
 
-        $message = new \Swift_Message();
+        $message = new Swift_Message();
         $message->setBody($body, "text/html");
     }
 
