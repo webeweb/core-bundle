@@ -32,8 +32,12 @@ class RedirectResponseException extends AbstractException {
      * @param string|null $originUrl The route.
      */
     public function __construct(string $redirectUrl, ?string $originUrl) {
-        $format = 'You\'re not allowed to access to "%s"';
-        parent::__construct(sprintf($format, $originUrl), 403);
+
+        $format  = 'You\'re not allowed to access to "%s"';
+        $message = sprintf($format, $originUrl);
+
+        parent::__construct($message, 403);
+
         $this->setOriginUrl($originUrl);
         $this->setRedirectUrl($redirectUrl);
     }
