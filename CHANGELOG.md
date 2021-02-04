@@ -1,9 +1,13 @@
 CHANGELOG
 =========
 
+### [2.20.2](https://github.com/webeweb/core-bundle/tree/v2.20.2) (2021-02-04)
+
+- Fix Theme manager issues
+
 ### [2.20.1](https://github.com/webeweb/core-bundle/tree/v2.20.1) (2021-02-03)
 
-- Fix Kernel event listener
+- Fix Kernel event listener issues
 - Improve PHP doc
 - Improve unit tests
 
