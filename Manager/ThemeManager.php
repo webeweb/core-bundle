@@ -137,10 +137,10 @@ class ThemeManager extends AbstractThemeManager {
     /**
      * Set the application theme provider.
      *
-     * @param ApplicationThemeProviderInterface|null $provider The application theme provider.
+     * @param ApplicationThemeProviderInterface $provider The application theme provider.
      * @return ManagerInterface Returns this manager.
      */
-    public function setApplicationThemeProvider(?ApplicationThemeProviderInterface $provider): ManagerInterface {
+    public function setApplicationThemeProvider(ApplicationThemeProviderInterface $provider): ManagerInterface {
         $this->setProvider(ApplicationThemeProviderInterface::class, $provider);
         return $this;
     }
@@ -148,10 +148,10 @@ class ThemeManager extends AbstractThemeManager {
     /**
      * Set the breadcrumbs theme provider.
      *
-     * @param BreadcrumbsThemeProviderInterface|null $provider The breadcrumbs theme provider.
+     * @param BreadcrumbsThemeProviderInterface $provider The breadcrumbs theme provider.
      * @return ManagerInterface Returns this manager.
      */
-    public function setBreadcrumbsThemeProvider(?BreadcrumbsThemeProviderInterface $provider): ManagerInterface {
+    public function setBreadcrumbsThemeProvider(BreadcrumbsThemeProviderInterface $provider): ManagerInterface {
         $this->setProvider(BreadcrumbsThemeProviderInterface::class, $provider);
         return $this;
     }
@@ -159,10 +159,10 @@ class ThemeManager extends AbstractThemeManager {
     /**
      * Set the footer theme provider.
      *
-     * @param FooterThemeProviderInterface|null $provider The footer theme provider.
+     * @param FooterThemeProviderInterface $provider The footer theme provider.
      * @return ManagerInterface Returns this manager.
      */
-    public function setFooterThemeProvider(?FooterThemeProviderInterface $provider): ManagerInterface {
+    public function setFooterThemeProvider(FooterThemeProviderInterface $provider): ManagerInterface {
         $this->setProvider(FooterThemeProviderInterface::class, $provider);
         return $this;
     }
@@ -170,10 +170,10 @@ class ThemeManager extends AbstractThemeManager {
     /**
      * Set the hook drop down theme provider.
      *
-     * @param HookDropDownThemeProviderInterface|null $provider The hook drop down theme provider.
+     * @param HookDropDownThemeProviderInterface $provider The hook drop down theme provider.
      * @return ManagerInterface Returns this manager.
      */
-    public function setHookDropDownThemeProvider(?HookDropDownThemeProviderInterface $provider): ManagerInterface {
+    public function setHookDropDownThemeProvider(HookDropDownThemeProviderInterface $provider): ManagerInterface {
         $this->setProvider(HookDropDownThemeProviderInterface::class, $provider);
         return $this;
     }
@@ -181,10 +181,10 @@ class ThemeManager extends AbstractThemeManager {
     /**
      * Set the navigation theme provider.
      *
-     * @param NavigationThemeProviderInterface|null $provider The navigation theme provider.
+     * @param NavigationThemeProviderInterface $provider The navigation theme provider.
      * @return ManagerInterface Returns this manager.
      */
-    public function setNavigationThemeProvider(?NavigationThemeProviderInterface $provider): ManagerInterface {
+    public function setNavigationThemeProvider(NavigationThemeProviderInterface $provider): ManagerInterface {
         $this->setProvider(NavigationThemeProviderInterface::class, $provider);
         return $this;
     }
@@ -192,10 +192,10 @@ class ThemeManager extends AbstractThemeManager {
     /**
      * Set the notifications drop down theme provider.
      *
-     * @param NotificationsDropDownThemeProviderInterface|null $provider The notifications drop down theme provider.
+     * @param NotificationsDropDownThemeProviderInterface $provider The notifications drop down theme provider.
      * @return ManagerInterface Returns this manager.
      */
-    public function setNotificationsDropDownThemeProvider(?NotificationsDropDownThemeProviderInterface $provider): ManagerInterface {
+    public function setNotificationsDropDownThemeProvider(NotificationsDropDownThemeProviderInterface $provider): ManagerInterface {
         $this->setProvider(NotificationsDropDownThemeProviderInterface::class, $provider);
         return $this;
     }
@@ -203,10 +203,10 @@ class ThemeManager extends AbstractThemeManager {
     /**
      * Set the search theme provider.
      *
-     * @param SearchThemeProviderInterface|null $provider The search theme provider.
+     * @param SearchThemeProviderInterface $provider The search theme provider.
      * @return ManagerInterface Returns this manager.
      */
-    public function setSearchThemeProvider(?SearchThemeProviderInterface $provider): ManagerInterface {
+    public function setSearchThemeProvider(SearchThemeProviderInterface $provider): ManagerInterface {
         $this->setProvider(SearchThemeProviderInterface::class, $provider);
         return $this;
     }
@@ -214,10 +214,10 @@ class ThemeManager extends AbstractThemeManager {
     /**
      * Set the tasks drop down theme provider.
      *
-     * @param TasksDropDownThemeProviderInterface|null $provider The tasks drop down theme provider.
+     * @param TasksDropDownThemeProviderInterface $provider The tasks drop down theme provider.
      * @return ManagerInterface Returns this manager.
      */
-    public function setTasksDropDownThemeProvider(?TasksDropDownThemeProviderInterface $provider): ManagerInterface {
+    public function setTasksDropDownThemeProvider(TasksDropDownThemeProviderInterface $provider): ManagerInterface {
         $this->setProvider(TasksDropDownThemeProviderInterface::class, $provider);
         return $this;
     }
@@ -225,10 +225,10 @@ class ThemeManager extends AbstractThemeManager {
     /**
      * Set the user info theme provider.
      *
-     * @param UserInfoThemeProviderInterface|null $provider The user info theme provider.
+     * @param UserInfoThemeProviderInterface $provider The user info theme provider.
      * @return ManagerInterface Returns this manager.
      */
-    public function setUserInfoThemeProvider(?UserInfoThemeProviderInterface $provider): ManagerInterface {
+    public function setUserInfoThemeProvider(UserInfoThemeProviderInterface $provider): ManagerInterface {
         $this->setProvider(UserInfoThemeProviderInterface::class, $provider);
         return $this;
     }
