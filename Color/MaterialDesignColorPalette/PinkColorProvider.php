@@ -33,7 +33,7 @@ class PinkColorProvider extends AbstractColorProvider implements PinkColorProvid
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(self::COLOR_DOMAIN);
+        parent::__construct(static::COLOR_DOMAIN);
     }
 
     /**
@@ -41,18 +41,18 @@ class PinkColorProvider extends AbstractColorProvider implements PinkColorProvid
      */
     public function getColors(): array {
         return [
-            self::COLOR_50   => self::PINK_COLOR_50,
-            self::COLOR_100  => self::PINK_COLOR_100,
-            self::COLOR_200  => self::PINK_COLOR_200,
-            self::COLOR_300  => self::PINK_COLOR_300,
-            self::COLOR_400  => self::PINK_COLOR_400,
-            self::COLOR_500  => self::PINK_COLOR_500,
-            self::COLOR_600  => self::PINK_COLOR_600,
-            self::COLOR_700  => self::PINK_COLOR_700,
-            self::COLOR_A100 => self::PINK_COLOR_A100,
-            self::COLOR_A200 => self::PINK_COLOR_A200,
-            self::COLOR_A400 => self::PINK_COLOR_A400,
-            self::COLOR_A700 => self::PINK_COLOR_A700,
+            static::COLOR_50   => static::PINK_COLOR_50,
+            static::COLOR_100  => static::PINK_COLOR_100,
+            static::COLOR_200  => static::PINK_COLOR_200,
+            static::COLOR_300  => static::PINK_COLOR_300,
+            static::COLOR_400  => static::PINK_COLOR_400,
+            static::COLOR_500  => static::PINK_COLOR_500,
+            static::COLOR_600  => static::PINK_COLOR_600,
+            static::COLOR_700  => static::PINK_COLOR_700,
+            static::COLOR_A100 => static::PINK_COLOR_A100,
+            static::COLOR_A200 => static::PINK_COLOR_A200,
+            static::COLOR_A400 => static::PINK_COLOR_A400,
+            static::COLOR_A700 => static::PINK_COLOR_A700,
         ];
     }
 
@@ -60,6 +60,6 @@ class PinkColorProvider extends AbstractColorProvider implements PinkColorProvid
      *{@inheritDoc}
      */
     public function getName(): string {
-        return self::PINK_COLOR_NAME;
+        return static::PINK_COLOR_NAME;
     }
 }

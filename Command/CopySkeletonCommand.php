@@ -54,7 +54,7 @@ EOT;
         $this
             ->setName("wbw:core:copy-skeleton")
             ->setDescription("Copy skeleton under the app/Resources directory")
-            ->setHelp(self::COMMAND_HELP);
+            ->setHelp(static::COMMAND_HELP);
     }
 
     /**

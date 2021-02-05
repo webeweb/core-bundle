@@ -25,6 +25,6 @@ class InfoNotification extends AbstractNotification {
      * @param string $content The content.
      */
     public function __construct(string $content) {
-        parent::__construct(self::NOTIFICATION_INFO, $content);
+        parent::__construct(static::NOTIFICATION_INFO, $content);
     }
 }

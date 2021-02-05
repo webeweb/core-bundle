@@ -25,6 +25,6 @@ class SuccessNotification extends AbstractNotification {
      * @param string $content The content.
      */
     public function __construct(string $content) {
-        parent::__construct(self::NOTIFICATION_SUCCESS, $content);
+        parent::__construct(static::NOTIFICATION_SUCCESS, $content);
     }
 }

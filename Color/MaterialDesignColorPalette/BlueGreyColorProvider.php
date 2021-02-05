@@ -33,7 +33,7 @@ class BlueGreyColorProvider extends AbstractColorProvider implements BlueGreyCol
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(self::COLOR_DOMAIN);
+        parent::__construct(static::COLOR_DOMAIN);
     }
 
     /**
@@ -41,14 +41,14 @@ class BlueGreyColorProvider extends AbstractColorProvider implements BlueGreyCol
      */
     public function getColors(): array {
         return [
-            self::COLOR_50  => self::BLUE_GREY_COLOR_50,
-            self::COLOR_100 => self::BLUE_GREY_COLOR_100,
-            self::COLOR_200 => self::BLUE_GREY_COLOR_200,
-            self::COLOR_300 => self::BLUE_GREY_COLOR_300,
-            self::COLOR_400 => self::BLUE_GREY_COLOR_400,
-            self::COLOR_500 => self::BLUE_GREY_COLOR_500,
-            self::COLOR_600 => self::BLUE_GREY_COLOR_600,
-            self::COLOR_700 => self::BLUE_GREY_COLOR_700,
+            static::COLOR_50  => static::BLUE_GREY_COLOR_50,
+            static::COLOR_100 => static::BLUE_GREY_COLOR_100,
+            static::COLOR_200 => static::BLUE_GREY_COLOR_200,
+            static::COLOR_300 => static::BLUE_GREY_COLOR_300,
+            static::COLOR_400 => static::BLUE_GREY_COLOR_400,
+            static::COLOR_500 => static::BLUE_GREY_COLOR_500,
+            static::COLOR_600 => static::BLUE_GREY_COLOR_600,
+            static::COLOR_700 => static::BLUE_GREY_COLOR_700,
         ];
     }
 
@@ -56,6 +56,6 @@ class BlueGreyColorProvider extends AbstractColorProvider implements BlueGreyCol
      *{@inheritDoc}
      */
     public function getName(): string {
-        return self::BLUE_GREY_COLOR_NAME;
+        return static::BLUE_GREY_COLOR_NAME;
     }
 }

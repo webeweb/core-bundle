@@ -94,7 +94,7 @@ class FormFactory {
             "choice_label" => static::getChoiceLabelClosure($options),
         ];
 
-        if (true === self::isChoiceValueInterface($class)) {
+        if (true === static::isChoiceValueInterface($class)) {
             $output["choice_value"] = static::getChoiceValueClosure();
         }
 

@@ -36,10 +36,10 @@ class NavigationTreeHelper {
 
         foreach ($nodes as $n) {
 
-            if (true === self::nodeMatch($n, $request)) {
+            if (true === static::nodeMatch($n, $request)) {
                 $current = true;
             } else {
-                $current = self::activeNodes($request, $n->getNodes(), $level + 1);
+                $current = static::activeNodes($request, $n->getNodes(), $level + 1);
             }
 
             if (false === $current) {
@@ -60,7 +60,7 @@ class NavigationTreeHelper {
      * @return void
      */
     public static function activeTree(NavigationTree $tree, Request $request): void {
-        self::activeNodes($request, $tree->getNodes());
+        static::activeNodes($request, $tree->getNodes());
     }
 
     /**
@@ -78,7 +78,7 @@ class NavigationTreeHelper {
         }
 
         foreach ($node->getNodes() as $current) {
-            $breadcrumbs = array_merge($breadcrumbs, self::getBreadcrumbs($current));
+            $breadcrumbs = array_merge($breadcrumbs, static::getBreadcrumbs($current));
         }
 
         return $breadcrumbs;

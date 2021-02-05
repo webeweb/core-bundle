@@ -33,7 +33,7 @@ class TealColorProvider extends AbstractColorProvider implements TealColorProvid
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(self::COLOR_DOMAIN);
+        parent::__construct(static::COLOR_DOMAIN);
     }
 
     /**
@@ -41,18 +41,18 @@ class TealColorProvider extends AbstractColorProvider implements TealColorProvid
      */
     public function getColors(): array {
         return [
-            self::COLOR_50   => self::TEAL_COLOR_50,
-            self::COLOR_100  => self::TEAL_COLOR_100,
-            self::COLOR_200  => self::TEAL_COLOR_200,
-            self::COLOR_300  => self::TEAL_COLOR_300,
-            self::COLOR_400  => self::TEAL_COLOR_400,
-            self::COLOR_500  => self::TEAL_COLOR_500,
-            self::COLOR_600  => self::TEAL_COLOR_600,
-            self::COLOR_700  => self::TEAL_COLOR_700,
-            self::COLOR_A100 => self::TEAL_COLOR_A100,
-            self::COLOR_A200 => self::TEAL_COLOR_A200,
-            self::COLOR_A400 => self::TEAL_COLOR_A400,
-            self::COLOR_A700 => self::TEAL_COLOR_A700,
+            static::COLOR_50   => static::TEAL_COLOR_50,
+            static::COLOR_100  => static::TEAL_COLOR_100,
+            static::COLOR_200  => static::TEAL_COLOR_200,
+            static::COLOR_300  => static::TEAL_COLOR_300,
+            static::COLOR_400  => static::TEAL_COLOR_400,
+            static::COLOR_500  => static::TEAL_COLOR_500,
+            static::COLOR_600  => static::TEAL_COLOR_600,
+            static::COLOR_700  => static::TEAL_COLOR_700,
+            static::COLOR_A100 => static::TEAL_COLOR_A100,
+            static::COLOR_A200 => static::TEAL_COLOR_A200,
+            static::COLOR_A400 => static::TEAL_COLOR_A400,
+            static::COLOR_A700 => static::TEAL_COLOR_A700,
         ];
     }
 
@@ -60,6 +60,6 @@ class TealColorProvider extends AbstractColorProvider implements TealColorProvid
      *{@inheritDoc}
      */
     public function getName(): string {
-        return self::TEAL_COLOR_NAME;
+        return static::TEAL_COLOR_NAME;
     }
 }

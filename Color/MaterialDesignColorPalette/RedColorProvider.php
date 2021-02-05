@@ -33,7 +33,7 @@ class RedColorProvider extends AbstractColorProvider implements RedColorProvider
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(self::COLOR_DOMAIN);
+        parent::__construct(static::COLOR_DOMAIN);
     }
 
     /**
@@ -41,18 +41,18 @@ class RedColorProvider extends AbstractColorProvider implements RedColorProvider
      */
     public function getColors(): array {
         return [
-            self::COLOR_50   => self::RED_COLOR_50,
-            self::COLOR_100  => self::RED_COLOR_100,
-            self::COLOR_200  => self::RED_COLOR_200,
-            self::COLOR_300  => self::RED_COLOR_300,
-            self::COLOR_400  => self::RED_COLOR_400,
-            self::COLOR_500  => self::RED_COLOR_500,
-            self::COLOR_600  => self::RED_COLOR_600,
-            self::COLOR_700  => self::RED_COLOR_700,
-            self::COLOR_A100 => self::RED_COLOR_A100,
-            self::COLOR_A200 => self::RED_COLOR_A200,
-            self::COLOR_A400 => self::RED_COLOR_A400,
-            self::COLOR_A700 => self::RED_COLOR_A700,
+            static::COLOR_50   => static::RED_COLOR_50,
+            static::COLOR_100  => static::RED_COLOR_100,
+            static::COLOR_200  => static::RED_COLOR_200,
+            static::COLOR_300  => static::RED_COLOR_300,
+            static::COLOR_400  => static::RED_COLOR_400,
+            static::COLOR_500  => static::RED_COLOR_500,
+            static::COLOR_600  => static::RED_COLOR_600,
+            static::COLOR_700  => static::RED_COLOR_700,
+            static::COLOR_A100 => static::RED_COLOR_A100,
+            static::COLOR_A200 => static::RED_COLOR_A200,
+            static::COLOR_A400 => static::RED_COLOR_A400,
+            static::COLOR_A700 => static::RED_COLOR_A700,
         ];
     }
 
@@ -60,6 +60,6 @@ class RedColorProvider extends AbstractColorProvider implements RedColorProvider
      *{@inheritDoc}
      */
     public function getName(): string {
-        return self::RED_COLOR_NAME;
+        return static::RED_COLOR_NAME;
     }
 }

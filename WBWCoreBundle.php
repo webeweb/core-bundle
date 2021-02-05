@@ -37,6 +37,6 @@ class WBWCoreBundle extends Bundle implements AssetsProviderInterface {
      * {@inheritDoc}
      */
     public function getAssetsRelativeDirectory(): string {
-        return self::ASSETS_RELATIVE_DIRECTORY;
+        return static::ASSETS_RELATIVE_DIRECTORY;
     }
 }
