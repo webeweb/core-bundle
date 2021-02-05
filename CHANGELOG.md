@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [2.20.3](https://github.com/webeweb/core-bundle/tree/v2.20.3) (2021-02-05)
+
+- Replace Class:: by static::
+
 ### [2.20.2](https://github.com/webeweb/core-bundle/tree/v2.20.2) (2021-02-04)
 
 - Fix Theme manager issues
