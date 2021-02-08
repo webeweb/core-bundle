@@ -39,7 +39,7 @@ class SyntaxHighlighterStringsProvider implements ProviderInterface {
      *
      * @param BaseTranslatorInterface $translator The translator.
      */
-    public function __construct(BaseTranslatorInterface $translator) {
+    public function __construct($translator) {
         $this->setTranslator($translator);
     }
 

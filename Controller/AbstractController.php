@@ -46,7 +46,7 @@ abstract class AbstractController extends BaseController {
      * @param BaseEvent $event The event.
      * @return BaseEvent|null Returns the event in case of success, null otherwise.
      */
-    protected function dispatchEvent(string $eventName, BaseEvent $event): ?BaseEvent {
+    protected function dispatchEvent(string $eventName, $event) {
         $this->getLogger()->debug(sprintf('A controller dispatch an event with name "%s"', $eventName), ["_controller" => get_class($this), "_event" => get_class($event)]);
         return EventDispatcherHelper::dispatch($this->getEventDispatcher(), $eventName, $event);
     }
@@ -128,7 +128,7 @@ abstract class AbstractController extends BaseController {
      *
      * @return BaseTranslatorInterface|null Returns the translator in case of success, null otherwise.
      */
-    protected function getTranslator(): ?BaseTranslatorInterface {
+    protected function getTranslator() {
         return $this->get("translator");
     }
 

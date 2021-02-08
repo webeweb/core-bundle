@@ -31,7 +31,7 @@ class EventDispatcherHelper {
      * @param BaseEvent $event The event.
      * @return BaseEvent|null Returns the event in case of success, null otherwise.
      */
-    public static function dispatch(?EventDispatcherInterface $eventDispatcher, string $eventName, BaseEvent $event): ?BaseEvent {
+    public static function dispatch(?EventDispatcherInterface $eventDispatcher, string $eventName, $event) {
 
         if (null === $eventDispatcher || false === $eventDispatcher->hasListeners($eventName)) {
             return null;

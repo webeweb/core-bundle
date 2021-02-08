@@ -176,12 +176,12 @@ abstract class AbstractTestCase extends TestCase {
      */
     public static function getEventDispatcherDispatchFunction(): Closure {
 
-        $dispatchFunction = function(BaseEvent $event, $eventName) {
+        $dispatchFunction = function($event, $eventName) {
             return $event;
         };
 
         if (Kernel::VERSION_ID < 40300) {
-            $dispatchFunction = function($eventName, BaseEvent $event) {
+            $dispatchFunction = function($eventName, $event) {
                 return $event;
             };
         }

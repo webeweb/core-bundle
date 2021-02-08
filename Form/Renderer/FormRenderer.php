@@ -32,7 +32,7 @@ class FormRenderer {
      * @param BaseTranslatorInterface|null $translator The translator service.
      * @return string Returns the rendered option.
      */
-    public static function renderOption($option, BaseTranslatorInterface $translator = null): string {
+    public static function renderOption($option, $translator = null): string {
 
         if (null === $option) {
             return null !== $translator ? $translator->trans("label.empty_selection") : "Empty selection";

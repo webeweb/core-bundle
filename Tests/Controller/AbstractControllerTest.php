@@ -274,9 +274,12 @@ class AbstractControllerTest extends AbstractTestCase {
         // Set a Notification mock.
         $notification = $this->getMockBuilder(NotificationInterface::class)->getMock();
 
+        // Set a dispatch function.
+        $dispatchFunction = static::getEventDispatcherDispatchFunction();
+
         // Set the Event dispatcher mock.
         $this->eventDispatcher->expects($this->any())->method("hasListeners")->willReturn(true);
-        $this->eventDispatcher->expects($this->any())->method("dispatch")->willReturnCallback(AbstractTestCase::getEventDispatcherDispatchFunction());
+        $this->eventDispatcher->expects($this->any())->method("dispatch")->willReturnCallback($dispatchFunction);
 
         $obj = new TestAbstractController();
         $obj->setContainer($this->containerBuilder);
@@ -319,9 +322,12 @@ class AbstractControllerTest extends AbstractTestCase {
         // Set a Toast mock.
         $toast = $this->getMockBuilder(ToastInterface::class)->getMock();
 
+        // Set a dispatch function.
+        $dispatchFunction = static::getEventDispatcherDispatchFunction();
+
         // Set the Event dispatcher mock.
         $this->eventDispatcher->expects($this->any())->method("hasListeners")->willReturn(true);
-        $this->eventDispatcher->expects($this->any())->method("dispatch")->willReturnCallback(AbstractTestCase::getEventDispatcherDispatchFunction());
+        $this->eventDispatcher->expects($this->any())->method("dispatch")->willReturnCallback($dispatchFunction);
 
         $obj = new TestAbstractController();
         $obj->setContainer($this->containerBuilder);

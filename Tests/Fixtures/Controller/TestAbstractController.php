@@ -94,7 +94,7 @@ class TestAbstractController extends AbstractController {
     /**
      * {@inheritDoc}
      */
-    public function getTranslator(): ?BaseTranslatorInterface {
+    public function getTranslator() {
         return parent::getTranslator();
     }
 
