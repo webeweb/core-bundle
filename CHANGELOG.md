@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [2.20.4](https://github.com/webeweb/core-bundle/tree/v2.20.4) (2021-02-08)
+
+- Fix some class_alias uses
+
 ### [2.20.3](https://github.com/webeweb/core-bundle/tree/v2.20.3) (2021-02-05)
 
 - Replace Class:: by static::
