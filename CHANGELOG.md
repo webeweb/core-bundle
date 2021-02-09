@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [2.20.5](https://github.com/webeweb/core-bundle/tree/v2.20.5) (2021-02-09)
+
+- Improve unit tests
+
 ### [2.20.4](https://github.com/webeweb/core-bundle/tree/v2.20.4) (2021-02-08)
 
 - Fix some class_alias uses
