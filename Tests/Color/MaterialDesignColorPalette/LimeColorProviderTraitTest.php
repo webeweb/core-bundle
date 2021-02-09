@@ -38,16 +38,4 @@ class LimeColorProviderTraitTest extends AbstractTestCase {
         $obj->setLimeColorProvider($limeColorProvider);
         $this->assertSame($limeColorProvider, $obj->getLimeColorProvider());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestLimeColorProviderTrait();
-
-        $this->assertNull($obj->getLimeColorProvider());
-    }
 }

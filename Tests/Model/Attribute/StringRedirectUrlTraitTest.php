@@ -34,16 +34,4 @@ class StringRedirectUrlTraitTest extends AbstractTestCase {
         $obj->setRedirectUrl("redirectUrl");
         $this->assertEquals("redirectUrl", $obj->getRedirectUrl());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestStringRedirectUrlTrait();
-
-        $this->assertNull($obj->getRedirectUrl());
-    }
 }

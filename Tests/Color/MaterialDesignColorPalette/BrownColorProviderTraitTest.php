@@ -38,16 +38,4 @@ class BrownColorProviderTraitTest extends AbstractTestCase {
         $obj->setBrownColorProvider($brownColorProvider);
         $this->assertSame($brownColorProvider, $obj->getBrownColorProvider());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestBrownColorProviderTrait();
-
-        $this->assertNull($obj->getBrownColorProvider());
-    }
 }

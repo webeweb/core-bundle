@@ -38,16 +38,4 @@ class TealColorProviderTraitTest extends AbstractTestCase {
         $obj->setTealColorProvider($tealColorProvider);
         $this->assertSame($tealColorProvider, $obj->getTealColorProvider());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestTealColorProviderTrait();
-
-        $this->assertNull($obj->getTealColorProvider());
-    }
 }

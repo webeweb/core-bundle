@@ -38,16 +38,4 @@ class IndigoColorProviderTraitTest extends AbstractTestCase {
         $obj->setIndigoColorProvider($indigoColorProvider);
         $this->assertSame($indigoColorProvider, $obj->getIndigoColorProvider());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestIndigoColorProviderTrait();
-
-        $this->assertNull($obj->getIndigoColorProvider());
-    }
 }

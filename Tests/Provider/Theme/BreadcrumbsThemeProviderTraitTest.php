@@ -38,16 +38,4 @@ class BreadcrumbsThemeProviderTraitTest extends AbstractTestCase {
         $obj->setBreadcrumbsThemeProvider($breadcrumbsThemeProvider);
         $this->assertSame($breadcrumbsThemeProvider, $obj->getBreadcrumbsThemeProvider());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestBreadcrumbsThemeProviderTrait();
-
-        $this->assertNull($obj->getBreadcrumbsThemeProvider());
-    }
 }

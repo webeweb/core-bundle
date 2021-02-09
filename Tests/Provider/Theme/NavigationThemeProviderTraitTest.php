@@ -38,16 +38,4 @@ class NavigationThemeProviderTraitTest extends AbstractTestCase {
         $obj->setNavigationThemeProvider($navigationThemeProvider);
         $this->assertSame($navigationThemeProvider, $obj->getNavigationThemeProvider());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestNavigationThemeProviderTrait();
-
-        $this->assertNull($obj->getNavigationThemeProvider());
-    }
 }

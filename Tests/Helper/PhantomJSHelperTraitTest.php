@@ -38,16 +38,4 @@ class PhantomJSHelperTraitTest extends AbstractTestCase {
         $obj->setPhantomJSHelper($phantomJSHelper);
         $this->assertSame($phantomJSHelper, $obj->getPhantomJSHelper());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestPhantomJSHelperTrait();
-
-        $this->assertNull($obj->getPhantomJSHelper());
-    }
 }

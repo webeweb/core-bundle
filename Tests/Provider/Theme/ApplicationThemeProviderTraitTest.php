@@ -38,16 +38,4 @@ class ApplicationThemeProviderTraitTest extends AbstractTestCase {
         $obj->setApplicationThemeProvider($applicationThemeProvider);
         $this->assertSame($applicationThemeProvider, $obj->getApplicationThemeProvider());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestApplicationThemeProviderTrait();
-
-        $this->assertNull($obj->getApplicationThemeProvider());
-    }
 }

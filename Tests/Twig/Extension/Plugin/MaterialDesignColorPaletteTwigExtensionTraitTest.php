@@ -38,16 +38,4 @@ class MaterialDesignColorPaletteTwigExtensionTraitTest extends AbstractTestCase 
         $obj->setMaterialDesignColorPaletteTwigExtension($materialDesignColorPaletteTwigExtension);
         $this->assertSame($materialDesignColorPaletteTwigExtension, $obj->getMaterialDesignColorPaletteTwigExtension());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestMaterialDesignColorPaletteTwigExtensionTrait();
-
-        $this->assertNull($obj->getMaterialDesignColorPaletteTwigExtension());
-    }
 }

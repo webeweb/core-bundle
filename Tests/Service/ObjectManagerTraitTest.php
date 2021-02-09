@@ -34,16 +34,4 @@ class ObjectManagerTraitTest extends AbstractTestCase {
         $obj->setObjectManager($this->objectManager);
         $this->assertSame($this->objectManager, $obj->getObjectManager());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestObjectManagerTrait();
-
-        $this->assertNull($obj->getObjectManager());
-    }
 }

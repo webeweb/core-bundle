@@ -38,16 +38,4 @@ class ThemeManagerTraitTest extends AbstractTestCase {
         $obj->setThemeManager($themeManager);
         $this->assertSame($themeManager, $obj->getThemeManager());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestThemeManagerTrait();
-
-        $this->assertNull($obj->getThemeManager());
-    }
 }

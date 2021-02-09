@@ -38,16 +38,4 @@ class DeepPurpleColorProviderTraitTest extends AbstractTestCase {
         $obj->setDeepPurpleColorProvider($deepPurpleColorProvider);
         $this->assertSame($deepPurpleColorProvider, $obj->getDeepPurpleColorProvider());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestDeepPurpleColorProviderTrait();
-
-        $this->assertNull($obj->getDeepPurpleColorProvider());
-    }
 }

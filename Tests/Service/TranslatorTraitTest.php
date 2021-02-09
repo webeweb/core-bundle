@@ -34,16 +34,4 @@ class TranslatorTraitTest extends AbstractTestCase {
         $obj->setTranslator($this->translator);
         $this->assertSame($this->translator, $obj->getTranslator());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestTranslatorTrait();
-
-        $this->assertNull($obj->getTranslator());
-    }
 }

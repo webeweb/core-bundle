@@ -38,16 +38,4 @@ class SearchThemeProviderTraitTest extends AbstractTestCase {
         $obj->setSearchThemeProvider($searchThemeProvider);
         $this->assertSame($searchThemeProvider, $obj->getSearchThemeProvider());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestSearchThemeProviderTrait();
-
-        $this->assertNull($obj->getSearchThemeProvider());
-    }
 }

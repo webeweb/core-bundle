@@ -38,16 +38,4 @@ class SwiftMailerTraitTest extends AbstractTestCase {
         $obj->setSwiftMailer($swiftMailer);
         $this->assertSame($swiftMailer, $obj->getSwiftMailer());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestSwiftMailerTrait();
-
-        $this->assertNull($obj->getSwiftMailer());
-    }
 }

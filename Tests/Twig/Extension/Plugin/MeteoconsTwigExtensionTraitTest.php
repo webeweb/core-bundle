@@ -38,16 +38,4 @@ class MeteoconsTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setMeteoconsTwigExtension($meteoconsTwigExtension);
         $this->assertSame($meteoconsTwigExtension, $obj->getMeteoconsTwigExtension());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestMeteoconsTwigExtensionTrait();
-
-        $this->assertNull($obj->getMeteoconsTwigExtension());
-    }
 }

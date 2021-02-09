@@ -38,16 +38,4 @@ class UserInfoThemeProviderTraitTest extends AbstractTestCase {
         $obj->setUserInfoThemeProvider($userInfoThemeProvider);
         $this->assertSame($userInfoThemeProvider, $obj->getUserInfoThemeProvider());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestUserInfoThemeProviderTrait();
-
-        $this->assertNull($obj->getUserInfoThemeProvider());
-    }
 }

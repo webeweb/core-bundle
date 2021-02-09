@@ -38,16 +38,4 @@ class RequestTraitTest extends AbstractTestCase {
         $obj->setRequest($request);
         $this->assertSame($request, $obj->getRequest());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestRequestTrait();
-
-        $this->assertNull($obj->getRequest());
-    }
 }

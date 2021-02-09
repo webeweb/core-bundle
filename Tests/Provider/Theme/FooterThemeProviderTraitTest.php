@@ -38,16 +38,4 @@ class FooterThemeProviderTraitTest extends AbstractTestCase {
         $obj->setFooterThemeProvider($footerThemeProvider);
         $this->assertSame($footerThemeProvider, $obj->getFooterThemeProvider());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestFooterThemeProviderTrait();
-
-        $this->assertNull($obj->getFooterThemeProvider());
-    }
 }

@@ -38,16 +38,4 @@ class QuoteManagerTraitTest extends AbstractTestCase {
         $obj->setQuoteManager($quoteManager);
         $this->assertSame($quoteManager, $obj->getQuoteManager());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestQuoteManagerTrait();
-
-        $this->assertNull($obj->getQuoteManager());
-    }
 }

@@ -34,16 +34,4 @@ class StringOriginUrlTraitTest extends AbstractTestCase {
         $obj->setOriginUrl("originUrl");
         $this->assertEquals("originUrl", $obj->getOriginUrl());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestStringOriginUrlTrait();
-
-        $this->assertNull($obj->getOriginUrl());
-    }
 }
