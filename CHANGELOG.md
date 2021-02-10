@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+### [2.20.6](https://github.com/webeweb/core-bundle/tree/v2.20.6) (2021-02-10)
+
+- Add Test case helper
+- Improve unit tests
+
 ### [2.20.5](https://github.com/webeweb/core-bundle/tree/v2.20.5) (2021-02-09)
 
 - Improve unit tests
