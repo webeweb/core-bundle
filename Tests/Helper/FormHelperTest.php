@@ -17,6 +17,7 @@ use InvalidArgumentException;
 use WBW\Bundle\CoreBundle\Exception\RedirectResponseException;
 use WBW\Bundle\CoreBundle\Helper\FormHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
+use WBW\Bundle\CoreBundle\Tests\TestCaseHelper;
 
 /**
  * Form helper test.
@@ -87,7 +88,7 @@ class FormHelperTest extends AbstractTestCase {
     public function testCheckCollectionWithRedirectResponseException(): void {
 
         // Set a dispatch function.
-        $dispatchFunction = static::getEventDispatcherDispatchFunction();
+        $dispatchFunction = TestCaseHelper::getEventDispatcherDispatchFunction();
 
         // Set the Event dispatcher mock.
         $this->eventDispatcher->expects($this->any())->method("hasListeners")->willReturn(true);

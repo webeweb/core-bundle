@@ -31,7 +31,6 @@ use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Twig\Environment;
 use Twig\Loader\LoaderInterface;
-use WBW\Bundle\CoreBundle\Component\EventDispatcher\BaseEvent;
 use WBW\Bundle\CoreBundle\Component\Translation\BaseTranslatorInterface;
 
 /**
@@ -175,18 +174,7 @@ abstract class AbstractTestCase extends TestCase {
      * @return Closure Returns the dispatch() method for an EventDispatcher.
      */
     public static function getEventDispatcherDispatchFunction(): Closure {
-
-        $dispatchFunction = function($event, $eventName) {
-            return $event;
-        };
-
-        if (Kernel::VERSION_ID < 40300) {
-            $dispatchFunction = function($eventName, $event) {
-                return $event;
-            };
-        }
-
-        return $dispatchFunction;
+        return TestCaseHelper::getEventDispatcherDispatchFunction();
     }
 
     /**

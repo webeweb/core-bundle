@@ -28,6 +28,7 @@ use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
 use WBW\Bundle\CoreBundle\Repository\RepositoryHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Controller\TestAbstractController;
+use WBW\Bundle\CoreBundle\Tests\TestCaseHelper;
 use WBW\Bundle\CoreBundle\Toast\ToastInterface;
 
 /**
@@ -275,7 +276,7 @@ class AbstractControllerTest extends AbstractTestCase {
         $notification = $this->getMockBuilder(NotificationInterface::class)->getMock();
 
         // Set a dispatch function.
-        $dispatchFunction = static::getEventDispatcherDispatchFunction();
+        $dispatchFunction = TestCaseHelper::getEventDispatcherDispatchFunction();
 
         // Set the Event dispatcher mock.
         $this->eventDispatcher->expects($this->any())->method("hasListeners")->willReturn(true);
@@ -323,7 +324,7 @@ class AbstractControllerTest extends AbstractTestCase {
         $toast = $this->getMockBuilder(ToastInterface::class)->getMock();
 
         // Set a dispatch function.
-        $dispatchFunction = static::getEventDispatcherDispatchFunction();
+        $dispatchFunction = TestCaseHelper::getEventDispatcherDispatchFunction();
 
         // Set the Event dispatcher mock.
         $this->eventDispatcher->expects($this->any())->method("hasListeners")->willReturn(true);
