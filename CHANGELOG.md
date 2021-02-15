@@ -1,6 +1,13 @@
 CHANGELOG
 =========
 
+### [2.21.0](https://github.com/webeweb/core-bundle/tree/v2.21.0) (2021-02-15)
+
+- Update Font Awesome to 5.12.2
+- Update jQuery to 3.5.1
+- Update jQuery EasyAutocomplete to 1.3.5
+- Update jQuery Select 2 to 4.0.13
+
 ### [2.20.6](https://github.com/webeweb/core-bundle/tree/v2.20.6) (2021-02-10)
 
 - Add Test case helper
