@@ -17,20 +17,20 @@ assets:
                 javascripts:
                     - "/clippy.js/clippy.min.js"
             font_awesome:
-                version:     "5.13.0"
+                version:     "5.15.2"
                 description: "Font Awesome"
                 stylesheets:
                     - "/fontawesome-{{ version }}/css/all.min.css"
                 javascripts:
                     - "/fontawesome-{{ version }}/js/all.min.js"
             jquery:
-                version:     "3.4.1"
+                version:     "3.5.1"
                 description: "jQuery"
                 stylesheets: [ ]
                 javascripts:
                     - "/jquery-{{ version }}/jquery-3.4.1.min.js"
             jquery_easy_autocomplete:
-                version:     "1.3.4"
+                version:     "1.3.5"
                 description: "jQuery EasyAutoComplete"
                 stylesheets:
                     - "/jquery-easyautocomplete-{{ version }}/easy-autocomplete.min.css"
@@ -44,7 +44,7 @@ assets:
                 javascripts:
                     - "/jquery-inputmask-{{ version }}/min/jquery.inputmask.bundle.min.js"
             jquery_select2:
-                version:     "4.0.5"
+                version:     "4.0.13"
                 description: "jQuery Select2"
                 stylesheets:
                     - "/jquery-select2-{{ version }}/css/select2.min.css"
