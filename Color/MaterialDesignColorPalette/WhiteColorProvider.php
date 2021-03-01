@@ -33,7 +33,7 @@ class WhiteColorProvider extends AbstractColorProvider implements WhiteColorProv
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(static::COLOR_DOMAIN);
+        parent::__construct(self::COLOR_DOMAIN);
     }
 
     /**
@@ -41,18 +41,18 @@ class WhiteColorProvider extends AbstractColorProvider implements WhiteColorProv
      */
     public function getColors(): array {
         return [
-            static::COLOR_50   => static::WHITE_COLOR_500,
-            static::COLOR_100  => static::WHITE_COLOR_500,
-            static::COLOR_200  => static::WHITE_COLOR_500,
-            static::COLOR_300  => static::WHITE_COLOR_500,
-            static::COLOR_400  => static::WHITE_COLOR_500,
-            static::COLOR_500  => static::WHITE_COLOR_500,
-            static::COLOR_600  => static::WHITE_COLOR_500,
-            static::COLOR_700  => static::WHITE_COLOR_500,
-            static::COLOR_A100 => static::WHITE_COLOR_500,
-            static::COLOR_A200 => static::WHITE_COLOR_500,
-            static::COLOR_A400 => static::WHITE_COLOR_500,
-            static::COLOR_A700 => static::WHITE_COLOR_500,
+            self::COLOR_50   => self::WHITE_COLOR_500,
+            self::COLOR_100  => self::WHITE_COLOR_500,
+            self::COLOR_200  => self::WHITE_COLOR_500,
+            self::COLOR_300  => self::WHITE_COLOR_500,
+            self::COLOR_400  => self::WHITE_COLOR_500,
+            self::COLOR_500  => self::WHITE_COLOR_500,
+            self::COLOR_600  => self::WHITE_COLOR_500,
+            self::COLOR_700  => self::WHITE_COLOR_500,
+            self::COLOR_A100 => self::WHITE_COLOR_500,
+            self::COLOR_A200 => self::WHITE_COLOR_500,
+            self::COLOR_A400 => self::WHITE_COLOR_500,
+            self::COLOR_A700 => self::WHITE_COLOR_500,
         ];
     }
 
@@ -60,6 +60,6 @@ class WhiteColorProvider extends AbstractColorProvider implements WhiteColorProv
      *{@inheritDoc}
      */
     public function getName(): string {
-        return static::WHITE_COLOR_NAME;
+        return self::WHITE_COLOR_NAME;
     }
 }

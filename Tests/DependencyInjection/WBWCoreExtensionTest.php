@@ -188,11 +188,11 @@ class WBWCoreExtensionTest extends AbstractTestCase {
 
         try {
 
-            $this->containerBuilder->get(static::WORLDS_WISDOM_QUOTE_PROVIDER_SERVICE_NAME);
+            $this->containerBuilder->get(self::WORLDS_WISDOM_QUOTE_PROVIDER_SERVICE_NAME);
         } catch (Exception $ex) {
 
             $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
-            $this->assertStringContainsString(static::WORLDS_WISDOM_QUOTE_PROVIDER_SERVICE_NAME, $ex->getMessage());
+            $this->assertStringContainsString(self::WORLDS_WISDOM_QUOTE_PROVIDER_SERVICE_NAME, $ex->getMessage());
         }
 
         // Twig extensions
@@ -245,7 +245,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
 
         $this->assertNull($obj->load($this->configs, $this->containerBuilder));
 
-        $this->assertInstanceOf(YamlQuoteProvider::class, $this->containerBuilder->get(static::WORLDS_WISDOM_QUOTE_PROVIDER_SERVICE_NAME));
+        $this->assertInstanceOf(YamlQuoteProvider::class, $this->containerBuilder->get(self::WORLDS_WISDOM_QUOTE_PROVIDER_SERVICE_NAME));
     }
 
     /**

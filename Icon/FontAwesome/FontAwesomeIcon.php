@@ -70,7 +70,7 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
         parent::__construct();
         $this->setBordered(false);
         $this->setFixedWidth(false);
-        $this->setFont(static::FONT_AWESOME_FONT);
+        $this->setFont(self::FONT_AWESOME_FONT);
     }
 
     /**

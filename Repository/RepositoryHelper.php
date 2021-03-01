@@ -127,7 +127,7 @@ EOT;
         $searches = ["%table%", "%entity%", "%field%", "%available%", "%column%"];
         $replaces = [$table, $entity, $field, $available, $column];
 
-        $query = str_replace($searches, $replaces, static::SQL_QUERY);
+        $query = str_replace($searches, $replaces, self::SQL_QUERY);
 
         return $this->getEntityManager()->getConnection()->prepare($query);
     }

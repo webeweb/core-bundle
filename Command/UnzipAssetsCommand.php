@@ -51,7 +51,7 @@ EOT;
         $this
             ->setName("wbw:core:unzip-assets")
             ->setDescription("Unzip assets under a public directory")
-            ->setHelp(static::COMMAND_HELP);
+            ->setHelp(self::COMMAND_HELP);
     }
 
     /**

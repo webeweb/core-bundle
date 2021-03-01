@@ -33,7 +33,7 @@ class CyanColorProvider extends AbstractColorProvider implements CyanColorProvid
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(static::COLOR_DOMAIN);
+        parent::__construct(self::COLOR_DOMAIN);
     }
 
     /**
@@ -41,18 +41,18 @@ class CyanColorProvider extends AbstractColorProvider implements CyanColorProvid
      */
     public function getColors(): array {
         return [
-            static::COLOR_50   => static::CYAN_COLOR_50,
-            static::COLOR_100  => static::CYAN_COLOR_100,
-            static::COLOR_200  => static::CYAN_COLOR_200,
-            static::COLOR_300  => static::CYAN_COLOR_300,
-            static::COLOR_400  => static::CYAN_COLOR_400,
-            static::COLOR_500  => static::CYAN_COLOR_500,
-            static::COLOR_600  => static::CYAN_COLOR_600,
-            static::COLOR_700  => static::CYAN_COLOR_700,
-            static::COLOR_A100 => static::CYAN_COLOR_A100,
-            static::COLOR_A200 => static::CYAN_COLOR_A200,
-            static::COLOR_A400 => static::CYAN_COLOR_A400,
-            static::COLOR_A700 => static::CYAN_COLOR_A700,
+            self::COLOR_50   => self::CYAN_COLOR_50,
+            self::COLOR_100  => self::CYAN_COLOR_100,
+            self::COLOR_200  => self::CYAN_COLOR_200,
+            self::COLOR_300  => self::CYAN_COLOR_300,
+            self::COLOR_400  => self::CYAN_COLOR_400,
+            self::COLOR_500  => self::CYAN_COLOR_500,
+            self::COLOR_600  => self::CYAN_COLOR_600,
+            self::COLOR_700  => self::CYAN_COLOR_700,
+            self::COLOR_A100 => self::CYAN_COLOR_A100,
+            self::COLOR_A200 => self::CYAN_COLOR_A200,
+            self::COLOR_A400 => self::CYAN_COLOR_A400,
+            self::COLOR_A700 => self::CYAN_COLOR_A700,
         ];
     }
 
@@ -60,6 +60,6 @@ class CyanColorProvider extends AbstractColorProvider implements CyanColorProvid
      *{@inheritDoc}
      */
     public function getName(): string {
-        return static::CYAN_COLOR_NAME;
+        return self::CYAN_COLOR_NAME;
     }
 }
