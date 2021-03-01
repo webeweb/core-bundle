@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [2.21.1](https://github.com/webeweb/core-bundle/tree/v2.21.1) (2021-03-01)
+
+- Improve code quality
+
 ### [2.21.0](https://github.com/webeweb/core-bundle/tree/v2.21.0) (2021-02-15)
 
 - Update Font Awesome to 5.12.2
