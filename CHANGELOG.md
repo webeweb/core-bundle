@@ -1,6 +1,15 @@
 CHANGELOG
 =========
 
+### master
+
+- Add Date date/time data transformer
+- Add Date timestamp data transformer
+- Add Default date/time data transformer
+- Add Default timestamp data transformer
+- Add Time date/time data transformer
+- Add Time timestamp data transformer
+
 ### [2.21.1](https://github.com/webeweb/core-bundle/tree/v2.21.1) (2021-03-01)
 
 - Improve code quality
@@ -361,7 +370,7 @@ CHANGELOG
 - Add fmtDate() alias into Utility Twig extension
 - Add formatString() Twig function (and Twig filter) into Utility Twig extension
 - Upgrade Animate.css to 3.7.0
-- Upgrade Font Awesome to 5.8.1 
+- Upgrade Font Awesome to 5.8.1
 
 ### [1.11.2](https://github.com/webeweb/core-bundle/tree/v1.11.2) (2019-03-28)
 
@@ -394,7 +403,7 @@ CHANGELOG
 
 ### [1.10.1](https://github.com/webeweb/core-bundle/tree/v1.10.1) (2019-02-15)
 
-- Remove all unnecessary Twig extension constructors 
+- Remove all unnecessary Twig extension constructors
 
 ### [1.10.0](https://github.com/webeweb/core-bundle/tree/v1.10.0) (2019-02-14)
 
@@ -421,12 +430,12 @@ CHANGELOG
 ### [1.8.2](https://github.com/webeweb/core-bundle/tree/v1.8.2) (2019-01-25)
 
 - Clean the cache to avoid issues due to cache files during functional tests
-- Correct Unzip assets command help 
+- Correct Unzip assets command help
 
 ### [1.8.1](https://github.com/webeweb/core-bundle/tree/v1.8.1) (2019-01-23)
 
 - Fix checkCollection() issue into Form helper
-- Replace deprecated classes into Icon factory 
+- Replace deprecated classes into Icon factory
 
 ### [1.8.0](https://github.com/webeweb/core-bundle/tree/v1.8.0) (2019-01-21)
 
