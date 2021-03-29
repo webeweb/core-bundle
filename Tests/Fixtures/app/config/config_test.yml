@@ -36,7 +36,7 @@ doctrine:
                 type:      "yml"
                 is_bundle: true
                 prefix:    "WBW\\Bundle\\CoreBundle\\Tests\\Fixtures\\Entity"
-        naming_strategy:             "doctrine.orm.naming_strategy.underscore"
+        naming_strategy:             "doctrine.orm.naming_strategy.underscore_number_aware"
 
 # FOS User configuration
 fos_user:
@@ -65,8 +65,9 @@ swiftmailer:
 
 # Twig configuration
 twig:
-    debug:            "%kernel.debug%"
-    strict_variables: "%kernel.debug%"
+    debug:                "%kernel.debug%"
+    exception_controller: ~
+    strict_variables:     "%kernel.debug%"
 
 # Core configuration
 wbw_core:
