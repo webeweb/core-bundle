@@ -54,6 +54,10 @@ abstract class AbstractWebTestCase extends WebTestCase {
     protected function setUp(): void {
         parent::setUp();
 
+        if (true === static::$booted) {
+            static::$kernel->shutdown();
+        }
+
         // Set a Client mock.
         $this->client = static::createClient();
     }
