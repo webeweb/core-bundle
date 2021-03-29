@@ -19,6 +19,7 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\BrowserKit\Cookie;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 use Symfony\Component\Security\Core\User\UserInterface;
 use TestKernel;
@@ -54,7 +55,7 @@ abstract class AbstractWebTestCase extends WebTestCase {
     protected function setUp(): void {
         parent::setUp();
 
-        if (true === static::$booted) {
+        if (4 <= Kernel::MAJOR_VERSION && 4 <= Kernel::MINOR_VERSION && true === static::$booted) {
             static::$kernel->shutdown();
         }
 
