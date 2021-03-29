@@ -36,7 +36,7 @@ doctrine:
                 type:      "yml"
                 is_bundle: true
                 prefix:    "WBW\\Bundle\\CoreBundle\\Tests\\Fixtures\\Entity"
-        naming_strategy:             "doctrine.orm.naming_strategy.underscore_number_aware"
+        naming_strategy:             "doctrine.orm.naming_strategy.underscore"
 
 # FOS User configuration
 fos_user:
