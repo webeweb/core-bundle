@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### master
+### [2.22.0](https://github.com/webeweb/core-bundle/tree/v2.22.0) (2021-03-30)
 
 - Add Date date/time data transformer
 - Add Date timestamp data transformer
@@ -9,6 +9,7 @@ CHANGELOG
 - Add Default timestamp data transformer
 - Add Time date/time data transformer
 - Add Time timestamp data transformer
+- Fix jQuery asset path
 
 ### [2.21.1](https://github.com/webeweb/core-bundle/tree/v2.21.1) (2021-03-01)
 
