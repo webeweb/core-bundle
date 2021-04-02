@@ -26,9 +26,9 @@ use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
 use WBW\Bundle\CoreBundle\Helper\FormHelper;
 use WBW\Bundle\CoreBundle\Helper\UserHelper;
-use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
+use WBW\Bundle\CoreBundle\Asset\Notification\NotificationInterface;
 use WBW\Bundle\CoreBundle\Repository\RepositoryHelper;
-use WBW\Bundle\CoreBundle\Toast\ToastInterface;
+use WBW\Bundle\CoreBundle\Asset\Toast\ToastInterface;
 
 /**
  * Abstract controller.
