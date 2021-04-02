@@ -15,17 +15,17 @@ services:
         public: true
 
     wbw.core.manager.color:
-        class:  WBW\Bundle\CoreBundle\Manager\ColorManager
+        class:  WBW\Bundle\CoreBundle\Manager\Asset\ColorManager
         arguments: [ "@logger" ]
         public: true
 
     wbw.core.manager.quote:
-        class:  WBW\Bundle\CoreBundle\Manager\QuoteManager
+        class:  WBW\Bundle\CoreBundle\Manager\Asset\QuoteManager
         arguments: [ "@logger" ]
         public: true
 
     wbw.core.manager.theme:
-        class:  WBW\Bundle\CoreBundle\Manager\ThemeManager
+        class:  WBW\Bundle\CoreBundle\Manager\Asset\ThemeManager
         arguments: [ "@logger", "@twig" ]
         public: true
         calls:
