@@ -55,8 +55,8 @@ abstract class AbstractWebTestCase extends WebTestCase {
     protected function setUp(): void {
         parent::setUp();
 
-        if (4 <= Kernel::MAJOR_VERSION && 4 <= Kernel::MINOR_VERSION && true === static::$booted) {
-            static::$kernel->shutdown();
+        if (4 <= Kernel::MAJOR_VERSION && 4 <= Kernel::MINOR_VERSION) {
+            static::ensureKernelShutdown();
         }
 
         // Set a Client mock.
