@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\EventListener;
 
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
-use WBW\Bundle\CoreBundle\Manager\ThemeManager;
+use WBW\Bundle\CoreBundle\Manager\Asset\ThemeManager;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\EventListener\TestKernelEventListenerTrait;
 
