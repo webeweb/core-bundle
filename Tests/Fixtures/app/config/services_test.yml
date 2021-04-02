@@ -2,25 +2,25 @@
 services:
 
     wbw.core.provider.theme.application:
-        class: WBW\Bundle\CoreBundle\Theme\DefaultApplicationThemeProvider
+        class: WBW\Bundle\CoreBundle\Asset\Theme\DefaultApplicationThemeProvider
 
     wbw.core.provider.theme.breadcrumbs:
-        class: WBW\Bundle\CoreBundle\Theme\DefaultBreadcrumbsThemeProvider
+        class: WBW\Bundle\CoreBundle\Asset\Theme\DefaultBreadcrumbsThemeProvider
 
     wbw.core.provider.theme.footer:
-        class: WBW\Bundle\CoreBundle\Theme\DefaultFooterThemeProvider
+        class: WBW\Bundle\CoreBundle\Asset\Theme\DefaultFooterThemeProvider
 
     wbw.core.provider.theme.hook_drop_down:
-        class: WBW\Bundle\CoreBundle\Theme\DefaultHookDropDownThemeProvider
+        class: WBW\Bundle\CoreBundle\Asset\Theme\DefaultHookDropDownThemeProvider
 
     wbw.core.provider.theme.notifications_drop_down:
-        class: WBW\Bundle\CoreBundle\Theme\DefaultNotificationsDropDownThemeProvider
+        class: WBW\Bundle\CoreBundle\Asset\Theme\DefaultNotificationsDropDownThemeProvider
 
     wbw.core.provider.theme.search:
-        class: WBW\Bundle\CoreBundle\Theme\DefaultSearchThemeProvider
+        class: WBW\Bundle\CoreBundle\Asset\Theme\DefaultSearchThemeProvider
 
     wbw.core.provider.theme.tasks_drop_down:
-        class: WBW\Bundle\CoreBundle\Theme\DefaultTasksDropDownThemeProvider
+        class: WBW\Bundle\CoreBundle\Asset\Theme\DefaultTasksDropDownThemeProvider
 
     wbw.core.provider.theme.user_info:
-        class: WBW\Bundle\CoreBundle\Theme\DefaultUserInfoThemeProvider
+        class: WBW\Bundle\CoreBundle\Asset\Theme\DefaultUserInfoThemeProvider
