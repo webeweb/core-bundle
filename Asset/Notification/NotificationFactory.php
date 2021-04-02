@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Notification;
+namespace WBW\Bundle\CoreBundle\Asset\Notification;
 
 /**
  * Notification factory.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Notification
+ * @package WBW\Bundle\CoreBundle\Asset\Notification
  */
 class NotificationFactory {
 

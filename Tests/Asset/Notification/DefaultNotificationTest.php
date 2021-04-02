@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Notification;
+namespace WBW\Bundle\CoreBundle\Tests\Asset\Notification;
 
-use WBW\Bundle\CoreBundle\Notification\DefaultNotification;
+use WBW\Bundle\CoreBundle\Asset\Notification\DefaultNotification;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Default notification test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Notification
+ * @package WBW\Bundle\CoreBundle\Tests\Asset\Notification
  */
 class DefaultNotificationTest extends AbstractTestCase {
 

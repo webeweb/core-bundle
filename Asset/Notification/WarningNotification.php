@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Notification;
+namespace WBW\Bundle\CoreBundle\Asset\Notification;
 
 /**
- * Success notification.
+ * Warning notification.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Notification
+ * @package WBW\Bundle\CoreBundle\Asset\Notification
  */
-class SuccessNotification extends AbstractNotification {
+class WarningNotification extends AbstractNotification {
 
     /**
      * Constructor.
@@ -25,6 +25,6 @@ class SuccessNotification extends AbstractNotification {
      * @param string $content The content.
      */
     public function __construct(string $content) {
-        parent::__construct(self::NOTIFICATION_SUCCESS, $content);
+        parent::__construct(self::NOTIFICATION_WARNING, $content);
     }
 }

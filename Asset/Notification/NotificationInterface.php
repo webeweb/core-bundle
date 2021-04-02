@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Notification;
+namespace WBW\Bundle\CoreBundle\Asset\Notification;
 
 use WBW\Bundle\CoreBundle\WBWCoreInterface;
 
@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\WBWCoreInterface;
  * Notification interface.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Notification
+ * @package WBW\Bundle\CoreBundle\Asset\Notification
  */
 interface NotificationInterface {
 

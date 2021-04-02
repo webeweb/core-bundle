@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Notification;
+namespace WBW\Bundle\CoreBundle\Tests\Asset\Notification;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Notification\TestNotification;
@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Notification\TestNotification;
  * Abstract notification test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Notification
+ * @package WBW\Bundle\CoreBundle\Tests\Asset\Notification
  */
 class AbstractNotificationTest extends AbstractTestCase {
 

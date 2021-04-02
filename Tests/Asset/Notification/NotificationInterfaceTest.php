@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Notification;
+namespace WBW\Bundle\CoreBundle\Tests\Asset\Notification;
 
-use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
+use WBW\Bundle\CoreBundle\Asset\Notification\NotificationInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\WBWCoreInterface;
 
@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\WBWCoreInterface;
  * Notification interface test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Notification
+ * @package WBW\Bundle\CoreBundle\Tests\Asset\Notification
  */
 class NotificationInterfaceTest extends AbstractTestCase {
 
