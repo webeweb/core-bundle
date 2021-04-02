@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Provider\Color;
 
-use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Asset\ColorProviderInterface;
 
 /**
  * Indigo color provider interface.

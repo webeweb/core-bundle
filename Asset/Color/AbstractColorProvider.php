@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Asset\Color;
 
-use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Asset\ColorProviderInterface;
 
 /**
  * Abstract color provider.

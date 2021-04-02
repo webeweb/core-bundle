@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Provider;
 
-use WBW\Bundle\CoreBundle\Provider\QuoteProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Asset\QuoteProviderInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**

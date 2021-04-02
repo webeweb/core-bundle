@@ -15,7 +15,7 @@ use Psr\Log\LoggerInterface;
 use Twig\Environment;
 use WBW\Bundle\CoreBundle\Manager\Asset\AbstractThemeManager;
 use WBW\Bundle\CoreBundle\Manager\ManagerInterface;
-use WBW\Bundle\CoreBundle\Provider\ThemeProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Asset\ThemeProviderInterface;
 
 /**
  * Test theme manager.

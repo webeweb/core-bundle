@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Provider;
 
-use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Asset\ColorProviderInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**

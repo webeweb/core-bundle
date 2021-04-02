@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Manager\Asset;
 
 use Exception;
-use WBW\Bundle\CoreBundle\Provider\ThemeProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Asset\ThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\Asset\TestThemeManager;
 

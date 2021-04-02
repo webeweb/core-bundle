@@ -16,8 +16,8 @@ use InvalidArgumentException;
 use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\RedColorProvider;
 use WBW\Bundle\CoreBundle\Exception\AlreadyRegisteredProviderException;
 use WBW\Bundle\CoreBundle\Manager\Asset\ColorManager;
-use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
-use WBW\Bundle\CoreBundle\Provider\QuoteProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Asset\ColorProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Asset\QuoteProviderInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**

@@ -15,7 +15,7 @@ use Exception;
 use Twig\Node\Node;
 use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\Manager\Asset\QuoteManager;
-use WBW\Bundle\CoreBundle\Provider\QuoteProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Asset\QuoteProviderInterface;
 use WBW\Bundle\CoreBundle\Quote\YamlQuoteProvider;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Twig\Extension\QuoteTwigExtension;

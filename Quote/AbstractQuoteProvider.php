@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Quote;
 
 use WBW\Bundle\CoreBundle\Asset\Quote\QuoteInterface;
-use WBW\Bundle\CoreBundle\Provider\QuoteProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Asset\QuoteProviderInterface;
 
 /**
  * Abstract quote provider.

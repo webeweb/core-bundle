@@ -9,15 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Provider;
+namespace WBW\Bundle\CoreBundle\Provider\Asset;
 
-use WBW\Bundle\CoreBundle\Quote\QuoteInterface;
+use WBW\Bundle\CoreBundle\Provider\ProviderInterface;
+use WBW\Bundle\CoreBundle\Asset\Quote\QuoteInterface;
 
 /**
  * Quote provider interface.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Provider
+ * @package WBW\Bundle\CoreBundle\Provider\Asset
  */
 interface QuoteProviderInterface extends ProviderInterface {
 

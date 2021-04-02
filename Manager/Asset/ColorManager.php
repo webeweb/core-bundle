@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Exception\AlreadyRegisteredProviderException;
 use WBW\Bundle\CoreBundle\Helper\ColorHelper;
 use WBW\Bundle\CoreBundle\Manager\AbstractManager;
 use WBW\Bundle\CoreBundle\Manager\ManagerInterface;
-use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Asset\ColorProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\ProviderInterface;
 
 /**

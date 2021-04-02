@@ -9,13 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Provider;
+namespace WBW\Bundle\CoreBundle\Provider\Asset;
+
+use WBW\Bundle\CoreBundle\Provider\ProviderInterface;
 
 /**
  * Theme provider interface.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Provider
+ * @package WBW\Bundle\CoreBundle\Provider\Asset
  */
 interface ThemeProviderInterface extends ProviderInterface {
 

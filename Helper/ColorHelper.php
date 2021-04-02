@@ -32,7 +32,7 @@ use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\RedColorProvide
 use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\TealColorProvider;
 use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\WhiteColorProvider;
 use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\YellowColorProvider;
-use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Asset\ColorProviderInterface;
 
 /**
  * Color helper.

@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Provider\Theme;
 
-use WBW\Bundle\CoreBundle\Provider\ThemeProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Asset\ThemeProviderInterface;
 
 /**
  * Search theme provider interface.
