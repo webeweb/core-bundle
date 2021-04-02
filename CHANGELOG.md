@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [2.22.1](https://github.com/webeweb/core-bundle/tree/v2.22.1) (2021-04-02)
+
+- Fix kernel shutdown before client creation
+
 ### [2.22.0](https://github.com/webeweb/core-bundle/tree/v2.22.0) (2021-03-30)
 
 - Add Date date/time data transformer
