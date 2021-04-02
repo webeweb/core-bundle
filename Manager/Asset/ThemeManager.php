@@ -12,15 +12,15 @@
 namespace WBW\Bundle\CoreBundle\Manager\Asset;
 
 use WBW\Bundle\CoreBundle\Manager\ManagerInterface;
-use WBW\Bundle\CoreBundle\Provider\Theme\ApplicationThemeProviderInterface;
-use WBW\Bundle\CoreBundle\Provider\Theme\BreadcrumbsThemeProviderInterface;
-use WBW\Bundle\CoreBundle\Provider\Theme\FooterThemeProviderInterface;
-use WBW\Bundle\CoreBundle\Provider\Theme\HookDropDownThemeProviderInterface;
-use WBW\Bundle\CoreBundle\Provider\Theme\NavigationThemeProviderInterface;
-use WBW\Bundle\CoreBundle\Provider\Theme\NotificationsDropDownThemeProviderInterface;
-use WBW\Bundle\CoreBundle\Provider\Theme\SearchThemeProviderInterface;
-use WBW\Bundle\CoreBundle\Provider\Theme\TasksDropDownThemeProviderInterface;
-use WBW\Bundle\CoreBundle\Provider\Theme\UserInfoThemeProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Asset\Theme\ApplicationThemeProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Asset\Theme\BreadcrumbsThemeProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Asset\Theme\FooterThemeProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Asset\Theme\HookDropDownThemeProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Asset\Theme\NavigationThemeProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Asset\Theme\NotificationsDropDownThemeProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Asset\Theme\SearchThemeProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Asset\Theme\TasksDropDownThemeProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Asset\Theme\UserInfoThemeProviderInterface;
 
 /**
  * Theme manager.

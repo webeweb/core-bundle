@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\Theme;
 
-use WBW\Bundle\CoreBundle\Provider\Theme\FooterThemeProviderTrait;
+use WBW\Bundle\CoreBundle\Provider\Asset\Theme\FooterThemeProviderTrait;
 
 /**
  * Test footer theme provider trait.

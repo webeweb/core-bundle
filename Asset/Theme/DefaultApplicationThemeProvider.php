@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Asset\Theme;
 
-use WBW\Bundle\CoreBundle\Provider\Theme\ApplicationThemeProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Asset\Theme\ApplicationThemeProviderInterface;
 
 /**
  * Default application theme provider.

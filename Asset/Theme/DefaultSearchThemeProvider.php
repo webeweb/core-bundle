@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Asset\Theme;
 
-use WBW\Bundle\CoreBundle\Provider\Theme\SearchThemeProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Asset\Theme\SearchThemeProviderInterface;
 
 /**
  * Default search theme provider.

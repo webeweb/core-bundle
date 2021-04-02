@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\Theme;
 
-use WBW\Bundle\CoreBundle\Provider\Theme\UserInfoThemeProviderTrait;
+use WBW\Bundle\CoreBundle\Provider\Asset\Theme\UserInfoThemeProviderTrait;
 
 /**
  * Test user info theme provider trait.

@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Asset\Theme;
 
-use WBW\Bundle\CoreBundle\Provider\Theme\HookDropDownThemeProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Asset\Theme\HookDropDownThemeProviderInterface;
 
 /**
  * Default hook drop down theme provider.

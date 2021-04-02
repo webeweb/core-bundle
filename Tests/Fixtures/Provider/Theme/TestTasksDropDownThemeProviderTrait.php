@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\Theme;
 
-use WBW\Bundle\CoreBundle\Provider\Theme\TasksDropDownThemeProviderTrait;
+use WBW\Bundle\CoreBundle\Provider\Asset\Theme\TasksDropDownThemeProviderTrait;
 
 /**
  * Test tasks drop down theme provider trait.

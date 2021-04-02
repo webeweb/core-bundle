@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\Theme;
 
-use WBW\Bundle\CoreBundle\Provider\Theme\NotificationsDropDownThemeProviderTrait;
+use WBW\Bundle\CoreBundle\Provider\Asset\Theme\NotificationsDropDownThemeProviderTrait;
 
 /**
  * Test notifications drop down theme provider trait.

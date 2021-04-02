@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\Theme;
 
-use WBW\Bundle\CoreBundle\Provider\Theme\NavigationThemeProviderTrait;
+use WBW\Bundle\CoreBundle\Provider\Asset\Theme\NavigationThemeProviderTrait;
 
 /**
  * Test navigation theme provider trait.

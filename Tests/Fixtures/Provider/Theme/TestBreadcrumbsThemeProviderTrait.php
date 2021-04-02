@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\Theme;
 
-use WBW\Bundle\CoreBundle\Provider\Theme\BreadcrumbsThemeProviderTrait;
+use WBW\Bundle\CoreBundle\Provider\Asset\Theme\BreadcrumbsThemeProviderTrait;
 
 /**
  * Test breadcrumbs theme provider trait.

@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\Theme;
 
-use WBW\Bundle\CoreBundle\Provider\Theme\HookDropDownThemeProviderTrait;
+use WBW\Bundle\CoreBundle\Provider\Asset\Theme\HookDropDownThemeProviderTrait;
 
 /**
  * Test hook drop down theme provider trait.

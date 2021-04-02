@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\Theme;
 
-use WBW\Bundle\CoreBundle\Provider\Theme\SearchThemeProviderTrait;
+use WBW\Bundle\CoreBundle\Provider\Asset\Theme\SearchThemeProviderTrait;
 
 /**
  * Test search theme provider trait.

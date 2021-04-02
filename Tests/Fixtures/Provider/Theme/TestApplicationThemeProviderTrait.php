@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\Theme;
 
-use WBW\Bundle\CoreBundle\Provider\Theme\ApplicationThemeProviderTrait;
+use WBW\Bundle\CoreBundle\Provider\Asset\Theme\ApplicationThemeProviderTrait;
 
 /**
  * Test application theme provider trait.
