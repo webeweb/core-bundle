@@ -9,23 +9,30 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Theme;
+namespace WBW\Bundle\CoreBundle\Asset\Theme;
 
-use WBW\Bundle\CoreBundle\Provider\Theme\SearchThemeProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Theme\TasksDropDownThemeProviderInterface;
 
 /**
- * Default search theme provider.
+ * Default tasks drop down theme provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Theme
+ * @package WBW\Bundle\CoreBundle\Asset\Theme
  */
-class DefaultSearchThemeProvider implements SearchThemeProviderInterface {
+class DefaultTasksDropDownThemeProvider implements TasksDropDownThemeProviderInterface {
 
     /**
      * Constructor.
      */
     public function __construct() {
         // NOTHING TO DO.
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getTasks(): array {
+        return [];
     }
 
     /**

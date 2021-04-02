@@ -9,30 +9,23 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Theme;
+namespace WBW\Bundle\CoreBundle\Asset\Theme;
 
-use WBW\Bundle\CoreBundle\Provider\Theme\NotificationsDropDownThemeProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Theme\SearchThemeProviderInterface;
 
 /**
- * Default notifications drop down theme provider.
+ * Default search theme provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Theme
+ * @package WBW\Bundle\CoreBundle\Asset\Theme
  */
-class DefaultNotificationsDropDownThemeProvider implements NotificationsDropDownThemeProviderInterface {
+class DefaultSearchThemeProvider implements SearchThemeProviderInterface {
 
     /**
      * Constructor.
      */
     public function __construct() {
         // NOTHING TO DO.
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getNotifications(): array {
-        return [];
     }
 
     /**

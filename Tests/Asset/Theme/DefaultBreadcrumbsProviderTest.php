@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Theme;
+namespace WBW\Bundle\CoreBundle\Tests\Asset\Theme;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Theme\DefaultTasksDropDownThemeProvider;
+use WBW\Bundle\CoreBundle\Asset\Theme\DefaultBreadcrumbsThemeProvider;
 
 /**
- * Default tasks drop down theme provider test.
+ * Default breadcrumbs theme provider test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Theme
+ * @package WBW\Bundle\CoreBundle\Tests\Asset\Theme
  */
-class DefaultTasksDropDownThemeProviderTest extends AbstractTestCase {
+class DefaultBreadcrumbsThemeProviderTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.
@@ -29,9 +29,8 @@ class DefaultTasksDropDownThemeProviderTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $obj = new DefaultTasksDropDownThemeProvider();
+        $obj = new DefaultBreadcrumbsThemeProvider();
 
-        $this->assertEquals([], $obj->getTasks());
         $this->assertNull($obj->getView());
     }
 }

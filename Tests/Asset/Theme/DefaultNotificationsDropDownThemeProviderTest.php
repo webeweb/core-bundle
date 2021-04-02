@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Theme;
+namespace WBW\Bundle\CoreBundle\Tests\Asset\Theme;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Theme\DefaultSearchThemeProvider;
+use WBW\Bundle\CoreBundle\Asset\Theme\DefaultNotificationsDropDownThemeProvider;
 
 /**
- * Default search theme provider test.
+ * Default notifications drop down theme provider test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Theme
+ * @package WBW\Bundle\CoreBundle\Tests\Asset\Theme
  */
-class DefaultSearchThemeProviderTest extends AbstractTestCase {
+class DefaultNotificationsDropDownThemeProviderTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.
@@ -29,8 +29,9 @@ class DefaultSearchThemeProviderTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $obj = new DefaultSearchThemeProvider();
+        $obj = new DefaultNotificationsDropDownThemeProvider();
 
+        $this->assertEquals([], $obj->getNotifications());
         $this->assertNull($obj->getView());
     }
 }

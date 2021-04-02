@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Theme;
+namespace WBW\Bundle\CoreBundle\Tests\Asset\Theme;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Theme\DefaultHookDropDownThemeProvider;
+use WBW\Bundle\CoreBundle\Asset\Theme\DefaultFooterThemeProvider;
 
 /**
- * Default hook drop down theme provider test.
+ * Default footer theme provider test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Theme
+ * @package WBW\Bundle\CoreBundle\Tests\Asset\Theme
  */
-class DefaultHookDropDownThemeProviderTest extends AbstractTestCase {
+class DefaultFooterThemeProviderTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.
@@ -29,9 +29,8 @@ class DefaultHookDropDownThemeProviderTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $obj = new DefaultHookDropDownThemeProvider();
+        $obj = new DefaultFooterThemeProvider();
 
-        $this->assertEquals([], $obj->getItems());
         $this->assertNull($obj->getView());
     }
 }

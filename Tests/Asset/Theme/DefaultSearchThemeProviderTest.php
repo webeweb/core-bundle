@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Theme;
+namespace WBW\Bundle\CoreBundle\Tests\Asset\Theme;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Theme\DefaultBreadcrumbsThemeProvider;
+use WBW\Bundle\CoreBundle\Asset\Theme\DefaultSearchThemeProvider;
 
 /**
- * Default breadcrumbs theme provider test.
+ * Default search theme provider test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Theme
+ * @package WBW\Bundle\CoreBundle\Tests\Asset\Theme
  */
-class DefaultBreadcrumbsThemeProviderTest extends AbstractTestCase {
+class DefaultSearchThemeProviderTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.
@@ -29,7 +29,7 @@ class DefaultBreadcrumbsThemeProviderTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $obj = new DefaultBreadcrumbsThemeProvider();
+        $obj = new DefaultSearchThemeProvider();
 
         $this->assertNull($obj->getView());
     }

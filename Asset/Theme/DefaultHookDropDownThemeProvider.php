@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Theme;
+namespace WBW\Bundle\CoreBundle\Asset\Theme;
 
-use WBW\Bundle\CoreBundle\Provider\Theme\TasksDropDownThemeProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Theme\HookDropDownThemeProviderInterface;
 
 /**
- * Default tasks drop down theme provider.
+ * Default hook drop down theme provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Theme
+ * @package WBW\Bundle\CoreBundle\Asset\Theme
  */
-class DefaultTasksDropDownThemeProvider implements TasksDropDownThemeProviderInterface {
+class DefaultHookDropDownThemeProvider implements HookDropDownThemeProviderInterface {
 
     /**
      * Constructor.
@@ -31,7 +31,7 @@ class DefaultTasksDropDownThemeProvider implements TasksDropDownThemeProviderInt
     /**
      * {@inheritDoc}
      */
-    public function getTasks(): array {
+    public function getItems(): array {
         return [];
     }
 

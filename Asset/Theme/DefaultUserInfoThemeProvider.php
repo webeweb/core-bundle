@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Theme;
+namespace WBW\Bundle\CoreBundle\Asset\Theme;
 
 use WBW\Bundle\CoreBundle\Provider\Theme\UserInfoThemeProviderInterface;
 
@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Provider\Theme\UserInfoThemeProviderInterface;
  * Default user info theme provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Theme
+ * @package WBW\Bundle\CoreBundle\Asset\Theme
  */
 class DefaultUserInfoThemeProvider implements UserInfoThemeProviderInterface {
 

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Theme;
+namespace WBW\Bundle\CoreBundle\Asset\Theme;
 
 use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
 use WBW\Bundle\CoreBundle\Provider\Theme\NavigationThemeProviderInterface;
@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Service\TranslatorTrait;
  * Default navigation theme provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Theme
+ * @package WBW\Bundle\CoreBundle\Asset\Theme
  */
 class DefaultNavigationThemeProvider implements NavigationThemeProviderInterface {
 

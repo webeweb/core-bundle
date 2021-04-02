@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Theme;
+namespace WBW\Bundle\CoreBundle\Asset\Theme;
 
-use WBW\Bundle\CoreBundle\Provider\Theme\HookDropDownThemeProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Theme\NotificationsDropDownThemeProviderInterface;
 
 /**
- * Default hook drop down theme provider.
+ * Default notifications drop down theme provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Theme
+ * @package WBW\Bundle\CoreBundle\Asset\Theme
  */
-class DefaultHookDropDownThemeProvider implements HookDropDownThemeProviderInterface {
+class DefaultNotificationsDropDownThemeProvider implements NotificationsDropDownThemeProviderInterface {
 
     /**
      * Constructor.
@@ -31,7 +31,7 @@ class DefaultHookDropDownThemeProvider implements HookDropDownThemeProviderInter
     /**
      * {@inheritDoc}
      */
-    public function getItems(): array {
+    public function getNotifications(): array {
         return [];
     }
 

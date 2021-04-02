@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Theme;
+namespace WBW\Bundle\CoreBundle\Tests\Asset\Theme;
 
 use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Theme\TestDefaultNavigationThemeProvider;
-use WBW\Bundle\CoreBundle\Theme\DefaultNavigationThemeProvider;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Theme\TestDefaultNavigationThemeProvider;
+use WBW\Bundle\CoreBundle\Asset\Theme\DefaultNavigationThemeProvider;
 
 /**
  * Default navigation theme provider test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Theme
+ * @package WBW\Bundle\CoreBundle\Tests\Asset\Theme
  */
 class DefaultNavigationThemeProviderTest extends AbstractTestCase {
 
