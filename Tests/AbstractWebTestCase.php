@@ -55,7 +55,7 @@ abstract class AbstractWebTestCase extends WebTestCase {
     protected function setUp(): void {
         parent::setUp();
 
-        if (4 <= Kernel::MAJOR_VERSION && 4 <= Kernel::MINOR_VERSION) {
+        if (40400 <= Kernel::VERSION_ID) {
             static::ensureKernelShutdown();
         }
 
