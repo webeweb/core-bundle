@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette;
 
 use WBW\Bundle\CoreBundle\Asset\Color\AbstractColorProvider;
-use WBW\Bundle\CoreBundle\Provider\Color\DeepOrangeColorProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Asset\Color\DeepOrangeColorProviderInterface;
 
 /**
  * Deep orange color provider.

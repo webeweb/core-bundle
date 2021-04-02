@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette;
 
 use WBW\Bundle\CoreBundle\Asset\Color\AbstractColorProvider;
-use WBW\Bundle\CoreBundle\Provider\Color\TealColorProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\Asset\Color\TealColorProviderInterface;
 
 /**
  * Teal color provider.
