@@ -20,7 +20,7 @@ use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\EventDispatcher\EventDispatcherHelper;
 use WBW\Bundle\CoreBundle\Exception\RedirectResponseException;
-use WBW\Bundle\CoreBundle\Notification\NotificationFactory;
+use WBW\Bundle\CoreBundle\Asset\Notification\NotificationFactory;
 use WBW\Bundle\CoreBundle\Service\EventDispatcherTrait;
 use WBW\Bundle\CoreBundle\Service\ObjectManagerTrait;
 use WBW\Bundle\CoreBundle\WBWCoreEvents;
