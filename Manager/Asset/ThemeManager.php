@@ -9,8 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Manager;
+namespace WBW\Bundle\CoreBundle\Manager\Asset;
 
+use WBW\Bundle\CoreBundle\Manager\ManagerInterface;
 use WBW\Bundle\CoreBundle\Provider\Theme\ApplicationThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\Theme\BreadcrumbsThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\Theme\FooterThemeProviderInterface;
@@ -25,7 +26,7 @@ use WBW\Bundle\CoreBundle\Provider\Theme\UserInfoThemeProviderInterface;
  * Theme manager.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Manager
+ * @package WBW\Bundle\CoreBundle\Manager\Asset
  */
 class ThemeManager extends AbstractThemeManager {
 

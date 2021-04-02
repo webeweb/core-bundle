@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Manager;
+namespace WBW\Bundle\CoreBundle\Tests\Manager\Asset;
 
 use Exception;
-use WBW\Bundle\CoreBundle\Manager\ThemeManager;
+use WBW\Bundle\CoreBundle\Manager\Asset\ThemeManager;
 use WBW\Bundle\CoreBundle\Provider\Theme\ApplicationThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\Theme\BreadcrumbsThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\Theme\FooterThemeProviderInterface;
@@ -28,7 +28,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
  * Theme manager test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Manager
+ * @package WBW\Bundle\CoreBundle\Tests\Manager\Asset
  */
 class ThemeManagerTest extends AbstractTestCase {
 

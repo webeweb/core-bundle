@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Manager;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\Asset;
 
 use Psr\Log\LoggerInterface;
 use Twig\Environment;
-use WBW\Bundle\CoreBundle\Manager\AbstractThemeManager;
+use WBW\Bundle\CoreBundle\Manager\Asset\AbstractThemeManager;
 use WBW\Bundle\CoreBundle\Manager\ManagerInterface;
 use WBW\Bundle\CoreBundle\Provider\ThemeProviderInterface;
 
@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Provider\ThemeProviderInterface;
  * Test theme manager.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Manager
+ * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\Asset
  */
 class TestThemeManager extends AbstractThemeManager {
 

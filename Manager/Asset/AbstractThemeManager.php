@@ -9,10 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Manager;
+namespace WBW\Bundle\CoreBundle\Manager\Asset;
 
 use Psr\Log\LoggerInterface;
 use Twig\Environment;
+use WBW\Bundle\CoreBundle\Manager\AbstractManager;
+use WBW\Bundle\CoreBundle\Manager\ManagerInterface;
 use WBW\Bundle\CoreBundle\Provider\ThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Service\TwigEnvironmentTrait;
 
@@ -20,7 +22,7 @@ use WBW\Bundle\CoreBundle\Service\TwigEnvironmentTrait;
  * Abstract theme manager.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Manager
+ * @package WBW\Bundle\CoreBundle\Manager\Asset
  * @abstract
  */
 abstract class AbstractThemeManager extends AbstractManager {
