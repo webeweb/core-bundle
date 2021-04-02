@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Icon;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Icon;
 
-use WBW\Bundle\CoreBundle\Icon\AbstractIcon;
+use WBW\Bundle\CoreBundle\Asset\Icon\AbstractIcon;
 
 /**
  * Test icon.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Icon
+ * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Icon
  */
 class TestIcon extends AbstractIcon {
 
