@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette;
 
-use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\TealColorProviderTrait;
+use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\TealColorProviderTrait;
 
 /**
  * Test teal color provider trait.

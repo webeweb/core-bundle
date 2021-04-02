@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette;
 
-use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\BlueGreyColorProviderTrait;
+use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\BlueGreyColorProviderTrait;
 
 /**
  * Test blue grey color provider trait.

@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette;
 
-use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\GreenColorProviderTrait;
+use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\GreenColorProviderTrait;
 
 /**
  * Test green color provider trait.

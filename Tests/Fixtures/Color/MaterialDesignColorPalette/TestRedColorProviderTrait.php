@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette;
 
-use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\RedColorProviderTrait;
+use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\RedColorProviderTrait;
 
 /**
  * Test red color provider trait.

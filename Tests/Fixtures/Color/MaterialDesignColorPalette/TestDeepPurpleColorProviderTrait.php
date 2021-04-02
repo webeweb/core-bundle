@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette;
 
-use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\DeepPurpleColorProviderTrait;
+use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\DeepPurpleColorProviderTrait;
 
 /**
  * Test deep purple color provider trait.

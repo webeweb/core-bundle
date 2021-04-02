@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Manager;
+namespace WBW\Bundle\CoreBundle\Manager\Asset;
 
 /**
  * Color manager trait.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Manager
+ * @package WBW\Bundle\CoreBundle\Manager\Asset
  */
 trait ColorManagerTrait {
 

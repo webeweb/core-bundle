@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Color;
 
-use WBW\Bundle\CoreBundle\Color\AbstractColorProvider;
+use WBW\Bundle\CoreBundle\Asset\Color\AbstractColorProvider;
 
 /**
  * Test color provider.

@@ -9,11 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Manager;
+namespace WBW\Bundle\CoreBundle\Manager\Asset;
 
 use InvalidArgumentException;
 use WBW\Bundle\CoreBundle\Exception\AlreadyRegisteredProviderException;
 use WBW\Bundle\CoreBundle\Helper\ColorHelper;
+use WBW\Bundle\CoreBundle\Manager\AbstractManager;
+use WBW\Bundle\CoreBundle\Manager\ManagerInterface;
 use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\ProviderInterface;
 
@@ -21,7 +23,7 @@ use WBW\Bundle\CoreBundle\Provider\ProviderInterface;
  * Color manager.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Manager
+ * @package WBW\Bundle\CoreBundle\Manager\Asset
  */
 class ColorManager extends AbstractManager {
 

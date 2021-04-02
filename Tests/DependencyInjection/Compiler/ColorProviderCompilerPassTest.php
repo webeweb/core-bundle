@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\DependencyInjection\Compiler;
 
-use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\RedColorProvider;
+use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\RedColorProvider;
 use WBW\Bundle\CoreBundle\DependencyInjection\Compiler\ColorProviderCompilerPass;
-use WBW\Bundle\CoreBundle\Manager\ColorManager;
+use WBW\Bundle\CoreBundle\Manager\Asset\ColorManager;
 use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
