@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Event;
 
-use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
+use WBW\Bundle\CoreBundle\Asset\Notification\NotificationInterface;
 
 /**
  * Notification event.

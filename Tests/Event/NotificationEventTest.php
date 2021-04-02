@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Event;
 
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
-use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
+use WBW\Bundle\CoreBundle\Asset\Notification\NotificationInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
