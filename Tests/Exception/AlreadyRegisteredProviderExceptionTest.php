@@ -12,9 +12,9 @@
 namespace WBW\Bundle\CoreBundle\Tests\Exception;
 
 use Exception;
+use WBW\Bundle\CoreBundle\Asset\Theme\DefaultApplicationThemeProvider;
 use WBW\Bundle\CoreBundle\Exception\AlreadyRegisteredProviderException;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Asset\Theme\DefaultApplicationThemeProvider;
 
 /**
  * Already registered provider exception test.

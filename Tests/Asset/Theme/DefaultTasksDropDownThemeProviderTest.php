@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Asset\Theme;
 
-use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Asset\Theme\DefaultTasksDropDownThemeProvider;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Default tasks drop down theme provider test.

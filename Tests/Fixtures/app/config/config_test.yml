@@ -65,8 +65,8 @@ swiftmailer:
 
 # Twig configuration
 twig:
-    debug:                "%kernel.debug%"
-    strict_variables:     "%kernel.debug%"
+    debug:            "%kernel.debug%"
+    strict_variables: "%kernel.debug%"
 
 # Core configuration
 wbw_core:

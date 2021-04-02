@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Asset\Toast;
 
-use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Asset\Toast\ToastInterface;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\WBWCoreInterface;
 
 /**

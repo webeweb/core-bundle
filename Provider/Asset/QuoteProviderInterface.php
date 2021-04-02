@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Provider\Asset;
 
-use WBW\Bundle\CoreBundle\Provider\ProviderInterface;
 use WBW\Bundle\CoreBundle\Asset\Quote\QuoteInterface;
+use WBW\Bundle\CoreBundle\Provider\ProviderInterface;
 
 /**
  * Quote provider interface.

@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Asset\Theme;
 
-use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Asset\Theme\DefaultSearchThemeProvider;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Default search theme provider test.

@@ -14,7 +14,6 @@ namespace WBW\Bundle\CoreBundle\Asset\Quote;
 use DateTime;
 use Symfony\Component\Filesystem\Exception\FileNotFoundException;
 use Symfony\Component\Yaml\Yaml;
-use WBW\Bundle\CoreBundle\Asset\Quote\Quote;
 use WBW\Bundle\CoreBundle\Provider\Asset\QuoteProviderInterface;
 use WBW\Library\Core\Argument\Helper\ArrayHelper;
 

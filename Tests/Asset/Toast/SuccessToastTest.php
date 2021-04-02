@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Asset\Toast;
 
-use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Asset\Toast\SuccessToast;
 use WBW\Bundle\CoreBundle\Asset\Toast\ToastInterface;
+use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Success toast test.
