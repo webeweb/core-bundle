@@ -7,115 +7,115 @@ services:
         public: true
 
     wbw.core.provider.color.amber:
-        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\AmberColorProvider
+        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\AmberColorProvider
         public: true
         tags:
             - { name: "wbw.core.provider.color" }
 
     wbw.core.provider.color.blue:
-        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\BlueColorProvider
+        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\BlueColorProvider
         public: true
         tags:
             - { name: "wbw.core.provider.color" }
 
     wbw.core.provider.color.blue_grey:
-        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\BlueGreyColorProvider
+        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\BlueGreyColorProvider
         public: true
         tags:
             - { name: "wbw.core.provider.color" }
 
     wbw.core.provider.color.brown:
-        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\BrownColorProvider
+        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\BrownColorProvider
         public: true
         tags:
             - { name: "wbw.core.provider.color" }
 
     wbw.core.provider.color.cyan:
-        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\CyanColorProvider
+        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\CyanColorProvider
         public: true
         tags:
             - { name: "wbw.core.provider.color" }
 
     wbw.core.provider.color.deep_orange:
-        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\DeepOrangeColorProvider
+        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\DeepOrangeColorProvider
         public: true
         tags:
             - { name: "wbw.core.provider.color" }
 
     wbw.core.provider.color.deep_purple:
-        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\DeepPurpleColorProvider
+        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\DeepPurpleColorProvider
         public: true
         tags:
             - { name: "wbw.core.provider.color" }
 
     wbw.core.provider.color.green:
-        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\GreenColorProvider
+        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\GreenColorProvider
         public: true
         tags:
             - { name: "wbw.core.provider.color" }
 
     wbw.core.provider.color.grey:
-        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\GreyColorProvider
+        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\GreyColorProvider
         public: true
         tags:
             - { name: "wbw.core.provider.color" }
 
     wbw.core.provider.color.indigo:
-        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\IndigoColorProvider
+        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\IndigoColorProvider
         public: true
         tags:
             - { name: "wbw.core.provider.color" }
 
     wbw.core.provider.color.light_blue:
-        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\LightBlueColorProvider
+        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\LightBlueColorProvider
         public: true
         tags:
             - { name: "wbw.core.provider.color" }
 
     wbw.core.provider.color.light_green:
-        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\LightGreenColorProvider
+        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\LightGreenColorProvider
         public: true
         tags:
             - { name: "wbw.core.provider.color" }
 
     wbw.core.provider.color.lime:
-        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\LimeColorProvider
+        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\LimeColorProvider
         public: true
         tags:
             - { name: "wbw.core.provider.color" }
 
     wbw.core.provider.color.orange:
-        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\OrangeColorProvider
+        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\OrangeColorProvider
         public: true
         tags:
             - { name: "wbw.core.provider.color" }
 
     wbw.core.provider.color.pink:
-        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\PinkColorProvider
+        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\PinkColorProvider
         public: true
         tags:
             - { name: "wbw.core.provider.color" }
 
     wbw.core.provider.color.purple:
-        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\PurpleColorProvider
+        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\PurpleColorProvider
         public: true
         tags:
             - { name: "wbw.core.provider.color" }
 
     wbw.core.provider.color.red:
-        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\RedColorProvider
+        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\RedColorProvider
         public: true
         tags:
             - { name: "wbw.core.provider.color" }
 
     wbw.core.provider.color.teal:
-        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\TealColorProvider
+        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\TealColorProvider
         public: true
         tags:
             - { name: "wbw.core.provider.color" }
 
     wbw.core.provider.color.yellow:
-        class:  WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\YellowColorProvider
+        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\YellowColorProvider
         public: true
         tags:
             - { name: "wbw.core.provider.color" }
