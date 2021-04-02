@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Asset\Color\MaterialDesignColorPalette;
 
 use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\WhiteColorProvider;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette\TestWhiteColorProviderTrait;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Color\MaterialDesignColorPalette\TestWhiteColorProviderTrait;
 
 /**
  * White color provider trait test.

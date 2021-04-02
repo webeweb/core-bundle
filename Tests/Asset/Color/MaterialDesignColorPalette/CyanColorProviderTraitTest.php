@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Asset\Color\MaterialDesignColorPalette;
 
 use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\CyanColorProvider;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette\TestCyanColorProviderTrait;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Color\MaterialDesignColorPalette\TestCyanColorProviderTrait;
 
 /**
  * Cyan color provider trait test.

@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Asset\Toast;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Toast\TestToast;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Toast\TestToast;
 
 /**
  * Abstract toast test.

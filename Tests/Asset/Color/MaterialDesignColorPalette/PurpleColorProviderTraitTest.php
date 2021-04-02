@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Asset\Color\MaterialDesignColorPalette;
 
 use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\PurpleColorProvider;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette\TestPurpleColorProviderTrait;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Color\MaterialDesignColorPalette\TestPurpleColorProviderTrait;
 
 /**
  * Purple color provider trait test.

@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Asset\Quote;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Quote\TestQuoteProvider;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Quote\TestQuoteProvider;
 
 /**
  * Abstract quote provider test.

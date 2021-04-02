@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Color\MaterialDesignColorPalette;
 
 use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\PurpleColorProviderTrait;
 
@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\PurpleColorProv
  * Test purple color provider trait.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette
+ * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Color\MaterialDesignColorPalette
  */
 class TestPurpleColorProviderTrait {
 

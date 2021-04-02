@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Asset\Color\MaterialDesignColorPalette;
 
 use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\GreyColorProvider;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette\TestGreyColorProviderTrait;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Color\MaterialDesignColorPalette\TestGreyColorProviderTrait;
 
 /**
  * Grey color provider trait test.

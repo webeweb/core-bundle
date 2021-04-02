@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Asset\Color\MaterialDesignColorPalette;
 
 use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\LimeColorProvider;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette\TestLimeColorProviderTrait;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Color\MaterialDesignColorPalette\TestLimeColorProviderTrait;
 
 /**
  * Lime color provider trait test.

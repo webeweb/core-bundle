@@ -3,24 +3,24 @@
 /*
  * This file is part of the core-bundle package.
  *
- * (c) 2018 WEBEWEB
+ * (c) 2019 WEBEWEB
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Notification;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Toast;
 
-use WBW\Bundle\CoreBundle\Asset\Notification\AbstractNotification;
-use WBW\Bundle\CoreBundle\Asset\Notification\NotificationInterface;
+use WBW\Bundle\CoreBundle\Asset\Toast\AbstractToast;
+use WBW\Bundle\CoreBundle\Asset\Toast\ToastInterface;
 
 /**
- * Test notification.
+ * Test toast.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Notification
+ * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Toast
  */
-class TestNotification extends AbstractNotification {
+class TestToast extends AbstractToast {
 
     /**
      * Constructor.
@@ -32,14 +32,14 @@ class TestNotification extends AbstractNotification {
     /**
      * {@inheritDoc}
      */
-    public function setContent(string $content): NotificationInterface {
+    public function setContent(string $content): ToastInterface {
         return parent::setContent($content);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function setType(string $type): NotificationInterface {
+    public function setType(string $type): ToastInterface {
         return parent::setType($type);
     }
 }

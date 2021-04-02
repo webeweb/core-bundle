@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Color;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Color;
 
 use WBW\Bundle\CoreBundle\Asset\Color\AbstractColorProvider;
 
@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Asset\Color\AbstractColorProvider;
  * Test color provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Color
+ * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Color
  */
 class TestColorProvider extends AbstractColorProvider {
 

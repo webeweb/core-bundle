@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Asset\Color;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\TestColorProvider;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Color\TestColorProvider;
 
 /**
  * Abstract color provider test.

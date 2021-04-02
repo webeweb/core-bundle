@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Asset\Notification;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Notification\TestNotification;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Notification\TestNotification;
 
 /**
  * Abstract notification test.
