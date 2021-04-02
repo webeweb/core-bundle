@@ -9,73 +9,62 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Icon\FontAwesome;
-
-use WBW\Bundle\CoreBundle\Icon\FontAwesome\FontAwesomeIconEnumerator;
-use WBW\Bundle\CoreBundle\Icon\FontAwesome\FontAwesomeIconInterface;
-use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
+namespace WBW\Bundle\CoreBundle\Asset\Icon\FontAwesome;
 
 /**
- * Font Awesome icon enumerator test.
+ * Font Awesome icon enumerator.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Icon\FontAwesome
+ * @package WBW\Bundle\CoreBundle\Asset\Icon\FontAwesome
  */
-class FontAwesomeIconEnumeratorTest extends AbstractTestCase {
+class FontAwesomeIconEnumerator {
 
     /**
-     * Tests the enumAnimations() method.
+     * Enumerates the animations.
      *
-     * @return void
+     * @return string[] Returns the animations enumeration.
      */
-    public function testEnumAnimations(): void {
-
-        $res = [
+    public static function enumAnimations(): array {
+        return [
             FontAwesomeIconInterface::FONT_AWESOME_ANIMATION_PULSE,
             FontAwesomeIconInterface::FONT_AWESOME_ANIMATION_SPIN,
         ];
-        $this->assertEquals($res, FontAwesomeIconEnumerator::enumAnimations());
     }
 
     /**
-     * Tests the enumFonts() method.
+     * Enumerates the fonts.
      *
-     * @return void
+     * @return string[] Returns the fonts enumeration.
      */
-    public function testEnumFonts(): void {
-
-        $res = [
+    public static function enumFonts(): array {
+        return [
             FontAwesomeIconInterface::FONT_AWESOME_FONT,
             FontAwesomeIconInterface::FONT_AWESOME_FONT_BOLD,
             FontAwesomeIconInterface::FONT_AWESOME_FONT_LIGHT,
             FontAwesomeIconInterface::FONT_AWESOME_FONT_REGULAR,
             FontAwesomeIconInterface::FONT_AWESOME_FONT_SOLID,
         ];
-        $this->assertEquals($res, FontAwesomeIconEnumerator::enumFonts());
     }
 
     /**
-     * Tests the enumPulls() method.
+     * Enumerates the pulls.
      *
-     * @return void
+     * @return string[] Returns the pulls enumeration.
      */
-    public function testEnumPulls(): void {
-
-        $res = [
+    public static function enumPulls(): array {
+        return [
             FontAwesomeIconInterface::FONT_AWESOME_PULL_LEFT,
             FontAwesomeIconInterface::FONT_AWESOME_PULL_RIGHT,
         ];
-        $this->assertEquals($res, FontAwesomeIconEnumerator::enumPulls());
     }
 
     /**
-     * Tests the enumSizes() mmethod.
+     * Enumerates the sizes.
      *
-     * @return void
+     * @return string[] Returns the sizes enumeration.
      */
-    public function testEnumSizes(): void {
-
-        $res = [
+    public static function enumSizes(): array {
+        return [
             FontAwesomeIconInterface::FONT_AWESOME_SIZE_LG,
             FontAwesomeIconInterface::FONT_AWESOME_SIZE_SM,
             FontAwesomeIconInterface::FONT_AWESOME_SIZE_XS,
@@ -89,6 +78,5 @@ class FontAwesomeIconEnumeratorTest extends AbstractTestCase {
             FontAwesomeIconInterface::FONT_AWESOME_SIZE_9X,
             FontAwesomeIconInterface::FONT_AWESOME_SIZE_10X,
         ];
-        $this->assertEquals($res, FontAwesomeIconEnumerator::enumSizes());
     }
 }

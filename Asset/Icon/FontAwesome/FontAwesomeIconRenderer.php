@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Icon\FontAwesome;
+namespace WBW\Bundle\CoreBundle\Asset\Icon\FontAwesome;
 
-use WBW\Bundle\CoreBundle\Icon\IconRenderer;
+use WBW\Bundle\CoreBundle\Asset\Icon\IconRenderer;
 
 /**
  * Font Awesome icon renderer.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Icon\FontAwesome
+ * @package WBW\Bundle\CoreBundle\Asset\Icon\FontAwesome
  */
 class FontAwesomeIconRenderer extends IconRenderer {
 

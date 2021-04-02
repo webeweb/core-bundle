@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Icon;
+namespace WBW\Bundle\CoreBundle\Asset\Icon;
 
 /**
  * Icon renderer.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Icon
+ * @package WBW\Bundle\CoreBundle\Asset\Icon
  */
 class IconRenderer {
 

@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\TestsIcon;
 
-use WBW\Bundle\CoreBundle\Icon\IconInterface;
-use WBW\Bundle\CoreBundle\Icon\IconRenderer;
+use WBW\Bundle\CoreBundle\Asset\Icon\IconInterface;
+use WBW\Bundle\CoreBundle\Asset\Icon\IconRenderer;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**

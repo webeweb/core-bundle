@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Icon\MaterialDesignIconicFont;
+namespace WBW\Bundle\CoreBundle\Tests\Asset\Icon\MaterialDesignIconicFont;
 
-use WBW\Bundle\CoreBundle\Icon\MaterialDesignIconicFont\MaterialDesignIconicFontIcon;
+use WBW\Bundle\CoreBundle\Asset\Icon\MaterialDesignIconicFont\MaterialDesignIconicFontIcon;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Material Design Iconic Font icon test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Icon\MaterialDesignIconicFont
+ * @package WBW\Bundle\CoreBundle\Tests\Asset\Icon\MaterialDesignIconicFont
  */
 class MaterialDesignIconicFontIconTest extends AbstractTestCase {
 

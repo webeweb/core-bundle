@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Icon\MaterialDesignIconicFont;
+namespace WBW\Bundle\CoreBundle\Asset\Icon\MaterialDesignIconicFont;
 
-use WBW\Bundle\CoreBundle\Icon\IconInterface;
+use WBW\Bundle\CoreBundle\Asset\Icon\IconInterface;
 
 /**
  * Material Design Iconic Font icon interface.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Icon\MaterialDesignIconicFont
+ * @package WBW\Bundle\CoreBundle\Asset\Icon\MaterialDesignIconicFont
  */
 interface MaterialDesignIconicFontIconInterface extends IconInterface {
 

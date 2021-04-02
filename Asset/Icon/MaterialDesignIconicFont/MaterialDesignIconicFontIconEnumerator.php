@@ -9,105 +9,89 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Icon\MaterialDesignIconicFont;
-
-use WBW\Bundle\CoreBundle\Icon\MaterialDesignIconicFont\MaterialDesignIconicFontIconEnumerator;
-use WBW\Bundle\CoreBundle\Icon\MaterialDesignIconicFont\MaterialDesignIconicFontIconInterface;
-use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
+namespace WBW\Bundle\CoreBundle\Asset\Icon\MaterialDesignIconicFont;
 
 /**
- * Material Design Iconic Font icon enumerator test.
+ * Material Design Iconic Font icon enumerator.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Icon\MaterialDesignIconicFont
+ * @package WBW\Bundle\CoreBundle\Asset\Icon\MaterialDesignIconicFont
  */
-class MaterialDesignIconicFontIconEnumeratorTest extends AbstractTestCase {
+class MaterialDesignIconicFontIconEnumerator {
 
     /**
-     * Tests the enumBorders() method.
+     * Enumerates the borders.
      *
-     * @return void.
+     * @return string[] Returns the borders enumeration.
      */
-    public function testEnumBorders(): void {
-
-        $res = [
+    public static function enumBorders(): array {
+        return [
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_BORDER,
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_BORDER_CIRCLE,
         ];
-        $this->assertEquals($res, MaterialDesignIconicFontIconEnumerator::enumBorders());
     }
 
     /**
-     * Tests the enumFlips() method.
+     * Enumerates the flips.
      *
-     * @return void
+     * @return string[] Returns the flips enumeration.
      */
-    public function testEnumFlips(): void {
-
-        $res = [
+    public static function enumFlips(): array {
+        return [
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_FLIP_HORIZONTAL,
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_FLIP_VERTICAL,
         ];
-        $this->assertEquals($res, MaterialDesignIconicFontIconEnumerator::enumFlips());
     }
 
     /**
-     * Tests the enumPulls() method.
+     * Enumerates the pulls.
      *
-     * @return void
+     * @return string[] Returns the pulls enumeration.
      */
-    public function testEnumPulls(): void {
-
-        $res = [
+    public static function enumPulls(): array {
+        return [
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_PULL_LEFT,
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_PULL_RIGHT,
         ];
-        $this->assertEquals($res, MaterialDesignIconicFontIconEnumerator::enumPulls());
     }
 
     /**
-     * Tests the enumRotates() method.
+     * Enumerates the rotates.
      *
-     * @return void
+     * @return string[] Returns the rotates enumeration.
      */
-    public function testEnumRotates(): void {
-
-        $res = [
+    public static function enumRotates(): array {
+        return [
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_ROTATE_90,
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_ROTATE_180,
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_ROTATE_270,
         ];
-        $this->assertEquals($res, MaterialDesignIconicFontIconEnumerator::enumRotates());
     }
 
     /**
-     * Tests the enumSizes() method.
+     * Enumerates the sizes.
      *
-     * @return void
+     * @return string[] Returns the sizes enumeration.
      */
-    public function testEnumSizes(): void {
-
-        $res = [
+    public static function enumSizes(): array {
+        return [
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SIZE_LG,
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SIZE_2X,
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SIZE_3X,
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SIZE_4X,
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SIZE_5X,
         ];
-        $this->assertEquals($res, MaterialDesignIconicFontIconEnumerator::enumSizes());
     }
 
     /**
-     * Tests the enumSpins() method.
+     * Enumerates the spins.
      *
-     * @return void
+     * @return string[] Returns the spins enumeration.
      */
-    public function testEnumSpins(): void {
-
-        $res = [
+    public static function enumSpins(): array {
+        return [
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SPIN,
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SPIN_REVERSE,
         ];
-        $this->assertEquals($res, MaterialDesignIconicFontIconEnumerator::enumSpins());
     }
 }

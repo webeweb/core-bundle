@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Icon;
+namespace WBW\Bundle\CoreBundle\Tests\Asset\Icon;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Icon\TestIcon;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Icon\TestIcon;
 
 /**
  * Abstract icon test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Icon
+ * @package WBW\Bundle\CoreBundle\Tests\Asset\Icon
  */
 class AbstractIconTest extends AbstractTestCase {
 
