@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Asset;
+namespace WBW\Bundle\CoreBundle\Tests\Asset\Highlighter\SyntaxHighlighter;
 
-use WBW\Bundle\CoreBundle\Asset\SyntaxHighlighterDefaults;
+use WBW\Bundle\CoreBundle\Asset\Highlighter\SyntaxHighlighter\SyntaxHighlighterDefaults;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * SyntaxHighlighter defaults test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Asset
+ * @package WBW\Bundle\CoreBundle\Tests\Asset\Highlighter\SyntaxHighlighter
  */
 class SyntaxHighlighterDefaultsTest extends AbstractTestCase {
 

@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Provider\Asset;
 
-use WBW\Bundle\CoreBundle\Asset\SyntaxHighlighterStrings;
+use WBW\Bundle\CoreBundle\Asset\Highlighter\SyntaxHighlighter\SyntaxHighlighterStrings;
 use WBW\Bundle\CoreBundle\Provider\Asset\SyntaxHighlighterStringsProvider;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
