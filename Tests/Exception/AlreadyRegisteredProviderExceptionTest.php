@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Exception;
 use Exception;
 use WBW\Bundle\CoreBundle\Exception\AlreadyRegisteredProviderException;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Theme\DefaultApplicationThemeProvider;
+use WBW\Bundle\CoreBundle\Asset\Theme\DefaultApplicationThemeProvider;
 
 /**
  * Already registered provider exception test.
@@ -37,6 +37,6 @@ class AlreadyRegisteredProviderExceptionTest extends AbstractTestCase {
 
         $obj = new AlreadyRegisteredProviderException($provider);
 
-        $this->assertEquals('The provider "WBW\\Bundle\\CoreBundle\\Theme\\DefaultApplicationThemeProvider" is already registered', $obj->getMessage());
+        $this->assertEquals('The provider "WBW\\Bundle\\CoreBundle\\Asset\\Theme\\DefaultApplicationThemeProvider" is already registered', $obj->getMessage());
     }
 }
