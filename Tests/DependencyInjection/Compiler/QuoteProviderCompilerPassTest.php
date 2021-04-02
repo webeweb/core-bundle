@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\DependencyInjection\Compiler;
 
 use WBW\Bundle\CoreBundle\DependencyInjection\Compiler\QuoteProviderCompilerPass;
-use WBW\Bundle\CoreBundle\Manager\QuoteManager;
+use WBW\Bundle\CoreBundle\Manager\Asset\QuoteManager;
 use WBW\Bundle\CoreBundle\Provider\QuoteProviderInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 

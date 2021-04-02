@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Quote;
+namespace WBW\Bundle\CoreBundle\Asset\Quote;
 
 use WBW\Library\Core\Model\Attribute\DateTimeDateTrait;
 use WBW\Library\Core\Model\Attribute\StringContentTrait;
@@ -18,7 +18,7 @@ use WBW\Library\Core\Model\Attribute\StringContentTrait;
  * Quote.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Quote
+ * @package WBW\Bundle\CoreBundle\Asset\Quote
  */
 class Quote implements QuoteInterface {
 

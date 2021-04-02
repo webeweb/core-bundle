@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Quote;
+namespace WBW\Bundle\CoreBundle\Asset\Quote;
 
 use DateTime;
 
@@ -17,7 +17,7 @@ use DateTime;
  * Quote interface.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Quote
+ * @package WBW\Bundle\CoreBundle\Asset\Quote
  */
 interface QuoteInterface {
 

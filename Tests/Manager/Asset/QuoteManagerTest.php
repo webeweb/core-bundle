@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Manager;
+namespace WBW\Bundle\CoreBundle\Tests\Manager\Asset;
 
 use Exception;
 use InvalidArgumentException;
-use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\RedColorProvider;
+use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\RedColorProvider;
 use WBW\Bundle\CoreBundle\Exception\AlreadyRegisteredProviderException;
-use WBW\Bundle\CoreBundle\Manager\QuoteManager;
+use WBW\Bundle\CoreBundle\Manager\Asset\QuoteManager;
 use WBW\Bundle\CoreBundle\Provider\QuoteProviderInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
  * Quote manager test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Manager
+ * @package WBW\Bundle\CoreBundle\Tests\Manager\Asset
  */
 class QuoteManagerTest extends AbstractTestCase {
 

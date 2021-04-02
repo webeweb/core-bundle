@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension;
 
-use WBW\Bundle\CoreBundle\Manager\QuoteManager;
+use WBW\Bundle\CoreBundle\Manager\Asset\QuoteManager;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Twig\Extension\TestQuoteTwigExtensionTrait;
 use WBW\Bundle\CoreBundle\Twig\Extension\QuoteTwigExtension;

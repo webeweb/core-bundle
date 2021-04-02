@@ -15,10 +15,10 @@ use DateTime;
 use Exception;
 use Twig\Environment;
 use Twig\TwigFunction;
-use WBW\Bundle\CoreBundle\Manager\QuoteManager;
-use WBW\Bundle\CoreBundle\Manager\QuoteManagerTrait;
+use WBW\Bundle\CoreBundle\Manager\Asset\QuoteManager;
+use WBW\Bundle\CoreBundle\Manager\Asset\QuoteManagerTrait;
 use WBW\Bundle\CoreBundle\Provider\QuoteProviderInterface;
-use WBW\Bundle\CoreBundle\Quote\QuoteInterface;
+use WBW\Bundle\CoreBundle\Asset\Quote\QuoteInterface;
 use WBW\Library\Core\Argument\Helper\ArrayHelper;
 
 /**

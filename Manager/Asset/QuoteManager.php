@@ -9,10 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Manager;
+namespace WBW\Bundle\CoreBundle\Manager\Asset;
 
 use InvalidArgumentException;
 use WBW\Bundle\CoreBundle\Exception\AlreadyRegisteredProviderException;
+use WBW\Bundle\CoreBundle\Manager\AbstractManager;
+use WBW\Bundle\CoreBundle\Manager\ManagerInterface;
 use WBW\Bundle\CoreBundle\Provider\ProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\QuoteProviderInterface;
 

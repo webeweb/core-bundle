@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Manager;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\Asset;
 
-use WBW\Bundle\CoreBundle\Manager\QuoteManagerTrait;
+use WBW\Bundle\CoreBundle\Manager\Asset\QuoteManagerTrait;
 
 /**
  * Test quote manager trait.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Manager
+ * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\Asset
  */
 class TestQuoteManagerTrait {
 

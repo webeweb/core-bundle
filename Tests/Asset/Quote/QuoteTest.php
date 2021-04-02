@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Quote;
+namespace WBW\Bundle\CoreBundle\Tests\Asset\Quote;
 
-use WBW\Bundle\CoreBundle\Quote\Quote;
+use WBW\Bundle\CoreBundle\Asset\Quote\Quote;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Quote test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Quote
+ * @package WBW\Bundle\CoreBundle\Tests\Asset\Quote
  */
 class QuoteTest extends AbstractTestCase {
 

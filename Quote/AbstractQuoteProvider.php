@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Quote;
 
+use WBW\Bundle\CoreBundle\Asset\Quote\QuoteInterface;
 use WBW\Bundle\CoreBundle\Provider\QuoteProviderInterface;
 
 /**
