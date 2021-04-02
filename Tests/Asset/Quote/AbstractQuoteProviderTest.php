@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Quote;
+namespace WBW\Bundle\CoreBundle\Tests\Asset\Quote;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Quote\TestQuoteProvider;
@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Quote\TestQuoteProvider;
  * Abstract quote provider test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Quote
+ * @package WBW\Bundle\CoreBundle\Tests\Asset\Quote
  */
 class AbstractQuoteProviderTest extends AbstractTestCase {
 

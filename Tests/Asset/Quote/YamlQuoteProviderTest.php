@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Quote;
+namespace WBW\Bundle\CoreBundle\Tests\Asset\Quote;
 
 use DateInterval;
 use DateTime;
 use Exception;
 use Symfony\Component\Filesystem\Exception\FileNotFoundException;
-use WBW\Bundle\CoreBundle\Quote\YamlQuoteProvider;
+use WBW\Bundle\CoreBundle\Asset\Quote\YamlQuoteProvider;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**

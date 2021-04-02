@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Quote;
+namespace WBW\Bundle\CoreBundle\Asset\Quote;
 
 use WBW\Bundle\CoreBundle\Asset\Quote\QuoteInterface;
 use WBW\Bundle\CoreBundle\Provider\Asset\QuoteProviderInterface;
@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Provider\Asset\QuoteProviderInterface;
  * Abstract quote provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Quote
+ * @package WBW\Bundle\CoreBundle\Asset\Quote
  * @abstract
  */
 abstract class AbstractQuoteProvider implements QuoteProviderInterface {

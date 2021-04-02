@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Quote;
+namespace WBW\Bundle\CoreBundle\Asset\Quote;
 
 use DateTime;
 use Symfony\Component\Filesystem\Exception\FileNotFoundException;
@@ -22,7 +22,7 @@ use WBW\Library\Core\Argument\Helper\ArrayHelper;
  * YAML Quote provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Quote
+ * @package WBW\Bundle\CoreBundle\Asset\Quote
  */
 class YamlQuoteProvider extends AbstractQuoteProvider {
 

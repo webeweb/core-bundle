@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Quote;
 
-use WBW\Bundle\CoreBundle\Quote\AbstractQuoteProvider;
+use WBW\Bundle\CoreBundle\Asset\Quote\AbstractQuoteProvider;
 
 /**
  * Test quote provider.
