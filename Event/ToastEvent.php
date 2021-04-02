@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Event;
 
-use WBW\Bundle\CoreBundle\Toast\ToastInterface;
+use WBW\Bundle\CoreBundle\Asset\Toast\ToastInterface;
 
 /**
  * Toast event.
