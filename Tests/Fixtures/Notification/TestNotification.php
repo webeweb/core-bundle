@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Notification;
 
-use WBW\Bundle\CoreBundle\Notification\AbstractNotification;
-use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
+use WBW\Bundle\CoreBundle\Asset\Notification\AbstractNotification;
+use WBW\Bundle\CoreBundle\Asset\Notification\NotificationInterface;
 
 /**
  * Test notification.
