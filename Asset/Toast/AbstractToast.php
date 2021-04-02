@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Toast;
+namespace WBW\Bundle\CoreBundle\Asset\Toast;
 
 /**
  * Abstract toast.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Toast
+ * @package WBW\Bundle\CoreBundle\Asset\Toast
  * @abstract
  */
 abstract class AbstractToast implements ToastInterface {

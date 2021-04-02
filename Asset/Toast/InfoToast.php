@@ -9,23 +9,22 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Toast;
+namespace WBW\Bundle\CoreBundle\Asset\Toast;
 
 /**
- * Default toast.
+ * Info toast.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Toast
+ * @package WBW\Bundle\CoreBundle\Asset\Toast
  */
-class DefaultToast extends AbstractToast {
+class InfoToast extends AbstractToast {
 
     /**
      * Constructor.
      *
-     * @param string $type The type.
      * @param string $content The content.
      */
-    public function __construct(string $type, string $content) {
-        parent::__construct($type, $content);
+    public function __construct(string $content) {
+        parent::__construct(self::TOAST_INFO, $content);
     }
 }

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Toast;
+namespace WBW\Bundle\CoreBundle\Asset\Toast;
 
 use WBW\Bundle\CoreBundle\WBWCoreInterface;
 
@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\WBWCoreInterface;
  * Toast interface.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Toast
+ * @package WBW\Bundle\CoreBundle\Asset\Toast
  */
 interface ToastInterface {
 

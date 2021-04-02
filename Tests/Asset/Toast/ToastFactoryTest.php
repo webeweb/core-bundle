@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Toast;
+namespace WBW\Bundle\CoreBundle\Tests\Asset\Toast;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Toast\ToastFactory;
-use WBW\Bundle\CoreBundle\Toast\ToastInterface;
+use WBW\Bundle\CoreBundle\Asset\Toast\ToastFactory;
+use WBW\Bundle\CoreBundle\Asset\Toast\ToastInterface;
 
 /**
  * Toast factory test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Toast
+ * @package WBW\Bundle\CoreBundle\Tests\Asset\Toast
  */
 class ToastFactoryTest extends AbstractTestCase {
 

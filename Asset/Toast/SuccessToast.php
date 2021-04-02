@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Toast;
+namespace WBW\Bundle\CoreBundle\Asset\Toast;
 
 /**
- * Warning toast.
+ * Success toast.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Toast
+ * @package WBW\Bundle\CoreBundle\Asset\Toast
  */
-class WarningToast extends AbstractToast {
+class SuccessToast extends AbstractToast {
 
     /**
      * Constructor.
@@ -25,6 +25,6 @@ class WarningToast extends AbstractToast {
      * @param string $content The content.
      */
     public function __construct(string $content) {
-        parent::__construct(self::TOAST_WARNING, $content);
+        parent::__construct(self::TOAST_SUCCESS, $content);
     }
 }

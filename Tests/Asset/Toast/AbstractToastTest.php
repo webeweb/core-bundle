@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Toast;
+namespace WBW\Bundle\CoreBundle\Tests\Asset\Toast;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Toast\TestToast;
@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Toast\TestToast;
  * Abstract toast test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Toast
+ * @package WBW\Bundle\CoreBundle\Tests\Asset\Toast
  */
 class AbstractToastTest extends AbstractTestCase {
 
