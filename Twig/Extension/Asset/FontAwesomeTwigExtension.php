@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Twig\Extension\Asset;
 
 use Twig\TwigFilter;
 use Twig\TwigFunction;
-use WBW\Bundle\CoreBundle\Icon\IconFactory;
+use WBW\Bundle\CoreBundle\Asset\Icon\IconFactory;
 use WBW\Bundle\CoreBundle\Renderer\IconRendererInterface;
 
 /**
