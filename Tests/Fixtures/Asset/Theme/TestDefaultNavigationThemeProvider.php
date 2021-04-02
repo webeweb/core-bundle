@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Theme;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Theme;
 
-use WBW\Bundle\CoreBundle\Theme\DefaultNavigationThemeProvider;
+use WBW\Bundle\CoreBundle\Asset\Theme\DefaultNavigationThemeProvider;
 
 /**
  * Test default navigation theme provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Theme
+ * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Theme
  */
 class TestDefaultNavigationThemeProvider extends DefaultNavigationThemeProvider {
 
