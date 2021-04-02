@@ -11,27 +11,27 @@
 
 namespace WBW\Bundle\CoreBundle\Helper;
 
-use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\AmberColorProvider;
-use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\BlackColorProvider;
-use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\BlueColorProvider;
-use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\BlueGreyColorProvider;
-use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\BrownColorProvider;
-use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\CyanColorProvider;
-use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\DeepOrangeColorProvider;
-use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\DeepPurpleColorProvider;
-use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\GreenColorProvider;
-use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\GreyColorProvider;
-use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\IndigoColorProvider;
-use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\LightBlueColorProvider;
-use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\LightGreenColorProvider;
-use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\LimeColorProvider;
-use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\OrangeColorProvider;
-use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\PinkColorProvider;
-use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\PurpleColorProvider;
-use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\RedColorProvider;
-use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\TealColorProvider;
-use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\WhiteColorProvider;
-use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\YellowColorProvider;
+use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\AmberColorProvider;
+use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\BlackColorProvider;
+use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\BlueColorProvider;
+use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\BlueGreyColorProvider;
+use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\BrownColorProvider;
+use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\CyanColorProvider;
+use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\DeepOrangeColorProvider;
+use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\DeepPurpleColorProvider;
+use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\GreenColorProvider;
+use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\GreyColorProvider;
+use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\IndigoColorProvider;
+use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\LightBlueColorProvider;
+use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\LightGreenColorProvider;
+use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\LimeColorProvider;
+use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\OrangeColorProvider;
+use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\PinkColorProvider;
+use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\PurpleColorProvider;
+use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\RedColorProvider;
+use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\TealColorProvider;
+use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\WhiteColorProvider;
+use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\YellowColorProvider;
 use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 
 /**
