@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Service;
+namespace WBW\Bundle\CoreBundle\Component\Routing;
 
 use Symfony\Component\Routing\RouterInterface;
 
@@ -17,7 +17,7 @@ use Symfony\Component\Routing\RouterInterface;
  * Router trait.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Service
+ * @package WBW\Bundle\CoreBundle\Component\Routing
  */
 trait RouterTrait {
 

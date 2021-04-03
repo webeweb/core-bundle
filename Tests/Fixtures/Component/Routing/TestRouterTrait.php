@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Service;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Component\Routing;
 
-use WBW\Bundle\CoreBundle\Service\RouterTrait;
+use WBW\Bundle\CoreBundle\Component\Routing\RouterTrait;
 
 /**
  * Test router trait.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Service
+ * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Component\Routing
  */
 class TestRouterTrait {
 
