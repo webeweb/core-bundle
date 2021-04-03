@@ -32,7 +32,7 @@ class ColorManager extends AbstractManager {
      *
      * @var string
      */
-    const SERVICE_NAME = "wbw.core.manager.color";
+    const SERVICE_NAME = "wbw.core.manager.asset.color";
 
     /**
      * {@inheritDoc}

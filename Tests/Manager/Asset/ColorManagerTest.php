@@ -124,7 +124,7 @@ class ColorManagerTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $this->assertEquals("wbw.core.manager.color", ColorManager::SERVICE_NAME);
+        $this->assertEquals("wbw.core.manager.asset.color", ColorManager::SERVICE_NAME);
 
         $obj = new ColorManager($this->logger);
 

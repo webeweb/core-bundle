@@ -14,7 +14,7 @@ services:
         alias:  "wbw.core.repository.repository_helper"
         public: true
 
-    wbw.core.manager.color:
+    wbw.core.manager.asset.color:
         class:  WBW\Bundle\CoreBundle\Manager\Asset\ColorManager
         arguments: [ "@logger" ]
         public: true
