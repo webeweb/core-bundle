@@ -77,7 +77,7 @@ class BlueGreyColorProviderTest extends AbstractTestCase {
 
         $obj = new BlueGreyColorProvider();
 
-        $this->assertEquals("wbw.core.provider.color.blue_grey", BlueGreyColorProvider::SERVICE_NAME);
+        $this->assertEquals("wbw.core.provider.asset.color.blue_grey", BlueGreyColorProvider::SERVICE_NAME);
         $this->assertEquals(MaterialDesignColorPaletteInterface::COLOR_DOMAIN, $obj->getDomain());
     }
 }

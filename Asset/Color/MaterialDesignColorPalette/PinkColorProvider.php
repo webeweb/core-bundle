@@ -27,7 +27,7 @@ class PinkColorProvider extends AbstractColorProvider implements PinkColorProvid
      *
      * @var string
      */
-    const SERVICE_NAME = "wbw.core.provider.color.pink";
+    const SERVICE_NAME = "wbw.core.provider.asset.color.pink";
 
     /**
      * Constructor.

@@ -85,7 +85,7 @@ class DeepPurpleColorProviderTest extends AbstractTestCase {
 
         $obj = new DeepPurpleColorProvider();
 
-        $this->assertEquals("wbw.core.provider.color.deep_purple", DeepPurpleColorProvider::SERVICE_NAME);
+        $this->assertEquals("wbw.core.provider.asset.color.deep_purple", DeepPurpleColorProvider::SERVICE_NAME);
         $this->assertEquals(MaterialDesignColorPaletteInterface::COLOR_DOMAIN, $obj->getDomain());
     }
 }

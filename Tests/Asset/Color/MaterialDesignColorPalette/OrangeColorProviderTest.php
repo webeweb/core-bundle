@@ -85,7 +85,7 @@ class OrangeColorProviderTest extends AbstractTestCase {
 
         $obj = new OrangeColorProvider();
 
-        $this->assertEquals("wbw.core.provider.color.orange", OrangeColorProvider::SERVICE_NAME);
+        $this->assertEquals("wbw.core.provider.asset.color.orange", OrangeColorProvider::SERVICE_NAME);
         $this->assertEquals(MaterialDesignColorPaletteInterface::COLOR_DOMAIN, $obj->getDomain());
     }
 }

@@ -85,7 +85,7 @@ class IndigoColorProviderTest extends AbstractTestCase {
 
         $obj = new IndigoColorProvider();
 
-        $this->assertEquals("wbw.core.provider.color.indigo", IndigoColorProvider::SERVICE_NAME);
+        $this->assertEquals("wbw.core.provider.asset.color.indigo", IndigoColorProvider::SERVICE_NAME);
         $this->assertEquals(MaterialDesignColorPaletteInterface::COLOR_DOMAIN, $obj->getDomain());
     }
 }

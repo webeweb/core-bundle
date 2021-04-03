@@ -27,7 +27,7 @@ class DeepPurpleColorProvider extends AbstractColorProvider implements DeepPurpl
      *
      * @var string
      */
-    const SERVICE_NAME = "wbw.core.provider.color.deep_purple";
+    const SERVICE_NAME = "wbw.core.provider.asset.color.deep_purple";
 
     /**
      * Constructor.

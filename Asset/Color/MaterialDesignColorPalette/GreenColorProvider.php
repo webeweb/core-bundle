@@ -27,7 +27,7 @@ class GreenColorProvider extends AbstractColorProvider implements GreenColorProv
      *
      * @var string
      */
-    const SERVICE_NAME = "wbw.core.provider.color.green";
+    const SERVICE_NAME = "wbw.core.provider.asset.color.green";
 
     /**
      * Constructor.

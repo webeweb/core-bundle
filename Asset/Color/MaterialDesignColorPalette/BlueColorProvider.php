@@ -27,7 +27,7 @@ class BlueColorProvider extends AbstractColorProvider implements BlueColorProvid
      *
      * @var string
      */
-    const SERVICE_NAME = "wbw.core.provider.color.blue";
+    const SERVICE_NAME = "wbw.core.provider.asset.color.blue";
 
     /**
      * Constructor.

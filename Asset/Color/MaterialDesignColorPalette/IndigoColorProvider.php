@@ -27,7 +27,7 @@ class IndigoColorProvider extends AbstractColorProvider implements IndigoColorPr
      *
      * @var string
      */
-    const SERVICE_NAME = "wbw.core.provider.color.indigo";
+    const SERVICE_NAME = "wbw.core.provider.asset.color.indigo";
 
     /**
      * Constructor.

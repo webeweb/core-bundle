@@ -85,7 +85,7 @@ class WhiteColorProviderTest extends AbstractTestCase {
 
         $obj = new WhiteColorProvider();
 
-        $this->assertEquals("wbw.core.provider.color.white", WhiteColorProvider::SERVICE_NAME);
+        $this->assertEquals("wbw.core.provider.asset.color.white", WhiteColorProvider::SERVICE_NAME);
         $this->assertEquals(MaterialDesignColorPaletteInterface::COLOR_DOMAIN, $obj->getDomain());
     }
 }
