@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Helper;
 use Exception;
 use InvalidArgumentException;
 use WBW\Bundle\CoreBundle\Helper\Select2Helper;
-use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
+use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationNode;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Entity\TestSelect2Item;
 

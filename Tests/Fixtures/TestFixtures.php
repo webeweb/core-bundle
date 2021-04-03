@@ -15,11 +15,11 @@ use DateInterval;
 use DateTime;
 use Exception;
 use Symfony\Component\Security\Core\User\UserInterface;
-use WBW\Bundle\CoreBundle\Navigation\DividerNode;
-use WBW\Bundle\CoreBundle\Navigation\HeaderNode;
-use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
-use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
-use WBW\Bundle\CoreBundle\Navigation\NavigationTree;
+use WBW\Bundle\CoreBundle\Asset\Navigation\DividerNode;
+use WBW\Bundle\CoreBundle\Asset\Navigation\HeaderNode;
+use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationInterface;
+use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationNode;
+use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationTree;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Entity\TestUser;
 
 /**
