@@ -43,26 +43,6 @@ services:
         tags:
             - { name: "twig.extension" }
 
-    wbw.core.twig.extension.plugin.font_awesome:
-        alias:  "wbw.core.twig.extension.asset.font_awesome"
-        public: true
-
-    wbw.core.twig.extension.plugin.jquery_inputmask:
-        alias:  "wbw.core.twig.extension.asset.jquery_inputmask"
-        public: true
-
-    wbw.core.twig.extension.plugin.material_design_color_palette:
-        alias:  "wbw.core.twig.extension.asset.material_design_color_palette"
-        public: true
-
-    wbw.core.twig.extension.plugin.material_design_iconic_font:
-        alias:  "wbw.core.twig.extension.asset.material_design_iconic_font"
-        public: true
-
-    wbw.core.twig.extension.plugin.meteocons:
-        alias:  "wbw.core.twig.extension.asset.meteocons"
-        public: true
-
     wbw.core.twig.extension.javascript:
         class:  WBW\Bundle\CoreBundle\Twig\Extension\JavascriptTwigExtension
         arguments: [ "@twig" ]
