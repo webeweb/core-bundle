@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Service;
+namespace WBW\Bundle\CoreBundle\Component\Translation;
 
 use WBW\Bundle\CoreBundle\Component\Translation\BaseTranslatorInterface;
 
@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Component\Translation\BaseTranslatorInterface;
  * Translator trait.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Service
+ * @package WBW\Bundle\CoreBundle\Component\Translation
  */
 trait TranslatorTrait {
 
