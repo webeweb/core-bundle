@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension;
+namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension\Asset;
 
 use Exception;
 use Twig\Node\Node;
@@ -18,13 +18,13 @@ use WBW\Bundle\CoreBundle\Asset\Quote\YamlQuoteProvider;
 use WBW\Bundle\CoreBundle\Manager\Asset\QuoteManager;
 use WBW\Bundle\CoreBundle\Provider\Asset\QuoteProviderInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Twig\Extension\QuoteTwigExtension;
+use WBW\Bundle\CoreBundle\Twig\Extension\Asset\QuoteTwigExtension;
 
 /**
  * Quote Twig extension test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Twig\Extension
+ * @package WBW\Bundle\CoreBundle\Tests\Twig\Extension\Asset
  */
 class QuoteTwigExtensionTest extends AbstractTestCase {
 
@@ -188,7 +188,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $this->assertEquals("wbw.core.twig.extension.quote", QuoteTwigExtension::SERVICE_NAME);
+        $this->assertEquals("wbw.core.twig.extension.asset.quote", QuoteTwigExtension::SERVICE_NAME);
 
         $obj = new QuoteTwigExtension($this->twigEnvironment, $this->quoteManager);
 

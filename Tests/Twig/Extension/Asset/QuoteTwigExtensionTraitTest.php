@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension;
+namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension\Asset;
 
 use WBW\Bundle\CoreBundle\Manager\Asset\QuoteManager;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Twig\Extension\TestQuoteTwigExtensionTrait;
-use WBW\Bundle\CoreBundle\Twig\Extension\QuoteTwigExtension;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Twig\Extension\Asset\TestQuoteTwigExtensionTrait;
+use WBW\Bundle\CoreBundle\Twig\Extension\Asset\QuoteTwigExtension;
 
 /**
  * Quote Twig extension trait test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Twig\Extension
+ * @package WBW\Bundle\CoreBundle\Tests\Twig\Extension\Asset
  */
 class QuoteTwigExtensionTraitTest extends AbstractTestCase {
 

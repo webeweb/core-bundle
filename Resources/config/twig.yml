@@ -36,6 +36,13 @@ services:
         tags:
             - { name: "twig.extension" }
 
+    wbw.core.twig.extension.asset.quote:
+        class:  WBW\Bundle\CoreBundle\Twig\Extension\Asset\QuoteTwigExtension
+        arguments: [ "@twig", "@wbw.core.manager.asset.quote" ]
+        public: true
+        tags:
+            - { name: "twig.extension" }
+
     wbw.core.twig.extension.asset.syntax_highlighter:
         class:  WBW\Bundle\CoreBundle\Twig\Extension\Asset\SyntaxHighlighterTwigExtension
         arguments: [ "@twig" ]
@@ -46,13 +53,6 @@ services:
     wbw.core.twig.extension.javascript:
         class:  WBW\Bundle\CoreBundle\Twig\Extension\JavascriptTwigExtension
         arguments: [ "@twig" ]
-        public: true
-        tags:
-            - { name: "twig.extension" }
-
-    wbw.core.twig.extension.quote:
-        class:  WBW\Bundle\CoreBundle\Twig\Extension\QuoteTwigExtension
-        arguments: [ "@twig", "@wbw.core.manager.asset.quote" ]
         public: true
         tags:
             - { name: "twig.extension" }

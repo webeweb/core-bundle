@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Twig\Extension;
+namespace WBW\Bundle\CoreBundle\Twig\Extension\Asset;
 
 /**
  * Quote Twig extension trait.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Twig\Extension
+ * @package WBW\Bundle\CoreBundle\Twig\Extension\Asset
  */
 trait QuoteTwigExtensionTrait {
 

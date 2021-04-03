@@ -56,7 +56,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Asset\MeteoconsTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\Asset\SyntaxHighlighterTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\ContainerTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\JavascriptTwigExtension;
-use WBW\Bundle\CoreBundle\Twig\Extension\QuoteTwigExtension;
+use WBW\Bundle\CoreBundle\Twig\Extension\Asset\QuoteTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\StylesheetTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\UtilityTwigExtension;
