@@ -11,8 +11,6 @@
 
 namespace WBW\Bundle\CoreBundle\Component\Translation;
 
-use WBW\Bundle\CoreBundle\Component\Translation\BaseTranslatorInterface;
-
 /**
  * Translator trait.
  *

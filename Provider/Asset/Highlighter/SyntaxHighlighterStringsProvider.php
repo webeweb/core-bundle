@@ -13,8 +13,8 @@ namespace WBW\Bundle\CoreBundle\Provider\Asset\Highlighter;
 
 use WBW\Bundle\CoreBundle\Asset\Highlighter\SyntaxHighlighter\SyntaxHighlighterStrings;
 use WBW\Bundle\CoreBundle\Component\Translation\BaseTranslatorInterface;
-use WBW\Bundle\CoreBundle\Provider\ProviderInterface;
 use WBW\Bundle\CoreBundle\Component\Translation\TranslatorTrait;
+use WBW\Bundle\CoreBundle\Provider\ProviderInterface;
 use WBW\Bundle\CoreBundle\Translation\TranslationInterface;
 
 /**
