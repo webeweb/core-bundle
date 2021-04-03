@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Asset\Theme;
 
-use WBW\Bundle\CoreBundle\Asset\Theme\DefaultNavigationThemeProvider;
 use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationTree;
+use WBW\Bundle\CoreBundle\Asset\Theme\DefaultNavigationThemeProvider;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Theme\TestDefaultNavigationThemeProvider;
 

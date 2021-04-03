@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Asset\Color;
 
-use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\RedColorProvider;
 use WBW\Bundle\CoreBundle\Asset\Color\ColorHelper;
+use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\RedColorProvider;
 use WBW\Bundle\CoreBundle\Provider\Asset\Color\AmberColorProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\Asset\Color\BlackColorProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\Asset\Color\BlueColorProviderInterface;
