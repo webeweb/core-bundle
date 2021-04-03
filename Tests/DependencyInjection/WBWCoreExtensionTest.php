@@ -74,7 +74,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
      *
      * @var string
      */
-    const WORLDS_WISDOM_QUOTE_PROVIDER_SERVICE_NAME = "wbw.core.provider.quote.worlds_wisdom";
+    const WORLDS_WISDOM_QUOTE_PROVIDER_SERVICE_NAME = "wbw.core.provider.asset.quote.worlds_wisdom";
 
     /**
      * Configs.
