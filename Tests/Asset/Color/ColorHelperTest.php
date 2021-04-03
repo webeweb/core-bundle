@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Helper;
+namespace WBW\Bundle\CoreBundle\Tests\Asset\Color;
 
 use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\RedColorProvider;
-use WBW\Bundle\CoreBundle\Helper\ColorHelper;
+use WBW\Bundle\CoreBundle\Asset\Color\ColorHelper;
 use WBW\Bundle\CoreBundle\Provider\Asset\Color\AmberColorProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\Asset\Color\BlackColorProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\Asset\Color\BlueColorProviderInterface;
@@ -40,7 +40,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
  * Color helper test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Helper
+ * @package WBW\Bundle\CoreBundle\Tests\Asset\Color
  */
 class ColorHelperTest extends AbstractTestCase {
 

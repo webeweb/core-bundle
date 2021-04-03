@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Helper;
+namespace WBW\Bundle\CoreBundle\Asset\Color;
 
 use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\AmberColorProvider;
 use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\BlackColorProvider;
@@ -38,7 +38,7 @@ use WBW\Bundle\CoreBundle\Provider\Asset\ColorProviderInterface;
  * Color helper.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Helper
+ * @package WBW\Bundle\CoreBundle\Asset\Color
  */
 class ColorHelper {
 
