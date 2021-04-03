@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Provider\Asset;
+namespace WBW\Bundle\CoreBundle\Tests\Provider\Asset\Highlighter;
 
 use WBW\Bundle\CoreBundle\Asset\Highlighter\SyntaxHighlighter\SyntaxHighlighterStrings;
-use WBW\Bundle\CoreBundle\Provider\Asset\SyntaxHighlighterStringsProvider;
+use WBW\Bundle\CoreBundle\Provider\Asset\Highlighter\SyntaxHighlighterStringsProvider;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * SyntaxHighlighter strings provider test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Provider\Asset
+ * @package WBW\Bundle\CoreBundle\Tests\Provider\Asset\Highlighter
  */
 class SyntaxHighlighterStringsProviderTest extends AbstractTestCase {
 
@@ -52,6 +52,6 @@ class SyntaxHighlighterStringsProviderTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $this->assertEquals("wbw.core.provider.asset.syntax_highlighter_strings", SyntaxHighlighterStringsProvider::SERVICE_NAME);
+        $this->assertEquals("wbw.core.provider.asset.highlighter.syntax_highlighter_strings", SyntaxHighlighterStringsProvider::SERVICE_NAME);
     }
 }

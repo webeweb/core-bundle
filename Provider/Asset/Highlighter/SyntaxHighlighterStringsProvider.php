@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Provider\Asset;
+namespace WBW\Bundle\CoreBundle\Provider\Asset\Highlighter;
 
 use WBW\Bundle\CoreBundle\Asset\Highlighter\SyntaxHighlighter\SyntaxHighlighterStrings;
 use WBW\Bundle\CoreBundle\Component\Translation\BaseTranslatorInterface;
@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Translation\TranslationInterface;
  * SyntaxHighlighter strings provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Provider\Asset
+ * @package WBW\Bundle\CoreBundle\Provider\Asset\Highlighter
  */
 class SyntaxHighlighterStringsProvider implements ProviderInterface {
 
@@ -32,7 +32,7 @@ class SyntaxHighlighterStringsProvider implements ProviderInterface {
      *
      * @var string
      */
-    const SERVICE_NAME = "wbw.core.provider.asset.syntax_highlighter_strings";
+    const SERVICE_NAME = "wbw.core.provider.asset.highlighter.syntax_highlighter_strings";
 
     /**
      * Constructor.
