@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Service;
+namespace WBW\Bundle\CoreBundle\Tests\Component\HttpFoundation\Session;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Service\TestSessionTrait;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Component\HttpFoundation\Session\TestSessionTrait;
 
 /**
  * Session trait test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Service
+ * @package WBW\Bundle\CoreBundle\Tests\Component\HttpFoundation\Session
  */
 class SessionTraitTest extends AbstractTestCase {
 
