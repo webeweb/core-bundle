@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Renderer;
+namespace WBW\Bundle\CoreBundle\Asset\Icon;
 
 /**
  * Icon renderer interface.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Twig\Extension
+ * @package WBW\Bundle\CoreBundle\Asset\Icon
  */
 interface IconRendererInterface {
 

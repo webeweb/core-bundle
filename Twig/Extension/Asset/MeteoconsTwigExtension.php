@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Twig\Extension\Asset;
 
 use Twig\TwigFunction;
-use WBW\Bundle\CoreBundle\Renderer\IconRendererInterface;
+use WBW\Bundle\CoreBundle\Asset\Icon\IconRendererInterface;
 use WBW\Library\Core\Argument\Helper\ArrayHelper;
 
 /**
