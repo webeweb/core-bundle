@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Service;
+namespace WBW\Bundle\CoreBundle\Component\EventDispatcher;
 
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
@@ -17,7 +17,7 @@ use Symfony\Component\EventDispatcher\EventDispatcherInterface;
  * Event dispatcher trait.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Service
+ * @package WBW\Bundle\CoreBundle\Component\EventDispatcher
  */
 trait EventDispatcherTrait {
 

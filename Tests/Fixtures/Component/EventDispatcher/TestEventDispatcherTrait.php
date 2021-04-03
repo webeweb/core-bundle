@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Service;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Component\EventDispatcher;
 
-use WBW\Bundle\CoreBundle\Service\EventDispatcherTrait;
+use WBW\Bundle\CoreBundle\Component\EventDispatcher\EventDispatcherTrait;
 
 /**
  * Test event dispatcher trait.
