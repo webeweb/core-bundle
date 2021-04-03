@@ -19,7 +19,7 @@ services:
         arguments: [ "@logger" ]
         public: true
 
-    wbw.core.manager.quote:
+    wbw.core.manager.asset.quote:
         class:  WBW\Bundle\CoreBundle\Manager\Asset\QuoteManager
         arguments: [ "@logger" ]
         public: true

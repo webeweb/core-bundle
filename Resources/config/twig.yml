@@ -52,7 +52,7 @@ services:
 
     wbw.core.twig.extension.quote:
         class:  WBW\Bundle\CoreBundle\Twig\Extension\QuoteTwigExtension
-        arguments: [ "@twig", "@wbw.core.manager.quote" ]
+        arguments: [ "@twig", "@wbw.core.manager.asset.quote" ]
         public: true
         tags:
             - { name: "twig.extension" }

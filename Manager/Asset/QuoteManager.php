@@ -31,7 +31,7 @@ class QuoteManager extends AbstractManager {
      *
      * @var string
      */
-    const SERVICE_NAME = "wbw.core.manager.quote";
+    const SERVICE_NAME = "wbw.core.manager.asset.quote";
 
     /**
      * {@inheritDoc}
