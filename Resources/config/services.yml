@@ -24,7 +24,7 @@ services:
         arguments: [ "@logger" ]
         public: true
 
-    wbw.core.manager.theme:
+    wbw.core.manager.asset.theme:
         class:  WBW\Bundle\CoreBundle\Manager\Asset\ThemeManager
         arguments: [ "@logger", "@twig" ]
         public: true

@@ -35,7 +35,7 @@ class ThemeManager extends AbstractThemeManager {
      *
      * @var string
      */
-    const SERVICE_NAME = "wbw.core.manager.theme";
+    const SERVICE_NAME = "wbw.core.manager.asset.theme";
 
     /**
      * Get the application theme provider.
