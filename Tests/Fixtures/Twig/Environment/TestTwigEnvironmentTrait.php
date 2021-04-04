@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Service;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Twig\Environment;
 
-use WBW\Bundle\CoreBundle\Service\TwigEnvironmentTrait;
+use WBW\Bundle\CoreBundle\Twig\Environment\TwigEnvironmentTrait;
 
 /**
  * Test Twig environment trait.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Service
+ * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Twig\Environment
  */
 class TestTwigEnvironmentTrait {
 

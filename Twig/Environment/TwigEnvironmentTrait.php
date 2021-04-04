@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Service;
+namespace WBW\Bundle\CoreBundle\Twig\Environment;
 
 use Twig\Environment;
 
@@ -17,7 +17,7 @@ use Twig\Environment;
  * Twig environment trait.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Service
+ * @package WBW\Bundle\CoreBundle\Twig\Environment
  */
 trait TwigEnvironmentTrait {
 
