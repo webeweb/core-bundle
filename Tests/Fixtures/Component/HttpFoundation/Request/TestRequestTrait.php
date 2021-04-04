@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Model;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Component\HttpFoundation\Request;
 
-use WBW\Bundle\CoreBundle\Model\RequestTrait;
+use WBW\Bundle\CoreBundle\Component\HttpFoundation\Request\RequestTrait;
 
 /**
  * Test request trait.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Model
+ * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Component\HttpFoundation\Request
  */
 class TestRequestTrait {
 

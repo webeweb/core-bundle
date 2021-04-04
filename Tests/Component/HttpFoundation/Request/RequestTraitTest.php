@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Model;
+namespace WBW\Bundle\CoreBundle\Tests\Component\HttpFoundation\Request;
 
 use Symfony\Component\HttpFoundation\Request;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestRequestTrait;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Component\HttpFoundation\Request\TestRequestTrait;
 
 /**
  * Request trait test.

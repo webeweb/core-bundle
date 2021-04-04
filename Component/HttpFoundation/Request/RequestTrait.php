@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Model;
+namespace WBW\Bundle\CoreBundle\Component\HttpFoundation\Request;
 
 use Symfony\Component\HttpFoundation\Request;
 
@@ -17,7 +17,7 @@ use Symfony\Component\HttpFoundation\Request;
  * Request trait.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Model
+ * @package WBW\Bundle\CoreBundle\Component\HttpFoundation\Request
  */
 trait RequestTrait {
 
