@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Tests\Twig\Extension;
+namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension;
 
 use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\ContainerTwigExtension;
  * Container Twig extension test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package Tests\Twig\Extension
+ * @package WBW\Bundle\CoreBundle\Tests\Twig\Extension
  */
 class ContainerTwigExtensionTest extends AbstractTestCase {
 

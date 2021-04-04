@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Twig\Extension;
 use Symfony\Component\DependencyInjection\Container;
 use Twig\TwigFilter;
 use Twig\TwigFunction;
-use WBW\Bundle\CoreBundle\DependencyInjection\ContainerTrait;
+use WBW\Bundle\CoreBundle\Component\DependencyInjection\Container\ContainerTrait;
 
 /**
  * Container Twig extension.
