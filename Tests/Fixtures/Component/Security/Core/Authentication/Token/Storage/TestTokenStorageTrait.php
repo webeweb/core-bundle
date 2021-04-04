@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Service;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Component\Security\Core\Authentication\Token\Storage;
 
-use WBW\Bundle\CoreBundle\Service\TokenStorageTrait;
+use WBW\Bundle\CoreBundle\Component\Security\Core\Authentication\Token\Storage\TokenStorageTrait;
 
 /**
  * Test token storage trait.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Service
+ * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Component\Security\Core\Authentication\Token\Storage
  */
 class TestTokenStorageTrait {
 

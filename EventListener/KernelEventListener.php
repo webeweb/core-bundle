@@ -25,7 +25,7 @@ use WBW\Bundle\CoreBundle\Manager\Asset\ThemeManagerTrait;
 use WBW\Bundle\CoreBundle\Model\RequestTrait;
 use WBW\Bundle\CoreBundle\Model\UserTrait;
 use WBW\Bundle\CoreBundle\Service\SwiftMailerTrait;
-use WBW\Bundle\CoreBundle\Service\TokenStorageTrait;
+use WBW\Bundle\CoreBundle\Component\Security\Core\Authentication\Token\Storage\TokenStorageTrait;
 
 /**
  * Kernel event listener.

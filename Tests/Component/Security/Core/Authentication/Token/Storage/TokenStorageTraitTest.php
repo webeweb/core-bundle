@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Service;
+namespace WBW\Bundle\CoreBundle\Tests\Component\Security\Core\Authentication\Token\Storage;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Service\TestTokenStorageTrait;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Component\Security\Core\Authentication\Token\Storage\TestTokenStorageTrait;
 
 /**
  * Token storage trait test.
