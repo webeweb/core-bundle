@@ -34,16 +34,4 @@ class UserTraitTest extends AbstractTestCase {
         $obj->setUser($this->user);
         $this->assertSame($this->user, $obj->getUser());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__constructor(): void {
-
-        $obj = new TestUserTrait();
-
-        $this->assertNull($obj->getUser());
-    }
 }

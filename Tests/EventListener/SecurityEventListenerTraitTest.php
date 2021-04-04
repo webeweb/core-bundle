@@ -42,16 +42,4 @@ class SecurityEventListenerTraitTest extends AbstractTestCase {
         $obj->setSecurityEventListener($securityEventListener);
         $this->assertSame($securityEventListener, $obj->getSecurityEventListener());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__constructor(): void {
-
-        $obj = new TestSecurityEventListenerTrait();
-
-        $this->assertNull($obj->getSecurityEventListener());
-    }
 }

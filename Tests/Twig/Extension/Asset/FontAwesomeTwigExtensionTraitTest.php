@@ -38,16 +38,4 @@ class FontAwesomeTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setFontAwesomeTwigExtension($fontAwesomeTwigExtension);
         $this->assertSame($fontAwesomeTwigExtension, $obj->getFontAwesomeTwigExtension());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__constructor(): void {
-
-        $obj = new TestFontAwesomeTwigExtensionTrait();
-
-        $this->assertNull($obj->getFontAwesomeTwigExtension());
-    }
 }

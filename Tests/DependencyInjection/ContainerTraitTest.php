@@ -34,16 +34,4 @@ class ContainerTraitTest extends AbstractTestCase {
         $obj->setContainer($this->containerBuilder);
         $this->assertSame($this->containerBuilder, $obj->getContainer());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__constructor(): void {
-
-        $obj = new TestContainerTrait();
-
-        $this->assertNull($obj->getContainer());
-    }
 }

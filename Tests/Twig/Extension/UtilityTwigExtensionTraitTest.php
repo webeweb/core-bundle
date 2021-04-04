@@ -38,16 +38,4 @@ class UtilityTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setUtilityTwigExtension($utilityTwigExtension);
         $this->assertSame($utilityTwigExtension, $obj->getUtilityTwigExtension());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__constructor(): void {
-
-        $obj = new TestUtilityTwigExtensionTrait();
-
-        $this->assertNull($obj->getUtilityTwigExtension());
-    }
 }

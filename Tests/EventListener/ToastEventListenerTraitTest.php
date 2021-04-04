@@ -38,16 +38,4 @@ class ToastEventListenerTraitTest extends AbstractTestCase {
         $obj->setToastEventListener($toastEventListener);
         $this->assertSame($toastEventListener, $obj->getToastEventListener());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__constructor(): void {
-
-        $obj = new TestToastEventListenerTrait();
-
-        $this->assertNull($obj->getToastEventListener());
-    }
 }

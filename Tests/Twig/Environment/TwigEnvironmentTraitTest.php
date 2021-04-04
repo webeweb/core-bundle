@@ -34,16 +34,4 @@ class TwigEnvironmentTraitTest extends AbstractTestCase {
         $obj->setTwigEnvironment($this->twigEnvironment);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__constructor(): void {
-
-        $obj = new TestTwigEnvironmentTrait();
-
-        $this->assertNull($obj->getTwigEnvironment());
-    }
 }

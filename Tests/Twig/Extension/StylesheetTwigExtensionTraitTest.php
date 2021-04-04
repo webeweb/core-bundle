@@ -38,16 +38,4 @@ class StylesheetTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setStylesheetTwigExtension($stylesheetTwigExtension);
         $this->assertSame($stylesheetTwigExtension, $obj->getStylesheetTwigExtension());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__constructor(): void {
-
-        $obj = new TestStylesheetTwigExtensionTrait();
-
-        $this->assertNull($obj->getStylesheetTwigExtension());
-    }
 }

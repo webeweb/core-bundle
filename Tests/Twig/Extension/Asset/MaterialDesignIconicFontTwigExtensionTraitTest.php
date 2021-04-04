@@ -38,16 +38,4 @@ class MaterialDesignIconicFontTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setMaterialDesignIconicFontTwigExtension($materialDesignIconicFontTwigExtension);
         $this->assertSame($materialDesignIconicFontTwigExtension, $obj->getMaterialDesignIconicFontTwigExtension());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__constructor(): void {
-
-        $obj = new TestMaterialDesignIconicFontTwigExtensionTrait();
-
-        $this->assertNull($obj->getMaterialDesignIconicFontTwigExtension());
-    }
 }

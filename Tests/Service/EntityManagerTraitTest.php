@@ -34,16 +34,4 @@ class EntityManagerTraitTest extends AbstractTestCase {
         $obj->setEntityManager($this->entityManager);
         $this->assertSame($this->entityManager, $obj->getEntityManager());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__constructor(): void {
-
-        $obj = new TestEntityManagerTrait();
-
-        $this->assertNull($obj->getEntityManager());
-    }
 }

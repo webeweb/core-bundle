@@ -38,16 +38,4 @@ class NotificationEventListenerTraitTest extends AbstractTestCase {
         $obj->setNotificationEventListener($notificationEventListener);
         $this->assertSame($notificationEventListener, $obj->getNotificationEventListener());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__constructor(): void {
-
-        $obj = new TestNotificationEventListenerTrait();
-
-        $this->assertNull($obj->getNotificationEventListener());
-    }
 }

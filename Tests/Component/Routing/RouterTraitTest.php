@@ -34,16 +34,4 @@ class RouterTraitTest extends AbstractTestCase {
         $obj->setRouter($this->router);
         $this->assertSame($this->router, $obj->getRouter());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__constructor(): void {
-
-        $obj = new TestRouterTrait();
-
-        $this->assertNull($obj->getRouter());
-    }
 }

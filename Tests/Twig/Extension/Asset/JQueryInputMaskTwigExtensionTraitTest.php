@@ -39,16 +39,4 @@ class JQueryInputMaskTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setJQueryInputMaskTwigExtension($jQueryInputMaskTwigExtension);
         $this->assertSame($jQueryInputMaskTwigExtension, $obj->getJQueryInputMaskTwigExtension());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__constructor(): void {
-
-        $obj = new TestJQueryInputMaskTwigExtensionTrait();
-
-        $this->assertNull($obj->getJQueryInputMaskTwigExtension());
-    }
 }

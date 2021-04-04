@@ -38,16 +38,4 @@ class JavascriptTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setJavascriptTwigExtension($javascriptTwigExtension);
         $this->assertSame($javascriptTwigExtension, $obj->getJavascriptTwigExtension());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__constructor(): void {
-
-        $obj = new TestJavascriptTwigExtensionTrait();
-
-        $this->assertNull($obj->getJavascriptTwigExtension());
-    }
 }

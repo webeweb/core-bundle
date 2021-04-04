@@ -34,16 +34,4 @@ class StringEnvironmentTraitTest extends AbstractTestCase {
         $obj->setEnvironment("environment");
         $this->assertEquals("environment", $obj->getEnvironment());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__constructor(): void {
-
-        $obj = new TestStringEnvironmentTrait();
-
-        $this->assertNull($obj->getEnvironment());
-    }
 }

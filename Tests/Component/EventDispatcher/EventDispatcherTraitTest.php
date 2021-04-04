@@ -34,16 +34,4 @@ class EventDispatcherTraitTest extends AbstractTestCase {
         $obj->setEventDispatcher($this->eventDispatcher);
         $this->assertSame($this->eventDispatcher, $obj->getEventDispatcher());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__constructor(): void {
-
-        $obj = new TestEventDispatcherTrait();
-
-        $this->assertNull($obj->getEventDispatcher());
-    }
 }

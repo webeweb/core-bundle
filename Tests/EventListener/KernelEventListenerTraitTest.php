@@ -56,16 +56,4 @@ class EventDispatcherTraitTest extends AbstractTestCase {
         $obj->setKernelEventListener($kernelEventListener);
         $this->assertSame($kernelEventListener, $obj->getKernelEventListener());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__constructor(): void {
-
-        $obj = new TestKernelEventListenerTrait();
-
-        $this->assertNull($obj->getKernelEventListener());
-    }
 }

@@ -39,16 +39,4 @@ class QuoteTwigExtensionTraitTest extends AbstractTestCase {
         $obj->setQuoteTwigExtension($quoteTwigExtension);
         $this->assertSame($quoteTwigExtension, $obj->getQuoteTwigExtension());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__constructor(): void {
-
-        $obj = new TestQuoteTwigExtensionTrait();
-
-        $this->assertNull($obj->getQuoteTwigExtension());
-    }
 }
