@@ -20,11 +20,11 @@ use WBW\Bundle\CoreBundle\Component\HttpFoundation\Request\RequestTrait;
 use WBW\Bundle\CoreBundle\Component\HttpKernel\Event\BaseExceptionEvent;
 use WBW\Bundle\CoreBundle\Component\HttpKernel\Event\BaseRequestEvent;
 use WBW\Bundle\CoreBundle\Component\Security\Core\Authentication\Token\Storage\TokenStorageTrait;
+use WBW\Bundle\CoreBundle\Component\Security\Core\User\UserTrait;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
 use WBW\Bundle\CoreBundle\Exception\RedirectResponseException;
 use WBW\Bundle\CoreBundle\Manager\Asset\ThemeManager;
 use WBW\Bundle\CoreBundle\Manager\Asset\ThemeManagerTrait;
-use WBW\Bundle\CoreBundle\Model\UserTrait;
 use WBW\Bundle\CoreBundle\Service\SwiftMailerTrait;
 
 /**

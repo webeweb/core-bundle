@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Model;
+namespace WBW\Bundle\CoreBundle\Component\Security\Core\User;
 
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -17,7 +17,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
  * User trait.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Model
+ * @package WBW\Bundle\CoreBundle\Component\Security\Core\User
  */
 trait UserTrait {
 
