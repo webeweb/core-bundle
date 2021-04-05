@@ -64,11 +64,7 @@ class YamlQuoteProvider extends AbstractQuoteProvider {
      */
     public function init(): void {
 
-        if (false === file_exists($this->filename)) {
-            return;
-        }
-
-        $fileContent = file_get_contents($this->filename);
+        $fileContent = file_get_contents($this->getFilename());
 
         $yamlContent = Yaml::parse($fileContent);
 
