@@ -36,7 +36,7 @@ class Quote implements QuoteInterface {
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
+        // NOTHING TO DO
     }
 
     /**

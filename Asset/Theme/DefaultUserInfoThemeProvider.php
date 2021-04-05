@@ -25,7 +25,7 @@ class DefaultUserInfoThemeProvider implements UserInfoThemeProviderInterface {
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
+        // NOTHING TO DO
     }
 
     /**

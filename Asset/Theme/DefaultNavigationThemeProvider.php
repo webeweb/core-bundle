@@ -31,7 +31,7 @@ class DefaultNavigationThemeProvider implements NavigationThemeProviderInterface
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
+        // NOTHING TO DO
     }
 
     /**

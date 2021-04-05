@@ -25,7 +25,7 @@ class DefaultBreadcrumbsThemeProvider implements BreadcrumbsThemeProviderInterfa
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
+        // NOTHING TO DO
     }
 
     /**

@@ -25,7 +25,7 @@ class DefaultTasksDropDownThemeProvider implements TasksDropDownThemeProviderInt
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
+        // NOTHING TO DO
     }
 
     /**

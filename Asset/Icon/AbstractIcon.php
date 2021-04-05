@@ -38,7 +38,7 @@ abstract class AbstractIcon implements IconInterface {
      * Constructor.
      */
     protected function __construct() {
-        // NOTHING TO DO.
+        // NOTHING TO DO
     }
 
     /**

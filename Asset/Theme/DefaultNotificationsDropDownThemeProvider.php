@@ -25,7 +25,7 @@ class DefaultNotificationsDropDownThemeProvider implements NotificationsDropDown
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
+        // NOTHING TO DO
     }
 
     /**

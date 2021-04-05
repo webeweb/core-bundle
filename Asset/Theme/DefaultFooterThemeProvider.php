@@ -25,7 +25,7 @@ class DefaultFooterThemeProvider implements FooterThemeProviderInterface {
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
+        // NOTHING TO DO
     }
 
     /**

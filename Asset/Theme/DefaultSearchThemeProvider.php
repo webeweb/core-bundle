@@ -25,7 +25,7 @@ class DefaultSearchThemeProvider implements SearchThemeProviderInterface {
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
+        // NOTHING TO DO
     }
 
     /**

@@ -25,7 +25,7 @@ class DefaultHookDropDownThemeProvider implements HookDropDownThemeProviderInter
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
+        // NOTHING TO DO
     }
 
     /**
