@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Asset\Navigation\HeaderNode;
 use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationNode;
 use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationTree;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Entity\TestUser;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser;
 
 /**
  * Test fixtures.

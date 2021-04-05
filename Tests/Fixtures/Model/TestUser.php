@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Entity;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Model;
 
 use FOS\UserBundle\Model\User as BaseUser;
 use WBW\Library\Core\Model\Attribute\IntegerIdTrait;
@@ -18,7 +18,7 @@ use WBW\Library\Core\Model\Attribute\IntegerIdTrait;
  * Test user.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Entity
+ * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Model
  */
 class TestUser extends BaseUser {
 

@@ -16,7 +16,7 @@ use Exception;
 use WBW\Bundle\CoreBundle\Model\RepositoryReport;
 use WBW\Bundle\CoreBundle\Repository\RepositoryHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Entity\TestUser;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser;
 
 /**
  * Repository helper test.

@@ -1,5 +1,5 @@
 # Tests/Fixtures/App/config/doctrine/TestUser.orm.yml
-WBW\Bundle\CoreBundle\Tests\Fixtures\Entity\TestUser:
+WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser:
 
     type:  "entity"
     table: "fos_user"
