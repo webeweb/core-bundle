@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Entity;
+namespace WBW\Bundle\CoreBundle\Asset\Select;
 
 /**
  * Choice label interface.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Entity
+ * @package WBW\Bundle\CoreBundle\Asset\Select
  */
 interface ChoiceLabelInterface {
 

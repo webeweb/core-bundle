@@ -13,10 +13,10 @@ namespace WBW\Bundle\CoreBundle\Tests\Form\Factory;
 
 use Closure;
 use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationNode;
-use WBW\Bundle\CoreBundle\Entity\ChoiceValueInterface;
+use WBW\Bundle\CoreBundle\Asset\Select\ChoiceValueInterface;
 use WBW\Bundle\CoreBundle\Form\Factory\FormFactory;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Entity\TestChoiceValue;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Select\TestChoiceValue;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Form\Factory\TestFormFactory;
 
 /**
