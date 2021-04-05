@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\DependencyInjection;
+namespace WBW\Bundle\CoreBundle\Component\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 use Symfony\Component\Config\Definition\Builder\NodeDefinition;
@@ -21,7 +21,7 @@ use Symfony\Component\Yaml\Yaml;
  * Configuration helper.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\DependencyInjection
+ * @package WBW\Bundle\CoreBundle\Component\DependencyInjection
  */
 class ConfigurationHelper {
 

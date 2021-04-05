@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace DependencyInjection;
+namespace WBW\Bundle\CoreBundle\Tests\Component\DependencyInjection;
 
-use WBW\Bundle\CoreBundle\DependencyInjection\ConfigurationHelper;
+use WBW\Bundle\CoreBundle\Component\DependencyInjection\ConfigurationHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Configuration helper test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package DependencyInjection
+ * @package WBW\Bundle\CoreBundle\Tests\Component\DependencyInjection
  */
 class ConfigurationHelperTest extends AbstractTestCase {
 
