@@ -22,7 +22,7 @@ use WBW\Bundle\CoreBundle\Provider\ProviderInterface;
  * Quote manager.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Manager
+ * @package WBW\Bundle\CoreBundle\Manager\Asset
  */
 class QuoteManager extends AbstractManager {
 

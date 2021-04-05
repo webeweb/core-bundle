@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Component\HttpFoundation\Request\TestRe
  * Request trait test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Model
+ * @package WBW\Bundle\CoreBundle\Tests\Component\HttpFoundation\Request
  */
 class RequestTraitTest extends AbstractTestCase {
 

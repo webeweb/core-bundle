@@ -15,7 +15,7 @@ namespace WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette;
  * Material Design Color Palette interface.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Asset\Color
+ * @package WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette
  */
 interface MaterialDesignColorPaletteInterface {
 

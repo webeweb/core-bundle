@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\TestsIcon;
+namespace WBW\Bundle\CoreBundle\Tests\Icon;
 
 use WBW\Bundle\CoreBundle\Asset\Icon\IconInterface;
 use WBW\Bundle\CoreBundle\Asset\Icon\IconRenderer;
@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
  * Icon renderer test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\TestsIcon
+ * @package WBW\Bundle\CoreBundle\Tests\Icon
  */
 class IconRendererTest extends AbstractTestCase {
 

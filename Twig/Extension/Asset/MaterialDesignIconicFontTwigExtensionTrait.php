@@ -15,7 +15,7 @@ namespace WBW\Bundle\CoreBundle\Twig\Extension\Asset;
  * Material Design Iconic font Twig extension trait.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Twig\Extension
+ * @package WBW\Bundle\CoreBundle\Twig\Extension\Asset
  */
 trait MaterialDesignIconicFontTwigExtensionTrait {
 
