@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Helper;
+namespace WBW\Bundle\CoreBundle\Tests\Component\Security\Core\User;
 
 use Symfony\Component\Security\Core\User\User;
-use WBW\Bundle\CoreBundle\Helper\UserHelper;
+use WBW\Bundle\CoreBundle\Component\Security\Core\User\UserHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * User helper test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Helper
+ * @package WBW\Bundle\CoreBundle\Tests\Component\Security\Core\User
  */
 class UserHelperTest extends AbstractTestCase {
 
