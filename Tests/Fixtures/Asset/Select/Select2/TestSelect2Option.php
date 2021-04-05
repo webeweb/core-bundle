@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Entity;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Select\Select2;
 
-use WBW\Bundle\CoreBundle\Entity\Select2ItemInterface;
+use WBW\Bundle\CoreBundle\Asset\Select\Select2\Select2OptionInterface;
 use WBW\Library\Core\Model\AbstractNode;
 
 /**
  * Test Select2 item.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Entity;
+ * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Select\Select2;
  */
-class TestSelect2Item extends AbstractNode implements Select2ItemInterface {
+class TestSelect2Option extends AbstractNode implements Select2OptionInterface {
 
     /**
      * Name.
@@ -52,14 +52,14 @@ class TestSelect2Item extends AbstractNode implements Select2ItemInterface {
     /**
      * {@inheritDoc}
      */
-    public function getSelect2ItemId(): ?string {
+    public function getSelect2OptionId(): ?string {
         return $this->getId();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getSelect2ItemText(): ?string {
+    public function getSelect2OptionText(): ?string {
         return $this->getName();
     }
 
@@ -67,9 +67,9 @@ class TestSelect2Item extends AbstractNode implements Select2ItemInterface {
      * Set the name.
      *
      * @param string|null $name The name.
-     * @return TestSelect2Item Returns this Select2 item.
+     * @return TestSelect2Option Returns this Select2 item.
      */
-    public function setName(?string $name): TestSelect2Item {
+    public function setName(?string $name): TestSelect2Option {
         $this->name = $name;
         return $this;
     }

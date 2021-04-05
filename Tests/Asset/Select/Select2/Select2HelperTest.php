@@ -9,29 +9,29 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Helper;
+namespace WBW\Bundle\CoreBundle\Tests\Asset\Select\Select2;
 
 use Exception;
 use InvalidArgumentException;
 use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationNode;
-use WBW\Bundle\CoreBundle\Helper\Select2Helper;
+use WBW\Bundle\CoreBundle\Asset\Select\Select2\Select2Helper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Entity\TestSelect2Item;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Select\Select2\TestSelect2Option;
 
 /**
  * Select2 helper test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Helper\Model
+ * @package WBW\Bundle\CoreBundle\Tests\Asset\Select\Select2
  */
 class Select2HelperTest extends AbstractTestCase {
 
     /**
-     * Items.
+     * Options.
      *
      * @var array
      */
-    private $items;
+    private $options;
 
     /**
      * {@inheritDoc}
@@ -39,12 +39,12 @@ class Select2HelperTest extends AbstractTestCase {
     protected function setUp(): void {
         parent::setUp();
 
-        // Set an Items array mock.
-        $this->items = [];
+        // Set an Option array mock.
+        $this->options = [];
 
-        $this->items[] = new TestSelect2Item("1", "item1");
-        $this->items[] = new TestSelect2Item("2", "item2");
-        $this->items[] = new TestSelect2Item("3", "item3");
+        $this->options[] = new TestSelect2Option("1", "option1");
+        $this->options[] = new TestSelect2Option("2", "option2");
+        $this->options[] = new TestSelect2Option("3", "option3");
     }
 
     /**
@@ -57,18 +57,18 @@ class Select2HelperTest extends AbstractTestCase {
         $res = [
             [
                 "id"   => "1",
-                "text" => "item1",
+                "text" => "option1",
             ],
             [
                 "id"   => "2",
-                "text" => "item2",
+                "text" => "option2",
             ],
             [
                 "id"   => "3",
-                "text" => "item3",
+                "text" => "option3",
             ],
         ];
-        $this->assertEquals($res, Select2Helper::toResults($this->items));
+        $this->assertEquals($res, Select2Helper::toResults($this->options));
     }
 
     /**
@@ -80,12 +80,12 @@ class Select2HelperTest extends AbstractTestCase {
 
         try {
 
-            $this->items[] = new NavigationNode("id4");
-            Select2Helper::toResults($this->items);
+            $this->options[] = new NavigationNode("id4");
+            Select2Helper::toResults($this->options);
         } catch (Exception $ex) {
 
             $this->assertInstanceOf(InvalidArgumentException::class, $ex);
-            $this->assertEquals("The item must implements Select2ItemInterface", $ex->getMessage());
+            $this->assertEquals("The option must implements Select2OptionInterface", $ex->getMessage());
         }
     }
 }
