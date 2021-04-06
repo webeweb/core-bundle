@@ -43,7 +43,6 @@ class ArrayRolesTraitTest extends AbstractTestCase {
     public function testHasRole(): void {
 
         $obj = new TestArrayRolesTrait();
-
         $obj->addRole("role");
 
         $this->assertTrue($obj->hasRole("ROLE"));
