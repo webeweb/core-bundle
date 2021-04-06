@@ -45,7 +45,7 @@ fos_user:
     from_email:
         address:     "no-reply@github.com"
         sender_name: "GitHub"
-    user_class:    WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser
+    user_class:    WBW\Bundle\CoreBundle\Tests\Fixtures\Model\FOSUser
 
 # Monolog configuration
 monolog:
