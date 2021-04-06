@@ -16,6 +16,7 @@ use Doctrine\Common\Collections\Collection;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Security\Core\User\UserInterface as BaseUserInterface;
 use WBW\Bundle\CoreBundle\Model\FosUserInterface;
+use WBW\Bundle\CoreBundle\Model\GroupableInterface;
 use WBW\Bundle\CoreBundle\Model\User;
 use WBW\Bundle\CoreBundle\Model\UserInterface;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\FOSUser;
@@ -310,10 +311,12 @@ class UserTest extends TestCase {
         $this->assertInstanceOf(BaseUserInterface::class, $obj);
         $this->assertInstanceOf(FosUserInterface::class, $obj);
         $this->assertInstanceOf(UserInterface::class, $obj);
+        $this->assertInstanceOf(GroupableInterface::class, $obj);
 
         $this->assertNull($obj->getId());
         $this->assertNull($obj->getEmail());
         $this->assertFalse($obj->getEnabled());
+        $this->assertInstanceOf(Collection::class, $obj->getGroups());
         $this->assertNull($obj->getPassword());
         $this->assertEquals([User::ROLE_DEFAULT], $obj->getRoles());
         $this->assertNull($obj->getUsername());

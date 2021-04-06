@@ -13,9 +13,9 @@ namespace WBW\Bundle\CoreBundle\Model;
 
 use DateTime;
 use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Symfony\Component\Security\Core\User\UserInterface as BaseUserInterface;
 use WBW\Bundle\CoreBundle\Model\Attribute\ArrayRolesTrait;
+use WBW\Bundle\CoreBundle\Model\Attribute\CollectionGroupsTrait;
 use WBW\Library\Core\Model\Attribute\BooleanEnabledTrait;
 use WBW\Library\Core\Model\Attribute\IntegerIdTrait;
 use WBW\Library\Core\Model\Attribute\StringEmailTrait;
@@ -29,10 +29,11 @@ use WBW\Library\Core\Model\Attribute\StringUsernameTrait;
  * @package WBW\Bundle\CoreBundle\Model
  * @abstract
  */
-abstract class User implements UserInterface {
+abstract class User implements UserInterface, GroupableInterface {
 
     use ArrayRolesTrait;
     use BooleanEnabledTrait;
+    use CollectionGroupsTrait;
     use IntegerIdTrait;
     use StringEmailTrait;
     use StringPasswordTrait;
@@ -51,13 +52,6 @@ abstract class User implements UserInterface {
      * @var string|null
      */
     protected $emailCanonical;
-
-    /**
-     * Groups
-     *
-     * @var Collection
-     */
-    protected $groups;
 
     /**
      * Last login.
@@ -131,15 +125,6 @@ abstract class User implements UserInterface {
      */
     public function getEmailCanonical(): ?string {
         return $this->emailCanonical;
-    }
-
-    /**
-     * Get the groups.
-     *
-     * @return Collection Returns the groups.
-     */
-    public function getGroups(): Collection {
-        return $this->groups;
     }
 
     /**
@@ -294,17 +279,6 @@ abstract class User implements UserInterface {
      */
     public function setEmailCanonical(?string $emailCanonical): UserInterface {
         $this->emailCanonical = $emailCanonical;
-        return $this;
-    }
-
-    /**
-     * Get the groups.
-     *
-     * @param Collection $groups The groups.
-     * @return User Returns this user.
-     */
-    protected function setGroups(Collection $groups): User {
-        $this->groups = $groups;
         return $this;
     }
 
