@@ -60,7 +60,7 @@ interface GroupInterface {
      * Remove a role.
      *
      * @param string $role The role.
-     * @return self Returns this instance.
+     * @return GroupInterface Returns this group.
      */
     public function removeRole(string $role);
 
