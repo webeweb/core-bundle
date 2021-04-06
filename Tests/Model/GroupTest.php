@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Model;
 
+use WBW\Bundle\CoreBundle\Model\GroupInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestGroup;
 
@@ -30,6 +31,8 @@ class GroupTest extends AbstractTestCase {
     public function test__construct(): void {
 
         $obj = new TestGroup("name");
+
+        $this->assertInstanceOf(GroupInterface::class, $obj);
 
         $this->assertNull($obj->getId());
         $this->assertEquals("name", $obj->getName());

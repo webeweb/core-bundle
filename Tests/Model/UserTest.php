@@ -14,7 +14,10 @@ namespace WBW\Bundle\CoreBundle\Tests\Model;
 use DateTime;
 use Doctrine\Common\Collections\Collection;
 use PHPUnit\Framework\TestCase;
+use Symfony\Component\Security\Core\User\UserInterface as BaseUserInterface;
+use WBW\Bundle\CoreBundle\Model\FosUserInterface;
 use WBW\Bundle\CoreBundle\Model\User;
+use WBW\Bundle\CoreBundle\Model\UserInterface;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\FOSUser;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser;
 
@@ -304,6 +307,10 @@ class UserTest extends TestCase {
 
         $obj = new TestUser();
 
+        $this->assertInstanceOf(BaseUserInterface::class, $obj);
+        $this->assertInstanceOf(FosUserInterface::class, $obj);
+        $this->assertInstanceOf(UserInterface::class, $obj);
+
         $this->assertNull($obj->getId());
         $this->assertNull($obj->getEmail());
         $this->assertFalse($obj->getEnabled());
@@ -319,7 +326,6 @@ class UserTest extends TestCase {
         $this->assertNull($obj->getPlainPassword());
         $this->assertNull($obj->getSalt());
         $this->assertNull($obj->getUsernameCanonical());
-
         $this->assertTrue($obj->isAccountNonExpired());
         $this->assertTrue($obj->isAccountNonLocked());
         $this->assertTrue($obj->isCredentialsNonExpired());
