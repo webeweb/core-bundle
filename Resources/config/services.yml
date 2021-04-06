@@ -10,10 +10,6 @@ services:
         arguments: [ "@doctrine.orm.entity_manager", "@event_dispatcher" ]
         public: true
 
-    wbw.core.helper.repository_report:
-        alias:  "wbw.core.repository.repository_helper"
-        public: true
-
     wbw.core.manager.asset.color:
         class:  WBW\Bundle\CoreBundle\Manager\Asset\ColorManager
         arguments: [ "@logger" ]
