@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Asset\Navigation\HeaderNode;
 use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationNode;
 use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationTree;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\FOSUser;
 
 /**
  * Test fixtures.
@@ -103,7 +103,7 @@ class TestFixtures {
     public static function getUsers(): array {
 
         $fixtures   = [];
-        $fixtures[] = (new TestUser())
+        $fixtures[] = (new FOSUser())
             ->setUsername("webeweb")
             ->setUsernameCanonical("webeweb")
             ->setEmail("webeweb@github.com")
