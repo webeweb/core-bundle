@@ -16,7 +16,7 @@ use Swift_Message;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
-use WBW\Bundle\CoreBundle\Component\HttpFoundation\Request\RequestTrait;
+use WBW\Bundle\CoreBundle\Component\HttpFoundation\RequestTrait;
 use WBW\Bundle\CoreBundle\Component\HttpKernel\Event\BaseExceptionEvent;
 use WBW\Bundle\CoreBundle\Component\HttpKernel\Event\BaseRequestEvent;
 use WBW\Bundle\CoreBundle\Component\Security\Core\Authentication\Token\Storage\TokenStorageTrait;
