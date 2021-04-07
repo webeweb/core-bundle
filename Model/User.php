@@ -337,7 +337,7 @@ abstract class User implements UserInterface, GroupableInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function unserialize($serialized): void {
 

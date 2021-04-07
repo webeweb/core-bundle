@@ -82,7 +82,7 @@ abstract class AbstractDateTimeDataTransformer implements DataTransformerInterfa
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function reverseTransform($value) {
 
@@ -123,7 +123,7 @@ abstract class AbstractDateTimeDataTransformer implements DataTransformerInterfa
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function transform($value) {
 
