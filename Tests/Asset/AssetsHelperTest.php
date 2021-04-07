@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Helper;
+namespace WBW\Bundle\CoreBundle\Tests\Asset;
 
 use Exception;
 use InvalidArgumentException;
 use WBW\Bundle\CoreBundle\Component\DependencyInjection\ConfigurationHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Helper\TestAssetsHelper;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\TestAssetsHelper;
 
 /**
  * Assets helper test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Helper
+ * @package WBW\Bundle\CoreBundle\Tests\Asset
  */
 class AssetsHelperTest extends AbstractTestCase {
 

@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Helper;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Asset;
 
-use WBW\Bundle\CoreBundle\Helper\AssetsHelper;
+use WBW\Bundle\CoreBundle\Asset\AssetsHelper;
 
 /**
  * Test assets helper.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Helper
+ * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Asset
  */
 class TestAssetsHelper extends AssetsHelper {
 

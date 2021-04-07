@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Helper;
+namespace WBW\Bundle\CoreBundle\Asset;
 
 use DirectoryIterator;
 use InvalidArgumentException;
@@ -19,7 +19,7 @@ use ZipArchive;
  * Assets helper.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Helper
+ * @package WBW\Bundle\CoreBundle\Asset
  */
 class AssetsHelper {
 
