@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Service;
+namespace WBW\Bundle\CoreBundle\Tests\Doctrine\ORM;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Service\TestEntityManagerTrait;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Doctrine\ORM\TestEntityManagerTrait;
 
 /**
  * Entity manager trait test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Service
+ * @package WBW\Bundle\CoreBundle\Tests\Doctrine\ORM
  */
 class EntityManagerTraitTest extends AbstractTestCase {
 

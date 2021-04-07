@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Service;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Doctrine\ORM;
 
-use WBW\Bundle\CoreBundle\Service\EntityManagerTrait;
+use WBW\Bundle\CoreBundle\Doctrine\ORM\EntityManagerTrait;
 
 /**
  * Test entity manager trait.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Service
+ * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Doctrine\ORM
  */
 class TestEntityManagerTrait {
 
