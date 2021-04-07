@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Service;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\SwiftMailer;
 
-use WBW\Bundle\CoreBundle\Service\SwiftMailerTrait;
+use WBW\Bundle\CoreBundle\SwiftMailer\SwiftMailerTrait;
 
 /**
  * Test swift mailer trait.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Service
+ * @package WBW\Bundle\CoreBundle\Tests\Fixtures\SwiftMailer
  */
 class TestSwiftMailerTrait {
 

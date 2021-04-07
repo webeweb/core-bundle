@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Service;
+namespace WBW\Bundle\CoreBundle\SwiftMailer;
 
 use Swift_Mailer;
 
@@ -17,7 +17,7 @@ use Swift_Mailer;
  * Swift mailer trait.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Service
+ * @package WBW\Bundle\CoreBundle\SwiftMailer
  */
 trait SwiftMailerTrait {
 

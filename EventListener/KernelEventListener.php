@@ -25,7 +25,7 @@ use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
 use WBW\Bundle\CoreBundle\Exception\RedirectResponseException;
 use WBW\Bundle\CoreBundle\Manager\Asset\ThemeManager;
 use WBW\Bundle\CoreBundle\Manager\Asset\ThemeManagerTrait;
-use WBW\Bundle\CoreBundle\Service\SwiftMailerTrait;
+use WBW\Bundle\CoreBundle\SwiftMailer\SwiftMailerTrait;
 
 /**
  * Kernel event listener.
