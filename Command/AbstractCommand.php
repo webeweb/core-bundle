@@ -17,7 +17,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\StyleInterface;
 use Symfony\Component\HttpKernel\KernelInterface;
-use WBW\Bundle\CoreBundle\Helper\CommandHelper;
+use WBW\Bundle\CoreBundle\Component\Console\ConsoleHelper;
 
 /**
  * Abstract command.
@@ -58,7 +58,7 @@ abstract class AbstractCommand extends Command {
      * @return string Returns the checkbox.
      */
     protected function getCheckbox(bool $checked): string {
-        return CommandHelper::getCheckbox($checked);
+        return ConsoleHelper::getCheckbox($checked);
     }
 
     /**
@@ -81,6 +81,6 @@ abstract class AbstractCommand extends Command {
      * @return StyleInterface Returns the style.
      */
     protected function newStyle(InputInterface $input, OutputInterface $output): StyleInterface {
-        return CommandHelper::newSymfonyStyle($input, $output);
+        return ConsoleHelper::newSymfonyStyle($input, $output);
     }
 }

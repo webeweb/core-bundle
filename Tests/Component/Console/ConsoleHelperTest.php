@@ -9,22 +9,22 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Helper;
+namespace WBW\Bundle\CoreBundle\Tests\Component\Console;
 
 use Symfony\Component\Console\Formatter\OutputFormatterInterface;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\StyleInterface;
-use WBW\Bundle\CoreBundle\Helper\CommandHelper;
+use WBW\Bundle\CoreBundle\Component\Console\ConsoleHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
- * Command helper test.
+ * Console helper test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Helper
+ * @package WBW\Bundle\CoreBundle\Tests\Component\Console
  */
-class CommandHelperTest extends AbstractTestCase {
+class ConsoleHelperTest extends AbstractTestCase {
 
     /**
      * Tests the getCheckbox() method.
@@ -36,12 +36,12 @@ class CommandHelperTest extends AbstractTestCase {
         // Determines the operating system.
         if ("\\" !== DIRECTORY_SEPARATOR) {
 
-            $this->assertEquals("<fg=green;options=bold>\xE2\x9C\x94</>", CommandHelper::getCheckbox(true));
-            $this->assertEquals("<fg=yellow;options=bold>!</>", CommandHelper::getCheckbox(false));
+            $this->assertEquals("<fg=green;options=bold>\xE2\x9C\x94</>", ConsoleHelper::getCheckbox(true));
+            $this->assertEquals("<fg=yellow;options=bold>!</>", ConsoleHelper::getCheckbox(false));
         } else {
 
-            $this->assertEquals("<fg=green;options=bold>OK</>", CommandHelper::getCheckbox(true));
-            $this->assertEquals("<fg=yellow;options=bold>WARNING</>", CommandHelper::getCheckbox(false));
+            $this->assertEquals("<fg=green;options=bold>OK</>", ConsoleHelper::getCheckbox(true));
+            $this->assertEquals("<fg=yellow;options=bold>WARNING</>", ConsoleHelper::getCheckbox(false));
         }
     }
 
@@ -62,7 +62,7 @@ class CommandHelperTest extends AbstractTestCase {
         $output = $this->getMockBuilder(OutputInterface::class)->getMock();
         $output->expects($this->any())->method("getFormatter")->willReturn($outputFormatter);
 
-        $res = CommandHelper::newSymfonyStyle($input, $output);
+        $res = ConsoleHelper::newSymfonyStyle($input, $output);
         $this->assertInstanceOf(StyleInterface::class, $res);
     }
 }
