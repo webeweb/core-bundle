@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Service;
+namespace WBW\Bundle\CoreBundle\Tests\Doctrine\Common\Persistence;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Service\TestObjectManagerTrait;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Doctrine\Common\Persistence\TestObjectManagerTrait;
 
 /**
  * Object manager trait test.

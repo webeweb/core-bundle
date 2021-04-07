@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Service;
+namespace WBW\Bundle\CoreBundle\Doctrine\Common\Persistence;
 
 use Doctrine\Common\Persistence\ObjectManager;
 
@@ -17,7 +17,7 @@ use Doctrine\Common\Persistence\ObjectManager;
  * Object manager trait.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Service
+ * @package WBW\Bundle\CoreBundle\Doctrine\Common\Persistence
  */
 trait ObjectManagerTrait {
 

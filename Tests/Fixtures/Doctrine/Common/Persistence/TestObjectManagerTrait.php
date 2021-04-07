@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Service;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Doctrine\Common\Persistence;
 
-use WBW\Bundle\CoreBundle\Service\ObjectManagerTrait;
+use WBW\Bundle\CoreBundle\Doctrine\Common\Persistence\ObjectManagerTrait;
 
 /**
  * Test object manager trait.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Service
+ * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Doctrine\Common\Persistence
  */
 class TestObjectManagerTrait {
 

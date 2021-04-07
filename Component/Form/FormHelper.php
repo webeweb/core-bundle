@@ -22,7 +22,7 @@ use WBW\Bundle\CoreBundle\Component\EventDispatcher\EventDispatcherHelper;
 use WBW\Bundle\CoreBundle\Component\EventDispatcher\EventDispatcherTrait;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\Exception\RedirectResponseException;
-use WBW\Bundle\CoreBundle\Service\ObjectManagerTrait;
+use WBW\Bundle\CoreBundle\Doctrine\Common\Persistence\ObjectManagerTrait;
 use WBW\Bundle\CoreBundle\WBWCoreEvents;
 
 /**
