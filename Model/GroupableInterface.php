@@ -12,7 +12,6 @@
 namespace WBW\Bundle\CoreBundle\Model;
 
 use Doctrine\Common\Collections\Collection;
-use Traversable;
 
 /**
  * Groupable interface.

@@ -66,7 +66,6 @@ class CollectionGroupsTraitTest extends AbstractTestCase {
         // Set a Group mock.
         $group = new TestGroup("name");
 
-
         $obj = new TestCollectionGroupsTrait();
         $obj->addGroup($group);
 
