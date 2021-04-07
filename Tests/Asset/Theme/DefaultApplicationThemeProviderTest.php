@@ -29,6 +29,9 @@ class DefaultApplicationThemeProviderTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
+        // Set a Date/time mock.
+        $now = new \DateTime();
+
         $obj = new DefaultApplicationThemeProvider();
 
         $this->assertEquals("Core bundle", $obj->getDescription());
@@ -38,6 +41,11 @@ class DefaultApplicationThemeProviderTest extends AbstractTestCase {
         $this->assertEquals("Core bundle", $obj->getTitle());
         $this->assertEquals("dev-master", $obj->getVersion());
         $this->assertNull($obj->getView());
-        $this->assertStringContainsString("2018", $obj->getYear());
+        $this->assertEquals("2018-{$now->format("Y")}", $obj->getYear());
+
+        $this->assertEquals("2019-{$now->format("Y")}", $obj->getYear("2019"));
+        $this->assertEquals("2020-{$now->format("Y")}", $obj->getYear("2020"));
+        $this->assertEquals("{$now->format("Y")}", $obj->getYear($now->format("Y")));
+        $this->assertEquals("{$now->format("Y")}", $obj->getYear($now->format("Y") + 1));
     }
 }

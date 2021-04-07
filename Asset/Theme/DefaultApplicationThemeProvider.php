@@ -80,12 +80,23 @@ class DefaultApplicationThemeProvider implements ApplicationThemeProviderInterfa
     /**
      * {@inheritDoc}
      */
-    public function getYear(): ?string {
+    public function getYear(string $startYear = null): ?string {
+
         $today = date("Y");
         $years = ["2018"];
+
+        if (0 < intval($startYear)) {
+            if (intval($startYear) <= intval($today)) {
+                $years = [$startYear];
+            } else {
+                $years = [$today];
+            }
+        }
+
         if ($years[0] !== $today) {
             $years[] = $today;
         }
+
         return implode("-", $years);
     }
 }

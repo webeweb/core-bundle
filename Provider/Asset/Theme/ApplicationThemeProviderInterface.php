@@ -73,7 +73,8 @@ interface ApplicationThemeProviderInterface extends ThemeProviderInterface {
     /**
      * Get the year.
      *
+     * @param string|null $startYear The start year.
      * @return string|null Returns the year.
      */
-    public function getYear(): ?string;
+    public function getYear(string $startYear = null): ?string;
 }
