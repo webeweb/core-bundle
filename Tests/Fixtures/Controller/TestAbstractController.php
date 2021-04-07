@@ -18,11 +18,11 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\RouterInterface;
 use WBW\Bundle\CoreBundle\Asset\Notification\NotificationInterface;
 use WBW\Bundle\CoreBundle\Asset\Toast\ToastInterface;
+use WBW\Bundle\CoreBundle\Component\Form\FormHelper;
 use WBW\Bundle\CoreBundle\Controller\AbstractController;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\Event\ToastEvent;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
-use WBW\Bundle\CoreBundle\Helper\FormHelper;
 use WBW\Bundle\CoreBundle\Repository\RepositoryHelper;
 
 /**

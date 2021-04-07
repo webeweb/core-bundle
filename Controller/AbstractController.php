@@ -21,13 +21,13 @@ use WBW\Bundle\CoreBundle\Asset\Notification\NotificationInterface;
 use WBW\Bundle\CoreBundle\Asset\Toast\ToastInterface;
 use WBW\Bundle\CoreBundle\Component\EventDispatcher\BaseEvent;
 use WBW\Bundle\CoreBundle\Component\EventDispatcher\EventDispatcherHelper;
+use WBW\Bundle\CoreBundle\Component\Form\FormHelper;
 use WBW\Bundle\CoreBundle\Component\Security\Core\User\UserHelper;
 use WBW\Bundle\CoreBundle\Component\Translation\BaseTranslatorInterface;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\Event\ToastEvent;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
-use WBW\Bundle\CoreBundle\Helper\FormHelper;
 use WBW\Bundle\CoreBundle\Repository\RepositoryHelper;
 
 /**

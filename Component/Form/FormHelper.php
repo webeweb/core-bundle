@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Helper;
+namespace WBW\Bundle\CoreBundle\Component\Form;
 
 use Countable;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -29,7 +29,7 @@ use WBW\Bundle\CoreBundle\WBWCoreEvents;
  * Form helper.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Helper
+ * @package WBW\Bundle\CoreBundle\Component\Form
  */
 class FormHelper {
 
@@ -41,7 +41,7 @@ class FormHelper {
      *
      * @avr string
      */
-    const SERVICE_NAME = "wbw.core.helper.form";
+    const SERVICE_NAME = "wbw.core.component.form.helper";
 
     /**
      * Constructor.

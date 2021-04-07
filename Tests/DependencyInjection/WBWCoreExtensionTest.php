@@ -35,13 +35,13 @@ use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\YellowColorProv
 use WBW\Bundle\CoreBundle\Asset\Quote\YamlQuoteProvider;
 use WBW\Bundle\CoreBundle\Command\CopySkeletonCommand;
 use WBW\Bundle\CoreBundle\Command\UnzipAssetsCommand;
+use WBW\Bundle\CoreBundle\Component\Form\FormHelper;
 use WBW\Bundle\CoreBundle\DependencyInjection\Configuration;
 use WBW\Bundle\CoreBundle\DependencyInjection\WBWCoreExtension;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\EventListener\NotificationEventListener;
 use WBW\Bundle\CoreBundle\EventListener\SecurityEventListener;
 use WBW\Bundle\CoreBundle\EventListener\ToastEventListener;
-use WBW\Bundle\CoreBundle\Helper\FormHelper;
 use WBW\Bundle\CoreBundle\Manager\Asset\ColorManager;
 use WBW\Bundle\CoreBundle\Manager\Asset\QuoteManager;
 use WBW\Bundle\CoreBundle\Manager\Asset\ThemeManager;

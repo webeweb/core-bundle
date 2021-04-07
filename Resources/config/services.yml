@@ -5,8 +5,8 @@ services:
         alias:  "monolog.logger"
         public: true
 
-    wbw.core.helper.form:
-        class:  WBW\Bundle\CoreBundle\Helper\FormHelper
+    wbw.core.component.form.helper:
+        class:  WBW\Bundle\CoreBundle\Component\Form\FormHelper
         arguments: [ "@doctrine.orm.entity_manager", "@event_dispatcher" ]
         public: true
 
