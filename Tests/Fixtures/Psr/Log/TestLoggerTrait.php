@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Service;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Psr\Log;
 
-use WBW\Bundle\CoreBundle\Service\LoggerTrait;
+use WBW\Bundle\CoreBundle\Psr\Log\LoggerTrait;
 
 /**
  * Test logger trait.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Service
+ * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Psr\Log
  */
 class TestLoggerTrait {
 
