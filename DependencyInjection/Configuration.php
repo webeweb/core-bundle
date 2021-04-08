@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\DependencyInjection;
 
+use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 use WBW\Bundle\CoreBundle\Component\DependencyInjection\ConfigurationHelper;
@@ -22,6 +23,90 @@ use WBW\Bundle\CoreBundle\Component\DependencyInjection\ConfigurationHelper;
  * @package WBW\Bundle\CoreBundle\DependencyInjection
  */
 class Configuration implements ConfigurationInterface {
+
+    /**
+     * Add the core "brushes" section.
+     *
+     * @return void
+     */
+    private function addCoreBrushesSection(ArrayNodeDefinition $node, array $plugins): void {
+        $node
+            ->children()
+                ->arrayNode("brushes")->addDefaultsIfNotSet()
+                    ->children()
+                        ->arrayNode("syntax_highlighter")->info("SyntaxHighlighter brushes")
+                            ->prototype("scalar")
+                                ->validate()
+                                    ->ifNotInArray($plugins["syntax_highlighter"]["brushes"])
+                                    ->thenInvalid("The SyntaxHighlighter brush %s is not supported. Please choose one of " . json_encode($plugins["syntax_highlighter"]["brushes"]))
+                                ->end()
+                            ->end()
+                        ->end()
+                    ->end()
+                ->end()
+            ->end();
+    }
+
+    /**
+     * Add the core "locales" section.
+     *
+     * @return void
+     */
+    private function addCoreLocalesSection(ArrayNodeDefinition $node, array $plugins): void {
+        $node
+            ->children()
+                ->arrayNode("locales")->addDefaultsIfNotSet()
+                    ->children()
+                        ->variableNode("jquery_select2")->defaultValue("en")->info("jQuery Select2 locale")
+                            ->validate()
+                                ->ifNotInArray($plugins["jquery_select2"]["locales"])
+                                ->thenInvalid("The jQuery Select2 locale %s is not supported. Please choose one of " . json_encode($plugins["jquery_select2"]["locales"]))
+                            ->end()
+                        ->end()
+                    ->end()
+                ->end()
+            ->end();
+    }
+
+    /**
+     * Add the core "plugins" section.
+     *
+     * @return void
+     */
+    private function addCorePluginsSection(ArrayNodeDefinition $node, array $plugins): void {
+        $node
+            ->children()
+                ->arrayNode("plugins")->info("Core plug-ins")
+                    ->prototype("scalar")
+                        ->validate()
+                            ->ifNotInArray(array_keys($plugins))
+                            ->thenInvalid("The Core plug-in %s is not supported. Please choose one of " . json_encode(array_keys($plugins)))
+                        ->end()
+                    ->end()
+                ->end()
+            ->end();
+    }
+
+    /**
+     * Add the core "themes" section.
+     *
+     * @return void
+     */
+    private function addCoreThemesSection(ArrayNodeDefinition $node, array $plugins): void {
+        $node
+            ->children()
+                ->arrayNode("themes")->addDefaultsIfNotSet()
+                    ->children()
+                        ->variableNode("syntax_highlighter")->defaultValue("Default")->info("SyntaxHighlighter theme")
+                            ->validate()
+                                ->ifNotInArray($plugins["syntax_highlighter"]["themes"])
+                                ->thenInvalid("The SyntaxHighlighter theme %s is not supported. Please choose one of " . json_encode($plugins["syntax_highlighter"]["themes"]))
+                            ->end()
+                        ->end()
+                    ->end()
+                ->end()
+            ->end();
+    }
 
     /**
      * {@inheritDoc}
@@ -48,47 +133,12 @@ class Configuration implements ConfigurationInterface {
                     ->end()
                 ->end()
                 ->booleanNode("security_event_listener")->defaultFalse()->info("Load Security event listener")->end()
-                ->arrayNode("plugins")->info("Core plug-ins")
-                    ->prototype("scalar")
-                        ->validate()
-                            ->ifNotInArray(array_keys($plugins))
-                            ->thenInvalid("The Core plug-in %s is not supported. Please choose one of " . json_encode(array_keys($plugins)))
-                        ->end()
-                    ->end()
-                ->end()
-                ->arrayNode("locales")->addDefaultsIfNotSet()
-                    ->children()
-                        ->variableNode("jquery_select2")->defaultValue("en")->info("jQuery Select2 locale")
-                            ->validate()
-                                ->ifNotInArray($plugins["jquery_select2"]["locales"])
-                                ->thenInvalid("The jQuery Select2 locale %s is not supported. Please choose one of " . json_encode($plugins["jquery_select2"]["locales"]))
-                            ->end()
-                        ->end()
-                    ->end()
-                ->end()
-                ->arrayNode("themes")->addDefaultsIfNotSet()
-                    ->children()
-                        ->variableNode("syntax_highlighter")->defaultValue("Default")->info("SyntaxHighlighter theme")
-                            ->validate()
-                                ->ifNotInArray($plugins["syntax_highlighter"]["themes"])
-                                ->thenInvalid("The SyntaxHighlighter theme %s is not supported. Please choose one of " . json_encode($plugins["syntax_highlighter"]["themes"]))
-                            ->end()
-                        ->end()
-                    ->end()
-                ->end()
-                ->arrayNode("brushes")->addDefaultsIfNotSet()
-                    ->children()
-                        ->arrayNode("syntax_highlighter")->info("SyntaxHighlighter brushes")
-                            ->prototype("scalar")
-                                ->validate()
-                                    ->ifNotInArray($plugins["syntax_highlighter"]["brushes"])
-                                    ->thenInvalid("The SyntaxHighlighter brush %s is not supported. Please choose one of " . json_encode($plugins["syntax_highlighter"]["brushes"]))
-                                ->end()
-                            ->end()
-                        ->end()
-                    ->end()
-                ->end()
             ->end();
+
+        $this->addCorePluginsSection($rootNode, $plugins);
+        $this->addCoreLocalesSection($rootNode, $plugins);
+        $this->addCoreThemesSection($rootNode, $plugins);
+        $this->addCoreBrushesSection($rootNode, $plugins);
 
         return $treeBuilder;
     }
