@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Util;
+namespace WBW\Bundle\CoreBundle\Tests\Utility;
 
 use Exception;
 use Symfony\Component\Security\Core\Encoder\BCryptPasswordEncoder;
@@ -17,13 +17,13 @@ use Symfony\Component\Security\Core\Encoder\EncoderFactoryInterface;
 use Symfony\Component\Security\Core\Encoder\PasswordEncoderInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser;
-use WBW\Bundle\CoreBundle\Util\PasswordUpdater;
+use WBW\Bundle\CoreBundle\Utility\PasswordUpdater;
 
 /**
  * Password updater test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Util
+ * @package WBW\Bundle\CoreBundle\Tests\Utility
  */
 class PasswordUpdaterTest extends AbstractTestCase {
 

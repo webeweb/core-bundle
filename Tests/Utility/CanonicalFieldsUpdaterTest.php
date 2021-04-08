@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Util;
+namespace WBW\Bundle\CoreBundle\Tests\Utility;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser;
-use WBW\Bundle\CoreBundle\Util\CanonicalFieldsUpdater;
-use WBW\Bundle\CoreBundle\Util\Canonicalizer;
+use WBW\Bundle\CoreBundle\Utility\CanonicalFieldsUpdater;
+use WBW\Bundle\CoreBundle\Utility\Canonicalizer;
 
 /**
  * Canonical fields updater test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Util
+ * @package WBW\Bundle\CoreBundle\Tests\Utility
  */
 class CanonicalFieldsUpdaterTest extends AbstractTestCase {
 
@@ -31,7 +31,7 @@ class CanonicalFieldsUpdaterTest extends AbstractTestCase {
      */
     public function testCanonicalizeEmail(): void {
 
-        $obj = new CanonicalFieldsUpdater($this->canonicalzer, $this->canonicalzer);
+        $obj = new CanonicalFieldsUpdater($this->canonicalizer, $this->canonicalizer);
 
         $this->assertEquals("john.doe@github.com", $obj->canonicalizeEmail("JOHN.doe@GitHub.com"));
     }
@@ -43,7 +43,7 @@ class CanonicalFieldsUpdaterTest extends AbstractTestCase {
      */
     public function testCanonicalizeUsername(): void {
 
-        $obj = new CanonicalFieldsUpdater($this->canonicalzer, $this->canonicalzer);
+        $obj = new CanonicalFieldsUpdater($this->canonicalizer, $this->canonicalizer);
 
         $this->assertEquals("john.doe", $obj->canonicalizeUsername("JOHN.doe"));
     }
@@ -60,7 +60,7 @@ class CanonicalFieldsUpdaterTest extends AbstractTestCase {
         $user->setEmail("JOHN.doe@GitHub.com");
         $user->setUsername("JOHN.doe");
 
-        $obj = new CanonicalFieldsUpdater($this->canonicalzer, $this->canonicalzer);
+        $obj = new CanonicalFieldsUpdater($this->canonicalizer, $this->canonicalizer);
 
         $obj->updateCanonicalFields($user);
         $this->assertEquals("john.doe@github.com", $user->getEmailCanonical());

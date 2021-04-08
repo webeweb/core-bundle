@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Util;
+namespace WBW\Bundle\CoreBundle\Utility;
 
 use Symfony\Component\Security\Core\Encoder\BCryptPasswordEncoder;
 use Symfony\Component\Security\Core\Encoder\EncoderFactoryInterface;
@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Model\UserInterface;
  * Password updater.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Util
+ * @package WBW\Bundle\CoreBundle\Utility
  */
 class PasswordUpdater implements PasswordUpdaterInterface {
 

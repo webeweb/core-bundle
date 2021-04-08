@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Util;
+namespace WBW\Bundle\CoreBundle\Tests\Utility;
 
 use Exception;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Util\TokenGenerator;
+use WBW\Bundle\CoreBundle\Utility\TokenGenerator;
 
 /**
  * Token generator test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Util
+ * @package WBW\Bundle\CoreBundle\Tests\Utility
  */
 class TokenGeneratorTest extends AbstractTestCase {
 

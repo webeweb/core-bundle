@@ -31,8 +31,8 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use Twig\Environment;
 use Twig\Loader\LoaderInterface;
 use WBW\Bundle\CoreBundle\Component\Translation\BaseTranslatorInterface;
-use WBW\Bundle\CoreBundle\Util\Canonicalizer;
-use WBW\Bundle\CoreBundle\Util\CanonicalizerInterface;
+use WBW\Bundle\CoreBundle\Utility\Canonicalizer;
+use WBW\Bundle\CoreBundle\Utility\CanonicalizerInterface;
 
 /**
  * Abstract test case.
@@ -48,7 +48,7 @@ abstract class AbstractTestCase extends TestCase {
      *
      * @var CanonicalizerInterface
      */
-    protected $canonicalzer;
+    protected $canonicalizer;
 
     /**
      * Container builder.
@@ -192,7 +192,7 @@ abstract class AbstractTestCase extends TestCase {
         parent::setUp();
 
         // Set a Canonicalizer mock.
-        $this->canonicalzer = new Canonicalizer();
+        $this->canonicalizer = new Canonicalizer();
 
         // Set an Entity manager mock.
         $this->entityManager = $this->getMockBuilder(EntityManagerInterface::class)->getMock();

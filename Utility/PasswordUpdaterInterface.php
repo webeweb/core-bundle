@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Util;
+namespace WBW\Bundle\CoreBundle\Utility;
 
 use Exception;
 use WBW\Bundle\CoreBundle\Model\UserInterface;
@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Model\UserInterface;
  * Password updater interface.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Util
+ * @package WBW\Bundle\CoreBundle\Utility
  */
 interface PasswordUpdaterInterface {
 

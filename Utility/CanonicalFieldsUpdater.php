@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Util;
+namespace WBW\Bundle\CoreBundle\Utility;
 
 use WBW\Bundle\CoreBundle\Model\UserInterface;
 
@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Model\UserInterface;
  * Canonical fields updater.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Util
+ * @package WBW\Bundle\CoreBundle\Utility
  */
 class CanonicalFieldsUpdater {
 
