@@ -26,7 +26,7 @@ abstract class AbstractTimestampDataTransformer extends AbstractDateTimeDataTran
      */
     public function reverseTransform($value) {
 
-        /** @var DateTime $date */
+        /** @var DateTime|null $date */
         $date = parent::reverseTransform($value);
         if (null === $date) {
             return null;

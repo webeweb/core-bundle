@@ -27,9 +27,12 @@ class Configuration implements ConfigurationInterface {
     /**
      * Add the core "brushes" section.
      *
+     * @param ArrayNodeDefinition $node The node.
+     * @param array $plugins The plugins.
      * @return void
      */
     private function addCoreBrushesSection(ArrayNodeDefinition $node, array $plugins): void {
+
         $node
             ->children()
                 ->arrayNode("brushes")->addDefaultsIfNotSet()
@@ -50,9 +53,12 @@ class Configuration implements ConfigurationInterface {
     /**
      * Add the core "locales" section.
      *
+     * @param ArrayNodeDefinition $node The node.
+     * @param array $plugins The plugins.
      * @return void
      */
     private function addCoreLocalesSection(ArrayNodeDefinition $node, array $plugins): void {
+
         $node
             ->children()
                 ->arrayNode("locales")->addDefaultsIfNotSet()
@@ -71,9 +77,12 @@ class Configuration implements ConfigurationInterface {
     /**
      * Add the core "plugins" section.
      *
+     * @param ArrayNodeDefinition $node The node.
+     * @param array $plugins The plugins.
      * @return void
      */
     private function addCorePluginsSection(ArrayNodeDefinition $node, array $plugins): void {
+
         $node
             ->children()
                 ->arrayNode("plugins")->info("Core plug-ins")
@@ -90,9 +99,12 @@ class Configuration implements ConfigurationInterface {
     /**
      * Add the core "themes" section.
      *
+     * @param ArrayNodeDefinition $node The node.
+     * @param array $plugins The plugins.
      * @return void
      */
     private function addCoreThemesSection(ArrayNodeDefinition $node, array $plugins): void {
+
         $node
             ->children()
                 ->arrayNode("themes")->addDefaultsIfNotSet()
