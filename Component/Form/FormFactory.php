@@ -9,20 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Form\Factory;
+namespace WBW\Bundle\CoreBundle\Component\Form;
 
 use Closure;
 use ReflectionClass;
 use ReflectionException;
 use WBW\Bundle\CoreBundle\Asset\Select\ChoiceValueInterface;
-use WBW\Bundle\CoreBundle\Form\Renderer\FormRenderer;
 use WBW\Library\Core\Argument\Helper\ArrayHelper;
 
 /**
  * Form factory.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Form\Factory
+ * @package WBW\Bundle\CoreBundle\Component\Form
  */
 class FormFactory {
 

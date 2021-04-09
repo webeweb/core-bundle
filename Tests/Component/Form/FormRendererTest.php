@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Form\Renderer;
+namespace WBW\Bundle\CoreBundle\Tests\Component\Form;
 
 use WBW\Bundle\CoreBundle\Asset\Select\ChoiceLabelInterface;
 use WBW\Bundle\CoreBundle\Asset\Select\TranslatedChoiceLabelInterface;
-use WBW\Bundle\CoreBundle\Form\Renderer\FormRenderer;
+use WBW\Bundle\CoreBundle\Component\Form\FormRenderer;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Library\Core\Sorter\AlphabeticalTreeNodeInterface;
 
@@ -21,7 +21,7 @@ use WBW\Library\Core\Sorter\AlphabeticalTreeNodeInterface;
  * Form renderer test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Form\Renderer
+ * @package WBW\Bundle\CoreBundle\Tests\Component\Form
  */
 class FormRendererTest extends AbstractTestCase {
 

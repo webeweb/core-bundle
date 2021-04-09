@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Form\Renderer;
+namespace WBW\Bundle\CoreBundle\Component\Form;
 
 use WBW\Bundle\CoreBundle\Asset\Select\ChoiceLabelInterface;
 use WBW\Bundle\CoreBundle\Asset\Select\TranslatedChoiceLabelInterface;
@@ -21,7 +21,7 @@ use WBW\Library\Core\Sorter\AlphabeticalTreeNodeInterface;
  * Form renderer.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Form\Renderer
+ * @package WBW\Bundle\CoreBundle\Component\Form
  */
 class FormRenderer {
 

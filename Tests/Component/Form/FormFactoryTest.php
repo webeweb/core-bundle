@@ -9,21 +9,21 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Form\Factory;
+namespace WBW\Bundle\CoreBundle\Tests\Component\Form;
 
 use Closure;
 use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationNode;
 use WBW\Bundle\CoreBundle\Asset\Select\ChoiceValueInterface;
-use WBW\Bundle\CoreBundle\Form\Factory\FormFactory;
+use WBW\Bundle\CoreBundle\Component\Form\FormFactory;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Select\TestChoiceValue;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Form\Factory\TestFormFactory;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Component\Form\TestFormFactory;
 
 /**
  * Form factory test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\CoreBundle\Tests\Form\Factory
+ * @package WBW\Bundle\CoreBundle\Tests\Component\Form
  */
 class FormFactoryTest extends AbstractTestCase {
 
