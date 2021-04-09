@@ -39,6 +39,18 @@ class AbstractDateTimeDataTransformerTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the newDateTimeZone() method.
+     *
+     * @return void
+     */
+    public function testNewDateTimeZoneWithoutTimeZone(): void {
+
+        $obj = new TestDateTimeDataTransformer("Y-m-d H:i:s", null);
+
+        $this->assertNull($obj->newDateTimeZone());
+    }
+
+    /**
      * Tests the reverseTransform() method.
      *
      * @return void
