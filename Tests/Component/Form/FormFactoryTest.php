@@ -214,4 +214,15 @@ class FormFactoryTest extends AbstractTestCase {
 
         $this->assertInstanceOf(Closure::class, $res["choice_label"]);
     }
+
+    /**
+     * Tests the newEntityType method.
+     *
+     * @return void
+     */
+    public function testNewEntityTypeWithReflectionException(): void {
+
+        $res = FormFactory::newEntityType("GitHub", $this->entities);
+        $this->assertCount(3, $res);
+    }
 }
