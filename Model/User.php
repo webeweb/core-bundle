@@ -255,14 +255,14 @@ abstract class User implements UserInterface, GroupableInterface {
      */
     public function serialize(): ?string {
         return serialize([
-            $this->getPassword(),
-            $this->getSalt(),
-            $this->getUsernameCanonical(),
-            $this->getUsername(),
-            $this->getEnabled(),
             $this->getId(),
             $this->getEmail(),
             $this->getEmailCanonical(),
+            $this->getEnabled(),
+            $this->getPassword(),
+            $this->getSalt(),
+            $this->getUsername(),
+            $this->getUsernameCanonical(),
         ]);
     }
 
@@ -343,13 +343,13 @@ abstract class User implements UserInterface, GroupableInterface {
 
         $data = unserialize($serialized);
 
-        $this->setPassword($data[0]);
-        $this->setSalt($data[1]);
-        $this->setUsernameCanonical($data[2]);
-        $this->setUsername($data[3]);
-        $this->setEnabled($data[4]);
-        $this->setId($data[5]);
-        $this->setEmail($data[6]);
-        $this->setEmailCanonical($data[7]);
+        $this->setId($data[0]);
+        $this->setEmail($data[1]);
+        $this->setEmailCanonical($data[2]);
+        $this->setEnabled($data[3]);
+        $this->setPassword($data[4]);
+        $this->setSalt($data[5]);
+        $this->setUsername($data[6]);
+        $this->setUsernameCanonical($data[7]);
     }
 }

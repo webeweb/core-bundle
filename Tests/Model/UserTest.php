@@ -20,6 +20,7 @@ use WBW\Bundle\CoreBundle\Model\GroupableInterface;
 use WBW\Bundle\CoreBundle\Model\User;
 use WBW\Bundle\CoreBundle\Model\UserInterface;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\FOSUser;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestGroup;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser;
 
 /**
@@ -42,6 +43,26 @@ class UserTest extends TestCase {
 
         $obj->eraseCredentials();
         $this->assertNull($obj->getPlainPassword());
+    }
+
+    /**
+     * Tests the getRoles() method.
+     *
+     * @return void
+     */
+    public function testGetRolesWithGroups(): void {
+
+        // Set a Group mock.
+        $group = new TestGroup("name", [User::ROLE_SUPER_ADMIN]);
+
+        $obj = new TestUser();
+        $obj->addGroup($group);
+
+        $res = [
+            User::ROLE_SUPER_ADMIN,
+            User::ROLE_DEFAULT,
+        ];
+        $this->assertEquals($res, $obj->getRoles());
     }
 
     /**
@@ -159,7 +180,7 @@ class UserTest extends TestCase {
         $obj->setEmail("email");
         $obj->setEmailCanonical("emailCanonical");
 
-        $exp = 'a:8:{i:0;s:8:"password";i:1;s:4:"salt";i:2;s:17:"usernameCanonical";i:3;s:8:"username";i:4;b:1;i:5;N;i:6;s:5:"email";i:7;s:14:"emailCanonical";}';
+        $exp = 'a:8:{i:0;N;i:1;s:5:"email";i:2;s:14:"emailCanonical";i:3;b:1;i:4;s:8:"password";i:5;s:4:"salt";i:6;s:8:"username";i:7;s:17:"usernameCanonical";}';
         $this->assertEquals($exp, $obj->serialize());
     }
 
@@ -284,19 +305,19 @@ class UserTest extends TestCase {
     public function testUnserialize(): void {
 
         // Set a serialize mock.
-        $arg = 'a:8:{i:0;s:8:"password";i:1;s:4:"salt";i:2;s:17:"usernameCanonical";i:3;s:8:"username";i:4;b:1;i:5;N;i:6;s:5:"email";i:7;s:14:"emailCanonical";}';
+        $arg = 'a:8:{i:0;N;i:1;s:5:"email";i:2;s:14:"emailCanonical";i:3;b:1;i:4;s:8:"password";i:5;s:4:"salt";i:6;s:8:"username";i:7;s:17:"usernameCanonical";}';
 
         $obj = new TestUser();
 
         $obj->unserialize($arg);
-        $this->assertEquals("password", $obj->getPassword());
-        $this->assertEquals("salt", $obj->getSalt());
-        $this->assertEquals("usernameCanonical", $obj->getUsernameCanonical());
-        $this->assertEquals("username", $obj->getUsername());
-        $this->assertTrue($obj->getEnabled());
         $this->assertNull($obj->getId());
         $this->assertEquals("email", $obj->getEmail());
         $this->assertEquals("emailCanonical", $obj->getEmailCanonical());
+        $this->assertTrue($obj->getEnabled());
+        $this->assertEquals("password", $obj->getPassword());
+        $this->assertEquals("salt", $obj->getSalt());
+        $this->assertEquals("username", $obj->getUsername());
+        $this->assertEquals("usernameCanonical", $obj->getUsernameCanonical());
     }
 
     /**
