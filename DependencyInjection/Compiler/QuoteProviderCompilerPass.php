@@ -11,9 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\DependencyInjection\Compiler;
 
-use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\DependencyInjection\Reference;
 use WBW\Bundle\CoreBundle\Manager\Asset\QuoteManager;
 use WBW\Bundle\CoreBundle\Provider\Asset\QuoteProviderInterface;
 
@@ -23,22 +21,12 @@ use WBW\Bundle\CoreBundle\Provider\Asset\QuoteProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\DependencyInjection\Compiler
  */
-class QuoteProviderCompilerPass implements CompilerPassInterface {
+class QuoteProviderCompilerPass extends AbstractProviderCompilerPass {
 
     /**
      *{@inheritDoc}
      */
     public function process(ContainerBuilder $container): void {
-
-        if (false === $container->has(QuoteManager::SERVICE_NAME)) {
-            return;
-        }
-
-        $manager = $container->findDefinition(QuoteManager::SERVICE_NAME);
-
-        $providers = $container->findTaggedServiceIds(QuoteProviderInterface::QUOTE_TAG_NAME);
-        foreach ($providers as $id => $tag) {
-            $manager->addMethodCall("addProvider", [new Reference($id)]);
-        }
+        $this->processing($container, QuoteManager::SERVICE_NAME, QuoteProviderInterface::QUOTE_TAG_NAME);
     }
 }

@@ -11,9 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\DependencyInjection\Compiler;
 
-use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\DependencyInjection\Reference;
 use WBW\Bundle\CoreBundle\Manager\Asset\ColorManager;
 use WBW\Bundle\CoreBundle\Provider\Asset\ColorProviderInterface;
 
@@ -23,22 +21,12 @@ use WBW\Bundle\CoreBundle\Provider\Asset\ColorProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\DependencyInjection\Compiler
  */
-class ColorProviderCompilerPass implements CompilerPassInterface {
+class ColorProviderCompilerPass extends AbstractProviderCompilerPass {
 
     /**
      *{@inheritDoc}
      */
     public function process(ContainerBuilder $container): void {
-
-        if (false === $container->has(ColorManager::SERVICE_NAME)) {
-            return;
-        }
-
-        $manager = $container->findDefinition(ColorManager::SERVICE_NAME);
-
-        $providers = $container->findTaggedServiceIds(ColorProviderInterface::COLOR_TAG_NAME);
-        foreach ($providers as $id => $tag) {
-            $manager->addMethodCall("addProvider", [new Reference($id)]);
-        }
+        $this->processing($container, ColorManager::SERVICE_NAME, ColorProviderInterface::COLOR_TAG_NAME);
     }
 }
