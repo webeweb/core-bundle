@@ -18,6 +18,7 @@ use DateTime;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Form\DataTransformer
+ * @abstract
  */
 abstract class AbstractTimestampDataTransformer extends AbstractDateTimeDataTransformer {
 
