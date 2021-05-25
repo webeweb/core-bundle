@@ -1,9 +1,11 @@
 # Resources/translations/WBWCoreBundle.en.yml
-label:
+email:
     account_settings:  "Account settings"
     support:           "Support"
     unsubscribe:       "Unsubscribe"
     with_best_regards: "With best regards"
+
+form:
 
 message:
     welcome: "Welcome {{ username }}"

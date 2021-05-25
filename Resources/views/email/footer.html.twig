@@ -8,12 +8,12 @@
         <tr>
             <td class="signature" width="300">
                 <p>
-                    {{ emailLayout.bestRegards | default("label.with_best_regards" | trans([], _domain)) }},<br/>
+                    {{ emailLayout.bestRegards | default("email.with_best_regards" | trans([], _domain)) }},<br/>
                     {{ emailLayout.companyName | default("WEBEWEB") }}<br/>
-                    {{ emailLayout.supportPhone | default("") }}, {{ emailLayout.supportName | default("label.support" | trans([], _domain)) }}<br/>
+                    {{ emailLayout.supportPhone | default("") }}, {{ emailLayout.supportName | default("email.support" | trans([], _domain)) }}<br/>
                 </p>
                 <p>
-                    {{ "label.support" | trans([], _domain) }}: <a class="strong" href="{{ emailLayout.supportEmail | default("https://github.com/webeweb/core-bundle/issues") }}" target="_blank">
+                    {{ "email.support" | trans([], _domain) }}: <a class="strong" href="{{ emailLayout.supportEmail | default("https://github.com/webeweb/core-bundle/issues") }}" target="_blank">
                         {{ emailLayout.supportName | default("https://github.com/webeweb") }}
                     </a>
                 </p>
@@ -26,11 +26,11 @@
                 </div>
                 <p>
                     <a class="strong block" href="{{ emailLayout.unsubscribeURL | default("#") }}" target="_blank">
-                        {{ "label.unsubscribe" | trans([], _domain) }}
+                        {{ "email.unsubscribe" | trans([], _domain) }}
                     </a>
                     <span class="hide">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                     <a class="strong block" href="{{ emailLayout.accountSettingsURL | default("#") }}" target="_blank">
-                        {{ "label.account_settings" | trans([], _domain) }}
+                        {{ "email.account_settings" | trans([], _domain) }}
                     </a>
                 </p>
             </td>
