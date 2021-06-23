@@ -13,18 +13,18 @@ namespace WBW\Bundle\CoreBundle\Tests\Form\DataTransformer;
 
 use Exception;
 use Symfony\Component\Form\Exception\UnexpectedTypeException;
-use WBW\Bundle\CoreBundle\Form\DataTransformer\UserDataTransformer;
+use WBW\Bundle\CoreBundle\Form\DataTransformer\UsernameDataTransformer;
 use WBW\Bundle\CoreBundle\Manager\UserManagerInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser;
 
 /**
- * User data transformer test.
+ * Username data transformer test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Form\DataTransformer
  */
-class UserDataTransformerTest extends AbstractTestCase {
+class UsernameDataTransformerTest extends AbstractTestCase {
 
     /**
      * User manager.
@@ -56,7 +56,7 @@ class UserDataTransformerTest extends AbstractTestCase {
         // Set the User manager mock.
         $this->userManager->expects($this->any())->method("findUserByUsername")->willReturn($user);
 
-        $obj = new UserDataTransformer($this->userManager);
+        $obj = new UsernameDataTransformer($this->userManager);
 
         $this->assertNull($obj->reverseTransform(null));
         $this->assertNull($obj->reverseTransform(""));
@@ -70,7 +70,7 @@ class UserDataTransformerTest extends AbstractTestCase {
      */
     public function testReverseTransformWithUnexpectedTypeException(): void {
 
-        $obj = new UserDataTransformer($this->userManager);
+        $obj = new UsernameDataTransformer($this->userManager);
 
         try {
 
@@ -93,7 +93,7 @@ class UserDataTransformerTest extends AbstractTestCase {
         $user = new TestUser();
         $user->setUsername("username");
 
-        $obj = new UserDataTransformer($this->userManager);
+        $obj = new UsernameDataTransformer($this->userManager);
 
         $this->assertNull($obj->transform(null));
         $this->assertEquals("username", $obj->transform($user));
@@ -106,7 +106,7 @@ class UserDataTransformerTest extends AbstractTestCase {
      */
     public function testTransformWithUnexpectedTypeException(): void {
 
-        $obj = new UserDataTransformer($this->userManager);
+        $obj = new UsernameDataTransformer($this->userManager);
 
         try {
 
@@ -125,7 +125,7 @@ class UserDataTransformerTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $obj = new UserDataTransformer($this->userManager);
+        $obj = new UsernameDataTransformer($this->userManager);
 
         $this->assertSame($this->userManager, $obj->getUserManager());
     }

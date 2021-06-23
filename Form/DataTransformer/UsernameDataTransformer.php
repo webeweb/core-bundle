@@ -18,12 +18,12 @@ use WBW\Bundle\CoreBundle\Manager\UserManagerTrait;
 use WBW\Bundle\CoreBundle\Model\UserInterface;
 
 /**
- * User data transformer.
+ * Username data transformer.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Form\DataTransformer
  */
-class UserDataTransformer implements DataTransformerInterface {
+class UsernameDataTransformer implements DataTransformerInterface {
 
     use UserManagerTrait;
 
