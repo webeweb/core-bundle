@@ -60,6 +60,10 @@ class WBWCoreExtension extends Extension {
             $serviceLoader->load("providers.yml");
         }
 
+        if (true === $config["security"]) {
+            $serviceLoader->load("security.yml");
+        }
+
         if (true === $config["twig"]) {
             $serviceLoader->load("twig.yml");
         }
@@ -68,16 +72,12 @@ class WBWCoreExtension extends Extension {
             $serviceLoader->load("quote/worlds_wisdom.yml");
         }
 
-        if (true === $config["security_event_listener"]) {
-            $serviceLoader->load("services/security_event_listener.yml");
-        }
-
         ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "commands");
         ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "event_listeners");
         ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "providers");
+        ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "security");
         ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "twig");
         ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "quote");
-        ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "security_event_listener");
         ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "plugins");
         ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "locales");
         ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "themes");

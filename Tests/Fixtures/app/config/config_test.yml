@@ -70,13 +70,13 @@ twig:
 
 # Core configuration
 wbw_core:
-    commands:                true
-    event_listeners:         true
-    providers:               true
-    twig:                    true
+    commands:        true
+    event_listeners: true
+    providers:       true
+    security:        true
+    twig:            true
     quote:
         worlds_wisdom: true
-    security_event_listener: true
     plugins:
         - "animate_css"
         - "clippy_js"

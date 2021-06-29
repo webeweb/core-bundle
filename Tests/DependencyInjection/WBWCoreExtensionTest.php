@@ -218,10 +218,10 @@ class WBWCoreExtensionTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testLoadWithSecurityEventListener(): void {
+    public function testLoadWithSecurity(): void {
 
         // Set the configs mock.
-        $this->configs[WBWCoreExtension::EXTENSION_ALIAS]["security_event_listener"] = true;
+        $this->configs[WBWCoreExtension::EXTENSION_ALIAS]["security"] = true;
 
         $obj = new WBWCoreExtension();
 
@@ -236,7 +236,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testLoadWithWorldsWisdomQuoteProvider(): void {
+    public function testLoadWithWorldsWisdomQuote(): void {
 
         // Set the configs mock.
         $this->configs[WBWCoreExtension::EXTENSION_ALIAS]["quote"]["worlds_wisdom"] = true;

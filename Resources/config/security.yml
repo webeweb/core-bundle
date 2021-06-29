@@ -1,4 +1,4 @@
-# Resources/config/services/security_event_listeners.yml
+# Resources/config/services/security.yml
 services:
 
     wbw.core.event_listener.security:
