@@ -24,29 +24,27 @@ use Symfony\Component\Routing\RouterInterface;
 class TestCaseHelper {
 
     /**
-     * Get the dispatch() method for an EventDispatcher.
+     * Get the dispatch() method for an event dispatcher.
      *
-     * @return Closure Returns the dispatch() method for an EventDispatcher.
+     * @return Closure Returns the dispatch() method for an event dispatcher.
      */
     public static function getEventDispatcherDispatchFunction(): Closure {
 
-        $dispatchFunction = function($event, $eventName) {
-            return $event;
-        };
-
         if (Kernel::VERSION_ID < 40300) {
-            $dispatchFunction = function($eventName, $event) {
+            return function($eventName, $event) {
                 return $event;
             };
         }
 
-        return $dispatchFunction;
+        return function($event, $eventName) {
+            return $event;
+        };
     }
 
     /**
-     * Get the generate() method for a Router.
+     * Get the generate() method for a router.
      *
-     * @return Closure Returns the generate() method for a Router.
+     * @return Closure Returns the generate() method for a router.
      */
     public static function getRouterGenerateFunction(): Closure {
         return function($name, array $parameters = [], $referenceType = RouterInterface::ABSOLUTE_PATH) {
