@@ -96,7 +96,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
                 "event_listeners" => true,
                 "providers"       => true,
                 "twig"            => true,
-                "quote_providers" => [],
+                "quote"           => [],
             ],
         ];
     }
@@ -221,7 +221,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
     public function testLoadWithSecurityEventListener(): void {
 
         // Set the configs mock.
-        $this->configs["wbw_core"]["security_event_listener"] = true;
+        $this->configs[WBWCoreExtension::EXTENSION_ALIAS]["security_event_listener"] = true;
 
         $obj = new WBWCoreExtension();
 
@@ -239,7 +239,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
     public function testLoadWithWorldsWisdomQuoteProvider(): void {
 
         // Set the configs mock.
-        $this->configs["wbw_core"]["quote_providers"]["worlds_wisdom"] = true;
+        $this->configs[WBWCoreExtension::EXTENSION_ALIAS]["quote"]["worlds_wisdom"] = true;
 
         $obj = new WBWCoreExtension();
 
@@ -256,7 +256,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
     public function testLoadWithoutCommands(): void {
 
         // Set the configs mock.
-        $this->configs["wbw_core"]["commands"] = false;
+        $this->configs[WBWCoreExtension::EXTENSION_ALIAS]["commands"] = false;
 
         $obj = new WBWCoreExtension();
 
@@ -280,7 +280,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
     public function testLoadWithoutEventListeners(): void {
 
         // Set the configs mock.
-        $this->configs["wbw_core"]["event_listeners"] = false;
+        $this->configs[WBWCoreExtension::EXTENSION_ALIAS]["event_listeners"] = false;
 
         $obj = new WBWCoreExtension();
 
@@ -304,7 +304,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
     public function testLoadWithoutProviders(): void {
 
         // Set the configs mock.
-        $this->configs["wbw_core"]["providers"] = false;
+        $this->configs[WBWCoreExtension::EXTENSION_ALIAS]["providers"] = false;
 
         $obj = new WBWCoreExtension();
 
@@ -328,7 +328,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
     public function testLoadWithoutTwig(): void {
 
         // Set the configs mock.
-        $this->configs["wbw_core"]["twig"] = false;
+        $this->configs[WBWCoreExtension::EXTENSION_ALIAS]["twig"] = false;
 
         $obj = new WBWCoreExtension();
 

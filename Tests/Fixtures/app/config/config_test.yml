@@ -74,7 +74,7 @@ wbw_core:
     event_listeners:         true
     providers:               true
     twig:                    true
-    quote_providers:
+    quote:
         worlds_wisdom: true
     security_event_listener: true
     plugins:

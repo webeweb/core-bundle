@@ -139,7 +139,7 @@ class Configuration implements ConfigurationInterface {
                 ->booleanNode("event_listeners")->defaultTrue()->info("Load event listeners")->end()
                 ->booleanNode("providers")->defaultTrue()->info("Load providers")->end()
                 ->booleanNode("twig")->defaultTrue()->info("Load Twig extensions")->end()
-                ->arrayNode("quote_providers")->addDefaultsIfNotSet()
+                ->arrayNode("quote")->addDefaultsIfNotSet()
                     ->children()
                         ->booleanNode("worlds_wisdom")->defaultFalse()->info("Load World's wisdom")->end()
                     ->end()

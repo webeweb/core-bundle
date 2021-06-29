@@ -1,4 +1,4 @@
-# Resources/config/services/worlds_wisdom_quote_provider.yml
+# Resources/config/quote/worlds_wisdom.yml
 services:
 
     wbw.core.provider.asset.quote.worlds_wisdom:
