@@ -16,11 +16,11 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Security\Core\User\UserInterface as BaseUserInterface;
 use WBW\Bundle\CoreBundle\Model\Attribute\ArrayRolesTrait;
 use WBW\Bundle\CoreBundle\Model\Attribute\CollectionGroupsTrait;
-use WBW\Library\Core\Model\Attribute\BooleanEnabledTrait;
-use WBW\Library\Core\Model\Attribute\IntegerIdTrait;
-use WBW\Library\Core\Model\Attribute\StringEmailTrait;
-use WBW\Library\Core\Model\Attribute\StringPasswordTrait;
-use WBW\Library\Core\Model\Attribute\StringUsernameTrait;
+use WBW\Library\Traits\Booleans\BooleanEnabledTrait;
+use WBW\Library\Traits\Integers\IntegerIdTrait;
+use WBW\Library\Traits\Strings\StringEmailTrait;
+use WBW\Library\Traits\Strings\StringPasswordTrait;
+use WBW\Library\Traits\Strings\StringUsernameTrait;
 
 /**
  * User.

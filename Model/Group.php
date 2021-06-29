@@ -12,8 +12,8 @@
 namespace WBW\Bundle\CoreBundle\Model;
 
 use WBW\Bundle\CoreBundle\Model\Attribute\ArrayRolesTrait;
-use WBW\Library\Core\Model\Attribute\IntegerIdTrait;
-use WBW\Library\Core\Model\Attribute\StringNameTrait;
+use WBW\Library\Traits\Integers\IntegerIdTrait;
+use WBW\Library\Traits\Strings\StringNameTrait;
 
 /**
  * Group.

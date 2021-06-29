@@ -31,7 +31,8 @@
         "symfony/translation": "^3.4|^4.0",
         "swiftmailer/swiftmailer": "^5.0|^6.0",
         "twig/twig": "^2.4.4",
-        "webeweb/core-library": "^6.10"
+        "webeweb/core-library": "^7.0",
+        "webeweb/traits-library": "^1.0"
     },
     "conflict": {
         "webeweb/bootstrap-bundle": "<3.11",

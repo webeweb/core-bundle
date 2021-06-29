@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Form\Type;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use WBW\Bundle\CoreBundle\Translation\TranslationInterface;
-use WBW\Library\Core\Model\Attribute\StringClassTrait;
+use WBW\Library\Traits\Strings\StringClassTrait;
 
 /**
  * Group form type.

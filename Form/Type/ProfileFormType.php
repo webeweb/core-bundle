@@ -18,7 +18,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Security\Core\Validator\Constraints\UserPassword;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use WBW\Bundle\CoreBundle\Translation\TranslationInterface;
-use WBW\Library\Core\Model\Attribute\StringClassTrait;
+use WBW\Library\Traits\Strings\StringClassTrait;
 
 /**
  * Profile form type.
