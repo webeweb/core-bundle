@@ -27,6 +27,13 @@ class PasswordUpdater implements PasswordUpdaterInterface {
     use EncoderFactoryTrait;
 
     /**
+     * Service name.
+     *
+     * @var string
+     */
+    const SERVICE_NAME = "wbw.core.utility.password_updater";
+
+    /**
      * Constructor.
      *
      * @param EncoderFactoryInterface $encoderFactory
