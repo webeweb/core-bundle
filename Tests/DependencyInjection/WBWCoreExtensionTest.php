@@ -61,6 +61,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\JavascriptTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\StylesheetTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\UtilityTwigExtension;
+use WBW\Bundle\CoreBundle\Utility\CanonicalFieldsUpdater;
 use WBW\Bundle\CoreBundle\Utility\Canonicalizer;
 use WBW\Bundle\CoreBundle\Utility\PasswordUpdater;
 use WBW\Bundle\CoreBundle\Utility\TokenGenerator;
@@ -213,7 +214,8 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(StylesheetTwigExtension::class, $this->containerBuilder->get(StylesheetTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(UtilityTwigExtension::class, $this->containerBuilder->get(UtilityTwigExtension::SERVICE_NAME));
 
-        // Utility.
+        // Utilities
+        $this->assertInstanceOf(CanonicalFieldsUpdater::class, $this->containerBuilder->get(CanonicalFieldsUpdater::SERVICE_NAME));
         $this->assertInstanceOf(Canonicalizer::class, $this->containerBuilder->get(Canonicalizer::SERVICE_NAME));
         $this->assertInstanceOf(PasswordUpdater::class, $this->containerBuilder->get(PasswordUpdater::SERVICE_NAME));
         $this->assertInstanceOf(TokenGenerator::class, $this->containerBuilder->get(TokenGenerator::SERVICE_NAME));

@@ -1,14 +1,20 @@
 # Resources/config/utilities.yml
 services:
 
-    wbw.core.utility.canonicalizer:
-        class:  WBW\Bundle\CoreBundle\Utility\Canonicalizer
-        public: true
+    wbw.core.utility.canonical_fields_updater.default:
+        class:  WBW\Bundle\CoreBundle\Utility\CanonicalFieldsUpdater
+        arguments: [ "@wbw.core.utility.canonicalizer.default", "@wbw.core.utility.canonicalizer.default" ]
+        public: false
 
-    wbw.core.utility.password_updater:
+    wbw.core.utility.canonicalizer.default:
+        class:  WBW\Bundle\CoreBundle\Utility\Canonicalizer
+        public: false
+
+    wbw.core.utility.password_updater.default:
         class:  WBW\Bundle\CoreBundle\Utility\PasswordUpdater
         arguments: [ "@security.encoder_factory" ]
+        public: false
 
-    wbw.core.utility.token_generator:
+    wbw.core.utility.token_generator.default:
         class:  WBW\Bundle\CoreBundle\Utility\TokenGenerator
-        public: true
+        public: false
