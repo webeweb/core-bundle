@@ -14,6 +14,8 @@ namespace WBW\Bundle\CoreBundle\Tests\Utility;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Utility\TestCanonicalFieldsUpdaterTrait;
 use WBW\Bundle\CoreBundle\Utility\CanonicalFieldsUpdater;
+use WBW\Bundle\CoreBundle\Utility\Canonicalizer;
+use WBW\Bundle\CoreBundle\Utility\CanonicalizerInterface;
 
 /**
  * Canonical fields updater trait test.
@@ -22,6 +24,23 @@ use WBW\Bundle\CoreBundle\Utility\CanonicalFieldsUpdater;
  * @package WBW\Bundle\CoreBundle\Tests\Utility
  */
 class CanonicalFieldsUpdaterTraitTest extends AbstractTestCase {
+
+    /**
+     * Canonicalizer.
+     *
+     * @var CanonicalizerInterface
+     */
+    private $canonicalizer;
+
+    /**
+     * {@inheritDoc}
+     */
+    protected function setUp(): void {
+        parent::setUp();
+
+        // Set a Canonicalizer mock.
+        $this->canonicalizer = new Canonicalizer();
+    }
 
     /**
      * Tests the setCanonicalFieldsUpdater() method.

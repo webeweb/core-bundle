@@ -44,13 +44,6 @@ use WBW\Bundle\CoreBundle\Utility\CanonicalizerInterface;
 abstract class AbstractTestCase extends TestCase {
 
     /**
-     * Canonicalizer.
-     *
-     * @var CanonicalizerInterface
-     */
-    protected $canonicalizer;
-
-    /**
      * Container builder.
      *
      * @var ContainerBuilder
@@ -190,9 +183,6 @@ abstract class AbstractTestCase extends TestCase {
      */
     protected function setUp(): void {
         parent::setUp();
-
-        // Set a Canonicalizer mock.
-        $this->canonicalizer = new Canonicalizer();
 
         // Set an Entity manager mock.
         $this->entityManager = $this->getMockBuilder(EntityManagerInterface::class)->getMock();
