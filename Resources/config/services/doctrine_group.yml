@@ -1,0 +1,11 @@
+# Resources/config/services/doctrine_group.yml
+parameters:
+
+    wbw_core.user.group.manager.class: WBW\Bundle\CoreBundle\Doctrine\GroupManager
+
+services:
+
+    wbw.core.manager.group.default:
+        class: "%wbw_core.user.group.manager.class%"
+        arguments: [ "@doctrine.orm.entity_manager", "%wbw_core.user.group.class%" ]
+        public: false
