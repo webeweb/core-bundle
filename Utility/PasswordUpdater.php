@@ -31,7 +31,7 @@ class PasswordUpdater implements PasswordUpdaterInterface {
      *
      * @var string
      */
-    const SERVICE_NAME = "wbw.core.utility.password_updater";
+    const SERVICE_NAME = "wbw.core.utility.password_updater.default";
 
     /**
      * Constructor.

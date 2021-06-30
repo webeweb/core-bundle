@@ -24,7 +24,7 @@ class TokenGenerator implements TokenGeneratorInterface {
      *
      * @var string
      */
-    const SERVICE_NAME = "wbw.core.utility.token_generator";
+    const SERVICE_NAME = "wbw.core.utility.token_generator.default";
 
     /**
      * {@inheritDoc}

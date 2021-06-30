@@ -124,7 +124,7 @@ class PasswordUpdaterTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $this->assertEquals("wbw.core.utility.password_updater", PasswordUpdater::SERVICE_NAME);
+        $this->assertEquals("wbw.core.utility.password_updater.default", PasswordUpdater::SERVICE_NAME);
 
         $obj = new PasswordUpdater($this->encoderFactory);
 

@@ -42,6 +42,6 @@ class CanonicalizerTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $this->assertEquals("wbw.core.utility.canonicalizer", Canonicalizer::SERVICE_NAME);
+        $this->assertEquals("wbw.core.utility.canonicalizer.default", Canonicalizer::SERVICE_NAME);
     }
 }

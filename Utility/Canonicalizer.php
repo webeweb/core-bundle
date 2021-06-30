@@ -24,7 +24,7 @@ class Canonicalizer implements CanonicalizerInterface {
      *
      * @var string
      */
-    const SERVICE_NAME = "wbw.core.utility.canonicalizer";
+    const SERVICE_NAME = "wbw.core.utility.canonicalizer.default";
 
     /**
      * {@inheritDoc}

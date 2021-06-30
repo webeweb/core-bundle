@@ -96,6 +96,8 @@ class CanonicalFieldsUpdaterTest extends AbstractTestCase {
         $emailCanonicalizer    = new Canonicalizer();
         $usernameCanonicalizer = new Canonicalizer();
 
+        $this->assertEquals("wbw.core.utility.canonical_fields_updater.default", CanonicalFieldsUpdater::SERVICE_NAME);
+
         $obj = new CanonicalFieldsUpdater($usernameCanonicalizer, $emailCanonicalizer);
 
         $this->assertSame($emailCanonicalizer, $obj->getEmailCanonicalizer());

@@ -22,6 +22,13 @@ use WBW\Bundle\CoreBundle\Model\UserInterface;
 class CanonicalFieldsUpdater {
 
     /**
+     * Service name.
+     *
+     * @var string
+     */
+    const SERVICE_NAME = "wbw.core.utility.canonical_fields_updater.default";
+
+    /**
      * Email canonicalizer.
      *
      * @var CanonicalizerInterface
