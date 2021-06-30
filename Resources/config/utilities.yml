@@ -1,0 +1,14 @@
+# Resources/config/utilities.yml
+services:
+
+    wbw.core.utility.canonicalizer:
+        class:  WBW\Bundle\CoreBundle\Utility\Canonicalizer
+        public: true
+
+    wbw.core.utility.password_updater:
+        class:  WBW\Bundle\CoreBundle\Utility\PasswordUpdater
+        arguments: [ "@security.encoder_factory" ]
+
+    wbw.core.utility.token_generator:
+        class:  WBW\Bundle\CoreBundle\Utility\TokenGenerator
+        public: true
