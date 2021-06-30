@@ -13,7 +13,6 @@ namespace WBW\Bundle\CoreBundle\Tests\Utility;
 
 use Exception;
 use Symfony\Component\Security\Core\Encoder\BCryptPasswordEncoder;
-use Symfony\Component\Security\Core\Encoder\EncoderFactoryInterface;
 use Symfony\Component\Security\Core\Encoder\PasswordEncoderInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser;
@@ -26,23 +25,6 @@ use WBW\Bundle\CoreBundle\Utility\PasswordUpdater;
  * @package WBW\Bundle\CoreBundle\Tests\Utility
  */
 class PasswordUpdaterTest extends AbstractTestCase {
-
-    /**
-     * Encoder factory.
-     *
-     * @var EncoderFactoryInterface
-     */
-    private $encoderFactory;
-
-    /**
-     * {@inheritDoc}
-     */
-    protected function setUp(): void {
-        parent::setUp();
-
-        // Set an Encoder factory mock.
-        $this->encoderFactory = $this->getMockBuilder(EncoderFactoryInterface::class)->getMock();
-    }
 
     /**
      * Tests the hashPassword() method.

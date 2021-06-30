@@ -20,6 +20,7 @@ use Swift_Mailer;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
+use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\HttpFoundation\Session\Flash\FlashBagInterface;
 use Symfony\Component\HttpFoundation\Session\SessionBagInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
@@ -27,7 +28,9 @@ use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
+use Symfony\Component\Security\Core\Encoder\EncoderFactoryInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Security\Csrf\CsrfTokenManagerInterface;
 use Twig\Environment;
 use Twig\Loader\LoaderInterface;
 use WBW\Bundle\CoreBundle\Component\Translation\BaseTranslatorInterface;
@@ -49,6 +52,20 @@ abstract class AbstractTestCase extends TestCase {
     protected $containerBuilder;
 
     /**
+     * CSRF token manager.
+     *
+     * @var CsrfTokenManagerInterface
+     */
+    protected $csrfTokenManager;
+
+    /**
+     * Encoder factory.
+     *
+     * @var EncoderFactoryInterface
+     */
+    protected $encoderFactory;
+
+    /**
      * Entity manager.
      *
      * @var EntityManagerInterface;
@@ -68,6 +85,13 @@ abstract class AbstractTestCase extends TestCase {
      * @var FlashBagInterface
      */
     protected $flashBag;
+
+    /**
+     * Form factory.
+     *
+     * @var FormFactoryInterface
+     */
+    protected $formFactory;
 
     /**
      * Kernel.
@@ -182,6 +206,12 @@ abstract class AbstractTestCase extends TestCase {
     protected function setUp(): void {
         parent::setUp();
 
+        // Set a CSRF token manager.
+        $this->csrfTokenManager = $this->getMockBuilder(CsrfTokenManagerInterface::class)->getMock();
+
+        // Set an Encoder factory mock.
+        $this->encoderFactory = $this->getMockBuilder(EncoderFactoryInterface::class)->getMock();
+
         // Set an Entity manager mock.
         $this->entityManager = $this->getMockBuilder(EntityManagerInterface::class)->getMock();
 
@@ -190,6 +220,9 @@ abstract class AbstractTestCase extends TestCase {
 
         // Set a Flash bag mock.
         $this->flashBag = $this->getMockBuilder(FlashBagInterface::class)->getMock();
+
+        // Set a Form factory mock.
+        $this->formFactory = $this->getMockBuilder(FormFactoryInterface::class)->getMock();
 
         // Set a Kernel mock.
         $this->kernel = $this->getMockBuilder(KernelInterface::class)->getMock();
@@ -250,10 +283,13 @@ abstract class AbstractTestCase extends TestCase {
         $this->containerBuilder = new ContainerBuilder($parameterBag);
         $this->containerBuilder->set("doctrine.orm.entity_manager", $this->entityManager);
         $this->containerBuilder->set("event_dispatcher", $this->eventDispatcher);
+        $this->containerBuilder->set("form.factory", $this->formFactory);
         $this->containerBuilder->set("kernel", $this->kernel);
         $this->containerBuilder->set("logger", $this->logger);
         $this->containerBuilder->set("router", $this->router);
         $this->containerBuilder->set("session", $this->session);
+        $this->containerBuilder->set("security.csrf.token_manager", $this->csrfTokenManager);
+        $this->containerBuilder->set("security.encoder_factory", $this->encoderFactory);
         $this->containerBuilder->set("security.token_storage", $this->tokenStorage);
         $this->containerBuilder->set("swiftmailer.mailer", $this->swiftMailer);
         $this->containerBuilder->set("translator", $this->translator);

@@ -26,13 +26,6 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class FormFactoryTest extends AbstractTestCase {
 
     /**
-     * Form factory.
-     *
-     * @var FormFactoryInterface
-     */
-    private $formFactory;
-
-    /**
      * {@inheritDoc}
      */
     protected function setUp(): void {
@@ -44,14 +37,14 @@ class FormFactoryTest extends AbstractTestCase {
         $createNamed = function($name, $type = "Symfony\\Component\\Form\\Extension\\Core\\Type\\FormType", $data = null, array $options = []) use ($myself) {
 
             // Set a Form mock.
-            $form = $this->getMockBuilder(FormInterface::class)->getMock();
-            $form->expects($this->any())->method("getData")->willReturn($data);
-            $form->expects($this->any())->method("getName")->willReturn($name);
+            $form = $myself->getMockBuilder(FormInterface::class)->getMock();
+            $form->expects($myself->any())->method("getData")->willReturn($data);
+            $form->expects($myself->any())->method("getName")->willReturn($name);
 
             return $form;
         };
 
-        // Set a Form factory mock.
+        // Set the Form factory mock.
         $this->formFactory = $this->getMockBuilder(FormFactoryInterface::class)->getMock();
         $this->formFactory->expects($this->any())->method("createNamed")->willReturnCallback($createNamed);
     }
