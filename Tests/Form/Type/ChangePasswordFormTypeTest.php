@@ -39,7 +39,9 @@ class ChangePasswordFormTypeTest extends AbstractFormTypeTestCase {
 
         $obj = new ChangePasswordFormType(Group::class);
 
-        $this->assertNull($obj->buildForm($this->formBuilder, []));
+        $this->assertNull($obj->buildForm($this->formBuilder, [
+            "validation_groups" => [""],
+        ]));
 
         $this->assertCount(2, $this->childs);
 

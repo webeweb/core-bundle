@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Form\Type;
 
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use WBW\Bundle\CoreBundle\DependencyInjection\WBWCoreExtension;
 use WBW\Bundle\CoreBundle\Form\DataTransformer\UsernameDataTransformer;
 use WBW\Bundle\CoreBundle\Form\Type\UsernameFormType;
@@ -55,6 +56,18 @@ class UsernameFormTypeTest extends AbstractFormTypeTestCase {
         $obj = new UsernameFormType($this->usernameDataTransformer);
 
         $this->assertEquals(WBWCoreExtension::EXTENSION_ALIAS . "_username", $obj->getBlockPrefix());
+    }
+
+    /**
+     * Tests the getParent() method.
+     *
+     * @return void
+     */
+    public function testGetParent(): void {
+
+        $obj = new UsernameFormType($this->usernameDataTransformer);
+
+        $this->assertEquals(TextType::class, $obj->getParent());
     }
 
     /**

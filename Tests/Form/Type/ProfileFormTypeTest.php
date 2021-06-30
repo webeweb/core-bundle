@@ -38,7 +38,9 @@ class ProfileFormTypeTest extends AbstractFormTypeTestCase {
 
         $obj = new ProfileFormType(User::class);
 
-        $this->assertNull($obj->buildForm($this->formBuilder, []));
+        $this->assertNull($obj->buildForm($this->formBuilder, [
+            "validation_groups" => [""],
+        ]));
 
         $this->assertCount(3, $this->childs);
 
