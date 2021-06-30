@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Asset\Theme;
 
+use DateTime;
 use WBW\Bundle\CoreBundle\Asset\Theme\DefaultApplicationThemeProvider;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
@@ -30,7 +31,7 @@ class DefaultApplicationThemeProviderTest extends AbstractTestCase {
     public function test__construct(): void {
 
         // Set a Date/time mock.
-        $now = new \DateTime();
+        $now = new DateTime();
 
         $obj = new DefaultApplicationThemeProvider();
 
