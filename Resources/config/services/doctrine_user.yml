@@ -1,0 +1,7 @@
+# Resources/config/services/doctrine_user.yml
+services:
+
+    wbw.core.manager.user.default:
+        class: WBW\Bundle\CoreBundle\Doctrine\UserManager
+        arguments: [ "@wbw.core.utility.password_updater.default", "@wbw.core.utility.canonical_fields_updater.default", "@doctrine.orm.entity_manager", "%wbw_core.user.user_class%" ]
+        public: false
