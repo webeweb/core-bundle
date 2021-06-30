@@ -16,6 +16,7 @@ use Symfony\Component\Config\Definition\Builder\NodeDefinition;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\Yaml\Yaml;
+use WBW\Library\Core\Argument\Helper\ArrayHelper;
 
 /**
  * Configuration helper.
@@ -68,13 +69,26 @@ class ConfigurationHelper {
      * @param array $config The configuration.
      * @param string $alias The alias.
      * @param string $key The key.
+     * @param bool $tree Tree ?
      * @return void
      */
-    public static function registerContainerParameter(Container $container, array $config, string $alias, string $key): void {
+    public static function registerContainerParameter(Container $container, array $config, string $alias, string $key, bool $tree = true): void {
+
         if (false === array_key_exists($key, $config)) {
             return;
         }
-        $container->setParameter(implode(".", [$alias, $key]), $config[$key]);
+
+        $item = $config[$key];
+        $name = "{$alias}.{$key}";
+
+        if (true === $tree || false === is_array($item) || false === ArrayHelper::isObject($item)) {
+            $container->setParameter($name, $item);
+            return;
+        }
+
+        foreach ($item as $k => $v) {
+            static::registerContainerParameter($container, $item, $name, $k, $tree);
+        }
     }
 
     /**
