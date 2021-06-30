@@ -1,0 +1,19 @@
+# Resources/config/services/services_registration.yml
+services:
+
+    wbw.core.controller.registration:
+        class:  WBW\Bundle\CoreBundle\Controller\RegistrationController
+        arguments: [ "@wbw.core.form.factory.registration", "@wbw.core.manager.user.default", "@security.token_storage" ]
+        public: false
+
+    wbw.core.form.factory.registration:
+        class:  WBW\Bundle\CoreBundle\Form\Factory\FormFactory
+        arguments: [ "@form.factory", "%wbw_core.user.registration.form.name%", "%wbw_core.user.registration.form.type%", "%wbw_core.user.registration.form.validation_groups%" ]
+        public: false
+
+    wbw.core.form.type.registration:
+        class:  WBW\Bundle\CoreBundle\Form\Type\RegistrationFormType
+        arguments: [ "%wbw_core.user.user_class%" ]
+        public: false
+        tags:
+            - { name: "form.type" }
