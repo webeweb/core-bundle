@@ -1,0 +1,19 @@
+# Resources/config/services/services_resetting.yml
+services:
+
+    wbw.core.controller.resetting:
+        class:  WBW\Bundle\CoreBundle\Controller\ResettingController
+        arguments: [ "@wbw.core.form.factory.resetting", "@wbw.core.manager.user.default", "@wbw.core.utility.token_generator.default" ]
+        public: false
+
+    wbw.core.form.factory.resetting:
+        class:  WBW\Bundle\CoreBundle\Form\Factory\FormFactory
+        arguments: [ "@form.factory", "%wbw_core.user.resetting.form.name%", "%wbw_core.user.resetting.form.type%", "%wbw_core.user.resetting.form.validation_groups%" ]
+        public: false
+
+    wbw.core.form.type.resetting:
+        class:  WBW\Bundle\CoreBundle\Form\Type\ResettingFormType
+        arguments: [ "%wbw_core.user.user_class%" ]
+        public: false
+        tags:
+            - { name: "form.type" }
