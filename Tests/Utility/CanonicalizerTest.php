@@ -34,4 +34,14 @@ class CanonicalizerTest extends AbstractTestCase {
         $this->assertNull($obj->canonicalize(null));
         $this->assertEquals("john.doe@github.com", $obj->canonicalize("JOHN.doe@GitHub.com"));
     }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct(): void {
+
+        $this->assertEquals("wbw.core.utility.canonicalizer", Canonicalizer::SERVICE_NAME);
+    }
 }

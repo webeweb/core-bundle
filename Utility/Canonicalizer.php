@@ -20,6 +20,13 @@ namespace WBW\Bundle\CoreBundle\Utility;
 class Canonicalizer implements CanonicalizerInterface {
 
     /**
+     * Service name.
+     *
+     * @var string
+     */
+    const SERVICE_NAME = "wbw.core.utility.canonicalizer";
+
+    /**
      * {@inheritDoc}
      */
     public function canonicalize(?string $string): ?string {
