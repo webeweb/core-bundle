@@ -20,6 +20,13 @@ namespace WBW\Bundle\CoreBundle\Utility;
 class TokenGenerator implements TokenGeneratorInterface {
 
     /**
+     * Service name.
+     *
+     * @var string
+     */
+    const SERVICE_NAME = "wbw.core.utility.token_generator";
+
+    /**
      * {@inheritDoc}
      */
     public function generateToken(): string {

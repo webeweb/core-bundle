@@ -13,6 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Utility;
 
 use Exception;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
+use WBW\Bundle\CoreBundle\Utility\Canonicalizer;
 use WBW\Bundle\CoreBundle\Utility\TokenGenerator;
 
 /**
@@ -36,5 +37,16 @@ class TokenGeneratorTest extends AbstractTestCase {
         for ($i = 0; $i < 32; ++$i) {
             $this->assertRegExp("/[A-Za-z0-9_\-]{32}/", $obj->generateToken());
         }
+    }
+
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct(): void {
+
+        $this->assertEquals("wbw.core.utility.token_generator", TokenGenerator::SERVICE_NAME);
     }
 }
