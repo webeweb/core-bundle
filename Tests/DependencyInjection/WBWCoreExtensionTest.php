@@ -13,6 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\DependencyInjection;
 
 use Exception;
 use Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
+use Symfony\Component\Security\Core\Encoder\EncoderFactoryInterface;
 use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\AmberColorProvider;
 use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\BlueColorProvider;
 use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\BlueGreyColorProvider;
@@ -60,6 +61,9 @@ use WBW\Bundle\CoreBundle\Twig\Extension\JavascriptTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\StylesheetTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\UtilityTwigExtension;
+use WBW\Bundle\CoreBundle\Utility\Canonicalizer;
+use WBW\Bundle\CoreBundle\Utility\PasswordUpdater;
+use WBW\Bundle\CoreBundle\Utility\TokenGenerator;
 
 /**
  * Core extension test.
@@ -99,6 +103,12 @@ class WBWCoreExtensionTest extends AbstractTestCase {
                 "quote"           => [],
             ],
         ];
+
+        // Set an Encoder factory mock.
+        $encoderFactory = $this->getMockBuilder(EncoderFactoryInterface::class)->getMock();
+
+        // Set the Container builder mock.
+        $this->containerBuilder->set("security.encoder_factory", $encoderFactory);
     }
 
     /**
@@ -202,6 +212,11 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(RendererTwigExtension::class, $this->containerBuilder->get(RendererTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(StylesheetTwigExtension::class, $this->containerBuilder->get(StylesheetTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(UtilityTwigExtension::class, $this->containerBuilder->get(UtilityTwigExtension::SERVICE_NAME));
+
+        // Utility.
+        $this->assertInstanceOf(Canonicalizer::class, $this->containerBuilder->get(Canonicalizer::SERVICE_NAME));
+        $this->assertInstanceOf(PasswordUpdater::class, $this->containerBuilder->get(PasswordUpdater::SERVICE_NAME));
+        $this->assertInstanceOf(TokenGenerator::class, $this->containerBuilder->get(TokenGenerator::SERVICE_NAME));
 
         // Assets Twig extensions
         $this->assertInstanceOf(FontAwesomeTwigExtension::class, $this->containerBuilder->get(FontAwesomeTwigExtension::SERVICE_NAME));
