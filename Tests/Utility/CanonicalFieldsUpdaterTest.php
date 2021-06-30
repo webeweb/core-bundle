@@ -101,5 +101,4 @@ class CanonicalFieldsUpdaterTest extends AbstractTestCase {
         $this->assertSame($emailCanonicalizer, $obj->getEmailCanonicalizer());
         $this->assertSame($usernameCanonicalizer, $obj->getUsernameCanonicalizer());
     }
-
 }

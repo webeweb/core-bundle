@@ -45,5 +45,4 @@ trait GroupManagerTrait {
         $this->groupManager = $groupManager;
         return $this;
     }
-
 }

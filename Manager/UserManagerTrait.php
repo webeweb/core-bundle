@@ -45,5 +45,4 @@ trait UserManagerTrait {
         $this->userManager = $userManager;
         return $this;
     }
-
 }
