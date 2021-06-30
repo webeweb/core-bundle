@@ -3,12 +3,12 @@ services:
 
     wbw.core.command.copy_skeleton:
         class:  WBW\Bundle\CoreBundle\Command\CopySkeletonCommand
-        public: true
+        public: false
         tags:
             - { name: "console.command" }
 
     wbw.core.command.unzip_assets:
         class:  WBW\Bundle\CoreBundle\Command\UnzipAssetsCommand
-        public: true
+        public: false
         tags:
             - { name: "console.command" }
