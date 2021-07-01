@@ -41,7 +41,7 @@ class UserConfiguration {
                         ->arrayNode("form")->addDefaultsIfNotSet()
                             ->children()
                                 ->scalarNode("type")->defaultValue(ChangePasswordFormType::class)->end()
-                                ->scalarNode("name")->defaultValue("wbw_core_form_change_password")->end()
+                                ->scalarNode("name")->defaultValue("wbw_core_change_password_form")->end()
                                 ->arrayNode("validation_groups")->defaultValue(["ChangePassword", "Default"])
                                     ->prototype("scalar")->end()
                                 ->end()
@@ -59,19 +59,19 @@ class UserConfiguration {
      * @return void
      */
     protected static function addGroupSection(ArrayNodeDefinition $node): void {
+
         $node
             ->children()
                 ->arrayNode("group")->canBeUnset()
                 ->children()
-                    ->scalarNode("group_class")->isRequired()->cannotBeEmpty()->end()
-                    ->scalarNode("group_manager")->defaultValue("wbw_core.manager.group.default")->end()
-                    ->arrayNode("form")->addDefaultsIfNotSet()->fixXmlConfig("validation_group")
+                    ->scalarNode("class")->isRequired()->cannotBeEmpty()->end()
+                    ->scalarNode("manager")->defaultValue("wbw_core.manager.group.default")->end()
+                    ->arrayNode("form")->addDefaultsIfNotSet()
                         ->children()
                             ->scalarNode("type")->defaultValue(GroupFormType::class)->end()
-                            ->scalarNode("name")->defaultValue("wbw_core_form_group")->end()
-                                ->arrayNode("validation_groups")->defaultValue(["Registration", "Default"])
-                                    ->prototype("scalar")->end()
-                                ->end()
+                            ->scalarNode("name")->defaultValue("wbw_core_user_group_form")->end()
+                            ->arrayNode("validation_groups")->defaultValue(["Registration", "Default"])
+                                ->prototype("scalar")->end()
                             ->end()
                         ->end()
                     ->end()
@@ -94,7 +94,7 @@ class UserConfiguration {
                         ->arrayNode("form")->addDefaultsIfNotSet()->fixXmlConfig("validation_group")
                             ->children()
                                 ->scalarNode("type")->defaultValue(ProfileFormType::class)->end()
-                                ->scalarNode("name")->defaultValue("wbw_core_form_profile")->end()
+                                ->scalarNode("name")->defaultValue("wbw_core_profile_form")->end()
                                 ->arrayNode("validation_groups")->defaultValue(["Profile", "Default"])
                                     ->prototype("scalar")->end()
                                 ->end()
@@ -132,7 +132,7 @@ class UserConfiguration {
                         ->arrayNode("form")->addDefaultsIfNotSet()
                             ->children()
                                 ->scalarNode("type")->defaultValue(RegistrationFormType::class)->end()
-                                ->scalarNode("name")->defaultValue("wbw_core_form_registration")->end()
+                                ->scalarNode("name")->defaultValue("wbw_core_registration_form")->end()
                                 ->arrayNode("validation_groups")->defaultValue(["Registration", "Default"])
                                     ->prototype("scalar")->end()
                                 ->end()
@@ -171,12 +171,34 @@ class UserConfiguration {
                         ->arrayNode("form")->addDefaultsIfNotSet()
                             ->children()
                                 ->scalarNode("type")->defaultValue(ResettingFormType::class)->end()
-                                ->scalarNode("name")->defaultValue("wbw_core_forme_resetting")->end()
+                                ->scalarNode("name")->defaultValue("wbw_core_resetting_form")->end()
                                 ->arrayNode("validation_groups")->defaultValue(["ResetPassword", "Default"])
                                     ->prototype("scalar")->end()
                                 ->end()
                             ->end()
                         ->end()
+                    ->end()
+                ->end()
+            ->end();
+    }
+
+    /**
+     * Add the user "service" section.
+     *
+     * @param ArrayNodeDefinition $node The node.
+     * @return void
+     */
+    protected static function addServiceSection(ArrayNodeDefinition $node): void {
+
+        $node
+            ->children()
+                ->arrayNode("service")->addDefaultsIfNotSet()
+                    ->children()
+                        ->scalarNode("mailer")->defaultValue("wbw.core.mailer.default")->end()
+                        ->scalarNode("email_canonicalizer")->defaultValue("wbw.core.utility.canonicalizer.default")->end()
+                        ->scalarNode("token_generator")->defaultValue("wbw.core.utility.token_generator.default")->end()
+                        ->scalarNode("username_canonicalizer")->defaultValue("wbw.core.utility.canonicalizer.default")->end()
+                        ->scalarNode("user_manager")->defaultValue("wbw.core.manager.user.default")->end()
                     ->end()
                 ->end()
             ->end();
@@ -232,7 +254,7 @@ class UserConfiguration {
                 ->ifTrue(function ($v) {
 
                     $driver  = "custom" === $v["db_driver"];
-                    $service = false === empty($v["group"]) && "wbw_core.manager.group.default" === $v["group"]["group_manager"];
+                    $service = false === empty($v["group"]) && "wbw_core.manager.group.default" === $v["group"]["manager"];
 
                     return $driver && $service;
                 })
@@ -243,6 +265,7 @@ class UserConfiguration {
         static::addProfileSection($node);
         static::addRegistrationSection($node);
         static::addResettingSection($node);
+        static::addServiceSection($node);
 
         static::addGroupSection($node);
     }
