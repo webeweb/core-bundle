@@ -276,7 +276,7 @@ abstract class AbstractTestCase extends TestCase {
         // Set a Parameter bag mock.
         $parameterBag = new ParameterBag([
             "kernel.environment" => "test",
-            "kernel.root_dir"    => getcwd() . "/Fixtures/app",
+            "kernel.root_dir"    => realpath(__DIR__ . "/Fixtures/app"),
         ]);
 
         // We set a container builder with only the necessary.

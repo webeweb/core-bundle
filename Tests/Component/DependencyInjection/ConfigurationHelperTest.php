@@ -29,7 +29,9 @@ class ConfigurationHelperTest extends AbstractTestCase {
      */
     public function testLoadYamlConfig(): void {
 
-        $res = ConfigurationHelper::loadYamlConfig(getcwd() . "/DependencyInjection", "assets");
+        $directory = realpath(__DIR__ . "/../../../DependencyInjection");
+
+        $res = ConfigurationHelper::loadYamlConfig($directory, "assets");
         $this->assertNotEquals([], $res);
     }
 
@@ -40,7 +42,9 @@ class ConfigurationHelperTest extends AbstractTestCase {
      */
     public function testLoadYamlConfigWithoutFilename(): void {
 
-        $res = ConfigurationHelper::loadYamlConfig(getcwd() . "/DependencyInjection", "exception");
+        $directory = realpath(__DIR__ . "/../../../DependencyInjection");
+
+        $res = ConfigurationHelper::loadYamlConfig($directory, "exception");
         $this->assertEquals([], $res);
     }
 }

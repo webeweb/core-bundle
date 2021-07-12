@@ -53,9 +53,9 @@ class SkeletonHelperTest extends AbstractTestCase {
         parent::setUp();
 
         // Set the directories.
-        $this->directoryIllegal   = getcwd() . "/composer.json";
-        $this->directoryResources = getcwd() . "/Tests/Fixtures/app/Resources";
-        $this->directorySkeleton  = getcwd() . "/Resources/views";
+        $this->directoryIllegal   = realpath(__DIR__ . "/../../composer.json");
+        $this->directoryResources = __DIR__ . "/../Fixtures/app/Resources";
+        $this->directorySkeleton  = realpath(__DIR__ . "/../../Resources/views");
 
         (new Filesystem())->remove($this->directoryResources);
     }

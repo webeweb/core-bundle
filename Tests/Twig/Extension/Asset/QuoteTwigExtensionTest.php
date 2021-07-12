@@ -48,7 +48,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
     protected function setUp(): void {
         parent::setUp();
 
-        $filename = getcwd() . "/Resources/translations/WorldsWisdom.fr.yml";
+        $filename = realpath(__DIR__ . "/../../../../Resources/translations/WorldsWisdom.fr.yml");
 
         // Set a Quote provider mock.
         $this->quoteProvider = new YamlQuoteProvider($filename);

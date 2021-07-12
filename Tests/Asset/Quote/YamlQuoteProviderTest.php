@@ -39,7 +39,7 @@ class YamlQuoteProviderTest extends AbstractTestCase {
     protected function setUp(): void {
         parent::setUp();
 
-        $this->filename = getcwd() . "/Resources/translations/WorldsWisdom.fr.yml";
+        $this->filename = realpath(__DIR__ . "/../../../Resources/translations/WorldsWisdom.fr.yml");
     }
 
     /**

@@ -53,9 +53,9 @@ class AssetsHelperTest extends AbstractTestCase {
         parent::setUp();
 
         // Set the directories.
-        $this->directoryAssets  = getcwd() . "/Resources/assets";
-        $this->directoryIllegal = getcwd() . "/composer.json";
-        $this->directoryPublic  = getcwd() . "/Resources/public";
+        $this->directoryAssets  = realpath(__DIR__ . "/../../Resources/assets");
+        $this->directoryIllegal = realpath(__DIR__ . "/../../composer.json");
+        $this->directoryPublic  = realpath(__DIR__ . "/../../Resources/public");
     }
 
     /**
@@ -66,8 +66,10 @@ class AssetsHelperTest extends AbstractTestCase {
      */
     public function testListAssets(): void {
 
+        $directory = realpath(__DIR__ . "/../../DependencyInjection");
+
         // Load the YAML configuration.
-        $config  = ConfigurationHelper::loadYamlConfig(getcwd() . "/DependencyInjection", "assets");
+        $config  = ConfigurationHelper::loadYamlConfig($directory, "assets");
         $plugins = $config["assets"]["wbw.core.asset.core"]["plugins"];
 
         $res = TestAssetsHelper::listAssets($this->directoryAssets);

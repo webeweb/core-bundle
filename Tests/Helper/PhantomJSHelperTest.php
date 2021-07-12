@@ -50,13 +50,13 @@ class PhantomJSHelperTest extends AbstractTestCase {
         parent::setUp();
 
         // Set a Binary path mock.
-        $this->binaryPath = getcwd() . "/Tests/Fixtures/bin/phantomjs";
+        $this->binaryPath = realpath(__DIR__ . "/../Fixtures/bin/phantomjs");
 
         // Set an Output path mock.
-        $this->outputPath = getcwd() . "/Tests/Fixtures/app/var/phantomjs/output";
+        $this->outputPath = realpath(__DIR__ . "/../Fixtures/app/var/phantomjs/output");
 
         // Set a Scripts path mock.
-        $this->scriptsPath = getcwd() . "/Tests/Fixtures/app/var/phantomjs/scripts";
+        $this->scriptsPath = realpath(__DIR__ . "/../Fixtures/app/var/phantomjs/scripts");
     }
 
     /**

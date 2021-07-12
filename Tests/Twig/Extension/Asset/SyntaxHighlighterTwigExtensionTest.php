@@ -214,7 +214,7 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
     public function testSyntaxHighlighterContentFunctionWithFileNotFoundException(): void {
 
         // Set a Filename mock.
-        $filename = getcwd() . "/Tests/Twig/Extension/Asset/SyntaxHighlighterTwigExtensionTest";
+        $filename = __DIR__ . "/SyntaxHighlighterTwigExtensionTest";
 
         $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
@@ -239,7 +239,7 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
     public function testSyntaxHighlighterContentFunctionWithFilename(): void {
 
         // Set a Filename mock.
-        $filename = getcwd() . "/Tests/Twig/Extension/Asset/SyntaxHighlighterTwigExtensionTest.txt";
+        $filename = realpath(__DIR__ . "/SyntaxHighlighterTwigExtensionTest.txt");
 
         $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
