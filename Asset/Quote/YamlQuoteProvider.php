@@ -77,6 +77,7 @@ class YamlQuoteProvider extends AbstractQuoteProvider {
             $model->setDate(false === $date ? null : $date);
             $model->setAuthor(ArrayHelper::get($v, "author"));
             $model->setContent(ArrayHelper::get($v, "content"));
+            $model->setSaint(ArrayHelper::get($v, "saint"));
 
             $this->quotes[$k] = $model;
         }

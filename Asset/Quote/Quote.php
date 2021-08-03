@@ -33,6 +33,13 @@ class Quote implements QuoteInterface {
     private $author;
 
     /**
+     * Saint.
+     *
+     * @var string|null
+     */
+    private $saint;
+
+    /**
      * Constructor.
      */
     public function __construct() {
@@ -47,6 +54,13 @@ class Quote implements QuoteInterface {
     }
 
     /**
+     * {@inheritDoc}
+     */
+    public function getSaint(): ?string {
+        return $this->saint;
+    }
+
+    /**
      * Set the author.
      *
      * @param string $author The author.
@@ -54,6 +68,17 @@ class Quote implements QuoteInterface {
      */
     public function setAuthor(string $author): QuoteInterface {
         $this->author = $author;
+        return $this;
+    }
+
+    /**
+     * Set the saint.
+     *
+     * @param string $saint The saint.
+     * @return Quote Returns this quote.
+     */
+    public function setSaint(string $saint): QuoteInterface {
+        $this->saint = $saint;
         return $this;
     }
 }

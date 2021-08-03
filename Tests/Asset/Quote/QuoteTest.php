@@ -36,6 +36,19 @@ class QuoteTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the setSaint() method.
+     *
+     * @return void
+     */
+    public function testSetSaint(): void {
+
+        $obj = new Quote();
+
+        $obj->setSaint("saint");
+        $this->assertEquals("saint", $obj->getSaint());
+    }
+
+    /**
      * Tests the __construct() method.
      *
      * @return void
@@ -47,5 +60,6 @@ class QuoteTest extends AbstractTestCase {
         $this->assertNull($obj->getAuthor());
         $this->assertNull($obj->getContent());
         $this->assertNull($obj->getDate());
+        $this->assertNull($obj->getSaint());
     }
 }

@@ -19,7 +19,8 @@ use DateTime;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Asset\Quote
  */
-interface QuoteInterface {
+interface QuoteInterface
+{
 
     /**
      * Get the author.
@@ -34,6 +35,13 @@ interface QuoteInterface {
      * @return string|null Returns the content.
      */
     public function getContent(): ?string;
+
+    /**
+     * Get the saint.
+     *
+     * @return string|null Returns the saint.
+     */
+    public function getSaint(): ?string;
 
     /**
      * Get the date.

@@ -69,6 +69,7 @@ class YamlQuoteProviderTest extends AbstractTestCase {
 
             $this->assertNotNull($obj->getQuotes()[$day]->getAuthor());
             $this->assertNotNull($obj->getQuotes()[$day]->getContent());
+            $this->assertNotNull($obj->getQuotes()[$day]->getSaint());
 
             $date->add(new DateInterval("P1D"));
         } while ("2017" !== $date->format("Y"));
