@@ -22,6 +22,34 @@ use WBW\Bundle\CoreBundle\Asset\Toast\ToastInterface;
 class ToastEvent extends AbstractEvent {
 
     /**
+     * Event "danger".
+     *
+     * @var string
+     */
+    const DANGER = "wbw.core.event.toast.danger";
+
+    /**
+     * Event "info".
+     *
+     * @var string
+     */
+    const INFO = "wbw.core.event.toast.info";
+
+    /**
+     * Event "success".
+     *
+     * @var string
+     */
+    const SUCCESS = "wbw.core.event.toast.success";
+
+    /**
+     * Event "warning".
+     *
+     * @var string
+     */
+    const WARNING = "wbw.core.event.toast.warning";
+
+    /**
      * Toast.
      *
      * @var ToastInterface

@@ -30,6 +30,11 @@ class ToastEventTest extends AbstractTestCase {
      */
     public function test__constructor(): void {
 
+        $this->assertEquals("wbw.core.event.toast.danger", ToastEvent::DANGER);
+        $this->assertEquals("wbw.core.event.toast.info", ToastEvent::INFO);
+        $this->assertEquals("wbw.core.event.toast.success", ToastEvent::SUCCESS);
+        $this->assertEquals("wbw.core.event.toast.warning", ToastEvent::WARNING);
+
         // Set a Toast mock.
         $toast = $this->getMockBuilder(ToastInterface::class)->getMock();
 

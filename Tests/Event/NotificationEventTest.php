@@ -30,6 +30,11 @@ class NotificationEventTest extends AbstractTestCase {
      */
     public function test__constructor(): void {
 
+        $this->assertEquals("wbw.core.event.notification.danger", NotificationEvent::DANGER);
+        $this->assertEquals("wbw.core.event.notification.info", NotificationEvent::INFO);
+        $this->assertEquals("wbw.core.event.notification.success", NotificationEvent::SUCCESS);
+        $this->assertEquals("wbw.core.event.notification.warning", NotificationEvent::WARNING);
+
         // Set a Notification mock.
         $notification = $this->getMockBuilder(NotificationInterface::class)->getMock();
 

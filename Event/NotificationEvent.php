@@ -22,6 +22,34 @@ use WBW\Bundle\CoreBundle\Asset\Notification\NotificationInterface;
 class NotificationEvent extends AbstractEvent {
 
     /**
+     * Event "danger".
+     *
+     * @var string
+     */
+    const DANGER = "wbw.core.event.notification.danger";
+
+    /**
+     * Event "info".
+     *
+     * @var string
+     */
+    const INFO = "wbw.core.event.notification.info";
+
+    /**
+     * Event "success".
+     *
+     * @var string
+     */
+    const SUCCESS = "wbw.core.event.notification.success";
+
+    /**
+     * Event "warning".
+     *
+     * @var string
+     */
+    const WARNING = "wbw.core.event.notification.warning";
+
+    /**
      * Notification.
      *
      * @var NotificationInterface

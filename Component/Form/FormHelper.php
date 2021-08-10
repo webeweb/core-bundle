@@ -23,7 +23,6 @@ use WBW\Bundle\CoreBundle\Component\EventDispatcher\EventDispatcherTrait;
 use WBW\Bundle\CoreBundle\Doctrine\Common\Persistence\ObjectManagerTrait;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\Exception\RedirectResponseException;
-use WBW\Bundle\CoreBundle\WBWCoreEvents;
 
 /**
  * Form helper.
@@ -74,7 +73,7 @@ class FormHelper {
             return;
         }
 
-        $eventName    = WBWCoreEvents::NOTIFICATION_WARNING;
+        $eventName    = NotificationEvent::WARNING;
         $notification = NotificationFactory::newWarningNotification($notification);
         $event        = new NotificationEvent($eventName, $notification);
 
