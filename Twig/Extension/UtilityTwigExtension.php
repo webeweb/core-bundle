@@ -15,7 +15,7 @@ use DateTime;
 use Exception;
 use Twig\TwigFilter;
 use Twig\TwigFunction;
-use WBW\Library\Core\Renderer\DateTimeRenderer;
+use WBW\Library\Types\Helper\DateTimeHelper;
 
 /**
  * Utility Twig extension.
@@ -41,7 +41,7 @@ class UtilityTwigExtension extends AbstractTwigExtension {
      * @throws Exception Throws an exception if an error occurs.
      */
     public function calcAge(DateTime $birthDate, DateTime $refDate = null): int {
-        return DateTimeRenderer::renderAge($birthDate, $refDate);
+        return DateTimeHelper::getAge($birthDate, $refDate);
     }
 
     /**
@@ -51,8 +51,8 @@ class UtilityTwigExtension extends AbstractTwigExtension {
      * @param string $format The format.
      * @return string Returns the formatted date/time.
      */
-    public function formatDate(DateTime $dateTime = null, string $format = DateTimeRenderer::DATETIME_FORMAT): string {
-        return DateTimeRenderer::renderDateTime($dateTime, $format);
+    public function formatDate(DateTime $dateTime = null, string $format = DateTimeHelper::DATETIME_FORMAT): string {
+        return DateTimeHelper::toString($dateTime, $format);
     }
 
     /**

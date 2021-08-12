@@ -15,7 +15,7 @@ use DateTime;
 use Symfony\Component\Filesystem\Exception\FileNotFoundException;
 use Symfony\Component\Yaml\Yaml;
 use WBW\Bundle\CoreBundle\Provider\Asset\QuoteProviderInterface;
-use WBW\Library\Core\Argument\Helper\ArrayHelper;
+use WBW\Library\Types\Helper\ArrayHelper;
 
 /**
  * YAML Quote provider.

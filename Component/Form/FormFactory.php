@@ -15,7 +15,7 @@ use Closure;
 use ReflectionClass;
 use ReflectionException;
 use WBW\Bundle\CoreBundle\Asset\Select\ChoiceValueInterface;
-use WBW\Library\Core\Argument\Helper\ArrayHelper;
+use WBW\Library\Types\Helper\ArrayHelper;
 
 /**
  * Form factory.
