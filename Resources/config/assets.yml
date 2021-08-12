@@ -106,6 +106,26 @@ assets:
                     - "vi"
                     - "zh-CN"
                     - "zh-TW"
+            leaflet:
+                version:     "1.7.1"
+                description: "Leaflet"
+                stylesheets:
+                    - "/leaflet-{{ version }}/leaflet.css"
+                javascripts:
+                    - "/leaflet-{{ version }}/leaflet.js"
+            leaflet_color_markers:
+                version:     "1.0.0"
+                description: "Leaflet Color Markers"
+                stylesheets: [ ]
+                javascripts:
+                    - "/leaflet-color-markers-{{ version }}/leaflet-color-markers.js"
+            leaflet_marker_cluster:
+                version:     "1.4.1"
+                description: "Leaflet Marker Cluster"
+                stylesheets:
+                    - "/leaflet-markercluster-{{ version }}/MarkerCluster.Default.css"
+                javascripts:
+                    - "/leaflet-markercluster-{{ version }}/leaflet.markercluster.js"
             material_design_color_palette:
                 version:     "1.1.0"
                 description: "Material Design Color Palette"
