@@ -15,7 +15,7 @@ use WBW\Bundle\CoreBundle\Asset\Select\ChoiceLabelInterface;
 use WBW\Bundle\CoreBundle\Asset\Select\TranslatedChoiceLabelInterface;
 use WBW\Bundle\CoreBundle\Component\Form\FormRenderer;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Library\Core\Sorter\AlphabeticalTreeNodeInterface;
+use WBW\Library\Sorter\Model\AlphabeticalTreeNodeInterface;
 
 /**
  * Form renderer test.
