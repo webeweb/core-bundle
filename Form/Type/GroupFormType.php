@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Form\Type;
 
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use WBW\Bundle\CoreBundle\Translation\TranslationInterface;
+use WBW\Bundle\CoreBundle\Translation\TranslatorInterface;
 use WBW\Library\Traits\Strings\StringClassTrait;
 
 /**
@@ -51,7 +51,7 @@ class GroupFormType extends AbstractFormType {
     public function configureOptions(OptionsResolver $resolver): void {
         $resolver->setDefaults([
             "data_class"         => $this->getClass(),
-            "translation_domain" => TranslationInterface::TRANSLATION_DOMAIN,
+            "translation_domain" => TranslatorInterface::DOMAIN,
             "csrf_token_id"      => "group",
         ]);
     }

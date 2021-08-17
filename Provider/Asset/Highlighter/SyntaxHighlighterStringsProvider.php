@@ -15,7 +15,7 @@ use WBW\Bundle\CoreBundle\Asset\Highlighter\SyntaxHighlighter\SyntaxHighlighterS
 use WBW\Bundle\CoreBundle\Component\Translation\BaseTranslatorInterface;
 use WBW\Bundle\CoreBundle\Component\Translation\TranslatorTrait;
 use WBW\Bundle\CoreBundle\Provider\ProviderInterface;
-use WBW\Bundle\CoreBundle\Translation\TranslationInterface;
+use WBW\Bundle\CoreBundle\Translation\TranslatorInterface;
 
 /**
  * SyntaxHighlighter strings provider.
@@ -71,6 +71,6 @@ class SyntaxHighlighterStringsProvider implements ProviderInterface {
      * @return string Returns the translation.
      */
     protected function translate(string $id): string {
-        return $this->getTranslator()->trans($id, [], TranslationInterface::TRANSLATION_DOMAIN);
+        return $this->getTranslator()->trans($id, [], TranslatorInterface::DOMAIN);
     }
 }

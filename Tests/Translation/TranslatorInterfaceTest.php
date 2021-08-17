@@ -12,15 +12,15 @@
 namespace WBW\Bundle\CoreBundle\Tests\Translation;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Translation\TranslationInterface;
+use WBW\Bundle\CoreBundle\Translation\TranslatorInterface;
 
 /**
- * Translation interface test.
+ * Translator interface test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Tests\Translation
  */
-class TranslationInterfaceTest extends AbstractTestCase {
+class TranslatorInterfaceTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.
@@ -29,6 +29,6 @@ class TranslationInterfaceTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $this->assertEquals("WBWCoreBundle", TranslationInterface::TRANSLATION_DOMAIN);
+        $this->assertEquals("WBWCoreBundle", TranslatorInterface::DOMAIN);
     }
 }

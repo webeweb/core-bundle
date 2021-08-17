@@ -12,17 +12,17 @@
 namespace WBW\Bundle\CoreBundle\Translation;
 
 /**
- * Translation interface.
+ * Translator interface.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Translation
  */
-interface TranslationInterface {
+interface TranslatorInterface {
 
     /**
-     * Translation domain.
+     * Domain.
      *
      * @var string
      */
-    const TRANSLATION_DOMAIN = "WBWCoreBundle";
+    const DOMAIN = "WBWCoreBundle";
 }

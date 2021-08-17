@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\DependencyInjection\WBWCoreExtension;
 use WBW\Bundle\CoreBundle\Form\Type\ResettingFormType;
 use WBW\Bundle\CoreBundle\Model\User;
 use WBW\Bundle\CoreBundle\Tests\AbstractFormTypeTestCase;
-use WBW\Bundle\CoreBundle\Translation\TranslationInterface;
+use WBW\Bundle\CoreBundle\Translation\TranslatorInterface;
 
 /**
  * Resetting form type test.
@@ -62,7 +62,7 @@ class ResettingFormTypeTest extends AbstractFormTypeTestCase {
 
         $res = [
             "data_class"         => User::class,
-            "translation_domain" => TranslationInterface::TRANSLATION_DOMAIN,
+            "translation_domain" => TranslatorInterface::DOMAIN,
             "csrf_token_id"      => "resetting",
         ];
         $this->assertEquals($res, $this->defaults);

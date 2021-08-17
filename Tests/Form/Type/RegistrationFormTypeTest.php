@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\DependencyInjection\WBWCoreExtension;
 use WBW\Bundle\CoreBundle\Form\Type\RegistrationFormType;
 use WBW\Bundle\CoreBundle\Model\User;
 use WBW\Bundle\CoreBundle\Tests\AbstractFormTypeTestCase;
-use WBW\Bundle\CoreBundle\Translation\TranslationInterface;
+use WBW\Bundle\CoreBundle\Translation\TranslatorInterface;
 
 /**
  * Registration form type test.
@@ -71,7 +71,7 @@ class RegistrationFormTypeTest extends AbstractFormTypeTestCase {
 
         $res = [
             "data_class"         => User::class,
-            "translation_domain" => TranslationInterface::TRANSLATION_DOMAIN,
+            "translation_domain" => TranslatorInterface::DOMAIN,
             "csrf_token_id"      => "registration",
         ];
         $this->assertEquals($res, $this->defaults);
