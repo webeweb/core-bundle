@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Twig\Extension\Asset;
 
 use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\Renderer\IconRendererInterface;
-use WBW\Library\Core\Argument\Helper\ArrayHelper;
+use WBW\Library\Types\Helper\ArrayHelper;
 
 /**
  * Meteocons Twig extension.

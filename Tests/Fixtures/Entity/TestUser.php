@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Entity;
 
 use FOS\UserBundle\Model\User as BaseUser;
-use WBW\Library\Core\Model\Attribute\IntegerIdTrait;
+use WBW\Library\Traits\Integers\IntegerIdTrait;
 
 /**
  * Test user.

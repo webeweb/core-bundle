@@ -16,7 +16,6 @@ use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\RouterInterface;
-use WBW\Bundle\CoreBundle\Component\Translation\BaseTranslatorInterface;
 use WBW\Bundle\CoreBundle\Controller\AbstractController;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\Event\ToastEvent;

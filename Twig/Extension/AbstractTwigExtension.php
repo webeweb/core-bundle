@@ -15,7 +15,7 @@ use Twig\Environment;
 use Twig\Extension\AbstractExtension;
 use WBW\Bundle\CoreBundle\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Service\TwigEnvironmentTrait;
-use WBW\Library\Core\Argument\Helper\StringHelper;
+use WBW\Library\Types\Helper\StringHelper;
 
 /**
  * Abstract Twig extension.
