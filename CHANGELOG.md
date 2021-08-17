@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [2.23.0](https://github.com/webeweb/core-bundle/tree/v2.23.0) (2021-08-17)
+
+- Update dependencies
+
 ### [2.22.1](https://github.com/webeweb/core-bundle/tree/v2.22.1) (2021-04-02)
 
 - Fix kernel shutdown before client creation
