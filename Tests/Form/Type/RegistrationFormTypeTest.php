@@ -39,23 +39,23 @@ class RegistrationFormTypeTest extends AbstractFormTypeTestCase {
 
         $this->assertNull($obj->buildForm($this->formBuilder, []));
 
-        $this->assertCount(3, $this->childs);
+        $this->assertCount(3, $this->children);
 
-        $this->assertArrayHasKey("username", $this->childs);
-        $this->assertEquals(null, $this->childs["username"]["type"]);
-        $this->assertEquals("form.username", $this->childs["username"]["options"]["label"]);
+        $this->assertArrayHasKey("username", $this->children);
+        $this->assertEquals(null, $this->children["username"]["type"]);
+        $this->assertEquals("form.username", $this->children["username"]["options"]["label"]);
 
-        $this->assertArrayHasKey("email", $this->childs);
-        $this->assertEquals(EmailType::class, $this->childs["email"]["type"]);
-        $this->assertEquals("form.email", $this->childs["email"]["options"]["label"]);
+        $this->assertArrayHasKey("email", $this->children);
+        $this->assertEquals(EmailType::class, $this->children["email"]["type"]);
+        $this->assertEquals("form.email", $this->children["email"]["options"]["label"]);
 
-        $this->assertArrayHasKey("plainPassword", $this->childs);
-        $this->assertEquals(RepeatedType::class, $this->childs["plainPassword"]["type"]);
-        $this->assertEquals(PasswordType::class, $this->childs["plainPassword"]["options"]["type"]);
-        $this->assertEquals("new-password", $this->childs["plainPassword"]["options"]["options"]["attr"]["autocomplete"]);
-        $this->assertEquals("form.new_password", $this->childs["plainPassword"]["options"]["first_options"]["label"]);
-        $this->assertEquals("form.new_password_confirmation", $this->childs["plainPassword"]["options"]["second_options"]["label"]);
-        $this->assertEquals("fos_user.password.mismatch", $this->childs["plainPassword"]["options"]["invalid_message"]);
+        $this->assertArrayHasKey("plainPassword", $this->children);
+        $this->assertEquals(RepeatedType::class, $this->children["plainPassword"]["type"]);
+        $this->assertEquals(PasswordType::class, $this->children["plainPassword"]["options"]["type"]);
+        $this->assertEquals("new-password", $this->children["plainPassword"]["options"]["options"]["attr"]["autocomplete"]);
+        $this->assertEquals("form.new_password", $this->children["plainPassword"]["options"]["first_options"]["label"]);
+        $this->assertEquals("form.new_password_confirmation", $this->children["plainPassword"]["options"]["second_options"]["label"]);
+        $this->assertEquals("fos_user.password.mismatch", $this->children["plainPassword"]["options"]["invalid_message"]);
     }
 
     /**

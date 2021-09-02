@@ -25,11 +25,11 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 abstract class AbstractFormTypeTestCase extends AbstractTestCase {
 
     /**
-     * Childs.
+     * Children.
      *
      * @var array
      */
-    protected $childs;
+    protected $children;
 
     /**
      * Defaults.
@@ -71,14 +71,14 @@ abstract class AbstractFormTypeTestCase extends AbstractTestCase {
         // Set a Form builder mock.
         $this->formBuilder = $this->getMockBuilder(FormBuilderInterface::class)->getMock();
         $this->formBuilder->expects($this->any())->method("add")->willReturnCallback(function($child, $type = null, array $options = []) {
-            $this->childs[$child] = [
+            $this->children[$child] = [
                 "type"    => $type,
                 "options" => $options,
             ];
             return $this->formBuilder;
         });
         $this->formBuilder->expects($this->any())->method("remove")->willReturnCallback(function($child) {
-            unset($this->childs[$child]);
+            unset($this->children[$child]);
             return $this->formBuilder;
         });
         $this->formBuilder->expects($this->any())->method("addEventListener")->willReturn($this->formBuilder);

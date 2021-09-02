@@ -36,11 +36,11 @@ class GroupFormTypeTest extends AbstractFormTypeTestCase {
 
         $this->assertNull($obj->buildForm($this->formBuilder, []));
 
-        $this->assertCount(1, $this->childs);
+        $this->assertCount(1, $this->children);
 
-        $this->assertArrayHasKey("name", $this->childs);
-        $this->assertEquals(null, $this->childs["name"]["type"]);
-        $this->assertEquals("form.group_name", $this->childs["name"]["options"]["label"]);
+        $this->assertArrayHasKey("name", $this->children);
+        $this->assertEquals(null, $this->children["name"]["type"]);
+        $this->assertEquals("form.group_name", $this->children["name"]["options"]["label"]);
     }
 
     /**

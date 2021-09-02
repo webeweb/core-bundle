@@ -42,23 +42,23 @@ class ProfileFormTypeTest extends AbstractFormTypeTestCase {
             "validation_groups" => [""],
         ]));
 
-        $this->assertCount(3, $this->childs);
+        $this->assertCount(3, $this->children);
 
-        $this->assertArrayHasKey("username", $this->childs);
-        $this->assertEquals(null, $this->childs["username"]["type"]);
-        $this->assertEquals("form.username", $this->childs["username"]["options"]["label"]);
+        $this->assertArrayHasKey("username", $this->children);
+        $this->assertEquals(null, $this->children["username"]["type"]);
+        $this->assertEquals("form.username", $this->children["username"]["options"]["label"]);
 
-        $this->assertArrayHasKey("email", $this->childs);
-        $this->assertEquals(EmailType::class, $this->childs["email"]["type"]);
-        $this->assertEquals("form.email", $this->childs["email"]["options"]["label"]);
+        $this->assertArrayHasKey("email", $this->children);
+        $this->assertEquals(EmailType::class, $this->children["email"]["type"]);
+        $this->assertEquals("form.email", $this->children["email"]["options"]["label"]);
 
-        $this->assertArrayHasKey("current_password", $this->childs);
-        $this->assertEquals(PasswordType::class, $this->childs["current_password"]["type"]);
-        $this->assertEquals("form.current_password", $this->childs["current_password"]["options"]["label"]);
-        $this->assertEquals(false, $this->childs["current_password"]["options"]["mapped"]);
-        $this->assertInstanceOf(NotBlank::class, $this->childs["current_password"]["options"]["constraints"][0]);
-        $this->assertInstanceOf(UserPassword::class, $this->childs["current_password"]["options"]["constraints"][1]);
-        $this->assertEquals("current-password", $this->childs["current_password"]["options"]["attr"]["autocomplete"]);
+        $this->assertArrayHasKey("current_password", $this->children);
+        $this->assertEquals(PasswordType::class, $this->children["current_password"]["type"]);
+        $this->assertEquals("form.current_password", $this->children["current_password"]["options"]["label"]);
+        $this->assertEquals(false, $this->children["current_password"]["options"]["mapped"]);
+        $this->assertInstanceOf(NotBlank::class, $this->children["current_password"]["options"]["constraints"][0]);
+        $this->assertInstanceOf(UserPassword::class, $this->children["current_password"]["options"]["constraints"][1]);
+        $this->assertEquals("current-password", $this->children["current_password"]["options"]["attr"]["autocomplete"]);
     }
 
     /**
