@@ -45,7 +45,7 @@ abstract class AbstractMaterialDesignIconicFontTwigExtension extends AbstractTwi
         $attributes["class"][] = MaterialDesignIconicFontIconRenderer::renderFlip($icon);
         $attributes["style"]   = MaterialDesignIconicFontIconRenderer::renderStyle($icon);
 
-        return static::coreHTMLElement("i", null, $attributes);
+        return static::coreHtmlElement("i", null, $attributes);
     }
 
     /**
@@ -58,7 +58,7 @@ abstract class AbstractMaterialDesignIconicFontTwigExtension extends AbstractTwi
 
         $innerHTML = true === is_array($items) ? implode("\n", $items) : $items;
 
-        return static::coreHTMLElement("ul", $innerHTML, ["class" => "zmdi-hc-ul"]);
+        return static::coreHtmlElement("ul", $innerHTML, ["class" => "zmdi-hc-ul"]);
     }
 
     /**
@@ -73,6 +73,6 @@ abstract class AbstractMaterialDesignIconicFontTwigExtension extends AbstractTwi
         $glyphicon = null !== $icon ? str_replace(['class="zmdi'], ['class="zmdi-hc-li zmdi'], $icon) : "";
         $innerHTML = null !== $content ? $content : "";
 
-        return static::coreHTMLElement("li", $glyphicon . $innerHTML);
+        return static::coreHtmlElement("li", $glyphicon . $innerHTML);
     }
 }

@@ -23,15 +23,15 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Twig\Extension\TestTwigExtension;
 class AbstractTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the coreHTMLElement() method.
+     * Tests the coreHtmlElement() method.
      *
      * @return void
      */
-    public function testCoreHTMLElement(): void {
+    public function testCoreHtmlElement(): void {
 
         $arg = ["type" => "text/javascript"];
-        $res = file_get_contents(__DIR__ . "/AbstractTwigExtensionTest.testCoreHTMLElement.html.txt");
-        $this->assertEquals($res, TestTwigExtension::coreHTMLElement("script", "\n    $(document).ready(function() {});\n", $arg) . "\n");
+        $res = file_get_contents(__DIR__ . "/AbstractTwigExtensionTest.testCoreHtmlElement.html.txt");
+        $this->assertEquals($res, TestTwigExtension::coreHtmlElement("script", "\n    $(document).ready(function() {});\n", $arg) . "\n");
     }
 
     /**

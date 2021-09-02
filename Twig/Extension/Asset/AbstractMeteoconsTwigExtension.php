@@ -37,6 +37,6 @@ abstract class AbstractMeteoconsTwigExtension extends AbstractTwigExtension {
         $attributes["data-meteocons"] = $name;
         $attributes["style"]          = $style;
 
-        return static::coreHTMLElement("i", null, $attributes);
+        return static::coreHtmlElement("i", null, $attributes);
     }
 }

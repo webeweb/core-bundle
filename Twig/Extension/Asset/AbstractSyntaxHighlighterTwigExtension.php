@@ -72,7 +72,7 @@ abstract class AbstractSyntaxHighlighterTwigExtension extends AbstractTwigExtens
         $attributes["class"][] = "brush:";
         $attributes["class"][] = $language;
 
-        return static::coreHTMLElement($tag, implode("", ["\n", htmlentities($content), "\n"]), $attributes);
+        return static::coreHtmlElement($tag, implode("", ["\n", htmlentities($content), "\n"]), $attributes);
     }
 
     /**

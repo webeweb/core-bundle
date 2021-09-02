@@ -121,7 +121,7 @@ class SyntaxHighlighterTwigExtension extends AbstractSyntaxHighlighterTwigExtens
      * @return string Returns the SyntaxHighlighter script.
      */
     public function syntaxHighlighterScriptFilter(string $content): string {
-        return static::coreHTMLElement("script", "\n" . $content . "\n", ["type" => "text/javascript"]);
+        return static::coreHtmlElement("script", "\n" . $content . "\n", ["type" => "text/javascript"]);
     }
 
     /**

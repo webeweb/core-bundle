@@ -46,7 +46,7 @@ class RendererTwigExtension extends AbstractTwigExtension {
 
         $innerHTML = null !== $content ? implode("", ["\n", $content, "\n"]) : "";
 
-        return static::coreHTMLElement("script", $innerHTML, $attributes);
+        return static::coreHtmlElement("script", $innerHTML, $attributes);
     }
 
     /**
