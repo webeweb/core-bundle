@@ -20,7 +20,9 @@ use WBW\Bundle\CoreBundle\Asset\Navigation\HeaderNode;
 use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationNode;
 use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationTree;
+use WBW\Bundle\CoreBundle\Model\GroupInterface;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\FOSUser;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestGroup;
 
 /**
  * Test fixtures.
@@ -31,16 +33,29 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\FOSUser;
 class TestFixtures {
 
     /**
+     * Get the groups.
+     *
+     * @return GroupInterface[] Returns the groups.
+     */
+    public static function getGroups(): array {
+
+        $fixtures   = [];
+        $fixtures[] = new TestGroup("github");
+
+        return $fixtures;
+    }
+
+    /**
      * Get the images.
      *
      * @return string[]
      */
     public static function getImages(): array {
         return [
-            getcwd() . "/Tests/Fixtures/Model/TestImage_1920x1037.jpg",
-            getcwd() . "/Tests/Fixtures/Model/TestImage_1920x1037.png",
-            getcwd() . "/Tests/Fixtures/Model/TestImage_1920x1920.png",
-            getcwd() . "/Tests/Fixtures/Model/TestImage_1920x3554.png",
+            __DIR__ . "/Model/TestImage_1920x1037.jpg",
+            __DIR__ . "/Model/TestImage_1920x1037.png",
+            __DIR__ . "/Model/TestImage_1920x1920.png",
+            __DIR__ . "/Model/TestImage_1920x3554.png",
         ];
     }
 
