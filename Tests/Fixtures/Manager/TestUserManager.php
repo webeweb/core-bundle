@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Manager;
 
-use Exception;
 use WBW\Bundle\CoreBundle\Manager\UserManager;
 use WBW\Bundle\CoreBundle\Model\UserInterface;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser;
