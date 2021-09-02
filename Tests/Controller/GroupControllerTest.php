@@ -14,7 +14,6 @@ namespace WBW\Bundle\CoreBundle\Tests\Controller;
 use WBW\Bundle\CoreBundle\Controller\GroupController;
 use WBW\Bundle\CoreBundle\Form\Factory\FormFactoryInterface;
 use WBW\Bundle\CoreBundle\Manager\GroupManagerInterface;
-use WBW\Bundle\CoreBundle\Manager\UserManagerInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
 
 /**

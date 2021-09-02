@@ -13,8 +13,6 @@ namespace WBW\Bundle\CoreBundle\Tests\Controller;
 
 use Symfony\Component\Security\Csrf\CsrfTokenManagerInterface;
 use WBW\Bundle\CoreBundle\Controller\SecurityController;
-use WBW\Bundle\CoreBundle\Form\Factory\FormFactoryInterface;
-use WBW\Bundle\CoreBundle\Manager\UserManagerInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
 
 /**

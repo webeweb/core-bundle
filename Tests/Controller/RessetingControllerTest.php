@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Controller;
 
-use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use WBW\Bundle\CoreBundle\Controller\ResettingController;
 use WBW\Bundle\CoreBundle\Form\Factory\FormFactoryInterface;
 use WBW\Bundle\CoreBundle\Manager\UserManagerInterface;
