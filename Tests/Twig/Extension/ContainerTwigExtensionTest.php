@@ -36,19 +36,6 @@ class ContainerTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFilters() method.
-     *
-     * @return void
-     */
-    public function testGetFilters(): void {
-
-        $obj = new ContainerTwigExtension($this->containerBuilder);
-
-        $res = $obj->getFilters();
-        $this->assertCount(0, $res);
-    }
-
-    /**
      * Tests the getFunctions() method.
      *
      * @return void

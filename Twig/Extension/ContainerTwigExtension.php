@@ -12,7 +12,6 @@
 namespace WBW\Bundle\CoreBundle\Twig\Extension;
 
 use Symfony\Component\DependencyInjection\Container;
-use Twig\TwigFilter;
 use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\Component\DependencyInjection\Container\ContainerTrait;
 
@@ -50,15 +49,6 @@ class ContainerTwigExtension extends AbstractTwigExtension {
      */
     public function getContainerParameterFunction(string $name) {
         return $this->getContainer()->getParameter($name);
-    }
-
-    /**
-     * Get the Twig filters.
-     *
-     * @return TwigFilter[] Returns the Twig filters.
-     */
-    public function getFilters(): array {
-        return [];
     }
 
     /**
