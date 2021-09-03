@@ -40,9 +40,9 @@ class RendererTwigExtension extends AbstractTwigExtension {
      */
     public function coreScriptFilter(string $content): string {
 
-        $attributes = [];
-
-        $attributes["type"] = "text/javascript";
+        $attributes = [
+            "type" => "text/javascript",
+        ];
 
         $innerHTML = null !== $content ? implode("", ["\n", $content, "\n"]) : "";
 

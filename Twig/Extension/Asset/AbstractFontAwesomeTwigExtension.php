@@ -32,16 +32,18 @@ abstract class AbstractFontAwesomeTwigExtension extends AbstractTwigExtension {
      */
     protected function fontAwesomeIcon(FontAwesomeIconInterface $icon): string {
 
-        $attributes = [];
-
-        $attributes["class"][] = FontAwesomeIconRenderer::renderFont($icon);
-        $attributes["class"][] = FontAwesomeIconRenderer::renderName($icon);
-        $attributes["class"][] = FontAwesomeIconRenderer::renderSize($icon);
-        $attributes["class"][] = FontAwesomeIconRenderer::renderFixedWidth($icon);
-        $attributes["class"][] = FontAwesomeIconRenderer::renderBordered($icon);
-        $attributes["class"][] = FontAwesomeIconRenderer::renderPull($icon);
-        $attributes["class"][] = FontAwesomeIconRenderer::renderAnimation($icon);
-        $attributes["style"]   = FontAwesomeIconRenderer::renderStyle($icon);
+        $attributes = [
+            "class" => [
+                FontAwesomeIconRenderer::renderFont($icon),
+                FontAwesomeIconRenderer::renderName($icon),
+                FontAwesomeIconRenderer::renderSize($icon),
+                FontAwesomeIconRenderer::renderFixedWidth($icon),
+                FontAwesomeIconRenderer::renderBordered($icon),
+                FontAwesomeIconRenderer::renderPull($icon),
+                FontAwesomeIconRenderer::renderAnimation($icon),
+            ],
+            "style" => FontAwesomeIconRenderer::renderStyle($icon),
+        ];
 
         return static::coreHtmlElement("i", null, $attributes);
     }

@@ -67,10 +67,12 @@ abstract class AbstractSyntaxHighlighterTwigExtension extends AbstractTwigExtens
      */
     protected function syntaxHighlighterContent(string $tag, string $language, string $content): string {
 
-        $attributes = [];
-
-        $attributes["class"][] = "brush:";
-        $attributes["class"][] = $language;
+        $attributes = [
+            "class" => [
+                "brush:",
+                $language,
+            ],
+        ];
 
         return static::coreHtmlElement($tag, implode("", ["\n", htmlentities($content), "\n"]), $attributes);
     }

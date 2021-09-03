@@ -32,18 +32,20 @@ abstract class AbstractMaterialDesignIconicFontTwigExtension extends AbstractTwi
      */
     protected function materialDesignIconicFontIcon(MaterialDesignIconicFontIconInterface $icon): string {
 
-        $attributes = [];
-
-        $attributes["class"][] = "zmdi";
-        $attributes["class"][] = MaterialDesignIconicFontIconRenderer::renderName($icon);
-        $attributes["class"][] = MaterialDesignIconicFontIconRenderer::renderSize($icon);
-        $attributes["class"][] = MaterialDesignIconicFontIconRenderer::renderFixedWidth($icon);
-        $attributes["class"][] = MaterialDesignIconicFontIconRenderer::renderBorder($icon);
-        $attributes["class"][] = MaterialDesignIconicFontIconRenderer::renderPull($icon);
-        $attributes["class"][] = MaterialDesignIconicFontIconRenderer::renderSpin($icon);
-        $attributes["class"][] = MaterialDesignIconicFontIconRenderer::renderRotate($icon);
-        $attributes["class"][] = MaterialDesignIconicFontIconRenderer::renderFlip($icon);
-        $attributes["style"]   = MaterialDesignIconicFontIconRenderer::renderStyle($icon);
+        $attributes = [
+            "class" => [
+                "zmdi",
+                MaterialDesignIconicFontIconRenderer::renderName($icon),
+                MaterialDesignIconicFontIconRenderer::renderSize($icon),
+                MaterialDesignIconicFontIconRenderer::renderFixedWidth($icon),
+                MaterialDesignIconicFontIconRenderer::renderBorder($icon),
+                MaterialDesignIconicFontIconRenderer::renderPull($icon),
+                MaterialDesignIconicFontIconRenderer::renderSpin($icon),
+                MaterialDesignIconicFontIconRenderer::renderRotate($icon),
+                MaterialDesignIconicFontIconRenderer::renderFlip($icon),
+            ],
+            "style" => MaterialDesignIconicFontIconRenderer::renderStyle($icon),
+        ];
 
         return static::coreHtmlElement("i", null, $attributes);
     }
