@@ -37,7 +37,6 @@ class FormRenderer {
             return null !== $translator ? $translator->trans("label.empty_selection") : "Empty selection";
         }
 
-        // Check the implementation.
         if (true === ($option instanceof TranslatedChoiceLabelInterface)) {
             $output = $option->getTranslatedChoiceLabel($translator);
         } else if (true === ($option instanceof ChoiceLabelInterface)) {
@@ -47,10 +46,17 @@ class FormRenderer {
         }
 
         if (true === ($option instanceof AlphabeticalTreeNodeInterface)) {
-            $multiplier = AlphabeticalTreeNodeHelper::getLevel($option);
-            $nbsp       = html_entity_decode("&nbsp;");
-            $symbol     = html_entity_decode(0 === $multiplier ? "&#9472;" : "&#9492;");
-            $output     = implode("", [str_repeat($nbsp, $multiplier * 3), $symbol, $nbsp, $output]);
+
+            $level  = AlphabeticalTreeNodeHelper::getLevel($option);
+            $nbsp   = html_entity_decode("&nbsp;");
+            $symbol = html_entity_decode(0 === $level ? "&#9472;" : "&#9492;");
+
+            $output = implode("", [
+                str_repeat($nbsp, $level * 3),
+                $symbol,
+                $nbsp,
+                $output,
+            ]);
         }
 
         return $output;
