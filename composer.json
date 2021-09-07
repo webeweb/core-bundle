@@ -33,11 +33,6 @@
         "twig/twig": "^2.4.4",
         "webeweb/core-library": "^8.0"
     },
-    "conflict": {
-        "webeweb/bootstrap-bundle": "<3.11",
-        "webeweb/haveibeenpwned-bundle": "<1.6",
-        "webeweb/smsmode-bundle": "<1.7"
-    },
     "require-dev": {
         "phpunit/phpunit": "^7.0|^9.0",
         "doctrine/doctrine-bundle": "^1.8.1",
