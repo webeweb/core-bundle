@@ -1,9 +1,13 @@
 CHANGELOG
 =========
 
+### [2.24.2](https://github.com/webeweb/core-bundle/tree/v2.24.2) (2021-09-16)
+
+- Fix jQueryInputMaskDate() macro
+
 ### [2.24.1](https://github.com/webeweb/core-bundle/tree/v2.24.1) (2021-09-16)
 
-- Fix IBAN format
+- Fix jQueryInputMaskIban() macro
 
 ### [2.24.0](https://github.com/webeweb/core-bundle/tree/v2.24.0) (2021-09-16)
 
