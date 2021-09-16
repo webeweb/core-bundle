@@ -1,0 +1,67 @@
+{# Ressources/views/macros.html.twig #}
+
+{#
+# Displays a jQuery InputMask "date".
+#
+# @param string $id The id attribute.
+# @return string Returns the jQuery InputMask "date".
+#}
+{% macro jQueryInputMaskDate(id) %}
+    {% set _selector = id %}
+    {{ jQueryInputMask({"selector": _selector, "mask": "99/99/9999", "opts": {"autoUnmask": true, "removeMaskOnSubmit": true, "placeholder": "__/__/____"}, "scriptTag": true}) }}
+{% endmacro %}
+
+{#
+# Displays a jQuery InputMask "IBAN".
+#
+# @param string $id The id attribute.
+# @return string Returns the jQuery InputMask "IBAN".
+#}
+{% macro jQueryInputMaskIban(id) %}
+    {% set _selector = id %}
+    {{ jQueryInputMask({"selector": _selector, "mask": "AA99 9999 9999 9999 9999 9999 99", "opts": {"autoUnmask": true, "removeMaskOnSubmit": true, "placeholder": "____ ____ ____ ____ ____ ____ ___"}, "scriptTag": true}) }}
+{% endmacro %}
+
+{#
+# Displays a jQuery InputMask "NAF code".
+#
+# @param string $id The id attribute.
+# @return string Returns the jQuery InputMask "NAF code".
+#}
+{% macro jQueryInputMaskNafCode(id) %}
+    {% set _selector = id %}
+    {{ jQueryInputMask({"selector": _selector, "mask": "9999A", "opts": {"autoUnmask": true, "removeMaskOnSubmit": true, "placeholder": "_____"}, "scriptTag": true}) }}
+{% endmacro %}
+
+{#
+# Displays a jQuery InputMask "phone".
+#
+# @param string $id The id attribute.
+# @return string Returns the jQuery InputMask "phone".
+#}
+{% macro jQueryInputMaskPhone(id) %}
+    {% set _selector = id %}
+    {{ jQueryInputMask({"selector": _selector, "mask": "+99 9 99 99 99 99", "opts": {"autoUnmask": true, "removeMaskOnSubmit": true, "placeholder": "+__ _ __ __ __ __"}, "scriptTag": true}) }}
+{% endmacro %}
+
+{#
+# Displays a jQuery InputMask "SIRET number".
+#
+# @param string $id The id attribute.
+# @return string Returns the jQuery InputMask "SIRET number".
+#}
+{% macro jQueryInputMaskSiretNumber(id) %}
+    {% set _selector = id %}
+    {{ jQueryInputMask({"selector": _selector, "mask": "999 999 999 99999", "opts": {"autoUnmask": true, "removeMaskOnSubmit": true, "placeholder": "___ ___ ___ _____"}, "scriptTag": true}) }}
+{% endmacro %}
+
+{#
+# Displays a jQuery InputMask "VAT number".
+#
+# @param string $id The id attribute.
+# @return string Returns the jQuery InputMask "VAT number".
+#}
+{% macro jQueryInputMaskVatNumber(id) %}
+    {% set _selector = id %}
+    {{ jQueryInputMask({"selector": _selector, "mask": "AA99 999 999 999", "opts": {"autoUnmask": true, "removeMaskOnSubmit": true, "placeholder": "_____ ___ ___ ___"}, "scriptTag": true}) }}
+{% endmacro %}
