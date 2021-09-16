@@ -68,7 +68,7 @@ class SkeletonHelperTest extends AbstractTestCase {
     public function testCopySkeleton(): void {
 
         $res = SkeletonHelper::copySkeleton($this->directorySkeleton, $this->directoryResources);
-        $this->assertCount(8, $res);
+        $this->assertCount(9, $res);
 
         foreach ($res as $current) {
             $this->assertTrue($current);
@@ -84,7 +84,7 @@ class SkeletonHelperTest extends AbstractTestCase {
     public function testListSkeleton(): void {
 
         $res = SkeletonHelper::listSkeleton($this->directorySkeleton);
-        $this->assertCount(8, $res);
+        $this->assertCount(9, $res);
 
         $this->assertEquals($this->directorySkeleton . "/email/content.html.twig", $res[0]);
         $this->assertEquals($this->directorySkeleton . "/email/footer.html.twig", $res[1]);
@@ -94,6 +94,7 @@ class SkeletonHelperTest extends AbstractTestCase {
         $this->assertEquals($this->directorySkeleton . "/layout/exception.html.twig", $res[5]);
         $this->assertEquals($this->directorySkeleton . "/layout/javascripts.html.twig", $res[6]);
         $this->assertEquals($this->directorySkeleton . "/layout/stylesheets.html.twig", $res[7]);
+        $this->assertEquals($this->directorySkeleton . "/macros.html.twig", $res[8]);
     }
 
     /**
