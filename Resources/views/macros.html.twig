@@ -8,7 +8,7 @@
 #}
 {% macro jQueryInputMaskDate(id) %}
     {% set _selector = id %}
-    {{ jQueryInputMask({"selector": _selector, "mask": "99/99/9999", "opts": {"autoUnmask": true, "removeMaskOnSubmit": true, "placeholder": "__/__/____"}, "scriptTag": true}) }}
+    {{ jQueryInputMask({"selector": _selector, "mask": "99/99/9999", "opts": {"placeholder": "__/__/____"}, "scriptTag": true}) }}
 {% endmacro %}
 
 {#
