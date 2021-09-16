@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [2.24.0](https://github.com/webeweb/core-bundle/tree/v2.24.0) (2021-09-16)
+
+- Add macros
+
 ### [2.23.0](https://github.com/webeweb/core-bundle/tree/v2.23.0) (2021-08-17)
 
 - Update dependencies
