@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [2.25.0](https://github.com/webeweb/core-bundle/tree/v2.25.0) (2021-09-29)
+
+- Add font support into Renderer Twig extension for FontAwesome
+
 ### [2.24.2](https://github.com/webeweb/core-bundle/tree/v2.24.2) (2021-09-16)
 
 - Fix jQueryInputMaskDate() macro
