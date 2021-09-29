@@ -22,28 +22,28 @@ use WBW\Bundle\CoreBundle\WBWCoreInterface;
 interface NotificationInterface {
 
     /**
-     * Notification "Danger".
+     * Notification "danger".
      *
      * @var string
      */
     const NOTIFICATION_DANGER = WBWCoreInterface::CORE_DANGER;
 
     /**
-     * Notification "Info".
+     * Notification "info".
      *
      * @var string
      */
     const NOTIFICATION_INFO = WBWCoreInterface::CORE_INFO;
 
     /**
-     * Notification "Success".
+     * Notification "success".
      *
      * @var string
      */
     const NOTIFICATION_SUCCESS = WBWCoreInterface::CORE_SUCCESS;
 
     /**
-     * Notification "Warning".
+     * Notification "warning".
      *
      * @var string
      */

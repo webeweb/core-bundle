@@ -57,10 +57,10 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
     }
 
     /**
-     * Displays a jQuery input mask "Phone number".
+     * Displays a jQuery input mask "phone number".
      *
      * @param array $args The arguments.
-     * @return string Returns the jQuery input mask "Phone number".
+     * @return string Returns the jQuery input mask "phone number".
      */
     public function jQueryInputMaskPhoneNumberFunction(array $args = []): string {
         $defaultMask = "99 99 99 99 99";
@@ -79,10 +79,10 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
     }
 
     /**
-     * Displays a jQuery input mask "Social security number".
+     * Displays a jQuery input mask "social security number".
      *
      * @param array $args The arguments.
-     * @return string Returns the jQuery input mask "Social security number".
+     * @return string Returns the jQuery input mask "social security number".
      */
     public function jQueryInputMaskSocialSecurityNumberFunction(array $args = []): string {
         $defaultMask = "9 99 99 99 999 999 99";
@@ -90,10 +90,10 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
     }
 
     /**
-     * Displays a jQuery input mask "Time 12 hour".
+     * Displays a jQuery input mask "time 12 hour".
      *
      * @param array $args The arguments.
-     * @return string Returns the jQuery input mask "Time 12 hour".
+     * @return string Returns the jQuery input mask "time 12 hour".
      */
     public function jQueryInputMaskTime12Function(array $args = []): string {
         $defaultMask = "hh:mm t";
@@ -101,10 +101,10 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
     }
 
     /**
-     * Displays a jQuery input mask "Time 24 hour".
+     * Displays a jQuery input mask "time 24 hour".
      *
      * @param array $args The arguments.
-     * @return string Returns the jQuery input mask "Time 24 hour".
+     * @return string Returns the jQuery input mask "time 24 hour".
      */
     public function jQueryInputMaskTime24Function(array $args = []): string {
         $defaultMask = "hh:mm";

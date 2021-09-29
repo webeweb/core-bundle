@@ -22,42 +22,42 @@ use WBW\Bundle\CoreBundle\Asset\Icon\IconInterface;
 interface MaterialDesignIconicFontIconInterface extends IconInterface {
 
     /**
-     * Material Design Iconic Font border "Border".
+     * Material Design Iconic Font border "border".
      *
      * @var string
      */
     const MATERIAL_DESIGN_ICONIC_FONT_BORDER = "border";
 
     /**
-     * Material Design Iconic Font border "Border circle".
+     * Material Design Iconic Font border "border circle".
      *
      * @var string
      */
     const MATERIAL_DESIGN_ICONIC_FONT_BORDER_CIRCLE = "border-circle";
 
     /**
-     * Material Design Iconic Font flip "Horizontal".
+     * Material Design Iconic Font flip "horizontal".
      *
      * @var string
      */
     const MATERIAL_DESIGN_ICONIC_FONT_FLIP_HORIZONTAL = "horizontal";
 
     /**
-     * Material Design Iconic Font flip "Vertical".
+     * Material Design Iconic Font flip "vertical".
      *
      * @var string
      */
     const MATERIAL_DESIGN_ICONIC_FONT_FLIP_VERTICAL = "vertical";
 
     /**
-     * Material Design Iconic Font pull "Left".
+     * Material Design Iconic Font pull "left".
      *
      * @var string
      */
     const MATERIAL_DESIGN_ICONIC_FONT_PULL_LEFT = "left";
 
     /**
-     * Material Design Iconic Font pull "Right".
+     * Material Design Iconic Font pull "right".
      *
      * @var string
      */
@@ -120,14 +120,14 @@ interface MaterialDesignIconicFontIconInterface extends IconInterface {
     const MATERIAL_DESIGN_ICONIC_FONT_SIZE_LG = "lg";
 
     /**
-     * Material Design Iconic Font spin "Spin".
+     * Material Design Iconic Font spin "spin".
      *
      * @var string
      */
     const MATERIAL_DESIGN_ICONIC_FONT_SPIN = "spin";
 
     /**
-     * Material Design Iconic Font spin "Spin reverse".
+     * Material Design Iconic Font spin "spin reverse".
      *
      * @var string
      */

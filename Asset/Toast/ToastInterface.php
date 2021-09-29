@@ -22,28 +22,28 @@ use WBW\Bundle\CoreBundle\WBWCoreInterface;
 interface ToastInterface {
 
     /**
-     * Toast "Danger".
+     * Toast "danger".
      *
      * @var string
      */
     const TOAST_DANGER = WBWCoreInterface::CORE_DANGER;
 
     /**
-     * Toast "Info".
+     * Toast "info".
      *
      * @var string
      */
     const TOAST_INFO = WBWCoreInterface::CORE_INFO;
 
     /**
-     * Toast "Success".
+     * Toast "success".
      *
      * @var string
      */
     const TOAST_SUCCESS = WBWCoreInterface::CORE_SUCCESS;
 
     /**
-     * Toast "Warning".
+     * Toast "warning".
      *
      * @var string
      */

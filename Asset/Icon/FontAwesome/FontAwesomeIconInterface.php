@@ -22,14 +22,14 @@ use WBW\Bundle\CoreBundle\Asset\Icon\IconInterface;
 interface FontAwesomeIconInterface extends IconInterface {
 
     /**
-     * Font Awesome animation "Pulse".
+     * Font Awesome animation "pulse".
      *
      * @var string
      */
     const FONT_AWESOME_ANIMATION_PULSE = "pulse";
 
     /**
-     * Font Awesome animation "Spin".
+     * Font Awesome animation "spin".
      *
      * @var string
      */
@@ -43,42 +43,42 @@ interface FontAwesomeIconInterface extends IconInterface {
     const FONT_AWESOME_FONT = "";
 
     /**
-     * Font Awesome font "Bold".
+     * Font Awesome font "bold".
      *
      * @var string
      */
     const FONT_AWESOME_FONT_BOLD = "b";
 
     /**
-     * Font Awesome font "Light".
+     * Font Awesome font "light".
      *
      * @var string
      */
     const FONT_AWESOME_FONT_LIGHT = "l";
 
     /**
-     * Font Awesome font "Regular".
+     * Font Awesome font "regular".
      *
      * @var string
      */
     const FONT_AWESOME_FONT_REGULAR = "r";
 
     /**
-     * Font Awesome font "Solid".
+     * Font Awesome font "solid".
      *
      * @var string
      */
     const FONT_AWESOME_FONT_SOLID = "s";
 
     /**
-     * Font Awesome pull "Left".
+     * Font Awesome pull "left".
      *
      * @var string
      */
     const FONT_AWESOME_PULL_LEFT = "left";
 
     /**
-     * Font Awesome pull "Right".
+     * Font Awesome pull "right".
      *
      * @var string
      */
@@ -148,21 +148,21 @@ interface FontAwesomeIconInterface extends IconInterface {
     const FONT_AWESOME_SIZE_9X = "9x";
 
     /**
-     * Font Awesome size "Lg".
+     * Font Awesome size "lg".
      *
      * @var string
      */
     const FONT_AWESOME_SIZE_LG = "lg";
 
     /**
-     * Font Awesome size "Sm".
+     * Font Awesome size "sm".
      *
      * @var string
      */
     const FONT_AWESOME_SIZE_SM = "sm";
 
     /**
-     * Font Awesome size "Xs".
+     * Font Awesome size "xs".
      *
      * @var string
      */
