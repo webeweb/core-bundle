@@ -64,7 +64,11 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
 
         $obj = new MeteoconsTwigExtension($this->twigEnvironment);
 
-        $arg = ["name" => "B", "style" => "color: #FFFFFF;"];
+        $arg = [
+            "name"  => "B",
+            "style" => "color: #FFFFFF;",
+        ];
+
         $res = '<i class="meteocons" data-meteocons="B" style="color: #FFFFFF;"></i>';
         $this->assertEquals($res, $obj->meteoconsIconFunction($arg));
     }
@@ -78,7 +82,10 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
 
         $obj = new MeteoconsTwigExtension($this->twigEnvironment);
 
-        $arg = ["name" => "B"];
+        $arg = [
+            "name" => "B",
+        ];
+
         $res = '<i class="meteocons" data-meteocons="B"></i>';
         $this->assertEquals($res, $obj->meteoconsIconFunction($arg));
     }
@@ -92,7 +99,10 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
 
         $obj = new MeteoconsTwigExtension($this->twigEnvironment);
 
-        $arg = ["style" => "color: #FFFFFF;"];
+        $arg = [
+            "style" => "color: #FFFFFF;",
+        ];
+
         $res = '<i class="meteocons" data-meteocons="A" style="color: #FFFFFF;"></i>';
         $this->assertEquals($res, $obj->meteoconsIconFunction($arg));
     }
@@ -107,6 +117,7 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
         $obj = new MeteoconsTwigExtension($this->twigEnvironment);
 
         $arg = [];
+
         $res = '<i class="meteocons" data-meteocons="A"></i>';
         $this->assertEquals($res, $obj->meteoconsIconFunction($arg));
     }

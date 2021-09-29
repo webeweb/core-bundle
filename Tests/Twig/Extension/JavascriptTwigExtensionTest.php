@@ -70,20 +70,7 @@ class JavascriptTwigExtensionTest extends AbstractTestCase {
 
         $obj = new JavascriptTwigExtension($this->twigEnvironment);
 
-        $res = <<< EOTXT
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123456789-0"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-    gtag('config', 'UA-123456789-0');
-</script>
-
-EOTXT;
+        $res = file_get_contents(__DIR__ . "/JavascriptTwigExtensionTest.testJsTag.js.txt");
 
         $this->assertEquals($res, $obj->jsGtag("UA-123456789-0"));
 

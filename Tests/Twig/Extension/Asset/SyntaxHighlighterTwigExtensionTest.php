@@ -201,7 +201,11 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
 
         $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
-        $arg = ["content" => "<span>span</span>", "language" => "html"];
+        $arg = [
+            "content"  => "<span>span</span>",
+            "language" => "html",
+        ];
+
         $res = file_get_contents(__DIR__ . "/testSyntaxHighlighterContentFunction.html.txt");
         $this->assertEquals($res, $obj->syntaxHighlighterContentFunction($arg) . "\n");
     }
@@ -218,7 +222,9 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
 
         $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
-        $arg = ["filename" => $filename];
+        $arg = [
+            "filename" => $filename,
+        ];
 
         try {
 
@@ -243,7 +249,11 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
 
         $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
-        $arg = ["filename" => $filename, "language" => "php"];
+        $arg = [
+            "filename" => $filename,
+            "language" => "php",
+        ];
+
         $res = file_get_contents(__DIR__ . "/testSyntaxHighlighterContentFunctionWithFilename.html.txt");
         $this->assertEquals($res, $obj->syntaxHighlighterContentFunction($arg) . "\n");
     }

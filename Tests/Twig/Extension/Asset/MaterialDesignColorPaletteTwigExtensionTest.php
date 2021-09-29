@@ -79,7 +79,11 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
 
         $obj = new MaterialDesignColorPaletteTwigExtension($this->twigEnvironment);
 
-        $arg = ["name" => "pink", "value" => "500"];
+        $arg = [
+            "name"  => "pink",
+            "value" => "500",
+        ];
+
         $res = "mdc-bg-pink-500";
         $this->assertEquals($res, $obj->materialDesignColorPaletteBackgroundFunction($arg));
     }
@@ -93,7 +97,10 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
 
         $obj = new MaterialDesignColorPaletteTwigExtension($this->twigEnvironment);
 
-        $arg = ["name" => "pink"];
+        $arg = [
+            "name" => "pink",
+        ];
+
         $res = "mdc-bg-pink";
         $this->assertEquals($res, $obj->materialDesignColorPaletteBackgroundFunction($arg));
     }
@@ -107,7 +114,10 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
 
         $obj = new MaterialDesignColorPaletteTwigExtension($this->twigEnvironment);
 
-        $arg = ["value" => "500"];
+        $arg = [
+            "value" => "500",
+        ];
+
         $res = "mdc-bg-red-500";
         $this->assertEquals($res, $obj->materialDesignColorPaletteBackgroundFunction($arg));
     }
@@ -122,6 +132,7 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
         $obj = new MaterialDesignColorPaletteTwigExtension($this->twigEnvironment);
 
         $arg = [];
+
         $res = "mdc-bg-red";
         $this->assertEquals($res, $obj->materialDesignColorPaletteBackgroundFunction($arg));
     }
@@ -135,7 +146,11 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
 
         $obj = new MaterialDesignColorPaletteTwigExtension($this->twigEnvironment);
 
-        $arg = ["name" => "pink", "value" => "500"];
+        $arg = [
+            "name"  => "pink",
+            "value" => "500",
+        ];
+
         $res = "mdc-text-pink-500";
         $this->assertEquals($res, $obj->materialDesignColorPaletteTextFunction($arg));
     }
@@ -149,7 +164,10 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
 
         $obj = new MaterialDesignColorPaletteTwigExtension($this->twigEnvironment);
 
-        $arg = ["name" => "pink"];
+        $arg = [
+            "name" => "pink",
+        ];
+
         $res = "mdc-text-pink";
         $this->assertEquals($res, $obj->materialDesignColorPaletteTextFunction($arg));
     }
@@ -163,7 +181,10 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
 
         $obj = new MaterialDesignColorPaletteTwigExtension($this->twigEnvironment);
 
-        $arg = ["value" => "500"];
+        $arg = [
+            "value" => "500",
+        ];
+
         $res = "mdc-text-red-500";
         $this->assertEquals($res, $obj->materialDesignColorPaletteTextFunction($arg));
     }
@@ -178,6 +199,7 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
         $obj = new MaterialDesignColorPaletteTwigExtension($this->twigEnvironment);
 
         $arg = [];
+
         $res = "mdc-text-red";
         $this->assertEquals($res, $obj->materialDesignColorPaletteTextFunction($arg));
     }
