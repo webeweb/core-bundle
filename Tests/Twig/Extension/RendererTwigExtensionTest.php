@@ -73,8 +73,11 @@ class RendererTwigExtensionTest extends AbstractTestCase {
      */
     public function testRenderIconWithFontAwesome(): void {
 
-        $res = '<i class="fa fa-home"></i>';
-        $this->assertEquals($res, RendererTwigExtension::renderIcon($this->twigEnvironment, "fa:home"));
+        $this->assertEquals('<i class="fa fa-home"></i>', RendererTwigExtension::renderIcon($this->twigEnvironment, "fa:home"));
+        $this->assertEquals('<i class="fas fa-home"></i>', RendererTwigExtension::renderIcon($this->twigEnvironment, "fas:home"));
+        $this->assertEquals('<i class="far fa-home"></i>', RendererTwigExtension::renderIcon($this->twigEnvironment, "far:home"));
+        $this->assertEquals('<i class="fal fa-home"></i>', RendererTwigExtension::renderIcon($this->twigEnvironment, "fal:home"));
+        $this->assertEquals('<i class="fad fa-home"></i>', RendererTwigExtension::renderIcon($this->twigEnvironment, "fad:home"));
     }
 
     /**

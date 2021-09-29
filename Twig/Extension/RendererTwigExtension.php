@@ -80,7 +80,13 @@ class RendererTwigExtension extends AbstractTwigExtension {
         switch ($handler[0]) {
 
             case "fa": // Font Awesome
+            case "fas":
+            case "far":
+            case "fal":
+            case "fad":
+            case "fab":
                 $output = (new FontAwesomeTwigExtension($twigEnvironment))->renderIcon($handler[1], $style);
+                $output = str_replace('class="fa', 'class="' . $handler[0], $output);
                 break;
 
             case "mc": // Meteocons
