@@ -136,7 +136,7 @@ class UtilityTwigExtensionTest extends AbstractTestCase {
         $obj = new UtilityTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-        $this->assertCount(8, $res);
+        $this->assertCount(9, $res);
 
         $this->assertInstanceOf(TwigFunction::class, $res[0]);
         $this->assertEquals("calcAge", $res[0]->getName());
@@ -177,6 +177,11 @@ class UtilityTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("md5", $res[7]->getName());
         $this->assertEquals([$obj, "md5"], $res[7]->getCallable());
         $this->assertEquals(["html"], $res[7]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[8]);
+        $this->assertEquals("staticMethod", $res[8]->getName());
+        $this->assertEquals([$obj, "staticMethodFunction"], $res[8]->getCallable());
+        $this->assertEquals(["html"], $res[8]->getSafe(new Node()));
     }
 
     /**
@@ -216,6 +221,22 @@ class UtilityTwigExtensionTest extends AbstractTestCase {
 
         $this->assertEquals("", $obj->md5(null));
         $this->assertEquals("d41d8cd98f00b204e9800998ecf8427e", $obj->md5(""));
+    }
+
+    /**
+     * Tests the staticMethodFunction() method.
+     *
+     * @return void
+     */
+    public function testStaticMethodFunction(): void {
+
+        $obj = new UtilityTwigExtension($this->twigEnvironment);
+
+        $this->assertEquals(null, $obj->staticMethodFunction(null, "exception"));
+        $this->assertEquals(null, $obj->staticMethodFunction("exception", null));
+
+        $this->assertEquals("\\" === DIRECTORY_SEPARATOR, $obj->staticMethodFunction("WBW\\Bundle\\CoreBundle\\Helper\\OSHelper", "isWindows"));
+        $this->assertEquals('<div id="id">content</div>', $obj->staticMethodFunction("WBW\\Bundle\\CoreBundle\\Twig\\Extension\\AbstractTwigExtension", "coreHTMLElement", ["div", "content", ["id" => "id"]]));
     }
 
     /**
