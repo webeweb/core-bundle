@@ -16,6 +16,7 @@ use Exception;
 use Twig\TwigFilter;
 use Twig\TwigFunction;
 use WBW\Library\Types\Helper\DateTimeHelper;
+use WBW\Library\Types\Helper\StringHelper;
 
 /**
  * Utility Twig extension.
@@ -52,7 +53,13 @@ class UtilityTwigExtension extends AbstractTwigExtension {
      * @return string Returns the formatted date/time.
      */
     public function formatDate(DateTime $dateTime = null, string $format = DateTimeHelper::DATETIME_FORMAT): string {
-        return DateTimeHelper::toString($dateTime, $format);
+
+        $result = DateTimeHelper::toString($dateTime, $format);
+        if (null === $result) {
+            return "";
+        }
+
+        return $result;
     }
 
     /**
@@ -64,14 +71,12 @@ class UtilityTwigExtension extends AbstractTwigExtension {
      */
     public function formatString(?string $string, ?string $format): string {
 
-        if (null === $string || null === $format) {
+        $result = StringHelper::format($string, $format);
+        if (null === $result) {
             return "";
         }
 
-        $fmt = str_replace("_", "%s", $format);
-        $str = str_split($string);
-
-        return vsprintf($fmt, $str);
+        return $result;
     }
 
     /**
@@ -90,7 +95,6 @@ class UtilityTwigExtension extends AbstractTwigExtension {
             new TwigFilter("fmtString", [$this, "formatString"], ["is_safe" => ["html"]]),
 
             new TwigFilter("htmlEntityDecode", [$this, "htmlEntityDecode"], ["is_safe" => ["html"]]),
-
             new TwigFilter("htmlEntityEncode", [$this, "htmlEntityEncode"], ["is_safe" => ["html"]]),
 
             new TwigFilter("md5", [$this, "md5"], ["is_safe" => ["html"]]),
@@ -113,10 +117,11 @@ class UtilityTwigExtension extends AbstractTwigExtension {
             new TwigFunction("fmtString", [$this, "formatString"], ["is_safe" => ["html"]]),
 
             new TwigFunction("htmlEntityDecode", [$this, "htmlEntityDecode"], ["is_safe" => ["html"]]),
-
             new TwigFunction("htmlEntityEncode", [$this, "htmlEntityEncode"], ["is_safe" => ["html"]]),
 
             new TwigFunction("md5", [$this, "md5"], ["is_safe" => ["html"]]),
+
+            new TwigFunction("staticMethod", [$this, "staticMethodFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
@@ -157,5 +162,20 @@ class UtilityTwigExtension extends AbstractTwigExtension {
             return "";
         }
         return md5($string);
+    }
+
+    /**
+     * Static method.
+     *
+     * @param string|null $classname The classname.
+     * @param string|null $method The method.
+     * @param array $arguments The arguments.
+     * @return mixed|null Returns the static method result.
+     */
+    public function staticMethodFunction(?string $classname, ?string $method, array $arguments = []) {
+        if (null === $classname || null === $method) {
+            return null;
+        }
+        return call_user_func_array("$classname::$method", $arguments);
     }
 }
