@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [2.26.1](https://github.com/webeweb/core-bundle/tree/v2.26.1) (2021-10-06)
+
+- Merge defaults into abstract form type test case 
+
 ### [2.26.0](https://github.com/webeweb/core-bundle/tree/v2.26.0) (2021-10-05)
 
 - Add staticMethod() into Utility Twig extension
