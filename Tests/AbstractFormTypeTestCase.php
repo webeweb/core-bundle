@@ -87,8 +87,14 @@ abstract class AbstractFormTypeTestCase extends AbstractTestCase {
 
         // Set an Options resolver mock.
         $this->resolver = $this->getMockBuilder(OptionsResolver::class)->getMock();
-        $this->resolver->expects($this->any())->method("setDefaults")->willReturnCallback(function(array $defauls) {
-            $this->defaults = $defauls;
+        $this->resolver->expects($this->any())->method("setDefaults")->willReturnCallback(function(array $defaults) {
+
+            if (null === $this->defaults) {
+                $this->defaults = [];
+            }
+
+            $this->defaults = array_merge($this->defaults, $defaults);
+
             return $this->resolver;
         });
     }
