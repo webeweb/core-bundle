@@ -8,7 +8,7 @@
 
     {% set _replaces = {
         "{{ version }}": _plugins[_appPlugin].version,
-        "{{ theme }}"  : _appThemes[_appPlugin] | default(""),
+        "{{ theme }}"  : _appThemes[_appPlugin]|default(""),
     } %}
 
     {% for _stylesheet in _plugins[_appPlugin].stylesheets %}
@@ -17,7 +17,7 @@
             <!-- {{ _plugins[_appPlugin].description }} -->
         {% endif %}
 
-        {% set _path = (_webPath ~ _stylesheet) | replace(_replaces) %}
+        {% set _path = (_webPath ~ _stylesheet)|replace(_replaces) %}
         <link type="text/css" rel="stylesheet" href="{{ asset(_path) }}">
     {% endfor %}
 {% endfor %}

@@ -8,7 +8,7 @@
 
     {% set _replaces = {
         "{{ version }}": _plugins[_appPlugin].version,
-        "{{ locale }}" : _appLocales[_appPlugin] | default(""),
+        "{{ locale }}" : _appLocales[_appPlugin]|default(""),
     } %}
 
     {% for _javascript in _plugins[_appPlugin].javascripts %}
@@ -17,7 +17,7 @@
             <!-- {{ _plugins[_appPlugin].description }} -->
         {% endif %}
 
-        {% set _path = (_webPath ~ _javascript) | replace(_replaces) %}
+        {% set _path = (_webPath ~ _javascript)|replace(_replaces) %}
         <script type="text/javascript" src="{{ asset(_path) }}"></script>
     {% endfor %}
 {% endfor %}
@@ -30,6 +30,6 @@
         "{{ brush }}"  : _appBrush,
     } %}
 
-    {% set _path = (_webPath ~ "/syntaxhighlighter-{{ version }}/scripts/shBrush{{ brush }}.js") | replace(_replaces) %}
+    {% set _path = (_webPath ~ "/syntaxhighlighter-{{ version }}/scripts/shBrush{{ brush }}.js")|replace(_replaces) %}
     <script type="text/javascript" src="{{ asset(_path) }}"></script>
 {% endfor %}
