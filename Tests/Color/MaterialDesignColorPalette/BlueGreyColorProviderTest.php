@@ -11,9 +11,11 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Color\MaterialDesignColorPalette;
 
+use JsonSerializable;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\BlueGreyColorProvider;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\MaterialDesignColorPaletteInterface;
 use WBW\Bundle\CoreBundle\Provider\Color\BlueGreyColorProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
@@ -75,9 +77,16 @@ class BlueGreyColorProviderTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
+        $this->assertEquals("wbw.core.provider.color.blue_grey", BlueGreyColorProvider::SERVICE_NAME);
+
         $obj = new BlueGreyColorProvider();
 
-        $this->assertEquals("wbw.core.provider.color.blue_grey", BlueGreyColorProvider::SERVICE_NAME);
+        $this->assertInstanceOf(ColorProviderInterface::class, $obj);
+        $this->assertInstanceOf(JsonSerializable::class, $obj);
+
+        $this->assertInstanceOf(MaterialDesignColorPaletteInterface::class, $obj);
+        $this->assertInstanceOf(BlueGreyColorProviderInterface::class, $obj);
+
         $this->assertEquals(MaterialDesignColorPaletteInterface::COLOR_DOMAIN, $obj->getDomain());
     }
 }

@@ -11,9 +11,11 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Color\MaterialDesignColorPalette;
 
+use JsonSerializable;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\LimeColorProvider;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\MaterialDesignColorPaletteInterface;
 use WBW\Bundle\CoreBundle\Provider\Color\LimeColorProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
@@ -83,9 +85,16 @@ class LimeColorProviderTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
+        $this->assertEquals("wbw.core.provider.color.lime", LimeColorProvider::SERVICE_NAME);
+
         $obj = new LimeColorProvider();
 
-        $this->assertEquals("wbw.core.provider.color.lime", LimeColorProvider::SERVICE_NAME);
+        $this->assertInstanceOf(ColorProviderInterface::class, $obj);
+        $this->assertInstanceOf(JsonSerializable::class, $obj);
+
+        $this->assertInstanceOf(MaterialDesignColorPaletteInterface::class, $obj);
+        $this->assertInstanceOf(LimeColorProviderInterface::class, $obj);
+
         $this->assertEquals(MaterialDesignColorPaletteInterface::COLOR_DOMAIN, $obj->getDomain());
     }
 }

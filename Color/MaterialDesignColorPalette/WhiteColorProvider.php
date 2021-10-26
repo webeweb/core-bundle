@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Provider\Color\WhiteColorProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette
  */
-class WhiteColorProvider extends AbstractColorProvider implements WhiteColorProviderInterface, MaterialDesignColorPaletteInterface {
+class WhiteColorProvider extends AbstractColorProvider implements MaterialDesignColorPaletteInterface, WhiteColorProviderInterface {
 
     /**
      * Service name.

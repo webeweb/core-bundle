@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Provider\Color\OrangeColorProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette
  */
-class OrangeColorProvider extends AbstractColorProvider implements OrangeColorProviderInterface, MaterialDesignColorPaletteInterface {
+class OrangeColorProvider extends AbstractColorProvider implements MaterialDesignColorPaletteInterface, OrangeColorProviderInterface {
 
     /**
      * Service name.

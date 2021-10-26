@@ -11,9 +11,11 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Color\MaterialDesignColorPalette;
 
+use JsonSerializable;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\IndigoColorProvider;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\MaterialDesignColorPaletteInterface;
 use WBW\Bundle\CoreBundle\Provider\Color\IndigoColorProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
@@ -83,9 +85,16 @@ class IndigoColorProviderTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
+        $this->assertEquals("wbw.core.provider.color.indigo", IndigoColorProvider::SERVICE_NAME);
+
         $obj = new IndigoColorProvider();
 
-        $this->assertEquals("wbw.core.provider.color.indigo", IndigoColorProvider::SERVICE_NAME);
+        $this->assertInstanceOf(ColorProviderInterface::class, $obj);
+        $this->assertInstanceOf(JsonSerializable::class, $obj);
+
+        $this->assertInstanceOf(MaterialDesignColorPaletteInterface::class, $obj);
+        $this->assertInstanceOf(IndigoColorProviderInterface::class, $obj);
+
         $this->assertEquals(MaterialDesignColorPaletteInterface::COLOR_DOMAIN, $obj->getDomain());
     }
 }

@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Provider\Color\GreyColorProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette
  */
-class GreyColorProvider extends AbstractColorProvider implements GreyColorProviderInterface, MaterialDesignColorPaletteInterface {
+class GreyColorProvider extends AbstractColorProvider implements MaterialDesignColorPaletteInterface, GreyColorProviderInterface {
 
     /**
      * Service name.

@@ -11,9 +11,11 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Color\MaterialDesignColorPalette;
 
+use JsonSerializable;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\MaterialDesignColorPaletteInterface;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\TealColorProvider;
 use WBW\Bundle\CoreBundle\Provider\Color\TealColorProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
@@ -83,9 +85,16 @@ class TealColorProviderTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
+        $this->assertEquals("wbw.core.provider.color.teal", TealColorProvider::SERVICE_NAME);
+
         $obj = new TealColorProvider();
 
-        $this->assertEquals("wbw.core.provider.color.teal", TealColorProvider::SERVICE_NAME);
+        $this->assertInstanceOf(ColorProviderInterface::class, $obj);
+        $this->assertInstanceOf(JsonSerializable::class, $obj);
+
+        $this->assertInstanceOf(MaterialDesignColorPaletteInterface::class, $obj);
+        $this->assertInstanceOf(TealColorProviderInterface::class, $obj);
+
         $this->assertEquals(MaterialDesignColorPaletteInterface::COLOR_DOMAIN, $obj->getDomain());
     }
 }

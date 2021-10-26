@@ -11,9 +11,11 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Color\MaterialDesignColorPalette;
 
+use JsonSerializable;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\CyanColorProvider;
 use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\MaterialDesignColorPaletteInterface;
 use WBW\Bundle\CoreBundle\Provider\Color\CyanColorProviderInterface;
+use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
@@ -83,9 +85,16 @@ class CyanColorProviderTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
+        $this->assertEquals("wbw.core.provider.color.cyan", CyanColorProvider::SERVICE_NAME);
+
         $obj = new CyanColorProvider();
 
-        $this->assertEquals("wbw.core.provider.color.cyan", CyanColorProvider::SERVICE_NAME);
+        $this->assertInstanceOf(ColorProviderInterface::class, $obj);
+        $this->assertInstanceOf(JsonSerializable::class, $obj);
+
+        $this->assertInstanceOf(MaterialDesignColorPaletteInterface::class, $obj);
+        $this->assertInstanceOf(CyanColorProviderInterface::class, $obj);
+
         $this->assertEquals(MaterialDesignColorPaletteInterface::COLOR_DOMAIN, $obj->getDomain());
     }
 }

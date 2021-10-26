@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Provider\Color\LimeColorProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette
  */
-class LimeColorProvider extends AbstractColorProvider implements LimeColorProviderInterface, MaterialDesignColorPaletteInterface {
+class LimeColorProvider extends AbstractColorProvider implements MaterialDesignColorPaletteInterface, LimeColorProviderInterface {
 
     /**
      * Service name.

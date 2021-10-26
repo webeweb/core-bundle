@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Provider\Color\PinkColorProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette
  */
-class PinkColorProvider extends AbstractColorProvider implements PinkColorProviderInterface, MaterialDesignColorPaletteInterface {
+class PinkColorProvider extends AbstractColorProvider implements MaterialDesignColorPaletteInterface, PinkColorProviderInterface {
 
     /**
      * Service name.
