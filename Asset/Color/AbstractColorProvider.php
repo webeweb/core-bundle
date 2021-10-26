@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Asset\Color;
 
+use JsonSerializable;
 use WBW\Bundle\CoreBundle\Provider\Asset\ColorProviderInterface;
 
 /**
@@ -20,7 +21,7 @@ use WBW\Bundle\CoreBundle\Provider\Asset\ColorProviderInterface;
  * @package WBW\Bundle\CoreBundle\Asset\Color
  * @abstract
  */
-abstract class AbstractColorProvider implements ColorProviderInterface {
+abstract class AbstractColorProvider implements ColorProviderInterface, JsonSerializable {
 
     /**
      * Domain.
@@ -39,12 +40,19 @@ abstract class AbstractColorProvider implements ColorProviderInterface {
     }
 
     /**
-     * Get the domain.
-     *
-     * @return string Returns the domain.
+     *{@inheritDoc}
      */
     public function getDomain(): string {
         return $this->domain;
+    }
+
+    /**
+     *{@inheritDoc}
+     */
+    public function jsonSerialize(): array {
+        return [
+            $this->getName() => $this->getColors(),
+        ];
     }
 
     /**
