@@ -23,6 +23,18 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\TestColorProvider;
 class AbstractColorProviderTest extends AbstractTestCase {
 
     /**
+     * Tests the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize(): void {
+
+        $obj = new TestColorProvider();
+
+        $this->assertEquals(["test" => []], $obj->jsonSerialize());
+    }
+
+    /**
      * Tests the setDomain() method.
      *
      * @return void
