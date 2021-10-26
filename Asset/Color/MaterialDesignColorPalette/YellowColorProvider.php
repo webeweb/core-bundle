@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Provider\Asset\Color\YellowColorProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette
  */
-class YellowColorProvider extends AbstractColorProvider implements YellowColorProviderInterface, MaterialDesignColorPaletteInterface {
+class YellowColorProvider extends AbstractColorProvider implements MaterialDesignColorPaletteInterface, YellowColorProviderInterface {
 
     /**
      * Service name.

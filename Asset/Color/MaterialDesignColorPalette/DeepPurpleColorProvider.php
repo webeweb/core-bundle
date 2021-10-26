@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Provider\Asset\Color\DeepPurpleColorProviderInterface;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette
  */
-class DeepPurpleColorProvider extends AbstractColorProvider implements DeepPurpleColorProviderInterface, MaterialDesignColorPaletteInterface {
+class DeepPurpleColorProvider extends AbstractColorProvider implements MaterialDesignColorPaletteInterface, DeepPurpleColorProviderInterface {
 
     /**
      * Service name.
