@@ -117,8 +117,8 @@ class TestFixtures {
      */
     public static function getUsers(): array {
 
-        $fixtures   = [];
-        $fixtures[] = (new FOSUser())
+        $user = new FOSUser();
+        $user
             ->setUsername("webeweb")
             ->setUsernameCanonical("webeweb")
             ->setEmail("webeweb@github.com")
@@ -130,6 +130,6 @@ class TestFixtures {
             ->setLastLogin((new DateTime())->sub(new DateInterval("P1D")))
             ->setPasswordRequestedAt(new DateTime());
 
-        return $fixtures;
+        return [$user];
     }
 }

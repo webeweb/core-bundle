@@ -13,6 +13,7 @@ namespace WBW\Bundle\CoreBundle\Asset\Color;
 
 use JsonSerializable;
 use WBW\Bundle\CoreBundle\Provider\Asset\ColorProviderInterface;
+use WBW\Library\Serializer\SerializerKeys;
 
 /**
  * Abstract color provider.
@@ -51,7 +52,9 @@ abstract class AbstractColorProvider implements ColorProviderInterface, JsonSeri
      */
     public function jsonSerialize(): array {
         return [
-            $this->getName() => $this->getColors(),
+            SerializerKeys::DOMAIN      => $this->getDomain(),
+            SerializerKeys::NAME        => $this->getName(),
+            SerializerKeys::COLOR . "s" => $this->getColors(),
         ];
     }
 

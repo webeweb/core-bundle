@@ -25,7 +25,7 @@ class TestColorProvider extends AbstractColorProvider {
      * Constructor.
      */
     public function __construct() {
-        parent::__construct("test");
+        parent::__construct("fixture");
     }
 
     /**

@@ -31,7 +31,13 @@ class AbstractColorProviderTest extends AbstractTestCase {
 
         $obj = new TestColorProvider();
 
-        $this->assertEquals(["test" => []], $obj->jsonSerialize());
+        $res = [
+            "domain" => "fixture",
+            "name"   => "test",
+            "colors" => [],
+        ];
+
+        $this->assertEquals($res, $obj->jsonSerialize());
     }
 
     /**
@@ -56,6 +62,6 @@ class AbstractColorProviderTest extends AbstractTestCase {
 
         $obj = new TestColorProvider();
 
-        $this->assertEquals("test", $obj->getDomain());
+        $this->assertEquals("fixture", $obj->getDomain());
     }
 }
