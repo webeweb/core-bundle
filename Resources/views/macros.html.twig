@@ -8,7 +8,16 @@
 #}
 {% macro jQueryInputMaskDate(id) %}
     {% set _selector = id %}
-    {{ jQueryInputMask({"selector": _selector, "mask": "99/99/9999", "opts": {"autoUnmask": true, "removeMaskOnSubmit": true, "placeholder": "__/__/____"}, "scriptTag": true}) }}
+    {{ jQueryInputMask({
+        "selector":  _selector,
+        "mask":      "99/99/9999",
+        "opts": {
+            "autoUnmask":         true,
+            "removeMaskOnSubmit": true,
+            "placeholder":        "__/__/____",
+        },
+        "scriptTag": true
+    }) }}
 {% endmacro %}
 
 {#
@@ -19,7 +28,16 @@
 #}
 {% macro jQueryInputMaskIban(id) %}
     {% set _selector = id %}
-    {{ jQueryInputMask({"selector": _selector, "mask": "AA99 99999 99999 99999999999 99", "opts": {"autoUnmask": true, "removeMaskOnSubmit": true, "placeholder": "____ _____ _____ ___________ ___"}, "scriptTag": true}) }}
+    {{ jQueryInputMask({
+        "selector":  _selector,
+        "mask":      "AA99 99999 99999 99999999999 99",
+        "opts": {
+            "autoUnmask":         true,
+            "removeMaskOnSubmit": true,
+            "placeholder":        "____ _____ _____ ___________ ___"
+        },
+        "scriptTag": true
+    }) }}
 {% endmacro %}
 
 {#
@@ -30,7 +48,16 @@
 #}
 {% macro jQueryInputMaskNafCode(id) %}
     {% set _selector = id %}
-    {{ jQueryInputMask({"selector": _selector, "mask": "9999A", "opts": {"autoUnmask": true, "removeMaskOnSubmit": true, "placeholder": "_____"}, "scriptTag": true}) }}
+    {{ jQueryInputMask({
+        "selector":  _selector,
+        "mask":      "9999A",
+        "opts": {
+            "autoUnmask":         true,
+            "removeMaskOnSubmit": true,
+            "placeholder":        "_____"
+        },
+        "scriptTag": true
+    }) }}
 {% endmacro %}
 
 {#
@@ -41,7 +68,16 @@
 #}
 {% macro jQueryInputMaskPhone(id) %}
     {% set _selector = id %}
-    {{ jQueryInputMask({"selector": _selector, "mask": "+99 9 99 99 99 99", "opts": {"autoUnmask": true, "removeMaskOnSubmit": true, "placeholder": "+__ _ __ __ __ __"}, "scriptTag": true}) }}
+    {{ jQueryInputMask({
+        "selector":  _selector,
+        "mask":      "+99 9 99 99 99 99",
+        "opts": {
+            "autoUnmask":         true,
+            "removeMaskOnSubmit": true,
+            "placeholder":        "+__ _ __ __ __ __"
+        },
+        "scriptTag": true
+    }) }}
 {% endmacro %}
 
 {#
@@ -52,7 +88,16 @@
 #}
 {% macro jQueryInputMaskSiretNumber(id) %}
     {% set _selector = id %}
-    {{ jQueryInputMask({"selector": _selector, "mask": "999 999 999 99999", "opts": {"autoUnmask": true, "removeMaskOnSubmit": true, "placeholder": "___ ___ ___ _____"}, "scriptTag": true}) }}
+    {{ jQueryInputMask({
+        "selector":  _selector,
+        "mask":      "999 999 999 99999",
+        "opts": {
+            "autoUnmask":         true,
+            "removeMaskOnSubmit": true,
+            "placeholder":        "___ ___ ___ _____"
+        },
+        "scriptTag": true
+    }) }}
 {% endmacro %}
 
 {#
@@ -63,5 +108,14 @@
 #}
 {% macro jQueryInputMaskVatNumber(id) %}
     {% set _selector = id %}
-    {{ jQueryInputMask({"selector": _selector, "mask": "AA99 999 999 999", "opts": {"autoUnmask": true, "removeMaskOnSubmit": true, "placeholder": "_____ ___ ___ ___"}, "scriptTag": true}) }}
+    {{ jQueryInputMask({
+        "selector":  _selector,
+        "mask":      "AA99 999 999 999",
+        "opts": {
+            "autoUnmask":         true,
+            "removeMaskOnSubmit": true,
+            "placeholder":        "_____ ___ ___ ___"
+        },
+        "scriptTag": true
+    }) }}
 {% endmacro %}
