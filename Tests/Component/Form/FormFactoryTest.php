@@ -136,6 +136,27 @@ class FormFactoryTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the newChoiceType() method.
+     *
+     * @return void
+     */
+    public function testNewChoiceTypeWithGroup(): void {
+
+        $res = FormFactory::newChoiceType(["optgroup" => $this->choices], true);
+        $this->assertCount(1, $res);
+        $this->assertArrayHasKey("choices", $res);
+
+        $this->assertCount(3, $res["choices"]["optgroup"]);
+        $this->assertArrayHasKey(0, $res["choices"]["optgroup"]);
+        $this->assertArrayHasKey(1, $res["choices"]["optgroup"]);
+        $this->assertArrayHasKey(2, $res["choices"]["optgroup"]);
+
+        $this->assertEquals("0", $res["choices"]["optgroup"][0]);
+        $this->assertEquals("1", $res["choices"]["optgroup"][1]);
+        $this->assertEquals("2", $res["choices"]["optgroup"][2]);
+    }
+
+    /**
      * Tests the newEntityType method.
      *
      * @return void
