@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [2.28.0](https://github.com/webeweb/core-bundle/tree/v2.28.0) (2021-10-28)
+
+- Add Twig controller
+
 ### [2.27.1](https://github.com/webeweb/core-bundle/tree/v2.27.1) (2021-10-26)
 
 - Fix JSON serialization into Material Design color palette
