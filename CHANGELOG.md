@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [2.29.0](https://github.com/webeweb/core-bundle/tree/v2.29.0) (2021-10-28)
+
+- Add optgroup support into FormFactory::newChoiceType()
+
 ### [2.28.0](https://github.com/webeweb/core-bundle/tree/v2.28.0) (2021-10-28)
 
 - Add Twig controller
