@@ -70,11 +70,24 @@ class FormFactory {
      * Create a choice type.
      *
      * @param array $choices The choices.
+     * @param bool $group Group ?
      * @return array Returns the choice type.
      */
-    public static function newChoiceType(array $choices = []): array {
+    public static function newChoiceType(array $choices = [], bool $group = false): array {
+
+        $buffer = [];
+
+        if (true === $group) {
+
+            foreach ($choices as $k => $v) {
+                $buffer[$k] = array_flip($v);
+            }
+        } else {
+            $buffer = array_flip($choices);
+        }
+
         return [
-            "choices" => array_flip($choices),
+            "choices" => $buffer,
         ];
     }
 
