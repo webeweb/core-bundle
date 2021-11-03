@@ -4,10 +4,12 @@
 # Displays a jQuery InputMask "date".
 #
 # @param string $id The id attribute.
+# @param bool $scriptTag Script tag ?
 # @return string Returns the jQuery InputMask "date".
 #}
-{% macro jQueryInputMaskDate(id) %}
-    {% set _selector = id %}
+{% macro jQueryInputMaskDate(id, scriptTag) %}
+    {% set _selector  = id %}
+    {% set _scriptTag = scriptTag is not null ? scriptTag : true %}
     {{ jQueryInputMask({
         "selector":  _selector,
         "mask":      "99/99/9999",
@@ -16,7 +18,7 @@
             "removeMaskOnSubmit": true,
             "placeholder":        "__/__/____",
         },
-        "scriptTag": true
+        "scriptTag": _scriptTag
     }) }}
 {% endmacro %}
 
@@ -24,10 +26,12 @@
 # Displays a jQuery InputMask "IBAN".
 #
 # @param string $id The id attribute.
+# @param bool $scriptTag Script tag ?
 # @return string Returns the jQuery InputMask "IBAN".
 #}
-{% macro jQueryInputMaskIban(id) %}
-    {% set _selector = id %}
+{% macro jQueryInputMaskIban(id, scriptTag) %}
+    {% set _selector  = id %}
+    {% set _scriptTag = scriptTag is not null ? scriptTag : true %}
     {{ jQueryInputMask({
         "selector":  _selector,
         "mask":      "AA99 99999 99999 99999999999 99",
@@ -36,7 +40,7 @@
             "removeMaskOnSubmit": true,
             "placeholder":        "____ _____ _____ ___________ ___"
         },
-        "scriptTag": true
+        "scriptTag": _scriptTag
     }) }}
 {% endmacro %}
 
@@ -44,10 +48,12 @@
 # Displays a jQuery InputMask "NAF code".
 #
 # @param string $id The id attribute.
+# @param bool $scriptTag Script tag ?
 # @return string Returns the jQuery InputMask "NAF code".
 #}
-{% macro jQueryInputMaskNafCode(id) %}
-    {% set _selector = id %}
+{% macro jQueryInputMaskNafCode(id, scriptTag) %}
+    {% set _selector  = id %}
+    {% set _scriptTag = scriptTag is not null ? scriptTag : true %}
     {{ jQueryInputMask({
         "selector":  _selector,
         "mask":      "9999A",
@@ -56,7 +62,7 @@
             "removeMaskOnSubmit": true,
             "placeholder":        "_____"
         },
-        "scriptTag": true
+        "scriptTag": _scriptTag
     }) }}
 {% endmacro %}
 
@@ -64,10 +70,12 @@
 # Displays a jQuery InputMask "phone".
 #
 # @param string $id The id attribute.
+# @param bool $scriptTag Script tag ?
 # @return string Returns the jQuery InputMask "phone".
 #}
-{% macro jQueryInputMaskPhone(id) %}
-    {% set _selector = id %}
+{% macro jQueryInputMaskPhone(id, scriptTag) %}
+    {% set _selector  = id %}
+    {% set _scriptTag = scriptTag is not null ? scriptTag : true %}
     {{ jQueryInputMask({
         "selector":  _selector,
         "mask":      "+99 9 99 99 99 99",
@@ -76,7 +84,7 @@
             "removeMaskOnSubmit": true,
             "placeholder":        "+__ _ __ __ __ __"
         },
-        "scriptTag": true
+        "scriptTag": _scriptTag
     }) }}
 {% endmacro %}
 
@@ -84,10 +92,12 @@
 # Displays a jQuery InputMask "SIRET number".
 #
 # @param string $id The id attribute.
+# @param bool $scriptTag Script tag ?
 # @return string Returns the jQuery InputMask "SIRET number".
 #}
-{% macro jQueryInputMaskSiretNumber(id) %}
-    {% set _selector = id %}
+{% macro jQueryInputMaskSiretNumber(id, scriptTag) %}
+    {% set _selector  = id %}
+    {% set _scriptTag = scriptTag is not null ? scriptTag : true %}
     {{ jQueryInputMask({
         "selector":  _selector,
         "mask":      "999 999 999 99999",
@@ -96,7 +106,7 @@
             "removeMaskOnSubmit": true,
             "placeholder":        "___ ___ ___ _____"
         },
-        "scriptTag": true
+        "scriptTag": _scriptTag
     }) }}
 {% endmacro %}
 
@@ -104,10 +114,12 @@
 # Displays a jQuery InputMask "VAT number".
 #
 # @param string $id The id attribute.
+# @param bool $scriptTag Script tag ?
 # @return string Returns the jQuery InputMask "VAT number".
 #}
-{% macro jQueryInputMaskVatNumber(id) %}
-    {% set _selector = id %}
+{% macro jQueryInputMaskVatNumber(id, scriptTag) %}
+    {% set _selector  = id %}
+    {% set _scriptTag = scriptTag is not null ? scriptTag : true %}
     {{ jQueryInputMask({
         "selector":  _selector,
         "mask":      "AA99 999 999 999",
@@ -116,6 +128,6 @@
             "removeMaskOnSubmit": true,
             "placeholder":        "_____ ___ ___ ___"
         },
-        "scriptTag": true
+        "scriptTag": _scriptTag
     }) }}
 {% endmacro %}
