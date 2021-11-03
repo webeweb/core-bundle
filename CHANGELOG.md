@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [2.30.0](https://github.com/webeweb/core-bundle/tree/v2.30.0) (2021-11-03)
+
+- Update macros
+
 ### [2.29.0](https://github.com/webeweb/core-bundle/tree/v2.29.0) (2021-10-28)
 
 - Add optgroup support into FormFactory::newChoiceType()
