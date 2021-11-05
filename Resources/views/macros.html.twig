@@ -23,6 +23,28 @@
 {% endmacro %}
 
 {#
+# Displays a jQuery InputMask "date/time".
+#
+# @param string $id The id attribute.
+# @param bool $scriptTag Script tag ?
+# @return string Returns the jQuery InputMask "date/time".
+#}
+{% macro jQueryInputMaskDateTime(id, scriptTag) %}
+    {% set _selector  = id %}
+    {% set _scriptTag = scriptTag is not null ? scriptTag : true %}
+    {{ jQueryInputMask({
+        "selector":  _selector,
+        "mask":      "99/99/9999 hh:mm",
+        "opts": {
+            "autoUnmask":         true,
+            "removeMaskOnSubmit": true,
+            "placeholder":        "__/__/____ __:__",
+        },
+        "scriptTag": _scriptTag
+    }) }}
+{% endmacro %}
+
+{#
 # Displays a jQuery InputMask "IBAN".
 #
 # @param string $id The id attribute.
@@ -105,6 +127,28 @@
             "autoUnmask":         true,
             "removeMaskOnSubmit": true,
             "placeholder":        "___ ___ ___ _____"
+        },
+        "scriptTag": _scriptTag
+    }) }}
+{% endmacro %}
+
+{#
+# Displays a jQuery InputMask "time".
+#
+# @param string $id The id attribute.
+# @param bool $scriptTag Script tag ?
+# @return string Returns the jQuery InputMask "time".
+#}
+{% macro jQueryInputMaskTime(id, scriptTag) %}
+    {% set _selector  = id %}
+    {% set _scriptTag = scriptTag is not null ? scriptTag : true %}
+    {{ jQueryInputMask({
+        "selector":  _selector,
+        "mask":      "hh:mm",
+        "opts": {
+            "autoUnmask":         true,
+            "removeMaskOnSubmit": true,
+            "placeholder":        "__:__",
         },
         "scriptTag": _scriptTag
     }) }}
