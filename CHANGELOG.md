@@ -1,6 +1,140 @@
 CHANGELOG
 =========
 
+### master
+
+> IMPORTANT NOTICE: The following deprecated classes has been removed
+> - WBW\Bundle\CoreBundle\Twig/Extension/Plugin/FontAwesomeTwigExtension
+> - WBW\Bundle\CoreBundle\Twig/Extension/Plugin/FontAwesomeTwigExtensionTrait
+> - WBW\Bundle\CoreBundle\Twig/Extension/Plugin/JQueryInputMaskTwigExtension
+> - WBW\Bundle\CoreBundle\Twig/Extension/Plugin/JQueryInputMaskTwigExtensionTrait
+> - WBW\Bundle\CoreBundle\Twig/Extension/Plugin/MaterialDesignColorPaletteTwigExtension
+> - WBW\Bundle\CoreBundle\Twig/Extension/Plugin/MaterialDesignColorPaletteTwigExtensionTrait
+> - WBW\Bundle\CoreBundle\Twig/Extension/Plugin/MaterialDesignIconicFontTwigExtension
+> - WBW\Bundle\CoreBundle\Twig/Extension/Plugin/MaterialDesignIconicFontTwigExtensionTrait
+> - WBW\Bundle\CoreBundle\Twig/Extension/Plugin/MeteoconsTwigExtension
+> - WBW\Bundle\CoreBundle\Twig/Extension/Plugin/MeteoconsTwigExtensionTrait
+> - WBW\Bundle\CoreBundle\WBWCoreEvents
+
+> IMPORTANT NOTICE: The following classes has been moved
+> - WBW\Bundle\CoreBundle\DependencyInjection\ConfigurationHelper
+> - WBW\Bundle\CoreBundle\DependencyInjection\ContainerTrait
+> - WBW\Bundle\CoreBundle\Entity\ChoiceLabelInterface
+> - WBW\Bundle\CoreBundle\Entity\ChoiceValueInterface
+> - WBW\Bundle\CoreBundle\Entity\Select2ItemInterface
+> - WBW\Bundle\CoreBundle\Entity\TranslatedChoiceLabelInterface
+> - WBW\Bundle\CoreBundle\EventDispatcher\EventDispatcherHelper
+> - WBW\Bundle\CoreBundle\Helper\AssetsHelper
+> - WBW\Bundle\CoreBundle\Form\Factory\FormFactory
+> - WBW\Bundle\CoreBundle\Form\Renderer\FormRenderer
+> - WBW\Bundle\CoreBundle\Helper\ColorHelper
+> - WBW\Bundle\CoreBundle\Helper\CommandHelper
+> - WBW\Bundle\CoreBundle\Helper\KernelHelper
+> - WBW\Bundle\CoreBundle\Helper\FormHelper
+> - WBW\Bundle\CoreBundle\Helper\Select2Helper
+> - WBW\Bundle\CoreBundle\Helper\UserHelper
+> - WBW\Bundle\CoreBundle\Manager\AbstractThemeManager
+> - WBW\Bundle\CoreBundle\Manager\ColorManager
+> - WBW\Bundle\CoreBundle\Manager\ColorManagerTrait
+> - WBW\Bundle\CoreBundle\Manager\QuoteManager
+> - WBW\Bundle\CoreBundle\Manager\QuoteManagerTrait
+> - WBW\Bundle\CoreBundle\Manager\ThemeManager
+> - WBW\Bundle\CoreBundle\Manager\ThemeManagerTrait
+> - WBW\Bundle\CoreBundle\Model\RequestTrait
+> - WBW\Bundle\CoreBundle\Model\UserTrait
+> - WBW\Bundle\CoreBundle\Provider\ColorProviderInterface
+> - WBW\Bundle\CoreBundle\Provider\QuoteProviderInterface
+> - WBW\Bundle\CoreBundle\Provider\Asset\Highlighter\SyntaxHighlighterStringsProvider
+> - WBW\Bundle\CoreBundle\Provider\ThemeProviderInterface
+> - WBW\Bundle\CoreBundle\Service\EntityManagerTrait
+> - WBW\Bundle\CoreBundle\Service\EventDispatcherTrait
+> - WBW\Bundle\CoreBundle\Service\LoggerTrait
+> - WBW\Bundle\CoreBundle\Service\ObjectManagerTrait
+> - WBW\Bundle\CoreBundle\Service\RouterTrait
+> - WBW\Bundle\CoreBundle\Service\SessionTrait
+> - WBW\Bundle\CoreBundle\Service\SwiftMailerTrait
+> - WBW\Bundle\CoreBundle\Service\TokenStorageTrait
+> - WBW\Bundle\CoreBundle\Service\TranslatorTrait
+> - WBW\Bundle\CoreBundle\Service\TwigEnvironmentTrait
+> - WBW\Bundle\CoreBundle\Twig\Extension\QuoteTwigExtension
+
+> IMPORTANT NOTICE: The following packages has been moved
+> - WBW\Bundle\CoreBundle\Color
+> - WBW\Bundle\CoreBundle\Icon
+> - WBW\Bundle\CoreBundle\Navigation
+> - WBW\Bundle\CoreBundle\Notification
+> - WBW\Bundle\CoreBundle\Provider\Color
+> - WBW\Bundle\CoreBundle\Provider\Quote
+> - WBW\Bundle\CoreBundle\Quote
+> - WBW\Bundle\CoreBundle\Theme
+> - WBW\Bundle\CoreBundle\Toast
+
+- Add Leaflet asset
+- Add Leaflet Color Markers asset
+- Add Leaflet Marker Cluster asset
+- Add abstract Provider compiler pass
+- Add Object repository trait
+- Add Request stack trait
+- Add Response trait
+- Add String Twig extension
+- Add String Twig extension trait
+- Improve Configuration
+- Update Application theme provider interface
+- Update dependencies
+- Update service names
+
+### [2.31.0](https://github.com/webeweb/core-bundle/tree/v2.31.0) (2021-11-05)
+
+- Update macros
+
+### [2.30.0](https://github.com/webeweb/core-bundle/tree/v2.30.0) (2021-11-03)
+
+- Update macros
+
+### [2.29.0](https://github.com/webeweb/core-bundle/tree/v2.29.0) (2021-10-28)
+
+- Add optgroup support into FormFactory::newChoiceType()
+
+### [2.28.0](https://github.com/webeweb/core-bundle/tree/v2.28.0) (2021-10-28)
+
+- Add Twig controller
+
+### [2.27.1](https://github.com/webeweb/core-bundle/tree/v2.27.1) (2021-10-26)
+
+- Fix JSON serialization into Material Design color palette
+
+### [2.27.0](https://github.com/webeweb/core-bundle/tree/v2.27.0) (2021-10-26)
+
+- Implement JSON serializable into Material Design color palette
+
+### [2.26.1](https://github.com/webeweb/core-bundle/tree/v2.26.1) (2021-10-06)
+
+- Merge defaults into abstract form type test case
+
+### [2.26.0](https://github.com/webeweb/core-bundle/tree/v2.26.0) (2021-10-05)
+
+- Add staticMethod() into Utility Twig extension
+
+### [2.25.0](https://github.com/webeweb/core-bundle/tree/v2.25.0) (2021-09-29)
+
+- Add font support into Renderer Twig extension for FontAwesome
+
+### [2.24.2](https://github.com/webeweb/core-bundle/tree/v2.24.2) (2021-09-16)
+
+- Fix jQueryInputMaskDate() macro
+
+### [2.24.1](https://github.com/webeweb/core-bundle/tree/v2.24.1) (2021-09-16)
+
+- Fix jQueryInputMaskIban() macro
+
+### [2.24.0](https://github.com/webeweb/core-bundle/tree/v2.24.0) (2021-09-16)
+
+- Add macros
+
+### [2.23.0](https://github.com/webeweb/core-bundle/tree/v2.23.0) (2021-08-17)
+
+- Update dependencies
+
 ### [2.22.1](https://github.com/webeweb/core-bundle/tree/v2.22.1) (2021-04-02)
 
 - Fix kernel shutdown before client creation
@@ -140,7 +274,7 @@ CHANGELOG
 ### [2.13.0](https://github.com/webeweb/core-bundle/tree/v2.13.0) (2019-10-09)
 
 > IMPORTANT NOTICE: The following deprecated classes has been removed
-> - WBW\Bundle\CoreBundle\Navigation\NavigationItem
+> - WBW\Bundle\CoreBundle\Asset\Navigation\NavigationItem
 
 > IMPORTANT NOTICE: The following classes has been deprecated
 > - WBW\Bundle\CoreBundle\Twig\Extension\Plugin\FontAwesomeTwigExtension
