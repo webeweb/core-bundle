@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [2.31.1](https://github.com/webeweb/core-bundle/tree/v2.31.1) (2021-11-09)
+
+- Fix spelling
+
 ### [2.31.0](https://github.com/webeweb/core-bundle/tree/v2.31.0) (2021-11-05)
 
 - Update macros
