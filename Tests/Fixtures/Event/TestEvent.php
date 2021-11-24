@@ -26,7 +26,7 @@ class TestEvent extends AbstractEvent {
      *
      * @param string $eventName The event name.
      */
-    public function __construct($eventName) {
+    public function __construct(string $eventName) {
         parent::__construct($eventName);
     }
 }

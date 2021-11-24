@@ -36,9 +36,11 @@ class ColorManager extends AbstractManager {
      * {@inheritDoc}
      */
     public function addProvider(ProviderInterface $provider): ManagerInterface {
+
         if (true === $this->contains($provider)) {
             throw new AlreadyRegisteredProviderException($provider);
         }
+
         return parent::addProvider($provider);
     }
 
@@ -46,15 +48,19 @@ class ColorManager extends AbstractManager {
      * {@inheritDoc}
      */
     public function contains(ProviderInterface $provider): bool {
+
         if (false === ($provider instanceof ColorProviderInterface)) {
             throw new InvalidArgumentException("The provider must implements ColorProviderInterface");
         }
+
         $identifier = ColorHelper::getIdentifier($provider);
+
         foreach ($this->getProviders() as $current) {
             if ($identifier === ColorHelper::getIdentifier($current)) {
                 return true;
             }
         }
+
         return false;
     }
 }

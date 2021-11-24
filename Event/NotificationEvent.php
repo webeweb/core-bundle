@@ -36,6 +36,7 @@ class NotificationEvent extends AbstractEvent {
      */
     public function __construct(string $eventName, NotificationInterface $notification) {
         parent::__construct($eventName);
+
         $this->setNotification($notification);
     }
 

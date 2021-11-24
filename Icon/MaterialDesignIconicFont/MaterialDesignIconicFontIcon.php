@@ -75,6 +75,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
      */
     public function __construct() {
         parent::__construct();
+
         $this->setFixedWidth(false);
     }
 

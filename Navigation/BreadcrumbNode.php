@@ -29,6 +29,7 @@ class BreadcrumbNode extends AbstractNavigationNode {
      */
     public function __construct(string $label, string $icon = null, string $uri = null, string $matcher = self::NAVIGATION_MATCHER_URL) {
         parent::__construct($label, $icon, $uri, $matcher);
+
         $this->setVisible(false);
     }
 }

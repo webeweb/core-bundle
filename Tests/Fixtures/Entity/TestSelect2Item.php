@@ -37,6 +37,7 @@ class TestSelect2Item extends AbstractNode implements Select2ItemInterface {
      */
     public function __construct(?string $id, ?string $name) {
         parent::__construct($id);
+
         $this->setName($name);
     }
 

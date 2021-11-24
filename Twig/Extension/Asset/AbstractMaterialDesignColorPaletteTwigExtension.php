@@ -39,6 +39,7 @@ abstract class AbstractMaterialDesignColorPaletteTwigExtension extends AbstractT
      */
     public function __construct(Environment $twigEnvironment) {
         parent::__construct($twigEnvironment);
+
         $this->setColors(ColorHelper::getMaterialDesignColorPalette());
     }
 

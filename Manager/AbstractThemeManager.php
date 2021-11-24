@@ -42,6 +42,7 @@ abstract class AbstractThemeManager extends AbstractManager {
      */
     public function __construct(LoggerInterface $logger, Environment $twigEnvironment) {
         parent::__construct($logger);
+
         $this->setIndex($this->initIndex());
         $this->setTwigEnvironment($twigEnvironment);
     }

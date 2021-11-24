@@ -40,6 +40,7 @@ class YamlQuoteProvider extends AbstractQuoteProvider {
      */
     public function __construct(?string $filename) {
         parent::__construct();
+
         $this->setFilename($filename);
     }
 
