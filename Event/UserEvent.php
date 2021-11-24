@@ -40,6 +40,7 @@ class UserEvent extends AbstractEvent {
      */
     public function __construct(UserInterface $user, Request $request) {
         parent::__construct(get_class($this));
+
         $this->setUser($user);
         $this->setRequest($request);
     }

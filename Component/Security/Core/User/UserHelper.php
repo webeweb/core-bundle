@@ -31,7 +31,7 @@ class UserHelper {
      */
     public static function hasRoles($user, $roles, bool $or = true): bool {
 
-        if (null === $user || false === ($user instanceof UserInterface)) {
+        if (false === ($user instanceof UserInterface)) {
             return false;
         }
 

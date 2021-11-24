@@ -66,7 +66,7 @@ class FormHelper {
      */
     public function checkCollection($collection, string $notification, string $redirectURL, int $expected = 1): void {
 
-        if (null === $collection || (false === is_array($collection) && false === ($collection instanceof Countable))) {
+        if (false === is_array($collection) && false === ($collection instanceof Countable)) {
             throw new InvalidArgumentException("The collection must be a countable");
         }
         if ($expected <= count($collection)) {

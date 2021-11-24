@@ -59,7 +59,7 @@ class CanonicalFieldsUpdater {
      * @param string|null $email The email.
      * @return string|null Returns the canonicalized email.
      */
-    public function canonicalizeEmail(?string $email) {
+    public function canonicalizeEmail(?string $email): ?string {
         return $this->getEmailCanonicalizer()->canonicalize($email);
     }
 
@@ -69,7 +69,7 @@ class CanonicalFieldsUpdater {
      * @param string|null $username The username.
      * @return string|null Returns the canonicalized username.
      */
-    public function canonicalizeUsername(?string $username) {
+    public function canonicalizeUsername(?string $username): ?string {
         return $this->getUsernameCanonicalizer()->canonicalize($username);
     }
 

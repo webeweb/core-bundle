@@ -45,10 +45,7 @@ abstract class AbstractTimestampDataTransformer extends AbstractDateTimeDataTran
             return null;
         }
 
-        $date = new DateTime("@{$value}");
-        if (false === $date) {
-            return null;
-        }
+        $date = new DateTime("@$value");
 
         return parent::transform($date);
     }

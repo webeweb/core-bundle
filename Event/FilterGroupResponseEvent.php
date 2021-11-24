@@ -35,6 +35,7 @@ class FilterGroupResponseEvent extends GroupEvent {
      */
     public function __construct(GroupInterface $group, Request $request, Response $response) {
         parent::__construct($group, $request);
+
         $this->setResponse($response);
     }
 }

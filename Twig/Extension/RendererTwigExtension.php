@@ -44,7 +44,7 @@ class RendererTwigExtension extends AbstractTwigExtension {
             "type" => "text/javascript",
         ];
 
-        $innerHTML = null !== $content ? implode("", ["\n", $content, "\n"]) : "";
+        $innerHTML = implode("", ["\n", $content, "\n"]);
 
         return static::coreHtmlElement("script", $innerHTML, $attributes);
     }

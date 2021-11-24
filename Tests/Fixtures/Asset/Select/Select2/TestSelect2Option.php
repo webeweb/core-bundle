@@ -37,6 +37,7 @@ class TestSelect2Option extends AbstractNode implements Select2OptionInterface {
      */
     public function __construct(?string $id, ?string $name) {
         parent::__construct($id);
+
         $this->setName($name);
     }
 

@@ -27,6 +27,7 @@ class HeaderNode extends AbstractNavigationNode {
      */
     public function __construct(string $label, string $icon = null) {
         parent::__construct($label, $icon, null, null);
+
         $this->setEnable(true);
     }
 

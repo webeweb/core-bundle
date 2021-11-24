@@ -37,10 +37,13 @@ class QuoteManager extends AbstractManager {
      * {@inheritDoc}
      */
     public function addProvider(ProviderInterface $provider): ManagerInterface {
+
         if (true === $this->contains($provider)) {
             throw new AlreadyRegisteredProviderException($provider);
         }
+
         $provider->init();
+
         return parent::addProvider($provider);
     }
 

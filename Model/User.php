@@ -339,17 +339,17 @@ abstract class User implements UserInterface, GroupableInterface {
     /**
      * {@inheritDoc}
      */
-    public function unserialize($serialized): void {
+    public function unserialize($data): void {
 
-        $data = unserialize($serialized);
+        $buffer = unserialize($data);
 
-        $this->setId($data[0]);
-        $this->setEmail($data[1]);
-        $this->setEmailCanonical($data[2]);
-        $this->setEnabled($data[3]);
-        $this->setPassword($data[4]);
-        $this->setSalt($data[5]);
-        $this->setUsername($data[6]);
-        $this->setUsernameCanonical($data[7]);
+        $this->setId($buffer[0]);
+        $this->setEmail($buffer[1]);
+        $this->setEmailCanonical($buffer[2]);
+        $this->setEnabled($buffer[3]);
+        $this->setPassword($buffer[4]);
+        $this->setSalt($buffer[5]);
+        $this->setUsername($buffer[6]);
+        $this->setUsernameCanonical($buffer[7]);
     }
 }

@@ -47,6 +47,7 @@ class QuoteTwigExtension extends AbstractTwigExtension {
      */
     public function __construct(Environment $twigEnvironment, QuoteManager $quoteManager) {
         parent::__construct($twigEnvironment);
+
         $this->setQuoteManager($quoteManager);
     }
 

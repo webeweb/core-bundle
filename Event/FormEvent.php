@@ -37,6 +37,7 @@ class FormEvent extends AbstractEvent {
      */
     public function __construct(FormInterface $form, Request $request) {
         parent::__construct(get_class($this));
+
         $this->setForm($form);
         $this->setRequest($request);
     }

@@ -40,6 +40,7 @@ class GroupEvent extends AbstractEvent {
      */
     public function __construct(GroupInterface $group, Request $request) {
         parent::__construct(get_class($this));
+
         $this->setGroup($group);
         $this->setRequest($request);
     }

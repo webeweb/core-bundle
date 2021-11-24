@@ -45,7 +45,7 @@ class ContainerTwigExtension extends AbstractTwigExtension {
      * Get a container parameter.
      *
      * @param string $name The name.
-     * @return mixed|null Returns the container parameter in case of success, null otherwise.
+     * @return array|bool|string|int|float|null Returns the container parameter in case of success, null otherwise.
      */
     public function getContainerParameterFunction(string $name) {
         return $this->getContainer()->getParameter($name);
