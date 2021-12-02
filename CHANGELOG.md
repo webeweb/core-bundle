@@ -83,6 +83,16 @@ CHANGELOG
 - Update dependencies
 - Update service names
 
+### [2.32.0](https://github.com/webeweb/core-bundle/tree/v2.32.0) (2021-12-02)
+
+- Add FullCalendar asset
+- Add jQuery contextMenu asset
+- Improve code quality
+
+### [2.31.1](https://github.com/webeweb/core-bundle/tree/v2.31.1) (2021-11-09)
+
+- Fix spelling
+
 ### [2.31.0](https://github.com/webeweb/core-bundle/tree/v2.31.0) (2021-11-05)
 
 - Update macros
