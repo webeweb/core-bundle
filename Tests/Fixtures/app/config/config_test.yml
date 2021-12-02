@@ -93,6 +93,7 @@ wbw_core:
         - "syntax_highlighter"
         - "wait_me"
     locales:
+        full_calendar:  "fr"
         jquery_select2: "fr"
     themes:
         syntax_highlighter: "Default"
