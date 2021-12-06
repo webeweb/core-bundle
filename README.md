@@ -19,7 +19,9 @@ Includes:
 - [Animate.css 3.7.0](https://daneden.github.io/animate.css)
 - [Clippy JS](https://www.smore.com/clippy-js)
 - [Font Awesome 5.15.2](https://fontawesome.com)
+- [FullCalendar 5.9.0](https://fullcalendar.io/)
 - [jQuery 3.5.1](http://jquery.com)
+- [jQuery contextMenu 2.9.2](http://swisnl.github.io/jQuery-contextMenu/docs.html) (jQuery plug-in)
 - [jQuery EasyAutocomplete 1.3.5](http://www.easyautocomplete.com) (jQuery plug-in)
 - [jQuery InputMask 3.3.11](https://robinherbots.github.io/Inputmask) (jQuery plug-in)
 - [jQuery Select2 4.0.13](https://select2.org) (jQuery plug-in)
@@ -32,6 +34,7 @@ Includes:
 - [Meteocons](http://www.alessioatzeni.com/meteocons)
 - [SweetAlert 2.1.2](https://sweetalert.js.org)
 - [SyntaxHighlighter 3.0.83](http://alexgorbatchev.com/SyntaxHighlighter)
+- [typed.js 2.0.6](https://github.com/mattboldt/typed.js)
 - [waitMe 1.19](http://vadimsva.github.io/waitMe) (jQuery plug-in)
 
 If you like this package, pay me a beer (or a coffee)
