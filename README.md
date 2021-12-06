@@ -23,6 +23,7 @@ Includes:
 - [jQuery 3.5.1](http://jquery.com)
 - [jQuery contextMenu 2.9.2](http://swisnl.github.io/jQuery-contextMenu/docs.html) (jQuery plug-in)
 - [jQuery EasyAutocomplete 1.3.5](http://www.easyautocomplete.com) (jQuery plug-in)
+- [jQuery FancyBox 3.5.7](http://fancybox.net/) (jQuery plug-in)
 - [jQuery InputMask 3.3.11](https://robinherbots.github.io/Inputmask) (jQuery plug-in)
 - [jQuery Select2 4.0.13](https://select2.org) (jQuery plug-in)
 - [Leaflet 1.7.1](https://leafletjs.com)
