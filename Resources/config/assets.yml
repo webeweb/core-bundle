@@ -131,6 +131,13 @@ assets:
                     - "/jquery-easyautocomplete-{{ version }}/easy-autocomplete.themes.min.css"
                 javascripts:
                     - "/jquery-easyautocomplete-{{ version }}/jquery.easy-autocomplete.min.js"
+            jquery_fancy_box:
+                version:     "3.5.7"
+                description: "jQuery FancyBox"
+                stylesheets:
+                    - "/jquery-fancybox-{{ version }}/jquery.fancybox.min.css"
+                javascripts:
+                    - "/jquery-fancybox-{{ version }}/jquery.fancybox.min.js"
             jquery_input_mask:
                 version:     "3.3.11"
                 description: "jQuery InputMask"

@@ -73,7 +73,7 @@ class AssetsHelperTest extends AbstractTestCase {
         $plugins = $config["assets"]["wbw.core.asset.core"]["plugins"];
 
         $res = TestAssetsHelper::listAssets($this->directoryAssets);
-        $this->assertCount(20, $res);
+        $this->assertCount(21, $res);
 
         $i = -1;
 
@@ -84,6 +84,7 @@ class AssetsHelperTest extends AbstractTestCase {
         $this->assertRegExp("/jquery\-" . preg_quote($plugins["jquery"]["version"]) . "\.zip$/", $res[++$i]);
         $this->assertRegExp("/jquery\-contextmenu\-" . preg_quote($plugins["jquery_context_menu"]["version"]) . "\.zip$/", $res[++$i]);
         $this->assertRegExp("/jquery\-easyautocomplete\-" . preg_quote($plugins["jquery_easy_autocomplete"]["version"]) . "\.zip$/", $res[++$i]);
+        $this->assertRegExp("/jquery\-fancybox\-" . preg_quote($plugins["jquery_fancy_box"]["version"]) . "\.zip$/", $res[++$i]);
         $this->assertRegExp("/jquery\-inputmask\-" . preg_quote($plugins["jquery_input_mask"]["version"]) . "\.zip$/", $res[++$i]);
         $this->assertRegExp("/jquery\-select2\-" . preg_quote($plugins["jquery_select2"]["version"]) . "\.zip$/", $res[++$i]);
         $this->assertRegExp("/leaflet\-" . preg_quote($plugins["leaflet"]["version"]) . "\.zip$/", $res[++$i]);
@@ -125,7 +126,7 @@ class AssetsHelperTest extends AbstractTestCase {
     public function testUnzipAssets(): void {
 
         $res = TestAssetsHelper::unzipAssets($this->directoryAssets, $this->directoryPublic);
-        $this->assertCount(20, $res);
+        $this->assertCount(21, $res);
 
         foreach ($res as $k => $v) {
             $this->assertDirectoryExists(str_replace([$this->directoryAssets, ".zip"], [$this->directoryPublic, ""], $k));
