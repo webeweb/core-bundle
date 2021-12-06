@@ -298,6 +298,12 @@ assets:
                     - "MDUltra"
                     - "Midnight"
                     - "RDark"
+            typed_js:
+                version:     "2.0.6"
+                description: "typed.js"
+                stylesheets: []
+                javascripts:
+                    - "/typed.js-{{ version }}/typed.min.js"
             wait_me:
                 version:     "1.19"
                 description: "waitMe"
