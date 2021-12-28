@@ -19,7 +19,7 @@ Includes:
 - [Animate.css 3.7.0](https://daneden.github.io/animate.css)
 - [Clippy JS](https://www.smore.com/clippy-js)
 - [Font Awesome 5.15.2](https://fontawesome.com)
-- [FullCalendar 5.9.0](https://fullcalendar.io/)
+- [FullCalendar 5.9.0](https://fullcalendar.io)
 - [jQuery 3.5.1](http://jquery.com)
 - [jQuery contextMenu 2.9.2](http://swisnl.github.io/jQuery-contextMenu/docs.html) (jQuery plug-in)
 - [jQuery EasyAutocomplete 1.3.5](http://www.easyautocomplete.com) (jQuery plug-in)
@@ -30,6 +30,7 @@ Includes:
 - [Material Design Iconic Font 2.2.0](http://zavoloklom.github.io/material-design-iconic-font)
 - [Meteocons](http://www.alessioatzeni.com/meteocons)
 - [SweetAlert 2.1.2](https://sweetalert.js.org)
+- [SweetAlert2 11.3.1](https://sweetalert2.github.io)
 - [SyntaxHighlighter 3.0.83](http://alexgorbatchev.com/SyntaxHighlighter)
 - [waitMe 1.19](http://vadimsva.github.io/waitMe) (jQuery plug-in)
 
