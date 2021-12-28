@@ -232,6 +232,13 @@ assets:
                 stylesheets: [ ]
                 javascripts:
                     - "/sweetalert-{{ version }}/sweetalert.min.js"
+            sweet_alert2:
+                version:     "11.3.1"
+                description: "SweetAlert2"
+                stylesheets:
+                    - "/sweetalert2-{{ version }}/sweetalert2.min.css"
+                javascripts:
+                    - "/sweetalert2-{{ version }}/sweetalert2.min.js"
             syntax_highlighter:
                 version:     "3.0.83"
                 description: "SyntaxHighlighter"

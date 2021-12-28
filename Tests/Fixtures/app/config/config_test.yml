@@ -92,6 +92,7 @@ wbw_core:
         - "material_design_iconic_font"
         - "meteocons"
         - "sweet_alert"
+        - "sweet_alert2"
         - "syntax_highlighter"
         - "wait_me"
     locales:

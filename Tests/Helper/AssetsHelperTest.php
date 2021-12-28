@@ -71,7 +71,7 @@ class AssetsHelperTest extends AbstractTestCase {
         $plugins = $config["assets"]["wbw.core.asset.core"]["plugins"];
 
         $res = TestAssetsHelper::listAssets($this->directoryAssets);
-        $this->assertCount(16, $res);
+        $this->assertCount(17, $res);
 
         $i = -1;
 
@@ -89,6 +89,7 @@ class AssetsHelperTest extends AbstractTestCase {
         $this->assertRegExp("/material\-design\-iconic\-font\-" . preg_quote($plugins["material_design_iconic_font"]["version"]) . "\.zip$/", $res[++$i]);
         $this->assertRegExp("/meteocons\.zip$/", $res[++$i]);
         $this->assertRegExp("/sweetalert\-" . preg_quote($plugins["sweet_alert"]["version"]) . "\.zip$/", $res[++$i]);
+        $this->assertRegExp("/sweetalert2\-" . preg_quote($plugins["sweet_alert2"]["version"]) . "\.zip$/", $res[++$i]);
         $this->assertRegExp("/syntaxhighlighter\-" . preg_quote($plugins["syntax_highlighter"]["version"]) . "\.zip$/", $res[++$i]);
         $this->assertRegExp("/waitme\-" . preg_quote($plugins["wait_me"]["version"]) . "\.zip$/", $res[++$i]);
     }
@@ -119,7 +120,7 @@ class AssetsHelperTest extends AbstractTestCase {
     public function testUnzipAssets(): void {
 
         $res = TestAssetsHelper::unzipAssets($this->directoryAssets, $this->directoryPublic);
-        $this->assertCount(16, $res);
+        $this->assertCount(17, $res);
 
         foreach ($res as $k => $v) {
             $this->assertDirectoryExists(str_replace([$this->directoryAssets, ".zip"], [$this->directoryPublic, ""], $k));
