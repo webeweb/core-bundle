@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [2.33.0](https://github.com/webeweb/core-bundle/tree/v2.33.0) (2021-12-28)
+
+- Add SweetAlert2 asset
+
 ### [2.32.0](https://github.com/webeweb/core-bundle/tree/v2.32.0) (2021-12-02)
 
 - Add FullCalendar asset
