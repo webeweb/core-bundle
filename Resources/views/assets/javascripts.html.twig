@@ -1,4 +1,4 @@
-{# Resources/views/layout/javascripts.html.twig #}
+{# Resources/views/assets/javascripts.html.twig #}
 {% set _webPath    = "bundles/wbwcore" %}
 {% set _plugins    = getContainerParameter("wbw.core.asset.core").plugins %}
 {% set _appLocales = getContainerParameter("wbw_core.locales") %}
@@ -13,9 +13,7 @@
 
     {% for _javascript in _plugins[_appPlugin].javascripts %}
 
-        {% if ("prod" != app.environment and true == loop.first) %}
-            <!-- {{ _plugins[_appPlugin].description }} -->
-        {% endif %}
+        {% if ("prod" != app.environment and true == loop.first) %}<!-- {{ _plugins[_appPlugin].description }} -->{% endif %}
 
         {% set _path = (_webPath ~ _javascript)|replace(_replaces) %}
         <script type="text/javascript" src="{{ asset(_path) }}"></script>

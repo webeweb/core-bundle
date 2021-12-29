@@ -1,4 +1,4 @@
-{# Resources/views/layout/stylesheets.html.twig #}
+{# Resources/views/assets/stylesheets.html.twig #}
 {% set _webPath    = "bundles/wbwcore" %}
 {% set _plugins    = getContainerParameter("wbw.core.asset.core").plugins %}
 {% set _appPlugins = getContainerParameter("wbw_core.plugins") %}
@@ -13,9 +13,7 @@
 
     {% for _stylesheet in _plugins[_appPlugin].stylesheets %}
 
-        {% if ("prod" != app.environment and true == loop.first) %}
-            <!-- {{ _plugins[_appPlugin].description }} -->
-        {% endif %}
+        {% if ("prod" != app.environment and true == loop.first) %}<!-- {{ _plugins[_appPlugin].description }} -->{% endif %}
 
         {% set _path = (_webPath ~ _stylesheet)|replace(_replaces) %}
         <link type="text/css" rel="stylesheet" href="{{ asset(_path) }}">
