@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [2.34.0](https://github.com/webeweb/core-bundle/tree/v2.34.0) (2021-12-29)
+
+- Improve views organization
+
 ### [2.33.0](https://github.com/webeweb/core-bundle/tree/v2.33.0) (2021-12-28)
 
 - Add SweetAlert2 asset
