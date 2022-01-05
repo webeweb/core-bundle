@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [2.35.0](https://github.com/webeweb/core-bundle/tree/v2.35.0) (2022-01-05)
+
+- Improve views organization
+
 ### [2.34.0](https://github.com/webeweb/core-bundle/tree/v2.34.0) (2021-12-29)
 
 - Improve views organization
