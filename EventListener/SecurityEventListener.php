@@ -55,7 +55,9 @@ class SecurityEventListener {
      */
     public function onInteractiveLogin(InteractiveLoginEvent $event): InteractiveLoginEvent {
 
-        $message = $this->getTranslator()->trans("message.welcome", ["{{ username }}" => $this->getUser()->getUsername()], TranslationInterface::TRANSLATION_DOMAIN);
+        $message = $this->getTranslator()->trans("message.welcome", [
+            "{{ username }}" => $this->getUser()->getUsername(),
+        ], TranslationInterface::TRANSLATION_DOMAIN);
 
         $event->getRequest()->getSession()->getBag("flashes")->add("welcome", $message);
 

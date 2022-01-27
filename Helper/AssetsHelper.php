@@ -38,14 +38,12 @@ class AssetsHelper {
 
         $assets = [];
 
+        /** @var DirectoryIterator $current */
         foreach (new DirectoryIterator(realpath($directory)) as $current) {
 
-            // Check the filename and his extension.
-            if (true === in_array($current->getFilename(), [".", ".."]) || 0 === preg_match("/\.zip$/", $current->getFilename())) {
-                continue;
+            if (1 === preg_match("/\.zip$/", $current->getFilename())) {
+                $assets[] = $current->getPathname();
             }
-
-            $assets[] = $current->getPathname();
         }
 
         sort($assets);
