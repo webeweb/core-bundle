@@ -48,14 +48,19 @@ class StylesheetTwigExtension extends AbstractTwigExtension {
         preg_match_all($pattern, $hex[1][0], $channels);
 
         if (3 === $length) {
-            $channels[0][0] = str_repeat($channels[0][0], 2);
-            $channels[0][1] = str_repeat($channels[0][1], 2);
-            $channels[0][2] = str_repeat($channels[0][2], 2);
+            $channels[0] = [
+                str_repeat($channels[0][0], 2),
+                str_repeat($channels[0][1], 2),
+                str_repeat($channels[0][2], 2),
+            ];
         }
 
-        $template = "rgba(%r%, %g%, %b%, %a%)";
-
-        return str_replace(["%r%", "%g%", "%b%", "%a%"], [hexdec($channels[0][0]), hexdec($channels[0][1]), hexdec($channels[0][2]), number_format($alpha, 2)], $template);
+        return vsprintf("rgba(%d, %d, %d, %s)", [
+            hexdec($channels[0][0]),
+            hexdec($channels[0][1]),
+            hexdec($channels[0][2]),
+            number_format($alpha, 2),
+        ]);
     }
 
     /**
