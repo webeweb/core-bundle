@@ -88,13 +88,13 @@ class SkeletonHelperTest extends AbstractTestCase {
 
         $i = -1;
 
-        $this->assertEquals($this->directorySkeleton . "/assets/javascripts.html.twig", $res[++$i]);
-        $this->assertEquals($this->directorySkeleton . "/assets/stylesheets.html.twig", $res[++$i]);
-        $this->assertEquals($this->directorySkeleton . "/email/content.html.twig", $res[++$i]);
-        $this->assertEquals($this->directorySkeleton . "/email/footer.html.twig", $res[++$i]);
-        $this->assertEquals($this->directorySkeleton . "/email/header.html.twig", $res[++$i]);
+        $this->assertEquals($this->directorySkeleton . "/assets/_javascripts.html.twig", $res[++$i]);
+        $this->assertEquals($this->directorySkeleton . "/assets/_stylesheets.html.twig", $res[++$i]);
+        $this->assertEquals($this->directorySkeleton . "/email/_content.html.twig", $res[++$i]);
+        $this->assertEquals($this->directorySkeleton . "/email/_footer.html.twig", $res[++$i]);
+        $this->assertEquals($this->directorySkeleton . "/email/_header.html.twig", $res[++$i]);
+        $this->assertEquals($this->directorySkeleton . "/email/_stylesheet.html.twig", $res[++$i]);
         $this->assertEquals($this->directorySkeleton . "/email/layout.html.twig", $res[++$i]);
-        $this->assertEquals($this->directorySkeleton . "/email/stylesheet.html.twig", $res[++$i]);
         $this->assertEquals($this->directorySkeleton . "/layout/exception.html.twig", $res[++$i]);
         $this->assertEquals($this->directorySkeleton . "/macros.html.twig", $res[++$i]);
     }
