@@ -83,6 +83,18 @@ CHANGELOG
 - Update dependencies
 - Update service names
 
+### [2.35.0](https://github.com/webeweb/core-bundle/tree/v2.35.0) (2022-01-05)
+
+- Improve views organization
+
+### [2.34.0](https://github.com/webeweb/core-bundle/tree/v2.34.0) (2021-12-29)
+
+- Improve views organization
+
+### [2.33.0](https://github.com/webeweb/core-bundle/tree/v2.33.0) (2021-12-28)
+
+- Add SweetAlert2 asset
+
 ### [2.32.0](https://github.com/webeweb/core-bundle/tree/v2.32.0) (2021-12-02)
 
 - Add FullCalendar asset
