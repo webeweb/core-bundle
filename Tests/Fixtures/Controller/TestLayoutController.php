@@ -38,7 +38,7 @@ class TestLayoutController extends AbstractController {
      * @return Response Returns the response.
      */
     public function javascriptsAction(): Response {
-        return $this->render("@WBWCore/layout/javascripts.html.twig");
+        return $this->render("@WBWCore/assets/javascripts.html.twig");
     }
 
     /**
@@ -56,6 +56,6 @@ class TestLayoutController extends AbstractController {
      * @return Response Returns the response.
      */
     public function stylesheetsAction(): Response {
-        return $this->render("@WBWCore/layout/stylesheets.html.twig");
+        return $this->render("@WBWCore/assets/stylesheets.html.twig");
     }
 }

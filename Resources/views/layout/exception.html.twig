@@ -43,7 +43,9 @@
     </body>
 </html>
 {% macro printStackTrace(ex, isChild) %}
+
     {% set _heading = '' %}
+
     <h1>{{ true == isChild ? "Caused by: " : "" }}{{ ex.message }}:</h1>
     <p>
         <strong>at</strong> {{ ex.file }}:{{ ex.line }}<br/>
@@ -52,6 +54,7 @@
             &nbsp;&nbsp;&nbsp;<span class="caption">({{ stackTrace.file }}:{{ stackTrace.line }})</span><br/>
         {% endfor %}
     </p>
+
     {% if (null != ex.previous) %}
         {{ myself.printStackTrace(ex.previous, true) }}
     {% endif %}
