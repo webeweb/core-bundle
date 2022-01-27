@@ -34,6 +34,7 @@ Includes:
 - [Material Design Iconic Font 2.2.0](http://zavoloklom.github.io/material-design-iconic-font)
 - [Meteocons](http://www.alessioatzeni.com/meteocons)
 - [SweetAlert 2.1.2](https://sweetalert.js.org)
+- [SweetAlert2 11.3.1](https://sweetalert2.github.io)
 - [SyntaxHighlighter 3.0.83](http://alexgorbatchev.com/SyntaxHighlighter)
 - [typed.js 2.0.6](https://github.com/mattboldt/typed.js)
 - [waitMe 1.19](http://vadimsva.github.io/waitMe) (jQuery plug-in)
