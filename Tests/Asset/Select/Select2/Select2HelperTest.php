@@ -48,7 +48,7 @@ class Select2HelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the toResults() method.
+     * Tests toResults()
      *
      * @retrurn void
      */
@@ -72,7 +72,7 @@ class Select2HelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the toResults() method.
+     * Tests toResults()
      *
      * @retrurn void
      */

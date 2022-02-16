@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Color\MaterialDesignColorPalette\
 class BrownColorProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setBrownColorProvider() method.
+     * Tests setBrownColorProvider()
      *
      * @return void
      */

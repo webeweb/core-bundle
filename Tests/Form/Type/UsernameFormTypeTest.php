@@ -47,7 +47,7 @@ class UsernameFormTypeTest extends AbstractFormTypeTestCase {
     }
 
     /**
-     * Tests the getBlockPrefix() method.
+     * Tests getBlockPrefix()
      *
      * @return void
      */
@@ -59,7 +59,7 @@ class UsernameFormTypeTest extends AbstractFormTypeTestCase {
     }
 
     /**
-     * Tests the getParent() method.
+     * Tests getParent()
      *
      * @return void
      */
@@ -71,7 +71,7 @@ class UsernameFormTypeTest extends AbstractFormTypeTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

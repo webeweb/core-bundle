@@ -27,7 +27,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class ConsoleHelperTest extends AbstractTestCase {
 
     /**
-     * Tests the getCheckbox() method.
+     * Tests getCheckbox()
      *
      * @return void
      */
@@ -46,7 +46,7 @@ class ConsoleHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newSymfonyStyle() method.
+     * Tests newSymfonyStyle()
      *
      * @return void
      */

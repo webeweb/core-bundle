@@ -25,7 +25,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Asset\QuoteTwigExtension;
 class QuoteTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setQuoteTwigExtension() method.
+     * Tests setQuoteTwigExtension()
      *
      * @return void
      */

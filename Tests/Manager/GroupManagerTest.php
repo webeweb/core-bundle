@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\TestGroupManager;
 class GroupManagerTest extends AbstractTestCase {
 
     /**
-     * Tests the createGroup() method.
+     * Tests createGroup()
      *
      * @return void
      */
@@ -39,7 +39,7 @@ class GroupManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the findGroupByName() method.
+     * Tests findGroupByName()
      *
      * @rteurn void
      */

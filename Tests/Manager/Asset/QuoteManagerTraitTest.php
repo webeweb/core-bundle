@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\Asset\TestQuoteManagerTrait;
 class QuoteManagerTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setQuoteManager() method.
+     * Tests setQuoteManager()
      *
      * @return void
      */

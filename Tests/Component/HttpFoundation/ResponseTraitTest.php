@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Component\HttpFoundation\TestResponseTr
 class ResponseTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setResponse() method.
+     * Tests setResponse()
      *
      * @return void
      */

@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class RepositoryReportTest extends AbstractTestCase {
 
     /**
-     * Tests the setAvailable() method.
+     * Tests setAvailable()
      *
      * @return void
      */
@@ -36,7 +36,7 @@ class RepositoryReportTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setAverage() method.
+     * Tests setAverage()
      *
      * @return void
      */
@@ -49,7 +49,7 @@ class RepositoryReportTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setColumn() method.
+     * Tests setColumn()
      *
      * @return void
      */
@@ -62,7 +62,7 @@ class RepositoryReportTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setCount() method.
+     * Tests setCount()
      *
      * @return void
      */
@@ -75,7 +75,7 @@ class RepositoryReportTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setEntity() method.
+     * Tests setEntity()
      *
      * @return void
      */
@@ -88,7 +88,7 @@ class RepositoryReportTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setField() method.
+     * Tests setField()
      *
      * @return void
      */
@@ -101,7 +101,7 @@ class RepositoryReportTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setMaximum() method.
+     * Tests setMaximum()
      *
      * @return void
      */
@@ -114,7 +114,7 @@ class RepositoryReportTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setMinimum() method.
+     * Tests setMinimum()
      *
      * @return void
      */
@@ -127,7 +127,7 @@ class RepositoryReportTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setTable() method.
+     * Tests setTable()
      *
      * @return void
      */
@@ -140,7 +140,7 @@ class RepositoryReportTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

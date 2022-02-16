@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class UserHelperTest extends AbstractTestCase {
 
     /**
-     * Tests the hasRoles() method.
+     * Tests hasRoles()
      *
      * @return void
      */

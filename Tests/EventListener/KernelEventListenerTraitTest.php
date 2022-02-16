@@ -42,7 +42,7 @@ class EventDispatcherTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setEventDispatcher() method.
+     * Tests setEventDispatcher()
      *
      * @return void
      */

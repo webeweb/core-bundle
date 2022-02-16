@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Utility\Canonicalizer;
 class CanonicalizerTest extends AbstractTestCase {
 
     /**
-     * Tests the canonicalize() method.
+     * Tests canonicalize()
      *
      * @return void
      */
@@ -36,7 +36,7 @@ class CanonicalizerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

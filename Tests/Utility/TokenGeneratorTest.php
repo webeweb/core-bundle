@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Utility\TokenGenerator;
 class TokenGeneratorTest extends AbstractTestCase {
 
     /**
-     * Tests the generateToken() method.
+     * Tests generateToken()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -39,7 +39,7 @@ class TokenGeneratorTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

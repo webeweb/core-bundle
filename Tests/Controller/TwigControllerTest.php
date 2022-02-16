@@ -22,7 +22,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
 class TwigControllerTest extends AbstractWebTestCase {
 
     /**
-     * Tests the functionAction() method.
+     * Tests functionAction()
      *
      * @return void
      */
@@ -44,7 +44,7 @@ class TwigControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests the functionAction() method.
+     * Tests functionAction()
      *
      * @return void
      */

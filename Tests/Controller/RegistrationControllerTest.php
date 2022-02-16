@@ -26,7 +26,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
 class RegistrationControllerTest extends AbstractWebTestCase {
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

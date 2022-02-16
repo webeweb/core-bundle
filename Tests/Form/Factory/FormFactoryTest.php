@@ -50,7 +50,7 @@ class FormFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the createForm() method.
+     * Tests createForm()
      *
      * @return void
      */
@@ -66,7 +66,7 @@ class FormFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

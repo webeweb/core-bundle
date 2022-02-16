@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Helper\TestPhantomJSHelperTrait;
 class PhantomJSHelperTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setPhantomJSHelper() method.
+     * Tests setPhantomJSHelper()
      *
      * @return void
      */

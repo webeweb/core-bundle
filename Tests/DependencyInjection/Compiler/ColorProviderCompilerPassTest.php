@@ -53,7 +53,7 @@ class ColorProviderCompilerPassTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the process() method.
+     * Tests process()
      *
      * @return void
      */

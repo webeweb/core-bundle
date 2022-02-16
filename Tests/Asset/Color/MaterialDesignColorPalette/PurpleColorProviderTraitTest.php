@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Color\MaterialDesignColorPalette\
 class PurpleColorProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setPurpleColorProvider() method.
+     * Tests setPurpleColorProvider()
      *
      * @return void
      */

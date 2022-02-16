@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\Attribute\TestStringEnvironmentTr
 class StringEnvironmentTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setEnvironment() method.
+     * Tests setEnvironment()
      *
      * @return void
      */

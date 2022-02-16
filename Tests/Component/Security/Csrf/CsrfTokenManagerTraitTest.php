@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Component\Security\Csrf\TestCsrfTokenMa
 class CsrfTokenManagerTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setCsrfTokenManager() method.
+     * Tests setCsrfTokenManager()
      *
      * @return void
      */

@@ -32,7 +32,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser;
 class UserTest extends TestCase {
 
     /**
-     * Tests the eraseCredentials() method.
+     * Tests eraseCredentials()
      *
      * @return void
      */
@@ -46,7 +46,7 @@ class UserTest extends TestCase {
     }
 
     /**
-     * Tests the getRoles() method.
+     * Tests getRoles()
      *
      * @return void
      */
@@ -66,7 +66,7 @@ class UserTest extends TestCase {
     }
 
     /**
-     * Tests the isAccountNonExpired() method.
+     * Tests isAccountNonExpired()
      *
      * @return void
      */
@@ -78,7 +78,7 @@ class UserTest extends TestCase {
     }
 
     /**
-     * Tests the isAccountNonLocked() method.
+     * Tests isAccountNonLocked()
      *
      * @return void
      */
@@ -90,7 +90,7 @@ class UserTest extends TestCase {
     }
 
     /**
-     * Tests the isCredentialsNonExpired() method.
+     * Tests isCredentialsNonExpired()
      *
      * @return void
      */
@@ -102,7 +102,7 @@ class UserTest extends TestCase {
     }
 
     /**
-     * Tests the isEnabled() method.
+     * Tests isEnabled()
      *
      * @return void
      */
@@ -115,7 +115,7 @@ class UserTest extends TestCase {
     }
 
     /**
-     * Tests the isEqualTo() method.
+     * Tests isEqualTo()
      *
      * @return void
      */
@@ -137,7 +137,7 @@ class UserTest extends TestCase {
     }
 
     /**
-     * Tests the isPasswordRequestNonExpired() method.
+     * Tests isPasswordRequestNonExpired()
      *
      * @return void
      */
@@ -151,7 +151,7 @@ class UserTest extends TestCase {
     }
 
     /**
-     * Tests the isSuperAdmin() method.
+     * Tests isSuperAdmin()
      *
      * @return void
      */
@@ -164,7 +164,7 @@ class UserTest extends TestCase {
     }
 
     /**
-     * Tests the set() method.
+     * Tests set()
      *
      * @return void
      */
@@ -185,7 +185,7 @@ class UserTest extends TestCase {
     }
 
     /**
-     * Tests the setConfirmationToken() method.
+     * Tests setConfirmationToken()
      *
      * @return void
      */
@@ -198,7 +198,7 @@ class UserTest extends TestCase {
     }
 
     /**
-     * Tests the setEmailCanonical() method.
+     * Tests setEmailCanonical()
      *
      * @return void
      */
@@ -211,7 +211,7 @@ class UserTest extends TestCase {
     }
 
     /**
-     * Tests the setLastLogin() method.
+     * Tests setLastLogin()
      *
      * @return void
      */
@@ -227,7 +227,7 @@ class UserTest extends TestCase {
     }
 
     /**
-     * Tests the setPasswordRequestedAt() method.
+     * Tests setPasswordRequestedAt()
      *
      * @return void
      */
@@ -243,7 +243,7 @@ class UserTest extends TestCase {
     }
 
     /**
-     * Tests the setPlainPassword() method.
+     * Tests setPlainPassword()
      *
      * @return void
      */
@@ -256,7 +256,7 @@ class UserTest extends TestCase {
     }
 
     /**
-     * Tests the setSalt() method.
+     * Tests setSalt()
      *
      * @return void
      */
@@ -269,7 +269,7 @@ class UserTest extends TestCase {
     }
 
     /**
-     * Tests the setSuperAdmin() method.
+     * Tests setSuperAdmin()
      *
      * @return void
      */
@@ -285,7 +285,7 @@ class UserTest extends TestCase {
     }
 
     /**
-     * Tests the setUsernameCanonical() method.
+     * Tests setUsernameCanonical()
      *
      * @return void
      */
@@ -298,7 +298,7 @@ class UserTest extends TestCase {
     }
 
     /**
-     * Tests the unserialize() method.
+     * Tests unserialize()
      *
      * @return void
      */
@@ -321,7 +321,7 @@ class UserTest extends TestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */
@@ -358,7 +358,7 @@ class UserTest extends TestCase {
     }
 
     /**
-     * Tests the __toString() method.
+     * Tests __toString()
      *
      * @return void
      */

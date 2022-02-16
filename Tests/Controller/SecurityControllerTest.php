@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
 class SecurityControllerTest extends AbstractWebTestCase {
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

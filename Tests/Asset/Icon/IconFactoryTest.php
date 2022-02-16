@@ -25,7 +25,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class IconFactoryTest extends AbstractTestCase {
 
     /**
-     * Tests the newFontAwesomeIcon() method.
+     * Tests newFontAwesomeIcon()
      *
      * @return void
      */
@@ -36,7 +36,7 @@ class IconFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newMaterialDesignIconicFontIcon() method.
+     * Tests newMaterialDesignIconicFontIcon()
      *
      * @return void
      */
@@ -47,7 +47,7 @@ class IconFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseFontAwesomeIcon() method.
+     * Tests parseFontAwesomeIcon()
      *
      * @return void
      */
@@ -80,7 +80,7 @@ class IconFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseMaterialDesignIconicFontIcon() method.
+     * Tests parseMaterialDesignIconicFontIcon()
      *
      * @return void
      */

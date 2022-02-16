@@ -82,7 +82,7 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getContainer() method.
+     * Tests getContainer()
      *
      * @return void
      */
@@ -97,7 +97,7 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getEventDispatcher() method.
+     * Tests getEventDispatcher()
      *
      * @return void
      */
@@ -112,7 +112,7 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFormHelper() method.
+     * Tests getFormHelper()
      *
      * @return void
      */
@@ -127,7 +127,7 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getKernelEventListener() method.
+     * Tests getKernelEventListener()
      *
      * @return void
      */
@@ -142,7 +142,7 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getLogger() method.
+     * Tests getLogger()
      *
      * @return void
      */
@@ -157,7 +157,7 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getRepositoryHelper() method.
+     * Tests getRepositoryHelper()
      *
      * @return void
      */
@@ -172,7 +172,7 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getRouter() method.
+     * Tests getRouter()
      *
      * @return void
      */
@@ -187,7 +187,7 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getSession() method.
+     * Tests getSession()
      *
      * @return void
      */
@@ -202,7 +202,7 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getTranslator() method.
+     * Tests getTranslator()
      *
      * @return void
      */
@@ -217,7 +217,7 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the hasRoleOrRedirect() method.
+     * Tests hasRoleOrRedirect()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -239,7 +239,7 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the hasRoleOrRedirect() method.
+     * Tests hasRoleOrRedirect()
      *
      * @return void
      */
@@ -259,7 +259,7 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the notify() method.
+     * Tests notify()
      *
      * @return void
      */
@@ -287,7 +287,7 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the notify() method.
+     * Tests notify()
      *
      * @return void
      */
@@ -307,7 +307,7 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the toast() method.
+     * Tests toast()
      *
      * @return void
      */
@@ -335,7 +335,7 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the toast() method.
+     * Tests toast()
      *
      * @return void
      */
@@ -355,7 +355,7 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the translate() method.
+     * Tests translate()
      *
      * @return void
      */

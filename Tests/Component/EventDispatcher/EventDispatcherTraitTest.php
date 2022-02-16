@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Component\EventDispatcher\TestEventDisp
 class EventDispatcherTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setEventDispatcher() method.
+     * Tests setEventDispatcher()
      *
      * @return void
      */

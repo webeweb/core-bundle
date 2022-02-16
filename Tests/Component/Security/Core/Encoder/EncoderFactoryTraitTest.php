@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Component\Security\Core\Encoder\TestEnc
 class EncoderFactoryTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setEncoderFactory() method.
+     * Tests setEncoderFactory()
      *
      * @return void
      */

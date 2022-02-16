@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\Attribute\TestStringOriginUrlTrai
 class StringOriginUrlTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setOriginUrl() method.
+     * Tests setOriginUrl()
      *
      * @return void
      */

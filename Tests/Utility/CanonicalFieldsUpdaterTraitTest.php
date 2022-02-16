@@ -43,7 +43,7 @@ class CanonicalFieldsUpdaterTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setCanonicalFieldsUpdater() method.
+     * Tests setCanonicalFieldsUpdater()
      *
      * @return void
      */

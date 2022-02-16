@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Color\MaterialDesignColorPalette\
 class TealColorProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setTealColorProvider() method.
+     * Tests setTealColorProvider()
      *
      * @return void
      */

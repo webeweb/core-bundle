@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\Theme\TestNavigationThemeProvi
 class NavigationThemeProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setNavigationThemeProvider() method.
+     * Tests setNavigationThemeProvider()
      *
      * @return void
      */

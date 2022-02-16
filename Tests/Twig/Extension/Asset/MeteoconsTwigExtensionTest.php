@@ -25,7 +25,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Asset\MeteoconsTwigExtension;
 class MeteoconsTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the getFilters() method.
+     * Tests getFilters()
      *
      * @return void
      */
@@ -38,7 +38,7 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFunctions() method.
+     * Tests getFunctions()
      *
      * @return void
      */
@@ -56,7 +56,7 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the meteoconsIconFunction() method.
+     * Tests meteoconsIconFunction()
      *
      * @return void
      */
@@ -74,7 +74,7 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the meteoconsIconFunction() method.
+     * Tests meteoconsIconFunction()
      *
      * @return void
      */
@@ -91,7 +91,7 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the meteoconsIconFunction() method.
+     * Tests meteoconsIconFunction()
      *
      * @return void
      */
@@ -108,7 +108,7 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the meteoconsIconFunction() method.
+     * Tests meteoconsIconFunction()
      *
      * @return void
      */
@@ -123,7 +123,7 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderIcon() method.
+     * Tests renderIcon()
      *
      * @return void
      */
@@ -136,7 +136,7 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

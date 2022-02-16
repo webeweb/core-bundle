@@ -25,7 +25,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\EventListener\TestSecurityEventListener
 class SecurityEventListenerTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setSecurityEventListener() method.
+     * Tests setSecurityEventListener()
      *
      * @return void
      */

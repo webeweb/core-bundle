@@ -43,7 +43,7 @@ class NavigationTreeHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the activeTree() method.
+     * Tests activeTree()
      *
      * @return void
      */
@@ -76,7 +76,7 @@ class NavigationTreeHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getBreadcrumbs() method.
+     * Tests getBreadcrumbs()
      *
      * @return void
      */

@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class OSHelperTest extends AbstractTestCase {
 
     /**
-     * Tests the isLinux() method.
+     * Tests isLinux()
      *
      * @return void
      */
@@ -40,7 +40,7 @@ class OSHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the isWindows() method.
+     * Tests isWindows()
      *
      * @return void
      */

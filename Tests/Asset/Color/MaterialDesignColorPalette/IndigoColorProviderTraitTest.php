@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Color\MaterialDesignColorPalette\
 class IndigoColorProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setIndigoColorProvider() method.
+     * Tests setIndigoColorProvider()
      *
      * @return void
      */

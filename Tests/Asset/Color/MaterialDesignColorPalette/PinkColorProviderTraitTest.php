@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Color\MaterialDesignColorPalette\
 class PinkColorProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setPinkColorProvider() method.
+     * Tests setPinkColorProvider()
      *
      * @return void
      */

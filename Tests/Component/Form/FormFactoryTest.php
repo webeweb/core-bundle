@@ -79,7 +79,7 @@ class FormFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getChoiceLabelClosure() method.
+     * Tests getChoiceLabelClosure()
      *
      * @return void
      */
@@ -101,7 +101,7 @@ class FormFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getChoiceValueClosure() method.
+     * Tests getChoiceValueClosure()
      *
      * @return void
      */
@@ -115,7 +115,7 @@ class FormFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newChoiceType() method.
+     * Tests newChoiceType()
      *
      * @return void
      */
@@ -136,7 +136,7 @@ class FormFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newChoiceType() method.
+     * Tests newChoiceType()
      *
      * @return void
      */

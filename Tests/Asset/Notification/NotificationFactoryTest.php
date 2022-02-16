@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class NotificationFactoryTest extends AbstractTestCase {
 
     /**
-     * Tests the newDangerNotification() method.
+     * Tests newDangerNotification()
      *
      * @return void
      */
@@ -38,7 +38,7 @@ class NotificationFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newDefaultNotification() method.
+     * Tests newDefaultNotification()
      *
      * @return void
      */
@@ -52,7 +52,7 @@ class NotificationFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newInfoNotification() method.
+     * Tests newInfoNotification()
      *
      * @return void
      */
@@ -66,7 +66,7 @@ class NotificationFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newSuccessNotification() method.
+     * Tests newSuccessNotification()
      *
      * @return void
      */
@@ -80,7 +80,7 @@ class NotificationFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newWarningNotification() method.
+     * Tests newWarningNotification()
      *
      * @return void
      */

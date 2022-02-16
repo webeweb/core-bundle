@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class FontAwesomeIconEnumeratorTest extends AbstractTestCase {
 
     /**
-     * Tests the enumAnimations() method.
+     * Tests enumAnimations()
      *
      * @return void
      */
@@ -38,7 +38,7 @@ class FontAwesomeIconEnumeratorTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the enumFonts() method.
+     * Tests enumFonts()
      *
      * @return void
      */
@@ -55,7 +55,7 @@ class FontAwesomeIconEnumeratorTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the enumPulls() method.
+     * Tests enumPulls()
      *
      * @return void
      */

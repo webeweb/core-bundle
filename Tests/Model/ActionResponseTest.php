@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class ActionResponseTest extends AbstractTestCase {
 
     /**
-     * Tests the setNotify() method.
+     * Tests setNotify()
      *
      * @return void
      */
@@ -36,7 +36,7 @@ class ActionResponseTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setStatus() method.
+     * Tests setStatus()
      *
      * @return void
      */
@@ -49,7 +49,7 @@ class ActionResponseTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the jsonSerialize() method.
+     * Tests jsonSerialize()
      *
      * @return void
      */
@@ -62,7 +62,7 @@ class ActionResponseTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

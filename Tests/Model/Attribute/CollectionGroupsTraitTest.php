@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestGroup;
 class CollectionGroupsTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the addGroup() method.
+     * Tests addGroup()
      *
      * @return void
      */
@@ -40,7 +40,7 @@ class CollectionGroupsTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the hasGroup() method.
+     * Tests hasGroup()
      *
      * @return void
      */
@@ -57,7 +57,7 @@ class CollectionGroupsTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the removeGroup() method.
+     * Tests removeGroup()
      *
      * @return void
      */

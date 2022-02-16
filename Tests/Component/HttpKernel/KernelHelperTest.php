@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class KernelHelperTest extends AbstractTestCase {
 
     /**
-     * Tests the getProjectDir() method.
+     * Tests getProjectDir()
      *
      * @return void
      */

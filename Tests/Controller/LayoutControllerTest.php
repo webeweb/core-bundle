@@ -32,7 +32,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests the emailAction() method..
+     * Tests emailAction()
      *
      * @return void
      */
@@ -46,7 +46,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests the javascriptsAction() method..
+     * Tests javascriptsAction()
      *
      * @return void
      */
@@ -60,7 +60,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests the kernelExceptionAction() method.
+     * Tests kernelExceptionAction()
      *
      * @return void
      */
@@ -74,7 +74,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests the stylesheetsAction() method.
+     * Tests stylesheetsAction()
      *
      * @return void
      */

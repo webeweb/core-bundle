@@ -27,7 +27,7 @@ use WBW\Bundle\CoreBundle\Utility\PasswordUpdater;
 class PasswordUpdaterTest extends AbstractTestCase {
 
     /**
-     * Tests the hashPassword() method.
+     * Tests hashPassword()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -54,7 +54,7 @@ class PasswordUpdaterTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the hashPassword() method.
+     * Tests hashPassword()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -81,7 +81,7 @@ class PasswordUpdaterTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the hashPassword() method.
+     * Tests hashPassword()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -100,7 +100,7 @@ class PasswordUpdaterTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\Asset\TestThemeManagerTrait;
 class ThemeManagerTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setThemeManager() method.
+     * Tests setThemeManager()
      *
      * @return void
      */

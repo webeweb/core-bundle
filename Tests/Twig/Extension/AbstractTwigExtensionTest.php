@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Twig\Extension\TestTwigExtension;
 class AbstractTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the coreHtmlElement() method.
+     * Tests coreHtmlElement()
      *
      * @return void
      */
@@ -38,7 +38,7 @@ class AbstractTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFilters() method.
+     * Tests getFilters()
      *
      * @return void
      */
@@ -51,7 +51,7 @@ class AbstractTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

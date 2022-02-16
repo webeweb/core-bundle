@@ -27,7 +27,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class RedColorProviderTest extends AbstractTestCase {
 
     /**
-     * Tests the getColors() method.
+     * Tests getColors()
      *
      * @return void
      */
@@ -67,7 +67,7 @@ class RedColorProviderTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getName() method.
+     * Tests getName()
      *
      * @return void
      */
@@ -79,7 +79,7 @@ class RedColorProviderTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

@@ -43,7 +43,7 @@ class CanonicalFieldsUpdaterTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the canonicalizeEmail() method.
+     * Tests canonicalizeEmail()
      *
      * @return void
      */
@@ -55,7 +55,7 @@ class CanonicalFieldsUpdaterTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the canonicalizeUsername() method.
+     * Tests canonicalizeUsername()
      *
      * @return void
      */
@@ -67,7 +67,7 @@ class CanonicalFieldsUpdaterTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the updateCanonicalFields() method.
+     * Tests updateCanonicalFields()
      *
      * @return void
      */
@@ -86,7 +86,7 @@ class CanonicalFieldsUpdaterTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension;
 class RendererTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setRendererTwigExtension() method.
+     * Tests setRendererTwigExtension()
      *
      * @return void
      */

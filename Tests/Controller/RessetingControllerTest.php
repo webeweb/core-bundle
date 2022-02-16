@@ -26,7 +26,7 @@ use WBW\Bundle\CoreBundle\Utility\TokenGeneratorInterface;
 class ResettingControllerTest extends AbstractWebTestCase {
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

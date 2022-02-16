@@ -30,7 +30,7 @@ use WBW\Bundle\CoreBundle\Translation\TranslatorInterface;
 class ProfileFormTypeTest extends AbstractFormTypeTestCase {
 
     /**
-     * Tests the buildForm() method.
+     * Tests buildForm()
      *
      * @return void
      */
@@ -62,7 +62,7 @@ class ProfileFormTypeTest extends AbstractFormTypeTestCase {
     }
 
     /**
-     * Tests the configureOptions() method.
+     * Tests configureOptions()
      *
      * @return void
      */
@@ -81,7 +81,7 @@ class ProfileFormTypeTest extends AbstractFormTypeTestCase {
     }
 
     /**
-     * Tests the getBlockPrefix() method.
+     * Tests getBlockPrefix()
      *
      * @return void
      */
@@ -93,7 +93,7 @@ class ProfileFormTypeTest extends AbstractFormTypeTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

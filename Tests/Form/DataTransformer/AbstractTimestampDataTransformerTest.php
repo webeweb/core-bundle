@@ -26,7 +26,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Form\DataTransformer\TestTimestampDataT
 class AbstractTimestampDataTransformerTest extends AbstractTestCase {
 
     /**
-     * Tests the reverseTransform() method.
+     * Tests reverseTransform()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -47,7 +47,7 @@ class AbstractTimestampDataTransformerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the transform() method.
+     * Tests transform()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.

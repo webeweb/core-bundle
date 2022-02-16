@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class ConfigurationHelperTest extends AbstractTestCase {
 
     /**
-     * Tests the loadYamlConfig() method.
+     * Tests loadYamlConfig()
      *
      * @return void
      */
@@ -36,7 +36,7 @@ class ConfigurationHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the loadYamlConfig() method.
+     * Tests loadYamlConfig()
      *
      * @return void
      */

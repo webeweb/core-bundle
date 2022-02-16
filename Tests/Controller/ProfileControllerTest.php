@@ -25,7 +25,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
 class ProfileControllerTest extends AbstractWebTestCase {
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

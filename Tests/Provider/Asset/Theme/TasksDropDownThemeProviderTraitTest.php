@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\Theme\TestTasksDropDownThemePr
 class TasksDropDownThemeProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setTasksDropDownThemeProvider() method.
+     * Tests setTasksDropDownThemeProvider()
      *
      * @return void
      */

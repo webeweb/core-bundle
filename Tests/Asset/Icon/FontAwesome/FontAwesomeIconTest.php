@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class FontAwesomeIconTest extends AbstractTestCase {
 
     /**
-     * Tests the setAnimation() method.
+     * Tests setAnimation()
      *
      * @return void
      */
@@ -36,7 +36,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setAnimation() method.
+     * Tests setAnimation()
      *
      * @return void
      */
@@ -49,7 +49,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setBordered() method.
+     * Tests setBordered()
      *
      * @return void
      */
@@ -62,7 +62,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setFixedWidth() method.
+     * Tests setFixedWidth()
      *
      * @return void
      */
@@ -75,7 +75,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setFont() method.
+     * Tests setFont()
      *
      * @return void
      */
@@ -88,7 +88,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setFont() method.
+     * Tests setFont()
      *
      * @return void
      */
@@ -101,7 +101,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setPull() method.
+     * Tests setPull()
      *
      * @return void
      */
@@ -114,7 +114,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setPull() method.
+     * Tests setPull()
      *
      * @return void
      */
@@ -127,7 +127,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setSize() method.
+     * Tests setSize()
      *
      * @return void
      */
@@ -140,7 +140,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setSize() method.
+     * Tests setSize()
      *
      * @return void
      */
@@ -153,7 +153,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

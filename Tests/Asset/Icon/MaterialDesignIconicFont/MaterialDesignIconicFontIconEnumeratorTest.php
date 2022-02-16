@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class MaterialDesignIconicFontIconEnumeratorTest extends AbstractTestCase {
 
     /**
-     * Tests the enumBorders() method.
+     * Tests enumBorders()
      *
      * @return void.
      */
@@ -38,7 +38,7 @@ class MaterialDesignIconicFontIconEnumeratorTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the enumFlips() method.
+     * Tests enumFlips()
      *
      * @return void
      */
@@ -52,7 +52,7 @@ class MaterialDesignIconicFontIconEnumeratorTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the enumPulls() method.
+     * Tests enumPulls()
      *
      * @return void
      */
@@ -66,7 +66,7 @@ class MaterialDesignIconicFontIconEnumeratorTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the enumRotates() method.
+     * Tests enumRotates()
      *
      * @return void
      */
@@ -81,7 +81,7 @@ class MaterialDesignIconicFontIconEnumeratorTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the enumSizes() method.
+     * Tests enumSizes()
      *
      * @return void
      */
@@ -98,7 +98,7 @@ class MaterialDesignIconicFontIconEnumeratorTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the enumSpins() method.
+     * Tests enumSpins()
      *
      * @return void
      */

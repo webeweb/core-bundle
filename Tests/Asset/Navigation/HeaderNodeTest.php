@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Navigation\TestNavigationNode;
 class HeaderNodeTest extends AbstractTestCase {
 
     /**
-     * Tests the addNode() method.
+     * Tests addNode()
      *
      * @return void
      */
@@ -43,7 +43,7 @@ class HeaderNodeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

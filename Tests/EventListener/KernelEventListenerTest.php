@@ -51,7 +51,7 @@ class KernelEventListenerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getUser() method.
+     * Tests getUser()
      *
      * @return void
      */
@@ -67,7 +67,7 @@ class KernelEventListenerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the onKernelException() method.
+     * Tests onKernelException()
      *
      * @return void
      */
@@ -80,7 +80,7 @@ class KernelEventListenerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the onKernelException() method.
+     * Tests onKernelException()
      *
      * @return void
      */
@@ -101,7 +101,7 @@ class KernelEventListenerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the onKernelException() method.
+     * Tests onKernelException()
      *
      * @return void
      */
@@ -119,7 +119,7 @@ class KernelEventListenerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the onKernelRequest() method.
+     * Tests onKernelRequest()
      *
      * @return void
      */
@@ -132,7 +132,7 @@ class KernelEventListenerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

@@ -46,7 +46,7 @@ class InitializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the initialize() method.
+     * Tests initialize()
      *
      * @return void
      */
@@ -59,7 +59,7 @@ class InitializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

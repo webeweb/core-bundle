@@ -44,7 +44,7 @@ class UsernameDataTransformerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the reverseTransform() method.
+     * Tests reverseTransform()
      *
      * @return void
      */
@@ -64,7 +64,7 @@ class UsernameDataTransformerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the reverseTransform() method.
+     * Tests reverseTransform()
      *
      * @return void
      */
@@ -83,7 +83,7 @@ class UsernameDataTransformerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the transform() method.
+     * Tests transform()
      *
      * @return void
      */
@@ -100,7 +100,7 @@ class UsernameDataTransformerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the transform() method.
+     * Tests transform()
      *
      * @return void
      */
@@ -119,7 +119,7 @@ class UsernameDataTransformerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

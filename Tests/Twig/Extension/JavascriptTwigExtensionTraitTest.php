@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\JavascriptTwigExtension;
 class JavascriptTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setJavascriptTwigExtension() method.
+     * Tests setJavascriptTwigExtension()
      *
      * @return void
      */

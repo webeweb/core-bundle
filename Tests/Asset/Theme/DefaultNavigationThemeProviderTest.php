@@ -25,7 +25,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Theme\TestDefaultNavigationThemeP
 class DefaultNavigationThemeProviderTest extends AbstractTestCase {
 
     /**
-     * Tests the translate() method.
+     * Tests translate()
      *
      * @return void
      */
@@ -40,7 +40,7 @@ class DefaultNavigationThemeProviderTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

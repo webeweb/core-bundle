@@ -54,7 +54,7 @@ class UserManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the createUser() method.
+     * Tests createUser()
      *
      * @return void
      */
@@ -66,7 +66,7 @@ class UserManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the findUserByConfirmationToken() method.
+     * Tests findUserByConfirmationToken()
      *
      * @return void
      */
@@ -78,7 +78,7 @@ class UserManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the findUserByEmail() method.
+     * Tests findUserByEmail()
      *
      * @return void
      */
@@ -90,7 +90,7 @@ class UserManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the findUserByUsername() method.
+     * Tests findUserByUsername()
      *
      * @return void
      */
@@ -102,7 +102,7 @@ class UserManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the findUserByUsernameOrEmail() method.
+     * Tests findUserByUsernameOrEmail()
      *
      * @return void
      */
@@ -115,7 +115,7 @@ class UserManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the updateCanonicalFields() method.
+     * Tests updateCanonicalFields()
      *
      * @return void
      */
@@ -130,7 +130,7 @@ class UserManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the updatePassword() method.
+     * Tests updatePassword()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -146,7 +146,7 @@ class UserManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

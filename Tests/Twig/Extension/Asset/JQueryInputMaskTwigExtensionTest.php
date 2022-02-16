@@ -43,7 +43,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFilters() method.
+     * Tests getFilters()
      *
      * @return void
      */
@@ -56,7 +56,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFunctions() method.
+     * Tests getFunctions()
      *
      * @return void
      */
@@ -104,7 +104,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the jQueryInputMaskFunction() method.
+     * Tests jQueryInputMaskFunction()
      *
      * @return void
      */
@@ -126,7 +126,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the jQueryInputMaskFunction() method.
+     * Tests jQueryInputMaskFunction()
      *
      * @return void
      */
@@ -143,7 +143,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the jQueryInputMaskPhoneNumberFunction() method.
+     * Tests jQueryInputMaskPhoneNumberFunction()
      *
      * @return void
      */
@@ -160,7 +160,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the jQueryInputMaskSIRETNumberFunction() method.
+     * Tests jQueryInputMaskSIRETNumberFunction()
      *
      * @return void
      */
@@ -177,7 +177,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the jQueryInputMaskSocialSecurityNumberFunction() method.
+     * Tests jQueryInputMaskSocialSecurityNumberFunction()
      *
      * @return void
      */
@@ -194,7 +194,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the jQueryInputMaskTime12Function() method.
+     * Tests jQueryInputMaskTime12Function()
      *
      * @return void
      */
@@ -211,7 +211,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the jQueryInputMaskTime24Function() method.
+     * Tests jQueryInputMaskTime24Function()
      *
      * @return void
      */
@@ -228,7 +228,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the jQueryInputMaskVATNumberFunction() method.
+     * Tests jQueryInputMaskVATNumberFunction()
      *
      * @return void
      */
@@ -245,7 +245,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

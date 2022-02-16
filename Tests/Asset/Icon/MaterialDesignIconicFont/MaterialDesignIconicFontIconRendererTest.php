@@ -52,7 +52,7 @@ class MaterialDesignIconicFontIconRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderBorder() method.
+     * Tests renderBorder()
      *
      * @return void
      */
@@ -63,7 +63,7 @@ class MaterialDesignIconicFontIconRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderFixedWidth() method.
+     * Tests renderFixedWidth()
      *
      * @return void
      */
@@ -74,7 +74,7 @@ class MaterialDesignIconicFontIconRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderFlip() method.
+     * Tests renderFlip()
      *
      * @return void
      */
@@ -85,7 +85,7 @@ class MaterialDesignIconicFontIconRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderName() method.
+     * Tests renderName()
      *
      * @return void
      */
@@ -96,7 +96,7 @@ class MaterialDesignIconicFontIconRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderPull() method.
+     * Tests renderPull()
      *
      * @return void
      */
@@ -107,7 +107,7 @@ class MaterialDesignIconicFontIconRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderRotate() method.
+     * Tests renderRotate()
      *
      * @return void
      */
@@ -118,7 +118,7 @@ class MaterialDesignIconicFontIconRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderSize() method.
+     * Tests renderSize()
      *
      * @return void
      */
@@ -129,7 +129,7 @@ class MaterialDesignIconicFontIconRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderSpin() method.
+     * Tests renderSpin()
      *
      * @return void
      */

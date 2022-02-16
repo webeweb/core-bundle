@@ -26,7 +26,7 @@ use WBW\Bundle\CoreBundle\Translation\TranslatorInterface;
 class GroupFormTypeTest extends AbstractFormTypeTestCase {
 
     /**
-     * Tests the buildForm() method.
+     * Tests buildForm()
      *
      * @return void
      */
@@ -44,7 +44,7 @@ class GroupFormTypeTest extends AbstractFormTypeTestCase {
     }
 
     /**
-     * Tests the configureOptions() method.
+     * Tests configureOptions()
      *
      * @return void
      */
@@ -63,7 +63,7 @@ class GroupFormTypeTest extends AbstractFormTypeTestCase {
     }
 
     /**
-     * Tests the getBlockPrefix() method.
+     * Tests getBlockPrefix()
      *
      * @return void
      */
@@ -75,7 +75,7 @@ class GroupFormTypeTest extends AbstractFormTypeTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

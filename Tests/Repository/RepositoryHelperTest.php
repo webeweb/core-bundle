@@ -27,7 +27,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\FOSUser;
 class RepositoryHelperTest extends AbstractWebTestCase {
 
     /**
-     * Tests the readRepositories() method.
+     * Tests readRepositories()
      *
      * @throws Exception Throws an exception if an error occurs.
      */
@@ -118,7 +118,7 @@ class RepositoryHelperTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

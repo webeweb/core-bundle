@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Utility\TokenGeneratorInterface;
 class TokenGeneratorTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setTokenGenerator() method.
+     * Tests setTokenGenerator()
      *
      * @return void
      */

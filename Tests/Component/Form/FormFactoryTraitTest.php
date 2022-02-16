@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Component\Form\TestFormFactoryTrait;
 class FormFactoryTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setFormFactory() method.
+     * Tests setFormFactory()
      *
      * @return void
      */

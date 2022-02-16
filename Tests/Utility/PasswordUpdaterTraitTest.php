@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Utility\PasswordUpdaterInterface;
 class PasswordUpdaterTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setPasswordUpdater() method.
+     * Tests setPasswordUpdater()
      *
      * @return void
      */

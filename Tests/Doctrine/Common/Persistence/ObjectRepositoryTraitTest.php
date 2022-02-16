@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Doctrine\Common\Persistence\TestObjectR
 class ObjectRepositoryTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setObjectRepository() method.
+     * Tests setObjectRepository()
      *
      * @return void
      */

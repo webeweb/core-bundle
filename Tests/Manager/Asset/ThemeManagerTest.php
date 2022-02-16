@@ -33,7 +33,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class ThemeManagerTest extends AbstractTestCase {
 
     /**
-     * Tests the addGlobal() method.
+     * Tests addGlobal()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -87,7 +87,7 @@ class ThemeManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the hasProviders() method.
+     * Tests hasProviders()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -103,7 +103,7 @@ class ThemeManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setApplicationThemeProvider() method.
+     * Tests setApplicationThemeProvider()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -123,7 +123,7 @@ class ThemeManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setBreadcrumbsThemeProvider() method.
+     * Tests setBreadcrumbsThemeProvider()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -140,7 +140,7 @@ class ThemeManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setFooterThemeProvider() method.
+     * Tests setFooterThemeProvider()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -157,7 +157,7 @@ class ThemeManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setHookDropDownThemeProvider() method.
+     * Tests setHookDropDownThemeProvider()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -174,7 +174,7 @@ class ThemeManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setNavigationThemeProvider() method.
+     * Tests setNavigationThemeProvider()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -191,7 +191,7 @@ class ThemeManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setNotificationsDropDownThemeProvider() method.
+     * Tests setNotificationsDropDownThemeProvider()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -208,7 +208,7 @@ class ThemeManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setSearchThemeProvider() method.
+     * Tests setSearchThemeProvider()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -225,7 +225,7 @@ class ThemeManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setTasksDropDownThemeProvider() method.
+     * Tests setTasksDropDownThemeProvider()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -242,7 +242,7 @@ class ThemeManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setUserInfoThemeProvider() method.
+     * Tests setUserInfoThemeProvider()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -259,7 +259,7 @@ class ThemeManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.

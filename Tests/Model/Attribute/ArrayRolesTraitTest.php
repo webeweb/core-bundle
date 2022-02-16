@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\Attribute\TestArrayRolesTrait;
 class ArrayRolesTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the addRole() method.
+     * Tests addRole()
      *
      * @return void
      */
@@ -36,7 +36,7 @@ class ArrayRolesTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the hasRole() method.
+     * Tests hasRole()
      *
      * @return void
      */
@@ -51,7 +51,7 @@ class ArrayRolesTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the removeRole() method.
+     * Tests removeRole()
      *
      * @return void
      */
@@ -65,7 +65,7 @@ class ArrayRolesTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setRoles() method.
+     * Tests setRoles()
      *
      * @return void
      */

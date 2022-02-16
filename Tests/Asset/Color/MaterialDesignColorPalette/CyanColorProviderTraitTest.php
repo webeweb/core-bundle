@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Color\MaterialDesignColorPalette\
 class CyanColorProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setCyanColorProvider() method.
+     * Tests setCyanColorProvider()
      *
      * @return void
      */

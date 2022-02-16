@@ -25,7 +25,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
 class GroupControllerTest extends AbstractWebTestCase {
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

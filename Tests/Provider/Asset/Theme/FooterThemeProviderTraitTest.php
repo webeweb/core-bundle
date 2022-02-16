@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\Theme\TestFooterThemeProviderT
 class FooterThemeProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setFooterThemeProvider() method.
+     * Tests setFooterThemeProvider()
      *
      * @return void
      */

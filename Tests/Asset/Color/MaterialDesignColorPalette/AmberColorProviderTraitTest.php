@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Color\MaterialDesignColorPalette\
 class AmberColorProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setAmberColorProvider() method.
+     * Tests setAmberColorProvider()
      *
      * @return void
      */

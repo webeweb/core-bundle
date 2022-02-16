@@ -25,7 +25,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class FOSUserBreadcrumbNodesTest extends AbstractTestCase {
 
     /**
-     * Tests the getFontAwesomeBreadcrumbNodes() method.
+     * Tests getFontAwesomeBreadcrumbNodes()
      *
      * @return void
      */
@@ -54,7 +54,7 @@ class FOSUserBreadcrumbNodesTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getMaterialDesignIconicFontBreadcrumbNodes() method.
+     * Tests getMaterialDesignIconicFontBreadcrumbNodes()
      *
      * @return void
      */

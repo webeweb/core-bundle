@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\Theme\TestNotificationsDropDow
 class NotificationsDropDownThemeProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setNotificationsDropDownThemeProvider() method.
+     * Tests setNotificationsDropDownThemeProvider()
      *
      * @return void
      */

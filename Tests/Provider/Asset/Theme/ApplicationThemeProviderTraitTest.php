@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\Theme\TestApplicationThemeProv
 class ApplicationThemeProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setApplicationThemeProvider() method.
+     * Tests setApplicationThemeProvider()
      *
      * @return void
      */

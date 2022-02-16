@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Doctrine\Common\Persistence\TestObjectM
 class ObjectManagerTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setObjectManager() method.
+     * Tests setObjectManager()
      *
      * @return void
      */

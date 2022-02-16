@@ -25,7 +25,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class GroupEventTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

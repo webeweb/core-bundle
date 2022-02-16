@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\TestGroupManagerTrait;
 class GroupManagerTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setGroupManager() method.
+     * Tests setGroupManager()
      *
      * @return void
      */

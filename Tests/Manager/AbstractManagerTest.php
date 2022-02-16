@@ -41,7 +41,7 @@ class AbstractManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the addProvider() method.
+     * Tests addProvider()
      *
      * @return void
      */
@@ -55,7 +55,7 @@ class AbstractManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the contains() method.
+     * Tests contains()
      *
      * @return void
      */
@@ -70,7 +70,7 @@ class AbstractManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the hasProviders() method.
+     * Tests hasProviders()
      *
      * @return void
      */
@@ -85,7 +85,7 @@ class AbstractManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the indexOf() method.
+     * Tests indexOf()
      *
      * @return void
      */
@@ -104,7 +104,7 @@ class AbstractManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

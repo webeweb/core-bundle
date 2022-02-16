@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\TestUserManagerTrait;
 class UserManagerTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setUserManager() method.
+     * Tests setUserManager()
      *
      * @return void
      */
