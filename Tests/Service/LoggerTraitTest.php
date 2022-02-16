@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Service\TestLoggerTrait;
 class LoggerTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setLogger() method.
+     * Tests setLogger()
      *
      * @return void
      */

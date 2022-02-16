@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\TestColorManagerTrait;
 class ColorManagerTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setColorManager() method.
+     * Tests setColorManager()
      *
      * @return void
      */

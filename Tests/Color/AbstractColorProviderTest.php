@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\TestColorProvider;
 class AbstractColorProviderTest extends AbstractTestCase {
 
     /**
-     * Tests the jsonSerialize() method.
+     * Tests jsonSerialize()
      *
      * @return void
      */
@@ -41,7 +41,7 @@ class AbstractColorProviderTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setDomain() method.
+     * Tests setDomain()
      *
      * @return void
      */
@@ -54,7 +54,7 @@ class AbstractColorProviderTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

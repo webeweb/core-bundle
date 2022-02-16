@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette\TestDe
 class DeepOrangeColorProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setDeepOrangeColorProvider() method.
+     * Tests setDeepOrangeColorProvider()
      *
      * @return void
      */

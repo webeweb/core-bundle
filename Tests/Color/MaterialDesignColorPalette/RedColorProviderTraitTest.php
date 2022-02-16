@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette\TestRe
 class RedColorProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setRedColorProvider() method.
+     * Tests setRedColorProvider()
      *
      * @return void
      */

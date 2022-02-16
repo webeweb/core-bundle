@@ -59,7 +59,7 @@ class AssetsHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the listAssets() method.
+     * Tests listAssets()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -95,7 +95,7 @@ class AssetsHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the listAssets() method.
+     * Tests listAssets()
      *
      * @return void
      */
@@ -112,7 +112,7 @@ class AssetsHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the unzipAssets() method.
+     * Tests unzipAssets()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -129,7 +129,7 @@ class AssetsHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the unzipAssets() method.
+     * Tests unzipAssets()
      *
      * @return void
      */

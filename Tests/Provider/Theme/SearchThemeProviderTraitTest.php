@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\Theme\TestSearchThemeProviderT
 class SearchThemeProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setSearchThemeProvider() method.
+     * Tests setSearchThemeProvider()
      *
      * @return void
      */

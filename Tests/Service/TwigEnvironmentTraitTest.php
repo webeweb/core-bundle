@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Service\TestTwigEnvironmentTrait;
 class TwigEnvironmentTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setTwigEnvironment() method.
+     * Tests setTwigEnvironment()
      *
      * @return void
      */
@@ -36,7 +36,7 @@ class TwigEnvironmentTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

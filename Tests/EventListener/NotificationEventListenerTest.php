@@ -38,7 +38,7 @@ class NotificationEventListenerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the onNotify() method.
+     * Tests onNotify()
      *
      * @return void
      */
@@ -56,7 +56,7 @@ class NotificationEventListenerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

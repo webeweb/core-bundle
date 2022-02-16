@@ -42,7 +42,7 @@ class IconRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderStyle() method.
+     * Tests renderStyle()
      *
      * @return void.
      */

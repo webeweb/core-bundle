@@ -26,7 +26,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\StylesheetTwigExtension;
 class StylesheetTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the cssRgba() method.
+     * Tests cssRgba()
      *
      * @return void
      */
@@ -58,7 +58,7 @@ class StylesheetTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFilters() method.
+     * Tests getFilters()
      *
      * @return void
      */
@@ -76,7 +76,7 @@ class StylesheetTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFunctions() method.
+     * Tests getFunctions()
      *
      * @return void
      */
@@ -94,7 +94,7 @@ class StylesheetTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

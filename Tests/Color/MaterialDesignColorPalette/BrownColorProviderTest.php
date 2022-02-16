@@ -27,7 +27,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class BrownColorProviderTest extends AbstractTestCase {
 
     /**
-     * Tests the getColors() method.
+     * Tests getColors()
      *
      * @return void
      */
@@ -59,7 +59,7 @@ class BrownColorProviderTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getName() method.
+     * Tests getName()
      *
      * @return void
      */
@@ -71,7 +71,7 @@ class BrownColorProviderTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

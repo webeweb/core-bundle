@@ -26,7 +26,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\JavascriptTwigExtension;
 class JavascriptTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the getFilters() method.
+     * Tests getFilters()
      *
      * @return void
      */
@@ -44,7 +44,7 @@ class JavascriptTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFunctions() method.
+     * Tests getFunctions()
      *
      * @return void
      */
@@ -62,7 +62,7 @@ class JavascriptTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the jsGtag() method.
+     * Tests jsGtag()
      *
      * @returns void
      */
@@ -92,7 +92,7 @@ EOTXT;
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

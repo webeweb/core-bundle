@@ -28,7 +28,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\UtilityTwigExtension;
 class UtilityTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the calcAge() method.
+     * Tests calcAge()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -43,7 +43,7 @@ class UtilityTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the formatDate() method.
+     * Tests formatDate()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -58,7 +58,7 @@ class UtilityTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the formatString() method.
+     * Tests formatString()
      *
      * @return void
      */
@@ -74,7 +74,7 @@ class UtilityTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFilters() method.
+     * Tests getFilters()
      *
      * @return void
      */
@@ -127,7 +127,7 @@ class UtilityTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFunctions() method.
+     * Tests getFunctions()
      *
      * @return void
      */
@@ -185,7 +185,7 @@ class UtilityTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the htmlEntityDecode() method.
+     * Tests htmlEntityDecode()
      *
      * @return void
      */
@@ -198,7 +198,7 @@ class UtilityTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the htmlEntityEncode() method.
+     * Tests htmlEntityEncode()
      *
      * @return void
      */
@@ -211,7 +211,7 @@ class UtilityTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the md5() method.
+     * Tests md5()
      *
      * @return void
      */
@@ -224,7 +224,7 @@ class UtilityTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the staticMethodFunction() method.
+     * Tests staticMethodFunction()
      *
      * @return void
      */
@@ -240,7 +240,7 @@ class UtilityTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

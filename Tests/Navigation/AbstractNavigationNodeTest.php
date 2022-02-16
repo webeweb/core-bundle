@@ -25,7 +25,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Navigation\TestNavigationNode;
 class AbstractNavigationNodeTest extends AbstractTestCase {
 
     /**
-     * Tests the addNode() method.
+     * Tests addNode()
      *
      * @return void
      */
@@ -44,7 +44,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the clearNode() method.
+     * Tests clearNode()
      *
      * @return void
      */
@@ -63,7 +63,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFirstNode() method.
+     * Tests getFirstNode()
      *
      * @return void
      */
@@ -79,7 +79,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getLastNode() method.
+     * Tests getLastNode()
      *
      * @return void
      */
@@ -95,7 +95,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getNodeAt() method.
+     * Tests getNodeAt()
      *
      * @return void
      */
@@ -113,7 +113,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getNodeById() method.
+     * Tests getNodeById()
      *
      * @return void
      */
@@ -138,7 +138,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the isDisplayable() method.
+     * Tests isDisplayable()
      *
      * @return void
      */
@@ -156,7 +156,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the removeNode() method.
+     * Tests removeNode()
      *
      * @return void
      */
@@ -177,7 +177,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setActive() method.
+     * Tests setActive()
      *
      * @return void
      */
@@ -190,7 +190,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setEnable() method.
+     * Tests setEnable()
      *
      * @return void
      */
@@ -203,7 +203,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setIcon() method.
+     * Tests setIcon()
      *
      * @return void
      */
@@ -216,7 +216,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setMatcher() method.
+     * Tests setMatcher()
      *
      * @return void
      */
@@ -229,7 +229,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setTarget() method.
+     * Tests setTarget()
      *
      * @return void
      */
@@ -242,7 +242,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setUri() method.
+     * Tests setUri()
      *
      * @return void
      */
@@ -255,7 +255,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the size() method.
+     * Tests size()
      *
      * @return void
      */
@@ -273,7 +273,7 @@ class AbstractNavigationNodeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

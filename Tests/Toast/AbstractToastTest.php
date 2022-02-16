@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Toast\TestToast;
 class AbstractToastTest extends AbstractTestCase {
 
     /**
-     * Tests the setContent() method.
+     * Tests setContent()
      *
      * @return void
      */
@@ -36,7 +36,7 @@ class AbstractToastTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setType() method.
+     * Tests setType()
      *
      * @return void
      */
@@ -49,7 +49,7 @@ class AbstractToastTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

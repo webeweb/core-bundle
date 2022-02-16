@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class EmailLayoutTest extends AbstractTestCase {
 
     /**
-     * Tests the setAccountSettingsURL() method.
+     * Tests setAccountSettingsURL()
      *
      * @return void
      */
@@ -36,7 +36,7 @@ class EmailLayoutTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setBestRegards() method.
+     * Tests setBestRegards()
      *
      * @return void
      */
@@ -49,7 +49,7 @@ class EmailLayoutTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setCompanyLogo() method.
+     * Tests setCompanyLogo()
      *
      * @return void
      */
@@ -62,7 +62,7 @@ class EmailLayoutTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setCompanyName() method.
+     * Tests setCompanyName()
      *
      * @return void
      */
@@ -75,7 +75,7 @@ class EmailLayoutTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setCompanyURL() method.
+     * Tests setCompanyURL()
      *
      * @return void
      */
@@ -88,7 +88,7 @@ class EmailLayoutTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setSupportEmail() method.
+     * Tests setSupportEmail()
      *
      * @return void
      */
@@ -101,7 +101,7 @@ class EmailLayoutTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setSupportName() method.
+     * Tests setSupportName()
      *
      * @return void
      */
@@ -114,7 +114,7 @@ class EmailLayoutTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setSupportPhone() method.
+     * Tests setSupportPhone()
      *
      * @return void
      */
@@ -127,7 +127,7 @@ class EmailLayoutTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setUnsubscribeURL() method.
+     * Tests setUnsubscribeURL()
      *
      * @return void
      */
@@ -140,7 +140,7 @@ class EmailLayoutTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

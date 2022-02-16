@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\Theme\TestHookDropDownThemePro
 class HookDropDownThemeProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setHookDropDownThemeProvider() method.
+     * Tests setHookDropDownThemeProvider()
      *
      * @return void
      */

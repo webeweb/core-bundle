@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Service\TestSwiftMailerTrait;
 class SwiftMailerTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setSwiftMailer() method.
+     * Tests setSwiftMailer()
      *
      * @return void
      */

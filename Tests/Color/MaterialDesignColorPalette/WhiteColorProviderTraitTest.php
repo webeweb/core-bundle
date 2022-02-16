@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette\TestWh
 class WhiteColorProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setWhiteColorProvider() method.
+     * Tests setWhiteColorProvider()
      *
      * @return void
      */

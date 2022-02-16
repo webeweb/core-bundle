@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette\TestYe
 class YellowColorProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setYellowColorProvider() method.
+     * Tests setYellowColorProvider()
      *
      * @return void
      */

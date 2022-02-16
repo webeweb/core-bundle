@@ -26,7 +26,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MaterialDesignIconicFontTwigExte
 class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the getFilters() method.
+     * Tests getFilters()
      *
      * @return void
      */
@@ -59,7 +59,7 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFunctions() method.
+     * Tests getFunctions()
      *
      * @return void
      */
@@ -82,7 +82,7 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the materialDesignIconicFontIconFunction() method.
+     * Tests materialDesignIconicFontIconFunction()
      *
      * @return void
      */
@@ -96,7 +96,7 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the materialDesignIconicFontIconFunction() method.
+     * Tests materialDesignIconicFontIconFunction()
      *
      * @return void
      */
@@ -110,7 +110,7 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the materialDesignIconicFontListFilter() method.
+     * Tests materialDesignIconicFontListFilter()
      *
      * @return void
      */
@@ -124,7 +124,7 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the materialDesignIconicFontListIconFilter() method.
+     * Tests materialDesignIconicFontListIconFilter()
      *
      * @return void
      */
@@ -138,7 +138,7 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the materialDesignIconicFontListIconFilter() method.
+     * Tests materialDesignIconicFontListIconFilter()
      *
      * @return void
      */
@@ -152,7 +152,7 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderIcon() method.
+     * Tests renderIcon()
      *
      * @return void
      */
@@ -165,7 +165,7 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

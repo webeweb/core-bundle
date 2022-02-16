@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Service\TestSessionTrait;
 class SessionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setSession() method.
+     * Tests setSession()
      *
      * @return void
      */
@@ -36,7 +36,7 @@ class SessionTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

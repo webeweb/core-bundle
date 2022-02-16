@@ -60,7 +60,7 @@ class PhantomJSHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getCommand() method.
+     * Tests getCommand()
      *
      * @return void.
      */
@@ -76,7 +76,7 @@ class PhantomJSHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

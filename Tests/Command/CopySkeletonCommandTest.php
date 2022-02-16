@@ -29,7 +29,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Command\TestCopySkeletonCommand;
 class CopySkeletonCommandTest extends AbstractCommandTestCase {
 
     /**
-     * Tests the displayFooter() method.
+     * Tests displayFooter()
      *
      * @return void
      */
@@ -41,7 +41,7 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
     }
 
     /**
-     * Tests the displayFooter() method.
+     * Tests displayFooter()
      *
      * @return void
      */
@@ -53,7 +53,7 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
     }
 
     /**
-     * Tests the displayFooter() method.
+     * Tests displayFooter()
      *
      * @return void
      */
@@ -65,7 +65,7 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
     }
 
     /**
-     * Tests the displayResult() method.
+     * Tests displayResult()
      *
      * @return void
      */
@@ -78,7 +78,7 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
     }
 
     /**
-     * Tests the displayResult() method.
+     * Tests displayResult()
      *
      * @return void
      */
@@ -95,7 +95,7 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
     }
 
     /**
-     * Tests the getResourcesDirectory() method.
+     * Tests getResourcesDirectory()
      *
      * @return void
      */
@@ -120,7 +120,7 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
     }
 
     /**
-     * Tests the getResourcesDirectory() method.
+     * Tests getResourcesDirectory()
      *
      * @return void
      */
@@ -147,7 +147,7 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

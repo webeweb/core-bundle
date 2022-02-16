@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class MaterialDesignIconicFontIconTest extends AbstractTestCase {
 
     /**
-     * Tests the setBorder() method.
+     * Tests setBorder()
      *
      * @return void
      */
@@ -36,7 +36,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setBorder() method.
+     * Tests setBorder()
      *
      * @return void
      */
@@ -49,7 +49,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setFixedWidth() method.
+     * Tests setFixedWidth()
      *
      * @return void
      */
@@ -62,7 +62,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setFlip() method.
+     * Tests setFlip()
      *
      * @return void
      */
@@ -75,7 +75,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setFlip() method.
+     * Tests setFlip()
      *
      * @return void
      */
@@ -88,7 +88,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setPull() method.
+     * Tests setPull()
      *
      * @return void
      */
@@ -101,7 +101,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setPull() method.
+     * Tests setPull()
      *
      * @return void
      */
@@ -114,7 +114,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setRotate() method.
+     * Tests setRotate()
      *
      * @return void
      */
@@ -127,7 +127,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setRotate() method.
+     * Tests setRotate()
      *
      * @return void
      */
@@ -140,7 +140,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setSize() method.
+     * Tests setSize()
      *
      * @return void
      */
@@ -153,7 +153,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setSize() method.
+     * Tests setSize()
      *
      * @return void
      */
@@ -166,7 +166,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setSpin() method.
+     * Tests setSpin()
      *
      * @return void
      */
@@ -179,7 +179,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setSpin() method.
+     * Tests setSpin()
      *
      * @return void
      */
@@ -192,7 +192,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

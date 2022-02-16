@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\EventListener\TestToastEventListenerTra
 class ToastEventListenerTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setToastEventListener() method.
+     * Tests setToastEventListener()
      *
      * @return void
      */
@@ -40,7 +40,7 @@ class ToastEventListenerTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

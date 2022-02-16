@@ -36,7 +36,7 @@ class SecurityEventListenerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the onInteractiveLogin() method.
+     * Tests onInteractiveLogin()
      *
      * @return void
      */
@@ -62,7 +62,7 @@ class SecurityEventListenerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

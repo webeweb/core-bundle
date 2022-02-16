@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\Theme\TestUserInfoThemeProvide
 class UserInfoThemeProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setUserInfoThemeProvider() method.
+     * Tests setUserInfoThemeProvider()
      *
      * @return void
      */

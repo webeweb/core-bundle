@@ -59,7 +59,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFunctions() method.
+     * Tests getFunctions()
      *
      * @return void
      */
@@ -87,7 +87,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the quoteAuthorFunction() method.
+     * Tests quoteAuthorFunction()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -100,7 +100,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the quoteAuthorFunction() method.
+     * Tests quoteAuthorFunction()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -113,7 +113,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the quoteContentFunction() method.
+     * Tests quoteContentFunction()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -126,7 +126,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the quoteContentFunction() method.
+     * Tests quoteContentFunction()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -139,7 +139,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the quoteFunction() method.
+     * Tests quoteFunction()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -156,7 +156,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the quoteFunction() method.
+     * Tests quoteFunction()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -169,7 +169,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the quoteFunction() method.
+     * Tests quoteFunction()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -182,7 +182,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

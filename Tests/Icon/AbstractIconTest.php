@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Icon\TestIcon;
 class AbstractIconTest extends AbstractTestCase {
 
     /**
-     * Tests the setName() method.
+     * Tests setName()
      *
      * @return void
      */
@@ -36,7 +36,7 @@ class AbstractIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setStyle() method.
+     * Tests setStyle()
      *
      * @return void
      */
@@ -49,7 +49,7 @@ class AbstractIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

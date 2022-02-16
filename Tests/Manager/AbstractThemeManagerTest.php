@@ -25,7 +25,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\TestThemeManager;
 class AbstractThemeManagerTest extends AbstractTestCase {
 
     /**
-     * Tests the addGlobal() method.
+     * Tests addGlobal()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -48,7 +48,7 @@ class AbstractThemeManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the addGlobal() method.
+     * Tests addGlobal()
      *
      * @return void
      */
@@ -63,7 +63,7 @@ class AbstractThemeManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setProvider() method.
+     * Tests setProvider()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -80,7 +80,7 @@ class AbstractThemeManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setProvider() method.
+     * Tests setProvider()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -101,7 +101,7 @@ class AbstractThemeManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.

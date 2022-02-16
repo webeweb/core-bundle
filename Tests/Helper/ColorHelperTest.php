@@ -45,7 +45,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class ColorHelperTest extends AbstractTestCase {
 
     /**
-     * Tests the getIdentifier() method.
+     * Tests getIdentifier()
      *
      * @return void
      */
@@ -59,7 +59,7 @@ class ColorHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getMaterialDesignColorPalette() method.
+     * Tests getMaterialDesignColorPalette()
      *
      * @return void
      */

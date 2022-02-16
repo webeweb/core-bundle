@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MeteoconsTwigExtension;
 class MeteoconsTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setMeteoconsTwigExtension() method.
+     * Tests setMeteoconsTwigExtension()
      *
      * @return void
      */

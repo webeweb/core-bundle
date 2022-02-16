@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Toast\ToastInterface;
 class ToastFactoryTest extends AbstractTestCase {
 
     /**
-     * Tests the newDangerToast() method.
+     * Tests newDangerToast()
      *
      * @return void
      */
@@ -38,7 +38,7 @@ class ToastFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newDefaultToast() method.
+     * Tests newDefaultToast()
      *
      * @return void
      */
@@ -52,7 +52,7 @@ class ToastFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newInfoToast() method.
+     * Tests newInfoToast()
      *
      * @return void
      */
@@ -66,7 +66,7 @@ class ToastFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newSuccessToast() method.
+     * Tests newSuccessToast()
      *
      * @return void
      */
@@ -80,7 +80,7 @@ class ToastFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newWarningToast() method.
+     * Tests newWarningToast()
      *
      * @return void
      */

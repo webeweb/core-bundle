@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\Attribute\TestStringRedirectUrlTr
 class StringRedirectUrlTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setRedirectUrl() method.
+     * Tests setRedirectUrl()
      *
      * @return void
      */

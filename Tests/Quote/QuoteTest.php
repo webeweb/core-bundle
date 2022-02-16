@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class QuoteTest extends AbstractTestCase {
 
     /**
-     * Tests the setAuthor() method.
+     * Tests setAuthor()
      *
      * @return void
      */
@@ -36,7 +36,7 @@ class QuoteTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

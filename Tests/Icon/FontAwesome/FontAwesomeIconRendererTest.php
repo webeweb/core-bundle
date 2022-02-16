@@ -50,7 +50,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderAnimation() method.
+     * Tests renderAnimation()
      *
      * @return void
      */
@@ -61,7 +61,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderBordered() method.
+     * Tests renderBordered()
      *
      * @return void
      */
@@ -72,7 +72,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderFixedWidth() method.
+     * Tests renderFixedWidth()
      *
      * @return void
      */
@@ -83,7 +83,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderFont() method.
+     * Tests renderFont()
      *
      * @return void
      */
@@ -94,7 +94,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderName() method.
+     * Tests renderName()
      *
      * @return void
      */
@@ -105,7 +105,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderPull() method.
+     * Tests renderPull()
      *
      * @return void
      */
@@ -116,7 +116,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderSize() method.
+     * Tests renderSize()
      *
      * @return void
      */

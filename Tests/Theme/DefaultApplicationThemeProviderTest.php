@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Theme\DefaultApplicationThemeProvider;
 class DefaultApplicationThemeProviderTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

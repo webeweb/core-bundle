@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\Theme\TestBreadcrumbsThemeProv
 class BreadcrumbsThemeProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setBreadcrumbsThemeProvider() method.
+     * Tests setBreadcrumbsThemeProvider()
      *
      * @return void
      */

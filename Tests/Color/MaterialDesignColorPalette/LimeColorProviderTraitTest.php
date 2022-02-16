@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette\TestLi
 class LimeColorProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setLimeColorProvider() method.
+     * Tests setLimeColorProvider()
      *
      * @return void
      */

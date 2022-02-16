@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette\TestGr
 class GreenColorProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setGreenColorProvider() method.
+     * Tests setGreenColorProvider()
      *
      * @return void
      */

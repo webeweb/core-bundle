@@ -25,7 +25,7 @@ use WBW\Bundle\CoreBundle\Theme\DefaultApplicationThemeProvider;
 class AlreadyRegisteredProviderExceptionTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.

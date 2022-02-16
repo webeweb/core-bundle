@@ -25,7 +25,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension;
 class RendererTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the coreScriptFilter() method.
+     * Tests coreScriptFilter()
      *
      * @return void
      */
@@ -38,7 +38,7 @@ class RendererTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getFilters() method.
+     * Tests getFilters()
      *
      * @return void
      */
@@ -56,7 +56,7 @@ class RendererTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderIcon() method.
+     * Tests renderIcon()
      *
      * @return void
      */
@@ -67,7 +67,7 @@ class RendererTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderIcon() method.
+     * Tests renderIcon()
      *
      * @return void
      */
@@ -81,7 +81,7 @@ class RendererTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderIcon() method.
+     * Tests renderIcon()
      *
      * @return void
      */
@@ -92,7 +92,7 @@ class RendererTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the renderIcon() method.
+     * Tests renderIcon()
      *
      * @return void
      */
@@ -103,7 +103,7 @@ class RendererTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

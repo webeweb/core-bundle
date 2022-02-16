@@ -48,7 +48,7 @@ class FormHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the checkCollection() method.
+     * Tests checkCollection()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -62,7 +62,7 @@ class FormHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the checkCollection() method.
+     * Tests checkCollection()
      *
      * @return void
      */
@@ -81,7 +81,7 @@ class FormHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the checkCollection() method.
+     * Tests checkCollection()
      *
      * @return void
      */
@@ -107,7 +107,7 @@ class FormHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the onPostHandleRequestWithCollection() method.
+     * Tests onPostHandleRequestWithCollection()
      *
      * @return void
      */
@@ -131,7 +131,7 @@ class FormHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the onPreHandleRequestWithCollection() method.
+     * Tests onPreHandleRequestWithCollection()
      *
      * @return void
      */
@@ -150,7 +150,7 @@ class FormHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

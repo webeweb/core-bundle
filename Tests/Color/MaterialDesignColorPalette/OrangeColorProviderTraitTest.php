@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette\TestOr
 class OrangeColorProviderTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setOrangeColorProvider() method.
+     * Tests setOrangeColorProvider()
      *
      * @return void
      */

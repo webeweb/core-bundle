@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Service\TestTokenStorageTrait;
 class TokenStorageTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setTokenStorage() method.
+     * Tests setTokenStorage()
      *
      * @return void
      */
@@ -36,7 +36,7 @@ class TokenStorageTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */
