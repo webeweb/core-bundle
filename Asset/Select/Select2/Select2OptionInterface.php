@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Asset\Select\Select2;
 /**
  * Select2 option interface.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Asset\Select\Select2
  */
 interface Select2OptionInterface {

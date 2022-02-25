@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Component\DependencyInjection\Container\ContainerTrait
 /**
  * Container Twig extension.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Twig\Extension
  */
 class ContainerTwigExtension extends AbstractTwigExtension {

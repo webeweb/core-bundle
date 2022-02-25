@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Manager\GroupManagerTrait;
 /**
  * Test group manager trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Manager
  */
 class TestGroupManagerTrait {

@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Component\DependencyInjection\ConfigurationHelper;
 /**
  * Configuration.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\DependencyInjection
  */
 class Configuration implements ConfigurationInterface {
@@ -63,6 +63,12 @@ class Configuration implements ConfigurationInterface {
             ->children()
                 ->arrayNode("locales")->addDefaultsIfNotSet()
                     ->children()
+                        ->variableNode("full_calendar")->defaultValue("en-gb")->info("FullCalendar locale")
+                            ->validate()
+                                ->ifNotInArray($plugins["full_calendar"]["locales"])
+                                ->thenInvalid("The FullCalendar locale %s is not supported. Please choose one of " . json_encode($plugins["full_calendar"]["locales"]))
+                            ->end()
+                        ->end()
                         ->variableNode("jquery_select2")->defaultValue("en")->info("jQuery Select2 locale")
                             ->validate()
                                 ->ifNotInArray($plugins["jquery_select2"]["locales"])
@@ -127,7 +133,11 @@ class Configuration implements ConfigurationInterface {
      * @return void
      */
     private function addCoreUserSection(ArrayNodeDefinition $node): void {
-        // NOTHING TO DO
+
+        $user = $node->children()->arrayNode("user");
+        UserConfiguration::getConfig($user);
+
+        $user->end();
     }
 
     /**
@@ -140,7 +150,7 @@ class Configuration implements ConfigurationInterface {
         $assets  = ConfigurationHelper::loadYamlConfig(__DIR__, "assets");
         $plugins = $assets["assets"]["wbw.core.asset.core"]["plugins"];
 
-        $treeBuilder = new TreeBuilder(WBWCoreExtension::EXTENSION_ALIAS);
+        $treeBuilder = ConfigurationHelper::newTreeBuilder(WBWCoreExtension::EXTENSION_ALIAS);
 
         $rootNode = ConfigurationHelper::getRootNode($treeBuilder, WBWCoreExtension::EXTENSION_ALIAS);
         $rootNode

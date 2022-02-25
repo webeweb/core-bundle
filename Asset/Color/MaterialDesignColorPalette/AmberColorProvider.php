@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Provider\Asset\Color\AmberColorProviderInterface;
 /**
  * Amber color provider.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette
  */
 class AmberColorProvider extends AbstractColorProvider implements MaterialDesignColorPaletteInterface, AmberColorProviderInterface {

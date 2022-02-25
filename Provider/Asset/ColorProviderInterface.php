@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Provider\ProviderInterface;
 /**
  * Color provider interface.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Provider\Asset
  */
 interface ColorProviderInterface extends ProviderInterface {

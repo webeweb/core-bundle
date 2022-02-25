@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Model\RepositoryReport;
 /**
  * Repository helper.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Repository
  */
 class RepositoryHelper {

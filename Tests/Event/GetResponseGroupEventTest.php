@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 /**
  * Get response group event test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Event
  */
 class GetResponseGroupEventTest extends AbstractTestCase {

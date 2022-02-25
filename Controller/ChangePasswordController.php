@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Manager\UserManagerTrait;
 /**
  * Change password controller.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Controller
  */
 class ChangePasswordController extends AbstractController {

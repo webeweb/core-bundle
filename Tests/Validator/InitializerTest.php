@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Validator\Initializer;
 /**
  * Initializer test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Validator
  */
 class InitializerTest extends AbstractTestCase {

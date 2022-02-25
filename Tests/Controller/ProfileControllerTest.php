@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
 /**
  * Profile controller test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Controller
  */
 class ProfileControllerTest extends AbstractWebTestCase {

@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Translation\TranslatorInterface;
 /**
  * Security event listener.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\EventListener
  */
 class SecurityEventListener {

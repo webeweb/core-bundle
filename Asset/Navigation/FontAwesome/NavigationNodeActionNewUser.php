@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationNode;
 /**
  * Navigation node action "new user".
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Asset\Navigation\FontAwesome
  */
 class NavigationNodeActionNewUser extends NavigationNode {

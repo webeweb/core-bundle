@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 /**
  * Already registered provider exception test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package  WBW\Bundle\CoreBundle\Tests\Exception
  */
 class AlreadyRegisteredProviderExceptionTest extends AbstractTestCase {

@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtensionTrait;
 /**
  * Abstract jQuery input mask Twig extension.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\Core\Twig\Extension\Asset
  * @abstract
  */

@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Utility;
 /**
  * Token generator.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Utility
  */
 class TokenGenerator implements TokenGeneratorInterface {

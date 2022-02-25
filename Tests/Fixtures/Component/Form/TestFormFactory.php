@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Component\Form\FormFactory;
 /**
  * Test form factory.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Component\Form
  */
 class TestFormFactory extends FormFactory {

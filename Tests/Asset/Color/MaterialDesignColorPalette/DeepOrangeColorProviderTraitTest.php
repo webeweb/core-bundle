@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Color\MaterialDesignColorPalette\
 /**
  * Deep orange color provider trait test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Asset\Color\MaterialDesignColorPalette
  */
 class DeepOrangeColorProviderTraitTest extends AbstractTestCase {

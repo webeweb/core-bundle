@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 /**
  * Filter group response event test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Event
  */
 class FilterGroupResponseEventTest extends AbstractTestCase {

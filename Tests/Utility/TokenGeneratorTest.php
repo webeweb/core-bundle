@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Utility\TokenGenerator;
 /**
  * Token generator test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Utility
  */
 class TokenGeneratorTest extends AbstractTestCase {

@@ -19,7 +19,7 @@ use WBW\Library\Traits\Strings\StringClassTrait;
 /**
  * Group form type.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Form\Type
  */
 class GroupFormType extends AbstractFormType {

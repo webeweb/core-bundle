@@ -17,7 +17,7 @@ use WBW\Library\Traits\Strings\StringContentTrait;
 /**
  * Quote.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Asset\Quote
  */
 class Quote implements QuoteInterface {

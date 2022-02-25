@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Component\HttpFoundation\ResponseTrait;
 /**
  * Get response user event.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Event
  */
 class GetResponseUserEvent extends UserEvent {

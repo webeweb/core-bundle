@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Provider\SkeletonProviderInterface;
 /**
  * Copy skeleton command.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Command\Command
  */
 class CopySkeletonCommand extends AbstractCommand {

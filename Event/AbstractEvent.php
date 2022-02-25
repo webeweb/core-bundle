@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Component\EventDispatcher\BaseEvent;
 /**
  * Abstract event.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Event
  * @abstract
  */

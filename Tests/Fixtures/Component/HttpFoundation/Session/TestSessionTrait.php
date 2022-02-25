@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Component\HttpFoundation\Session\SessionTrait;
 /**
  * Test session trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Component\HttpFoundation\Session
  */
 class TestSessionTrait {

@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Asset\Notification;
 /**
  * Notification factory.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Asset\Notification
  */
 class NotificationFactory {

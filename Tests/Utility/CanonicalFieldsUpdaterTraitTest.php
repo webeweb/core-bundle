@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Utility\CanonicalizerInterface;
 /**
  * Canonical fields updater trait test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Utility
  */
 class CanonicalFieldsUpdaterTraitTest extends AbstractTestCase {

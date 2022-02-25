@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 /**
  * Purple color provider test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Asset\Color\MaterialDesignColorPalette
  */
 class PurpleColorProviderTest extends AbstractTestCase {

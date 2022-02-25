@@ -38,7 +38,7 @@ use WBW\Bundle\CoreBundle\Component\Translation\BaseTranslatorInterface;
 /**
  * Abstract test case.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests
  * @abstract
  */

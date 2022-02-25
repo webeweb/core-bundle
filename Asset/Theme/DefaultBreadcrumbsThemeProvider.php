@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Provider\Asset\Theme\BreadcrumbsThemeProviderInterface
 /**
  * Default breadcrumbs theme provider.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Asset\Theme
  */
 class DefaultBreadcrumbsThemeProvider implements BreadcrumbsThemeProviderInterface {

@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Provider\Asset\ThemeProviderInterface;
 /**
  * Navigation theme provider interface.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Provider\Asset\Theme
  */
 interface NavigationThemeProviderInterface extends ThemeProviderInterface {

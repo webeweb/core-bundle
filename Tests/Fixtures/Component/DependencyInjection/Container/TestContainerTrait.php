@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Component\DependencyInjection\Container\ContainerTrait
 /**
  * Test container trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Component\DependencyInjection\Container
  */
 class TestContainerTrait {

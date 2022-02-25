@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
 /**
  * Test Twig extension.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Twi\Extension
  */
 class TestTwigExtension extends AbstractTwigExtension {

@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Model\GroupInterface;
 /**
  * Filter group response event.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Event
  */
 class FilterGroupResponseEvent extends GroupEvent {

@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Component\Form\FormTrait;
 /**
  * Test form trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Component\Form
  */
 class TestFormTrait {

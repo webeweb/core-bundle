@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Model\UserInterface;
 /**
  * Filter user response event.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Event
  */
 class FilterUserResponseEvent extends UserEvent {

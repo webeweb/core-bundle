@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Provider\Asset\Theme\ApplicationThemeProviderInterface
 /**
  * Default application theme provider.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Asset\Theme
  */
 class DefaultApplicationThemeProvider implements ApplicationThemeProviderInterface {

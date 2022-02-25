@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Asset\Icon\FontAwesome;
 /**
  * Font Awesome icon enumerator.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Asset\Icon\FontAwesome
  */
 class FontAwesomeIconEnumerator {

@@ -18,7 +18,7 @@ use WBW\Library\Types\Helper\ArrayHelper;
 /**
  * Meteocons Twig extension.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Twig\Extension\Asset
  */
 class MeteoconsTwigExtension extends AbstractMeteoconsTwigExtension implements IconRendererInterface {

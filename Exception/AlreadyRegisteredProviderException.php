@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Provider\ProviderInterface;
 /**
  * Already registered provider exception.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Exception
  */
 class AlreadyRegisteredProviderException extends AbstractException {

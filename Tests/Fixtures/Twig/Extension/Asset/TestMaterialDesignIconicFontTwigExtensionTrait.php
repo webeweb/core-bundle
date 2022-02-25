@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Asset\MaterialDesignIconicFontTwigExten
 /**
  * Test Material Design Iconic font Twig extension trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Twig\Extension\Asset
  */
 class TestMaterialDesignIconicFontTwigExtensionTrait {

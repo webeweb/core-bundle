@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
 /**
  * Unzip assets command test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Command
  */
 class UnzipAssetsCommandWebTest extends AbstractWebTestCase {

@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Asset\Notification\NotificationInterface;
 /**
  * Notification event.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Event
  */
 class NotificationEvent extends AbstractEvent {

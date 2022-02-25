@@ -30,7 +30,7 @@ use WBW\Bundle\CoreBundle\SwiftMailer\SwiftMailerTrait;
 /**
  * Kernel event listener.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\EventListener
  */
 class KernelEventListener {

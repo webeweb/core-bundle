@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Utility\CanonicalFieldsUpdaterTrait;
 /**
  * Initializer.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Validator
  */
 class Initializer implements ObjectInitializerInterface {

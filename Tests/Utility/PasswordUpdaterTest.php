@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Utility\PasswordUpdater;
 /**
  * Password updater test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Utility
  */
 class PasswordUpdaterTest extends AbstractTestCase {

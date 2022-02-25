@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Provider;
 /**
  * Provider interface.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Provider
  */
 interface ProviderInterface {

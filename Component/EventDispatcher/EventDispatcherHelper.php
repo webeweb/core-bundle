@@ -17,7 +17,7 @@ use Symfony\Component\HttpKernel\Kernel;
 /**
  * Event dispatcher helper.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Component\EventDispatcher
  */
 class EventDispatcherHelper {

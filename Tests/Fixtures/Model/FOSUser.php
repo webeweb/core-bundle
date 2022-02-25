@@ -17,7 +17,7 @@ use WBW\Library\Traits\Integers\IntegerIdTrait;
 /**
  * FOS user.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Model
  */
 class FOSUser extends BaseUser {

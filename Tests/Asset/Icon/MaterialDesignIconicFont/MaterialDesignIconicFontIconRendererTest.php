@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 /**
  * Material Design Iconic Font icon renderer test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Asset\Icon\MaterialDesignIconicFont
  */
 class MaterialDesignIconicFontIconRendererTest extends AbstractTestCase {

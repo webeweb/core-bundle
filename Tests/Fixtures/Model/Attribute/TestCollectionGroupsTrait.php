@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Model\Attribute\CollectionGroupsTrait;
 /**
  * Test collection groups trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Model\Attribute
  */
 class TestCollectionGroupsTrait {

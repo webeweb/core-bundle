@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\FOSUser;
 /**
  * Repository helper test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Repository
  */
 class RepositoryHelperTest extends AbstractWebTestCase {

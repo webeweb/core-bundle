@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Utility\TokenGeneratorTrait;
 /**
  * Test token generator trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Utility
  */
 class TestTokenGeneratorTrait {

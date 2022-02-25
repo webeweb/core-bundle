@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Utility\PasswordUpdaterTrait;
 /**
  * Test password updater trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Utility
  */
 class TestPasswordUpdaterTrait {

@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Psr\Log\LoggerTrait;
 /**
  * Test logger trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Psr\Log
  */
 class TestLoggerTrait {

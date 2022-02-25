@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Provider\Asset\ColorProviderInterface;
 /**
  * Yellow color provider interface.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Provider\Asset\Color
  */
 interface YellowColorProviderInterface extends ColorProviderInterface {

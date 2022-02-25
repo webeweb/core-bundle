@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Model\UserInterface;
 /**
  * Password updater.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Utility
  */
 class PasswordUpdater implements PasswordUpdaterInterface {

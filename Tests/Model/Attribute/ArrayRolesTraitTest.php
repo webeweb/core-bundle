@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\Attribute\TestArrayRolesTrait;
 /**
  * Array roles trait test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Model\Attribute
  */
 class ArrayRolesTraitTest extends AbstractTestCase {

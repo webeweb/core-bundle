@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Doctrine\ORM\TestEntityManagerTrait;
 /**
  * Entity manager trait test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Doctrine\ORM
  */
 class EntityManagerTraitTest extends AbstractTestCase {

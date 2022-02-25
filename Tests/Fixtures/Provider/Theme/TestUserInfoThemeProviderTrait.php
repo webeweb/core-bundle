@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Provider\Asset\Theme\UserInfoThemeProviderTrait;
 /**
  * Test user info theme provider trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\Theme
  */
 class TestUserInfoThemeProviderTrait {

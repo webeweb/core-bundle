@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\DependencyInjection;
 
+use Doctrine\Persistence\Mapping\ClassMetadata;
 use Exception;
 use Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
-use Symfony\Component\Security\Core\Encoder\EncoderFactoryInterface;
 use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\AmberColorProvider;
 use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\BlueColorProvider;
 use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\BlueGreyColorProvider;
@@ -37,6 +37,12 @@ use WBW\Bundle\CoreBundle\Asset\Quote\YamlQuoteProvider;
 use WBW\Bundle\CoreBundle\Command\CopySkeletonCommand;
 use WBW\Bundle\CoreBundle\Command\UnzipAssetsCommand;
 use WBW\Bundle\CoreBundle\Component\Form\FormHelper;
+use WBW\Bundle\CoreBundle\Controller\ChangePasswordController;
+use WBW\Bundle\CoreBundle\Controller\GroupController;
+use WBW\Bundle\CoreBundle\Controller\ProfileController;
+use WBW\Bundle\CoreBundle\Controller\RegistrationController;
+use WBW\Bundle\CoreBundle\Controller\ResettingController;
+use WBW\Bundle\CoreBundle\Controller\SecurityController;
 use WBW\Bundle\CoreBundle\DependencyInjection\Configuration;
 use WBW\Bundle\CoreBundle\DependencyInjection\WBWCoreExtension;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
@@ -49,6 +55,7 @@ use WBW\Bundle\CoreBundle\Manager\Asset\ThemeManager;
 use WBW\Bundle\CoreBundle\Provider\Asset\Highlighter\SyntaxHighlighterStringsProvider;
 use WBW\Bundle\CoreBundle\Repository\RepositoryHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser;
 use WBW\Bundle\CoreBundle\Twig\Extension\Asset\FontAwesomeTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\Asset\JQueryInputMaskTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\Asset\MaterialDesignColorPaletteTwigExtension;
@@ -59,17 +66,19 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Asset\SyntaxHighlighterTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\ContainerTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\JavascriptTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension;
+use WBW\Bundle\CoreBundle\Twig\Extension\StringTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\StylesheetTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\UtilityTwigExtension;
 use WBW\Bundle\CoreBundle\Utility\CanonicalFieldsUpdater;
 use WBW\Bundle\CoreBundle\Utility\Canonicalizer;
 use WBW\Bundle\CoreBundle\Utility\PasswordUpdater;
 use WBW\Bundle\CoreBundle\Utility\TokenGenerator;
+use WBW\Bundle\CoreBundle\Validator\Initializer;
 
 /**
  * Core extension test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\DependencyInjection
  */
 class WBWCoreExtensionTest extends AbstractTestCase {
@@ -105,15 +114,16 @@ class WBWCoreExtensionTest extends AbstractTestCase {
             ],
         ];
 
-        // Set an Encoder factory mock.
-        $encoderFactory = $this->getMockBuilder(EncoderFactoryInterface::class)->getMock();
+        // Set a Class metadata mock.
+        $classMetadata = $this->getMockBuilder(ClassMetadata::class)->getMock();
+        $classMetadata->expects($this->any())->method("getName")->willReturn(TestUser::class);
 
-        // Set the Container builder mock.
-        $this->containerBuilder->set("security.encoder_factory", $encoderFactory);
+        // Set the Entity manager mock.
+        $this->entityManager->expects($this->any())->method("getClassMetadata")->willReturn($classMetadata);
     }
 
     /**
-     * Tests the getAlias() method.
+     * Tests getAlias()
      *
      * @return void
      */
@@ -125,7 +135,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getConfiguration() method.
+     * Tests getConfiguration()
      *
      * @return void
      */
@@ -137,7 +147,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the load() method.
+     * Tests load()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -211,6 +221,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(JavascriptTwigExtension::class, $this->containerBuilder->get(JavascriptTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(QuoteTwigExtension::class, $this->containerBuilder->get(QuoteTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(RendererTwigExtension::class, $this->containerBuilder->get(RendererTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(StringTwigExtension::class, $this->containerBuilder->get(StringTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(StylesheetTwigExtension::class, $this->containerBuilder->get(StylesheetTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(UtilityTwigExtension::class, $this->containerBuilder->get(UtilityTwigExtension::SERVICE_NAME));
 
@@ -227,10 +238,13 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(MaterialDesignIconicFontTwigExtension::class, $this->containerBuilder->get(MaterialDesignIconicFontTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(MeteoconsTwigExtension::class, $this->containerBuilder->get(MeteoconsTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(SyntaxHighlighterTwigExtension::class, $this->containerBuilder->get(SyntaxHighlighterTwigExtension::SERVICE_NAME));
+
+        // Validators
+        $this->assertInstanceOf(Initializer::class, $this->containerBuilder->get(Initializer::SERVICE_NAME));
     }
 
     /**
-     * Tests the load() method.
+     * Tests load()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -248,7 +262,41 @@ class WBWCoreExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the load() method.
+     * Tests load()
+     *
+     * @return void
+     * @throws Exception Throws an exception if an error occurs.
+     */
+    public function testLoadWithUser(): void {
+
+        // Set the configs mock.
+        $this->configs[WBWCoreExtension::EXTENSION_ALIAS]["user"] = [
+            "db_driver"     => "orm",
+            "user_class"    => "WBW\\Bundle\\CoreBundle\\Tests\\Fixtures\\Model\\FOSUser",
+            "firewall_name" => "main",
+            "from_email"    => [
+                "address"     => "no-reply@github.com",
+                "sender_name" => "GitHub",
+            ],
+            "group"         => [
+                "class" => "WBW\\Bundle\\CoreBundle\\Fixtures\\Model\\TestGroup",
+            ],
+        ];
+
+        $obj = new WBWCoreExtension();
+
+        $this->assertNull($obj->load($this->configs, $this->containerBuilder));
+
+        $this->assertInstanceOf(ChangePasswordController::class, $this->containerBuilder->get(ChangePasswordController::SERVICE_NAME));
+        $this->assertInstanceOf(GroupController::class, $this->containerBuilder->get(GroupController::SERVICE_NAME));
+        $this->assertInstanceOf(ProfileController::class, $this->containerBuilder->get(ProfileController::SERVICE_NAME));
+        $this->assertInstanceOf(RegistrationController::class, $this->containerBuilder->get(RegistrationController::SERVICE_NAME));
+        $this->assertInstanceOf(ResettingController::class, $this->containerBuilder->get(ResettingController::SERVICE_NAME));
+        $this->assertInstanceOf(SecurityController::class, $this->containerBuilder->get(SecurityController::SERVICE_NAME));
+    }
+
+    /**
+     * Tests load()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -266,7 +314,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the load() method.
+     * Tests load()
      *
      * @return void
      */
@@ -290,7 +338,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the load() method.
+     * Tests load()
      *
      * @return void
      */
@@ -314,7 +362,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the load() method.
+     * Tests load()
      *
      * @return void
      */
@@ -338,7 +386,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the load() method.
+     * Tests load()
      *
      * @return void
      */

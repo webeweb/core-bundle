@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\StringTwigExtensionTrait;
 /**
  * Test string Twig extension trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Twig\Extension
  */
 class TestStringTwigExtensionTrait {

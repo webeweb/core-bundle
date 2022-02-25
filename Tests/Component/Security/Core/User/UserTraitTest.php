@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Component\Security\Core\User\TestUserTr
 /**
  * User trait test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Component\Security\Core\User
  */
 class UserTraitTest extends AbstractTestCase {

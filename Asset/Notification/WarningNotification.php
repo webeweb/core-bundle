@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Asset\Notification;
 /**
  * Warning notification.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Asset\Notification
  */
 class WarningNotification extends AbstractNotification {

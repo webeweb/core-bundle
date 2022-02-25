@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Manager\UserManagerTrait;
 /**
  * Registration controller.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Controller
  */
 class RegistrationController  extends AbstractController {

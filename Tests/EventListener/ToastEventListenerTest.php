@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 /**
  * Toast event listener.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\EventListener
  */
 class ToastEventListenerTest extends AbstractTestCase {

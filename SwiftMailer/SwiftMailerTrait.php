@@ -16,7 +16,7 @@ use Swift_Mailer;
 /**
  * Swift mailer trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\SwiftMailer
  */
 trait SwiftMailerTrait {

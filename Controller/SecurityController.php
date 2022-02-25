@@ -22,7 +22,7 @@ use WBW\Bundle\CoreBundle\Component\Security\Csrf\CsrfTokenManagerTrait;
 /**
  * Security controller.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Controller
  */
 class SecurityController extends AbstractController {

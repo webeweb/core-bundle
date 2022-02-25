@@ -16,7 +16,7 @@ use Symfony\Component\Form\FormInterface;
 /**
  * Form factory interface.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Form\Factory
  */
 interface FormFactoryInterface {

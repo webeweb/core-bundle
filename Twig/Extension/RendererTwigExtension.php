@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Asset\MeteoconsTwigExtension;
 /**
  * Renderer Twig extension.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Twig\Extension
  */
 class RendererTwigExtension extends AbstractTwigExtension {

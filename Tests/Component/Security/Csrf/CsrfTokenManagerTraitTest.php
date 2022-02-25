@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Component\Security\Csrf\TestCsrfTokenMa
 /**
  * CSRF token manager trait test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Component\Security\Csrf
  */
 class CsrfTokenManagerTraitTest extends AbstractTestCase {

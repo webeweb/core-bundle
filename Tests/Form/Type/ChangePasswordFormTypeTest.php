@@ -25,7 +25,7 @@ use WBW\Bundle\CoreBundle\Translation\TranslatorInterface;
 /**
  * Change password form type test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Form\Type
  */
 class ChangePasswordFormTypeTest extends AbstractFormTypeTestCase {

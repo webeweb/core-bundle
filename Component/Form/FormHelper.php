@@ -27,7 +27,7 @@ use WBW\Bundle\CoreBundle\Exception\RedirectResponseException;
 /**
  * Form helper.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Component\Form
  */
 class FormHelper {

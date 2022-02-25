@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Asset\Toast;
 /**
  * Success toast.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Asset\Toast
  */
 class SuccessToast extends AbstractToast {

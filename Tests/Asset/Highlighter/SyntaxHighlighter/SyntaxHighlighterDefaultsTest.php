@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 /**
  * SyntaxHighlighter defaults test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Asset\Highlighter\SyntaxHighlighter
  */
 class SyntaxHighlighterDefaultsTest extends AbstractTestCase {

@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser;
 /**
  * Username data transformer test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Form\DataTransformer
  */
 class UsernameDataTransformerTest extends AbstractTestCase {

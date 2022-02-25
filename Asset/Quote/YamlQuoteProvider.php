@@ -20,7 +20,7 @@ use WBW\Library\Types\Helper\ArrayHelper;
 /**
  * YAML Quote provider.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Asset\Quote
  */
 class YamlQuoteProvider extends AbstractQuoteProvider {

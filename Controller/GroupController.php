@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Manager\GroupManagerTrait;
 /**
  * Group controller.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Controller
  */
 class GroupController extends AbstractController {

@@ -18,7 +18,7 @@ use Symfony\Component\Form\DataTransformerInterface;
 /**
  * Abstract date time data transformer.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Form\DataTransformer
  * @abstract
  */

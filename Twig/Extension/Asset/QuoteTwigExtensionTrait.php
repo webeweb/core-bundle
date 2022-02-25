@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Twig\Extension\Asset;
 /**
  * Quote Twig extension trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Twig\Extension\Asset
  */
 trait QuoteTwigExtensionTrait {

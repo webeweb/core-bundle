@@ -28,7 +28,7 @@ use WBW\Bundle\CoreBundle\Repository\RepositoryHelper;
 /**
  * Test abstract controller.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Controller
  */
 class TestAbstractController extends AbstractController {

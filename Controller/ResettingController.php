@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Utility\TokenGeneratorTrait;
 /**
  * Resetting controller.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Controller
  */
 class ResettingController extends AbstractController {

@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Model\GroupInterface;
 /**
  * Group event.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Event
  */
 class GroupEvent extends AbstractEvent {

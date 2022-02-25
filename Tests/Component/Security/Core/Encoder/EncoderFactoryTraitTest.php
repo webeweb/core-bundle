@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Component\Security\Core\Encoder\TestEnc
 /**
  * Encoder factory trait test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Component\Security\Core\Encoder
  */
 class EncoderFactoryTraitTest extends AbstractTestCase {

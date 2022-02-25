@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Asset\Color\AbstractColorProvider;
 /**
  * Test color provider.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Color
  */
 class TestColorProvider extends AbstractColorProvider {

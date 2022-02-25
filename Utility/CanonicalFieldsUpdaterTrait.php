@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Utility;
 /**
  * Canonical fields updater trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Utility
  */
 trait CanonicalFieldsUpdaterTrait {

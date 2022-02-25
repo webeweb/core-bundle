@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractFormTypeTestCase;
 /**
  * Username form type test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Form\Type
  */
 class UsernameFormTypeTest extends AbstractFormTypeTestCase {

@@ -17,7 +17,7 @@ use Serializable;
 /**
  * User interface.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Model
  */
 interface FosUserInterface extends Serializable {

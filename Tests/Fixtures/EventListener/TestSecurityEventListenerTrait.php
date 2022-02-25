@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\EventListener\SecurityEventListenerTrait;
 /**
  * Test security event listener trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\EventListener
  */
 class TestSecurityEventListenerTrait {

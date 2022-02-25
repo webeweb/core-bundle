@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Doctrine\Common\Persistence\ObjectManagerTrait;
 /**
  * Test object manager trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Doctrine\Common\Persistence
  */
 class TestObjectManagerTrait {

@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Component\HttpFoundation\ResponseTrait;
 /**
  * Form event.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Event
  */
 class FormEvent extends AbstractEvent {

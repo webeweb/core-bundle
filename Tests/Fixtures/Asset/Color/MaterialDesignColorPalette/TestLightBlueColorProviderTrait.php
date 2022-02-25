@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\LightBlueColorP
 /**
  * Test light blue color provider trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Color\MaterialDesignColorPalette
  */
 class TestLightBlueColorProviderTrait {

@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Translation\TranslatorInterface;
 /**
  * Translator interface test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Translation
  */
 class TranslatorInterfaceTest extends AbstractTestCase {

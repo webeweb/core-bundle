@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Model\GroupInterface;
 /**
  * Collection groups trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Model\Attribute
  */
 trait CollectionGroupsTrait {

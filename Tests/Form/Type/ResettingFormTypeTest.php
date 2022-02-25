@@ -22,7 +22,7 @@ use WBW\Bundle\CoreBundle\Translation\TranslatorInterface;
 /**
  * Resetting form type test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Form\Type
  */
 class ResettingFormTypeTest extends AbstractFormTypeTestCase {

@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Model\UserInterface;
 /**
  * Username data transformer.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Form\DataTransformer
  */
 class UsernameDataTransformer implements DataTransformerInterface {

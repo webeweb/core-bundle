@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Form\DataTransformer\UsernameDataTransformer;
 /**
  * Username form type.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Form\Type
  */
 class UsernameFormType extends AbstractFormType {

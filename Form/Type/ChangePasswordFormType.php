@@ -23,7 +23,7 @@ use WBW\Library\Traits\Strings\StringClassTrait;
 /**
  * Change password form type.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Form\Type
  */
 class ChangePasswordFormType extends AbstractFormType {

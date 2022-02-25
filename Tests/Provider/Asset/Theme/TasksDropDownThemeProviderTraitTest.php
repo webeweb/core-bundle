@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\Theme\TestTasksDropDownThemePr
 /**
  * Tasks drop down theme provider trait test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Provider\Asset\Theme
  */
 class TasksDropDownThemeProviderTraitTest extends AbstractTestCase {

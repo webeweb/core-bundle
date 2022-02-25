@@ -16,7 +16,7 @@ use Symfony\Component\HttpKernel\Bundle\BundleInterface;
 /**
  * Assets provider interface.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Provider
  */
 interface AssetsProviderInterface extends ProviderInterface, BundleInterface {

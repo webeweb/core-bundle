@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Manager\UserManagerTrait;
 /**
  * Test user manager trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Manager
  */
 class TestUserManagerTrait {

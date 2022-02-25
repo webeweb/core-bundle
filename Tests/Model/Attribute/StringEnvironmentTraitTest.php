@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\Attribute\TestStringEnvironmentTr
 /**
  * String environment trait test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Model\Attribute
  */
 class StringEnvironmentTraitTest extends AbstractTestCase {

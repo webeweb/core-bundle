@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Model\Group;
 /**
  * Test group.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Model
  */
 class TestGroup extends Group {

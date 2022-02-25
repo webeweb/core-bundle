@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Notification\TestNotification;
 /**
  * Abstract notification test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Asset\Notification
  */
 class AbstractNotificationTest extends AbstractTestCase {

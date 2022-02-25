@@ -16,7 +16,7 @@ use InvalidArgumentException;
 /**
  * Select2 helper.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Asset\Select\Select2
  */
 class Select2Helper {

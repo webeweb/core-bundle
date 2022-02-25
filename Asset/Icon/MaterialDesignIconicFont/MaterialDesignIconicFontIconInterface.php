@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Asset\Icon\IconInterface;
 /**
  * Material Design Iconic Font icon interface.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Asset\Icon\MaterialDesignIconicFont
  */
 interface MaterialDesignIconicFontIconInterface extends IconInterface {

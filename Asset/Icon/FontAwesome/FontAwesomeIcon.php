@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Asset\Icon\AbstractIcon;
 /**
  * Font Awesome icon.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Asset\Icon\FontAwesome
  */
 class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {

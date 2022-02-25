@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Model\User;
 /**
  * Test user.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Model
  */
 class TestUser extends User {

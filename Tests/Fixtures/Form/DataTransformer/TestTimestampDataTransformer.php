@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Form\DataTransformer\AbstractTimestampDataTransformer;
 /**
  * Test timestamp data transformer.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Form\DataTransformer
  */
 class TestTimestampDataTransformer extends AbstractTimestampDataTransformer {

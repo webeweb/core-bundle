@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Asset\Quote\AbstractQuoteProvider;
 /**
  * Test quote provider.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Quote
  */
 class TestQuoteProvider extends AbstractQuoteProvider {

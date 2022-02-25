@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Command\TestCopySkeletonCommand;
 /**
  * Copy skeleton command test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Command
  */
 class CopySkeletonCommandTest extends AbstractCommandTestCase {

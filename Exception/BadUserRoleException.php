@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Model\Attribute\StringRedirectUrlTrait;
 /**
  * Bad user role exception.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Exception
  */
 class BadUserRoleException extends AbstractException {

@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Twig\Environment\TestTwigEnvironmentTra
 /**
  * Twig environment trait test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Twig\Environment
  */
 class TwigEnvironmentTraitTest extends AbstractTestCase {

@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Component\HttpFoundation\ResponseTrait;
 /**
  * Get response group event.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Event
  */
 class GetResponseGroupEvent extends GroupEvent {

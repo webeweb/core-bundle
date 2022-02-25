@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Provider\Asset\Color\WhiteColorProviderInterface;
 /**
  * White color provider.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette
  */
 class WhiteColorProvider extends AbstractColorProvider implements MaterialDesignColorPaletteInterface, WhiteColorProviderInterface {

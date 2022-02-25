@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\WBWCoreInterface;
 /**
  * Toast interface test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Asset\Toast
  */
 class ToastInterfaceTest extends AbstractTestCase {

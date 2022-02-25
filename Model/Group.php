@@ -18,7 +18,7 @@ use WBW\Library\Traits\Strings\StringNameTrait;
 /**
  * Group.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Model
  * @abstract
  */

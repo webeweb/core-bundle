@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Utility\TokenGeneratorInterface;
 /**
  * Resetting controller test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Controller
  */
 class ResettingControllerTest extends AbstractWebTestCase {

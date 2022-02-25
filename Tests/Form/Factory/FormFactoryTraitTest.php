@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Form\Factory\TestFormFactoryTrait;
 /**
  * FormFactory trait test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Form\Factory
  */
 class FormFactoryTraitTest extends AbstractTestCase {

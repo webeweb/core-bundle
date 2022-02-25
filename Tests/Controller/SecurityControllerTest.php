@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
 /**
  * Security controller test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Controller
  */
 class SecurityControllerTest extends AbstractWebTestCase {

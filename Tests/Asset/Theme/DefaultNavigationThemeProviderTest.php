@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Theme\TestDefaultNavigationThemeP
 /**
  * Default navigation theme provider test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Asset\Theme
  */
 class DefaultNavigationThemeProviderTest extends AbstractTestCase {

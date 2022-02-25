@@ -20,7 +20,7 @@ if (true === interface_exists("\Symfony\Component\Security\Core\User\AdvancedUse
     /**
      * User interface.
      *
-     * @author webeweb <https://github.com/webeweb/>
+     * @author webeweb <https://github.com/webeweb>
      * @package WBW\Bundle\CoreBundle\Model
      */
     interface UserInterface extends FosUserInterface, \Symfony\Component\Security\Core\User\AdvancedUserInterface {
@@ -31,7 +31,7 @@ if (true === interface_exists("\Symfony\Component\Security\Core\User\AdvancedUse
     /**
      * User interface.
      *
-     * @author webeweb <https://github.com/webeweb/>
+     * @author webeweb <https://github.com/webeweb>
      * @package WBW\Bundle\CoreBundle\Model
      */
     interface UserInterface extends FosUserInterface, BaseUserInterface, EquatableInterface {

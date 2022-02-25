@@ -22,7 +22,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 /**
  * Quote manager test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Manager\Asset
  */
 class QuoteManagerTest extends AbstractTestCase {

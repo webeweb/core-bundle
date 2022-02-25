@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
 /**
  * Layout controller test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Controller
  */
 class LayoutControllerTest extends AbstractWebTestCase {

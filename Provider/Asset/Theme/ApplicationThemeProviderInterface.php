@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Provider\Asset\ThemeProviderInterface;
 /**
  * Application theme provider interface.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Provider\Asset\Theme
  */
 interface ApplicationThemeProviderInterface extends ThemeProviderInterface {

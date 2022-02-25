@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Model\Attribute;
 /**
  * String origin URL trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Model\Attribute
  */
 trait StringOriginUrlTrait {

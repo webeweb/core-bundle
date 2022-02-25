@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Asset\Navigation\AbstractNavigationNode;
 /**
  * Test navigation node.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Navigation
  */
 class TestNavigationNode extends AbstractNavigationNode {

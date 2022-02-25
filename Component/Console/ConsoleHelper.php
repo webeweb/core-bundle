@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Helper\OSHelper;
 /**
  * Console helper.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Component\Console
  */
 class ConsoleHelper {

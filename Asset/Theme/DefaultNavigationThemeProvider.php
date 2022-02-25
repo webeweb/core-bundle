@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Provider\Asset\Theme\NavigationThemeProviderInterface;
 /**
  * Default navigation theme provider.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Asset\Theme
  */
 class DefaultNavigationThemeProvider implements NavigationThemeProviderInterface {

@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Icon\TestIcon;
 /**
  * Abstract icon test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Asset\Icon
  */
 class AbstractIconTest extends AbstractTestCase {

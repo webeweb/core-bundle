@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Asset\Theme\DefaultNavigationThemeProvider;
 /**
  * Test default navigation theme provider.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Theme
  */
 class TestDefaultNavigationThemeProvider extends DefaultNavigationThemeProvider {

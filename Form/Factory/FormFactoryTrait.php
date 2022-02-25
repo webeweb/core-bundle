@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Form\Factory;
 /**
  * Form factory trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Form\Factory
  */
 trait FormFactoryTrait {

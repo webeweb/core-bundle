@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Model\Attribute;
 /**
  * Array roles trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Model\Attribute
  */
 trait ArrayRolesTrait {

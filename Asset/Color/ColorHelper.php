@@ -37,7 +37,7 @@ use WBW\Bundle\CoreBundle\Provider\Asset\ColorProviderInterface;
 /**
  * Color helper.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Asset\Color
  */
 class ColorHelper {

@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Component\HttpFoundation\RequestStackTrait;
 /**
  * Test request stack trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Component\HttpFoundation
  */
 class TestRequestStackTrait {

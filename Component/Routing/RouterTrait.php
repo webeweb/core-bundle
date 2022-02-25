@@ -16,7 +16,7 @@ use Symfony\Component\Routing\RouterInterface;
 /**
  * Router trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Component\Routing
  */
 trait RouterTrait {
