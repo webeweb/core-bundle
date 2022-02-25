@@ -79,6 +79,7 @@ CHANGELOG
 - Add String Twig extension
 - Add String Twig extension trait
 - Improve Configuration
+- Improve PHPDoc
 - Update Application theme provider interface
 - Update dependencies
 - Update service names
