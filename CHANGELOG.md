@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Improve PHPDoc
+
 ### [2.35.0](https://github.com/webeweb/core-bundle/tree/v2.35.0) (2022-01-05)
 
 - Improve views organization
