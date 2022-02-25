@@ -25,7 +25,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Entity\TestUser;
 /**
  * Test fixtures.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures
  */
 class TestFixtures {

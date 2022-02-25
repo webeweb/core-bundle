@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Provider\ThemeProviderInterface;
 /**
  * Test theme manager.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Manager
  */
 class TestThemeManager extends AbstractThemeManager {

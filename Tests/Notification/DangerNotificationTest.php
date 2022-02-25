@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 /**
  * Danger notification test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Notification
  */
 class DangerNotificationTest extends AbstractTestCase {

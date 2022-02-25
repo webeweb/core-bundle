@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\Attribute\TestStringOriginUrlTrai
 /**
  * String origin URL trait test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Model\Attribute
  */
 class StringOriginUrlTraitTest extends AbstractTestCase {

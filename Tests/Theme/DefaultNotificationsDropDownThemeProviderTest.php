@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Theme\DefaultNotificationsDropDownThemeProvider;
 /**
  * Default notifications drop down theme provider test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Theme
  */
 class DefaultNotificationsDropDownThemeProviderTest extends AbstractTestCase {

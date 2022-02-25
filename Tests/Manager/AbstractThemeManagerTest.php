@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\TestThemeManager;
 /**
  * Abstract theme manager test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Manager
  */
 class AbstractThemeManagerTest extends AbstractTestCase {

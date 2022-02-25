@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 /**
  * User info theme provider interface test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Provider\Theme
  */
 class UserInfoThemeProviderInterfaceTest extends AbstractTestCase {

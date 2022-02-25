@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Provider\Theme\HookDropDownThemeProviderTrait;
 /**
  * Test hook drop down theme provider trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\Theme
  */
 class TestHookDropDownThemeProviderTrait {

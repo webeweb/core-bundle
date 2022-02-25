@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Asset;
 /**
  * SyntaxHighlighter config.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Asset
  */
 class SyntaxHighlighterConfig {

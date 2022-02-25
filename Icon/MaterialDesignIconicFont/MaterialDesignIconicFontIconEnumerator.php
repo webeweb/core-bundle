@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Icon\MaterialDesignIconicFont;
 /**
  * Material Design Iconic Font icon enumerator.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Icon\MaterialDesignIconicFont
  */
 class MaterialDesignIconicFontIconEnumerator {

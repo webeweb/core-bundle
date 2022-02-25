@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 /**
  * Light green color provider test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Color\MaterialDesignColorPalette
  */
 class LightGreenColorProviderTest extends AbstractTestCase {

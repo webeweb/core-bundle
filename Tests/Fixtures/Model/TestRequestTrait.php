@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Model\RequestTrait;
 /**
  * Test request trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Model
  */
 class TestRequestTrait {

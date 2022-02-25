@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\WBWCoreBundle;
 /**
  * Core bundle test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests
  */
 class WBWCoreBundleTest extends AbstractTestCase {

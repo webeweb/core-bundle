@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Toast\ToastInterface;
 /**
  * Toast event.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Event
  */
 class ToastEvent extends AbstractEvent {

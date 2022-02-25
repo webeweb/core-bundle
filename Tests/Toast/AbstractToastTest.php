@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Toast\TestToast;
 /**
  * Abstract toast test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Toast
  */
 class AbstractToastTest extends AbstractTestCase {

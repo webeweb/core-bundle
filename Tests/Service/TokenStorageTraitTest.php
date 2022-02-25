@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Service\TestTokenStorageTrait;
 /**
  * Token storage trait test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Service
  */
 class TokenStorageTraitTest extends AbstractTestCase {

@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 /**
  * Date date/time data transformer test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Form\DataTransformer\DateTime
  */
 class DateDateTimeDataTransformerTest extends AbstractTestCase {

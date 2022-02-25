@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\QuoteTwigExtension;
 /**
  * Quote Twig extension test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Twig\Extension
  */
 class QuoteTwigExtensionTest extends AbstractTestCase {

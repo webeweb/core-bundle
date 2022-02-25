@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Provider\Theme;
 /**
  * NotificationsDropDown theme provider trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Provider\Theme
  */
 trait NotificationsDropDownThemeProviderTrait {

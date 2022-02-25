@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 /**
  * Font Awesome icon renderer test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Icon\FontAwesome
  */
 class FontAwesomeIconRendererTest extends AbstractTestCase {

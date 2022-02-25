@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Form\Type;
 /**
  * Date/time type interface.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Form\Type
  */
 interface DateTimeTypeInterface {

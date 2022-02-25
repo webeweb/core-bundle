@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Helper;
 /**
  * PhantomJS helper trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Helper
  */
 trait PhantomJSHelperTrait {

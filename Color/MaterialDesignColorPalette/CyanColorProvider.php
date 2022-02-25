@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Provider\Color\CyanColorProviderInterface;
 /**
  * Cyan color provider.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette
  */
 class CyanColorProvider extends AbstractColorProvider implements MaterialDesignColorPaletteInterface, CyanColorProviderInterface {

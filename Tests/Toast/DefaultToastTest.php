@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Toast\DefaultToast;
 /**
  * Default toast test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Toast
  */
 class DefaultToastTest extends AbstractTestCase {

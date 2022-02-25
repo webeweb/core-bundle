@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Component\EventDispatcher\BaseEvent;
 /**
  * Event dispatcher helper.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\EventDispatcher
  */
 class EventDispatcherHelper {

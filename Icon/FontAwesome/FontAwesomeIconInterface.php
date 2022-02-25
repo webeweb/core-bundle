@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Icon\IconInterface;
 /**
  * Font Awesome icon interface.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Icon\FontAwesome
  */
 interface FontAwesomeIconInterface extends IconInterface {

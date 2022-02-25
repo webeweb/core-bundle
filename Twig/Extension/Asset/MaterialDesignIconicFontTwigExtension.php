@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Renderer\IconRendererInterface;
 /**
  * Material Design Iconic Font Twig extension.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Twig\Extension\Asset
  */
 class MaterialDesignIconicFontTwigExtension extends AbstractMaterialDesignIconicFontTwigExtension implements IconRendererInterface {

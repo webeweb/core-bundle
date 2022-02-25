@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Provider\Theme\UserInfoThemeProviderInterface;
 /**
  * Theme manager.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Manager
  */
 class ThemeManager extends AbstractThemeManager {

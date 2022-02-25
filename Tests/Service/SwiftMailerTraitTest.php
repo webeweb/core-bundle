@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Service\TestSwiftMailerTrait;
 /**
  * Swift mailer trait test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Service
  */
 class SwiftMailerTraitTest extends AbstractTestCase {

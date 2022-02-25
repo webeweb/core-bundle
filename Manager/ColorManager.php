@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Provider\ProviderInterface;
 /**
  * Color manager.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Manager
  */
 class ColorManager extends AbstractManager {

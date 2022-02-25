@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 /**
  * Navigation tree test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Navigation
  */
 class NavigationTreeTest extends AbstractTestCase {

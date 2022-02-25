@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 /**
  * Bad user role exception test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Exception
  */
 class BadUserRoleExceptionTest extends AbstractTestCase {

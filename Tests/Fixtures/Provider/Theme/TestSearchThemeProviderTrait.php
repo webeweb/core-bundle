@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Provider\Theme\SearchThemeProviderTrait;
 /**
  * Test search theme provider trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\Theme
  */
 class TestSearchThemeProviderTrait {

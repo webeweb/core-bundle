@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Form\DataTransformer\AbstractTimestampDataTransformer;
 /**
  * Date timestamp data transformer.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Form\DataTransformer\Timestamp
  */
 class DateTimestampDataTransformer extends AbstractTimestampDataTransformer {

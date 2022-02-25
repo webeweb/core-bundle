@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\TestManager;
 /**
  * Abstract manager test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Manager
  */
 class AbstractManagerTest extends AbstractTestCase {

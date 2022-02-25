@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Asset\JQueryInputMaskTwigExtension as B
 /**
  * jQuery Input mask Twig Extension.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Twig\Extension\Plugin
  * @deprecated since 2.13.0, use {@see WBW\Bundle\CoreBundle\Twig\Extension\Asset\JQueryInputMaskTwigExtension} instead.
  */

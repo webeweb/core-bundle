@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Toast\ToastInterface;
 /**
  * Danger toast test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Toast
  */
 class DangerToastTest extends AbstractTestCase {

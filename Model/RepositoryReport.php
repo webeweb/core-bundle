@@ -19,7 +19,7 @@ use WBW\Library\Traits\Integers\IntegerMinimumTrait;
 /**
  * Repository report.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Model
  */
 class RepositoryReport {

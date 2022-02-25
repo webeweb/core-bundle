@@ -17,7 +17,7 @@ use Symfony\Component\Finder\Finder;
 /**
  * Skeleton helper.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Helper
  */
 class SkeletonHelper {

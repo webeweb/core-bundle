@@ -21,7 +21,7 @@ use WBW\Library\Types\Helper\ArrayHelper;
 /**
  * Form factory.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Form\Factory
  */
 class FormFactory {

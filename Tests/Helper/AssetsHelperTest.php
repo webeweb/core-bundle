@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Helper\TestAssetsHelper;
 /**
  * Assets helper test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Helper
  */
 class AssetsHelperTest extends AbstractTestCase {

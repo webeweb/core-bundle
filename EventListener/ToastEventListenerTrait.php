@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\EventListener;
 /**
  * Toast event listener trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\EventListener
  */
 trait ToastEventListenerTrait {

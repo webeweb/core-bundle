@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Entity\TestSelect2Item;
 /**
  * Select2 helper test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Helper\Model
  */
 class Select2HelperTest extends AbstractTestCase {

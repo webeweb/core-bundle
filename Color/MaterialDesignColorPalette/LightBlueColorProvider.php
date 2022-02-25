@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Provider\Color\LightBlueColorProviderInterface;
 /**
  * Light blue color provider.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette
  */
 class LightBlueColorProvider extends AbstractColorProvider implements MaterialDesignColorPaletteInterface, LightBlueColorProviderInterface {

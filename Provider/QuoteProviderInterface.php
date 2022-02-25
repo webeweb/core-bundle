@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Quote\QuoteInterface;
 /**
  * Quote provider interface.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Provider
  */
 interface QuoteProviderInterface extends ProviderInterface {

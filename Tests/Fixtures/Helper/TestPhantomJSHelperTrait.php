@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Helper\PhantomJSHelperTrait;
 /**
  * Test PhantomJS helper trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Helper
  */
 class TestPhantomJSHelperTrait {

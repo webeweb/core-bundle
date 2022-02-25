@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Navigation\BreadcrumbNode;
 /**
  * Breadcrumb node action "new user".
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Navigation\MaterialDesignIconicFont
  */
 class BreadcrumbNodeActionNewUser extends BreadcrumbNode {

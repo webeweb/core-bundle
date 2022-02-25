@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
 /**
  * Navigation node "settings".
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Navigation\FontAwesome
  */
 class NavigationNodeSettings extends NavigationNode {

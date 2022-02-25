@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Command\UnzipAssetsCommand;
 /**
  * Test unzip assets command.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Command
  */
 class TestUnzipAssetsCommand extends UnzipAssetsCommand {

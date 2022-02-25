@@ -20,7 +20,7 @@ use WBW\Library\Types\Helper\ArrayHelper;
 /**
  * Icon factory.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Icon
  */
 class IconFactory {

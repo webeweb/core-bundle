@@ -17,7 +17,7 @@ use Twig\TwigFunction;
 /**
  * Stylesheet Twig extension.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Twig\Extension\CSS
  */
 class StylesheetTwigExtension extends AbstractTwigExtension {

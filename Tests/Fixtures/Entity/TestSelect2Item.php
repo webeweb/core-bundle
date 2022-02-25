@@ -17,7 +17,7 @@ use WBW\Library\Core\Model\AbstractNode;
 /**
  * Test Select2 item.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Entity;
  */
 class TestSelect2Item extends AbstractNode implements Select2ItemInterface {

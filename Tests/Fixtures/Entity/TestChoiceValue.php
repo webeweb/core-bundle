@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Entity\ChoiceValueInterface;
 /**
  * Test choice value.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Entity
  */
 class TestChoiceValue implements ChoiceValueInterface {

@@ -34,7 +34,7 @@ use WBW\Bundle\CoreBundle\Toast\ToastInterface;
 /**
  * Abstract controller test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Controller
  */
 class AbstractControllerTest extends AbstractTestCase {

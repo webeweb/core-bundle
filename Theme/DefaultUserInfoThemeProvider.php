@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Provider\Theme\UserInfoThemeProviderInterface;
 /**
  * Default user info theme provider.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Theme
  */
 class DefaultUserInfoThemeProvider implements UserInfoThemeProviderInterface {

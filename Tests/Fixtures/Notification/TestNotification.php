@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Notification\NotificationInterface;
 /**
  * Test notification.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Notification
  */
 class TestNotification extends AbstractNotification {

@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 /**
  * Navigation node "settings" test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Navigation\FontAwesome
  */
 class NavigationNodeSettingsTest extends AbstractTestCase {

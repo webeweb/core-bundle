@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette\TestPi
 /**
  * Pink color provider trait test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Color\MaterialDesignColorPalette
  */
 class PinkColorProviderTraitTest extends AbstractTestCase {

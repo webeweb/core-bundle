@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Icon\IconRenderer;
 /**
  * Material Design Iconic Font icon renderer.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Icon\MaterialDesignIconicFont
  */
 class MaterialDesignIconicFontIconRenderer extends IconRenderer {

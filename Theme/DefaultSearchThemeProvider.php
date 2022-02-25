@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Provider\Theme\SearchThemeProviderInterface;
 /**
  * Default search theme provider.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Theme
  */
 class DefaultSearchThemeProvider implements SearchThemeProviderInterface {

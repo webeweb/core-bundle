@@ -17,7 +17,7 @@ use Twig\TwigFunction;
 /**
  * Javascript Twig extension.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Twig\Extension
  */
 class JavascriptTwigExtension extends AbstractTwigExtension {

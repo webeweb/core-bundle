@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 /**
  * Teal color provider interface.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Provider\Color
  */
 interface TealColorProviderInterface extends ColorProviderInterface {

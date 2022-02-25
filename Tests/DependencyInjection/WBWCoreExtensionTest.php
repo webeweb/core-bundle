@@ -64,7 +64,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\UtilityTwigExtension;
 /**
  * Core extension test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\DependencyInjection
  */
 class WBWCoreExtensionTest extends AbstractTestCase {

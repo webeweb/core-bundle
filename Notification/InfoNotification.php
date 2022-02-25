@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Notification;
 /**
  * Info notification.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Notification
  */
 class InfoNotification extends AbstractNotification {

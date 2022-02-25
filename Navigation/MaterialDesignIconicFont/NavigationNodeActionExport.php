@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Navigation\NavigationNode;
 /**
  * Navigation node action "export".
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Navigation\MaterialDesignIconicFont
  */
 class NavigationNodeActionExport extends NavigationNode {

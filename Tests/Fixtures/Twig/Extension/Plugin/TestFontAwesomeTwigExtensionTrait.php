@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\FontAwesomeTwigExtensionTrait;
 /**
  * Test Font Awesome Twig extension trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Twig\Extension\Plugin
  */
 class TestFontAwesomeTwigExtensionTrait {

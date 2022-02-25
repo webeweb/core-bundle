@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Icon\IconRenderer;
 /**
  * Font Awesome icon renderer.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Icon\FontAwesome
  */
 class FontAwesomeIconRenderer extends IconRenderer {

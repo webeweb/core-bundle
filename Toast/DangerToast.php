@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Toast;
 /**
  * Danger toast.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Toast
  */
 class DangerToast extends AbstractToast {

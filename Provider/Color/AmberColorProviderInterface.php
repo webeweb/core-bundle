@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 /**
  * Amber color provider interface.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Provider\Color
  */
 interface AmberColorProviderInterface extends ColorProviderInterface {

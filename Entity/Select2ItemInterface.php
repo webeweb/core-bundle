@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Entity;
 /**
  * Select2 item interface.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Entity
  */
 interface Select2ItemInterface {

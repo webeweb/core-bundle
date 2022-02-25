@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Provider\Color\DeepPurpleColorProviderInterface;
 /**
  * Deep purple color provider.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette
  */
 class DeepPurpleColorProvider extends AbstractColorProvider implements MaterialDesignColorPaletteInterface, DeepPurpleColorProviderInterface {

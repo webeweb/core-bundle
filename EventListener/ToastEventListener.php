@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Service\SessionTrait;
 /**
  * Toast event listener.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\EventListener
  */
 class ToastEventListener {

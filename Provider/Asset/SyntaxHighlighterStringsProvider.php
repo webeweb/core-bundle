@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Translation\TranslationInterface;
 /**
  * SyntaxHighlighter strings provider.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Provider\Asset
  */
 class SyntaxHighlighterStringsProvider implements ProviderInterface {

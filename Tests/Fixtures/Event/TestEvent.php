@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Event\AbstractEvent;
 /**
  * Test event.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Event
  */
 class TestEvent extends AbstractEvent {

@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Navigation\BreadcrumbNode;
 /**
  * Breadcrumb node action "export".
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Navigation\FontAwesome
  */
 class BreadcrumbNodeActionExport extends BreadcrumbNode {

@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
 /**
  * Core bundle.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle
  */
 class WBWCoreBundle extends Bundle implements AssetsProviderInterface {

@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Toast\ToastInterface;
 /**
  * Success toast test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Toast
  */
 class SuccessToastTest extends AbstractTestCase {

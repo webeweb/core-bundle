@@ -22,7 +22,7 @@ use WBW\Bundle\CoreBundle\Helper\CommandHelper;
 /**
  * Abstract command.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Command
  * @abstract
  */

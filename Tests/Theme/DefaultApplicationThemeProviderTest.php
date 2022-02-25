@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Theme\DefaultApplicationThemeProvider;
 /**
  * Default application theme provider test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Theme
  */
 class DefaultApplicationThemeProviderTest extends AbstractTestCase {

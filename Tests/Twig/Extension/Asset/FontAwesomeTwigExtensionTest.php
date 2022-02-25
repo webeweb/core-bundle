@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Asset\FontAwesomeTwigExtension;
 /**
  * Font Awesome Twig extension test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Twig\Extension\Asset
  */
 class FontAwesomeTwigExtensionTest extends AbstractTestCase {

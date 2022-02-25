@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Model\Attribute\StringRedirectUrlTrait;
 /**
  * Redirect response exception.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Exception
  */
 class RedirectResponseException extends AbstractException {

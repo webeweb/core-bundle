@@ -20,7 +20,7 @@ use WBW\Library\Sorter\Model\AlphabeticalTreeNodeInterface;
 /**
  * Form renderer test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Form\Renderer
  */
 class FormRendererTest extends AbstractTestCase {

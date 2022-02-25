@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 /**
  * White color provider test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Color\MaterialDesignColorPalette
  */
 class WhiteColorProviderTest extends AbstractTestCase {

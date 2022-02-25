@@ -21,7 +21,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 /**
  * YAML Quote provider test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Quote
  */
 class YamlQuoteProviderTest extends AbstractTestCase {

@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Form\DataTransformer\AbstractDateTimeDataTransformer;
 /**
  * Default date/time data transformer.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Form\DataTransformer\DateTime
  */
 class DefaultDateTimeDataTransformer extends AbstractDateTimeDataTransformer {

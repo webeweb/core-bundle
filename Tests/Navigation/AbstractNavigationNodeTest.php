@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Navigation\TestNavigationNode;
 /**
  * Abstract navigation node test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Navigation
  */
 class AbstractNavigationNodeTest extends AbstractTestCase {

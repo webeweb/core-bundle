@@ -22,7 +22,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Form\Factory\TestFormFactory;
 /**
  * Form factory test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Form\Factory
  */
 class FormFactoryTest extends AbstractTestCase {

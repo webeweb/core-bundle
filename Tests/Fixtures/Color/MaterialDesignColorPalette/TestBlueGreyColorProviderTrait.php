@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette\BlueGreyColorProvider
 /**
  * Test blue grey color provider trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Color\MaterialDesignColorPalette
  */
 class TestBlueGreyColorProviderTrait {

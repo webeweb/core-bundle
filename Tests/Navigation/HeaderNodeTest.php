@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Navigation\TestNavigationNode;
 /**
  * Header node test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Navigation
  */
 class HeaderNodeTest extends AbstractTestCase {

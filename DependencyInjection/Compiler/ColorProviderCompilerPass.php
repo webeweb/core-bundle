@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Provider\ColorProviderInterface;
 /**
  * Color provider compiler pass.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\DependencyInjection\Compiler
  */
 class ColorProviderCompilerPass implements CompilerPassInterface {

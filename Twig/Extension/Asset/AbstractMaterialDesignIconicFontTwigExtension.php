@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
 /**
  * Abstract Material Design Iconic Font Twig extension.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\Core\Twig\Extension\Plugin
  * @abstract
  */

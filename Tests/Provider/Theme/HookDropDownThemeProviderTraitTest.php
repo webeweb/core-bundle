@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\Theme\TestHookDropDownThemePro
 /**
  * Hook drop down theme provider trait test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Provider\Theme
  */
 class HookDropDownThemeProviderTraitTest extends AbstractTestCase {

@@ -20,7 +20,7 @@ use Twig\Environment;
 /**
  * Twig controller.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Controller
  */
 class TwigController extends AbstractController {

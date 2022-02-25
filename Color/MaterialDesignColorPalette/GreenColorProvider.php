@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Provider\Color\GreenColorProviderInterface;
 /**
  * Green color provider.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Color\MaterialDesignColorPalette
  */
 class GreenColorProvider extends AbstractColorProvider implements MaterialDesignColorPaletteInterface, GreenColorProviderInterface {

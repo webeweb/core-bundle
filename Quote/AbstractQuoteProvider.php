@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Provider\QuoteProviderInterface;
 /**
  * Abstract quote provider.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Quote
  * @abstract
  */

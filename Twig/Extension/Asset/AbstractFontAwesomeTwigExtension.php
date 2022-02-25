@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
 /**
  * Abstract Font Awesome Twig extension.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Twig\Extension\Asset
  * @abstract
  */

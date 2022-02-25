@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Renderer;
 /**
  * Icon renderer interface.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Twig\Extension
  */
 interface IconRendererInterface {

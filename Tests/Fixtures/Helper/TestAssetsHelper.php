@@ -16,7 +16,7 @@ use WBW\Bundle\CoreBundle\Helper\AssetsHelper;
 /**
  * Test assets helper.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Helper
  */
 class TestAssetsHelper extends AssetsHelper {

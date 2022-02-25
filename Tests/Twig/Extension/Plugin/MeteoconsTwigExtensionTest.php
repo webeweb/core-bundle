@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MeteoconsTwigExtension;
 /**
  * Meteocons Twig extension test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Twig\Extension\Plugin
  */
 class MeteoconsTwigExtensionTest extends AbstractTestCase {

@@ -22,7 +22,7 @@ use WBW\Library\Types\Helper\ArrayHelper;
 /**
  * SyntaxHighlighter Twig extension.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Twig\Extension\Asset
  */
 class SyntaxHighlighterTwigExtension extends AbstractSyntaxHighlighterTwigExtension {

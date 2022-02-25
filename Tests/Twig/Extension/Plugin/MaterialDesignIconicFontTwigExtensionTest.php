@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Plugin\MaterialDesignIconicFontTwigExte
 /**
  * Material Design Iconic Font Twig extension test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Twig\Extension\Plugin
  */
 class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
