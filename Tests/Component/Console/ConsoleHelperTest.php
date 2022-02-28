@@ -52,7 +52,7 @@ class ConsoleHelperTest extends AbstractTestCase {
      */
     public function testNewSymfonyStyle(): void {
 
-        // Set an Ouput formatter mock.
+        // Set an Output formatter mock.
         $outputFormatter = $this->getMockBuilder(OutputFormatterInterface::class)->getMock();
 
         // Set an Input mock.

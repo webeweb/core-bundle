@@ -22,7 +22,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\EventListener\TestKernelEventListenerTr
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\EventListener
  */
-class EventDispatcherTraitTest extends AbstractTestCase {
+class KernelEventListenerTraitTest extends AbstractTestCase {
 
     /**
      * Theme manager.

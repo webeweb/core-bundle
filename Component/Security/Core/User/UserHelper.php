@@ -53,6 +53,6 @@ class UserHelper {
             $result &= $buffer;
         }
 
-        return boolval($result);
+        return $result;
     }
 }

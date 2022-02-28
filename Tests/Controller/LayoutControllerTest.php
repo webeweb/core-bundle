@@ -22,16 +22,6 @@ use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
 class LayoutControllerTest extends AbstractWebTestCase {
 
     /**
-     * {@inheritDoc}
-     */
-    public static function setUpBeforeClass(): void {
-        parent::setUpBeforeClass();
-
-        parent::setUpSchemaTool();
-        parent::setUpUserFixtures();
-    }
-
-    /**
      * Tests emailAction()
      *
      * @return void

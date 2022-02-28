@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Provider\Asset\Theme;
 
 /**
- * HookDropDown theme provider trait.
+ * Hook drop down theme provider trait.
  *
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Provider\Asset\Theme
