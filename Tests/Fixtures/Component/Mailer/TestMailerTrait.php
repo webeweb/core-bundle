@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Fixtures\SwiftMailer;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Component\Mailer;
 
-use WBW\Bundle\CoreBundle\SwiftMailer\SwiftMailerTrait;
+use WBW\Bundle\CoreBundle\Component\Mailer\MailerTrait;
 
 /**
- * Test swift mailer trait.
+ * Test mailer trait.
  *
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\SwiftMailer
  */
-class TestSwiftMailerTrait {
+class TestMailerTrait {
 
-    use SwiftMailerTrait {
-        setSwiftMailer as public;
+    use MailerTrait {
+        setMailer as public;
     }
 }

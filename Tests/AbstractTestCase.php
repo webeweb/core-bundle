@@ -15,7 +15,6 @@ use Closure;
 use Doctrine\ORM\EntityManagerInterface;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\LoggerInterface;
-use Swift_Mailer;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
@@ -24,6 +23,7 @@ use Symfony\Component\HttpFoundation\Session\Flash\FlashBagInterface;
 use Symfony\Component\HttpFoundation\Session\SessionBagInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\HttpKernel\KernelInterface;
+use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
@@ -107,6 +107,13 @@ abstract class AbstractTestCase extends TestCase {
     protected $logger;
 
     /**
+     * Mailer.
+     *
+     * @var MailerInterface
+     */
+    protected $mailer;
+
+    /**
      * Router.
      *
      * @var RouterInterface
@@ -126,13 +133,6 @@ abstract class AbstractTestCase extends TestCase {
      * @var SessionBagInterface
      */
     protected $sessionBag;
-
-    /**
-     * Swift mailer.
-     *
-     * @var Swift_Mailer
-     */
-    protected $swiftMailer;
 
     /**
      * Token
@@ -222,6 +222,9 @@ abstract class AbstractTestCase extends TestCase {
         // Set a Logger mock.
         $this->logger = $this->getMockBuilder(LoggerInterface::class)->getMock();
 
+        // Set a Mailer mock.
+        $this->mailer = $this->getMockBuilder(MailerInterface::class)->getMock();
+
         // Set a Router mock.
         $this->router = $this->getMockBuilder(RouterInterface::class)->getMock();
 
@@ -230,9 +233,6 @@ abstract class AbstractTestCase extends TestCase {
 
         // Set a Session bag mock.
         $this->sessionBag = $this->getMockBuilder(SessionBagInterface::class)->getMock();
-
-        // Set a Swift mailer mock.
-        $this->swiftMailer = $this->getMockBuilder(Swift_Mailer::class)->disableOriginalConstructor()->getMock();
 
         // Set a trans() callback.
         $trans = TestCaseHelper::getTranslatorTransFunction();
@@ -281,7 +281,7 @@ abstract class AbstractTestCase extends TestCase {
         $this->containerBuilder->set("security.csrf.token_manager", $this->csrfTokenManager);
         $this->containerBuilder->set("security.encoder_factory", $this->encoderFactory);
         $this->containerBuilder->set("security.token_storage", $this->tokenStorage);
-        $this->containerBuilder->set("swiftmailer.mailer", $this->swiftMailer);
+        $this->containerBuilder->set("swiftmailer.mailer", $this->mailer);
         $this->containerBuilder->set("translator", $this->translator);
         $this->containerBuilder->set("twig", $this->twigEnvironment);
     }
