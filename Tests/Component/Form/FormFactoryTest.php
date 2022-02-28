@@ -28,7 +28,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Component\Form\TestFormFactory;
 class FormFactoryTest extends AbstractTestCase {
 
     /**
-     * Choice values
+     * Choice values.
      *
      * @var ChoiceValueInterface[]
      */

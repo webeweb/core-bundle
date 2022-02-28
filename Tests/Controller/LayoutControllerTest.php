@@ -70,7 +70,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
      */
     public function testStylesheetsAction(): void {
 
-        $client = static::createClient();
+        $client = $this->client;
 
         $client->request("GET", "/stylesheets");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());

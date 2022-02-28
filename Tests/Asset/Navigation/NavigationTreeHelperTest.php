@@ -26,7 +26,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\TestFixtures;
 class NavigationTreeHelperTest extends AbstractTestCase {
 
     /**
-     * Navigation tree
+     * Navigation tree.
      *
      * @var NavigationTree
      */
