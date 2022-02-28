@@ -127,20 +127,6 @@ class Configuration implements ConfigurationInterface {
     }
 
     /**
-     * Add the core "user" section.
-     *
-     * @param ArrayNodeDefinition $node The node.
-     * @return void
-     */
-    private function addCoreUserSection(ArrayNodeDefinition $node): void {
-
-        $user = $node->children()->arrayNode("user");
-        UserConfiguration::getConfig($user);
-
-        $user->end();
-    }
-
-    /**
      * {@inheritDoc}
      *
      * @see https://github.com/webeweb/core-bundle/blob/master/Tests/Fixtures/app/config/config_test.yml
@@ -166,8 +152,6 @@ class Configuration implements ConfigurationInterface {
                     ->end()
                 ->end()
             ->end();
-
-        $this->addCoreUserSection($rootNode);
 
         $this->addCorePluginsSection($rootNode, $plugins);
         $this->addCoreLocalesSection($rootNode, $plugins);

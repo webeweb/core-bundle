@@ -37,12 +37,6 @@ use WBW\Bundle\CoreBundle\Asset\Quote\YamlQuoteProvider;
 use WBW\Bundle\CoreBundle\Command\CopySkeletonCommand;
 use WBW\Bundle\CoreBundle\Command\UnzipAssetsCommand;
 use WBW\Bundle\CoreBundle\Component\Form\FormHelper;
-use WBW\Bundle\CoreBundle\Controller\ChangePasswordController;
-use WBW\Bundle\CoreBundle\Controller\GroupController;
-use WBW\Bundle\CoreBundle\Controller\ProfileController;
-use WBW\Bundle\CoreBundle\Controller\RegistrationController;
-use WBW\Bundle\CoreBundle\Controller\ResettingController;
-use WBW\Bundle\CoreBundle\Controller\SecurityController;
 use WBW\Bundle\CoreBundle\DependencyInjection\Configuration;
 use WBW\Bundle\CoreBundle\DependencyInjection\WBWCoreExtension;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
@@ -69,11 +63,6 @@ use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\StringTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\StylesheetTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\UtilityTwigExtension;
-use WBW\Bundle\CoreBundle\Utility\CanonicalFieldsUpdater;
-use WBW\Bundle\CoreBundle\Utility\Canonicalizer;
-use WBW\Bundle\CoreBundle\Utility\PasswordUpdater;
-use WBW\Bundle\CoreBundle\Utility\TokenGenerator;
-use WBW\Bundle\CoreBundle\Validator\Initializer;
 
 /**
  * Core extension test.
@@ -225,12 +214,6 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(StylesheetTwigExtension::class, $this->containerBuilder->get(StylesheetTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(UtilityTwigExtension::class, $this->containerBuilder->get(UtilityTwigExtension::SERVICE_NAME));
 
-        // Utilities
-        $this->assertInstanceOf(CanonicalFieldsUpdater::class, $this->containerBuilder->get(CanonicalFieldsUpdater::SERVICE_NAME));
-        $this->assertInstanceOf(Canonicalizer::class, $this->containerBuilder->get(Canonicalizer::SERVICE_NAME));
-        $this->assertInstanceOf(PasswordUpdater::class, $this->containerBuilder->get(PasswordUpdater::SERVICE_NAME));
-        $this->assertInstanceOf(TokenGenerator::class, $this->containerBuilder->get(TokenGenerator::SERVICE_NAME));
-
         // Assets Twig extensions
         $this->assertInstanceOf(FontAwesomeTwigExtension::class, $this->containerBuilder->get(FontAwesomeTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(JQueryInputMaskTwigExtension::class, $this->containerBuilder->get(JQueryInputMaskTwigExtension::SERVICE_NAME));
@@ -238,9 +221,6 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(MaterialDesignIconicFontTwigExtension::class, $this->containerBuilder->get(MaterialDesignIconicFontTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(MeteoconsTwigExtension::class, $this->containerBuilder->get(MeteoconsTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(SyntaxHighlighterTwigExtension::class, $this->containerBuilder->get(SyntaxHighlighterTwigExtension::SERVICE_NAME));
-
-        // Validators
-        $this->assertInstanceOf(Initializer::class, $this->containerBuilder->get(Initializer::SERVICE_NAME));
     }
 
     /**
@@ -259,40 +239,6 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         $this->assertNull($obj->load($this->configs, $this->containerBuilder));
 
         $this->assertInstanceOf(SecurityEventListener::class, $this->containerBuilder->get(SecurityEventListener::SERVICE_NAME));
-    }
-
-    /**
-     * Tests load()
-     *
-     * @return void
-     * @throws Exception Throws an exception if an error occurs.
-     */
-    public function testLoadWithUser(): void {
-
-        // Set the configs mock.
-        $this->configs[WBWCoreExtension::EXTENSION_ALIAS]["user"] = [
-            "db_driver"     => "orm",
-            "user_class"    => "WBW\\Bundle\\CoreBundle\\Tests\\Fixtures\\Model\\FOSUser",
-            "firewall_name" => "main",
-            "from_email"    => [
-                "address"     => "no-reply@github.com",
-                "sender_name" => "GitHub",
-            ],
-            "group"         => [
-                "class" => "WBW\\Bundle\\CoreBundle\\Fixtures\\Model\\TestGroup",
-            ],
-        ];
-
-        $obj = new WBWCoreExtension();
-
-        $this->assertNull($obj->load($this->configs, $this->containerBuilder));
-
-        $this->assertInstanceOf(ChangePasswordController::class, $this->containerBuilder->get(ChangePasswordController::SERVICE_NAME));
-        $this->assertInstanceOf(GroupController::class, $this->containerBuilder->get(GroupController::SERVICE_NAME));
-        $this->assertInstanceOf(ProfileController::class, $this->containerBuilder->get(ProfileController::SERVICE_NAME));
-        $this->assertInstanceOf(RegistrationController::class, $this->containerBuilder->get(RegistrationController::SERVICE_NAME));
-        $this->assertInstanceOf(ResettingController::class, $this->containerBuilder->get(ResettingController::SERVICE_NAME));
-        $this->assertInstanceOf(SecurityController::class, $this->containerBuilder->get(SecurityController::SERVICE_NAME));
     }
 
     /**

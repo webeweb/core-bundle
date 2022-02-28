@@ -11,7 +11,11 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Model;
 
-use WBW\Bundle\CoreBundle\Model\User;
+use Symfony\Component\Security\Core\User\UserInterface;
+use WBW\Bundle\CoreBundle\Model\Attribute\ArrayRolesTrait;
+use WBW\Library\Traits\Strings\StringPasswordTrait;
+use WBW\Library\Traits\Strings\StringSaltTrait;
+use WBW\Library\Traits\Strings\StringUsernameTrait;
 
 /**
  * Test user.
@@ -19,6 +23,24 @@ use WBW\Bundle\CoreBundle\Model\User;
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Model
  */
-class TestUser extends User {
+class TestUser implements UserInterface {
 
+    use ArrayRolesTrait;
+    use StringSaltTrait;
+    use StringPasswordTrait;
+    use StringUsernameTrait;
+
+    /**
+     * Constructor.
+     */
+    public function __construct() {
+        // NOTHING TO DO
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function eraseCredentials() {
+        // NOTHING TO DO
+    }
 }

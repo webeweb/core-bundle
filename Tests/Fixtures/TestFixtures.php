@@ -11,8 +11,6 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures;
 
-use DateInterval;
-use DateTime;
 use Exception;
 use Symfony\Component\Security\Core\User\UserInterface;
 use WBW\Bundle\CoreBundle\Asset\Navigation\DividerNode;
@@ -20,9 +18,7 @@ use WBW\Bundle\CoreBundle\Asset\Navigation\HeaderNode;
 use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationNode;
 use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationTree;
-use WBW\Bundle\CoreBundle\Model\GroupInterface;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\FOSUser;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestGroup;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser;
 
 /**
  * Test fixtures.
@@ -31,19 +27,6 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestGroup;
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures
  */
 class TestFixtures {
-
-    /**
-     * Get the groups.
-     *
-     * @return GroupInterface[] Returns the groups.
-     */
-    public static function getGroups(): array {
-
-        $fixtures   = [];
-        $fixtures[] = new TestGroup("github");
-
-        return $fixtures;
-    }
 
     /**
      * Get the images.
@@ -117,18 +100,7 @@ class TestFixtures {
      */
     public static function getUsers(): array {
 
-        $user = new FOSUser();
-        $user
-            ->setUsername("webeweb")
-            ->setUsernameCanonical("webeweb")
-            ->setEmail("webeweb@github.com")
-            ->setEmailCanonical("webeweb@github.com")
-            ->setEnabled(true)
-            ->setSalt("salt")
-            ->setPlainPassword("github")
-            ->setConfirmationToken("confirmationToken")
-            ->setLastLogin((new DateTime())->sub(new DateInterval("P1D")))
-            ->setPasswordRequestedAt(new DateTime());
+        $user = new TestUser();
 
         return [$user];
     }

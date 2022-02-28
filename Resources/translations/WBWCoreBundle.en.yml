@@ -5,8 +5,6 @@ email:
     unsubscribe:       "Unsubscribe"
     with_best_regards: "With best regards"
 
-form:
-
 message:
     welcome: "Welcome {{ username }}"
 

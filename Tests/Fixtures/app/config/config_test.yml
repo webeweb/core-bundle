@@ -30,22 +30,7 @@ doctrine:
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping:                true
-        mappings:
-            WBWCoreBundle:
-                dir:       "Tests/Fixtures/app/config/doctrine"
-                type:      "yml"
-                is_bundle: true
-                prefix:    "WBW\\Bundle\\CoreBundle\\Tests\\Fixtures\\Model"
         naming_strategy:             "doctrine.orm.naming_strategy.underscore"
-
-# FOS User configuration
-fos_user:
-    db_driver:     "orm"
-    firewall_name: "main"
-    from_email:
-        address:     "no-reply@github.com"
-        sender_name: "GitHub"
-    user_class:    WBW\Bundle\CoreBundle\Tests\Fixtures\Model\FOSUser
 
 # Monolog configuration
 monolog:
@@ -81,18 +66,25 @@ wbw_core:
         - "animate_css"
         - "clippy_js"
         - "font_awesome"
+        - "full_calendar"
         - "jquery"
+        - "jquery_context_menu"
         - "jquery_easy_autocomplete"
         - "jquery_input_mask"
         - "jquery_select2"
+        - "leaflet"
+        - "leaflet_color_markers"
+        - "leaflet_marker_cluster"
         - "material_design_color_palette"
         - "material_design_hierarchical_display"
         - "material_design_iconic_font"
         - "meteocons"
         - "sweet_alert"
+        - "sweet_alert2"
         - "syntax_highlighter"
         - "wait_me"
     locales:
+        full_calendar:  "fr"
         jquery_select2: "fr"
     themes:
         syntax_highlighter: "Default"
