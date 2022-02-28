@@ -66,14 +66,17 @@ EOT;
      * @return void
      */
     protected function displayFooter(StyleInterface $io, int $exitCode, int $count): void {
+
         if (0 < $exitCode) {
             $io->error("Some errors occurred while copying skeletons");
             return;
         }
+
         if (0 === $count) {
             $io->success("No skeleton were provided by any bundle");
             return;
         }
+
         $io->success("All skeletons were successfully copied");
     }
 
