@@ -15,13 +15,14 @@ use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 use Symfony\Component\Config\Definition\Builder\NodeDefinition;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\DependencyInjection\Container;
+use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Yaml\Yaml;
 use WBW\Library\Types\Helper\ArrayHelper;
 
 /**
  * Configuration helper.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Component\DependencyInjection
  */
 class ConfigurationHelper {
@@ -63,6 +64,21 @@ class ConfigurationHelper {
     }
 
     /**
+     * Creates a tree builder.
+     *
+     * @param string $nodeName The node name.
+     * @return TreeBuilder Returns the tree builder.
+     */
+    public static function newTreeBuilder(string $nodeName): TreeBuilder {
+
+        if (Kernel::VERSION_ID < 40200) {
+            return new TreeBuilder();
+        }
+
+        return new TreeBuilder($nodeName);
+    }
+
+    /**
      * Register a container parameter.
      *
      * @param Container $container The container.
@@ -79,7 +95,7 @@ class ConfigurationHelper {
         }
 
         $item = $config[$key];
-        $name = "{$alias}.{$key}";
+        $name = "$alias.$key";
 
         if (true === $tree || false === is_array($item) || false === ArrayHelper::isObject($item)) {
             $container->setParameter($name, $item);
