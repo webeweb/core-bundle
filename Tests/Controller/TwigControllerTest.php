@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Controller;
 
+use WBW\Bundle\CoreBundle\Controller\TwigController;
 use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
 
 /**
@@ -55,5 +56,15 @@ class TwigControllerTest extends AbstractWebTestCase {
         $client->request("POST", "/twig/function/exception");
         $this->assertEquals(500, $client->getResponse()->getStatusCode());
         $this->assertEquals("application/json", $client->getResponse()->headers->get("Content-Type"));
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct(): void {
+
+        $this->assertEquals("wbw.core.controller.twig", TwigController::SERVICE_NAME);
     }
 }

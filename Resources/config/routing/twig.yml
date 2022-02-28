@@ -1,5 +1,5 @@
 # Resources/config/routing/twig.yml
 wbw_core_twig_function:
     path: "/twig/function/{name}"
-    defaults: { _controller: "WBWCoreBundle:Twig:function" }
+    defaults: { _controller: "WBW\\Bundle\\CoreBundle\\Controller\\TwigController::functionAction" }
     methods: [ "POST" ]

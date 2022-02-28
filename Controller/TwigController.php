@@ -16,6 +16,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Twig\Environment;
+use Twig\TwigFunction;
 
 /**
  * Twig controller.
@@ -24,6 +25,13 @@ use Twig\Environment;
  * @package WBW\Bundle\CoreBundle\Controller
  */
 class TwigController extends AbstractController {
+
+    /**
+     * Service name.
+     *
+     * @var string
+     */
+    const SERVICE_NAME = "wbw.core.controller.twig";
 
     /**
      * Function.
@@ -38,7 +46,7 @@ class TwigController extends AbstractController {
         $twig = $this->get("twig");
 
         $function = $twig->getFunction($name);
-        if (false === $function) {
+        if (false === ($function instanceof TwigFunction)) {
             return new JsonResponse([], 500);
         }
 

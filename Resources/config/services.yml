@@ -5,10 +5,19 @@ services:
         alias:  "monolog.logger"
         public: true
 
+    WBW\Bundle\CoreBundle\Controller\TwigController:
+        alias:  "wbw.core.controller.twig"
+        public: true
+
     wbw.core.component.form.helper:
         class:  WBW\Bundle\CoreBundle\Component\Form\FormHelper
         arguments: [ "@doctrine.orm.entity_manager", "@event_dispatcher" ]
         public: true
+
+    wbw.core.controller.twig:
+        class: WBW\Bundle\CoreBundle\Controller\TwigController
+        calls:
+            - [ "setContainer", [ "@service_container" ] ]
 
     wbw.core.manager.asset.color:
         class:  WBW\Bundle\CoreBundle\Manager\Asset\ColorManager

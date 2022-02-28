@@ -37,6 +37,7 @@ use WBW\Bundle\CoreBundle\Asset\Quote\YamlQuoteProvider;
 use WBW\Bundle\CoreBundle\Command\CopySkeletonCommand;
 use WBW\Bundle\CoreBundle\Command\UnzipAssetsCommand;
 use WBW\Bundle\CoreBundle\Component\Form\FormHelper;
+use WBW\Bundle\CoreBundle\Controller\TwigController;
 use WBW\Bundle\CoreBundle\DependencyInjection\Configuration;
 use WBW\Bundle\CoreBundle\DependencyInjection\WBWCoreExtension;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
@@ -150,6 +151,9 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         // Commands
         $this->assertInstanceOf(CopySkeletonCommand::class, $this->containerBuilder->get(CopySkeletonCommand::SERVICE_NAME));
         $this->assertInstanceOf(UnzipAssetsCommand::class, $this->containerBuilder->get(UnzipAssetsCommand::SERVICE_NAME));
+
+        // Controllers
+        $this->assertInstanceOf(TwigController::class, $this->containerBuilder->get(TwigController::SERVICE_NAME));
 
         // Event listeners
         $this->assertInstanceOf(KernelEventListener::class, $this->containerBuilder->get(KernelEventListener::SERVICE_NAME));

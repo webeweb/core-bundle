@@ -1,1 +1,4 @@
 # Resources/config/routing.yml
+wbw_core_twig:
+    prefix:   "/"
+    resource: "@WBWCoreBundle/Resources/config/routing/twig.yml"
