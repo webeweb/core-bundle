@@ -38,25 +38,6 @@ class RepositoryHelper {
     const SERVICE_NAME = "wbw.core.repository.repository_helper";
 
     /**
-     * SQL query.
-     *
-     * @var string
-     */
-    const SQL_QUERY = <<< EOT
-SELECT
-    '%table%' AS 'table',
-    '%entity%' AS 'entity',
-    '%column%' AS 'column',
-    '%field%' AS 'field',
-    %available% AS 'available',
-    MIN(LENGTH(`%column%`)) AS 'minimum',
-    MAX(LENGTH(`%column%`)) AS 'maximum',
-    AVG(LENGTH(`%column%`)) AS 'average',
-    COUNT(`%column%`) AS 'count'
-FROM `%table%`
-EOT;
-
-    /**
      * Constructor.
      *
      * @param EntityManagerInterface $entityManager The entity manager.
@@ -124,10 +105,12 @@ EOT;
      */
     protected function prepareStatement(string $table, string $entity, string $field, int $available, string $column): Statement {
 
+        $sqlQuery = file_get_contents(__DIR__ . "/RepositoryHelper.sql");
+
         $searches = ["%table%", "%entity%", "%field%", "%available%", "%column%"];
         $replaces = [$table, $entity, $field, $available, $column];
 
-        $query = str_replace($searches, $replaces, self::SQL_QUERY);
+        $query = str_replace($searches, $replaces, $sqlQuery);
 
         return $this->getEntityManager()->getConnection()->prepare($query);
     }
