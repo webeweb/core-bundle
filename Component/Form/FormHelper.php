@@ -14,13 +14,13 @@ namespace WBW\Bundle\CoreBundle\Component\Form;
 use Countable;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
-use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\ORM\EntityManagerInterface;
 use InvalidArgumentException;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use WBW\Bundle\CoreBundle\Asset\Notification\NotificationFactory;
 use WBW\Bundle\CoreBundle\Component\EventDispatcher\EventDispatcherHelper;
 use WBW\Bundle\CoreBundle\Component\EventDispatcher\EventDispatcherTrait;
-use WBW\Bundle\CoreBundle\Doctrine\Common\Persistence\ObjectManagerTrait;
+use WBW\Bundle\CoreBundle\Doctrine\ORM\EntityManagerTrait;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\Exception\RedirectResponseException;
 
@@ -33,7 +33,7 @@ use WBW\Bundle\CoreBundle\Exception\RedirectResponseException;
 class FormHelper {
 
     use EventDispatcherTrait;
-    use ObjectManagerTrait;
+    use EntityManagerTrait;
 
     /**
      * Service name.
@@ -45,12 +45,12 @@ class FormHelper {
     /**
      * Constructor.
      *
-     * @param ObjectManager $objectManager The object manager.
+     * @param EntityManagerInterface $entityManager The entity manager.
      * @param EventDispatcherInterface $eventDispatcher The event dispatcher.
      */
-    public function __construct(ObjectManager $objectManager, EventDispatcherInterface $eventDispatcher) {
+    public function __construct(EntityManagerInterface $entityManager, EventDispatcherInterface $eventDispatcher) {
         $this->setEventDispatcher($eventDispatcher);
-        $this->setObjectManager($objectManager);
+        $this->setEntityManager($entityManager);
     }
 
     /**
@@ -95,7 +95,7 @@ class FormHelper {
             if (true === $newCollection->contains($current)) {
                 continue;
             }
-            $this->getObjectManager()->remove($current);
+            $this->getEntityManager()->remove($current);
             ++$deleted;
         }
         return $deleted;

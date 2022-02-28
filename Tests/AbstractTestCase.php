@@ -12,7 +12,6 @@
 namespace WBW\Bundle\CoreBundle\Tests;
 
 use Closure;
-use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ORM\EntityManagerInterface;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\LoggerInterface;
@@ -106,13 +105,6 @@ abstract class AbstractTestCase extends TestCase {
      * @var LoggerInterface
      */
     protected $logger;
-
-    /**
-     * Object manager.
-     *
-     * @var ObjectManager
-     */
-    protected $objectManager;
 
     /**
      * Router.
@@ -230,9 +222,6 @@ abstract class AbstractTestCase extends TestCase {
         // Set a Logger mock.
         $this->logger = $this->getMockBuilder(LoggerInterface::class)->getMock();
 
-        // Set an Object manager mock.
-        $this->objectManager = $this->getMockBuilder(ObjectManager::class)->getMock();
-
         // Set a Router mock.
         $this->router = $this->getMockBuilder(RouterInterface::class)->getMock();
 
@@ -277,7 +266,7 @@ abstract class AbstractTestCase extends TestCase {
         // Set a Parameter bag mock.
         $parameterBag = new ParameterBag([
             "kernel.environment" => "test",
-            "kernel.project_dir"    => realpath(__DIR__ . "/Fixtures/app"),
+            "kernel.project_dir" => realpath(__DIR__ . "/Fixtures/app"),
         ]);
 
         // We set a container builder with only the necessary.

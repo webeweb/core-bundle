@@ -56,7 +56,7 @@ class FormHelperTest extends AbstractTestCase {
      */
     public function testCheckCollection(): void {
 
-        $obj = new FormHelper($this->objectManager, $this->eventDispatcher);
+        $obj = new FormHelper($this->entityManager, $this->eventDispatcher);
 
         $this->assertNull($obj->checkCollection($this->collection, "notification", "redirectURL"));
         $this->assertNull($obj->checkCollection(["element0"], "notification", "redirectURL"));
@@ -69,7 +69,7 @@ class FormHelperTest extends AbstractTestCase {
      */
     public function testCheckCollectionWithIllegalArgumentException(): void {
 
-        $obj = new FormHelper($this->objectManager, $this->eventDispatcher);
+        $obj = new FormHelper($this->entityManager, $this->eventDispatcher);
 
         try {
 
@@ -95,7 +95,7 @@ class FormHelperTest extends AbstractTestCase {
         $this->eventDispatcher->expects($this->any())->method("hasListeners")->willReturn(true);
         $this->eventDispatcher->expects($this->any())->method("dispatch")->willReturnCallback($dispatchFunction);
 
-        $obj = new FormHelper($this->objectManager, $this->eventDispatcher);
+        $obj = new FormHelper($this->entityManager, $this->eventDispatcher);
 
         try {
 
@@ -114,7 +114,7 @@ class FormHelperTest extends AbstractTestCase {
      */
     public function testOnPostRequestWithCollection(): void {
 
-        $obj = new FormHelper($this->objectManager, $this->eventDispatcher);
+        $obj = new FormHelper($this->entityManager, $this->eventDispatcher);
 
         // Set a Collection mocks.
         $oldCollection = $this->collection;
@@ -138,7 +138,7 @@ class FormHelperTest extends AbstractTestCase {
      */
     public function testOnPreHandleRequestWithCollection(): void {
 
-        $obj = new FormHelper($this->objectManager, $this->eventDispatcher);
+        $obj = new FormHelper($this->entityManager, $this->eventDispatcher);
 
         $res = $obj->onPreHandleRequestWithCollection($this->collection);
         $this->assertEquals(10, $res->count());
@@ -157,9 +157,9 @@ class FormHelperTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $obj = new FormHelper($this->objectManager, $this->eventDispatcher);
+        $obj = new FormHelper($this->entityManager, $this->eventDispatcher);
 
         $this->assertEquals("wbw.core.component.form.helper", FormHelper::SERVICE_NAME);
-        $this->assertSame($this->objectManager, $obj->getObjectManager());
+        $this->assertSame($this->entityManager, $obj->getEntityManager());
     }
 }
