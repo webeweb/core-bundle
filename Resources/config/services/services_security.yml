@@ -1,7 +1,0 @@
-# Resources/config/services/services_security.yml
-services:
-
-    wbw.core.controller.security:
-        class:  WBW\Bundle\CoreBundle\Controller\SecurityController
-        arguments: [ "@security.csrf.token_manager" ]
-        public: false
