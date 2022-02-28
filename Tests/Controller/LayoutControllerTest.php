@@ -73,6 +73,7 @@ class LayoutControllerTest extends AbstractWebTestCase {
         $client = $this->client;
 
         $client->request("GET", "/stylesheets");
+        echo $client->getResponse()->getContent();
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
     }
