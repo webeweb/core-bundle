@@ -142,7 +142,7 @@ class KernelEventListener {
      */
     public function onKernelException($event) {
 
-        $ex = $event->getException();
+        $ex = $event->getThrowable();
 
         // Handle the exception.
         if (true === ($ex instanceof BadUserRoleException)) {
