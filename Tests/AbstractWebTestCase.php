@@ -45,7 +45,7 @@ abstract class AbstractWebTestCase extends WebTestCase {
      * {@inheritDoc}
      */
     protected static function getKernelClass(): string {
-        require_once realpath(getcwd() . "/Fixtures/app/TestKernel.php");
+        require_once realpath(getcwd() . "/Tests/Fixtures/app/TestKernel.php");
         return TestKernel::class;
     }
 
