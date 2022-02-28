@@ -32,7 +32,7 @@ class ContainerTwigExtensionTest extends AbstractTestCase {
 
         $obj = new ContainerTwigExtension($this->containerBuilder);
 
-        $this->assertNotNull($obj->getContainerParameterFunction("kernel.root_dir"));
+        $this->assertNotNull($obj->getContainerParameterFunction("kernel.project_dir"));
     }
 
     /**

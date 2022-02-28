@@ -101,8 +101,20 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
      */
     public function testGetResourcesDirectory(): void {
 
-        // Set an Helper set mock.
+        // Set a Helper set mock.
         $helperSet = $this->getMockBuilder(HelperSet::class)->disableOriginalConstructor()->getMock();
+
+        // Set a getProjectDir() callback.
+        $getProjectDir = function(): string {
+            return __DIR__ . "/../Fixtures/app";
+        };
+
+        // Set the Kernel mock.
+        if (Kernel::VERSION_ID < 50000) {
+            $this->kernel->expects($this->any())->method("getRootDir")->willReturnCallback($getProjectDir);
+        } else {
+            $this->kernel->expects($this->any())->method("getProjectDir")->willReturnCallback($getProjectDir);
+        }
 
         // Set an Application mock.
         $application = $this->getMockBuilder(Application::class)->disableOriginalConstructor()->getMock();
@@ -112,11 +124,7 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
         $obj = new TestCopySkeletonCommand();
         $obj->setApplication($application);
 
-        if (40000 <= Kernel::VERSION_ID) {
-            $this->assertRegExp("/\/templates\/bundles$/", $obj->getResourcesDirectory());
-        } else {
-            $this->assertRegExp("/\/app\/Resources$/", $obj->getResourcesDirectory());
-        }
+        $this->assertRegExp("/\/templates\/bundles$/", $obj->getResourcesDirectory());
     }
 
     /**
@@ -126,7 +134,7 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
      */
     public function testGetResourcesDirectoryWithInvalidArgumentException(): void {
 
-        // Set an Helper set mock.
+        // Set a Helper set mock.
         $helperSet = $this->getMockBuilder(HelperSet::class)->disableOriginalConstructor()->getMock();
 
         // Set an Application mock.

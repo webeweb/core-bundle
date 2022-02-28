@@ -26,16 +26,16 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class ColorProviderCompilerPassTest extends AbstractTestCase {
 
     /**
-     * Color manager
+     * Color manager.
      *
-     * @var ColorManager
+     * @var string
      */
     private $colorManager;
 
     /**
-     * Color provider
+     * Color provider.
      *
-     * @var ColorProviderInterface
+     * @var string
      */
     private $colorProvider;
 
@@ -46,10 +46,10 @@ class ColorProviderCompilerPassTest extends AbstractTestCase {
         parent::setUp();
 
         // Set a Color manager mock.
-        $this->colorManager = new ColorManager($this->logger);
+        $this->colorManager = ColorManager::class;
 
         // Set a Color provider mock.
-        $this->colorProvider = new RedColorProvider();
+        $this->colorProvider = ColorProviderInterface::class;
     }
 
     /**

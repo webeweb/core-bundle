@@ -53,8 +53,7 @@ class SecurityEventListenerTest extends AbstractTestCase {
         $request->expects($this->any())->method("getSession")->willReturn($this->session);
 
         // Set an Interactive login event mock.
-        $event = $this->getMockBuilder(InteractiveLoginEvent::class)->disableOriginalConstructor()->getMock();
-        $event->expects($this->any())->method("getRequest")->willReturn($request);
+        $event = new InteractiveLoginEvent($request, $this->token);
 
         $obj = new SecurityEventListener($this->translator, $this->user);
 

@@ -68,28 +68,37 @@ abstract class AbstractFormTypeTestCase extends AbstractTestCase {
         // Set a Form mock.
         $this->form = $this->getMockBuilder(FormInterface::class)->getMock();
 
-        // Set a Form builder mock.
-        $this->formBuilder = $this->getMockBuilder(FormBuilderInterface::class)->getMock();
-        $this->formBuilder->expects($this->any())->method("add")->willReturnCallback(function($child, $type = null, array $options = []) {
+        // Set a add() callback.
+        $add = function($child, string $type = null, array $options = []) {
             $this->children[$child] = [
                 "type"    => $type,
                 "options" => $options,
             ];
             return $this->formBuilder;
-        });
-        $this->formBuilder->expects($this->any())->method("remove")->willReturnCallback(function($child) {
+        };
+
+        // Set a remove() callback.
+        $remove = function($child) {
             unset($this->children[$child]);
             return $this->formBuilder;
-        });
+        };
+
+        // Set a Form builder mock.
+        $this->formBuilder = $this->getMockBuilder(FormBuilderInterface::class)->getMock();
+        $this->formBuilder->expects($this->any())->method("add")->willReturnCallback($add);
+        $this->formBuilder->expects($this->any())->method("remove")->willReturnCallback($remove);
         $this->formBuilder->expects($this->any())->method("addEventListener")->willReturn($this->formBuilder);
         $this->formBuilder->expects($this->any())->method("addModelTransformer")->willReturn($this->formBuilder);
         $this->formBuilder->expects($this->any())->method("get")->willReturn($this->formBuilder);
 
+        // Set a setDefaults() callback.
+        $setDefaults = function(array $defaults) {
+            $this->defaults = $defaults;
+            return $this->resolver;
+        };
+
         // Set an Options resolver mock.
         $this->resolver = $this->getMockBuilder(OptionsResolver::class)->getMock();
-        $this->resolver->expects($this->any())->method("setDefaults")->willReturnCallback(function(array $defauls) {
-            $this->defaults = $defauls;
-            return $this->resolver;
-        });
+        $this->resolver->expects($this->any())->method("setDefaults")->willReturnCallback($setDefaults);
     }
 }

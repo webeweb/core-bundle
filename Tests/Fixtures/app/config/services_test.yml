@@ -1,6 +1,10 @@
 # Tests/Fixtures/App/config/services_test.yml
 services:
 
+    WBW\Bundle\CoreBundle\Tests\Fixtures\Controller\TestLayoutController:
+        alias:  "wbw.core.tests.fixtures.controller.test_layout"
+        public: true
+
     wbw.core.provider.theme.application:
         class: WBW\Bundle\CoreBundle\Asset\Theme\DefaultApplicationThemeProvider
 
@@ -24,3 +28,8 @@ services:
 
     wbw.core.provider.theme.user_info:
         class: WBW\Bundle\CoreBundle\Asset\Theme\DefaultUserInfoThemeProvider
+
+    wbw.core.tests.fixtures.controller.test_layout:
+        class: WBW\Bundle\CoreBundle\Tests\Fixtures\Controller\TestLayoutController
+        calls:
+            - [ "setContainer", [ "@service_container" ] ]

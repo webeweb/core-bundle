@@ -25,16 +25,16 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class QuoteProviderCompilerPassTest extends AbstractTestCase {
 
     /**
-     * Quote manager
+     * Quote manager.
      *
-     * @var QuoteManager
+     * @var string
      */
     private $quoteManager;
 
     /**
-     * Quote provider
+     * Quote provider.
      *
-     * @var QuoteProviderInterface
+     * @var string
      */
     private $quoteProvider;
 
@@ -45,10 +45,10 @@ class QuoteProviderCompilerPassTest extends AbstractTestCase {
         parent::setUp();
 
         // Set a Quote manager mock.
-        $this->quoteManager = new QuoteManager($this->logger);
+        $this->quoteManager = QuoteManager::class;
 
         // Set a Quote provider mock.
-        $this->quoteProvider = $this->getMockBuilder(QuoteProviderInterface::class)->getMock();
+        $this->quoteProvider = QuoteProviderInterface::class;
     }
 
     /**

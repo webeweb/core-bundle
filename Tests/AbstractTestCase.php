@@ -245,11 +245,12 @@ abstract class AbstractTestCase extends TestCase {
         // Set a Swift mailer mock.
         $this->swiftMailer = $this->getMockBuilder(Swift_Mailer::class)->disableOriginalConstructor()->getMock();
 
+        // Set a trans() callback.
+        $trans = TestCaseHelper::getTranslatorTransFunction();
+
         // Set a Translator mock.
         $this->translator = $this->getMockBuilder(BaseTranslatorInterface::class)->getMock();
-        $this->translator->expects($this->any())->method("trans")->willReturnCallback(function($id, array $parameters = [], $domain = null, $locale = null) {
-            return $id;
-        });
+        $this->translator->expects($this->any())->method("trans")->willReturnCallback($trans);
 
         // Set a Token mock.
         $this->token = $this->getMockBuilder(TokenInterface::class)->getMock();
@@ -276,7 +277,7 @@ abstract class AbstractTestCase extends TestCase {
         // Set a Parameter bag mock.
         $parameterBag = new ParameterBag([
             "kernel.environment" => "test",
-            "kernel.root_dir"    => realpath(__DIR__ . "/Fixtures/app"),
+            "kernel.project_dir"    => realpath(__DIR__ . "/Fixtures/app"),
         ]);
 
         // We set a container builder with only the necessary.

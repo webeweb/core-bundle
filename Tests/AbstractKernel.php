@@ -34,7 +34,14 @@ abstract class AbstractKernel extends Kernel {
      * {@inheritDoc}
      */
     public function getLogDir(): string {
-        return getcwd() . "/Tests/Fixtures/app/var/logs";
+        return getcwd() . "/../Tests/Fixtures/app/var/logs";
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getProjectDir(): string {
+        return getcwd() . "/../Tests/Fixtures/app";
     }
 
     /**
