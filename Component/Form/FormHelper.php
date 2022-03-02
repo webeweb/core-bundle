@@ -17,12 +17,12 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\EntityManagerInterface;
 use InvalidArgumentException;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
-use WBW\Bundle\CoreBundle\Asset\Notification\NotificationFactory;
 use WBW\Bundle\CoreBundle\Component\EventDispatcher\EventDispatcherHelper;
 use WBW\Bundle\CoreBundle\Component\EventDispatcher\EventDispatcherTrait;
 use WBW\Bundle\CoreBundle\Doctrine\ORM\EntityManagerTrait;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\Exception\RedirectResponseException;
+use WBW\Library\Symfony\Assets\Notification\NotificationFactory;
 
 /**
  * Form helper.

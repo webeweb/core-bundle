@@ -11,7 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Event;
 
-use WBW\Bundle\CoreBundle\Asset\Notification\NotificationInterface;
+use WBW\Library\Symfony\Assets\Notification\NotificationInterface;
+use WBW\Library\Symfony\Assets\Notification\NotificationTrait;
 
 /**
  * Notification event.
@@ -20,6 +21,8 @@ use WBW\Bundle\CoreBundle\Asset\Notification\NotificationInterface;
  * @package WBW\Bundle\CoreBundle\Event
  */
 class NotificationEvent extends AbstractEvent {
+
+    use NotificationTrait;
 
     /**
      * Event "danger".
@@ -50,13 +53,6 @@ class NotificationEvent extends AbstractEvent {
     const WARNING = "wbw.core.event.notification.warning";
 
     /**
-     * Notification.
-     *
-     * @var NotificationInterface
-     */
-    private $notification;
-
-    /**
      * Constructor.
      *
      * @param string $eventName The event name.
@@ -66,25 +62,5 @@ class NotificationEvent extends AbstractEvent {
         parent::__construct($eventName);
 
         $this->setNotification($notification);
-    }
-
-    /**
-     * Get the notification.
-     *
-     * @return NotificationInterface Returns the notification.
-     */
-    public function getNotification(): NotificationInterface {
-        return $this->notification;
-    }
-
-    /**
-     * Set the notification.
-     *
-     * @param NotificationInterface $notification The notification.
-     * @return NotificationEvent Returns this notification event.
-     */
-    protected function setNotification(NotificationInterface $notification): NotificationEvent {
-        $this->notification = $notification;
-        return $this;
     }
 }

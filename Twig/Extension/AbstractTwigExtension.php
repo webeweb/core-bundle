@@ -13,8 +13,8 @@ namespace WBW\Bundle\CoreBundle\Twig\Extension;
 
 use Twig\Environment;
 use Twig\Extension\AbstractExtension;
-use WBW\Library\Symfony\Assets\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Twig\Environment\TwigEnvironmentTrait;
+use WBW\Library\Symfony\Assets\Navigation\NavigationInterface;
 use WBW\Library\Types\Helper\StringHelper;
 
 /**
