@@ -12,8 +12,8 @@
 namespace WBW\Bundle\CoreBundle\Tests\Asset\Navigation\MaterialDesignIconicFont;
 
 use WBW\Bundle\CoreBundle\Asset\Navigation\MaterialDesignIconicFont\NavigationNodeActionExport;
-use WBW\Library\Symfony\Assets\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
+use WBW\Library\Symfony\Assets\Navigation\NavigationInterface;
 
 /**
  * Navigation node action "export" test.

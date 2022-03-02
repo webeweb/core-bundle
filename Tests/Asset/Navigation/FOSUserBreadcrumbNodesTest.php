@@ -11,10 +11,10 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Asset\Navigation;
 
-use WBW\Library\Symfony\Assets\Navigation\BreadcrumbNode;
 use WBW\Bundle\CoreBundle\Asset\Navigation\FOSUserBreadcrumbNodes;
-use WBW\Library\Symfony\Assets\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
+use WBW\Library\Symfony\Assets\Navigation\BreadcrumbNode;
+use WBW\Library\Symfony\Assets\Navigation\NavigationInterface;
 
 /**
  * FOSUser breadcrumb nodes test.

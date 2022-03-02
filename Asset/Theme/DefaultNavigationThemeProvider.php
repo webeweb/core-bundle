@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\CoreBundle\Asset\Theme;
 
-use WBW\Library\Symfony\Assets\Navigation\NavigationTree;
 use WBW\Bundle\CoreBundle\Component\Translation\TranslatorTrait;
 use WBW\Bundle\CoreBundle\Provider\Asset\Theme\NavigationThemeProviderInterface;
+use WBW\Library\Symfony\Assets\Navigation\NavigationTree;
 
 /**
  * Default navigation theme provider.

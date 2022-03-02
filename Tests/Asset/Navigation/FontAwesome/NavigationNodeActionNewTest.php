@@ -12,8 +12,8 @@
 namespace WBW\Bundle\CoreBundle\Tests\Asset\Navigation\FontAwesome;
 
 use WBW\Bundle\CoreBundle\Asset\Navigation\FontAwesome\NavigationNodeActionNew;
-use WBW\Library\Symfony\Assets\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
+use WBW\Library\Symfony\Assets\Navigation\NavigationInterface;
 
 /**
  * Navigation node action "new" test.

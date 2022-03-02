@@ -11,10 +11,10 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Asset\Theme;
 
-use WBW\Library\Symfony\Assets\Navigation\NavigationTree;
 use WBW\Bundle\CoreBundle\Asset\Theme\DefaultNavigationThemeProvider;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Theme\TestDefaultNavigationThemeProvider;
+use WBW\Library\Symfony\Assets\Navigation\NavigationTree;
 
 /**
  * Default navigation theme provider test.
