@@ -42,17 +42,6 @@ class TestCaseHelper {
     }
 
     /**
-     * Get a trans() function for a translator.
-     *
-     * @return Closure Returns the trans() function for a translator.
-     */
-    public static function getTranslatorTransFunction(): Closure {
-        return function($id, array $parameters = [], string $domain = null, string $locale = null) {
-            return $id;
-        };
-    }
-
-    /**
      * Get a generate() function for a router.
      *
      * @return Closure Returns the generate() function for a router.
@@ -60,6 +49,17 @@ class TestCaseHelper {
     public static function getRouterGenerateFunction(): Closure {
         return function($name, array $parameters = [], int $referenceType = RouterInterface::ABSOLUTE_PATH) {
             return $name;
+        };
+    }
+
+    /**
+     * Get a trans() function for a translator.
+     *
+     * @return Closure Returns the trans() function for a translator.
+     */
+    public static function getTranslatorTransFunction(): Closure {
+        return function($id, array $parameters = [], string $domain = null, string $locale = null) {
+            return $id;
         };
     }
 }
