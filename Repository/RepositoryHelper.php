@@ -18,7 +18,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Mapping\ClassMetadata;
 use Doctrine\ORM\Mapping\MappingException;
 use WBW\Bundle\CoreBundle\Doctrine\ORM\EntityManagerTrait;
-use WBW\Bundle\CoreBundle\Model\RepositoryReport;
+use WBW\Library\Symfony\Model\RepositoryReport;
 
 /**
  * Repository helper.
