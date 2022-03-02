@@ -12,15 +12,15 @@
 namespace WBW\Bundle\CoreBundle\Tests\Manager\Asset;
 
 use WBW\Bundle\CoreBundle\Manager\Asset\ThemeManager;
-use WBW\Bundle\CoreBundle\Provider\Asset\Theme\ApplicationThemeProviderInterface;
-use WBW\Bundle\CoreBundle\Provider\Asset\Theme\BreadcrumbsThemeProviderInterface;
-use WBW\Bundle\CoreBundle\Provider\Asset\Theme\FooterThemeProviderInterface;
-use WBW\Bundle\CoreBundle\Provider\Asset\Theme\HookDropDownThemeProviderInterface;
-use WBW\Bundle\CoreBundle\Provider\Asset\Theme\NotificationsDropDownThemeProviderInterface;
-use WBW\Bundle\CoreBundle\Provider\Asset\Theme\SearchThemeProviderInterface;
-use WBW\Bundle\CoreBundle\Provider\Asset\Theme\TasksDropDownThemeProviderInterface;
-use WBW\Bundle\CoreBundle\Provider\Asset\Theme\UserInfoThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
+use WBW\Library\Symfony\Provider\Assets\Theme\ApplicationThemeProviderInterface;
+use WBW\Library\Symfony\Provider\Assets\Theme\BreadcrumbsThemeProviderInterface;
+use WBW\Library\Symfony\Provider\Assets\Theme\FooterThemeProviderInterface;
+use WBW\Library\Symfony\Provider\Assets\Theme\HookDropdownThemeProviderInterface;
+use WBW\Library\Symfony\Provider\Assets\Theme\NotificationsDropdownThemeProviderInterface;
+use WBW\Library\Symfony\Provider\Assets\Theme\SearchThemeProviderInterface;
+use WBW\Library\Symfony\Provider\Assets\Theme\TasksDropdownThemeProviderInterface;
+use WBW\Library\Symfony\Provider\Assets\Theme\UserInfoThemeProviderInterface;
 
 /**
  * Theme manager test.
@@ -42,10 +42,10 @@ class ThemeManagerWebTest extends AbstractWebTestCase {
         $this->assertInstanceOf(ApplicationThemeProviderInterface::class, $obj->getApplicationThemeProvider());
         $this->assertInstanceOf(BreadcrumbsThemeProviderInterface::class, $obj->getBreadcrumbsThemeProvider());
         $this->assertInstanceOf(FooterThemeProviderInterface::class, $obj->getFooterThemeProvider());
-        $this->assertInstanceOf(HookDropDownThemeProviderInterface::class, $obj->getHookDropDownThemeProvider());
-        $this->assertInstanceOf(NotificationsDropDownThemeProviderInterface::class, $obj->getNotificationsDropDownThemeProvider());
+        $this->assertInstanceOf(HookDropdownThemeProviderInterface::class, $obj->getHookDropdownThemeProvider());
+        $this->assertInstanceOf(NotificationsDropdownThemeProviderInterface::class, $obj->getNotificationsDropdownThemeProvider());
         $this->assertInstanceOf(SearchThemeProviderInterface::class, $obj->getSearchThemeProvider());
-        $this->assertInstanceOf(TasksDropDownThemeProviderInterface::class, $obj->getTasksDropDownThemeProvider());
+        $this->assertInstanceOf(TasksDropdownThemeProviderInterface::class, $obj->getTasksDropdownThemeProvider());
         $this->assertInstanceOf(UserInfoThemeProviderInterface::class, $obj->getUserInfoThemeProvider());
     }
 }
