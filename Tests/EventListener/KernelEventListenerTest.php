@@ -21,9 +21,9 @@ use WBW\Bundle\CoreBundle\Component\HttpKernel\Event\BaseExceptionEvent;
 use WBW\Bundle\CoreBundle\Component\HttpKernel\Event\BaseRequestEvent;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
-use WBW\Bundle\CoreBundle\Exception\RedirectResponseException;
 use WBW\Bundle\CoreBundle\Manager\Asset\ThemeManager;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
+use WBW\Library\Symfony\Exception\RedirectResponseException;
 
 /**
  * Kernel event listener test.

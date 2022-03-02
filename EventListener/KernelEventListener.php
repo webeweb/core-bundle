@@ -12,7 +12,6 @@
 namespace WBW\Bundle\CoreBundle\EventListener;
 
 use Exception;
-use Swift_Message;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -23,7 +22,7 @@ use WBW\Bundle\CoreBundle\Component\Mailer\MailerTrait;
 use WBW\Bundle\CoreBundle\Component\Security\Core\Authentication\Token\Storage\TokenStorageTrait;
 use WBW\Bundle\CoreBundle\Component\Security\Core\User\UserTrait;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
-use WBW\Bundle\CoreBundle\Exception\RedirectResponseException;
+use WBW\Library\Symfony\Exception\RedirectResponseException;
 use WBW\Bundle\CoreBundle\Manager\Asset\ThemeManager;
 use WBW\Bundle\CoreBundle\Manager\Asset\ThemeManagerTrait;
 
