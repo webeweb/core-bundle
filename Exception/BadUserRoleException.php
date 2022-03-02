@@ -13,8 +13,8 @@ namespace WBW\Bundle\CoreBundle\Exception;
 
 use Symfony\Component\Security\Core\User\UserInterface;
 use WBW\Bundle\CoreBundle\Component\Security\Core\User\UserTrait;
-use WBW\Bundle\CoreBundle\Model\Attribute\StringOriginUrlTrait;
-use WBW\Bundle\CoreBundle\Model\Attribute\StringRedirectUrlTrait;
+use WBW\Library\Traits\Strings\StringOriginUrlTrait;
+use WBW\Library\Traits\Strings\StringRedirectUrlTrait;
 
 /**
  * Bad user role exception.
