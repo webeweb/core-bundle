@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Asset\Navigation\FontAwesome;
 
-use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationNode;
+use WBW\Library\Symfony\Assets\Navigation\NavigationNode;
 
 /**
  * Navigation node "users".

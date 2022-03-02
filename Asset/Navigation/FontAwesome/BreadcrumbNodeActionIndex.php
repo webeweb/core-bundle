@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Asset\Navigation\FontAwesome;
 
-use WBW\Bundle\CoreBundle\Asset\Navigation\BreadcrumbNode;
+use WBW\Library\Symfony\Assets\Navigation\BreadcrumbNode;
 
 /**
  * Breadcrumb node action "index".

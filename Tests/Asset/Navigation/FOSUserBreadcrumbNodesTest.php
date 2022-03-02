@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Asset\Navigation;
 
-use WBW\Bundle\CoreBundle\Asset\Navigation\BreadcrumbNode;
+use WBW\Library\Symfony\Assets\Navigation\BreadcrumbNode;
 use WBW\Bundle\CoreBundle\Asset\Navigation\FOSUserBreadcrumbNodes;
-use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationInterface;
+use WBW\Library\Symfony\Assets\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**

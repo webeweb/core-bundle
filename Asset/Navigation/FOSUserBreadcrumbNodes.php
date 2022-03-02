@@ -11,6 +11,9 @@
 
 namespace WBW\Bundle\CoreBundle\Asset\Navigation;
 
+use WBW\Library\Symfony\Assets\Navigation\BreadcrumbNode;
+use WBW\Library\Symfony\Assets\Navigation\NavigationInterface;
+
 /**
  * FOSUser breadcrumb nodes.
  *
@@ -25,14 +28,11 @@ class FOSUserBreadcrumbNodes {
      * @return BreadcrumbNode[] Returns the FOSUser breadcrumb nodes.
      */
     public static function getFontAwesomeBreadcrumbNodes(): array {
-
-        $nodes = [];
-
-        $nodes[] = new BreadcrumbNode("label.edit_profile", "fa:user", "fos_user_profile_edit", NavigationInterface::NAVIGATION_MATCHER_ROUTER);
-        $nodes[] = new BreadcrumbNode("label.show_profile", "fa:user", "fos_user_profile_show", NavigationInterface::NAVIGATION_MATCHER_ROUTER);
-        $nodes[] = new BreadcrumbNode("label.change_password", "fa:lock", "fos_user_change_password", NavigationInterface::NAVIGATION_MATCHER_ROUTER);
-
-        return $nodes;
+        return [
+            new BreadcrumbNode("label.edit_profile", "fa:user", "fos_user_profile_edit", NavigationInterface::NAVIGATION_MATCHER_ROUTER),
+            new BreadcrumbNode("label.show_profile", "fa:user", "fos_user_profile_show", NavigationInterface::NAVIGATION_MATCHER_ROUTER),
+            new BreadcrumbNode("label.change_password", "fa:lock", "fos_user_change_password", NavigationInterface::NAVIGATION_MATCHER_ROUTER),
+        ];
     }
 
     /**
@@ -41,13 +41,10 @@ class FOSUserBreadcrumbNodes {
      * @return BreadcrumbNode[] Returns the FOSUser breadcrumb nodes.
      */
     public static function getMaterialDesignIconicFontBreadcrumbNodes(): array {
-
-        $nodes = [];
-
-        $nodes[] = new BreadcrumbNode("label.edit_profile", "zmdi:account", "fos_user_profile_edit", NavigationInterface::NAVIGATION_MATCHER_ROUTER);
-        $nodes[] = new BreadcrumbNode("label.show_profile", "zmdi:account", "fos_user_profile_show", NavigationInterface::NAVIGATION_MATCHER_ROUTER);
-        $nodes[] = new BreadcrumbNode("label.change_password", "zmdi:lock", "fos_user_change_password", NavigationInterface::NAVIGATION_MATCHER_ROUTER);
-
-        return $nodes;
+        return [
+            new BreadcrumbNode("label.edit_profile", "zmdi:account", "fos_user_profile_edit", NavigationInterface::NAVIGATION_MATCHER_ROUTER),
+            new BreadcrumbNode("label.show_profile", "zmdi:account", "fos_user_profile_show", NavigationInterface::NAVIGATION_MATCHER_ROUTER),
+            new BreadcrumbNode("label.change_password", "zmdi:lock", "fos_user_change_password", NavigationInterface::NAVIGATION_MATCHER_ROUTER),
+        ];
     }
 }

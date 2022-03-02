@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Component\Form;
 
 use Closure;
-use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationNode;
+use WBW\Library\Symfony\Assets\Navigation\NavigationNode;
 use WBW\Bundle\CoreBundle\Asset\Select\ChoiceValueInterface;
 use WBW\Bundle\CoreBundle\Component\Form\FormFactory;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;

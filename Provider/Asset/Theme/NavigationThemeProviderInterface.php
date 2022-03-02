@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Provider\Asset\Theme;
 
-use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationTree;
+use WBW\Library\Symfony\Assets\Navigation\NavigationTree;
 use WBW\Bundle\CoreBundle\Provider\Asset\ThemeProviderInterface;
 
 /**

@@ -13,12 +13,12 @@ namespace WBW\Bundle\CoreBundle\Tests\Fixtures;
 
 use Exception;
 use Symfony\Component\Security\Core\User\UserInterface;
-use WBW\Bundle\CoreBundle\Asset\Navigation\DividerNode;
-use WBW\Bundle\CoreBundle\Asset\Navigation\HeaderNode;
-use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationInterface;
-use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationNode;
-use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationTree;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser;
+use WBW\Library\Symfony\Assets\Navigation\DividerNode;
+use WBW\Library\Symfony\Assets\Navigation\HeaderNode;
+use WBW\Library\Symfony\Assets\Navigation\NavigationInterface;
+use WBW\Library\Symfony\Assets\Navigation\NavigationNode;
+use WBW\Library\Symfony\Assets\Navigation\NavigationTree;
 
 /**
  * Test fixtures.

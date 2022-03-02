@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Asset\Navigation\MaterialDesignIconicFont;
 
 use WBW\Bundle\CoreBundle\Asset\Navigation\MaterialDesignIconicFont\BreadcrumbNodeActionEdit;
-use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationInterface;
+use WBW\Library\Symfony\Assets\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**

@@ -13,6 +13,11 @@ namespace WBW\Bundle\CoreBundle\Asset\Navigation;
 
 use Symfony\Component\HttpFoundation\ParameterBag;
 use Symfony\Component\HttpFoundation\Request;
+use WBW\Library\Symfony\Assets\Navigation\AbstractNavigationNode;
+use WBW\Library\Symfony\Assets\Navigation\BreadcrumbNode;
+use WBW\Library\Symfony\Assets\Navigation\NavigationInterface;
+use WBW\Library\Symfony\Assets\Navigation\NavigationNode;
+use WBW\Library\Symfony\Assets\Navigation\NavigationTree;
 
 /**
  * Navigation tree helper.
@@ -85,7 +90,7 @@ class NavigationTreeHelper {
     }
 
     /**
-     * Determines if a navigation node match an URL.
+     * Determines if a navigation node match a URL.
      *
      * @param AbstractNavigationNode $node The navigation node.
      * @param Request $request The request.

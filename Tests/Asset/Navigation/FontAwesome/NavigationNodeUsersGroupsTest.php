@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Asset\Navigation\FontAwesome;
 
 use WBW\Bundle\CoreBundle\Asset\Navigation\FontAwesome\NavigationNodeUsersGroups;
-use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationInterface;
+use WBW\Library\Symfony\Assets\Navigation\NavigationInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**

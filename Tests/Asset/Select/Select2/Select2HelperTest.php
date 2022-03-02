@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Asset\Select\Select2;
 
 use Exception;
 use InvalidArgumentException;
-use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationNode;
+use WBW\Library\Symfony\Assets\Navigation\NavigationNode;
 use WBW\Bundle\CoreBundle\Asset\Select\Select2\Select2Helper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Select\Select2\TestSelect2Option;
