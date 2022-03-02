@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Twig\Extension\Asset;
 use Twig\TwigFilter;
 use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\Asset\Icon\IconFactory;
-use WBW\Bundle\CoreBundle\Asset\Icon\IconRendererInterface;
+use WBW\Library\Symfony\Assets\Icon\IconRendererInterface;
 
 /**
  * Font Awesome Twig extension.

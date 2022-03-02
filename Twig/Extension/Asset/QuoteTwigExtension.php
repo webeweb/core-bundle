@@ -15,11 +15,11 @@ use DateTime;
 use Exception;
 use Twig\Environment;
 use Twig\TwigFunction;
-use WBW\Bundle\CoreBundle\Asset\Quote\QuoteInterface;
-use WBW\Bundle\CoreBundle\Manager\Asset\QuoteManager;
-use WBW\Bundle\CoreBundle\Manager\Asset\QuoteManagerTrait;
-use WBW\Bundle\CoreBundle\Provider\Asset\QuoteProviderInterface;
 use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
+use WBW\Library\Symfony\Assets\Quote\QuoteInterface;
+use WBW\Library\Symfony\Manager\Assets\QuoteManager;
+use WBW\Library\Symfony\Manager\Assets\QuoteManagerTrait;
+use WBW\Library\Symfony\Provider\Assets\QuoteProviderInterface;
 use WBW\Library\Types\Helper\ArrayHelper;
 
 /**

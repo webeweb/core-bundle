@@ -38,7 +38,7 @@ services:
 
     wbw.core.twig.extension.asset.quote:
         class:  WBW\Bundle\CoreBundle\Twig\Extension\Asset\QuoteTwigExtension
-        arguments: [ "@twig", "@wbw.core.manager.asset.quote" ]
+        arguments: [ "@twig", "@wbw.core.manager.assets.quote" ]
         public: true
         tags:
             - { name: "twig.extension" }

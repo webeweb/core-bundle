@@ -13,10 +13,10 @@ namespace WBW\Bundle\CoreBundle\Manager\Asset;
 
 use Psr\Log\LoggerInterface;
 use Twig\Environment;
-use WBW\Bundle\CoreBundle\Manager\AbstractManager;
-use WBW\Bundle\CoreBundle\Manager\ManagerInterface;
 use WBW\Bundle\CoreBundle\Provider\Asset\ThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Twig\Environment\TwigEnvironmentTrait;
+use WBW\Library\Symfony\Manager\AbstractManager;
+use WBW\Library\Symfony\Manager\ManagerInterface;
 
 /**
  * Abstract theme manager.

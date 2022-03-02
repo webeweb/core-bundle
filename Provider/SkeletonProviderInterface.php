@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Provider;
 
 use Symfony\Component\HttpKernel\Bundle\BundleInterface;
+use WBW\Library\Symfony\Provider\ProviderInterface;
 
 /**
  * Skeleton provider interface.

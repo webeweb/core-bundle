@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\CoreBundle\Manager\Asset;
 
-use WBW\Bundle\CoreBundle\Manager\ManagerInterface;
 use WBW\Bundle\CoreBundle\Provider\Asset\Theme\ApplicationThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\Asset\Theme\BreadcrumbsThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\Asset\Theme\FooterThemeProviderInterface;
@@ -21,6 +20,7 @@ use WBW\Bundle\CoreBundle\Provider\Asset\Theme\NotificationsDropDownThemeProvide
 use WBW\Bundle\CoreBundle\Provider\Asset\Theme\SearchThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\Asset\Theme\TasksDropDownThemeProviderInterface;
 use WBW\Bundle\CoreBundle\Provider\Asset\Theme\UserInfoThemeProviderInterface;
+use WBW\Library\Symfony\Manager\ManagerInterface;
 
 /**
  * Theme manager.

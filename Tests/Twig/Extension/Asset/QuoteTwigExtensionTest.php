@@ -14,11 +14,11 @@ namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension\Asset;
 use Exception;
 use Twig\Node\Node;
 use Twig\TwigFunction;
-use WBW\Bundle\CoreBundle\Asset\Quote\YamlQuoteProvider;
-use WBW\Bundle\CoreBundle\Manager\Asset\QuoteManager;
-use WBW\Bundle\CoreBundle\Provider\Asset\QuoteProviderInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Twig\Extension\Asset\QuoteTwigExtension;
+use WBW\Library\Symfony\Assets\Quote\WorldsWisdomQuoteProvider;
+use WBW\Library\Symfony\Manager\Assets\QuoteManager;
+use WBW\Library\Symfony\Provider\Assets\QuoteProviderInterface;
 
 /**
  * Quote Twig extension test.
@@ -48,10 +48,8 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
     protected function setUp(): void {
         parent::setUp();
 
-        $filename = realpath(__DIR__ . "/../../../../Resources/translations/WorldsWisdom.fr.yml");
-
         // Set a Quote provider mock.
-        $this->quoteProvider = new YamlQuoteProvider($filename);
+        $this->quoteProvider = new WorldsWisdomQuoteProvider();
 
         // Set a Quote manager mock.
         $this->quoteManager = new QuoteManager($this->logger);

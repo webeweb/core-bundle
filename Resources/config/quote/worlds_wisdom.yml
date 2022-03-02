@@ -1,8 +1,7 @@
 # Resources/config/quote/worlds_wisdom.yml
 services:
 
-    wbw.core.provider.asset.quote.worlds_wisdom:
-        class: WBW\Bundle\CoreBundle\Asset\Quote\YamlQuoteProvider
-        arguments: [ "@=service('kernel').locateResource('@WBWCoreBundle/Resources/translations/WorldsWisdom.fr.yml')" ]
+    wbw.core.provider.assets.quote.worlds_wisdom:
+        class: WBW\Library\Symfony\Assets\Quote\WorldsWisdomQuoteProvider
         tags:
-            - { name: "wbw.core.provider.quote" }
+            - { name: "wbw.core.provider.assets.quote" }

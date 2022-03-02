@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Provider\Asset;
 
-use WBW\Bundle\CoreBundle\Provider\ProviderInterface;
+use WBW\Library\Symfony\Provider\ProviderInterface;
 
 /**
  * Theme provider interface.

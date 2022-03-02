@@ -1,119 +1,119 @@
 # Resources/config/providers.yml
 services:
 
-    wbw.core.provider.asset.color.amber:
-        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\AmberColorProvider
+    wbw.core.assets.color.material_design_color_palette.amber:
+        class:  WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\AmberColorProvider
         public: true
         tags:
-            - { name: "wbw.core.provider.color" }
+            - { name: "wbw.core.provider.assets.color" }
 
-    wbw.core.provider.asset.color.blue:
-        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\BlueColorProvider
+    wbw.core.assets.color.material_design_color_palette.blue:
+        class:  WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\BlueColorProvider
         public: true
         tags:
-            - { name: "wbw.core.provider.color" }
+            - { name: "wbw.core.provider.assets.color" }
 
-    wbw.core.provider.asset.color.blue_grey:
-        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\BlueGreyColorProvider
+    wbw.core.assets.color.material_design_color_palette.blue_grey:
+        class:  WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\BlueGreyColorProvider
         public: true
         tags:
-            - { name: "wbw.core.provider.color" }
+            - { name: "wbw.core.provider.assets.color" }
 
-    wbw.core.provider.asset.color.brown:
-        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\BrownColorProvider
+    wbw.core.assets.color.material_design_color_palette.brown:
+        class:  WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\BrownColorProvider
         public: true
         tags:
-            - { name: "wbw.core.provider.color" }
+            - { name: "wbw.core.provider.assets.color" }
 
-    wbw.core.provider.asset.color.cyan:
-        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\CyanColorProvider
+    wbw.core.assets.color.material_design_color_palette.cyan:
+        class:  WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\CyanColorProvider
         public: true
         tags:
-            - { name: "wbw.core.provider.color" }
+            - { name: "wbw.core.provider.assets.color" }
 
-    wbw.core.provider.asset.color.deep_orange:
-        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\DeepOrangeColorProvider
+    wbw.core.assets.color.material_design_color_palette.deep_orange:
+        class:  WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\DeepOrangeColorProvider
         public: true
         tags:
-            - { name: "wbw.core.provider.color" }
+            - { name: "wbw.core.provider.assets.color" }
 
-    wbw.core.provider.asset.color.deep_purple:
-        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\DeepPurpleColorProvider
+    wbw.core.assets.color.material_design_color_palette.deep_purple:
+        class:  WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\DeepPurpleColorProvider
         public: true
         tags:
-            - { name: "wbw.core.provider.color" }
+            - { name: "wbw.core.provider.assets.color" }
 
-    wbw.core.provider.asset.color.green:
-        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\GreenColorProvider
+    wbw.core.assets.color.material_design_color_palette.green:
+        class:  WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\GreenColorProvider
         public: true
         tags:
-            - { name: "wbw.core.provider.color" }
+            - { name: "wbw.core.provider.assets.color" }
 
-    wbw.core.provider.asset.color.grey:
-        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\GreyColorProvider
+    wbw.core.assets.color.material_design_color_palette.grey:
+        class:  WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\GreyColorProvider
         public: true
         tags:
-            - { name: "wbw.core.provider.color" }
+            - { name: "wbw.core.provider.assets.color" }
 
-    wbw.core.provider.asset.color.indigo:
-        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\IndigoColorProvider
+    wbw.core.assets.color.material_design_color_palette.indigo:
+        class:  WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\IndigoColorProvider
         public: true
         tags:
-            - { name: "wbw.core.provider.color" }
+            - { name: "wbw.core.provider.assets.color" }
 
-    wbw.core.provider.asset.color.light_blue:
-        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\LightBlueColorProvider
+    wbw.core.assets.color.material_design_color_palette.light_blue:
+        class:  WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\LightBlueColorProvider
         public: true
         tags:
-            - { name: "wbw.core.provider.color" }
+            - { name: "wbw.core.provider.assets.color" }
 
-    wbw.core.provider.asset.color.light_green:
-        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\LightGreenColorProvider
+    wbw.core.assets.color.material_design_color_palette.light_green:
+        class:  WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\LightGreenColorProvider
         public: true
         tags:
-            - { name: "wbw.core.provider.color" }
+            - { name: "wbw.core.provider.assets.color" }
 
-    wbw.core.provider.asset.color.lime:
-        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\LimeColorProvider
+    wbw.core.assets.color.material_design_color_palette.lime:
+        class:  WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\LimeColorProvider
         public: true
         tags:
-            - { name: "wbw.core.provider.color" }
+            - { name: "wbw.core.provider.assets.color" }
 
-    wbw.core.provider.asset.color.orange:
-        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\OrangeColorProvider
+    wbw.core.assets.color.material_design_color_palette.orange:
+        class:  WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\OrangeColorProvider
         public: true
         tags:
-            - { name: "wbw.core.provider.color" }
+            - { name: "wbw.core.provider.assets.color" }
 
-    wbw.core.provider.asset.color.pink:
-        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\PinkColorProvider
+    wbw.core.assets.color.material_design_color_palette.pink:
+        class:  WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\PinkColorProvider
         public: true
         tags:
-            - { name: "wbw.core.provider.color" }
+            - { name: "wbw.core.provider.assets.color" }
 
-    wbw.core.provider.asset.color.purple:
-        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\PurpleColorProvider
+    wbw.core.assets.color.material_design_color_palette.purple:
+        class:  WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\PurpleColorProvider
         public: true
         tags:
-            - { name: "wbw.core.provider.color" }
+            - { name: "wbw.core.provider.assets.color" }
 
-    wbw.core.provider.asset.color.red:
-        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\RedColorProvider
+    wbw.core.assets.color.material_design_color_palette.red:
+        class:  WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\RedColorProvider
         public: true
         tags:
-            - { name: "wbw.core.provider.color" }
+            - { name: "wbw.core.provider.assets.color" }
 
-    wbw.core.provider.asset.color.teal:
-        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\TealColorProvider
+    wbw.core.assets.color.material_design_color_palette.teal:
+        class:  WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\TealColorProvider
         public: true
         tags:
-            - { name: "wbw.core.provider.color" }
+            - { name: "wbw.core.provider.assets.color" }
 
-    wbw.core.provider.asset.color.yellow:
-        class:  WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\YellowColorProvider
+    wbw.core.assets.color.material_design_color_palette.yellow:
+        class:  WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\YellowColorProvider
         public: true
         tags:
-            - { name: "wbw.core.provider.color" }
+            - { name: "wbw.core.provider.assets.color" }
 
     wbw.core.provider.asset.highlighter.syntax_highlighter_strings:
         class:  WBW\Bundle\CoreBundle\Provider\Asset\Highlighter\SyntaxHighlighterStringsProvider

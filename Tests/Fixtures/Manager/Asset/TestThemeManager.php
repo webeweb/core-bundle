@@ -14,8 +14,8 @@ namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\Asset;
 use Psr\Log\LoggerInterface;
 use Twig\Environment;
 use WBW\Bundle\CoreBundle\Manager\Asset\AbstractThemeManager;
-use WBW\Bundle\CoreBundle\Manager\ManagerInterface;
 use WBW\Bundle\CoreBundle\Provider\Asset\ThemeProviderInterface;
+use WBW\Library\Symfony\Manager\ManagerInterface;
 
 /**
  * Test theme manager.

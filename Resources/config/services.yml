@@ -19,13 +19,13 @@ services:
         calls:
             - [ "setContainer", [ "@service_container" ] ]
 
-    wbw.core.manager.asset.color:
-        class:  WBW\Bundle\CoreBundle\Manager\Asset\ColorManager
+    wbw.core.manager.assets.color:
+        class:  WBW\Library\Symfony\Manager\Assets\ColorManager
         arguments: [ "@logger" ]
         public: true
 
-    wbw.core.manager.asset.quote:
-        class:  WBW\Bundle\CoreBundle\Manager\Asset\QuoteManager
+    wbw.core.manager.assets.quote:
+        class:  WBW\Library\Symfony\Manager\Assets\QuoteManager
         arguments: [ "@logger" ]
         public: true
 

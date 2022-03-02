@@ -14,26 +14,6 @@ namespace WBW\Bundle\CoreBundle\Tests\DependencyInjection;
 use Doctrine\Persistence\Mapping\ClassMetadata;
 use Exception;
 use Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
-use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\AmberColorProvider;
-use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\BlueColorProvider;
-use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\BlueGreyColorProvider;
-use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\BrownColorProvider;
-use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\CyanColorProvider;
-use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\DeepOrangeColorProvider;
-use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\DeepPurpleColorProvider;
-use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\GreenColorProvider;
-use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\GreyColorProvider;
-use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\IndigoColorProvider;
-use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\LightBlueColorProvider;
-use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\LightGreenColorProvider;
-use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\LimeColorProvider;
-use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\OrangeColorProvider;
-use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\PinkColorProvider;
-use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\PurpleColorProvider;
-use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\RedColorProvider;
-use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\TealColorProvider;
-use WBW\Bundle\CoreBundle\Asset\Color\MaterialDesignColorPalette\YellowColorProvider;
-use WBW\Bundle\CoreBundle\Asset\Quote\YamlQuoteProvider;
 use WBW\Bundle\CoreBundle\Command\CopySkeletonCommand;
 use WBW\Bundle\CoreBundle\Command\UnzipAssetsCommand;
 use WBW\Bundle\CoreBundle\Component\Form\FormHelper;
@@ -44,8 +24,6 @@ use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\EventListener\NotificationEventListener;
 use WBW\Bundle\CoreBundle\EventListener\SecurityEventListener;
 use WBW\Bundle\CoreBundle\EventListener\ToastEventListener;
-use WBW\Bundle\CoreBundle\Manager\Asset\ColorManager;
-use WBW\Bundle\CoreBundle\Manager\Asset\QuoteManager;
 use WBW\Bundle\CoreBundle\Manager\Asset\ThemeManager;
 use WBW\Bundle\CoreBundle\Provider\Asset\Highlighter\SyntaxHighlighterStringsProvider;
 use WBW\Bundle\CoreBundle\Repository\RepositoryHelper;
@@ -64,6 +42,28 @@ use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\StringTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\StylesheetTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\UtilityTwigExtension;
+use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\AmberColorProvider;
+use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\BlueColorProvider;
+use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\BlueGreyColorProvider;
+use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\BrownColorProvider;
+use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\CyanColorProvider;
+use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\DeepOrangeColorProvider;
+use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\DeepPurpleColorProvider;
+use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\GreenColorProvider;
+use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\GreyColorProvider;
+use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\IndigoColorProvider;
+use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\LightBlueColorProvider;
+use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\LightGreenColorProvider;
+use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\LimeColorProvider;
+use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\OrangeColorProvider;
+use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\PinkColorProvider;
+use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\PurpleColorProvider;
+use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\RedColorProvider;
+use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\TealColorProvider;
+use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\YellowColorProvider;
+use WBW\Library\Symfony\Assets\Quote\YamlQuoteProvider;
+use WBW\Library\Symfony\Manager\Assets\ColorManager;
+use WBW\Library\Symfony\Manager\Assets\QuoteManager;
 
 /**
  * Core extension test.
@@ -78,7 +78,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
      *
      * @var string
      */
-    const WORLDS_WISDOM_QUOTE_PROVIDER_SERVICE_NAME = "wbw.core.provider.asset.quote.worlds_wisdom";
+    const WORLDS_WISDOM_QUOTE_PROVIDER_SERVICE_NAME = "wbw.core.provider.assets.quote.worlds_wisdom";
 
     /**
      * Configs.

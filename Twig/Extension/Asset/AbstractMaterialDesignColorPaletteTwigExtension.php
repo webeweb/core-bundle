@@ -12,9 +12,9 @@
 namespace WBW\Bundle\CoreBundle\Twig\Extension\Asset;
 
 use Twig\Environment;
-use WBW\Bundle\CoreBundle\Asset\Color\ColorHelper;
 use WBW\Bundle\CoreBundle\Provider\Asset\ColorProviderInterface;
 use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
+use WBW\Library\Symfony\Assets\Color\ColorFactory;
 
 /**
  * Abstract Material Design Color Palette Twig extension.
@@ -40,7 +40,7 @@ abstract class AbstractMaterialDesignColorPaletteTwigExtension extends AbstractT
     public function __construct(Environment $twigEnvironment) {
         parent::__construct($twigEnvironment);
 
-        $this->setColors(ColorHelper::getMaterialDesignColorPalette());
+        $this->setColors(ColorFactory::newMaterialDesignColorPalette());
     }
 
     /**

@@ -12,8 +12,8 @@
 namespace WBW\Bundle\CoreBundle\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use WBW\Bundle\CoreBundle\Manager\Asset\QuoteManager;
-use WBW\Bundle\CoreBundle\Provider\Asset\QuoteProviderInterface;
+use WBW\Library\Symfony\Manager\Assets\QuoteManager;
+use WBW\Library\Symfony\Provider\Assets\QuoteProviderInterface;
 
 /**
  * Quote provider compiler pass.
@@ -27,6 +27,6 @@ class QuoteProviderCompilerPass extends AbstractProviderCompilerPass {
      *{@inheritDoc}
      */
     public function process(ContainerBuilder $container): void {
-        $this->processing($container, QuoteManager::SERVICE_NAME, QuoteProviderInterface::QUOTE_TAG_NAME);
+        $this->processing($container, QuoteManager::SERVICE_NAME, QuoteProviderInterface::QUOTE_PROVIDER_TAG_NAME);
     }
 }

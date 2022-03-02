@@ -12,9 +12,9 @@
 namespace WBW\Bundle\CoreBundle\Tests\DependencyInjection\Compiler;
 
 use WBW\Bundle\CoreBundle\DependencyInjection\Compiler\QuoteProviderCompilerPass;
-use WBW\Bundle\CoreBundle\Manager\Asset\QuoteManager;
-use WBW\Bundle\CoreBundle\Provider\Asset\QuoteProviderInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
+use WBW\Library\Symfony\Manager\Assets\QuoteManager;
+use WBW\Library\Symfony\Provider\Assets\QuoteProviderInterface;
 
 /**
  * Quote provider compiler pass test.
@@ -75,7 +75,7 @@ class QuoteProviderCompilerPassTest extends AbstractTestCase {
         $this->assertFalse($this->containerBuilder->getDefinition(QuoteManager::SERVICE_NAME)->hasMethodCall("addProvider"));
 
         // Register the Quote provider.
-        $this->containerBuilder->register($serviceName, $this->quoteProvider)->addTag(QuoteProviderInterface::QUOTE_TAG_NAME);
+        $this->containerBuilder->register($serviceName, $this->quoteProvider)->addTag(QuoteProviderInterface::QUOTE_PROVIDER_TAG_NAME);
 
         $this->assertTrue($this->containerBuilder->hasDefinition(QuoteManager::SERVICE_NAME));
         $this->assertTrue($this->containerBuilder->hasDefinition($serviceName));

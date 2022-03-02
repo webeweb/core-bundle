@@ -12,8 +12,8 @@
 namespace WBW\Bundle\CoreBundle\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use WBW\Bundle\CoreBundle\Manager\Asset\ColorManager;
-use WBW\Bundle\CoreBundle\Provider\Asset\ColorProviderInterface;
+use WBW\Library\Symfony\Manager\Assets\ColorManager;
+use WBW\Library\Symfony\Provider\Assets\ColorProviderInterface;
 
 /**
  * Color provider compiler pass.
@@ -27,6 +27,6 @@ class ColorProviderCompilerPass extends AbstractProviderCompilerPass {
      *{@inheritDoc}
      */
     public function process(ContainerBuilder $container): void {
-        $this->processing($container, ColorManager::SERVICE_NAME, ColorProviderInterface::COLOR_TAG_NAME);
+        $this->processing($container, ColorManager::SERVICE_NAME, ColorProviderInterface::COLOR_PROVIDER_TAG_NAME);
     }
 }
