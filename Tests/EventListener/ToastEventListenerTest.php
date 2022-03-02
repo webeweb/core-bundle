@@ -13,10 +13,10 @@ namespace WBW\Bundle\CoreBundle\Tests\EventListener;
 
 use Symfony\Component\HttpFoundation\Session\Flash\FlashBag;
 use Symfony\Component\HttpFoundation\Session\Session;
-use WBW\Bundle\CoreBundle\Asset\Toast\ToastInterface;
 use WBW\Bundle\CoreBundle\Event\ToastEvent;
 use WBW\Bundle\CoreBundle\EventListener\ToastEventListener;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
+use WBW\Library\Symfony\Assets\Toast\ToastInterface;
 
 /**
  * Toast event listener.

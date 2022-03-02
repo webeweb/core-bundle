@@ -11,7 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Event;
 
-use WBW\Bundle\CoreBundle\Asset\Toast\ToastInterface;
+use WBW\Library\Symfony\Assets\Toast\ToastInterface;
+use WBW\Library\Symfony\Assets\Toast\ToastTrait;
 
 /**
  * Toast event.
@@ -21,6 +22,7 @@ use WBW\Bundle\CoreBundle\Asset\Toast\ToastInterface;
  */
 class ToastEvent extends AbstractEvent {
 
+    use ToastTrait;
     /**
      * Event "danger".
      *
@@ -49,12 +51,6 @@ class ToastEvent extends AbstractEvent {
      */
     const WARNING = "wbw.core.event.toast.warning";
 
-    /**
-     * Toast.
-     *
-     * @var ToastInterface
-     */
-    private $toast;
 
     /**
      * Constructor.
@@ -66,25 +62,5 @@ class ToastEvent extends AbstractEvent {
         parent::__construct($eventName);
 
         $this->setToast($toast);
-    }
-
-    /**
-     * Get the toast.
-     *
-     * @return ToastInterface Returns the toast.
-     */
-    public function getToast(): ToastInterface {
-        return $this->toast;
-    }
-
-    /**
-     * Set the toast.
-     *
-     * @param ToastInterface $toast The toast.
-     * @return ToastEvent Returns this toast event.
-     */
-    protected function setToast(ToastInterface $toast): ToastEvent {
-        $this->toast = $toast;
-        return $this;
     }
 }

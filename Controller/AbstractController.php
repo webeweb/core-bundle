@@ -17,7 +17,6 @@ use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Security\Core\User\User;
-use WBW\Bundle\CoreBundle\Asset\Toast\ToastInterface;
 use WBW\Bundle\CoreBundle\Component\EventDispatcher\BaseEvent;
 use WBW\Bundle\CoreBundle\Component\EventDispatcher\EventDispatcherHelper;
 use WBW\Bundle\CoreBundle\Component\Form\FormHelper;
@@ -28,6 +27,7 @@ use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
 use WBW\Bundle\CoreBundle\Repository\RepositoryHelper;
 use WBW\Library\Symfony\Assets\Notification\NotificationInterface;
+use WBW\Library\Symfony\Assets\Toast\ToastInterface;
 
 /**
  * Abstract controller.
