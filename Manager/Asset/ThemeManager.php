@@ -11,16 +11,16 @@
 
 namespace WBW\Bundle\CoreBundle\Manager\Asset;
 
-use WBW\Bundle\CoreBundle\Provider\Asset\Theme\ApplicationThemeProviderInterface;
-use WBW\Bundle\CoreBundle\Provider\Asset\Theme\BreadcrumbsThemeProviderInterface;
-use WBW\Bundle\CoreBundle\Provider\Asset\Theme\FooterThemeProviderInterface;
-use WBW\Bundle\CoreBundle\Provider\Asset\Theme\HookDropDownThemeProviderInterface;
-use WBW\Bundle\CoreBundle\Provider\Asset\Theme\NavigationThemeProviderInterface;
-use WBW\Bundle\CoreBundle\Provider\Asset\Theme\NotificationsDropDownThemeProviderInterface;
-use WBW\Bundle\CoreBundle\Provider\Asset\Theme\SearchThemeProviderInterface;
-use WBW\Bundle\CoreBundle\Provider\Asset\Theme\TasksDropDownThemeProviderInterface;
-use WBW\Bundle\CoreBundle\Provider\Asset\Theme\UserInfoThemeProviderInterface;
 use WBW\Library\Symfony\Manager\ManagerInterface;
+use WBW\Library\Symfony\Provider\Assets\Theme\ApplicationThemeProviderInterface;
+use WBW\Library\Symfony\Provider\Assets\Theme\BreadcrumbsThemeProviderInterface;
+use WBW\Library\Symfony\Provider\Assets\Theme\FooterThemeProviderInterface;
+use WBW\Library\Symfony\Provider\Assets\Theme\HookDropdownThemeProviderInterface;
+use WBW\Library\Symfony\Provider\Assets\Theme\NavigationThemeProviderInterface;
+use WBW\Library\Symfony\Provider\Assets\Theme\NotificationsDropdownThemeProviderInterface;
+use WBW\Library\Symfony\Provider\Assets\Theme\SearchThemeProviderInterface;
+use WBW\Library\Symfony\Provider\Assets\Theme\TasksDropdownThemeProviderInterface;
+use WBW\Library\Symfony\Provider\Assets\Theme\UserInfoThemeProviderInterface;
 
 /**
  * Theme manager.
@@ -67,10 +67,10 @@ class ThemeManager extends AbstractThemeManager {
     /**
      * Get the hook drop down theme provider.
      *
-     * @return HookDropDownThemeProviderInterface|null Returns the hook drop down theme provider.
+     * @return HookDropdownThemeProviderInterface|null Returns the hook drop down theme provider.
      */
-    public function getHookDropDownThemeProvider(): ?HookDropDownThemeProviderInterface {
-        return $this->getProvider(HookDropDownThemeProviderInterface::class);
+    public function getHookDropdownThemeProvider(): ?HookDropdownThemeProviderInterface {
+        return $this->getProvider(HookDropdownThemeProviderInterface::class);
     }
 
     /**
@@ -85,10 +85,10 @@ class ThemeManager extends AbstractThemeManager {
     /**
      * Get the notifications drop down theme provider.
      *
-     * @return NotificationsDropDownThemeProviderInterface|null Returns the Notifications drop down theme provider.
+     * @return NotificationsDropdownThemeProviderInterface|null Returns the Notifications drop down theme provider.
      */
-    public function getNotificationsDropDownThemeProvider(): ?NotificationsDropDownThemeProviderInterface {
-        return $this->getProvider(NotificationsDropDownThemeProviderInterface::class);
+    public function getNotificationsDropdownThemeProvider(): ?NotificationsDropdownThemeProviderInterface {
+        return $this->getProvider(NotificationsDropdownThemeProviderInterface::class);
     }
 
     /**
@@ -103,10 +103,10 @@ class ThemeManager extends AbstractThemeManager {
     /**
      * Get the tasks drop down theme provider.
      *
-     * @return TasksDropDownThemeProviderInterface|null Returns the tasks drop down theme provider.
+     * @return TasksDropdownThemeProviderInterface|null Returns the tasks drop down theme provider.
      */
-    public function getTasksDropDownThemeProvider(): ?TasksDropDownThemeProviderInterface {
-        return $this->getProvider(TasksDropDownThemeProviderInterface::class);
+    public function getTasksDropdownThemeProvider(): ?TasksDropdownThemeProviderInterface {
+        return $this->getProvider(TasksDropdownThemeProviderInterface::class);
     }
 
     /**
@@ -126,11 +126,11 @@ class ThemeManager extends AbstractThemeManager {
             ApplicationThemeProviderInterface::class           => null,
             BreadcrumbsThemeProviderInterface::class           => null,
             FooterThemeProviderInterface::class                => null,
-            HookDropDownThemeProviderInterface::class          => null,
+            HookDropdownThemeProviderInterface::class          => null,
             NavigationThemeProviderInterface::class            => null,
-            NotificationsDropDownThemeProviderInterface::class => null,
+            NotificationsDropdownThemeProviderInterface::class => null,
             SearchThemeProviderInterface::class                => null,
-            TasksDropDownThemeProviderInterface::class         => null,
+            TasksDropdownThemeProviderInterface::class         => null,
             UserInfoThemeProviderInterface::class              => null,
         ];
     }
@@ -171,11 +171,11 @@ class ThemeManager extends AbstractThemeManager {
     /**
      * Set the hook drop down theme provider.
      *
-     * @param HookDropDownThemeProviderInterface $provider The hook drop down theme provider.
+     * @param HookDropdownThemeProviderInterface $provider The hook drop down theme provider.
      * @return ManagerInterface Returns this manager.
      */
-    public function setHookDropDownThemeProvider(HookDropDownThemeProviderInterface $provider): ManagerInterface {
-        $this->setProvider(HookDropDownThemeProviderInterface::class, $provider);
+    public function setHookDropdownThemeProvider(HookDropdownThemeProviderInterface $provider): ManagerInterface {
+        $this->setProvider(HookDropdownThemeProviderInterface::class, $provider);
         return $this;
     }
 
@@ -193,11 +193,11 @@ class ThemeManager extends AbstractThemeManager {
     /**
      * Set the notifications drop down theme provider.
      *
-     * @param NotificationsDropDownThemeProviderInterface $provider The notifications drop down theme provider.
+     * @param NotificationsDropdownThemeProviderInterface $provider The notifications drop down theme provider.
      * @return ManagerInterface Returns this manager.
      */
-    public function setNotificationsDropDownThemeProvider(NotificationsDropDownThemeProviderInterface $provider): ManagerInterface {
-        $this->setProvider(NotificationsDropDownThemeProviderInterface::class, $provider);
+    public function setNotificationsDropdownThemeProvider(NotificationsDropdownThemeProviderInterface $provider): ManagerInterface {
+        $this->setProvider(NotificationsDropdownThemeProviderInterface::class, $provider);
         return $this;
     }
 
@@ -215,11 +215,11 @@ class ThemeManager extends AbstractThemeManager {
     /**
      * Set the tasks drop down theme provider.
      *
-     * @param TasksDropDownThemeProviderInterface $provider The tasks drop down theme provider.
+     * @param TasksDropdownThemeProviderInterface $provider The tasks drop down theme provider.
      * @return ManagerInterface Returns this manager.
      */
-    public function setTasksDropDownThemeProvider(TasksDropDownThemeProviderInterface $provider): ManagerInterface {
-        $this->setProvider(TasksDropDownThemeProviderInterface::class, $provider);
+    public function setTasksDropdownThemeProvider(TasksDropdownThemeProviderInterface $provider): ManagerInterface {
+        $this->setProvider(TasksDropdownThemeProviderInterface::class, $provider);
         return $this;
     }
 
