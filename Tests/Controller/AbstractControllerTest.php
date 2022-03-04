@@ -19,7 +19,7 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use WBW\Bundle\CoreBundle\Component\Form\FormHelper;
-use WBW\Bundle\CoreBundle\Component\Translation\BaseTranslatorInterface;
+use WBW\Bundle\CoreBundle\Symfony\Component\Translation\BaseTranslatorInterface;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\Event\ToastEvent;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
