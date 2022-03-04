@@ -9,16 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Component\EventDispatcher;
+namespace WBW\Bundle\CoreBundle\Helper;
 
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpKernel\Kernel;
+use WBW\Bundle\CoreBundle\Component\EventDispatcher\BaseEvent;
 
 /**
  * Event dispatcher helper.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Component\EventDispatcher
+ * @package WBW\Bundle\CoreBundle\Helper
  */
 class EventDispatcherHelper {
 
