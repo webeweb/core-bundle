@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Symfony\Component\DependencyInjection\Container;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\DependencyInjection\Container;
 
-use WBW\Bundle\CoreBundle\Symfony\Component\DependencyInjection\Container\ContainerTrait;
+use WBW\Bundle\CoreBundle\DependencyInjection\Container\ContainerTrait;
 
 /**
  * Test container trait.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Symfony\Component\DependencyInjection\Container
+ * @package WBW\Bundle\CoreBundle\Tests\Fixtures\DependencyInjection\Container
  */
 class TestContainerTrait {
 

@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Symfony\Component\DependencyInjection\Container;
+namespace WBW\Bundle\CoreBundle\Tests\DependencyInjection\Container;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Symfony\Component\DependencyInjection\Container\TestContainerTrait;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\DependencyInjection\Container\TestContainerTrait;
 
 /**
  * Container trait test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Symfony\Component\DependencyInjection\Container
+ * @package WBW\Bundle\CoreBundle\Tests\DependencyInjection\Container
  */
 class ContainerTraitTest extends AbstractTestCase {
 

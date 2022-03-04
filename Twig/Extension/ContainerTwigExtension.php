@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Twig\Extension;
 
 use Symfony\Component\DependencyInjection\Container;
 use Twig\TwigFunction;
-use WBW\Bundle\CoreBundle\Symfony\Component\DependencyInjection\Container\ContainerTrait;
+use WBW\Bundle\CoreBundle\DependencyInjection\Container\ContainerTrait;
 
 /**
  * Container Twig extension.
