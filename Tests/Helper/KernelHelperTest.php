@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Component\HttpKernel;
+namespace WBW\Bundle\CoreBundle\Tests\Helper;
 
 use TestKernel;
-use WBW\Bundle\CoreBundle\Component\HttpKernel\KernelHelper;
+use WBW\Bundle\CoreBundle\Helper\KernelHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Kernel helper test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Component\HttpKernel
+ * @package WBW\Bundle\CoreBundle\Tests\Helper
  */
 class KernelHelperTest extends AbstractTestCase {
 

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Component\HttpKernel;
+namespace WBW\Bundle\CoreBundle\Helper;
 
 use Symfony\Component\HttpKernel\KernelInterface;
 
@@ -17,7 +17,7 @@ use Symfony\Component\HttpKernel\KernelInterface;
  * Kernel helper.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Component\HttpKernel
+ * @package WBW\Bundle\CoreBundle\Helper
  */
 class KernelHelper {
 
