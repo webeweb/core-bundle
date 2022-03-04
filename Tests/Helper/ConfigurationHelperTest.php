@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Component\DependencyInjection;
+namespace WBW\Bundle\CoreBundle\Tests\Helper;
 
-use WBW\Bundle\CoreBundle\Component\DependencyInjection\ConfigurationHelper;
+use WBW\Bundle\CoreBundle\Helper\ConfigurationHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Configuration helper test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Component\DependencyInjection
+ * @package WBW\Bundle\CoreBundle\Tests\Helper
  */
 class ConfigurationHelperTest extends AbstractTestCase {
 
@@ -29,7 +29,7 @@ class ConfigurationHelperTest extends AbstractTestCase {
      */
     public function testLoadYamlConfig(): void {
 
-        $directory = realpath(__DIR__ . "/../../../DependencyInjection");
+        $directory = realpath(__DIR__ . "/../../DependencyInjection");
 
         $res = ConfigurationHelper::loadYamlConfig($directory, "assets");
         $this->assertNotEquals([], $res);
@@ -42,7 +42,7 @@ class ConfigurationHelperTest extends AbstractTestCase {
      */
     public function testLoadYamlConfigWithoutFilename(): void {
 
-        $directory = realpath(__DIR__ . "/../../../DependencyInjection");
+        $directory = realpath(__DIR__ . "/../../DependencyInjection");
 
         $res = ConfigurationHelper::loadYamlConfig($directory, "exception");
         $this->assertEquals([], $res);

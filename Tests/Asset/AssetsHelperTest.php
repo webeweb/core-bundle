@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Asset;
 
 use Exception;
 use InvalidArgumentException;
-use WBW\Bundle\CoreBundle\Component\DependencyInjection\ConfigurationHelper;
+use WBW\Bundle\CoreBundle\Helper\ConfigurationHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\TestAssetsHelper;
 
