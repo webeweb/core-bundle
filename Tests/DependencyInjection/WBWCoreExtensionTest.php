@@ -42,28 +42,28 @@ use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\StringTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\StylesheetTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\UtilityTwigExtension;
-use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\AmberColorProvider;
-use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\BlueColorProvider;
-use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\BlueGreyColorProvider;
-use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\BrownColorProvider;
-use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\CyanColorProvider;
-use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\DeepOrangeColorProvider;
-use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\DeepPurpleColorProvider;
-use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\GreenColorProvider;
-use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\GreyColorProvider;
-use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\IndigoColorProvider;
-use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\LightBlueColorProvider;
-use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\LightGreenColorProvider;
-use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\LimeColorProvider;
-use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\OrangeColorProvider;
-use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\PinkColorProvider;
-use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\PurpleColorProvider;
-use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\RedColorProvider;
-use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\TealColorProvider;
-use WBW\Library\Symfony\Assets\Color\MaterialDesignColorPalette\YellowColorProvider;
-use WBW\Library\Symfony\Assets\Quote\YamlQuoteProvider;
-use WBW\Library\Symfony\Manager\Assets\ColorManager;
-use WBW\Library\Symfony\Manager\Assets\QuoteManager;
+use WBW\Library\Symfony\Color\MaterialDesignColorPalette\AmberColorProvider;
+use WBW\Library\Symfony\Color\MaterialDesignColorPalette\BlueColorProvider;
+use WBW\Library\Symfony\Color\MaterialDesignColorPalette\BlueGreyColorProvider;
+use WBW\Library\Symfony\Color\MaterialDesignColorPalette\BrownColorProvider;
+use WBW\Library\Symfony\Color\MaterialDesignColorPalette\CyanColorProvider;
+use WBW\Library\Symfony\Color\MaterialDesignColorPalette\DeepOrangeColorProvider;
+use WBW\Library\Symfony\Color\MaterialDesignColorPalette\DeepPurpleColorProvider;
+use WBW\Library\Symfony\Color\MaterialDesignColorPalette\GreenColorProvider;
+use WBW\Library\Symfony\Color\MaterialDesignColorPalette\GreyColorProvider;
+use WBW\Library\Symfony\Color\MaterialDesignColorPalette\IndigoColorProvider;
+use WBW\Library\Symfony\Color\MaterialDesignColorPalette\LightBlueColorProvider;
+use WBW\Library\Symfony\Color\MaterialDesignColorPalette\LightGreenColorProvider;
+use WBW\Library\Symfony\Color\MaterialDesignColorPalette\LimeColorProvider;
+use WBW\Library\Symfony\Color\MaterialDesignColorPalette\OrangeColorProvider;
+use WBW\Library\Symfony\Color\MaterialDesignColorPalette\PinkColorProvider;
+use WBW\Library\Symfony\Color\MaterialDesignColorPalette\PurpleColorProvider;
+use WBW\Library\Symfony\Color\MaterialDesignColorPalette\RedColorProvider;
+use WBW\Library\Symfony\Color\MaterialDesignColorPalette\TealColorProvider;
+use WBW\Library\Symfony\Color\MaterialDesignColorPalette\YellowColorProvider;
+use WBW\Library\Symfony\Manager\ColorManager;
+use WBW\Library\Symfony\Manager\QuoteManager;
+use WBW\Library\Symfony\Provider\Quote\YamlQuoteProvider;
 
 /**
  * Core extension test.
@@ -78,7 +78,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
      *
      * @var string
      */
-    const WORLDS_WISDOM_QUOTE_PROVIDER_SERVICE_NAME = "wbw.core.provider.assets.quote.worlds_wisdom";
+    const WORLDS_WISDOM_QUOTE_PROVIDER_SERVICE_NAME = "wbw.core.provider.quote.worlds_wisdom";
 
     /**
      * Configs.

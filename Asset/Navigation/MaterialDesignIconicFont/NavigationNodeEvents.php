@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Asset\Navigation\MaterialDesignIconicFont;
 
-use WBW\Library\Symfony\Assets\Navigation\NavigationNode;
+use WBW\Library\Symfony\Component\Navigation\NavigationNode;
 
 /**
  * Navigation node "events".
@@ -27,7 +27,7 @@ class NavigationNodeEvents extends NavigationNode {
      * @param string|null $uri The URI.
      * @param string $matcher The matcher.
      */
-    public function __construct(string $uri = null, string $matcher = self::NAVIGATION_MATCHER_URL) {
+    public function __construct(string $uri = null, string $matcher = self::MATCHER_URL) {
         parent::__construct("navigation.node.events", "zmdi:calendar", $uri, $matcher);
     }
 }

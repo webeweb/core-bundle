@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Twig\Extension\Asset;
 use Twig\TwigFilter;
 use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\Asset\Icon\IconFactory;
-use WBW\Library\Symfony\Assets\Icon\IconRendererInterface;
+use WBW\Library\Symfony\Renderer\Assets\IconRendererInterface;
 
 /**
  * Material Design Iconic Font Twig extension.

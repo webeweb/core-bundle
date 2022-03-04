@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Twig\Extension\Asset;
 
 use Twig\TwigFunction;
-use WBW\Library\Symfony\Assets\Icon\IconRendererInterface;
+use WBW\Library\Symfony\Renderer\Assets\IconRendererInterface;
 use WBW\Library\Types\Helper\ArrayHelper;
 
 /**

@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Asset\Navigation\FontAwesome;
 
 use WBW\Bundle\CoreBundle\Asset\Navigation\FontAwesome\NavigationNodeEvents;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Library\Symfony\Assets\Navigation\NavigationInterface;
+use WBW\Library\Symfony\Component\NavigationNodeInterface;
 
 /**
  * Navigation node "events" test.
@@ -34,7 +34,7 @@ class NavigationNodeEventsTest extends AbstractTestCase {
 
         $this->assertEquals("navigation.node.events", $obj->getLabel());
         $this->assertEquals("fa:calendar", $obj->getIcon());
-        $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
+        $this->assertEquals(NavigationNodeInterface::MATCHER_URL, $obj->getMatcher());
         $this->assertEquals("route", $obj->getUri());
     }
 }

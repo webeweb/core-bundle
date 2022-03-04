@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Event;
 
-use WBW\Library\Symfony\Assets\Notification\NotificationInterface;
-use WBW\Library\Symfony\Assets\Notification\NotificationTrait;
+use WBW\Library\Symfony\Component\NotificationInterface;
+use WBW\Library\Symfony\Component\NotificationTrait;
 
 /**
  * Notification event.

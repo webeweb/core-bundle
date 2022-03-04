@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Event;
 
 use WBW\Bundle\CoreBundle\Event\ToastEvent;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Library\Symfony\Assets\Toast\ToastInterface;
+use WBW\Library\Symfony\Component\ToastInterface;
 
 /**
  * Toast event test.

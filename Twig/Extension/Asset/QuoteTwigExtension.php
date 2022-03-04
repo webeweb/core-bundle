@@ -16,10 +16,10 @@ use Exception;
 use Twig\Environment;
 use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
-use WBW\Library\Symfony\Assets\Quote\QuoteInterface;
-use WBW\Library\Symfony\Manager\Assets\QuoteManager;
-use WBW\Library\Symfony\Manager\Assets\QuoteManagerTrait;
-use WBW\Library\Symfony\Provider\Assets\QuoteProviderInterface;
+use WBW\Library\Symfony\Manager\QuoteManager;
+use WBW\Library\Symfony\Manager\QuoteManagerTrait;
+use WBW\Library\Symfony\Model\QuoteInterface;
+use WBW\Library\Symfony\Provider\QuoteProviderInterface;
 use WBW\Library\Types\Helper\ArrayHelper;
 
 /**

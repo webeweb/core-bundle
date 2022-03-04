@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Asset\Navigation\FontAwesome;
 
 use WBW\Bundle\CoreBundle\Asset\Navigation\FontAwesome\NavigationNodeUsersGroups;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Library\Symfony\Assets\Navigation\NavigationInterface;
+use WBW\Library\Symfony\Component\NavigationNodeInterface;
 
 /**
  * Navigation node "users groups" test.
@@ -34,7 +34,7 @@ class NavigationNodeUsersGroupsTest extends AbstractTestCase {
 
         $this->assertEquals("navigation.node.usersGroups", $obj->getLabel());
         $this->assertEquals("fa:users", $obj->getIcon());
-        $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
+        $this->assertEquals(NavigationNodeInterface::MATCHER_URL, $obj->getMatcher());
         $this->assertEquals("route", $obj->getUri());
     }
 }

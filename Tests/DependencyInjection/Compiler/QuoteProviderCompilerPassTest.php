@@ -13,8 +13,8 @@ namespace WBW\Bundle\CoreBundle\Tests\DependencyInjection\Compiler;
 
 use WBW\Bundle\CoreBundle\DependencyInjection\Compiler\QuoteProviderCompilerPass;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Library\Symfony\Manager\Assets\QuoteManager;
-use WBW\Library\Symfony\Provider\Assets\QuoteProviderInterface;
+use WBW\Library\Symfony\Manager\QuoteManager;
+use WBW\Library\Symfony\Provider\QuoteProviderInterface;
 
 /**
  * Quote provider compiler pass test.

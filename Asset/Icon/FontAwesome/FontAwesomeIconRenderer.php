@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Asset\Icon\FontAwesome;
 
-use WBW\Library\Symfony\Assets\Icon\IconRenderer;
+use WBW\Library\Symfony\Renderer\Assets\IconRenderer;
 
 /**
  * Font Awesome icon renderer.

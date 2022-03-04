@@ -12,9 +12,9 @@
 namespace WBW\Bundle\CoreBundle\Twig\Extension\Asset;
 
 use Twig\Environment;
-use WBW\Bundle\CoreBundle\Provider\Asset\ColorProviderInterface;
 use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
-use WBW\Library\Symfony\Assets\Color\ColorFactory;
+use WBW\Library\Symfony\Factory\ColorFactory;
+use WBW\Library\Symfony\Provider\ColorProviderInterface;
 
 /**
  * Abstract Material Design Color Palette Twig extension.

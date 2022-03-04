@@ -12,8 +12,8 @@
 namespace WBW\Bundle\CoreBundle\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use WBW\Library\Symfony\Manager\Assets\QuoteManager;
-use WBW\Library\Symfony\Provider\Assets\QuoteProviderInterface;
+use WBW\Library\Symfony\Manager\QuoteManager;
+use WBW\Library\Symfony\Provider\QuoteProviderInterface;
 
 /**
  * Quote provider compiler pass.

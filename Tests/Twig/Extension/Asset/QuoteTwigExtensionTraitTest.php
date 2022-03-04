@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension\Asset;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Twig\Extension\Asset\TestQuoteTwigExtensionTrait;
 use WBW\Bundle\CoreBundle\Twig\Extension\Asset\QuoteTwigExtension;
-use WBW\Library\Symfony\Manager\Assets\QuoteManager;
+use WBW\Library\Symfony\Manager\QuoteManager;
 
 /**
  * Quote Twig extension trait test.

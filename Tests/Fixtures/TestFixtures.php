@@ -14,11 +14,11 @@ namespace WBW\Bundle\CoreBundle\Tests\Fixtures;
 use Exception;
 use Symfony\Component\Security\Core\User\UserInterface;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser;
-use WBW\Library\Symfony\Assets\Navigation\DividerNode;
-use WBW\Library\Symfony\Assets\Navigation\HeaderNode;
-use WBW\Library\Symfony\Assets\Navigation\NavigationInterface;
-use WBW\Library\Symfony\Assets\Navigation\NavigationNode;
-use WBW\Library\Symfony\Assets\Navigation\NavigationTree;
+use WBW\Library\Symfony\Component\Navigation\DividerNode;
+use WBW\Library\Symfony\Component\Navigation\HeaderNode;
+use WBW\Library\Symfony\Component\Navigation\NavigationNode;
+use WBW\Library\Symfony\Component\Navigation\NavigationTree;
+use WBW\Library\Symfony\Component\NavigationNodeInterface;
 
 /**
  * Test fixtures.
@@ -65,7 +65,7 @@ class TestFixtures {
 
         $tree = new NavigationTree("tree");
 
-        $tree->addNode(new NavigationNode("GitHub", null, NavigationInterface::NAVIGATION_HREF_DEFAULT));
+        $tree->addNode(new NavigationNode("GitHub", null, NavigationNodeInterface::DEFAULT_HREF));
 
         $tree->getLastNode()->addNode(new HeaderNode("GitHub"));
         $tree->getLastNode()->addNode(new DividerNode("Bundles"));
@@ -86,8 +86,8 @@ class TestFixtures {
         $tree->getLastNode()->addNode(new NavigationNode("FTP library", null, "https://github.com/webeweb/ftp-library"));
         $tree->getLastNode()->addNode(new NavigationNode("fPDF library", null, "https://github.com/webeweb/fpdf-library"));
         $tree->getLastNode()->addNode(new NavigationNode("HaveIBeenPwnd library", null, "https://github.com/webeweb/haveibeenpwned-library"));
-        $tree->getLastNode()->addNode(new NavigationNode("SkiData library", null, "https:\/\/github\.com\/webeweb\/skidata-library", NavigationInterface::NAVIGATION_MATCHER_REGEXP));
-        $tree->getLastNode()->addNode(new NavigationNode("sMsmode library", null, "https://github.com/webeweb/smsmode-library", NavigationInterface::NAVIGATION_MATCHER_ROUTER));
+        $tree->getLastNode()->addNode(new NavigationNode("SkiData library", null, "https:\/\/github\.com\/webeweb\/skidata-library", NavigationNodeInterface::MATCHER_REGEXP));
+        $tree->getLastNode()->addNode(new NavigationNode("sMsmode library", null, "https://github.com/webeweb/smsmode-library", NavigationNodeInterface::MATCHER_ROUTER));
 
         return $tree;
     }

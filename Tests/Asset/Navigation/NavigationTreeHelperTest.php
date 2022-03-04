@@ -15,7 +15,7 @@ use Symfony\Component\HttpFoundation\Request;
 use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationTreeHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\TestFixtures;
-use WBW\Library\Symfony\Assets\Navigation\NavigationTree;
+use WBW\Library\Symfony\Component\Navigation\NavigationTree;
 
 /**
  * Navigation tree helper test.

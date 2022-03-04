@@ -21,8 +21,8 @@ use WBW\Bundle\CoreBundle\Doctrine\ORM\EntityManagerTrait;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\EventDispatcher\EventDispatcherHelper;
 use WBW\Bundle\CoreBundle\EventDispatcher\EventDispatcherTrait;
-use WBW\Library\Symfony\Assets\Notification\NotificationFactory;
 use WBW\Library\Symfony\Exception\RedirectResponseException;
+use WBW\Library\Symfony\Factory\NotificationFactory;
 
 /**
  * Form helper.

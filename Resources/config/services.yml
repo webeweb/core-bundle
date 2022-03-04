@@ -19,13 +19,13 @@ services:
         calls:
             - [ "setContainer", [ "@service_container" ] ]
 
-    wbw.core.manager.assets.color:
-        class:  WBW\Library\Symfony\Manager\Assets\ColorManager
+    wbw.core.manager.color:
+        class:  WBW\Library\Symfony\Manager\ColorManager
         arguments: [ "@logger" ]
         public: true
 
-    wbw.core.manager.assets.quote:
-        class:  WBW\Library\Symfony\Manager\Assets\QuoteManager
+    wbw.core.manager.quote:
+        class:  WBW\Library\Symfony\Manager\QuoteManager
         arguments: [ "@logger" ]
         public: true
 
@@ -34,15 +34,15 @@ services:
         arguments: [ "@logger", "@twig" ]
         public: true
         calls:
-            - [ "setApplicationThemeProvider",           [ "@?wbw.core.provider.assets.theme.application" ] ]
-            - [ "setBreadcrumbsThemeProvider",           [ "@?wbw.core.provider.assets.theme.breadcrumbs" ] ]
-            - [ "setHookDropdownThemeProvider",          [ "@?wbw.core.provider.assets.theme.hook_dropdown" ] ]
-            - [ "setFooterThemeProvider",                [ "@?wbw.core.provider.assets.theme.footer" ] ]
-            - [ "setNavigationThemeProvider",            [ "@?wbw.core.provider.assets.theme.navigation" ] ]
-            - [ "setNotificationsDropdownThemeProvider", [ "@?wbw.core.provider.assets.theme.notifications_dropdown" ] ]
-            - [ "setSearchThemeProvider",                [ "@?wbw.core.provider.assets.theme.search" ] ]
-            - [ "setTasksDropdownThemeProvider",         [ "@?wbw.core.provider.assets.theme.tasks_dropdown" ] ]
-            - [ "setUserInfoThemeProvider",              [ "@?wbw.core.provider.assets.theme.user_info" ] ]
+            - [ "setApplicationThemeProvider",           [ "@?wbw.core.provider.theme.application" ] ]
+            - [ "setBreadcrumbsThemeProvider",           [ "@?wbw.core.provider.theme.breadcrumbs" ] ]
+            - [ "setHookDropdownThemeProvider",          [ "@?wbw.core.provider.theme.hook_dropdown" ] ]
+            - [ "setFooterThemeProvider",                [ "@?wbw.core.provider.theme.footer" ] ]
+            - [ "setNavigationThemeProvider",            [ "@?wbw.core.provider.theme.navigation" ] ]
+            - [ "setNotificationsDropdownThemeProvider", [ "@?wbw.core.provider.theme.notifications_dropdown" ] ]
+            - [ "setSearchThemeProvider",                [ "@?wbw.core.provider.theme.search" ] ]
+            - [ "setTasksDropdownThemeProvider",         [ "@?wbw.core.provider.theme.tasks_dropdown" ] ]
+            - [ "setUserInfoThemeProvider",              [ "@?wbw.core.provider.theme.user_info" ] ]
 
     wbw.core.repository.repository_helper:
         class:  WBW\Bundle\CoreBundle\Repository\RepositoryHelper

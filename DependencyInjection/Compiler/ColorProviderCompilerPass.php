@@ -12,8 +12,8 @@
 namespace WBW\Bundle\CoreBundle\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use WBW\Library\Symfony\Manager\Assets\ColorManager;
-use WBW\Library\Symfony\Provider\Assets\ColorProviderInterface;
+use WBW\Library\Symfony\Manager\ColorManager;
+use WBW\Library\Symfony\Provider\ColorProviderInterface;
 
 /**
  * Color provider compiler pass.

@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Asset\Navigation\MaterialDesignIconicFont;
 
-use WBW\Library\Symfony\Assets\Navigation\BreadcrumbNode;
+use WBW\Library\Symfony\Component\Navigation\BreadcrumbNode;
 
 /**
  * Breadcrumb node action "export".
@@ -27,7 +27,7 @@ class BreadcrumbNodeActionExport extends BreadcrumbNode {
      * @param string|null $uri The URI.
      * @param string $matcher The matcher.
      */
-    public function __construct(string $uri = null, string $matcher = self::NAVIGATION_MATCHER_URL) {
+    public function __construct(string $uri = null, string $matcher = self::MATCHER_URL) {
         parent::__construct("navigation.node.action.export", "zmdi:download", $uri, $matcher);
     }
 }

@@ -5,29 +5,29 @@ services:
         alias:  "wbw.core.tests.fixtures.controller.test_layout"
         public: true
 
-    wbw.core.provider.assets.theme.application:
-        class: WBW\Library\Symfony\Assets\Theme\DefaultApplicationThemeProvider
+    wbw.core.provider.theme.application:
+        class: WBW\Library\Symfony\Theme\DefaultApplicationThemeProvider
 
-    wbw.core.provider.assets.theme.breadcrumbs:
-        class: WBW\Library\Symfony\Assets\Theme\DefaultBreadcrumbsThemeProvider
+    wbw.core.provider.theme.breadcrumbs:
+        class: WBW\Library\Symfony\Theme\DefaultBreadcrumbsThemeProvider
 
-    wbw.core.provider.assets.theme.footer:
-        class: WBW\Library\Symfony\Assets\Theme\DefaultFooterThemeProvider
+    wbw.core.provider.theme.footer:
+        class: WBW\Library\Symfony\Theme\DefaultFooterThemeProvider
 
-    wbw.core.provider.assets.theme.hook_dropdown:
-        class: WBW\Library\Symfony\Assets\Theme\DefaultHookDropdownThemeProvider
+    wbw.core.provider.theme.hook_dropdown:
+        class: WBW\Library\Symfony\Theme\DefaultHookDropdownThemeProvider
 
-    wbw.core.provider.assets.theme.notifications_dropdown:
-        class: WBW\Library\Symfony\Assets\Theme\DefaultNotificationsDropdownThemeProvider
+    wbw.core.provider.theme.notifications_dropdown:
+        class: WBW\Library\Symfony\Theme\DefaultNotificationsDropdownThemeProvider
 
-    wbw.core.provider.assets.theme.search:
-        class: WBW\Library\Symfony\Assets\Theme\DefaultSearchThemeProvider
+    wbw.core.provider.theme.search:
+        class: WBW\Library\Symfony\Theme\DefaultSearchThemeProvider
 
-    wbw.core.provider.assets.theme.tasks_dropdown:
-        class: WBW\Library\Symfony\Assets\Theme\DefaultTasksDropdownThemeProvider
+    wbw.core.provider.theme.tasks_dropdown:
+        class: WBW\Library\Symfony\Theme\DefaultTasksDropdownThemeProvider
 
-    wbw.core.provider.assets.theme.user_info:
-        class: WBW\Library\Symfony\Assets\Theme\DefaultUserInfoThemeProvider
+    wbw.core.provider.theme.user_info:
+        class: WBW\Library\Symfony\Theme\DefaultUserInfoThemeProvider
 
     wbw.core.tests.fixtures.controller.test_layout:
         class: WBW\Bundle\CoreBundle\Tests\Fixtures\Controller\TestLayoutController

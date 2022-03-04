@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Asset\Navigation\MaterialDesignIconicFont;
 
 use WBW\Bundle\CoreBundle\Asset\Navigation\MaterialDesignIconicFont\NavigationNodeDashboard;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Library\Symfony\Assets\Navigation\NavigationInterface;
+use WBW\Library\Symfony\Component\NavigationNodeInterface;
 
 /**
  * Navigation node "dashboard" test.
@@ -34,7 +34,7 @@ class NavigationNodeDashboardTest extends AbstractTestCase {
 
         $this->assertEquals("navigation.node.dashboard", $obj->getLabel());
         $this->assertEquals("zmdi:view-dashboard", $obj->getIcon());
-        $this->assertEquals(NavigationInterface::NAVIGATION_MATCHER_URL, $obj->getMatcher());
+        $this->assertEquals(NavigationNodeInterface::MATCHER_URL, $obj->getMatcher());
         $this->assertEquals("route", $obj->getUri());
     }
 }

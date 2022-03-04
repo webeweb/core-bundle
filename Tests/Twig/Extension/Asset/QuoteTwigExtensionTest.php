@@ -16,9 +16,9 @@ use Twig\Node\Node;
 use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Twig\Extension\Asset\QuoteTwigExtension;
-use WBW\Library\Symfony\Assets\Quote\WorldsWisdomQuoteProvider;
-use WBW\Library\Symfony\Manager\Assets\QuoteManager;
-use WBW\Library\Symfony\Provider\Assets\QuoteProviderInterface;
+use WBW\Library\Symfony\Manager\QuoteManager;
+use WBW\Library\Symfony\Provider\Quote\WorldsWisdomQuoteProvider;
+use WBW\Library\Symfony\Provider\QuoteProviderInterface;
 
 /**
  * Quote Twig extension test.

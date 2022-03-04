@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Asset\Icon\MaterialDesignIconicFont;
 
-use WBW\Library\Symfony\Assets\Icon\AbstractIcon;
+use WBW\Library\Symfony\Component\AbstractIcon;
 
 /**
  * Material Design Iconic Font icon.

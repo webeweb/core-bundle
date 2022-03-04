@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Twig\Extension\TestTwigExtension;
-use WBW\Library\Symfony\Assets\Navigation\NavigationInterface;
+use WBW\Library\Symfony\Component\NavigationNodeInterface;
 
 /**
  * Abstract Twig extension test.
@@ -61,7 +61,7 @@ class AbstractTwigExtensionTest extends AbstractTestCase {
         $obj = new TestTwigExtension($this->twigEnvironment);
 
         $this->assertEquals("&nbsp;", TestTwigExtension::DEFAULT_CONTENT);
-        $this->assertEquals(NavigationInterface::NAVIGATION_HREF_DEFAULT, TestTwigExtension::DEFAULT_HREF);
+        $this->assertEquals(NavigationNodeInterface::DEFAULT_HREF, TestTwigExtension::DEFAULT_HREF);
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
 }

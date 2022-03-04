@@ -14,15 +14,15 @@ namespace WBW\Bundle\CoreBundle\Tests\Manager\Asset;
 use Exception;
 use WBW\Bundle\CoreBundle\Manager\Asset\ThemeManager;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Library\Symfony\Provider\Assets\Theme\ApplicationThemeProviderInterface;
-use WBW\Library\Symfony\Provider\Assets\Theme\BreadcrumbsThemeProviderInterface;
-use WBW\Library\Symfony\Provider\Assets\Theme\FooterThemeProviderInterface;
-use WBW\Library\Symfony\Provider\Assets\Theme\HookDropdownThemeProviderInterface;
-use WBW\Library\Symfony\Provider\Assets\Theme\NavigationThemeProviderInterface;
-use WBW\Library\Symfony\Provider\Assets\Theme\NotificationsDropdownThemeProviderInterface;
-use WBW\Library\Symfony\Provider\Assets\Theme\SearchThemeProviderInterface;
-use WBW\Library\Symfony\Provider\Assets\Theme\TasksDropdownThemeProviderInterface;
-use WBW\Library\Symfony\Provider\Assets\Theme\UserInfoThemeProviderInterface;
+use WBW\Library\Symfony\Provider\Theme\ApplicationThemeProviderInterface;
+use WBW\Library\Symfony\Provider\Theme\BreadcrumbsThemeProviderInterface;
+use WBW\Library\Symfony\Provider\Theme\FooterThemeProviderInterface;
+use WBW\Library\Symfony\Provider\Theme\HookDropdownThemeProviderInterface;
+use WBW\Library\Symfony\Provider\Theme\NavigationThemeProviderInterface;
+use WBW\Library\Symfony\Provider\Theme\NotificationsDropdownThemeProviderInterface;
+use WBW\Library\Symfony\Provider\Theme\SearchThemeProviderInterface;
+use WBW\Library\Symfony\Provider\Theme\TasksDropdownThemeProviderInterface;
+use WBW\Library\Symfony\Provider\Theme\UserInfoThemeProviderInterface;
 
 /**
  * Theme manager test.

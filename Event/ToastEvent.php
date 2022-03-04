@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Event;
 
-use WBW\Library\Symfony\Assets\Toast\ToastInterface;
-use WBW\Library\Symfony\Assets\Toast\ToastTrait;
+use WBW\Library\Symfony\Component\ToastInterface;
+use WBW\Library\Symfony\Component\ToastTrait;
 
 /**
  * Toast event.
@@ -23,6 +23,7 @@ use WBW\Library\Symfony\Assets\Toast\ToastTrait;
 class ToastEvent extends AbstractEvent {
 
     use ToastTrait;
+
     /**
      * Event "danger".
      *
@@ -50,7 +51,6 @@ class ToastEvent extends AbstractEvent {
      * @var string
      */
     const WARNING = "wbw.core.event.toast.warning";
-
 
     /**
      * Constructor.

@@ -13,11 +13,11 @@ namespace WBW\Bundle\CoreBundle\Asset\Navigation;
 
 use Symfony\Component\HttpFoundation\ParameterBag;
 use Symfony\Component\HttpFoundation\Request;
-use WBW\Library\Symfony\Assets\Navigation\AbstractNavigationNode;
-use WBW\Library\Symfony\Assets\Navigation\BreadcrumbNode;
-use WBW\Library\Symfony\Assets\Navigation\NavigationInterface;
-use WBW\Library\Symfony\Assets\Navigation\NavigationNode;
-use WBW\Library\Symfony\Assets\Navigation\NavigationTree;
+use WBW\Library\Symfony\Component\AbstractNavigationNode;
+use WBW\Library\Symfony\Component\Navigation\BreadcrumbNode;
+use WBW\Library\Symfony\Component\Navigation\NavigationNode;
+use WBW\Library\Symfony\Component\Navigation\NavigationTree;
+use WBW\Library\Symfony\Component\NavigationNodeInterface;
 
 /**
  * Navigation tree helper.
@@ -102,15 +102,15 @@ class NavigationTreeHelper {
 
         switch ($node->getMatcher()) {
 
-            case NavigationInterface::NAVIGATION_MATCHER_REGEXP:
+            case NavigationNodeInterface::MATCHER_REGEXP:
                 $result = preg_match("/" . $node->getUri() . "/", $request->getUri());
                 break;
 
-            case NavigationInterface::NAVIGATION_MATCHER_ROUTER:
+            case NavigationNodeInterface::MATCHER_ROUTER:
                 $result = $request->get("_route") === $node->getUri() || $request->get("_forwarded", new ParameterBag())->get("_route") === $node->getUri();
                 break;
 
-            case NavigationInterface::NAVIGATION_MATCHER_URL:
+            case NavigationNodeInterface::MATCHER_URL:
                 $result = $request->getUri() === $node->getUri() || $request->getRequestUri() === $node->getUri();
                 break;
         }

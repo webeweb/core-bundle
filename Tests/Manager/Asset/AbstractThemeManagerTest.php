@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Manager\Asset;
 use Exception;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\Asset\TestThemeManager;
-use WBW\Library\Symfony\Provider\Assets\ThemeProviderInterface;
+use WBW\Library\Symfony\Provider\ThemeProviderInterface;
 
 /**
  * Abstract theme manager test.

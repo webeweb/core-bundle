@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Twig\Extension;
 use Twig\Environment;
 use Twig\Extension\AbstractExtension;
 use WBW\Bundle\CoreBundle\Twig\Environment\TwigEnvironmentTrait;
-use WBW\Library\Symfony\Assets\Navigation\NavigationInterface;
+use WBW\Library\Symfony\Component\NavigationNodeInterface;
 use WBW\Library\Types\Helper\StringHelper;
 
 /**
@@ -40,7 +40,7 @@ abstract class AbstractTwigExtension extends AbstractExtension {
      *
      * @var string
      */
-    const DEFAULT_HREF = NavigationInterface::NAVIGATION_HREF_DEFAULT;
+    const DEFAULT_HREF = NavigationNodeInterface::DEFAULT_HREF;
 
     /**
      * Constructor.

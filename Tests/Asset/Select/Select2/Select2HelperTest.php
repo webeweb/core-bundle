@@ -16,7 +16,7 @@ use InvalidArgumentException;
 use WBW\Bundle\CoreBundle\Asset\Select\Select2\Select2Helper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Select\Select2\TestSelect2Option;
-use WBW\Library\Symfony\Assets\Navigation\NavigationNode;
+use WBW\Library\Symfony\Component\Navigation\NavigationNode;
 
 /**
  * Select2 helper test.

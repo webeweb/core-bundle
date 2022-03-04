@@ -16,7 +16,7 @@ use Twig\Environment;
 use WBW\Bundle\CoreBundle\Twig\Environment\TwigEnvironmentTrait;
 use WBW\Library\Symfony\Manager\AbstractManager;
 use WBW\Library\Symfony\Manager\ManagerInterface;
-use WBW\Library\Symfony\Provider\Assets\ThemeProviderInterface;
+use WBW\Library\Symfony\Provider\ThemeProviderInterface;
 
 /**
  * Abstract theme manager.

@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Asset\Icon\FontAwesome;
 
-use WBW\Library\Symfony\Assets\Icon\IconInterface;
+use WBW\Library\Symfony\Component\IconInterface;
 
 /**
  * Font Awesome icon interface.
