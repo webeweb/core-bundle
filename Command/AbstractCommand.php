@@ -64,12 +64,14 @@ abstract class AbstractCommand extends Command {
     /**
      * Get the kernel.
      *
-     * @return KernelInterface|null Returns the kernel in case of success, null othrewise.
+     * @return KernelInterface|null Returns the kernel in case of success, null otherwise.
      */
     protected function getKernel(): ?KernelInterface {
+
         if (false === ($this->getApplication() instanceof Application)) {
             return null;
         }
+
         return $this->getApplication()->getKernel();
     }
 

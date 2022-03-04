@@ -32,9 +32,11 @@ class ConsoleHelper {
      * @return string Returns the checkbox.
      */
     public static function getCheckbox(bool $checked): string {
+
         if (true === $checked) {
             return sprintf("<fg=green;options=bold>%s</>", OSHelper::isWindows() ? "OK" : "\xE2\x9C\x94");
         }
+
         return sprintf("<fg=yellow;options=bold>%s</>", OSHelper::isWindows() ? "KO" : "!");
     }
 

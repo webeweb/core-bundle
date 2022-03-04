@@ -49,9 +49,11 @@ class ToastEventListener {
      * @return ToastEvent Returns the event.
      */
     public function onToast(ToastEvent $event): ToastEvent {
+
         if (true === ($this->getSession() instanceof Session)) {
             $this->getSession()->getFlashBag()->add($event->getToast()->getType(), $event->getToast()->getContent());
         }
+
         return $event;
     }
 }

@@ -49,9 +49,11 @@ class NotificationEventListener {
      * @return NotificationEvent Returns the event.
      */
     public function onNotify(NotificationEvent $event): NotificationEvent {
+
         if (true === ($this->getSession() instanceof Session)) {
             $this->getSession()->getFlashBag()->add($event->getNotification()->getType(), $event->getNotification()->getContent());
         }
+
         return $event;
     }
 }

@@ -63,14 +63,17 @@ EOT;
      * @return void
      */
     protected function displayFooter(StyleInterface $io, int $exitCode, int $count): void {
+
         if (0 < $exitCode) {
             $io->error("Some errors occurred while unzipping assets");
             return;
         }
+
         if (0 === $count) {
             $io->success("No assets were provided by any bundle");
             return;
         }
+
         $io->success("All assets were successfully unzipped");
     }
 
