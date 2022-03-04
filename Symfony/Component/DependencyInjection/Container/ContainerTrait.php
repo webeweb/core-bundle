@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Component\DependencyInjection\Container;
+namespace WBW\Bundle\CoreBundle\Symfony\Component\DependencyInjection\Container;
 
 use Symfony\Component\DependencyInjection\Container;
 
@@ -17,7 +17,7 @@ use Symfony\Component\DependencyInjection\Container;
  * Container trait.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Component\DependencyInjection\Container
+ * @package WBW\Bundle\CoreBundle\Symfony\Component\DependencyInjection\Container
  */
 trait ContainerTrait {
 
