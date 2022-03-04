@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Helper;
+namespace WBW\Bundle\CoreBundle\Console;
 
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -21,7 +21,7 @@ use WBW\Library\Core\Helper\OSHelper;
  * Console helper.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Helper
+ * @package WBW\Bundle\CoreBundle\Console
  */
 class ConsoleHelper {
 

@@ -17,7 +17,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\StyleInterface;
 use Symfony\Component\HttpKernel\KernelInterface;
-use WBW\Bundle\CoreBundle\Helper\ConsoleHelper;
+use WBW\Bundle\CoreBundle\Console\ConsoleHelper;
 
 /**
  * Abstract command.
