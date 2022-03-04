@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Symfony\DependencyInjection\Container;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Symfony\Component\DependencyInjection\Container;
 
 use WBW\Bundle\CoreBundle\Symfony\Component\DependencyInjection\Container\ContainerTrait;
 

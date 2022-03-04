@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Symfony\DependencyInjection\Container;
+namespace WBW\Bundle\CoreBundle\Tests\Symfony\Component\DependencyInjection\Container;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Symfony\DependencyInjection\Container\TestContainerTrait;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Symfony\Component\DependencyInjection\Container\TestContainerTrait;
 
 /**
  * Container trait test.
