@@ -11,6 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Helper;
 
+use WBW\Library\Core\Helper\OSHelper;
+
 /**
  * PhantomJS helper.
  *
