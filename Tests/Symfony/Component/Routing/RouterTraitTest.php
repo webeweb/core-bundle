@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Component\Routing;
+namespace WBW\Bundle\CoreBundle\Tests\Symfony\Component\Routing;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Component\Routing\TestRouterTrait;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Symfony\Component\Routing\TestRouterTrait;
 
 /**
  * Router trait test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Component\Routing
+ * @package WBW\Bundle\CoreBundle\Tests\Symfony\Component\Routing
  */
 class RouterTraitTest extends AbstractTestCase {
 
