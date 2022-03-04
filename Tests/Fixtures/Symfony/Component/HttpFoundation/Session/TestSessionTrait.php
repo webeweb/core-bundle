@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Component\HttpFoundation\Session;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Symfony\Component\HttpFoundation\Session;
 
-use WBW\Bundle\CoreBundle\Component\HttpFoundation\Session\SessionTrait;
+use WBW\Bundle\CoreBundle\Symfony\Component\HttpFoundation\Session\SessionTrait;
 
 /**
  * Test session trait.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Component\HttpFoundation\Session
+ * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Symfony\Component\HttpFoundation\Session
  */
 class TestSessionTrait {
 

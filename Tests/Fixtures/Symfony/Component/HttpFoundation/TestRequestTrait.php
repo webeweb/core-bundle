@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Component\HttpFoundation;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Symfony\Component\HttpFoundation;
 
-use WBW\Bundle\CoreBundle\Component\HttpFoundation\RequestTrait;
+use WBW\Bundle\CoreBundle\Symfony\Component\HttpFoundation\RequestTrait;
 
 /**
  * Test request trait.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Component\HttpFoundation
+ * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Symfony\Component\HttpFoundation
  */
 class TestRequestTrait {
 

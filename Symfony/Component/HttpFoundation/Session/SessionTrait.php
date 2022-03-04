@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Component\HttpFoundation\Session;
+namespace WBW\Bundle\CoreBundle\Symfony\Component\HttpFoundation\Session;
 
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
@@ -17,7 +17,7 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
  * Session trait.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Component\HttpFoundation\Session
+ * @package WBW\Bundle\CoreBundle\Symfony\Component\HttpFoundation\Session
  */
 trait SessionTrait {
 
