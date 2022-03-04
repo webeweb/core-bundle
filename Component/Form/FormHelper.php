@@ -17,10 +17,10 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\EntityManagerInterface;
 use InvalidArgumentException;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
-use WBW\Bundle\CoreBundle\Component\EventDispatcher\EventDispatcherTrait;
 use WBW\Bundle\CoreBundle\Doctrine\ORM\EntityManagerTrait;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
-use WBW\Bundle\CoreBundle\Helper\EventDispatcherHelper;
+use WBW\Bundle\CoreBundle\EventDispatcher\EventDispatcherHelper;
+use WBW\Bundle\CoreBundle\EventDispatcher\EventDispatcherTrait;
 use WBW\Library\Symfony\Assets\Notification\NotificationFactory;
 use WBW\Library\Symfony\Exception\RedirectResponseException;
 

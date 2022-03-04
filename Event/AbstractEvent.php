@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Event;
 
-use WBW\Bundle\CoreBundle\Component\EventDispatcher\BaseEvent;
+use WBW\Bundle\CoreBundle\EventDispatcher\BaseEvent;
 
 /**
  * Abstract event.

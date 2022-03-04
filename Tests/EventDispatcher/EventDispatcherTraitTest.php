@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Component\EventDispatcher;
+namespace WBW\Bundle\CoreBundle\Tests\EventDispatcher;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Component\EventDispatcher\TestEventDispatcherTrait;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\EventDispatcher\TestEventDispatcherTrait;
 
 /**
  * Event dispatcher trait test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Component\EventDispatcher
+ * @package WBW\Bundle\CoreBundle\Tests\EventDispatcher
  */
 class EventDispatcherTraitTest extends AbstractTestCase {
 

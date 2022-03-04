@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Component\EventDispatcher;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\EventDispatcher;
 
-use WBW\Bundle\CoreBundle\Component\EventDispatcher\EventDispatcherTrait;
+use WBW\Bundle\CoreBundle\EventDispatcher\EventDispatcherTrait;
 
 /**
  * Test event dispatcher trait.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Service
+ * @package WBW\Bundle\CoreBundle\Tests\Fixtures\EventDispatcher
  */
 class TestEventDispatcherTrait {
 
