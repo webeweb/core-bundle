@@ -9,20 +9,20 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Component\Console;
+namespace WBW\Bundle\CoreBundle\Tests\Helper;
 
 use Symfony\Component\Console\Formatter\OutputFormatterInterface;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\StyleInterface;
-use WBW\Bundle\CoreBundle\Component\Console\ConsoleHelper;
+use WBW\Bundle\CoreBundle\Helper\ConsoleHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Console helper test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Component\Console
+ * @package WBW\Bundle\CoreBundle\Tests\Helper
  */
 class ConsoleHelperTest extends AbstractTestCase {
 
