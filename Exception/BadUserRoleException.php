@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Exception;
 
 use Symfony\Component\Security\Core\User\UserInterface;
-use WBW\Bundle\CoreBundle\Symfony\Component\Security\Core\User\UserTrait;
+use WBW\Bundle\CoreBundle\Security\Core\User\UserTrait;
 use WBW\Library\Traits\Strings\StringOriginUrlTrait;
 use WBW\Library\Traits\Strings\StringRedirectUrlTrait;
 

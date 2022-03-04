@@ -16,8 +16,8 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\StyleInterface;
 use Symfony\Component\HttpKernel\Kernel;
-use WBW\Bundle\CoreBundle\Helper\KernelHelper;
 use WBW\Bundle\CoreBundle\Helper\SkeletonHelper;
+use WBW\Bundle\CoreBundle\HttpKernel\KernelHelper;
 use WBW\Bundle\CoreBundle\Provider\SkeletonProviderInterface;
 
 /**

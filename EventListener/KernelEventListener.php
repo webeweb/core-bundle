@@ -15,15 +15,15 @@ use Exception;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
-use WBW\Bundle\CoreBundle\Component\HttpKernel\Event\BaseExceptionEvent;
-use WBW\Bundle\CoreBundle\Component\HttpKernel\Event\BaseRequestEvent;
+use WBW\Bundle\CoreBundle\HttpKernel\Event\BaseExceptionEvent;
+use WBW\Bundle\CoreBundle\HttpKernel\Event\BaseRequestEvent;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
+use WBW\Bundle\CoreBundle\HttpFoundation\RequestTrait;
+use WBW\Bundle\CoreBundle\Mailer\MailerTrait;
 use WBW\Bundle\CoreBundle\Manager\Asset\ThemeManager;
 use WBW\Bundle\CoreBundle\Manager\Asset\ThemeManagerTrait;
-use WBW\Bundle\CoreBundle\Symfony\Component\HttpFoundation\RequestTrait;
-use WBW\Bundle\CoreBundle\Symfony\Component\Mailer\MailerTrait;
-use WBW\Bundle\CoreBundle\Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageTrait;
-use WBW\Bundle\CoreBundle\Symfony\Component\Security\Core\User\UserTrait;
+use WBW\Bundle\CoreBundle\Security\Core\Authentication\Token\Storage\TokenStorageTrait;
+use WBW\Bundle\CoreBundle\Security\Core\User\UserTrait;
 use WBW\Library\Symfony\Exception\RedirectResponseException;
 
 /**

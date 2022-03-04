@@ -19,7 +19,6 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use WBW\Bundle\CoreBundle\Component\Form\FormHelper;
-use WBW\Bundle\CoreBundle\Symfony\Component\Translation\BaseTranslatorInterface;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\Event\ToastEvent;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
@@ -28,6 +27,7 @@ use WBW\Bundle\CoreBundle\Repository\RepositoryHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Controller\TestAbstractController;
 use WBW\Bundle\CoreBundle\Tests\TestCaseHelper;
+use WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface;
 use WBW\Library\Symfony\Assets\Notification\NotificationInterface;
 use WBW\Library\Symfony\Assets\Toast\ToastInterface;
 

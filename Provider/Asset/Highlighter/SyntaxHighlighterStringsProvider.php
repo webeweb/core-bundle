@@ -12,9 +12,9 @@
 namespace WBW\Bundle\CoreBundle\Provider\Asset\Highlighter;
 
 use WBW\Bundle\CoreBundle\Asset\Highlighter\SyntaxHighlighter\SyntaxHighlighterStrings;
-use WBW\Bundle\CoreBundle\Symfony\Component\Translation\BaseTranslatorInterface;
-use WBW\Bundle\CoreBundle\Symfony\Component\Translation\TranslatorTrait;
+use WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface;
 use WBW\Bundle\CoreBundle\Translation\TranslatorInterface;
+use WBW\Bundle\CoreBundle\Translation\TranslatorTrait;
 use WBW\Library\Symfony\Provider\ProviderInterface;
 
 /**

@@ -13,10 +13,10 @@ namespace WBW\Bundle\CoreBundle\EventListener;
 
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Http\Event\InteractiveLoginEvent;
-use WBW\Bundle\CoreBundle\Symfony\Component\Security\Core\User\UserTrait;
-use WBW\Bundle\CoreBundle\Symfony\Component\Translation\BaseTranslatorInterface;
-use WBW\Bundle\CoreBundle\Symfony\Component\Translation\TranslatorTrait;
+use WBW\Bundle\CoreBundle\Security\Core\User\UserTrait;
+use WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface;
 use WBW\Bundle\CoreBundle\Translation\TranslatorInterface;
+use WBW\Bundle\CoreBundle\Translation\TranslatorTrait;
 
 /**
  * Security event listener.

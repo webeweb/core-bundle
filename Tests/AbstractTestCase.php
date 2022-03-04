@@ -32,7 +32,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Csrf\CsrfTokenManagerInterface;
 use Twig\Environment;
 use Twig\Loader\LoaderInterface;
-use WBW\Bundle\CoreBundle\Symfony\Component\Translation\BaseTranslatorInterface;
+use WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface;
 
 /**
  * Abstract test case.

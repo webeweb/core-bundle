@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\EventListener;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
-use WBW\Bundle\CoreBundle\Symfony\Component\HttpFoundation\Session\SessionTrait;
+use WBW\Bundle\CoreBundle\HttpFoundation\Session\SessionTrait;
 
 /**
  * Notification event listener.
