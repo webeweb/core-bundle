@@ -3,7 +3,7 @@ services:
 
     wbw.core.event_listener.kernel:
         class:  WBW\Bundle\CoreBundle\EventListener\KernelEventListener
-        arguments: [ "@security.token_storage", "@wbw.core.manager.asset.theme" ]
+        arguments: [ "@security.token_storage", "@wbw.core.manager.theme" ]
         public: false
         tags:
             - { name: "kernel.event_listener", event: "kernel.exception", method: "onKernelException" }

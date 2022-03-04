@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Manager\Asset;
+namespace WBW\Bundle\CoreBundle\Tests\Manager;
 
-use WBW\Bundle\CoreBundle\Manager\Asset\ThemeManager;
+use WBW\Bundle\CoreBundle\Manager\ThemeManager;
 use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
 use WBW\Library\Symfony\Provider\Theme\ApplicationThemeProviderInterface;
 use WBW\Library\Symfony\Provider\Theme\BreadcrumbsThemeProviderInterface;

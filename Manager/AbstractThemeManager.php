@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Manager\Asset;
+namespace WBW\Bundle\CoreBundle\Manager;
 
 use Psr\Log\LoggerInterface;
 use Twig\Environment;
@@ -22,7 +22,7 @@ use WBW\Library\Symfony\Provider\ThemeProviderInterface;
  * Abstract theme manager.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Manager\Asset
+ * @package WBW\Bundle\CoreBundle\Manager
  * @abstract
  */
 abstract class AbstractThemeManager extends AbstractManager {

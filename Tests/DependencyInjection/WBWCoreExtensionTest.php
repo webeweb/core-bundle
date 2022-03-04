@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\EventListener\NotificationEventListener;
 use WBW\Bundle\CoreBundle\EventListener\SecurityEventListener;
 use WBW\Bundle\CoreBundle\EventListener\ToastEventListener;
-use WBW\Bundle\CoreBundle\Manager\Asset\ThemeManager;
+use WBW\Bundle\CoreBundle\Manager\ThemeManager;
 use WBW\Bundle\CoreBundle\Provider\Asset\Highlighter\SyntaxHighlighterStringsProvider;
 use WBW\Bundle\CoreBundle\Repository\RepositoryHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;

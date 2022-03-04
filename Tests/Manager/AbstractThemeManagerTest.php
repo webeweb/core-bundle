@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Manager\Asset;
+namespace WBW\Bundle\CoreBundle\Tests\Manager;
 
 use Exception;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\Asset\TestThemeManager;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\TestThemeManager;
 use WBW\Library\Symfony\Provider\ThemeProviderInterface;
 
 /**
  * Abstract theme manager test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Manager\Asset
+ * @package WBW\Bundle\CoreBundle\Tests\Manager
  */
 class AbstractThemeManagerTest extends AbstractTestCase {
 

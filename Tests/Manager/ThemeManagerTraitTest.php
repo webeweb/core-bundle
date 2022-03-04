@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Manager\Asset;
+namespace WBW\Bundle\CoreBundle\Tests\Manager;
 
-use WBW\Bundle\CoreBundle\Manager\Asset\ThemeManager;
+use WBW\Bundle\CoreBundle\Manager\ThemeManager;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\Asset\TestThemeManagerTrait;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\TestThemeManagerTrait;
 
 /**
  * Theme manager trait test.

@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Manager\Asset;
+namespace WBW\Bundle\CoreBundle\Tests\Manager;
 
 use Exception;
-use WBW\Bundle\CoreBundle\Manager\Asset\ThemeManager;
+use WBW\Bundle\CoreBundle\Manager\ThemeManager;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Library\Symfony\Provider\Theme\ApplicationThemeProviderInterface;
 use WBW\Library\Symfony\Provider\Theme\BreadcrumbsThemeProviderInterface;
@@ -28,7 +28,7 @@ use WBW\Library\Symfony\Provider\Theme\UserInfoThemeProviderInterface;
  * Theme manager test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Manager\Asset
+ * @package WBW\Bundle\CoreBundle\Tests\Manager
  */
 class ThemeManagerTest extends AbstractTestCase {
 
@@ -266,7 +266,7 @@ class ThemeManagerTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $this->assertEquals("wbw.core.manager.asset.theme", ThemeManager::SERVICE_NAME);
+        $this->assertEquals("wbw.core.manager.theme", ThemeManager::SERVICE_NAME);
 
         $obj = new ThemeManager($this->logger, $this->twigEnvironment);
 

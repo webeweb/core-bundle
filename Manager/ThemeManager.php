@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Manager\Asset;
+namespace WBW\Bundle\CoreBundle\Manager;
 
 use WBW\Library\Symfony\Manager\ManagerInterface;
 use WBW\Library\Symfony\Provider\Theme\ApplicationThemeProviderInterface;
@@ -26,7 +26,7 @@ use WBW\Library\Symfony\Provider\Theme\UserInfoThemeProviderInterface;
  * Theme manager.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Manager\Asset
+ * @package WBW\Bundle\CoreBundle\Manager
  */
 class ThemeManager extends AbstractThemeManager {
 
@@ -35,7 +35,7 @@ class ThemeManager extends AbstractThemeManager {
      *
      * @var string
      */
-    const SERVICE_NAME = "wbw.core.manager.asset.theme";
+    const SERVICE_NAME = "wbw.core.manager.theme";
 
     /**
      * Get the application theme provider.
