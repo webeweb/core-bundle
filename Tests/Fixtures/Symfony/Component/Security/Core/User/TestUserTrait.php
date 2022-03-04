@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Component\Security\Core\User;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Symfony\Component\Security\Core\User;
 
-use WBW\Bundle\CoreBundle\Component\Security\Core\User\UserTrait;
+use WBW\Bundle\CoreBundle\Symfony\Component\Security\Core\User\UserTrait;
 
 /**
  * Test user trait.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Component\Security\Core\User
+ * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Symfony\Component\Security\Core\User
  */
 class TestUserTrait {
 

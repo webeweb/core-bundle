@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Component\Security\Core\Authentication\Token\Storage;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Symfony\Component\Security\Core\Authentication\Token\Storage;
 
-use WBW\Bundle\CoreBundle\Component\Security\Core\Authentication\Token\Storage\TokenStorageTrait;
+use WBW\Bundle\CoreBundle\Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageTrait;
 
 /**
  * Test token storage trait.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Component\Security\Core\Authentication\Token\Storage
+ * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Symfony\Component\Security\Core\Authentication\Token\Storage
  */
 class TestTokenStorageTrait {
 

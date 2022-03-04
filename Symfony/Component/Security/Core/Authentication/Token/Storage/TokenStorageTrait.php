@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Component\Security\Core\Authentication\Token\Storage;
+namespace WBW\Bundle\CoreBundle\Symfony\Component\Security\Core\Authentication\Token\Storage;
 
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 
@@ -17,7 +17,7 @@ use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInt
  * Token storage trait.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Component\Security\Core\Authentication\Token\Storage
+ * @package WBW\Bundle\CoreBundle\Symfony\Component\Security\Core\Authentication\Token\Storage
  */
 trait TokenStorageTrait {
 

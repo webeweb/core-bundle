@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Component\Security\Core\Authentication\Token\Storage;
+namespace WBW\Bundle\CoreBundle\Tests\Symfony\Component\Security\Core\Authentication\Token\Storage;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Component\Security\Core\Authentication\Token\Storage\TestTokenStorageTrait;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Symfony\Component\Security\Core\Authentication\Token\Storage\TestTokenStorageTrait;
 
 /**
  * Token storage trait test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Component\Security\Core\Authentication\Token\Storage
+ * @package WBW\Bundle\CoreBundle\Tests\Symfony\Component\Security\Core\Authentication\Token\Storage
  */
 class TokenStorageTraitTest extends AbstractTestCase {
 

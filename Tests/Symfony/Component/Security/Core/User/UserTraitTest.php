@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Component\Security\Core\User;
+namespace WBW\Bundle\CoreBundle\Tests\Symfony\Component\Security\Core\User;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Component\Security\Core\User\TestUserTrait;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Symfony\Component\Security\Core\User\TestUserTrait;
 
 /**
  * User trait test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Component\Security\Core\User
+ * @package WBW\Bundle\CoreBundle\Tests\Symfony\Component\Security\Core\User
  */
 class UserTraitTest extends AbstractTestCase {
 
