@@ -9,21 +9,21 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Component\Form;
+namespace WBW\Bundle\CoreBundle\Tests\Factory;
 
 use Closure;
 use WBW\Bundle\CoreBundle\Asset\Select\ChoiceValueInterface;
-use WBW\Bundle\CoreBundle\Component\Form\FormFactory;
+use WBW\Bundle\CoreBundle\Factory\FormFactory;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Select\TestChoiceValue;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Component\Form\TestFormFactory;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Factory\TestFormFactory;
 use WBW\Library\Symfony\Component\Navigation\NavigationNode;
 
 /**
  * Form factory test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Component\Form
+ * @package WBW\Bundle\CoreBundle\Tests\Factory
  */
 class FormFactoryTest extends AbstractTestCase {
 
@@ -107,7 +107,7 @@ class FormFactoryTest extends AbstractTestCase {
      */
     public function testGetChoiceValueClosure(): void {
 
-        $res = FormFactory::getChoiceValueClosure();
+        $res = TestFormFactory::getChoiceValueClosure();
         $this->assertInstanceOf(Closure::class, $res);
 
         $this->assertEquals("", $res($this->choiceValues[0]));

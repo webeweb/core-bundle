@@ -9,19 +9,20 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Component\Form;
+namespace WBW\Bundle\CoreBundle\Factory;
 
 use Closure;
 use ReflectionClass;
 use ReflectionException;
 use WBW\Bundle\CoreBundle\Asset\Select\ChoiceValueInterface;
+use WBW\Bundle\CoreBundle\Component\Form\FormRenderer;
 use WBW\Library\Types\Helper\ArrayHelper;
 
 /**
  * Form factory.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Component\Form
+ * @package WBW\Bundle\CoreBundle\Factory
  */
 class FormFactory {
 
@@ -45,7 +46,7 @@ class FormFactory {
      *
      * @return Closure Returns the choice value closure.
      */
-    public static function getChoiceValueClosure(): Closure {
+    protected static function getChoiceValueClosure(): Closure {
         return function(ChoiceValueInterface $entity = null): ?string {
             return null !== $entity ? $entity->getChoiceValue() : "";
         };
