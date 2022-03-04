@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Asset\Icon\MaterialDesignIconicFont;
 
-use WBW\Bundle\CoreBundle\Asset\Icon\IconFactory;
 use WBW\Bundle\CoreBundle\Asset\Icon\MaterialDesignIconicFont\MaterialDesignIconicFontIconInterface;
 use WBW\Bundle\CoreBundle\Asset\Icon\MaterialDesignIconicFont\MaterialDesignIconicFontIconRenderer;
+use WBW\Bundle\CoreBundle\Factory\IconFactory;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**

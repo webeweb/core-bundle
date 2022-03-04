@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Asset\Icon\FontAwesome;
 
 use WBW\Bundle\CoreBundle\Asset\Icon\FontAwesome\FontAwesomeIconRenderer;
-use WBW\Bundle\CoreBundle\Asset\Icon\IconFactory;
+use WBW\Bundle\CoreBundle\Factory\IconFactory;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**

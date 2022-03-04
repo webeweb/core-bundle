@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Asset\Icon;
+namespace WBW\Bundle\CoreBundle\Factory;
 
 use WBW\Bundle\CoreBundle\Asset\Icon\FontAwesome\FontAwesomeIcon;
 use WBW\Bundle\CoreBundle\Asset\Icon\FontAwesome\FontAwesomeIconInterface;
@@ -21,7 +21,7 @@ use WBW\Library\Types\Helper\ArrayHelper;
  * Icon factory.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Asset\Icon
+ * @package WBW\Bundle\CoreBundle\Factory
  */
 class IconFactory {
 

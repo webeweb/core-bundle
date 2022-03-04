@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Asset\Icon;
+namespace WBW\Bundle\CoreBundle\Tests\Factory;
 
 use WBW\Bundle\CoreBundle\Asset\Icon\FontAwesome\FontAwesomeIconInterface;
-use WBW\Bundle\CoreBundle\Asset\Icon\IconFactory;
 use WBW\Bundle\CoreBundle\Asset\Icon\MaterialDesignIconicFont\MaterialDesignIconicFontIconInterface;
+use WBW\Bundle\CoreBundle\Factory\IconFactory;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Icon factory test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Asset\Icon
+ * @package WBW\Bundle\CoreBundle\Tests\Factory
  */
 class IconFactoryTest extends AbstractTestCase {
 
