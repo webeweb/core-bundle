@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Component\Translation;
+namespace WBW\Bundle\CoreBundle\Symfony\Component\Translation;
 
 /**
  * Translator trait.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Component\Translation
+ * @package WBW\Bundle\CoreBundle\Symfony\Component\Translation
  */
 trait TranslatorTrait {
 

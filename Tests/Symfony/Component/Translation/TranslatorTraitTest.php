@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Component\Translation;
+namespace WBW\Bundle\CoreBundle\Tests\Symfony\Component\Translation;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Component\Translation\TestTranslatorTrait;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Symfony\Component\Translation\TestTranslatorTrait;
 
 /**
  * Translator trait test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Component\Translation
+ * @package WBW\Bundle\CoreBundle\Tests\Symfony\Component\Translation
  */
 class TranslatorTraitTest extends AbstractTestCase {
 

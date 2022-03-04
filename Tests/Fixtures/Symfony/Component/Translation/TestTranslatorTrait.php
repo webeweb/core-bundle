@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Component\Translation;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Symfony\Component\Translation;
 
-use WBW\Bundle\CoreBundle\Component\Translation\TranslatorTrait;
+use WBW\Bundle\CoreBundle\Symfony\Component\Translation\TranslatorTrait;
 
 /**
  * Test translator trait.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Component\Translation
+ * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Symfony\Component\Translation
  */
 class TestTranslatorTrait {
 
