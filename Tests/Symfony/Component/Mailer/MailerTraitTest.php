@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Component\Mailer;
+namespace WBW\Bundle\CoreBundle\Tests\Symfony\Component\Mailer;
 
 use Symfony\Component\Mailer\MailerInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Component\Mailer\TestMailerTrait;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Symfony\Component\Mailer\TestMailerTrait;
 
 /**
  * Mailer trait test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\SwiftMailer
+ * @package WBW\Bundle\CoreBundle\Tests\Symfony\Component\Mailer
  */
 class MailerTraitTest extends AbstractTestCase {
 
