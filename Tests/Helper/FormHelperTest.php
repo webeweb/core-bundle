@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Component\Form;
+namespace WBW\Bundle\CoreBundle\Tests\Helper;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Exception;
 use InvalidArgumentException;
-use WBW\Bundle\CoreBundle\Component\Form\FormHelper;
+use WBW\Bundle\CoreBundle\Helper\FormHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\TestCaseHelper;
 use WBW\Library\Symfony\Exception\RedirectResponseException;
@@ -24,7 +24,7 @@ use WBW\Library\Symfony\Exception\RedirectResponseException;
  * Form helper test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Component\Form
+ * @package WBW\Bundle\CoreBundle\Tests\Helper
  */
 class FormHelperTest extends AbstractTestCase {
 
@@ -159,7 +159,7 @@ class FormHelperTest extends AbstractTestCase {
 
         $obj = new FormHelper($this->entityManager, $this->eventDispatcher);
 
-        $this->assertEquals("wbw.core.component.form.helper", FormHelper::SERVICE_NAME);
+        $this->assertEquals("wbw.core.helper.form", FormHelper::SERVICE_NAME);
         $this->assertSame($this->entityManager, $obj->getEntityManager());
     }
 }

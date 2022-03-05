@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Component\Form;
+namespace WBW\Bundle\CoreBundle\Helper;
 
 use Countable;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -28,7 +28,7 @@ use WBW\Library\Symfony\Factory\NotificationFactory;
  * Form helper.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Component\Form
+ * @package WBW\Bundle\CoreBundle\Helper
  */
 class FormHelper {
 
@@ -40,7 +40,7 @@ class FormHelper {
      *
      * @avr string
      */
-    const SERVICE_NAME = "wbw.core.component.form.helper";
+    const SERVICE_NAME = "wbw.core.helper.form";
 
     /**
      * Constructor.
@@ -58,13 +58,13 @@ class FormHelper {
      *
      * @param Countable $collection The collection.
      * @param string $notification The notification.
-     * @param string $redirectURL The redirect URL.
+     * @param string $redirectUrl The redirect URL.
      * @param int $expected The expected count.
      * @return void
      * @throws InvalidArgumentException Throws an invalid argument exception if collection is null.
      * @throws RedirectResponseException Throws a redirect response exception if the collection count is less than $expected.
      */
-    public function checkCollection($collection, string $notification, string $redirectURL, int $expected = 1): void {
+    public function checkCollection($collection, string $notification, string $redirectUrl, int $expected = 1): void {
 
         if (false === is_array($collection) && false === ($collection instanceof Countable)) {
             throw new InvalidArgumentException("The collection must be a countable");
@@ -79,7 +79,7 @@ class FormHelper {
 
         EventDispatcherHelper::dispatch($this->getEventDispatcher(), $eventName, $event);
 
-        throw new RedirectResponseException($redirectURL, null);
+        throw new RedirectResponseException($redirectUrl, null);
     }
 
     /**
@@ -90,14 +90,17 @@ class FormHelper {
      * @return int Returns the deleted count.
      */
     public function onPostHandleRequestWithCollection(Collection $oldCollection, Collection $newCollection): int {
+
         $deleted = 0;
+
         foreach ($oldCollection as $current) {
-            if (true === $newCollection->contains($current)) {
-                continue;
+
+            if (false === $newCollection->contains($current)) {
+                $this->getEntityManager()->remove($current);
+                ++$deleted;
             }
-            $this->getEntityManager()->remove($current);
-            ++$deleted;
         }
+
         return $deleted;
     }
 
@@ -108,10 +111,13 @@ class FormHelper {
      * @return Collection Returns the cloned collection.
      */
     public function onPreHandleRequestWithCollection(Collection $collection): Collection {
+
         $output = new ArrayCollection();
+
         foreach ($collection as $current) {
             $output->add($current);
         }
+
         return $output;
     }
 }
