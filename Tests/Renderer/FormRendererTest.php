@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Component\Form;
+namespace WBW\Bundle\CoreBundle\Tests\Renderer;
 
-use WBW\Bundle\CoreBundle\Asset\Select\ChoiceLabelInterface;
 use WBW\Bundle\CoreBundle\Asset\Select\TranslatedChoiceLabelInterface;
-use WBW\Bundle\CoreBundle\Component\Form\FormRenderer;
+use WBW\Bundle\CoreBundle\Renderer\FormRenderer;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Library\Sorter\Model\AlphabeticalTreeNodeInterface;
+use WBW\Library\Symfony\Component\ChoiceLabelInterface;
 
 /**
  * Form renderer test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Component\Form
+ * @package WBW\Bundle\CoreBundle\Tests\Renderer
  */
 class FormRendererTest extends AbstractTestCase {
 
@@ -42,7 +42,7 @@ class FormRendererTest extends AbstractTestCase {
      */
     public function testRenderWithAlphabeticalTreeNodeInterface(): void {
 
-        // Set a Alphabetical tree node mock.
+        // Set an Alphabetical tree node mock.
         $arg = $this->getMockBuilder(AlphabeticalTreeNodeInterface::class)->getMock();
         $arg->expects($this->any())->method("getAlphabeticalTreeNodeParent")->willReturn(null);
 

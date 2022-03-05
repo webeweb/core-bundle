@@ -14,8 +14,8 @@ namespace WBW\Bundle\CoreBundle\Factory;
 use Closure;
 use ReflectionClass;
 use ReflectionException;
-use WBW\Bundle\CoreBundle\Asset\Select\ChoiceValueInterface;
-use WBW\Bundle\CoreBundle\Component\Form\FormRenderer;
+use WBW\Bundle\CoreBundle\Renderer\FormRenderer;
+use WBW\Library\Symfony\Component\ChoiceValueInterface;
 use WBW\Library\Types\Helper\ArrayHelper;
 
 /**

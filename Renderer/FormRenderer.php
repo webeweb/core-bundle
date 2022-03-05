@@ -9,18 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Component\Form;
+namespace WBW\Bundle\CoreBundle\Renderer;
 
-use WBW\Bundle\CoreBundle\Asset\Select\ChoiceLabelInterface;
 use WBW\Bundle\CoreBundle\Asset\Select\TranslatedChoiceLabelInterface;
+use WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface;
 use WBW\Library\Sorter\Helper\AlphabeticalTreeNodeHelper;
 use WBW\Library\Sorter\Model\AlphabeticalTreeNodeInterface;
+use WBW\Library\Symfony\Component\ChoiceLabelInterface;
 
 /**
  * Form renderer.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Component\Form
+ * @package WBW\Bundle\CoreBundle\Renderer
  */
 class FormRenderer {
 
