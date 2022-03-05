@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
  * Font Awesome icon test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Assetd\Icon
+ * @package WBW\Bundle\CoreBundle\Tests\Assets\Icon
  */
 class FontAwesomeIconTest extends AbstractTestCase {
 

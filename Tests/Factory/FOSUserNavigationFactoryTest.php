@@ -20,7 +20,7 @@ use WBW\Library\Symfony\Assets\NavigationNodeInterface;
  * FOS user navigation factory test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Asset\Navigation
+ * @package WBW\Bundle\CoreBundle\Tests\Factory
  */
 class FOSUserNavigationFactoryTest extends AbstractTestCase {
 

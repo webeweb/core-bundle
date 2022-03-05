@@ -17,7 +17,7 @@ use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInt
  * Token storage trait.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Symfony\Component\Security\Core\Authentication\Token\Storage
+ * @package WBW\Bundle\CoreBundle\Security\Core\Authentication\Token\Storage
  */
 trait TokenStorageTrait {
 

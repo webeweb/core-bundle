@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Manager\TestThemeManagerTrait;
  * Theme manager trait test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Manager\Asset
+ * @package WBW\Bundle\CoreBundle\Tests\Manager
  */
 class ThemeManagerTraitTest extends AbstractTestCase {
 

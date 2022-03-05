@@ -18,7 +18,7 @@ use WBW\Library\Symfony\Renderer\Assets\IconRenderer;
  * Font Awesome icon renderer.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Rendere\Assets
+ * @package WBW\Bundle\CoreBundle\Renderer\Assets
  */
 class FontAwesomeIconRenderer extends IconRenderer {
 

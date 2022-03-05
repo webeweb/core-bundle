@@ -17,7 +17,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
  * User trait.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Symfony\Component\Security\Core\User
+ * @package WBW\Bundle\CoreBundle\Security\Core\User
  */
 trait UserTrait {
 

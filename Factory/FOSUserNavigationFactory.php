@@ -18,7 +18,7 @@ use WBW\Library\Symfony\Assets\NavigationNodeInterface;
  * FOS user navigation factory.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Asset\Navigation
+ * @package WBW\Bundle\CoreBundle\Factory
  */
 class FOSUserNavigationFactory {
 

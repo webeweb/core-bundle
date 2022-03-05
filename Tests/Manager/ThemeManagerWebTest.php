@@ -26,7 +26,7 @@ use WBW\Library\Symfony\Provider\Theme\UserInfoThemeProviderInterface;
  * Theme manager test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Manager\Asset
+ * @package WBW\Bundle\CoreBundle\Tests\Manager
  */
 class ThemeManagerWebTest extends AbstractWebTestCase {
 

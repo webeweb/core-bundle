@@ -19,7 +19,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
  * SyntaxHighlighter provider test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Provider\Asset\Highlighter
+ * @package WBW\Bundle\CoreBundle\Tests\Provider
  */
 class SyntaxHighlighterProviderTest extends AbstractTestCase {
 

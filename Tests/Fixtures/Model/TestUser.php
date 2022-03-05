@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Model;
 
 use Symfony\Component\Security\Core\User\UserInterface;
-use WBW\Bundle\CoreBundle\Model\Attribute\ArrayRolesTrait;
+use WBW\Library\Traits\Strings\ArrayRolesTrait;
 use WBW\Library\Traits\Strings\StringPasswordTrait;
 use WBW\Library\Traits\Strings\StringSaltTrait;
 use WBW\Library\Traits\Strings\StringUsernameTrait;

@@ -15,7 +15,7 @@ namespace WBW\Bundle\CoreBundle\Translation;
  * Translator trait.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Symfony\Component\Translation
+ * @package WBW\Bundle\CoreBundle\Translation
  */
 trait TranslatorTrait {
 

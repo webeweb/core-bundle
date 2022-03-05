@@ -18,7 +18,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\HttpFoundation\Session\TestSessionTrait
  * Session trait test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Symfony\Component\HttpFoundation\Session
+ * @package WBW\Bundle\CoreBundle\Tests\HttpFoundation\Session
  */
 class SessionTraitTest extends AbstractTestCase {
 

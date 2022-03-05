@@ -17,7 +17,7 @@ use WBW\Library\Symfony\Assets\AbstractIcon;
  * Material Design Iconic Font icon.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Asset\Icon\MaterialDesignIconicFont
+ * @package WBW\Bundle\CoreBundle\Assets\Icon
  */
 class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesignIconicFontIconInterface {
 
