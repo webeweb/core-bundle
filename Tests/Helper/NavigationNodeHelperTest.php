@@ -9,21 +9,21 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Asset\Navigation;
+namespace WBW\Bundle\CoreBundle\Tests\Helper;
 
 use Symfony\Component\HttpFoundation\Request;
-use WBW\Bundle\CoreBundle\Asset\Navigation\NavigationTreeHelper;
+use WBW\Bundle\CoreBundle\Helper\NavigationNodeHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\TestFixtures;
 use WBW\Library\Symfony\Assets\Navigation\NavigationTree;
 
 /**
- * Navigation tree helper test.
+ * Navigation node helper test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Asset\Navigation
+ * @package WBW\Bundle\CoreBundle\Tests\Helper
  */
-class NavigationTreeHelperTest extends AbstractTestCase {
+class NavigationNodeHelperTest extends AbstractTestCase {
 
     /**
      * Navigation tree.
@@ -38,7 +38,7 @@ class NavigationTreeHelperTest extends AbstractTestCase {
     protected function setUp(): void {
         parent::setUp();
 
-        // Set up a Navigation tree mock.
+        // Set a Navigation tree mock.
         $this->tree = TestFixtures::getNavigationTree();
     }
 
@@ -49,7 +49,7 @@ class NavigationTreeHelperTest extends AbstractTestCase {
      */
     public function testActiveTree(): void {
 
-        NavigationTreeHelper::activeTree($this->tree, Request::create("https://github.com/webeweb/core-bundle"));
+        NavigationNodeHelper::activeTree($this->tree, Request::create("https://github.com/webeweb/core-bundle"));
 
         $this->assertTrue($this->tree->getNodeAt(0)->getActive());
 
@@ -82,9 +82,9 @@ class NavigationTreeHelperTest extends AbstractTestCase {
      */
     public function testGetBreadcrumbs(): void {
 
-        NavigationTreeHelper::activeTree($this->tree, Request::create("https://github.com/webeweb/core-bundle"));
+        NavigationNodeHelper::activeTree($this->tree, Request::create("https://github.com/webeweb/core-bundle"));
 
-        $res = NavigationTreeHelper::getBreadcrumbs($this->tree);
+        $res = NavigationNodeHelper::getBreadcrumbs($this->tree);
         $this->assertCount(2, $res);
 
         $this->assertEquals("GitHub", $res[0]->getLabel());

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Asset\Navigation;
+namespace WBW\Bundle\CoreBundle\Helper;
 
 use Symfony\Component\HttpFoundation\ParameterBag;
 use Symfony\Component\HttpFoundation\Request;
@@ -20,12 +20,12 @@ use WBW\Library\Symfony\Assets\Navigation\NavigationTree;
 use WBW\Library\Symfony\Assets\NavigationNodeInterface;
 
 /**
- * Navigation tree helper.
+ * Navigation node helper.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Asset\Navigation
+ * @package WBW\Bundle\CoreBundle\Helper
  */
-class NavigationTreeHelper {
+class NavigationNodeHelper {
 
     /**
      * Actives the navigation nodes.
@@ -58,7 +58,7 @@ class NavigationTreeHelper {
     }
 
     /**
-     * Active the tree.
+     * Actives a tree.
      *
      * @param NavigationTree $tree The tree.
      * @param Request $request The request.
