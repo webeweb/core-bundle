@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Select;
 
-use WBW\Bundle\CoreBundle\Asset\Select\ChoiceValueInterface;
+use WBW\Library\Symfony\Component\ChoiceValueInterface;
 
 /**
  * Test choice value.
