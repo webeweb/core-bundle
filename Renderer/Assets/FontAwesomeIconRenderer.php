@@ -9,15 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Asset\Icon\FontAwesome;
+namespace WBW\Bundle\CoreBundle\Renderer\Assets;
 
+use WBW\Bundle\CoreBundle\Assets\Icon\FontAwesomeIconInterface;
 use WBW\Library\Symfony\Renderer\Assets\IconRenderer;
 
 /**
  * Font Awesome icon renderer.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Asset\Icon\FontAwesome
+ * @package WBW\Bundle\CoreBundle\Rendere\Assets
  */
 class FontAwesomeIconRenderer extends IconRenderer {
 

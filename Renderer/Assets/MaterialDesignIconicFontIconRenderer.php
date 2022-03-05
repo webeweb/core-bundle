@@ -9,15 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Asset\Icon\MaterialDesignIconicFont;
+namespace WBW\Bundle\CoreBundle\Renderer\Assets;
 
+use WBW\Bundle\CoreBundle\Assets\Icon\MaterialDesignIconicFontIconInterface;
 use WBW\Library\Symfony\Renderer\Assets\IconRenderer;
 
 /**
  * Material Design Iconic Font icon renderer.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Asset\Icon\MaterialDesignIconicFont
+ * @package WBW\Bundle\CoreBundle\Renderer\Assets
  */
 class MaterialDesignIconicFontIconRenderer extends IconRenderer {
 

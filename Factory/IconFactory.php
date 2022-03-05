@@ -11,10 +11,10 @@
 
 namespace WBW\Bundle\CoreBundle\Factory;
 
-use WBW\Bundle\CoreBundle\Asset\Icon\FontAwesome\FontAwesomeIcon;
-use WBW\Bundle\CoreBundle\Asset\Icon\FontAwesome\FontAwesomeIconInterface;
-use WBW\Bundle\CoreBundle\Asset\Icon\MaterialDesignIconicFont\MaterialDesignIconicFontIcon;
-use WBW\Bundle\CoreBundle\Asset\Icon\MaterialDesignIconicFont\MaterialDesignIconicFontIconInterface;
+use WBW\Bundle\CoreBundle\Assets\Icon\FontAwesomeIcon;
+use WBW\Bundle\CoreBundle\Assets\Icon\FontAwesomeIconInterface;
+use WBW\Bundle\CoreBundle\Assets\Icon\MaterialDesignIconicFontIcon;
+use WBW\Bundle\CoreBundle\Assets\Icon\MaterialDesignIconicFontIconInterface;
 use WBW\Library\Types\Helper\ArrayHelper;
 
 /**

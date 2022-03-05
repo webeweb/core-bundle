@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Twig\Extension\Asset;
 
-use WBW\Bundle\CoreBundle\Asset\Icon\MaterialDesignIconicFont\MaterialDesignIconicFontIconInterface;
-use WBW\Bundle\CoreBundle\Asset\Icon\MaterialDesignIconicFont\MaterialDesignIconicFontIconRenderer;
+use WBW\Bundle\CoreBundle\Assets\Icon\MaterialDesignIconicFontIconInterface;
+use WBW\Bundle\CoreBundle\Renderer\Assets\MaterialDesignIconicFontIconRenderer;
 use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
 
 /**

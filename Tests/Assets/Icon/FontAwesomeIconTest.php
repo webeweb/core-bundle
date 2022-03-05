@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Asset\Icon\FontAwesome;
+namespace WBW\Bundle\CoreBundle\Tests\Assets\Icon;
 
-use WBW\Bundle\CoreBundle\Asset\Icon\FontAwesome\FontAwesomeIcon;
+use WBW\Bundle\CoreBundle\Assets\Icon\FontAwesomeIcon;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Font Awesome icon test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Asset\Icon\FontAwesome
+ * @package WBW\Bundle\CoreBundle\Tests\Assetd\Icon
  */
 class FontAwesomeIconTest extends AbstractTestCase {
 

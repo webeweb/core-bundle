@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Asset\Icon\FontAwesome;
+namespace WBW\Bundle\CoreBundle\Assets\Icon;
 
 /**
  * Font Awesome icon enumerator.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Asset\Icon\FontAwesome
+ * @package WBW\Bundle\CoreBundle\Assets\Icon
  */
 class FontAwesomeIconEnumerator {
 

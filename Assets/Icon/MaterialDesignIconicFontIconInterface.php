@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Asset\Icon\MaterialDesignIconicFont;
+namespace WBW\Bundle\CoreBundle\Assets\Icon;
 
-use WBW\Library\Symfony\Component\IconInterface;
+use WBW\Library\Symfony\Assets\IconInterface;
 
 /**
  * Material Design Iconic Font icon interface.

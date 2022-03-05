@@ -9,17 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Asset\Icon\FontAwesome;
+namespace WBW\Bundle\CoreBundle\Tests\Renderer\Assets;
 
-use WBW\Bundle\CoreBundle\Asset\Icon\FontAwesome\FontAwesomeIconRenderer;
+use WBW\Bundle\CoreBundle\Assets\Icon\FontAwesomeIconInterface;
 use WBW\Bundle\CoreBundle\Factory\IconFactory;
+use WBW\Bundle\CoreBundle\Renderer\Assets\FontAwesomeIconRenderer;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Font Awesome icon renderer test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Asset\Icon\FontAwesome
+ * @package WBW\Bundle\CoreBundle\Tests\Renderer\Assets
  */
 class FontAwesomeIconRendererTest extends AbstractTestCase {
 

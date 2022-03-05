@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Asset\Icon\FontAwesome;
+namespace WBW\Bundle\CoreBundle\Assets\Icon;
 
-use WBW\Library\Symfony\Component\IconInterface;
+use WBW\Library\Symfony\Assets\IconInterface;
 
 /**
  * Font Awesome icon interface.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Asset\Icon\FontAwesome
+ * @package WBW\Bundle\CoreBundle\Assets\Icon
  */
 interface FontAwesomeIconInterface extends IconInterface {
 

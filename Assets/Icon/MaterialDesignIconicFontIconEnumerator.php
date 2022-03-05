@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Asset\Icon\MaterialDesignIconicFont;
+namespace WBW\Bundle\CoreBundle\Assets\Icon;
 
 /**
  * Material Design Iconic Font icon enumerator.
