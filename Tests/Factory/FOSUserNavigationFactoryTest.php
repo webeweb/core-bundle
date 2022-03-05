@@ -9,29 +9,29 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Asset\Navigation;
+namespace WBW\Bundle\CoreBundle\Tests\Factory;
 
-use WBW\Bundle\CoreBundle\Asset\Navigation\FOSUserBreadcrumbNodes;
+use WBW\Bundle\CoreBundle\Factory\FOSUserNavigationFactory;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Library\Symfony\Assets\Navigation\BreadcrumbNode;
 use WBW\Library\Symfony\Assets\NavigationNodeInterface;
 
 /**
- * FOSUser breadcrumb nodes test.
+ * FOS user navigation factory test.
  *
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Asset\Navigation
  */
-class FOSUserBreadcrumbNodesTest extends AbstractTestCase {
+class FOSUserNavigationFactoryTest extends AbstractTestCase {
 
     /**
-     * Tests getFontAwesomeBreadcrumbNodes()
+     * Tests newFontAwesomeBreadcrumbNodes()
      *
      * @return void
      */
-    public function testGetFontAwesomeBreadcrumbNodes(): void {
+    public function testNewFontAwesomeBreadcrumbNodes(): void {
 
-        $res = FOSUserBreadcrumbNodes::getFontAwesomeBreadcrumbNodes();
+        $res = FOSUserNavigationFactory::newFontAwesomeBreadcrumbNodes();
         $this->assertCount(3, $res);
 
         $this->assertInstanceOf(BreadcrumbNode::class, $res[0]);
@@ -54,13 +54,13 @@ class FOSUserBreadcrumbNodesTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getMaterialDesignIconicFontBreadcrumbNodes()
+     * Tests newMaterialDesignIconicFontBreadcrumbNodes()
      *
      * @return void
      */
-    public function testGetMaterialDesignIconicFontBreadcrumbNodes(): void {
+    public function testNewMaterialDesignIconicFontBreadcrumbNodes(): void {
 
-        $res = FOSUserBreadcrumbNodes::getMaterialDesignIconicFontBreadcrumbNodes();
+        $res = FOSUserNavigationFactory::newMaterialDesignIconicFontBreadcrumbNodes();
         $this->assertCount(3, $res);
 
         $this->assertInstanceOf(BreadcrumbNode::class, $res[0]);

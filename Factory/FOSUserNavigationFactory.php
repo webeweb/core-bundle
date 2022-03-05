@@ -9,25 +9,25 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Asset\Navigation;
+namespace WBW\Bundle\CoreBundle\Factory;
 
 use WBW\Library\Symfony\Assets\Navigation\BreadcrumbNode;
 use WBW\Library\Symfony\Assets\NavigationNodeInterface;
 
 /**
- * FOSUser breadcrumb nodes.
+ * FOS user navigation factory.
  *
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Asset\Navigation
  */
-class FOSUserBreadcrumbNodes {
+class FOSUserNavigationFactory {
 
     /**
-     * Get the FOSUser breadcrumb nodes with Font Awesome icons.
+     * Creates the FOSUser breadcrumb nodes with Font Awesome icons.
      *
      * @return BreadcrumbNode[] Returns the FOSUser breadcrumb nodes.
      */
-    public static function getFontAwesomeBreadcrumbNodes(): array {
+    public static function newFontAwesomeBreadcrumbNodes(): array {
         return [
             new BreadcrumbNode("label.edit_profile", "fa:user", "fos_user_profile_edit", NavigationNodeInterface::MATCHER_ROUTER),
             new BreadcrumbNode("label.show_profile", "fa:user", "fos_user_profile_show", NavigationNodeInterface::MATCHER_ROUTER),
@@ -36,11 +36,11 @@ class FOSUserBreadcrumbNodes {
     }
 
     /**
-     * Get the FOSUser breadcrumb nodes with Material Design Iconic Font icons.
+     * Creates the FOSUser breadcrumb nodes with Material Design Iconic Font icons.
      *
      * @return BreadcrumbNode[] Returns the FOSUser breadcrumb nodes.
      */
-    public static function getMaterialDesignIconicFontBreadcrumbNodes(): array {
+    public static function newMaterialDesignIconicFontBreadcrumbNodes(): array {
         return [
             new BreadcrumbNode("label.edit_profile", "zmdi:account", "fos_user_profile_edit", NavigationNodeInterface::MATCHER_ROUTER),
             new BreadcrumbNode("label.show_profile", "zmdi:account", "fos_user_profile_show", NavigationNodeInterface::MATCHER_ROUTER),
