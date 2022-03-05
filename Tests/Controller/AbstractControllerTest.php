@@ -28,8 +28,8 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Controller\TestAbstractController;
 use WBW\Bundle\CoreBundle\Tests\TestCaseHelper;
 use WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface;
-use WBW\Library\Symfony\Component\NotificationInterface;
-use WBW\Library\Symfony\Component\ToastInterface;
+use WBW\Library\Symfony\Assets\NotificationInterface;
+use WBW\Library\Symfony\Assets\ToastInterface;
 
 /**
  * Abstract controller test.

@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Twig\Extension\TestTwigExtension;
-use WBW\Library\Symfony\Component\NavigationNodeInterface;
+use WBW\Library\Symfony\Assets\NavigationNodeInterface;
 
 /**
  * Abstract Twig extension test.

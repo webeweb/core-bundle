@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Asset\Navigation\FontAwesome;
 
 use WBW\Bundle\CoreBundle\Asset\Navigation\FontAwesome\BreadcrumbNodeActionNewUsersGroup;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Library\Symfony\Component\NavigationNodeInterface;
+use WBW\Library\Symfony\Assets\NavigationNodeInterface;
 
 /**
  * Breadcrumb node action "new users group" test.

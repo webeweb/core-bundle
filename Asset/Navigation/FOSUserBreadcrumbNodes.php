@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Asset\Navigation;
 
-use WBW\Library\Symfony\Component\Navigation\BreadcrumbNode;
-use WBW\Library\Symfony\Component\NavigationNodeInterface;
+use WBW\Library\Symfony\Assets\Navigation\BreadcrumbNode;
+use WBW\Library\Symfony\Assets\NavigationNodeInterface;
 
 /**
  * FOSUser breadcrumb nodes.

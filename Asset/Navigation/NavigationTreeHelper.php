@@ -13,11 +13,11 @@ namespace WBW\Bundle\CoreBundle\Asset\Navigation;
 
 use Symfony\Component\HttpFoundation\ParameterBag;
 use Symfony\Component\HttpFoundation\Request;
-use WBW\Library\Symfony\Component\AbstractNavigationNode;
-use WBW\Library\Symfony\Component\Navigation\BreadcrumbNode;
-use WBW\Library\Symfony\Component\Navigation\NavigationNode;
-use WBW\Library\Symfony\Component\Navigation\NavigationTree;
-use WBW\Library\Symfony\Component\NavigationNodeInterface;
+use WBW\Library\Symfony\Assets\AbstractNavigationNode;
+use WBW\Library\Symfony\Assets\Navigation\BreadcrumbNode;
+use WBW\Library\Symfony\Assets\Navigation\NavigationNode;
+use WBW\Library\Symfony\Assets\Navigation\NavigationTree;
+use WBW\Library\Symfony\Assets\NavigationNodeInterface;
 
 /**
  * Navigation tree helper.

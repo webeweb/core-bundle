@@ -26,8 +26,8 @@ use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
 use WBW\Bundle\CoreBundle\Helper\FormHelper;
 use WBW\Bundle\CoreBundle\Repository\RepositoryHelper;
 use WBW\Bundle\CoreBundle\Security\Core\User\UserHelper;
-use WBW\Library\Symfony\Component\NotificationInterface;
-use WBW\Library\Symfony\Component\ToastInterface;
+use WBW\Library\Symfony\Assets\NotificationInterface;
+use WBW\Library\Symfony\Assets\ToastInterface;
 
 /**
  * Abstract controller.

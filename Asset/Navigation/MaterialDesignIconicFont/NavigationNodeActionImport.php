@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Asset\Navigation\MaterialDesignIconicFont;
 
-use WBW\Library\Symfony\Component\Navigation\NavigationNode;
+use WBW\Library\Symfony\Assets\Navigation\NavigationNode;
 
 /**
  * Navigation node action "import".

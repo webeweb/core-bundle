@@ -15,7 +15,7 @@ use Closure;
 use ReflectionClass;
 use ReflectionException;
 use WBW\Bundle\CoreBundle\Renderer\FormRenderer;
-use WBW\Library\Symfony\Component\ChoiceValueInterface;
+use WBW\Library\Symfony\Assets\ChoiceValueInterface;
 use WBW\Library\Types\Helper\ArrayHelper;
 
 /**

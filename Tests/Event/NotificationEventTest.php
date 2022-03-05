@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Event;
 
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Library\Symfony\Component\NotificationInterface;
+use WBW\Library\Symfony\Assets\NotificationInterface;
 
 /**
  * Notification event test.

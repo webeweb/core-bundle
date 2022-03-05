@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Asset\Navigation\MaterialDesignIconicFont;
 
-use WBW\Library\Symfony\Component\Navigation\BreadcrumbNode;
+use WBW\Library\Symfony\Assets\Navigation\BreadcrumbNode;
 
 /**
  * Breadcrumb node action "import".

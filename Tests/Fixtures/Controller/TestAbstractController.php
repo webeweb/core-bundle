@@ -22,8 +22,8 @@ use WBW\Bundle\CoreBundle\Event\ToastEvent;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Helper\FormHelper;
 use WBW\Bundle\CoreBundle\Repository\RepositoryHelper;
-use WBW\Library\Symfony\Component\NotificationInterface;
-use WBW\Library\Symfony\Component\ToastInterface;
+use WBW\Library\Symfony\Assets\NotificationInterface;
+use WBW\Library\Symfony\Assets\ToastInterface;
 
 /**
  * Test abstract controller.

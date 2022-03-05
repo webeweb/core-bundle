@@ -16,7 +16,7 @@ use Symfony\Component\HttpFoundation\Session\Session;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\EventListener\NotificationEventListener;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Library\Symfony\Component\NotificationInterface;
+use WBW\Library\Symfony\Assets\NotificationInterface;
 
 /**
  * Notification event listener.

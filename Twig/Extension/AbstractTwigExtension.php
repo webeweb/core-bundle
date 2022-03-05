@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Twig\Extension;
 use Twig\Environment;
 use Twig\Extension\AbstractExtension;
 use WBW\Bundle\CoreBundle\Twig\Environment\TwigEnvironmentTrait;
-use WBW\Library\Symfony\Component\NavigationNodeInterface;
+use WBW\Library\Symfony\Assets\NavigationNodeInterface;
 use WBW\Library\Types\Helper\StringHelper;
 
 /**

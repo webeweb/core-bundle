@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Event;
 
-use WBW\Library\Symfony\Component\ToastInterface;
-use WBW\Library\Symfony\Component\ToastTrait;
+use WBW\Library\Symfony\Assets\ToastInterface;
+use WBW\Library\Symfony\Assets\ToastTrait;
 
 /**
  * Toast event.

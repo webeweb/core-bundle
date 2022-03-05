@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Select;
+namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Assets;
 
-use WBW\Library\Symfony\Component\ChoiceValueInterface;
+use WBW\Library\Symfony\Assets\ChoiceValueInterface;
 
 /**
  * Test choice value.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Asset\Select
+ * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Assets
  */
 class TestChoiceValue implements ChoiceValueInterface {
 
