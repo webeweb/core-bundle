@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Renderer;
 
-use WBW\Bundle\CoreBundle\Asset\Select\TranslatedChoiceLabelInterface;
+use WBW\Bundle\CoreBundle\Component\TranslatedChoiceLabelInterface;
 use WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface;
 use WBW\Library\Sorter\Helper\AlphabeticalTreeNodeHelper;
 use WBW\Library\Sorter\Model\AlphabeticalTreeNodeInterface;

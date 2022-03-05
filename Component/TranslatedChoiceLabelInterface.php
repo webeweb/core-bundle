@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Asset\Select;
+namespace WBW\Bundle\CoreBundle\Component;
 
-use WBW\Bundle\CoreBundle\Component\Translation\BaseTranslatorInterface;
+use WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface;
 
 /**
  * Translated choice renderer.
