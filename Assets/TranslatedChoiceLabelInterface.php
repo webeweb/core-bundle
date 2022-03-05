@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Component;
+namespace WBW\Bundle\CoreBundle\Assets;
 
 use WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface;
 
@@ -17,7 +17,7 @@ use WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface;
  * Translated choice renderer.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Asset\Select
+ * @package WBW\Bundle\CoreBundle\Assets
  */
 interface TranslatedChoiceLabelInterface {
 
