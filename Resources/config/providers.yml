@@ -115,7 +115,7 @@ services:
         tags:
             - { name: "wbw.core.provider.color" }
 
-    wbw.core.provider.asset.highlighter.syntax_highlighter_strings:
-        class:  WBW\Bundle\CoreBundle\Provider\Asset\Highlighter\SyntaxHighlighterStringsProvider
+    wbw.core.provider.syntax_highlighter:
+        class:  WBW\Bundle\CoreBundle\Provider\SyntaxHighlighterProvider
         arguments: [ "@translator" ]
         public: true

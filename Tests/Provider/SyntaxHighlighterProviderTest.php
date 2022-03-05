@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Provider\Asset\Highlighter;
+namespace WBW\Bundle\CoreBundle\Tests\Provider;
 
 use WBW\Bundle\CoreBundle\Asset\Highlighter\SyntaxHighlighter\SyntaxHighlighterStrings;
-use WBW\Bundle\CoreBundle\Provider\Asset\Highlighter\SyntaxHighlighterStringsProvider;
+use WBW\Bundle\CoreBundle\Provider\SyntaxHighlighterProvider;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
- * SyntaxHighlighter strings provider test.
+ * SyntaxHighlighter provider test.
  *
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Provider\Asset\Highlighter
  */
-class SyntaxHighlighterStringsProviderTest extends AbstractTestCase {
+class SyntaxHighlighterProviderTest extends AbstractTestCase {
 
     /**
      * @{inheritdoc}
@@ -40,7 +40,7 @@ class SyntaxHighlighterStringsProviderTest extends AbstractTestCase {
      */
     public function testGetSyntaxHighlighterStrings(): void {
 
-        $obj = new SyntaxHighlighterStringsProvider($this->translator);
+        $obj = new SyntaxHighlighterProvider($this->translator);
 
         $this->assertInstanceOf(SyntaxHighlighterStrings::class, $obj->getSyntaxHighlighterStrings());
     }
@@ -52,6 +52,6 @@ class SyntaxHighlighterStringsProviderTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $this->assertEquals("wbw.core.provider.asset.highlighter.syntax_highlighter_strings", SyntaxHighlighterStringsProvider::SERVICE_NAME);
+        $this->assertEquals("wbw.core.provider.syntax_highlighter", SyntaxHighlighterProvider::SERVICE_NAME);
     }
 }
