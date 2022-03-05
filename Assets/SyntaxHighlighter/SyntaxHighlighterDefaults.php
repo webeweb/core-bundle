@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Asset\Highlighter\SyntaxHighlighter;
+namespace WBW\Bundle\CoreBundle\Assets\SyntaxHighlighter;
 
 /**
  * SyntaxHighlighter defaults.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Asset\Highlighter\SyntaxHighlighter
+ * @package WBW\Bundle\CoreBundle\Assets\SyntaxHighlighter
  */
 class SyntaxHighlighterDefaults {
 

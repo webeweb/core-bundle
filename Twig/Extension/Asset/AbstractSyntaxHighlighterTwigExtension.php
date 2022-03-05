@@ -12,9 +12,9 @@
 namespace WBW\Bundle\CoreBundle\Twig\Extension\Asset;
 
 use Twig\Environment;
-use WBW\Bundle\CoreBundle\Asset\Highlighter\SyntaxHighlighter\SyntaxHighlighterConfig;
-use WBW\Bundle\CoreBundle\Asset\Highlighter\SyntaxHighlighter\SyntaxHighlighterDefaults;
-use WBW\Bundle\CoreBundle\Asset\Highlighter\SyntaxHighlighter\SyntaxHighlighterStrings;
+use WBW\Bundle\CoreBundle\Assets\SyntaxHighlighter\SyntaxHighlighterConfig;
+use WBW\Bundle\CoreBundle\Assets\SyntaxHighlighter\SyntaxHighlighterDefaults;
+use WBW\Bundle\CoreBundle\Assets\SyntaxHighlighter\SyntaxHighlighterStrings;
 use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Library\Types\Helper\StringHelper;
 

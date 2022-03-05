@@ -16,9 +16,9 @@ use Symfony\Component\Filesystem\Exception\FileNotFoundException;
 use Twig\Node\Node;
 use Twig\TwigFilter;
 use Twig\TwigFunction;
-use WBW\Bundle\CoreBundle\Asset\Highlighter\SyntaxHighlighter\SyntaxHighlighterConfig;
-use WBW\Bundle\CoreBundle\Asset\Highlighter\SyntaxHighlighter\SyntaxHighlighterDefaults;
-use WBW\Bundle\CoreBundle\Asset\Highlighter\SyntaxHighlighter\SyntaxHighlighterStrings;
+use WBW\Bundle\CoreBundle\Assets\SyntaxHighlighter\SyntaxHighlighterConfig;
+use WBW\Bundle\CoreBundle\Assets\SyntaxHighlighter\SyntaxHighlighterDefaults;
+use WBW\Bundle\CoreBundle\Assets\SyntaxHighlighter\SyntaxHighlighterStrings;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Twig\Extension\Asset\SyntaxHighlighterTwigExtension;
 

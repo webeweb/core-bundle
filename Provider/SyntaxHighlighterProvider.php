@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Provider;
 
-use WBW\Bundle\CoreBundle\Asset\Highlighter\SyntaxHighlighter\SyntaxHighlighterStrings;
+use WBW\Bundle\CoreBundle\Assets\SyntaxHighlighter\SyntaxHighlighterStrings;
 use WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface;
 use WBW\Bundle\CoreBundle\Translation\TranslatorInterface;
 use WBW\Bundle\CoreBundle\Translation\TranslatorTrait;
