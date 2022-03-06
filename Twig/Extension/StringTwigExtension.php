@@ -37,6 +37,11 @@ class StringTwigExtension extends AbstractTwigExtension {
      */
     public function getFilters(): array {
         return [
+            new TwigFilter("htmlEntityDecode", [$this, "htmlEntityDecode"], ["is_safe" => ["html"]]),
+            new TwigFilter("htmlEntityEncode", [$this, "htmlEntityEncode"], ["is_safe" => ["html"]]),
+
+            new TwigFilter("md5", [$this, "md5"], ["is_safe" => ["html"]]),
+
             new TwigFilter("stringExtractUpperCase", [$this, "stringExtractUpperCase"], ["is_safe" => ["html"]]),
             new TwigFilter("stringFormat", [$this, "stringFormat"], ["is_safe" => ["html"]]),
             new TwigFilter("stringHumanReadable", [$this, "stringHumanReadable"], ["is_safe" => ["html"]]),
@@ -53,6 +58,11 @@ class StringTwigExtension extends AbstractTwigExtension {
      */
     public function getFunctions(): array {
         return [
+            new TwigFunction("htmlEntityDecode", [$this, "htmlEntityDecode"], ["is_safe" => ["html"]]),
+            new TwigFunction("htmlEntityEncode", [$this, "htmlEntityEncode"], ["is_safe" => ["html"]]),
+
+            new TwigFunction("md5", [$this, "md5"], ["is_safe" => ["html"]]),
+
             new TwigFunction("stringExtractUpperCase", [$this, "stringExtractUpperCase"], ["is_safe" => ["html"]]),
             new TwigFunction("stringFormat", [$this, "stringFormat"], ["is_safe" => ["html"]]),
             new TwigFunction("stringHumanReadable", [$this, "stringHumanReadable"], ["is_safe" => ["html"]]),
@@ -60,6 +70,51 @@ class StringTwigExtension extends AbstractTwigExtension {
             new TwigFunction("stringSnakeCase", [$this, "stringSnakeCase"], ["is_safe" => ["html"]]),
             new TwigFunction("stringUpperCamelCase", [$this, "stringUpperCamelCase"], ["is_safe" => ["html"]]),
         ];
+    }
+
+    /**
+     * Decodes HTML entities.
+     *
+     * @param string|null $string The string.
+     * @return string|null Returns the decoded HTML entities.
+     */
+    public function htmlEntityDecode(?string $string): ?string {
+
+        if (null === $string) {
+            return null;
+        }
+
+        return html_entity_decode($string);
+    }
+
+    /**
+     * Encodes HTML entities.
+     *
+     * @param string|null $string The string.
+     * @return string|null Returns the encoded HTML entities.
+     */
+    public function htmlEntityEncode(?string $string): ?string {
+
+        if (null === $string) {
+            return null;
+        }
+
+        return htmlentities($string);
+    }
+
+    /**
+     * MD5.
+     *
+     * @param string|null $string The string.
+     * @return string|null Returns the MD5.
+     */
+    public function md5(?string $string): ?string {
+
+        if (null === $string) {
+            return null;
+        }
+
+        return md5($string);
     }
 
     /**

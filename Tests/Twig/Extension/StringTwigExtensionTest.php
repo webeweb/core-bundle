@@ -36,37 +36,54 @@ class StringTwigExtensionTest extends AbstractTestCase {
         $obj = new StringTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFilters();
-        $this->assertCount(6, $res);
+        $this->assertCount(9, $res);
 
-        $this->assertInstanceOf(TwigFilter::class, $res[0]);
-        $this->assertEquals("stringExtractUpperCase", $res[0]->getName());
-        $this->assertEquals([$obj, "stringExtractUpperCase"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
+        $i = -1;
 
-        $this->assertInstanceOf(TwigFilter::class, $res[1]);
-        $this->assertEquals("stringFormat", $res[1]->getName());
-        $this->assertEquals([$obj, "stringFormat"], $res[1]->getCallable());
-        $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFilter::class, $res[++$i]);
+        $this->assertEquals("htmlEntityDecode", $res[$i]->getName());
+        $this->assertEquals([$obj, "htmlEntityDecode"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFilter::class, $res[2]);
-        $this->assertEquals("stringHumanReadable", $res[2]->getName());
-        $this->assertEquals([$obj, "stringHumanReadable"], $res[2]->getCallable());
-        $this->assertEquals(["html"], $res[2]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFilter::class, $res[++$i]);
+        $this->assertEquals("htmlEntityEncode", $res[$i]->getName());
+        $this->assertEquals([$obj, "htmlEntityEncode"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFilter::class, $res[3]);
-        $this->assertEquals("stringLowerCamelCase", $res[3]->getName());
-        $this->assertEquals([$obj, "stringLowerCamelCase"], $res[3]->getCallable());
-        $this->assertEquals(["html"], $res[3]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFilter::class, $res[++$i]);
+        $this->assertEquals("md5", $res[$i]->getName());
+        $this->assertEquals([$obj, "md5"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFilter::class, $res[4]);
-        $this->assertEquals("stringSnakeCase", $res[4]->getName());
-        $this->assertEquals([$obj, "stringSnakeCase"], $res[4]->getCallable());
-        $this->assertEquals(["html"], $res[4]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFilter::class, $res[++$i]);
+        $this->assertEquals("stringExtractUpperCase", $res[$i]->getName());
+        $this->assertEquals([$obj, "stringExtractUpperCase"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFilter::class, $res[5]);
-        $this->assertEquals("stringUpperCamelCase", $res[5]->getName());
-        $this->assertEquals([$obj, "stringUpperCamelCase"], $res[5]->getCallable());
-        $this->assertEquals(["html"], $res[5]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFilter::class, $res[++$i]);
+        $this->assertEquals("stringFormat", $res[$i]->getName());
+        $this->assertEquals([$obj, "stringFormat"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFilter::class, $res[++$i]);
+        $this->assertEquals("stringHumanReadable", $res[$i]->getName());
+        $this->assertEquals([$obj, "stringHumanReadable"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFilter::class, $res[++$i]);
+        $this->assertEquals("stringLowerCamelCase", $res[$i]->getName());
+        $this->assertEquals([$obj, "stringLowerCamelCase"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFilter::class, $res[++$i]);
+        $this->assertEquals("stringSnakeCase", $res[$i]->getName());
+        $this->assertEquals([$obj, "stringSnakeCase"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFilter::class, $res[++$i]);
+        $this->assertEquals("stringUpperCamelCase", $res[$i]->getName());
+        $this->assertEquals([$obj, "stringUpperCamelCase"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
     }
 
     /**
@@ -79,37 +96,93 @@ class StringTwigExtensionTest extends AbstractTestCase {
         $obj = new StringTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-        $this->assertCount(6, $res);
+        $this->assertCount(9, $res);
 
-        $this->assertInstanceOf(TwigFunction::class, $res[0]);
-        $this->assertEquals("stringExtractUpperCase", $res[0]->getName());
-        $this->assertEquals([$obj, "stringExtractUpperCase"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
+        $i = -1;
 
-        $this->assertInstanceOf(TwigFunction::class, $res[1]);
-        $this->assertEquals("stringFormat", $res[1]->getName());
-        $this->assertEquals([$obj, "stringFormat"], $res[1]->getCallable());
-        $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("htmlEntityDecode", $res[$i]->getName());
+        $this->assertEquals([$obj, "htmlEntityDecode"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[2]);
-        $this->assertEquals("stringHumanReadable", $res[2]->getName());
-        $this->assertEquals([$obj, "stringHumanReadable"], $res[2]->getCallable());
-        $this->assertEquals(["html"], $res[2]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("htmlEntityEncode", $res[$i]->getName());
+        $this->assertEquals([$obj, "htmlEntityEncode"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[3]);
-        $this->assertEquals("stringLowerCamelCase", $res[3]->getName());
-        $this->assertEquals([$obj, "stringLowerCamelCase"], $res[3]->getCallable());
-        $this->assertEquals(["html"], $res[3]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("md5", $res[$i]->getName());
+        $this->assertEquals([$obj, "md5"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[4]);
-        $this->assertEquals("stringSnakeCase", $res[4]->getName());
-        $this->assertEquals([$obj, "stringSnakeCase"], $res[4]->getCallable());
-        $this->assertEquals(["html"], $res[4]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("stringExtractUpperCase", $res[$i]->getName());
+        $this->assertEquals([$obj, "stringExtractUpperCase"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[5]);
-        $this->assertEquals("stringUpperCamelCase", $res[5]->getName());
-        $this->assertEquals([$obj, "stringUpperCamelCase"], $res[5]->getCallable());
-        $this->assertEquals(["html"], $res[5]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("stringFormat", $res[$i]->getName());
+        $this->assertEquals([$obj, "stringFormat"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("stringHumanReadable", $res[$i]->getName());
+        $this->assertEquals([$obj, "stringHumanReadable"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("stringLowerCamelCase", $res[$i]->getName());
+        $this->assertEquals([$obj, "stringLowerCamelCase"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("stringSnakeCase", $res[$i]->getName());
+        $this->assertEquals([$obj, "stringSnakeCase"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("stringUpperCamelCase", $res[$i]->getName());
+        $this->assertEquals([$obj, "stringUpperCamelCase"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+    }
+
+    /**
+     * Tests htmlEntityDecode()
+     *
+     * @return void
+     */
+    public function testHtmlEntityDecode(): void {
+
+        $obj = new StringTwigExtension($this->twigEnvironment);
+
+        $this->assertNull($obj->htmlEntityDecode(null));
+        $this->assertEquals("&", $obj->htmlEntityDecode("&amp;"));
+    }
+
+    /**
+     * Tests htmlEntityEncode()
+     *
+     * @return void
+     */
+    public function testHtmlEntityEncode(): void {
+
+        $obj = new StringTwigExtension($this->twigEnvironment);
+
+        $this->assertNull($obj->htmlEntityEncode(null));
+        $this->assertEquals("&amp;", $obj->htmlEntityEncode("&"));
+    }
+
+    /**
+     * Tests md5()
+     *
+     * @return void
+     */
+    public function testMd5(): void {
+
+        $obj = new StringTwigExtension($this->twigEnvironment);
+
+        $this->assertNull($obj->md5(null));
+        $this->assertEquals("d41d8cd98f00b204e9800998ecf8427e", $obj->md5(""));
     }
 
     /**
