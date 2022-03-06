@@ -37,25 +37,27 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
         $res = $obj->getFilters();
         $this->assertCount(4, $res);
 
-        $this->assertInstanceOf(TwigFilter::class, $res[0]);
-        $this->assertEquals("materialDesignIconicFontList", $res[0]->getName());
-        $this->assertEquals([$obj, "materialDesignIconicFontListFilter"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
+        $i = -1;
 
-        $this->assertInstanceOf(TwigFilter::class, $res[1]);
-        $this->assertEquals("mdiFontList", $res[1]->getName());
-        $this->assertEquals([$obj, "materialDesignIconicFontListFilter"], $res[1]->getCallable());
-        $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFilter::class, $res[++$i]);
+        $this->assertEquals("materialDesignIconicFontList", $res[$i]->getName());
+        $this->assertEquals([$obj, "materialDesignIconicFontListFilter"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFilter::class, $res[2]);
-        $this->assertEquals("materialDesignIconicFontListIcon", $res[2]->getName());
-        $this->assertEquals([$obj, "materialDesignIconicFontListIconFilter"], $res[2]->getCallable());
-        $this->assertEquals(["html"], $res[2]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFilter::class, $res[++$i]);
+        $this->assertEquals("mdiFontList", $res[$i]->getName());
+        $this->assertEquals([$obj, "materialDesignIconicFontListFilter"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFilter::class, $res[3]);
-        $this->assertEquals("mdiFontListIcon", $res[3]->getName());
-        $this->assertEquals([$obj, "materialDesignIconicFontListIconFilter"], $res[3]->getCallable());
-        $this->assertEquals(["html"], $res[3]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFilter::class, $res[++$i]);
+        $this->assertEquals("materialDesignIconicFontListIcon", $res[$i]->getName());
+        $this->assertEquals([$obj, "materialDesignIconicFontListIconFilter"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFilter::class, $res[++$i]);
+        $this->assertEquals("mdiFontListIcon", $res[$i]->getName());
+        $this->assertEquals([$obj, "materialDesignIconicFontListIconFilter"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
     }
 
     /**
@@ -70,15 +72,17 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
         $res = $obj->getFunctions();
         $this->assertCount(2, $res);
 
-        $this->assertInstanceOf(TwigFunction::class, $res[0]);
-        $this->assertEquals("materialDesignIconicFontIcon", $res[0]->getName());
-        $this->assertEquals([$obj, "materialDesignIconicFontIconFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
+        $i = -1;
 
-        $this->assertInstanceOf(TwigFunction::class, $res[1]);
-        $this->assertEquals("mdiIcon", $res[1]->getName());
-        $this->assertEquals([$obj, "materialDesignIconicFontIconFunction"], $res[1]->getCallable());
-        $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("materialDesignIconicFontIcon", $res[$i]->getName());
+        $this->assertEquals([$obj, "materialDesignIconicFontIconFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("mdiIcon", $res[$i]->getName());
+        $this->assertEquals([$obj, "materialDesignIconicFontIconFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
     }
 
     /**

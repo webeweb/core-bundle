@@ -49,25 +49,27 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
         $res = $obj->getFunctions();
         $this->assertCount(4, $res);
 
-        $this->assertInstanceOf(TwigFunction::class, $res[0]);
-        $this->assertEquals("materialDesignColorPaletteBackground", $res[0]->getName());
-        $this->assertEquals([$obj, "materialDesignColorPaletteBackgroundFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
+        $i = -1;
 
-        $this->assertInstanceOf(TwigFunction::class, $res[1]);
-        $this->assertEquals("mdcBackground", $res[1]->getName());
-        $this->assertEquals([$obj, "materialDesignColorPaletteBackgroundFunction"], $res[1]->getCallable());
-        $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("materialDesignColorPaletteBackground", $res[$i]->getName());
+        $this->assertEquals([$obj, "materialDesignColorPaletteBackgroundFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[2]);
-        $this->assertEquals("materialDesignColorPaletteText", $res[2]->getName());
-        $this->assertEquals([$obj, "materialDesignColorPaletteTextFunction"], $res[2]->getCallable());
-        $this->assertEquals(["html"], $res[2]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("mdcBackground", $res[$i]->getName());
+        $this->assertEquals([$obj, "materialDesignColorPaletteBackgroundFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[3]);
-        $this->assertEquals("mdcText", $res[3]->getName());
-        $this->assertEquals([$obj, "materialDesignColorPaletteTextFunction"], $res[3]->getCallable());
-        $this->assertEquals(["html"], $res[3]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("materialDesignColorPaletteText", $res[$i]->getName());
+        $this->assertEquals([$obj, "materialDesignColorPaletteTextFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("mdcText", $res[$i]->getName());
+        $this->assertEquals([$obj, "materialDesignColorPaletteTextFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
     }
 
     /**

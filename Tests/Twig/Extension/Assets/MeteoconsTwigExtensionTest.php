@@ -49,10 +49,12 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
         $res = $obj->getFunctions();
         $this->assertCount(1, $res);
 
-        $this->assertInstanceOf(TwigFunction::class, $res[0]);
-        $this->assertEquals("meteoconsIcon", $res[0]->getName());
-        $this->assertEquals([$obj, "meteoconsIconFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
+        $i = -1;
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("meteoconsIcon", $res[$i]->getName());
+        $this->assertEquals([$obj, "meteoconsIconFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
     }
 
     /**

@@ -67,40 +67,42 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
         $res = $obj->getFunctions();
         $this->assertCount(7, $res);
 
-        $this->assertInstanceOf(TwigFunction::class, $res[0]);
-        $this->assertEquals("jQueryInputMask", $res[0]->getName());
-        $this->assertEquals([$obj, "jQueryInputMaskFunction"], $res[0]->getCallable());
-        $this->assertEquals(["html"], $res[0]->getSafe(new Node()));
+        $i = -1;
 
-        $this->assertInstanceOf(TwigFunction::class, $res[1]);
-        $this->assertEquals("jQueryInputMaskPhoneNumber", $res[1]->getName());
-        $this->assertEquals([$obj, "jQueryInputMaskPhoneNumberFunction"], $res[1]->getCallable());
-        $this->assertEquals(["html"], $res[1]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("jQueryInputMask", $res[$i]->getName());
+        $this->assertEquals([$obj, "jQueryInputMaskFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[2]);
-        $this->assertEquals("jQueryInputMaskSIRETNumber", $res[2]->getName());
-        $this->assertEquals([$obj, "jQueryInputMaskSIRETNumberFunction"], $res[2]->getCallable());
-        $this->assertEquals(["html"], $res[2]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("jQueryInputMaskPhoneNumber", $res[$i]->getName());
+        $this->assertEquals([$obj, "jQueryInputMaskPhoneNumberFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[3]);
-        $this->assertEquals("jQueryInputMaskSocialSecurityNumber", $res[3]->getName());
-        $this->assertEquals([$obj, "jQueryInputMaskSocialSecurityNumberFunction"], $res[3]->getCallable());
-        $this->assertEquals(["html"], $res[3]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("jQueryInputMaskSIRETNumber", $res[$i]->getName());
+        $this->assertEquals([$obj, "jQueryInputMaskSIRETNumberFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[4]);
-        $this->assertEquals("jQueryInputMaskTime12", $res[4]->getName());
-        $this->assertEquals([$obj, "jQueryInputMaskTime12Function"], $res[4]->getCallable());
-        $this->assertEquals(["html"], $res[4]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("jQueryInputMaskSocialSecurityNumber", $res[$i]->getName());
+        $this->assertEquals([$obj, "jQueryInputMaskSocialSecurityNumberFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[5]);
-        $this->assertEquals("jQueryInputMaskTime24", $res[5]->getName());
-        $this->assertEquals([$obj, "jQueryInputMaskTime24Function"], $res[5]->getCallable());
-        $this->assertEquals(["html"], $res[5]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("jQueryInputMaskTime12", $res[$i]->getName());
+        $this->assertEquals([$obj, "jQueryInputMaskTime12Function"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
-        $this->assertInstanceOf(TwigFunction::class, $res[6]);
-        $this->assertEquals("jQueryInputMaskVATNumber", $res[6]->getName());
-        $this->assertEquals([$obj, "jQueryInputMaskVATNumberFunction"], $res[6]->getCallable());
-        $this->assertEquals(["html"], $res[6]->getSafe(new Node()));
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("jQueryInputMaskTime24", $res[$i]->getName());
+        $this->assertEquals([$obj, "jQueryInputMaskTime24Function"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("jQueryInputMaskVATNumber", $res[$i]->getName());
+        $this->assertEquals([$obj, "jQueryInputMaskVATNumberFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
     }
 
     /**
