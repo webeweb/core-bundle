@@ -9,13 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Twig\Extension\Asset;
+namespace WBW\Bundle\CoreBundle\Twig\Extension;
 
 use DateTime;
 use Exception;
 use Twig\Environment;
 use Twig\TwigFunction;
-use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
 use WBW\Library\Symfony\Manager\QuoteManager;
 use WBW\Library\Symfony\Manager\QuoteManagerTrait;
 use WBW\Library\Symfony\Model\QuoteInterface;
@@ -26,7 +25,7 @@ use WBW\Library\Types\Helper\ArrayHelper;
  * Quote Twig extension.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Twig\Extension\Asset
+ * @package WBW\Bundle\CoreBundle\Twig\Extension
  */
 class QuoteTwigExtension extends AbstractTwigExtension {
 
@@ -37,7 +36,7 @@ class QuoteTwigExtension extends AbstractTwigExtension {
      *
      * @var string
      */
-    const SERVICE_NAME = "wbw.core.twig.extension.asset.quote";
+    const SERVICE_NAME = "wbw.core.twig.extension.quote";
 
     /**
      * Constructor.

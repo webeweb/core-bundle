@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension\Asset;
+namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension;
 
 use Exception;
 use Twig\Node\Node;
 use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Bundle\CoreBundle\Twig\Extension\Asset\QuoteTwigExtension;
+use WBW\Bundle\CoreBundle\Twig\Extension\QuoteTwigExtension;
 use WBW\Library\Symfony\Manager\QuoteManager;
 use WBW\Library\Symfony\Provider\Quote\WorldsWisdomQuoteProvider;
 use WBW\Library\Symfony\Provider\QuoteProviderInterface;
@@ -24,7 +24,7 @@ use WBW\Library\Symfony\Provider\QuoteProviderInterface;
  * Quote Twig extension test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Twig\Extension\Asset
+ * @package WBW\Bundle\CoreBundle\Tests\Twig\Extension
  */
 class QuoteTwigExtensionTest extends AbstractTestCase {
 
@@ -186,7 +186,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $this->assertEquals("wbw.core.twig.extension.asset.quote", QuoteTwigExtension::SERVICE_NAME);
+        $this->assertEquals("wbw.core.twig.extension.quote", QuoteTwigExtension::SERVICE_NAME);
 
         $obj = new QuoteTwigExtension($this->twigEnvironment, $this->quoteManager);
 
