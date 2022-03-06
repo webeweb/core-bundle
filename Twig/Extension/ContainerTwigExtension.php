@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Twig\Extension;
 
+use Exception;
 use Symfony\Component\DependencyInjection\Container;
 use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\DependencyInjection\Container\ContainerTrait;
@@ -36,8 +37,11 @@ class ContainerTwigExtension extends AbstractTwigExtension {
      * Constructor.
      *
      * @param Container $container The container.
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function __construct(Container $container) {
+        parent::__construct($container->get("twig"));
+
         $this->setContainer($container);
     }
 
