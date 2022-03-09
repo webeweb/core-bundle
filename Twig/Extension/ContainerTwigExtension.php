@@ -13,6 +13,7 @@ namespace WBW\Bundle\CoreBundle\Twig\Extension;
 
 use Exception;
 use Symfony\Component\DependencyInjection\Container;
+use Twig\Environment;
 use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\DependencyInjection\Container\ContainerTrait;
 
@@ -36,13 +37,30 @@ class ContainerTwigExtension extends AbstractTwigExtension {
     /**
      * Constructor.
      *
+     * @param Environment $twigEnvironment The Twig environment.
      * @param Container $container The container.
-     * @throws Exception Throws an exception if an error occurs.
      */
-    public function __construct(Container $container) {
-        parent::__construct($container->get("twig"));
+    public function __construct(Environment $twigEnvironment,Container $container) {
+        parent::__construct($twigEnvironment);
 
         $this->setContainer($container);
+    }
+
+    /**
+     * Call a static method.
+     *
+     * @param string|null $classname The classname.
+     * @param string|null $method The method.
+     * @param array $arguments The arguments.
+     * @return mixed|null Returns the static method result.
+     */
+    public function coreStaticMethodFunction(?string $classname, ?string $method, array $arguments = []) {
+
+        if (null === $classname || null === $method) {
+            return null;
+        }
+
+        return call_user_func_array("$classname::$method", $arguments);
     }
 
     /**
@@ -63,6 +81,7 @@ class ContainerTwigExtension extends AbstractTwigExtension {
     public function getFunctions(): array {
         return [
             new TwigFunction("getContainerParameter", [$this, "getContainerParameterFunction"]),
+            new TwigFunction("coreStaticMethod", [$this, "coreStaticMethodFunction"], ["is_safe" => ["html"]]),
         ];
     }
 }

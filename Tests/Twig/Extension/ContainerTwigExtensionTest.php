@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension;
 
+use Twig\Node\Node;
 use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Twig\Extension\ContainerTwigExtension;
@@ -30,7 +31,7 @@ class ContainerTwigExtensionTest extends AbstractTestCase {
      */
     public function testGetContainerParameterFunction(): void {
 
-        $obj = new ContainerTwigExtension($this->containerBuilder);
+        $obj = new ContainerTwigExtension($this->twigEnvironment, $this->containerBuilder);
 
         $this->assertNotNull($obj->getContainerParameterFunction("kernel.project_dir"));
     }
@@ -42,14 +43,37 @@ class ContainerTwigExtensionTest extends AbstractTestCase {
      */
     public function testGetFunctions(): void {
 
-        $obj = new ContainerTwigExtension($this->containerBuilder);
+        $obj = new ContainerTwigExtension($this->twigEnvironment, $this->containerBuilder);
 
         $res = $obj->getFunctions();
-        $this->assertCount(1, $res);
+        $this->assertCount(2, $res);
 
-        $this->assertInstanceOf(TwigFunction::class, $res[0]);
-        $this->assertEquals("getContainerParameter", $res[0]->getName());
-        $this->assertEquals([$obj, "getContainerParameterFunction"], $res[0]->getCallable());
+        $i = -1;
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("getContainerParameter", $res[$i]->getName());
+        $this->assertEquals([$obj, "getContainerParameterFunction"], $res[$i]->getCallable());
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("coreStaticMethod", $res[$i]->getName());
+        $this->assertEquals([$obj, "coreStaticMethodFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+    }
+
+    /**
+     * Tests coreStaticMethodFunction()
+     *
+     * @return void
+     */
+    public function testCoreStaticMethodFunction(): void {
+
+        $obj = new ContainerTwigExtension($this->twigEnvironment, $this->containerBuilder);
+
+        $this->assertEquals(null, $obj->coreStaticMethodFunction(null, "exception"));
+        $this->assertEquals(null, $obj->coreStaticMethodFunction("exception", null));
+
+        $this->assertEquals("\\" === DIRECTORY_SEPARATOR, $obj->coreStaticMethodFunction("WBW\\Library\\Core\\Helper\\OSHelper", "isWindows"));
+        $this->assertEquals('<div id="id">content</div>', $obj->coreStaticMethodFunction("WBW\\Bundle\\CoreBundle\\Twig\\Extension\\AbstractTwigExtension", "coreHTMLElement", ["div", "content", ["id" => "id"]]));
     }
 
     /**
@@ -61,8 +85,9 @@ class ContainerTwigExtensionTest extends AbstractTestCase {
 
         $this->assertEquals("wbw.core.twig.extension.container", ContainerTwigExtension::SERVICE_NAME);
 
-        $obj = new ContainerTwigExtension($this->containerBuilder);
+        $obj = new ContainerTwigExtension($this->twigEnvironment, $this->containerBuilder);
 
+        $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
         $this->assertSame($this->containerBuilder, $obj->getContainer());
     }
 }

@@ -51,7 +51,7 @@ services:
 
     wbw.core.twig.extension.container:
         class:  WBW\Bundle\CoreBundle\Twig\Extension\ContainerTwigExtension
-        arguments: [ "@service_container" ]
+        arguments: [ "@twig", "@service_container" ]
         public: true
         tags:
             - { name: "twig.extension" }
