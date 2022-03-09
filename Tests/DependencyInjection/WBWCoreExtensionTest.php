@@ -35,10 +35,9 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Assets\MaterialDesignColorPaletteTwigEx
 use WBW\Bundle\CoreBundle\Twig\Extension\Assets\MaterialDesignIconicFontTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\Assets\MeteoconsTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\Assets\SyntaxHighlighterTwigExtension;
+use WBW\Bundle\CoreBundle\Twig\Extension\AssetsTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\ContainerTwigExtension;
-use WBW\Bundle\CoreBundle\Twig\Extension\JavascriptTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\QuoteTwigExtension;
-use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\StringTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\StylesheetTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\UtilityTwigExtension;
@@ -210,10 +209,9 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         }
 
         // Twig extensions
+        $this->assertInstanceOf(AssetsTwigExtension::class, $this->containerBuilder->get(AssetsTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(ContainerTwigExtension::class, $this->containerBuilder->get(ContainerTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(JavascriptTwigExtension::class, $this->containerBuilder->get(JavascriptTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(QuoteTwigExtension::class, $this->containerBuilder->get(QuoteTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(RendererTwigExtension::class, $this->containerBuilder->get(RendererTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(StringTwigExtension::class, $this->containerBuilder->get(StringTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(StylesheetTwigExtension::class, $this->containerBuilder->get(StylesheetTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(UtilityTwigExtension::class, $this->containerBuilder->get(UtilityTwigExtension::SERVICE_NAME));

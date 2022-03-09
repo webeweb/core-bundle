@@ -1,6 +1,13 @@
 # Resources/config/twig.yml
 services:
 
+    wbw.core.twig.extension.assets:
+        class:  WBW\Bundle\CoreBundle\Twig\Extension\AssetsTwigExtension
+        arguments: [ "@twig" ]
+        public: true
+        tags:
+            - { name: "twig.extension" }
+
     wbw.core.twig.extension.assets.font_awesome:
         class:  WBW\Bundle\CoreBundle\Twig\Extension\Assets\FontAwesomeTwigExtension
         arguments: [ "@twig" ]
@@ -10,7 +17,7 @@ services:
 
     wbw.core.twig.extension.assets.jquery_inputmask:
         class:  WBW\Bundle\CoreBundle\Twig\Extension\Assets\JQueryInputMaskTwigExtension
-        arguments: [ "@twig", "@wbw.core.twig.extension.renderer" ]
+        arguments: [ "@twig", "@wbw.core.twig.extension.assets" ]
         public: true
         tags:
             - { name: "twig.extension" }
@@ -46,20 +53,6 @@ services:
     wbw.core.twig.extension.quote:
         class:  WBW\Bundle\CoreBundle\Twig\Extension\QuoteTwigExtension
         arguments: [ "@twig", "@wbw.core.manager.quote" ]
-        public: true
-        tags:
-            - { name: "twig.extension" }
-
-    wbw.core.twig.extension.javascript:
-        class:  WBW\Bundle\CoreBundle\Twig\Extension\JavascriptTwigExtension
-        arguments: [ "@twig" ]
-        public: true
-        tags:
-            - { name: "twig.extension" }
-
-    wbw.core.twig.extension.renderer:
-        class:  WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension
-        arguments: [ "@twig" ]
         public: true
         tags:
             - { name: "twig.extension" }

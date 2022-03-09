@@ -13,8 +13,8 @@ namespace WBW\Bundle\CoreBundle\Twig\Extension\Assets;
 
 use Twig\Environment;
 use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
-use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension;
-use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtensionTrait;
+use WBW\Bundle\CoreBundle\Twig\Extension\AssetsTwigExtensionTrait;
+use WBW\Bundle\CoreBundle\Twig\Extension\AssetsTwigExtension;
 
 /**
  * Abstract jQuery input mask Twig extension.
@@ -25,18 +25,18 @@ use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtensionTrait;
  */
 abstract class AbstractJQueryInputMaskTwigExtension extends AbstractTwigExtension {
 
-    use RendererTwigExtensionTrait;
+    use AssetsTwigExtensionTrait;
 
     /**
      * Constructor.
      *
      * @param Environment $twigEnvironment The Twig environment.
-     * @param RendererTwigExtension $rendererTwigExtension The renderer Twig extension.
+     * @param AssetsTwigExtension $rendererTwigExtension The renderer Twig extension.
      */
-    public function __construct(Environment $twigEnvironment, RendererTwigExtension $rendererTwigExtension) {
+    public function __construct(Environment $twigEnvironment, AssetsTwigExtension $rendererTwigExtension) {
         parent::__construct($twigEnvironment);
 
-        $this->setRendererTwigExtension($rendererTwigExtension);
+        $this->setAssetsTwigExtension($rendererTwigExtension);
     }
 
     /**
@@ -55,7 +55,7 @@ abstract class AbstractJQueryInputMaskTwigExtension extends AbstractTwigExtensio
         $innerHTML = str_replace(["%selector%", "%mask%", "%arguments%"], [$selector, $mask, json_encode($options)], $template);
 
         if (true === $scriptTag) {
-            return $this->getRendererTwigExtension()->coreScriptFilter($innerHTML);
+            return $this->getAssetsTwigExtension()->coreScriptFilter($innerHTML);
         }
         return $innerHTML;
     }

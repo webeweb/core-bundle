@@ -15,7 +15,7 @@ use Twig\Node\Node;
 use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Twig\Extension\Assets\JQueryInputMaskTwigExtension;
-use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension;
+use WBW\Bundle\CoreBundle\Twig\Extension\AssetsTwigExtension;
 
 /**
  * jQuery Input mask Twig extension test.
@@ -26,9 +26,9 @@ use WBW\Bundle\CoreBundle\Twig\Extension\RendererTwigExtension;
 class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Renderer Twig extension.
+     * Assets Twig extension.
      *
-     * @var RendererTwigExtension
+     * @var AssetsTwigExtension
      */
     private $rendererTwigExtension;
 
@@ -38,8 +38,8 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
     protected function setUp(): void {
         parent::setUp();
 
-        // Set a Renderer Twig extension mock.
-        $this->rendererTwigExtension = new RendererTwigExtension($this->twigEnvironment);
+        // Set a Assets Twig extension mock.
+        $this->rendererTwigExtension = new AssetsTwigExtension($this->twigEnvironment);
     }
 
     /**
@@ -258,6 +258,6 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
         $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->rendererTwigExtension);
 
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
-        $this->assertSame($this->rendererTwigExtension, $obj->getRendererTwigExtension());
+        $this->assertSame($this->rendererTwigExtension, $obj->getAssetsTwigExtension());
     }
 }
