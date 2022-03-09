@@ -17,6 +17,7 @@ use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\Twig\Extension\Assets\FontAwesomeTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\Assets\MaterialDesignIconicFontTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\Assets\MeteoconsTwigExtension;
+use WBW\Library\Symfony\Helper\ColorHelper;
 
 /**
  * Assets Twig extension.
@@ -85,6 +86,17 @@ class AssetsTwigExtension extends AbstractTwigExtension {
     }
 
     /**
+     * Displays a rgba().
+     *
+     * @param string|null $color The hexadecimal color.
+     * @param float $alpha The alpha channel.
+     * @return string|null Returns the rgba().
+     */
+    public function cssRgba(?string $color, float $alpha = 1.00): ?string {
+        return ColorHelper::hexToRgba($color, $alpha);
+    }
+
+    /**
      * Get the Twig filters.
      *
      * @return TwigFilter[] Returns the Twig filters.
@@ -94,6 +106,7 @@ class AssetsTwigExtension extends AbstractTwigExtension {
             new TwigFilter("coreGtag", [$this, "coreGtag"], ["is_safe" => ["html"]]),
             new TwigFilter("coreScript", [$this, "coreScriptFilter"], ["is_safe" => ["html"]]),
             new TwigFilter("coreStyle", [$this, "coreStyleFilter"], ["is_safe" => ["html"]]),
+            new TwigFilter("cssRgba", [$this, "cssRgba"], ["is_safe" => ["html"]]),
         ];
     }
 
@@ -105,6 +118,7 @@ class AssetsTwigExtension extends AbstractTwigExtension {
     public function getFunctions(): array {
         return [
             new TwigFunction("coreGtag", [$this, "coreGtag"], ["is_safe" => ["html"]]),
+            new TwigFunction("cssRgba", [$this, "cssRgba"], ["is_safe" => ["html"]]),
         ];
     }
 
