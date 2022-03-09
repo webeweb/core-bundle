@@ -13,8 +13,8 @@ namespace WBW\Bundle\CoreBundle\Twig\Extension\Assets;
 
 use Twig\Environment;
 use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
-use WBW\Bundle\CoreBundle\Twig\Extension\AssetsTwigExtensionTrait;
 use WBW\Bundle\CoreBundle\Twig\Extension\AssetsTwigExtension;
+use WBW\Bundle\CoreBundle\Twig\Extension\AssetsTwigExtensionTrait;
 
 /**
  * Abstract jQuery input mask Twig extension.

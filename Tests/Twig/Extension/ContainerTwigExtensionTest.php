@@ -25,6 +25,22 @@ use WBW\Bundle\CoreBundle\Twig\Extension\ContainerTwigExtension;
 class ContainerTwigExtensionTest extends AbstractTestCase {
 
     /**
+     * Tests coreStaticMethodFunction()
+     *
+     * @return void
+     */
+    public function testCoreStaticMethodFunction(): void {
+
+        $obj = new ContainerTwigExtension($this->twigEnvironment, $this->containerBuilder);
+
+        $this->assertEquals(null, $obj->coreStaticMethodFunction(null, "exception"));
+        $this->assertEquals(null, $obj->coreStaticMethodFunction("exception", null));
+
+        $this->assertEquals("\\" === DIRECTORY_SEPARATOR, $obj->coreStaticMethodFunction("WBW\\Library\\Core\\Helper\\OSHelper", "isWindows"));
+        $this->assertEquals('<div id="id">content</div>', $obj->coreStaticMethodFunction("WBW\\Bundle\\CoreBundle\\Twig\\Extension\\AbstractTwigExtension", "coreHTMLElement", ["div", "content", ["id" => "id"]]));
+    }
+
+    /**
      * Tests getContainerParameterFunction()
      *
      * @return void
@@ -58,22 +74,6 @@ class ContainerTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("coreStaticMethod", $res[$i]->getName());
         $this->assertEquals([$obj, "coreStaticMethodFunction"], $res[$i]->getCallable());
         $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
-    }
-
-    /**
-     * Tests coreStaticMethodFunction()
-     *
-     * @return void
-     */
-    public function testCoreStaticMethodFunction(): void {
-
-        $obj = new ContainerTwigExtension($this->twigEnvironment, $this->containerBuilder);
-
-        $this->assertEquals(null, $obj->coreStaticMethodFunction(null, "exception"));
-        $this->assertEquals(null, $obj->coreStaticMethodFunction("exception", null));
-
-        $this->assertEquals("\\" === DIRECTORY_SEPARATOR, $obj->coreStaticMethodFunction("WBW\\Library\\Core\\Helper\\OSHelper", "isWindows"));
-        $this->assertEquals('<div id="id">content</div>', $obj->coreStaticMethodFunction("WBW\\Bundle\\CoreBundle\\Twig\\Extension\\AbstractTwigExtension", "coreHTMLElement", ["div", "content", ["id" => "id"]]));
     }
 
     /**

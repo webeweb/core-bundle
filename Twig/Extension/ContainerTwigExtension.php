@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\CoreBundle\Twig\Extension;
 
-use Exception;
 use Symfony\Component\DependencyInjection\Container;
 use Twig\Environment;
 use Twig\TwigFunction;
@@ -40,7 +39,7 @@ class ContainerTwigExtension extends AbstractTwigExtension {
      * @param Environment $twigEnvironment The Twig environment.
      * @param Container $container The container.
      */
-    public function __construct(Environment $twigEnvironment,Container $container) {
+    public function __construct(Environment $twigEnvironment, Container $container) {
         parent::__construct($twigEnvironment);
 
         $this->setContainer($container);
