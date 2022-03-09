@@ -129,7 +129,7 @@ class StringTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a formated string.
+     * Displays a formatted string.
      *
      * @param string|null $string The string.
      * @param string|null $format The format.
