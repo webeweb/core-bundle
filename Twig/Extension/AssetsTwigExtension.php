@@ -68,6 +68,23 @@ class AssetsTwigExtension extends AbstractTwigExtension {
     }
 
     /**
+     * Displays a style.
+     *
+     * @param string $content The content.
+     * @return string Returns a style.
+     */
+    public function coreStyleFilter(string $content): string {
+
+        $attributes = [
+            "type" => "text/css",
+        ];
+
+        $innerHTML = implode("", ["\n", $content, "\n"]);
+
+        return static::coreHtmlElement("style", $innerHTML, $attributes);
+    }
+
+    /**
      * Get the Twig filters.
      *
      * @return TwigFilter[] Returns the Twig filters.
@@ -76,6 +93,7 @@ class AssetsTwigExtension extends AbstractTwigExtension {
         return [
             new TwigFilter("coreGtag", [$this, "coreGtag"], ["is_safe" => ["html"]]),
             new TwigFilter("coreScript", [$this, "coreScriptFilter"], ["is_safe" => ["html"]]),
+            new TwigFilter("coreStyle", [$this, "coreStyleFilter"], ["is_safe" => ["html"]]),
         ];
     }
 

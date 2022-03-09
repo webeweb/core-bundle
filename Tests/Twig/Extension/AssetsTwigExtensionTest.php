@@ -42,6 +42,19 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
+     * Tests coreStyleFilter()
+     *
+     * @return void
+     */
+    public function testCoreStyleFilter(): void {
+
+        $obj = new AssetsTwigExtension($this->twigEnvironment);
+
+        $res = file_get_contents(__DIR__ . "/AssetsTwigExtensionTest.testCoreStyleFilter.html.txt");
+        $this->assertEquals($res, $obj->coreStyleFilter("content") . "\n");
+    }
+
+    /**
      * Tests coreScriptFilter()
      *
      * @return void
@@ -64,7 +77,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
         $obj = new AssetsTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFilters();
-        $this->assertCount(2, $res);
+        $this->assertCount(3, $res);
 
         $i = -1;
 
@@ -76,6 +89,11 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(TwigFilter::class, $res[++$i]);
         $this->assertEquals("coreScript", $res[$i]->getName());
         $this->assertEquals([$obj, "coreScriptFilter"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFilter::class, $res[++$i]);
+        $this->assertEquals("coreStyle", $res[$i]->getName());
+        $this->assertEquals([$obj, "coreStyleFilter"], $res[$i]->getCallable());
         $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
     }
 
