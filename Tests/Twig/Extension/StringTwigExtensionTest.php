@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension;
 
+use DateTime;
 use Exception;
 use Twig\Node\Node;
 use Twig\TwigFilter;
@@ -27,6 +28,21 @@ use WBW\Bundle\CoreBundle\Twig\Extension\StringTwigExtension;
 class StringTwigExtensionTest extends AbstractTestCase {
 
     /**
+     * Tests dateFormat()
+     *
+     * @return void
+     * @throws Exception Throws an exception if an error occurs.
+     */
+    public function dateFormat(): void {
+
+        $obj = new StringTwigExtension($this->twigEnvironment);
+
+        $this->assertEquals("", $obj->dateFormat());
+        $this->assertEquals("2018-01-14 18:00", $obj->dateFormat(new DateTime("2018-01-14 18:00")));
+        $this->assertEquals("14/01/2018 18:00", $obj->dateFormat(new DateTime("2018-01-14 18:00"), "d/m/Y H:i"));
+    }
+
+    /**
      * Tests getFilters()
      *
      * @return void
@@ -36,9 +52,14 @@ class StringTwigExtensionTest extends AbstractTestCase {
         $obj = new StringTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFilters();
-        $this->assertCount(9, $res);
+        $this->assertCount(10, $res);
 
         $i = -1;
+
+        $this->assertInstanceOf(TwigFilter::class, $res[++$i]);
+        $this->assertEquals("dateFormat", $res[$i]->getName());
+        $this->assertEquals([$obj, "dateFormat"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
         $this->assertInstanceOf(TwigFilter::class, $res[++$i]);
         $this->assertEquals("htmlEntityDecode", $res[$i]->getName());
@@ -96,9 +117,14 @@ class StringTwigExtensionTest extends AbstractTestCase {
         $obj = new StringTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-        $this->assertCount(9, $res);
+        $this->assertCount(10, $res);
 
         $i = -1;
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("dateFormat", $res[$i]->getName());
+        $this->assertEquals([$obj, "dateFormat"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
         $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
         $this->assertEquals("htmlEntityDecode", $res[$i]->getName());

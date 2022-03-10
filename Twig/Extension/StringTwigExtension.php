@@ -11,8 +11,10 @@
 
 namespace WBW\Bundle\CoreBundle\Twig\Extension;
 
+use DateTime;
 use Twig\TwigFilter;
 use Twig\TwigFunction;
+use WBW\Library\Types\Helper\DateTimeHelper;
 use WBW\Library\Types\Helper\StringHelper;
 
 /**
@@ -31,12 +33,25 @@ class StringTwigExtension extends AbstractTwigExtension {
     const SERVICE_NAME = "wbw.core.twig.extension.string";
 
     /**
+     * Format a date/time.
+     *
+     * @param DateTime|null $dateTime The date/time.
+     * @param string $format The format.
+     * @return string|null Returns the formatted date/time.
+     */
+    public function dateFormat(?DateTime $dateTime, string $format = DateTimeHelper::DATETIME_FORMAT): ?string {
+        return DateTimeHelper::toString($dateTime, $format);
+    }
+
+    /**
      * Get the Twig filters.
      *
      * @return TwigFilter[] Returns the Twig filters.
      */
     public function getFilters(): array {
         return [
+            new TwigFilter("dateFormat", [$this, "dateFormat"], ["is_safe" => ["html"]]),
+
             new TwigFilter("htmlEntityDecode", [$this, "htmlEntityDecode"], ["is_safe" => ["html"]]),
             new TwigFilter("htmlEntityEncode", [$this, "htmlEntityEncode"], ["is_safe" => ["html"]]),
 
@@ -58,6 +73,8 @@ class StringTwigExtension extends AbstractTwigExtension {
      */
     public function getFunctions(): array {
         return [
+            new TwigFunction("dateFormat", [$this, "dateFormat"], ["is_safe" => ["html"]]),
+
             new TwigFunction("htmlEntityDecode", [$this, "htmlEntityDecode"], ["is_safe" => ["html"]]),
             new TwigFunction("htmlEntityEncode", [$this, "htmlEntityEncode"], ["is_safe" => ["html"]]),
 
