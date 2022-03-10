@@ -33,11 +33,11 @@ class StringTwigExtensionTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function dateFormat(): void {
+    public function testDateFormat(): void {
 
         $obj = new StringTwigExtension($this->twigEnvironment);
 
-        $this->assertEquals("", $obj->dateFormat());
+        $this->assertNull($obj->dateFormat(null));
         $this->assertEquals("2018-01-14 18:00", $obj->dateFormat(new DateTime("2018-01-14 18:00")));
         $this->assertEquals("14/01/2018 18:00", $obj->dateFormat(new DateTime("2018-01-14 18:00"), "d/m/Y H:i"));
     }
