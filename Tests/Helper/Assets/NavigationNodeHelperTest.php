@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Helper;
+namespace WBW\Bundle\CoreBundle\Tests\Helper\Assets;
 
 use Symfony\Component\HttpFoundation\Request;
-use WBW\Bundle\CoreBundle\Helper\NavigationNodeHelper;
+use WBW\Bundle\CoreBundle\Helper\Assets\NavigationNodeHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\TestFixtures;
 use WBW\Library\Symfony\Assets\Navigation\NavigationTree;
@@ -21,7 +21,7 @@ use WBW\Library\Symfony\Assets\Navigation\NavigationTree;
  * Navigation node helper test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Helper
+ * @package WBW\Bundle\CoreBundle\Tests\Helper\Assets
  */
 class NavigationNodeHelperTest extends AbstractTestCase {
 
