@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Assets\Icon;
 
 use WBW\Bundle\CoreBundle\Assets\Icon\MaterialDesignIconicFontIcon;
+use WBW\Bundle\CoreBundle\Assets\Icon\MaterialDesignIconicFontIconInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
@@ -21,6 +22,94 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
  * @package WBW\Bundle\CoreBundle\Tests\Assets\Icon
  */
 class MaterialDesignIconicFontIconTest extends AbstractTestCase {
+
+    /**
+     * Tests enumBorders()
+     *
+     * @return void.
+     */
+    public function testEnumBorders(): void {
+
+        $res = [
+            MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_BORDER,
+            MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_BORDER_CIRCLE,
+        ];
+        $this->assertEquals($res, MaterialDesignIconicFontIcon::enumBorders());
+    }
+
+    /**
+     * Tests enumFlips()
+     *
+     * @return void
+     */
+    public function testEnumFlips(): void {
+
+        $res = [
+            MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_FLIP_HORIZONTAL,
+            MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_FLIP_VERTICAL,
+        ];
+        $this->assertEquals($res, MaterialDesignIconicFontIcon::enumFlips());
+    }
+
+    /**
+     * Tests enumPulls()
+     *
+     * @return void
+     */
+    public function testEnumPulls(): void {
+
+        $res = [
+            MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_PULL_LEFT,
+            MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_PULL_RIGHT,
+        ];
+        $this->assertEquals($res, MaterialDesignIconicFontIcon::enumPulls());
+    }
+
+    /**
+     * Tests enumRotates()
+     *
+     * @return void
+     */
+    public function testEnumRotates(): void {
+
+        $res = [
+            MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_ROTATE_90,
+            MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_ROTATE_180,
+            MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_ROTATE_270,
+        ];
+        $this->assertEquals($res, MaterialDesignIconicFontIcon::enumRotates());
+    }
+
+    /**
+     * Tests enumSizes()
+     *
+     * @return void
+     */
+    public function testEnumSizes(): void {
+
+        $res = [
+            MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SIZE_LG,
+            MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SIZE_2X,
+            MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SIZE_3X,
+            MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SIZE_4X,
+            MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SIZE_5X,
+        ];
+        $this->assertEquals($res, MaterialDesignIconicFontIcon::enumSizes());
+    }
+
+    /**
+     * Tests enumSpins()
+     *
+     * @return void
+     */
+    public function testEnumSpins(): void {
+
+        $res = [
+            MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SPIN,
+            MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SPIN_REVERSE,
+        ];
+        $this->assertEquals($res, MaterialDesignIconicFontIcon::enumSpins());
+    }
 
     /**
      * Tests setBorder()

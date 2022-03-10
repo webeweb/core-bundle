@@ -80,6 +80,82 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
     }
 
     /**
+     * Enumerates the borders.
+     *
+     * @return string[] Returns the borders enumeration.
+     */
+    public static function enumBorders(): array {
+        return [
+            self::MATERIAL_DESIGN_ICONIC_FONT_BORDER,
+            self::MATERIAL_DESIGN_ICONIC_FONT_BORDER_CIRCLE,
+        ];
+    }
+
+    /**
+     * Enumerates the flips.
+     *
+     * @return string[] Returns the flips enumeration.
+     */
+    public static function enumFlips(): array {
+        return [
+            self::MATERIAL_DESIGN_ICONIC_FONT_FLIP_HORIZONTAL,
+            self::MATERIAL_DESIGN_ICONIC_FONT_FLIP_VERTICAL,
+        ];
+    }
+
+    /**
+     * Enumerates the pulls.
+     *
+     * @return string[] Returns the pulls enumeration.
+     */
+    public static function enumPulls(): array {
+        return [
+            self::MATERIAL_DESIGN_ICONIC_FONT_PULL_LEFT,
+            self::MATERIAL_DESIGN_ICONIC_FONT_PULL_RIGHT,
+        ];
+    }
+
+    /**
+     * Enumerates the rotates.
+     *
+     * @return string[] Returns the rotates enumeration.
+     */
+    public static function enumRotates(): array {
+        return [
+            self::MATERIAL_DESIGN_ICONIC_FONT_ROTATE_90,
+            self::MATERIAL_DESIGN_ICONIC_FONT_ROTATE_180,
+            self::MATERIAL_DESIGN_ICONIC_FONT_ROTATE_270,
+        ];
+    }
+
+    /**
+     * Enumerates the sizes.
+     *
+     * @return string[] Returns the sizes enumeration.
+     */
+    public static function enumSizes(): array {
+        return [
+            self::MATERIAL_DESIGN_ICONIC_FONT_SIZE_LG,
+            self::MATERIAL_DESIGN_ICONIC_FONT_SIZE_2X,
+            self::MATERIAL_DESIGN_ICONIC_FONT_SIZE_3X,
+            self::MATERIAL_DESIGN_ICONIC_FONT_SIZE_4X,
+            self::MATERIAL_DESIGN_ICONIC_FONT_SIZE_5X,
+        ];
+    }
+
+    /**
+     * Enumerates the spins.
+     *
+     * @return string[] Returns the spins enumeration.
+     */
+    public static function enumSpins(): array {
+        return [
+            self::MATERIAL_DESIGN_ICONIC_FONT_SPIN,
+            self::MATERIAL_DESIGN_ICONIC_FONT_SPIN_REVERSE,
+        ];
+    }
+
+    /**
      * {@inheritDoc}
      */
     public function getBorder(): ?string {
@@ -133,7 +209,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
      */
     public function setBorder(?string $border): MaterialDesignIconicFontIconInterface {
 
-        if (false === in_array($border, MaterialDesignIconicFontIconEnumerator::enumBorders())) {
+        if (false === in_array($border, static::enumBorders())) {
             $border = null;
         }
 
@@ -154,7 +230,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
      */
     public function setFlip(?string $flip): MaterialDesignIconicFontIconInterface {
 
-        if (false === in_array($flip, MaterialDesignIconicFontIconEnumerator::enumFlips())) {
+        if (false === in_array($flip, static::enumFlips())) {
             $flip = null;
         }
 
@@ -167,7 +243,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
      */
     public function setPull(?string $pull): MaterialDesignIconicFontIconInterface {
 
-        if (false === in_array($pull, MaterialDesignIconicFontIconEnumerator::enumPulls())) {
+        if (false === in_array($pull, static::enumPulls())) {
             $pull = null;
         }
 
@@ -180,7 +256,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
      */
     public function setRotate(?string $rotate): MaterialDesignIconicFontIconInterface {
 
-        if (false === in_array($rotate, MaterialDesignIconicFontIconEnumerator::enumRotates())) {
+        if (false === in_array($rotate, static::enumRotates())) {
             $rotate = null;
         }
 
@@ -193,7 +269,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
      */
     public function setSize(?string $size): MaterialDesignIconicFontIconInterface {
 
-        if (false === in_array($size, MaterialDesignIconicFontIconEnumerator::enumSizes())) {
+        if (false === in_array($size, static::enumSizes())) {
             $size = null;
         }
 
@@ -206,7 +282,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
      */
     public function setSpin(?string $spin): MaterialDesignIconicFontIconInterface {
 
-        if (false === in_array($spin, MaterialDesignIconicFontIconEnumerator::enumSpins())) {
+        if (false === in_array($spin, static::enumSpins())) {
             $spin = null;
         }
 
