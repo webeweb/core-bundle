@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\CoreBundle\DependencyInjection;
 
-use Exception;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -87,91 +86,5 @@ class WBWCoreExtension extends Extension {
 
         $assets = ConfigurationHelper::loadYamlConfig(__DIR__, "assets");
         ConfigurationHelper::registerContainerParameters($container, $assets["assets"]);
-    }
-
-    /**
-     * Load the "change password" services configuration.
-     *
-     * @param array $config The configuration.
-     * @param YamlFileLoader $loader The loader.
-     * @return void
-     * @throws Exception Throws an exception if an error occurs.
-     */
-    protected function loadChangePassword(array $config, YamlFileLoader $loader): void {
-
-        if (false === array_key_exists("change_password", $config)) {
-            return;
-        }
-
-        $loader->load("services/services_change_password.yml");
-    }
-
-    /**
-     * Load the "group" services configuration.
-     *
-     * @param array $config The configuration.
-     * @param YamlFileLoader $loader The loader.
-     * @return void
-     * @throws Exception Throws an exception if an error occurs.
-     */
-    protected function loadGroup(array $config, YamlFileLoader $loader): void {
-
-        if (false === array_key_exists("group", $config)) {
-            return;
-        }
-
-        $loader->load("services/doctrine_group.yml");
-        $loader->load("services/services_group.yml");
-    }
-
-    /**
-     * Load the "profile" services configuration.
-     *
-     * @param array $config The configuration.
-     * @param YamlFileLoader $loader The loader.
-     * @return void
-     * @throws Exception Throws an exception if an error occurs.
-     */
-    protected function loadProfile(array $config, YamlFileLoader $loader): void {
-
-        if (false === array_key_exists("profile", $config)) {
-            return;
-        }
-
-        $loader->load("services/services_profile.yml");
-    }
-
-    /**
-     * Load the "registration" services configuration.
-     *
-     * @param array $config The configuration.
-     * @param YamlFileLoader $loader The loader.
-     * @return void
-     * @throws Exception Throws an exception if an error occurs.
-     */
-    protected function loadRegistration(array $config, YamlFileLoader $loader): void {
-
-        if (false === array_key_exists("registration", $config)) {
-            return;
-        }
-
-        $loader->load("services/services_registration.yml");
-    }
-
-    /**
-     * Load the "resetting" services configuration.
-     *
-     * @param array $config The configuration.
-     * @param YamlFileLoader $loader The loader.
-     * @return void
-     * @throws Exception Throws an exception if an error occurs.
-     */
-    protected function loadResetting(array $config, YamlFileLoader $loader): void {
-
-        if (false === array_key_exists("resetting", $config)) {
-            return;
-        }
-
-        $loader->load("services/services_resetting.yml");
     }
 }

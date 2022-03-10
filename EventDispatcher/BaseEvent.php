@@ -11,10 +11,4 @@
 
 namespace WBW\Bundle\CoreBundle\EventDispatcher;
 
-use Symfony\Component\HttpKernel\Kernel;
-
-if (Kernel::VERSION_ID < 40300) {
-    class_alias("Symfony\Component\EventDispatcher\Event", "WBW\Bundle\CoreBundle\EventDispatcher\BaseEvent");
-} else {
-    class_alias("Symfony\Contracts\EventDispatcher\Event", "WBW\Bundle\CoreBundle\EventDispatcher\BaseEvent");
-}
+class_alias("Symfony\Contracts\EventDispatcher\Event", "WBW\Bundle\CoreBundle\EventDispatcher\BaseEvent");

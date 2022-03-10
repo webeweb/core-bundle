@@ -35,15 +35,7 @@ class ConfigurationHelper {
      * @return ArrayNodeDefinition|NodeDefinition Returns the root node.
      */
     public static function getRootNode(TreeBuilder $treeBuilder, string $nodeName): NodeDefinition {
-
-        $method = "getRootNode";
-        if (true === method_exists($treeBuilder, $method)) {
-            return $treeBuilder->$method();
-        } else {
-            $method = "root";
-        }
-
-        return $treeBuilder->$method($nodeName);
+        return $treeBuilder->getRootNode();
     }
 
     /**
@@ -70,11 +62,6 @@ class ConfigurationHelper {
      * @return TreeBuilder Returns the tree builder.
      */
     public static function newTreeBuilder(string $nodeName): TreeBuilder {
-
-        if (Kernel::VERSION_ID < 40200) {
-            return new TreeBuilder();
-        }
-
         return new TreeBuilder($nodeName);
     }
 

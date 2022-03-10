@@ -11,10 +11,4 @@
 
 namespace WBW\Bundle\CoreBundle\Translation;
 
-use Symfony\Component\HttpKernel\Kernel;
-
-if (Kernel::VERSION_ID < 40200) {
-    class_alias("Symfony\Component\Translation\TranslatorInterface", "WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface");
-} else {
-    class_alias("Symfony\Contracts\Translation\TranslatorInterface", "WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface");
-}
+class_alias("Symfony\Contracts\Translation\TranslatorInterface", "WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface");

@@ -11,10 +11,4 @@
 
 namespace WBW\Bundle\CoreBundle\HttpKernel\Event;
 
-use Symfony\Component\HttpKernel\Kernel;
-
-if (Kernel::VERSION_ID < 40300) {
-    class_alias("Symfony\Component\HttpKernel\Event\GetResponseEvent", "WBW\Bundle\CoreBundle\HttpKernel\Event\BaseRequestEvent");
-} else {
-    class_alias("Symfony\Component\HttpKernel\Event\RequestEvent", "WBW\Bundle\CoreBundle\HttpKernel\Event\BaseRequestEvent");
-}
+class_alias("Symfony\Component\HttpKernel\Event\RequestEvent", "WBW\Bundle\CoreBundle\HttpKernel\Event\BaseRequestEvent");

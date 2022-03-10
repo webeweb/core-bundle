@@ -36,10 +36,6 @@ class EventDispatcherHelper {
             return null;
         }
 
-        if (Kernel::VERSION_ID < 40300) {
-            return $eventDispatcher->dispatch($eventName, $event);
-        }
-
         return $eventDispatcher->dispatch($event, $eventName);
     }
 }
