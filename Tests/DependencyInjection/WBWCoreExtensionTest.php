@@ -39,7 +39,6 @@ use WBW\Bundle\CoreBundle\Twig\Extension\AssetsTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\ContainerTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\QuoteTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\StringTwigExtension;
-use WBW\Bundle\CoreBundle\Twig\Extension\UtilityTwigExtension;
 use WBW\Library\Symfony\Color\MaterialDesignColorPalette\AmberColorProvider;
 use WBW\Library\Symfony\Color\MaterialDesignColorPalette\BlueColorProvider;
 use WBW\Library\Symfony\Color\MaterialDesignColorPalette\BlueGreyColorProvider;
@@ -212,7 +211,6 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(ContainerTwigExtension::class, $this->containerBuilder->get(ContainerTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(QuoteTwigExtension::class, $this->containerBuilder->get(QuoteTwigExtension::SERVICE_NAME));
         $this->assertInstanceOf(StringTwigExtension::class, $this->containerBuilder->get(StringTwigExtension::SERVICE_NAME));
-        $this->assertInstanceOf(UtilityTwigExtension::class, $this->containerBuilder->get(UtilityTwigExtension::SERVICE_NAME));
 
         // Assets Twig extensions
         $this->assertInstanceOf(FontAwesomeTwigExtension::class, $this->containerBuilder->get(FontAwesomeTwigExtension::SERVICE_NAME));

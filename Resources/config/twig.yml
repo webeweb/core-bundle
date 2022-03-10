@@ -63,10 +63,3 @@ services:
         public: true
         tags:
             - { name: "twig.extension" }
-
-    wbw.core.twig.extension.utility:
-        class:  WBW\Bundle\CoreBundle\Twig\Extension\UtilityTwigExtension
-        arguments: [ "@twig" ]
-        public: true
-        tags:
-            - { name: "twig.extension" }
