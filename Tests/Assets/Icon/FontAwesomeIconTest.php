@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Assets\Icon;
 
 use WBW\Bundle\CoreBundle\Assets\Icon\FontAwesomeIcon;
+use WBW\Bundle\CoreBundle\Assets\Icon\FontAwesomeIconInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
@@ -21,6 +22,75 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
  * @package WBW\Bundle\CoreBundle\Tests\Assets\Icon
  */
 class FontAwesomeIconTest extends AbstractTestCase {
+
+    /**
+     * Tests enumAnimations()
+     *
+     * @return void
+     */
+    public function testEnumAnimations(): void {
+
+        $res = [
+            FontAwesomeIconInterface::FONT_AWESOME_ANIMATION_PULSE,
+            FontAwesomeIconInterface::FONT_AWESOME_ANIMATION_SPIN,
+        ];
+        $this->assertEquals($res, FontAwesomeIcon::enumAnimations());
+    }
+
+    /**
+     * Tests enumFonts()
+     *
+     * @return void
+     */
+    public function testEnumFonts(): void {
+
+        $res = [
+            FontAwesomeIconInterface::FONT_AWESOME_FONT,
+            FontAwesomeIconInterface::FONT_AWESOME_FONT_BOLD,
+            FontAwesomeIconInterface::FONT_AWESOME_FONT_LIGHT,
+            FontAwesomeIconInterface::FONT_AWESOME_FONT_REGULAR,
+            FontAwesomeIconInterface::FONT_AWESOME_FONT_SOLID,
+        ];
+        $this->assertEquals($res, FontAwesomeIcon::enumFonts());
+    }
+
+    /**
+     * Tests enumPulls()
+     *
+     * @return void
+     */
+    public function testEnumPulls(): void {
+
+        $res = [
+            FontAwesomeIconInterface::FONT_AWESOME_PULL_LEFT,
+            FontAwesomeIconInterface::FONT_AWESOME_PULL_RIGHT,
+        ];
+        $this->assertEquals($res, FontAwesomeIcon::enumPulls());
+    }
+
+    /**
+     * Tests the enumSizes() mmethod.
+     *
+     * @return void
+     */
+    public function testEnumSizes(): void {
+
+        $res = [
+            FontAwesomeIconInterface::FONT_AWESOME_SIZE_LG,
+            FontAwesomeIconInterface::FONT_AWESOME_SIZE_SM,
+            FontAwesomeIconInterface::FONT_AWESOME_SIZE_XS,
+            FontAwesomeIconInterface::FONT_AWESOME_SIZE_2X,
+            FontAwesomeIconInterface::FONT_AWESOME_SIZE_3X,
+            FontAwesomeIconInterface::FONT_AWESOME_SIZE_4X,
+            FontAwesomeIconInterface::FONT_AWESOME_SIZE_5X,
+            FontAwesomeIconInterface::FONT_AWESOME_SIZE_6X,
+            FontAwesomeIconInterface::FONT_AWESOME_SIZE_7X,
+            FontAwesomeIconInterface::FONT_AWESOME_SIZE_8X,
+            FontAwesomeIconInterface::FONT_AWESOME_SIZE_9X,
+            FontAwesomeIconInterface::FONT_AWESOME_SIZE_10X,
+        ];
+        $this->assertEquals($res, FontAwesomeIcon::enumSizes());
+    }
 
     /**
      * Tests setAnimation()

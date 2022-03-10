@@ -75,6 +75,67 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
     }
 
     /**
+     * Enumerates the animations.
+     *
+     * @return string[] Returns the animations enumeration.
+     */
+    public static function enumAnimations(): array {
+        return [
+            self::FONT_AWESOME_ANIMATION_PULSE,
+            self::FONT_AWESOME_ANIMATION_SPIN,
+        ];
+    }
+
+    /**
+     * Enumerates the fonts.
+     *
+     * @return string[] Returns the fonts enumeration.
+     */
+    public static function enumFonts(): array {
+        return [
+            self::FONT_AWESOME_FONT,
+            self::FONT_AWESOME_FONT_BOLD,
+            self::FONT_AWESOME_FONT_LIGHT,
+            self::FONT_AWESOME_FONT_REGULAR,
+            self::FONT_AWESOME_FONT_SOLID,
+        ];
+    }
+
+    /**
+     * Enumerates the pulls.
+     *
+     * @return string[] Returns the pulls enumeration.
+     */
+    public static function enumPulls(): array {
+        return [
+            self::FONT_AWESOME_PULL_LEFT,
+            self::FONT_AWESOME_PULL_RIGHT,
+        ];
+    }
+
+    /**
+     * Enumerates the sizes.
+     *
+     * @return string[] Returns the sizes enumeration.
+     */
+    public static function enumSizes(): array {
+        return [
+            self::FONT_AWESOME_SIZE_LG,
+            self::FONT_AWESOME_SIZE_SM,
+            self::FONT_AWESOME_SIZE_XS,
+            self::FONT_AWESOME_SIZE_2X,
+            self::FONT_AWESOME_SIZE_3X,
+            self::FONT_AWESOME_SIZE_4X,
+            self::FONT_AWESOME_SIZE_5X,
+            self::FONT_AWESOME_SIZE_6X,
+            self::FONT_AWESOME_SIZE_7X,
+            self::FONT_AWESOME_SIZE_8X,
+            self::FONT_AWESOME_SIZE_9X,
+            self::FONT_AWESOME_SIZE_10X,
+        ];
+    }
+
+    /**
      * {@inheritDoc}
      */
     public function getAnimation(): ?string {
@@ -121,7 +182,7 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
      */
     public function setAnimation(?string $animation): FontAwesomeIconInterface {
 
-        if (false === in_array($animation, FontAwesomeIconEnumerator::enumAnimations())) {
+        if (false === in_array($animation, static::enumAnimations())) {
             $animation = null;
         }
 
@@ -150,7 +211,7 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
      */
     public function setFont(?string $font): FontAwesomeIconInterface {
 
-        if (false === in_array($font, FontAwesomeIconEnumerator::enumFonts())) {
+        if (false === in_array($font, static::enumFonts())) {
             $font = null;
         }
 
@@ -163,7 +224,7 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
      */
     public function setPull(?string $pull): FontAwesomeIconInterface {
 
-        if (false === in_array($pull, FontAwesomeIconEnumerator::enumPulls())) {
+        if (false === in_array($pull, static::enumPulls())) {
             $pull = null;
         }
 
@@ -176,7 +237,7 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
      */
     public function setSize(?string $size): FontAwesomeIconInterface {
 
-        if (false === in_array($size, FontAwesomeIconEnumerator::enumSizes())) {
+        if (false === in_array($size, static::enumSizes())) {
             $size = null;
         }
 
