@@ -3,6 +3,13 @@ CHANGELOG
 
 ### master
 
+> IMPORTANT NOTICE: The following Symfony versions are now not supported
+> - Symfony 3.4
+> - Symfony 4.0
+> - Symfony 4.1
+> - Symfony 4.2
+> - Symfony 4.3
+
 > IMPORTANT NOTICE: The following deprecated classes has been removed
 > - WBW\Bundle\CoreBundle\Twig/Extension/Plugin/FontAwesomeTwigExtension
 > - WBW\Bundle\CoreBundle\Twig/Extension/Plugin/FontAwesomeTwigExtensionTrait
@@ -50,13 +57,6 @@ CHANGELOG
 > - WBW\Bundle\CoreBundle\Quote
 > - WBW\Bundle\CoreBundle\Theme
 > - WBW\Bundle\CoreBundle\Toast
-
-> IMPORTANT NOTICE: The following Symfony versions are now not supported
-> - Symfony 3.4
-> - Symfony 4.0
-> - Symfony 4.1
-> - Symfony 4.2
-> - Symfony 4.3
 
 - Add Leaflet asset
 - Add Leaflet Color Markers asset
