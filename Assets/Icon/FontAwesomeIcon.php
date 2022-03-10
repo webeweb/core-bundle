@@ -120,9 +120,11 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
      * {@inheritDoc}
      */
     public function setAnimation(?string $animation): FontAwesomeIconInterface {
+
         if (false === in_array($animation, FontAwesomeIconEnumerator::enumAnimations())) {
             $animation = null;
         }
+
         $this->animation = $animation;
         return $this;
     }
@@ -147,9 +149,11 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
      * {@inheritDoc}
      */
     public function setFont(?string $font): FontAwesomeIconInterface {
+
         if (false === in_array($font, FontAwesomeIconEnumerator::enumFonts())) {
             $font = null;
         }
+
         $this->font = $font;
         return $this;
     }
@@ -158,9 +162,11 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
      * {@inheritDoc}
      */
     public function setPull(?string $pull): FontAwesomeIconInterface {
+
         if (false === in_array($pull, FontAwesomeIconEnumerator::enumPulls())) {
             $pull = null;
         }
+
         $this->pull = $pull;
         return $this;
     }
@@ -169,9 +175,11 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
      * {@inheritDoc}
      */
     public function setSize(?string $size): FontAwesomeIconInterface {
+
         if (false === in_array($size, FontAwesomeIconEnumerator::enumSizes())) {
             $size = null;
         }
+
         $this->size = $size;
         return $this;
     }
