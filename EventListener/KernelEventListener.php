@@ -118,19 +118,6 @@ class KernelEventListener {
      */
     protected function handleUnexpectedException($event, Exception $ex): void {
 
-        $mailer = $this->getMailer();
-        if (null === $mailer) {
-            return;
-        }
-
-        $twig = $this->getThemeManager()->getTwigEnvironment();
-
-        $body = $twig->render("@WBWCore/layout/exception.html.twig", [
-            "exception" => $ex,
-        ]);
-
-        $message = new Swift_Message();
-        $message->setBody($body, "text/html");
     }
 
     /**
