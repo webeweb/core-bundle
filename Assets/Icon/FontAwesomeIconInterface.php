@@ -36,7 +36,7 @@ interface FontAwesomeIconInterface extends IconInterface {
     const FONT_AWESOME_ANIMATION_SPIN = "spin";
 
     /**
-     * Default Font Awesome font.
+     * Font Awesome font "default".
      *
      * @var string
      */
