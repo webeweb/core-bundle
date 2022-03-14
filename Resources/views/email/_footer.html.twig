@@ -20,16 +20,16 @@
             </td>
             <td class="subscription" width="300">
                 <div class="logo-image">
-                    <a href="{{ emailLayout.companyURL|default("https://github.com/webeweb") }}" target="_blank">
+                    <a href="{{ emailLayout.companyUrl|default("https://github.com/webeweb") }}" target="_blank">
                         <img src="{{ emailLayout.companyLogo|default("https://raw.githubusercontent.com/webeweb/bootstrap-bundle/master/Resources/doc/screenshot_readme.png") }}" alt="logo-alt" height="70">
                     </a>
                 </div>
                 <p>
-                    <a class="strong block" href="{{ emailLayout.unsubscribeURL|default("#") }}" target="_blank">
+                    <a class="strong block" href="{{ emailLayout.unsubscribeUrl|default("#") }}" target="_blank">
                         {{ "email.unsubscribe"|trans([], _domain) }}
                     </a>
                     <span class="hide">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                    <a class="strong block" href="{{ emailLayout.accountSettingsURL|default("#") }}" target="_blank">
+                    <a class="strong block" href="{{ emailLayout.accountSettingsUrl|default("#") }}" target="_blank">
                         {{ "email.account_settings"|trans([], _domain) }}
                     </a>
                 </p>

@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Model;
+namespace WBW\Bundle\CoreBundle\Model\Layout;
 
 /**
  * Email layout model.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Model
+ * @package WBW\Bundle\CoreBundle\Model\Layout
  */
 class EmailLayout {
 
@@ -24,7 +24,7 @@ class EmailLayout {
      *
      * @var string|null
      */
-    private $accountSettingsURL;
+    private $accountSettingsUrl;
 
     /**
      * Best regards.
@@ -52,7 +52,7 @@ class EmailLayout {
      *
      * @var string|null
      */
-    private $companyURL;
+    private $companyUrl;
 
     /**
      * Support email.
@@ -80,7 +80,7 @@ class EmailLayout {
      *
      * @var string|null
      */
-    private $unsubscribeURL;
+    private $unsubscribeUrl;
 
     /**
      * Constructor.
@@ -94,8 +94,8 @@ class EmailLayout {
      *
      * @return string|null Returns the account settings URL.
      */
-    public function getAccountSettingsURL(): ?string {
-        return $this->accountSettingsURL;
+    public function getAccountSettingsUrl(): ?string {
+        return $this->accountSettingsUrl;
     }
 
     /**
@@ -130,8 +130,8 @@ class EmailLayout {
      *
      * @return string|null Returns the company URL.
      */
-    public function getCompanyURL(): ?string {
-        return $this->companyURL;
+    public function getCompanyUrl(): ?string {
+        return $this->companyUrl;
     }
 
     /**
@@ -166,18 +166,18 @@ class EmailLayout {
      *
      * @return string|null Returns the unsubscribe URL.
      */
-    public function getUnsubscribeURL(): ?string {
-        return $this->unsubscribeURL;
+    public function getUnsubscribeUrl(): ?string {
+        return $this->unsubscribeUrl;
     }
 
     /**
      * Set the account settings URL.
      *
-     * @param string|null $accountSettingsURL The account settings URL.
+     * @param string|null $accountSettingsUrl The account settings URL.
      * @return EmailLayout Returns this email layout.
      */
-    public function setAccountSettingsURL(?string $accountSettingsURL): EmailLayout {
-        $this->accountSettingsURL = $accountSettingsURL;
+    public function setAccountSettingsUrl(?string $accountSettingsUrl): EmailLayout {
+        $this->accountSettingsUrl = $accountSettingsUrl;
         return $this;
     }
 
@@ -217,11 +217,11 @@ class EmailLayout {
     /**
      * Set the company URL.
      *
-     * @param string|null $companyURL The company URL.
+     * @param string|null $companyUrl The company URL.
      * @return EmailLayout Returns this email layout.
      */
-    public function setCompanyURL(?string $companyURL): EmailLayout {
-        $this->companyURL = $companyURL;
+    public function setCompanyUrl(?string $companyUrl): EmailLayout {
+        $this->companyUrl = $companyUrl;
         return $this;
     }
 
@@ -261,11 +261,11 @@ class EmailLayout {
     /**
      * Set the unsubscribe URL.
      *
-     * @param string|null $unsubscribeURL The unsubscribe URL.
+     * @param string|null $unsubscribeUrl The unsubscribe URL.
      * @return EmailLayout Returns this email layout.
      */
-    public function setUnsubscribeURL(?string $unsubscribeURL): EmailLayout {
-        $this->unsubscribeURL = $unsubscribeURL;
+    public function setUnsubscribeUrl(?string $unsubscribeUrl): EmailLayout {
+        $this->unsubscribeUrl = $unsubscribeUrl;
         return $this;
     }
 }

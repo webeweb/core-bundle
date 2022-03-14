@@ -9,30 +9,30 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\CoreBundle\Tests\Model;
+namespace WBW\Bundle\CoreBundle\Tests\Model\Layout;
 
-use WBW\Bundle\CoreBundle\Model\EmailLayout;
+use WBW\Bundle\CoreBundle\Model\Layout\EmailLayout;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
  * Email layout test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Bundle\CoreBundle\Tests\Model
+ * @package WBW\Bundle\CoreBundle\Tests\Model\Layout
  */
 class EmailLayoutTest extends AbstractTestCase {
 
     /**
-     * Tests setAccountSettingsURL()
+     * Tests setAccountSettingsUrl()
      *
      * @return void
      */
-    public function testSetAccountSeetings(): void {
+    public function testSetAccountSettingsUrl(): void {
 
         $obj = new EmailLayout();
 
-        $obj->setAccountSettingsURL("accountSettingsURL");
-        $this->assertEquals("accountSettingsURL", $obj->getAccountSettingsURL());
+        $obj->setAccountSettingsUrl("accountSettingsUrl");
+        $this->assertEquals("accountSettingsUrl", $obj->getAccountSettingsUrl());
     }
 
     /**
@@ -75,16 +75,16 @@ class EmailLayoutTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setCompanyURL()
+     * Tests setCompanyUrl()
      *
      * @return void
      */
-    public function testSetCompanyURL(): void {
+    public function testSetCompanyUrl(): void {
 
         $obj = new EmailLayout();
 
-        $obj->setCompanyURL("companyURL");
-        $this->assertEquals("companyURL", $obj->getCompanyURL());
+        $obj->setCompanyUrl("companyUrl");
+        $this->assertEquals("companyUrl", $obj->getCompanyUrl());
     }
 
     /**
@@ -127,16 +127,16 @@ class EmailLayoutTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setUnsubscribeURL()
+     * Tests setUnsubscribeUrl()
      *
      * @return void
      */
-    public function testSetUnsubscribeURL(): void {
+    public function testSetUnsubscribeUrl(): void {
 
         $obj = new EmailLayout();
 
-        $obj->setUnsubscribeURL("unsubscribeURL");
-        $this->assertEquals("unsubscribeURL", $obj->getUnsubscribeURL());
+        $obj->setUnsubscribeUrl("unsubscribeUrl");
+        $this->assertEquals("unsubscribeUrl", $obj->getUnsubscribeUrl());
     }
 
     /**
@@ -148,14 +148,14 @@ class EmailLayoutTest extends AbstractTestCase {
 
         $obj = new EmailLayout();
 
-        $this->assertNull($obj->getAccountSettingsURL());
+        $this->assertNull($obj->getAccountSettingsUrl());
         $this->assertNull($obj->getBestRegards());
         $this->assertNull($obj->getCompanyLogo());
         $this->assertNull($obj->getCompanyName());
-        $this->assertNull($obj->getCompanyURL());
+        $this->assertNull($obj->getCompanyUrl());
         $this->assertNull($obj->getSupportEmail());
         $this->assertNull($obj->getSupportName());
         $this->assertNull($obj->getSupportPhone());
-        $this->assertNull($obj->getUnsubscribeURL());
+        $this->assertNull($obj->getUnsubscribeUrl());
     }
 }
