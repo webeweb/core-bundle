@@ -71,13 +71,14 @@ class WBWCoreBundleTest extends AbstractTestCase {
      */
     public function testListAssets(): void {
 
-        $directory = realpath(__DIR__ . "/../DependencyInjection");
+        $config = realpath(__DIR__ . "/../DependencyInjection");
+        $assets = realpath(__DIR__ . "/../Resources/assets");
 
         // Load the YAML configuration.
-        $config  = ConfigurationHelper::loadYamlConfig($directory, "assets");
+        $config  = ConfigurationHelper::loadYamlConfig($config, "assets");
         $plugins = $config["assets"]["wbw.core.asset.core"]["plugins"];
 
-        $res = AssetsHelper::listAssets(__DIR__ . "/../Resources/assets");
+        $res = AssetsHelper::listAssets($assets);
         $this->assertCount(22, $res);
 
         $i = -1;
