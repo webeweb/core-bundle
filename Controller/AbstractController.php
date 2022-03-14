@@ -28,6 +28,8 @@ use WBW\Bundle\CoreBundle\Repository\RepositoryHelper;
 use WBW\Bundle\CoreBundle\Security\Core\User\UserHelper;
 use WBW\Library\Symfony\Assets\NotificationInterface;
 use WBW\Library\Symfony\Assets\ToastInterface;
+use WBW\Library\Symfony\Response\DefaultJsonResponseData;
+use WBW\Library\Symfony\Response\DefaultJsonResponseDataInterface;
 
 /**
  * Abstract controller.
@@ -43,7 +45,7 @@ abstract class AbstractController extends BaseController {
      *
      * @param string $eventName The event name.
      * @param BaseEvent $event The event.
-     * @return BaseEvent|null Returns the event in case of success, null otherwise.
+     * @return BaseEvent|null Returns the event.
      */
     protected function dispatchEvent(string $eventName, $event) {
         $this->getLogger()->debug(sprintf('A controller dispatch an event with name "%s"', $eventName), ["_controller" => get_class($this), "_event" => get_class($event)]);
@@ -53,7 +55,7 @@ abstract class AbstractController extends BaseController {
     /**
      * Get the container.
      *
-     * @return Container|null Returns the container in case of success, null otherwise.
+     * @return Container|null Returns the container.
      */
     protected function getContainer(): ?Container {
         return $this->get("service_container");
@@ -62,7 +64,7 @@ abstract class AbstractController extends BaseController {
     /**
      * Get the event dispatcher.
      *
-     * @return EventDispatcherInterface|null Returns the event dispatcher in case of success, null otherwise.
+     * @return EventDispatcherInterface|null Returns the event dispatcher.
      */
     protected function getEventDispatcher(): ?EventDispatcherInterface {
         return $this->get("event_dispatcher");
@@ -71,7 +73,7 @@ abstract class AbstractController extends BaseController {
     /**
      * Get the form helper.
      *
-     * @return FormHelper|null Returns the form helper in case of success, null otherwise.
+     * @return FormHelper|null Returns the form helper.
      */
     protected function getFormHelper(): ?FormHelper {
         return $this->get(FormHelper::SERVICE_NAME);
@@ -80,7 +82,7 @@ abstract class AbstractController extends BaseController {
     /**
      * Get the kernel event listener.
      *
-     * @return KernelEventListener|null Returns the kernel event listener in case of success, null otherwise.
+     * @return KernelEventListener|null Returns the kernel event listener.
      */
     protected function getKernelEventListener(): ?KernelEventListener {
         return $this->get(KernelEventListener::SERVICE_NAME);
@@ -89,7 +91,7 @@ abstract class AbstractController extends BaseController {
     /**
      * Get the logger.
      *
-     * @return LoggerInterface|null Returns the logger in case of success, null otherwise.
+     * @return LoggerInterface|null Returns the logger.
      */
     protected function getLogger(): ?LoggerInterface {
         return $this->get("logger");
@@ -98,7 +100,7 @@ abstract class AbstractController extends BaseController {
     /**
      * Get the repository helper.
      *
-     * @return RepositoryHelper|null Returns the repository helper in case of success, null otherwise.
+     * @return RepositoryHelper|null Returns the repository helper.
      */
     protected function getRepositoryHelper(): ?RepositoryHelper {
         return $this->get(RepositoryHelper::SERVICE_NAME);
@@ -107,7 +109,7 @@ abstract class AbstractController extends BaseController {
     /**
      * Get the router.
      *
-     * @return RouterInterface|null Returns the router in case of success, null otherwise.
+     * @return RouterInterface|null Returns the router.
      */
     protected function getRouter(): ?RouterInterface {
         return $this->get("router");
@@ -116,7 +118,7 @@ abstract class AbstractController extends BaseController {
     /**
      * Get the session.
      *
-     * @return SessionInterface|null Returns the session in case of success, null otherwise.
+     * @return SessionInterface|null Returns the session.
      */
     protected function getSession(): ?SessionInterface {
         return $this->get("session");
@@ -125,7 +127,7 @@ abstract class AbstractController extends BaseController {
     /**
      * Get the translator.
      *
-     * @return BaseTranslatorInterface|null Returns the translator in case of success, null otherwise.
+     * @return BaseTranslatorInterface|null Returns the translator.
      */
     protected function getTranslator() {
         return $this->get("translator");
@@ -155,11 +157,29 @@ abstract class AbstractController extends BaseController {
     }
 
     /**
+     * Creates a default JSON response data.
+     *
+     * @param bool $success The success.
+     * @param array $data The data.
+     * @param string|null $message The message.
+     * @return DefaultJsonResponseDataInterface Returns the default JSON response data.
+     */
+    protected function newDefaultJsonResponseData(bool $success, array $data, string $message = null): DefaultJsonResponseDataInterface {
+
+        $model = new DefaultJsonResponseData();
+        $model->setSuccess($success);
+        $model->setData($data);
+        $model->setMessage($message);
+
+        return $model;
+    }
+
+    /**
      * Notify.
      *
      * @param string $eventName The event name.
      * @param NotificationInterface $notification The notification.
-     * @return NotificationEvent|null Returns the event in case of success, null otherwise.
+     * @return NotificationEvent|null Returns the event.
      */
     protected function notify(string $eventName, NotificationInterface $notification): ?NotificationEvent {
         return $this->dispatchEvent($eventName, new NotificationEvent($eventName, $notification));
@@ -170,7 +190,7 @@ abstract class AbstractController extends BaseController {
      *
      * @param string $eventName The event name.
      * @param ToastInterface $toast The toast.
-     * @return ToastEvent|null Returns the event in case of success, null otherwise.
+     * @return ToastEvent|null Returns the event.
      */
     protected function toast(string $eventName, ToastInterface $toast): ?ToastEvent {
         return $this->dispatchEvent($eventName, new ToastEvent($eventName, $toast));

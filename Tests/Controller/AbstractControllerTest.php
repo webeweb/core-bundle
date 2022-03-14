@@ -259,6 +259,23 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
+     * Tests newDefaultJsonResponseData()
+     *
+     * @return void
+     */
+    public function testNewDefaultJsonResponseData(): void {
+
+        $obj = new TestAbstractController();
+        $obj->setContainer($this->containerBuilder);
+
+        $res = $obj->newDefaultJsonResponseData(true, [], "message");
+        $this->assertEquals([], $res->getData());
+        $this->assertNull($res->getErrors());
+        $this->assertEquals("message", $res->getMessage());
+        $this->assertTrue($res->getSuccess());
+    }
+
+    /**
      * Tests notify()
      *
      * @return void

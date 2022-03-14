@@ -24,6 +24,7 @@ use WBW\Bundle\CoreBundle\Helper\FormHelper;
 use WBW\Bundle\CoreBundle\Repository\RepositoryHelper;
 use WBW\Library\Symfony\Assets\NotificationInterface;
 use WBW\Library\Symfony\Assets\ToastInterface;
+use WBW\Library\Symfony\Response\DefaultJsonResponseDataInterface;
 
 /**
  * Test abstract controller.
@@ -101,6 +102,13 @@ class TestAbstractController extends AbstractController {
      */
     public function hasRolesOrRedirect(array $roles, bool $or, string $redirectUrl, string $originUrl = ""): bool {
         return parent::hasRolesOrRedirect($roles, $or, $redirectUrl, $originUrl);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function newDefaultJsonResponseData(bool $success, array $data, string $message = null): DefaultJsonResponseDataInterface {
+        return parent::newDefaultJsonResponseData($success, $data, $message);
     }
 
     /**
