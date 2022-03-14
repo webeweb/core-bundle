@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### master
+### [3.0.0](https://github.com/webeweb/core-bundle/tree/v3.0.0) (2022-03-14)
 
 > IMPORTANT NOTICE: The following Symfony versions are now not supported
 > - Symfony 3.4
