@@ -24,9 +24,9 @@ use Symfony\Component\Routing\RouterInterface;
 class TestCaseHelper {
 
     /**
-     * Get a dispatch() function for an event dispatcher.
+     * Get dispatch() function for an event dispatcher.
      *
-     * @return Closure Returns the dispatch() function for an event dispatcher.
+     * @return Closure Returns dispatch() function for an event dispatcher.
      */
     public static function getEventDispatcherDispatchFunction(): Closure {
 
@@ -42,9 +42,9 @@ class TestCaseHelper {
     }
 
     /**
-     * Get a generate() function for a router.
+     * Get generate() function for a router.
      *
-     * @return Closure Returns the generate() function for a router.
+     * @return Closure Returns generate() function for a router.
      */
     public static function getRouterGenerateFunction(): Closure {
         return function($name, array $parameters = [], int $referenceType = RouterInterface::ABSOLUTE_PATH) {

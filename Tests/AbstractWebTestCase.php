@@ -96,9 +96,7 @@ abstract class AbstractWebTestCase extends WebTestCase {
         $session->set("_security_" . $firewallContext, serialize($token));
         $session->save();
 
-        $cookie = new Cookie($session->getName(), $session->getId());
-
-        return $cookie;
+        return new Cookie($session->getName(), $session->getId());
     }
 
     /**

@@ -36,24 +36,17 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
     private $quoteManager;
 
     /**
-     * Quote provider.
-     *
-     * @var QuoteProviderInterface
-     */
-    private $quoteProvider;
-
-    /**
      * {@inheritDoc}
      */
     protected function setUp(): void {
         parent::setUp();
 
         // Set a Quote provider mock.
-        $this->quoteProvider = new WorldsWisdomQuoteProvider();
+        $quoteProvider = new WorldsWisdomQuoteProvider();
 
         // Set a Quote manager mock.
         $this->quoteManager = new QuoteManager($this->logger);
-        $this->quoteManager->addProvider($this->quoteProvider);
+        $this->quoteManager->addProvider($quoteProvider);
     }
 
     /**

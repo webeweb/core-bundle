@@ -21,7 +21,7 @@ use WBW\Library\Symfony\Assets\NavigationNodeInterface;
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Assets\Navigation\MaterialDesignIconicFont
  */
-class NavigationActionNodeEditTest extends AbstractTestCase {
+class NavigationNodeActionEditTest extends AbstractTestCase {
 
     /**
      * Tests __construct()

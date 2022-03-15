@@ -127,7 +127,7 @@ class KernelEventListenerTest extends AbstractTestCase {
 
         $obj = new KernelEventListener($this->tokenStorage, $this->themeManager);
 
-        $obj->onKernelRequest(new BaseRequestEvent($this->kernel, new Request(), HttpKernelInterface::MASTER_REQUEST, new Response()));
+        $obj->onKernelRequest(new BaseRequestEvent($this->kernel, new Request(), HttpKernelInterface::MASTER_REQUEST));
         $this->assertInstanceOf(Request::class, $obj->getRequest());
     }
 
