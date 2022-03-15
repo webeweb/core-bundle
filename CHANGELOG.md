@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Improve code quality
+
 ### [3.0.1](https://github.com/webeweb/core-bundle/tree/v3.0.1) (2022-03-14)
 
 - Fix Kernel event listener visibility
