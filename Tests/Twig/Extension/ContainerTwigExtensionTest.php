@@ -37,7 +37,7 @@ class ContainerTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals(null, $obj->coreStaticMethodFunction("exception", null));
 
         $this->assertEquals("\\" === DIRECTORY_SEPARATOR, $obj->coreStaticMethodFunction("WBW\\Library\\Core\\Helper\\OSHelper", "isWindows"));
-        $this->assertEquals('<div id="id">content</div>', $obj->coreStaticMethodFunction("WBW\\Bundle\\CoreBundle\\Twig\\Extension\\AbstractTwigExtension", "coreHTMLElement", ["div", "content", ["id" => "id"]]));
+        $this->assertEquals('<div id="id">content</div>', $obj->coreStaticMethodFunction("WBW\\Bundle\\CoreBundle\\Twig\\Extension\\AbstractTwigExtension", "coreHtmlElement", ["div", "content", ["id" => "id"]]));
     }
 
     /**
