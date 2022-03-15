@@ -7,6 +7,7 @@ parameters:
     locale: "en"
 
 framework:
+    assert:         true
     default_locale: "%locale%"
     router:
         resource:            "%kernel.project_dir%/config/routing_test.yml"
