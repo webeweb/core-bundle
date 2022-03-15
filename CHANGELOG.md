@@ -1,8 +1,9 @@
 CHANGELOG
 =========
 
-### master
+### [3.0.2](https://github.com/webeweb/core-bundle/tree/v3.0.2) (2022-03-15)
 
+- Fix abstract form type test case
 - Improve code quality
 
 ### [3.0.1](https://github.com/webeweb/core-bundle/tree/v3.0.1) (2022-03-14)
