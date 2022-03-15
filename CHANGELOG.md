@@ -67,16 +67,16 @@ CHANGELOG
 > - WBW\Bundle\CoreBundle\Theme
 > - WBW\Bundle\CoreBundle\Toast
 
+- Add PHP 8.x support
+- Add Symfony 5.x support
 - Add Leaflet asset
 - Add Leaflet Color Markers asset
 - Add Leaflet Marker Cluster asset
 - Add abstract Provider compiler pass
-- Add PHP 8.x support
 - Add Request stack trait
 - Add Response trait
 - Add String Twig extension
 - Add String Twig extension trait
-- Add Symfony 5.x support
 - Improve Configuration
 - Improve PHPDoc
 - Update Application theme provider interface
