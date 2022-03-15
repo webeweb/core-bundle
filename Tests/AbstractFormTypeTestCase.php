@@ -92,8 +92,13 @@ abstract class AbstractFormTypeTestCase extends AbstractTestCase {
         $this->formBuilder->expects($this->any())->method("get")->willReturn($this->formBuilder);
 
         // Set a setDefaults() callback.
-        $setDefaults = function(array $defaults) {
-            $this->defaults = $defaults;
+        $setDefaults = function(array $defaults): OptionsResolver {
+
+            if (null === $this->defaults) {
+                $this->defaults = [];
+            }
+
+            $this->defaults = array_merge($this->defaults, $defaults);
             return $this->resolver;
         };
 
