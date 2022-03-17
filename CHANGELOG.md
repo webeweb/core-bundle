@@ -1,9 +1,10 @@
 CHANGELOG
 =========
 
-### master
+### [3.1.0](https://github.com/webeweb/core-bundle/tree/v3.1.0) (2022-03-17)
 
 - Add FontAwesome 6.0.0
+- Add Full Calendar helper
 
 ### [3.0.2](https://github.com/webeweb/core-bundle/tree/v3.0.2) (2022-03-15)
 
