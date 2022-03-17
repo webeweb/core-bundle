@@ -243,9 +243,7 @@ abstract class AbstractTestCase extends TestCase {
 
         // Set a Token mock.
         $this->token = $this->getMockBuilder(TokenInterface::class)->getMock();
-        $this->token->expects($this->any())->method("getUser")->willReturnCallback(function() {
-            return $this->user;
-        });
+        $this->token->expects($this->any())->method("getUser")->willReturn($this->user);
 
         // Set a Token storage mock.
         $this->tokenStorage = $this->getMockBuilder(TokenStorageInterface::class)->getMock();
@@ -254,14 +252,20 @@ abstract class AbstractTestCase extends TestCase {
         // Set a Twig loader mock.
         $this->twigLoader = $this->getMockBuilder(LoaderInterface::class)->getMock();
 
+        // Set addGlobal() callback.
+        $addGlobal = function(string $name, $value): void {
+            $this->twigGlobals[$name] = $value;
+        };
+
+        // Set getGlobals() callback.
+        $getGlobals = function(): array {
+            return $this->twigGlobals;
+        };
+
         // Set a Twig environment mock.
         $this->twigEnvironment = $this->getMockBuilder(Environment::class)->setConstructorArgs([$this->twigLoader, []])->getMock();
-        $this->twigEnvironment->expects($this->any())->method("addGlobal")->willReturnCallback(function($name, $value) {
-            $this->twigGlobals[$name] = $value;
-        });
-        $this->twigEnvironment->expects($this->any())->method("getGlobals")->willReturnCallback(function() {
-            return $this->twigGlobals;
-        });
+        $this->twigEnvironment->expects($this->any())->method("addGlobal")->willReturnCallback($addGlobal);
+        $this->twigEnvironment->expects($this->any())->method("getGlobals")->willReturnCallback($getGlobals);
 
         // Set a Parameter bag mock.
         $parameterBag = new ParameterBag([
