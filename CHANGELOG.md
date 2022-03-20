@@ -3,6 +3,7 @@ CHANGELOG
 
 ### master
 
+- Update Assets Twig extension
 - Improve code quality
 
 ### [3.1.0](https://github.com/webeweb/core-bundle/tree/v3.1.0) (2022-03-17)
