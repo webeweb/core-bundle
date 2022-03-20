@@ -241,9 +241,14 @@ abstract class AbstractTestCase extends TestCase {
         $this->translator = $this->getMockBuilder(BaseTranslatorInterface::class)->getMock();
         $this->translator->expects($this->any())->method("trans")->willReturnCallback($trans);
 
+        // Set getUser() callback.
+        $getUser = function(): ?UserInterface {
+            return $this->user;
+        };
+
         // Set a Token mock.
         $this->token = $this->getMockBuilder(TokenInterface::class)->getMock();
-        $this->token->expects($this->any())->method("getUser")->willReturn($this->user);
+        $this->token->expects($this->any())->method("getUser")->willReturnCallback($getUser);
 
         // Set a Token storage mock.
         $this->tokenStorage = $this->getMockBuilder(TokenStorageInterface::class)->getMock();
