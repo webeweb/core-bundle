@@ -18,6 +18,8 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Assets\FontAwesomeTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\Assets\MaterialDesignIconicFontTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\Assets\MeteoconsTwigExtension;
 use WBW\Library\Symfony\Helper\ColorHelper;
+use WBW\Library\Types\Helper\ArrayHelper;
+use WBW\Library\Types\Helper\StringHelper;
 
 /**
  * Assets Twig extension.
@@ -49,6 +51,28 @@ class AssetsTwigExtension extends AbstractTwigExtension {
         $content = file_get_contents(__DIR__ . "/AssetsTwigExtension.coreGtag.html");
 
         return str_replace("{id}", $id, $content);
+    }
+
+    /**
+     * Displays an image.
+     *
+     * @param array $args The arguments.
+     * @return string Returns the image.
+     */
+    public function coreImageFunction(array $args = []): string {
+
+        $template = "<img %attributes%/>";
+
+        $attributes = [
+            "src"    => ArrayHelper::get($args, "src"),
+            "alt"    => ArrayHelper::get($args, "alt"),
+            "width"  => ArrayHelper::get($args, "width"),
+            "height" => ArrayHelper::get($args, "height"),
+            "class"  => ArrayHelper::get($args, "class"),
+            "usemap" => ArrayHelper::get($args, "usemap"),
+        ];
+
+        return str_replace(["%attributes%"], [StringHelper::parseArray($attributes)], $template);
     }
 
     /**
@@ -118,6 +142,7 @@ class AssetsTwigExtension extends AbstractTwigExtension {
     public function getFunctions(): array {
         return [
             new TwigFunction("coreGtag", [$this, "coreGtag"], ["is_safe" => ["html"]]),
+            new TwigFunction("coreImage", [$this, "coreImageFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("cssRgba", [$this, "cssRgba"], ["is_safe" => ["html"]]),
         ];
     }

@@ -42,6 +42,43 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
+     * Tests coreImageFunction()
+     *
+     * @return void
+     */
+    public function testCoreImageFunction(): void {
+
+        $obj = new AssetsTwigExtension($this->twigEnvironment);
+
+        $arg = [
+            "src"    => "src",
+            "alt"    => "alt",
+            "width"  => 1024,
+            "height" => 768,
+            "class"  => "class",
+            "usemap" => "#usemap",
+        ];
+        $res = '<img src="src" alt="alt" width="1024" height="768" class="class" usemap="#usemap"/>';
+
+        $this->assertEquals($res, $obj->coreImageFunction($arg));
+    }
+
+    /**
+     * Tests coreImageFunction()
+     *
+     * @return void
+     */
+    public function testCoreImageFunctionWithoutArguments(): void {
+
+        $obj = new AssetsTwigExtension($this->twigEnvironment);
+
+        $arg = [];
+        $res = "<img />";
+
+        $this->assertEquals($res, $obj->coreImageFunction($arg));
+    }
+
+    /**
      * Tests coreScriptFilter()
      *
      * @return void
@@ -126,13 +163,18 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
         $obj = new AssetsTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-        $this->assertCount(2, $res);
+        $this->assertCount(3, $res);
 
         $i = -1;
 
         $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
         $this->assertEquals("coreGtag", $res[$i]->getName());
         $this->assertEquals([$obj, "coreGtag"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("coreImage", $res[$i]->getName());
+        $this->assertEquals([$obj, "coreImageFunction"], $res[$i]->getCallable());
         $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
         $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
