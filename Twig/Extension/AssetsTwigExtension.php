@@ -162,7 +162,7 @@ class AssetsTwigExtension extends AbstractTwigExtension {
             return null;
         }
 
-        $output = "";
+        $output = null;
 
         switch ($handler[0]) {
 
