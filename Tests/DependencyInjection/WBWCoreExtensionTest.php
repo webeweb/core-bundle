@@ -60,6 +60,7 @@ use WBW\Library\Symfony\Color\MaterialDesignColorPalette\TealColorProvider;
 use WBW\Library\Symfony\Color\MaterialDesignColorPalette\YellowColorProvider;
 use WBW\Library\Symfony\Manager\ColorManager;
 use WBW\Library\Symfony\Manager\QuoteManager;
+use WBW\Library\Symfony\Provider\Quote\WorldsWisdomQuoteProvider;
 use WBW\Library\Symfony\Provider\Quote\YamlQuoteProvider;
 
 /**
@@ -69,13 +70,6 @@ use WBW\Library\Symfony\Provider\Quote\YamlQuoteProvider;
  * @package WBW\Bundle\CoreBundle\Tests\DependencyInjection
  */
 class WBWCoreExtensionTest extends AbstractTestCase {
-
-    /**
-     * World's wisdom quote provider.
-     *
-     * @var string
-     */
-    const WORLDS_WISDOM_QUOTE_PROVIDER_SERVICE_NAME = "wbw.core.provider.quote.worlds_wisdom";
 
     /**
      * Configs.
@@ -199,11 +193,11 @@ class WBWCoreExtensionTest extends AbstractTestCase {
 
         try {
 
-            $this->containerBuilder->get(self::WORLDS_WISDOM_QUOTE_PROVIDER_SERVICE_NAME);
+            $this->containerBuilder->get(WorldsWisdomQuoteProvider::SERVICE_NAME);
         } catch (Exception $ex) {
 
             $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
-            $this->assertStringContainsString(self::WORLDS_WISDOM_QUOTE_PROVIDER_SERVICE_NAME, $ex->getMessage());
+            $this->assertStringContainsString(WorldsWisdomQuoteProvider::SERVICE_NAME, $ex->getMessage());
         }
 
         // Twig extensions
@@ -254,7 +248,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
 
         $this->assertNull($obj->load($this->configs, $this->containerBuilder));
 
-        $this->assertInstanceOf(YamlQuoteProvider::class, $this->containerBuilder->get(self::WORLDS_WISDOM_QUOTE_PROVIDER_SERVICE_NAME));
+        $this->assertInstanceOf(YamlQuoteProvider::class, $this->containerBuilder->get(WorldsWisdomQuoteProvider::SERVICE_NAME));
     }
 
     /**
