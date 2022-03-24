@@ -11,10 +11,10 @@
 
 namespace WBW\Bundle\CoreBundle\EventListener;
 
-use Exception;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Throwable;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
 use WBW\Bundle\CoreBundle\HttpFoundation\RequestTrait;
 use WBW\Bundle\CoreBundle\HttpKernel\Event\BaseExceptionEvent;
@@ -113,10 +113,10 @@ class KernelEventListener {
      * Handle an unexpected exception.
      *
      * @param BaseExceptionEvent $event The event.
-     * @param Exception $ex The exception.
+     * @param Throwable $ex The exception.
      * @return void
      */
-    protected function handleUnexpectedException($event, Exception $ex): void {
+    protected function handleUnexpectedException($event, Throwable $ex): void {
 
     }
 
