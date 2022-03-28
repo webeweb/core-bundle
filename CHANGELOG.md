@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.3.0](https://github.com/webeweb/core-bundle/tree/v3.3.0) (2022-03-28)
+
+- Add Token generator service
+
 ### [3.2.1](https://github.com/webeweb/core-bundle/tree/v3.2.1) (2022-03-24)
 
 - Fix Kernel event listener when receive an error
