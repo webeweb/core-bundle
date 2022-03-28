@@ -62,6 +62,7 @@ use WBW\Library\Symfony\Manager\ColorManager;
 use WBW\Library\Symfony\Manager\QuoteManager;
 use WBW\Library\Symfony\Provider\Quote\WorldsWisdomQuoteProvider;
 use WBW\Library\Symfony\Provider\Quote\YamlQuoteProvider;
+use WBW\Library\Symfony\Service\TokenGeneratorService;
 
 /**
  * Core extension test.
@@ -199,6 +200,9 @@ class WBWCoreExtensionTest extends AbstractTestCase {
             $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
             $this->assertStringContainsString(WorldsWisdomQuoteProvider::SERVICE_NAME, $ex->getMessage());
         }
+
+        // Services
+        $this->assertInstanceOf(TokenGeneratorService::class, $this->containerBuilder->get(TokenGeneratorService::SERVICE_NAME));
 
         // Twig extensions
         $this->assertInstanceOf(AssetsTwigExtension::class, $this->containerBuilder->get(AssetsTwigExtension::SERVICE_NAME));

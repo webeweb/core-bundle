@@ -49,6 +49,10 @@ services:
         arguments: [ "@doctrine.orm.entity_manager" ]
         public: true
 
+    wbw.core.service.token_generator:
+        class:  WBW\Library\Symfony\Service\TokenGeneratorService
+        public: true
+
     wbw.core.twig.extension.container:
         class:  WBW\Bundle\CoreBundle\Twig\Extension\ContainerTwigExtension
         arguments: [ "@twig", "@service_container" ]
