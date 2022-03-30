@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Model;
 
 use Symfony\Component\Security\Core\User\UserInterface;
+use WBW\Library\Traits\Integers\IntegerIdTrait;
 use WBW\Library\Traits\Strings\ArrayRolesTrait;
 use WBW\Library\Traits\Strings\StringPasswordTrait;
 use WBW\Library\Traits\Strings\StringSaltTrait;
@@ -26,6 +27,7 @@ use WBW\Library\Traits\Strings\StringUsernameTrait;
 class TestUser implements UserInterface {
 
     use ArrayRolesTrait;
+    use IntegerIdTrait;
     use StringSaltTrait;
     use StringPasswordTrait;
     use StringUsernameTrait;

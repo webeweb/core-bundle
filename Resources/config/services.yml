@@ -49,6 +49,11 @@ services:
         arguments: [ "@doctrine.orm.entity_manager" ]
         public: true
 
+    wbw.core.service.statement:
+        class:  WBW\Bundle\CoreBundle\Service\StatementService
+        arguments: [ "@doctrine.orm.entity_manager" ]
+        public: true
+
     wbw.core.service.token_generator:
         class:  WBW\Library\Symfony\Service\TokenGeneratorService
         public: true
