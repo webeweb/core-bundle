@@ -24,7 +24,6 @@ use WBW\Bundle\CoreBundle\EventDispatcher\EventDispatcherHelper;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
 use WBW\Bundle\CoreBundle\Helper\FormHelper;
-use WBW\Bundle\CoreBundle\Repository\RepositoryHelper;
 use WBW\Bundle\CoreBundle\Security\Core\User\UserHelper;
 use WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface;
 use WBW\Library\Symfony\Assets\NotificationInterface;
@@ -96,15 +95,6 @@ abstract class AbstractController extends BaseController {
      */
     protected function getLogger(): ?LoggerInterface {
         return $this->get("logger");
-    }
-
-    /**
-     * Get the repository helper.
-     *
-     * @return RepositoryHelper|null Returns the repository helper.
-     */
-    protected function getRepositoryHelper(): ?RepositoryHelper {
-        return $this->get(RepositoryHelper::SERVICE_NAME);
     }
 
     /**

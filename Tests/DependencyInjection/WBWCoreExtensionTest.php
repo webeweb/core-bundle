@@ -26,7 +26,10 @@ use WBW\Bundle\CoreBundle\EventListener\ToastEventListener;
 use WBW\Bundle\CoreBundle\Helper\FormHelper;
 use WBW\Bundle\CoreBundle\Manager\ThemeManager;
 use WBW\Bundle\CoreBundle\Provider\SyntaxHighlighterProvider;
-use WBW\Bundle\CoreBundle\Repository\RepositoryHelper;
+use WBW\Bundle\CoreBundle\Service\RepositoryService;
+use WBW\Bundle\CoreBundle\Service\RepositoryServiceInterface;
+use WBW\Bundle\CoreBundle\Service\StatementService;
+use WBW\Bundle\CoreBundle\Service\StatementServiceInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser;
 use WBW\Bundle\CoreBundle\Twig\Extension\Assets\FontAwesomeTwigExtension;
@@ -163,7 +166,6 @@ class WBWCoreExtensionTest extends AbstractTestCase {
 
         // Helpers
         $this->assertInstanceOf(FormHelper::class, $this->containerBuilder->get(FormHelper::SERVICE_NAME));
-        $this->assertInstanceOf(RepositoryHelper::class, $this->containerBuilder->get(RepositoryHelper::SERVICE_NAME));
 
         // Managers
         $this->assertInstanceOf(ColorManager::class, $this->containerBuilder->get(ColorManager::SERVICE_NAME));
@@ -202,6 +204,9 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         }
 
         // Services
+        $this->assertInstanceOf(RepositoryService::class, $this->containerBuilder->get("wbw.core.repository.repository_helper"));
+        $this->assertInstanceOf(RepositoryService::class, $this->containerBuilder->get(RepositoryServiceInterface::SERVICE_NAME));
+        $this->assertInstanceOf(StatementService::class, $this->containerBuilder->get(StatementServiceInterface::SERVICE_NAME));
         $this->assertInstanceOf(TokenGeneratorService::class, $this->containerBuilder->get(TokenGeneratorService::SERVICE_NAME));
 
         // Twig extensions

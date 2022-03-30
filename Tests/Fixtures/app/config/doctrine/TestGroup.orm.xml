@@ -4,16 +4,13 @@
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
                                       https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
-    <entity name="WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser" table="wbw_core_user">
+    <entity name="WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestGroup" table="wbw_core_group">
 
         <id name="id" column="id" type="integer">
             <generator strategy="AUTO"/>
         </id>
 
-        <field name="password" column="password" type="string"/>
-        <field name="roles" column="roles" type="array"/>
-        <field name="salt" column="salt" type="string"/>
-        <field name="username" column="username" type="string"/>
+        <field name="name" column="name" type="string"/>
 
     </entity>
 

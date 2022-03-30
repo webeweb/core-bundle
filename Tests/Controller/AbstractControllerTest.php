@@ -54,13 +54,6 @@ class AbstractControllerTest extends AbstractTestCase {
     private $kernelEventListener;
 
     /**
-     * Repository helper.
-     *
-     * @var RepositoryHelper
-     */
-    private $repositoryHelper;
-
-    /**
      * {@inheritDoc}
      */
     protected function setUp(): void {
@@ -72,13 +65,9 @@ class AbstractControllerTest extends AbstractTestCase {
         // Set a Kernel event listener mock.
         $this->kernelEventListener = $this->getMockBuilder(KernelEventListener::class)->disableOriginalConstructor()->getMock();
 
-        // Set a Repository helper mock.
-        $this->repositoryHelper = $this->getMockBuilder(RepositoryHelper::class)->disableOriginalConstructor()->getMock();
-
         // Set the Container builder mock.
         $this->containerBuilder->set(FormHelper::SERVICE_NAME, $this->formHelper);
         $this->containerBuilder->set(KernelEventListener::SERVICE_NAME, $this->kernelEventListener);
-        $this->containerBuilder->set(RepositoryHelper::SERVICE_NAME, $this->repositoryHelper);
     }
 
     /**
@@ -154,21 +143,6 @@ class AbstractControllerTest extends AbstractTestCase {
         $res = $obj->getLogger();
         $this->assertInstanceOf(LoggerInterface::class, $res);
         $this->assertSame($this->logger, $res);
-    }
-
-    /**
-     * Tests getRepositoryHelper()
-     *
-     * @return void
-     */
-    public function testGetRepositoryHelper(): void {
-
-        $obj = new TestAbstractController();
-        $obj->setContainer($this->containerBuilder);
-
-        $res = $obj->getRepositoryHelper();
-        $this->assertInstanceOf(RepositoryHelper::class, $res);
-        $this->assertSame($this->repositoryHelper, $res);
     }
 
     /**

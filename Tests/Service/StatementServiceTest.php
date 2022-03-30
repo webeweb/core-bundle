@@ -119,6 +119,8 @@ class StatementServiceTest extends AbstractWebTestCase {
 
         $obj = new StatementService($entityManager);
 
+        $this->assertInstanceOf(StatementServiceInterface::class, $obj);
+
         $this->assertSame($entityManager, $obj->getEntityManager());
     }
 }

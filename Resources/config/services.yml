@@ -45,9 +45,14 @@ services:
             - [ "setUserInfoThemeProvider",              [ "@?wbw.core.provider.theme.user_info" ] ]
 
     wbw.core.repository.repository_helper:
-        class:  WBW\Bundle\CoreBundle\Repository\RepositoryHelper
-        arguments: [ "@doctrine.orm.entity_manager" ]
+        alias:  "wbw.core.service.repository"
         public: true
+
+    wbw.core.service.repository:
+        class:  WBW\Bundle\CoreBundle\Service\RepositoryService
+        public: true
+        calls:
+            - [ "setStatementService", [ "@wbw.core.service.statement" ] ]
 
     wbw.core.service.statement:
         class:  WBW\Bundle\CoreBundle\Service\StatementService
