@@ -32,13 +32,6 @@ interface StatementServiceInterface {
     const SERVICE_NAME = "wbw.core.service.statement";
 
     /**
-     * Get the entity manager.
-     *
-     * @return EntityManagerInterface|null Returns the entity manager.
-     */
-    public function getEntityManager(): ?EntityManagerInterface;
-
-    /**
      * Executes a query.
      *
      * @param string $sql The SQL.
@@ -59,6 +52,13 @@ interface StatementServiceInterface {
      * @throws \Doctrine\DBAL\Driver\Exception Throws a driver exception if an error occurs.
      */
     public function executeStatement(string $sql, array $values): int;
+
+    /**
+     * Get the entity manager.
+     *
+     * @return EntityManagerInterface|null Returns the entity manager.
+     */
+    public function getEntityManager(): ?EntityManagerInterface;
 
     /**
      * Prepares a statement.

@@ -18,7 +18,6 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Twig\Extension\QuoteTwigExtension;
 use WBW\Library\Symfony\Manager\QuoteManager;
 use WBW\Library\Symfony\Provider\Quote\WorldsWisdomQuoteProvider;
-use WBW\Library\Symfony\Provider\QuoteProviderInterface;
 
 /**
  * Quote Twig extension test.
