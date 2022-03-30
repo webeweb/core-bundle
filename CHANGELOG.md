@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+### [3.4.0](https://github.com/webeweb/core-bundle/tree/v3.4.0) (2022-03-30)
+
+- Add Repository service (Repository helper replacement)
+- Add Statement service
+
 ### [3.3.0](https://github.com/webeweb/core-bundle/tree/v3.3.0) (2022-03-28)
 
 - Add Token generator service
