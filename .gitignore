@@ -5,7 +5,6 @@
 /Resources/public/*
 !/Resources/public/css
 !/Resources/public/img
-!/Resources/public/.gitkeep
+!/Resources/public/.gitignore
 
-/Tests/Fixtures/app/Resources/*
 /Tests/Fixtures/app/var/*
