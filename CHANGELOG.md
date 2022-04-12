@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.5.0](https://github.com/webeweb/core-bundle/tree/v3.5.0) (2022-04-12)
+
+- Add assetExists() Twig filter/function
+
 ### [3.4.0](https://github.com/webeweb/core-bundle/tree/v3.4.0) (2022-03-30)
 
 - Add Repository service (Repository helper replacement)
