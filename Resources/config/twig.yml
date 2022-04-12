@@ -5,6 +5,8 @@ services:
         class:  WBW\Bundle\CoreBundle\Twig\Extension\AssetsTwigExtension
         arguments: [ "@twig" ]
         public: true
+        calls:
+            - [ "setPublicDirectory", [ "%kernel.project_dir%/public" ] ]
         tags:
             - { name: "twig.extension" }
 
