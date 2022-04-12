@@ -37,6 +37,28 @@ class AssetsTwigExtension extends AbstractTwigExtension {
     const SERVICE_NAME = "wbw.core.twig.extension.assets";
 
     /**
+     * Public directory.
+     *
+     * @var string|null
+     */
+    protected $publicDirectory;
+
+    /**
+     * Determines if an asset exists.
+     *
+     * @param string|null $filename The filename.
+     * @return bool|null Returns true in case of success, false otherwise.
+     */
+    public function assetExists(?string $filename): ?bool {
+
+        if (null === $filename) {
+            return null;
+        }
+
+        return file_exists($this->getPublicDirectory() . $filename);
+    }
+
+    /**
      * Displays a Google tag manager.
      *
      * @param string|null $id The id.
@@ -127,6 +149,7 @@ class AssetsTwigExtension extends AbstractTwigExtension {
      */
     public function getFilters(): array {
         return [
+            new TwigFilter("assetExists", [$this, "assetExists"], ["is_safe" => ["html"]]),
             new TwigFilter("coreGtag", [$this, "coreGtag"], ["is_safe" => ["html"]]),
             new TwigFilter("coreScript", [$this, "coreScriptFilter"], ["is_safe" => ["html"]]),
             new TwigFilter("coreStyle", [$this, "coreStyleFilter"], ["is_safe" => ["html"]]),
@@ -141,10 +164,20 @@ class AssetsTwigExtension extends AbstractTwigExtension {
      */
     public function getFunctions(): array {
         return [
+            new TwigFunction("assetExists", [$this, "assetExists"], ["is_safe" => ["html"]]),
             new TwigFunction("coreGtag", [$this, "coreGtag"], ["is_safe" => ["html"]]),
             new TwigFunction("coreImage", [$this, "coreImageFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("cssRgba", [$this, "cssRgba"], ["is_safe" => ["html"]]),
         ];
+    }
+
+    /**
+     * Get the public directory.
+     *
+     * @return string|null Returns the public directory.
+     */
+    public function getPublicDirectory(): ?string {
+        return $this->publicDirectory;
     }
 
     /**
@@ -186,5 +219,16 @@ class AssetsTwigExtension extends AbstractTwigExtension {
         }
 
         return $output;
+    }
+
+    /**
+     * Set the public directory.
+     *
+     * @param string|null $publicDirectory The public directory.
+     * @return AssetsTwigExtension Returns this assets Twig extension.
+     */
+    public function setPublicDirectory(?string $publicDirectory): AssetsTwigExtension {
+        $this->publicDirectory = $publicDirectory;
+        return $this;
     }
 }

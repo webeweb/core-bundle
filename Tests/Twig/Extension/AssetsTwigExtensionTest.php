@@ -92,6 +92,21 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
+     * Tests assetExistsFunction()
+     *
+     * @return void
+     */
+    public function testAssetExists(): void {
+
+        $obj = new AssetsTwigExtension($this->twigEnvironment);
+        $obj->setPublicDirectory(__DIR__ . "/../../Fixtures/app/public");
+
+        $this->assertNull($obj->assetExists(null));
+        $this->assertFalse($obj->assetExists("/.gitignore"));
+        $this->assertTrue($obj->assetExists("/.gitkeep"));
+    }
+
+    /**
      * Tests coreStyleFilter()
      *
      * @return void
@@ -128,9 +143,14 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
         $obj = new AssetsTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFilters();
-        $this->assertCount(4, $res);
+        $this->assertCount(5, $res);
 
         $i = -1;
+
+        $this->assertInstanceOf(TwigFilter::class, $res[++$i]);
+        $this->assertEquals("assetExists", $res[$i]->getName());
+        $this->assertEquals([$obj, "assetExists"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
         $this->assertInstanceOf(TwigFilter::class, $res[++$i]);
         $this->assertEquals("coreGtag", $res[$i]->getName());
@@ -163,9 +183,14 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
         $obj = new AssetsTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-        $this->assertCount(3, $res);
+        $this->assertCount(4, $res);
 
         $i = -1;
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("assetExists", $res[$i]->getName());
+        $this->assertEquals([$obj, "assetExists"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
         $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
         $this->assertEquals("coreGtag", $res[$i]->getName());
@@ -242,5 +267,6 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
         $obj = new AssetsTwigExtension($this->twigEnvironment);
 
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
+        $this->assertNull($obj->getPublicDirectory());
     }
 }
