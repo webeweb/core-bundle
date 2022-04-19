@@ -77,7 +77,6 @@ class WBWCoreExtension extends Extension {
         ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "providers");
         ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "security");
         ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "twig");
-        ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "user", false);
         ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "quote");
         ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "plugins");
         ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "locales");
