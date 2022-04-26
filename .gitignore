@@ -7,3 +7,4 @@
 !/Resources/public/img
 
 /Tests/Fixtures/app/var/*
+!/Tests/Fixtures/app/var/.gitkeep
