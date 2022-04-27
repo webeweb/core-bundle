@@ -66,6 +66,7 @@ wbw_core:
         - "jquery"
         - "jquery_context_menu"
         - "jquery_easy_autocomplete"
+        - "jquery_fancy_box"
         - "jquery_input_mask"
         - "jquery_select2"
         - "leaflet"
@@ -78,6 +79,8 @@ wbw_core:
         - "sweet_alert"
         - "sweet_alert2"
         - "syntax_highlighter"
+        - "twemoji"
+        - "typed_js"
         - "wait_me"
     locales:
         full_calendar:  "fr"
