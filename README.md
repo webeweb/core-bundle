@@ -36,6 +36,7 @@ Includes:
 - [SweetAlert 2.1.2](https://sweetalert.js.org)
 - [SweetAlert2 11.3.1](https://sweetalert2.github.io)
 - [SyntaxHighlighter 3.0.83](http://alexgorbatchev.com/SyntaxHighlighter)
+- [twemoji 14.0.2](https://twemoji.twitter.com)
 - [typed.js 2.0.6](https://github.com/mattboldt/typed.js)
 - [waitMe 1.19](http://vadimsva.github.io/waitMe) (jQuery plug-in)
 
