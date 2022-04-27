@@ -312,6 +312,12 @@ assets:
                     - "MDUltra"
                     - "Midnight"
                     - "RDark"
+            twemoji:
+                version:     "14.0.2"
+                description: "Twemoji"
+                stylesheets: [ ]
+                javascripts:
+                    - "/twemoji-{{ version }}/twemoji.min.js"
             typed_js:
                 version:     "2.0.6"
                 description: "typed.js"

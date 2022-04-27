@@ -78,7 +78,7 @@ class WBWCoreBundleTest extends AbstractTestCase {
         $plugins = $config["assets"]["wbw.core.asset.core"]["plugins"];
 
         $res = AssetsHelper::listAssets($assets);
-        $this->assertCount(23, $res);
+        $this->assertCount(24, $res);
 
         $i = -1;
 
@@ -103,6 +103,7 @@ class WBWCoreBundleTest extends AbstractTestCase {
         $this->assertRegExp("/sweetalert-" . preg_quote($plugins["sweet_alert"]["version"]) . "\.zip$/", $res[++$i]);
         $this->assertRegExp("/sweetalert2-" . preg_quote($plugins["sweet_alert2"]["version"]) . "\.zip$/", $res[++$i]);
         $this->assertRegExp("/syntaxhighlighter-" . preg_quote($plugins["syntax_highlighter"]["version"]) . "\.zip$/", $res[++$i]);
+        $this->assertRegExp("/twemoji-" . preg_quote($plugins["twemoji"]["version"]) . "\.zip$/", $res[++$i]);
         $this->assertRegExp("/typed\.js-" . preg_quote($plugins["typed_js"]["version"]) . "\.zip$/", $res[++$i]);
         $this->assertRegExp("/waitme-" . preg_quote($plugins["wait_me"]["version"]) . "\.zip$/", $res[++$i]);
     }
