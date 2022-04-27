@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Add Twemoji 14.0.2
+
 ### [3.5.0](https://github.com/webeweb/core-bundle/tree/v3.5.0) (2022-04-12)
 
 - Add assetExists() Twig filter/function
