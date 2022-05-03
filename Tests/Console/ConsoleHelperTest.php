@@ -27,6 +27,24 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class ConsoleHelperTest extends AbstractTestCase {
 
     /**
+     * Tests formatCommandHelp()
+     *
+     * @return void
+     */
+    public function testFormatCommandHelp(): void {
+
+        $exp = <<< EOT
+The <info>%command.name%</info> command content.
+
+    <info>php %command.full_name%</info>
+
+
+EOT;
+
+        $this->assertEquals($exp, ConsoleHelper::formatCommandHelp("content"));
+    }
+
+    /**
      * Tests getCheckbox()
      *
      * @return void

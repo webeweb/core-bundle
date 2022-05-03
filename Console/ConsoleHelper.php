@@ -26,6 +26,25 @@ use WBW\Library\Core\Helper\OSHelper;
 class ConsoleHelper {
 
     /**
+     * Format a command help.
+     *
+     * @param string $content The content
+     * @return string
+     */
+    public static function formatCommandHelp(string $content): string {
+
+        $template = <<< EOT
+The <info>%command.name%</info> command {{ content }}.
+
+    <info>php %command.full_name%</info>
+
+
+EOT;
+
+        return str_replace("{{ content }}", $content, $template);
+    }
+
+    /**
      * Get a checkbox.
      *
      * @param bool $checked Checked ?
@@ -41,7 +60,7 @@ class ConsoleHelper {
     }
 
     /**
-     * Create a Symfony style.
+     * Creates a Symfony style.
      *
      * @param InputInterface $input The input.
      * @param OutputInterface $output The output.
