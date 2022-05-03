@@ -30,13 +30,6 @@ use WBW\Bundle\CoreBundle\Provider\SkeletonProviderInterface;
 class CopySkeletonCommand extends AbstractCommand {
 
     /**
-     * Command description.
-     *
-     * @var string
-     */
-    const COMMAND_DESCRIPTION = "Copy skeleton under the app/Resources directory";
-
-    /**
      * Command name.
      *
      * @var string
@@ -55,7 +48,7 @@ class CopySkeletonCommand extends AbstractCommand {
      */
     protected function configure(): void {
         $this
-            ->setDescription(self::COMMAND_DESCRIPTION)
+            ->setDescription("Copy skeleton under the app/Resources directory")
             ->setHelp(ConsoleHelper::formatCommandHelp("copy bundle skeleton into <comment>app/Resources</comment>"))
             ->setName(self::COMMAND_NAME);
     }

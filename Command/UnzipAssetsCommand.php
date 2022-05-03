@@ -27,13 +27,6 @@ use WBW\Library\Symfony\Helper\AssetsHelper;
 class UnzipAssetsCommand extends AbstractCommand {
 
     /**
-     * Command description.
-     *
-     * @var string
-     */
-    const COMMAND_DESCRIPTION = "Unzip assets under a public directory";
-
-    /**
      * Command name.
      *
      * @var string
@@ -52,7 +45,7 @@ class UnzipAssetsCommand extends AbstractCommand {
      */
     protected function configure(): void {
         $this
-            ->setDescription(self::COMMAND_DESCRIPTION)
+            ->setDescription("Unzip assets under a public directory")
             ->setHelp(ConsoleHelper::formatCommandHelp("unzips bundle assets into <comment>public</comment>"))
             ->setName(self::COMMAND_NAME);
     }
