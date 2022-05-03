@@ -15,8 +15,10 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Exception;
 use InvalidArgumentException;
+use Symfony\Component\Security\Core\User\UserInterface;
 use WBW\Bundle\CoreBundle\Helper\FormHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser;
 use WBW\Bundle\CoreBundle\Tests\TestCaseHelper;
 use WBW\Library\Symfony\Exception\RedirectResponseException;
 
@@ -36,15 +38,25 @@ class FormHelperTest extends AbstractTestCase {
     private $collection;
 
     /**
+     * Element.
+     *
+     * @var UserInterface
+     */
+    private $element;
+
+    /**
      * {@inheritDoc}
      */
     protected function setUp(): void {
         parent::setUp();
 
+        // Set an element mock.
+        $this->element = new TestUser();
+
         // Set a Collection mock.
-        $this->collection = new ArrayCollection();
-        for ($i = 0; $i < 10; ++$i) {
-            $this->collection->add("element" . $i);
+        $this->collection = new ArrayCollection([$this->element]);
+        for ($i = 1; $i < 10; ++$i) {
+            $this->collection->add(new TestUser());
         }
     }
 
@@ -59,7 +71,7 @@ class FormHelperTest extends AbstractTestCase {
         $obj = new FormHelper($this->entityManager, $this->eventDispatcher);
 
         $this->assertNull($obj->checkCollection($this->collection, "notification", "redirectURL"));
-        $this->assertNull($obj->checkCollection(["element0"], "notification", "redirectURL"));
+        $this->assertNull($obj->checkCollection([$this->element], "notification", "redirectURL"));
     }
 
     /**
@@ -119,7 +131,7 @@ class FormHelperTest extends AbstractTestCase {
         // Set a Collection mocks.
         $oldCollection = $this->collection;
         $newCollection = $obj->onPreHandleRequestWithCollection($oldCollection);
-        $newCollection->removeElement("element1");
+        $newCollection->removeElement($this->element);
 
         $this->assertEquals(10, $oldCollection->count());
         $this->assertEquals(9, $newCollection->count());
