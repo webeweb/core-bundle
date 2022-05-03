@@ -3,8 +3,8 @@ CHANGELOG
 
 ### [3.6.0](https://github.com/webeweb/core-bundle/tree/v3.6.0) (2022-05-03)
 
+- Add formatCommandHelp() into Console helper
 - Add Twemoji 14.0.2
-- Improve commands
 
 ### [3.5.0](https://github.com/webeweb/core-bundle/tree/v3.5.0) (2022-04-12)
 
