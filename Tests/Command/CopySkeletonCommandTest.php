@@ -161,12 +161,14 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
      */
     public function test__construct(): void {
 
+        $this->assertEquals("Copy skeleton under the app/Resources directory", CopySkeletonCommand::COMMAND_DESCRIPTION);
+        $this->assertEquals("wbw:core:copy-skeleton", CopySkeletonCommand::COMMAND_NAME);
         $this->assertEquals("wbw.core.command.copy_skeleton", CopySkeletonCommand::SERVICE_NAME);
 
         $obj = new CopySkeletonCommand();
 
-        $this->assertEquals("Copy skeleton under the app/Resources directory", $obj->getDescription());
-        $this->assertEquals(CopySkeletonCommand::COMMAND_HELP, $obj->getHelp());
-        $this->assertEquals("wbw:core:copy-skeleton", $obj->getName());
+        $this->assertEquals(CopySkeletonCommand::COMMAND_DESCRIPTION, $obj->getDescription());
+        $this->assertNotNull($obj->getHelp());
+        $this->assertEquals(CopySkeletonCommand::COMMAND_NAME, $obj->getName());
     }
 }

@@ -14,6 +14,7 @@ namespace WBW\Bundle\CoreBundle\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\StyleInterface;
+use WBW\Bundle\CoreBundle\Console\ConsoleHelper;
 use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
 use WBW\Library\Symfony\Helper\AssetsHelper;
 
@@ -26,16 +27,18 @@ use WBW\Library\Symfony\Helper\AssetsHelper;
 class UnzipAssetsCommand extends AbstractCommand {
 
     /**
-     * Command help.
+     * Command description.
      *
      * @var string
      */
-    const COMMAND_HELP = <<< EOT
-The <info>%command.name%</info> command unzips bundle assets into <comment>public</comment>.
+    const COMMAND_DESCRIPTION = "Unzip assets under a public directory";
 
-    <info>php %command.full_name%</info>
-
-EOT;
+    /**
+     * Command name.
+     *
+     * @var string
+     */
+    const COMMAND_NAME = "wbw:core:unzip-assets";
 
     /**
      * Service name.
@@ -49,9 +52,9 @@ EOT;
      */
     protected function configure(): void {
         $this
-            ->setName("wbw:core:unzip-assets")
-            ->setDescription("Unzip assets under a public directory")
-            ->setHelp(self::COMMAND_HELP);
+            ->setDescription(self::COMMAND_DESCRIPTION)
+            ->setHelp(ConsoleHelper::formatCommandHelp("unzips bundle assets into <comment>public</comment>"))
+            ->setName(self::COMMAND_NAME);
     }
 
     /**

@@ -96,12 +96,14 @@ class UnzipAssetsCommandTest extends AbstractCommandTestCase {
      */
     public function test__construct(): void {
 
+        $this->assertEquals("Unzip assets under a public directory", UnzipAssetsCommand::COMMAND_DESCRIPTION);
+        $this->assertEquals("wbw:core:unzip-assets", UnzipAssetsCommand::COMMAND_NAME);
         $this->assertEquals("wbw.core.command.unzip_assets", UnzipAssetsCommand::SERVICE_NAME);
 
         $obj = new UnzipAssetsCommand();
 
-        $this->assertEquals("Unzip assets under a public directory", $obj->getDescription());
-        $this->assertEquals(UnzipAssetsCommand::COMMAND_HELP, $obj->getHelp());
-        $this->assertEquals("wbw:core:unzip-assets", $obj->getName());
+        $this->assertEquals(UnzipAssetsCommand::COMMAND_DESCRIPTION, $obj->getDescription());
+        $this->assertNotNull($obj->getHelp());
+        $this->assertEquals(UnzipAssetsCommand::COMMAND_NAME, $obj->getName());
     }
 }

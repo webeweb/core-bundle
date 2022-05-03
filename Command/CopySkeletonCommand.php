@@ -16,6 +16,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\StyleInterface;
 use Symfony\Component\HttpKernel\Kernel;
+use WBW\Bundle\CoreBundle\Console\ConsoleHelper;
 use WBW\Bundle\CoreBundle\Helper\SkeletonHelper;
 use WBW\Bundle\CoreBundle\HttpKernel\KernelHelper;
 use WBW\Bundle\CoreBundle\Provider\SkeletonProviderInterface;
@@ -29,16 +30,18 @@ use WBW\Bundle\CoreBundle\Provider\SkeletonProviderInterface;
 class CopySkeletonCommand extends AbstractCommand {
 
     /**
-     * Command help.
+     * Command description.
      *
      * @var string
      */
-    const COMMAND_HELP = <<< EOT
-The <info>%command.name%</info> command copy bundle skeleton into <comment>app/Resources</comment>.
+    const COMMAND_DESCRIPTION = "Copy skeleton under the app/Resources directory";
 
-    <info>php %command.full_name%</info>
-
-EOT;
+    /**
+     * Command name.
+     *
+     * @var string
+     */
+    const COMMAND_NAME = "wbw:core:copy-skeleton";
 
     /**
      * Service name.
@@ -52,9 +55,9 @@ EOT;
      */
     protected function configure(): void {
         $this
-            ->setName("wbw:core:copy-skeleton")
-            ->setDescription("Copy skeleton under the app/Resources directory")
-            ->setHelp(self::COMMAND_HELP);
+            ->setDescription(self::COMMAND_DESCRIPTION)
+            ->setHelp(ConsoleHelper::formatCommandHelp("copy bundle skeleton into <comment>app/Resources</comment>"))
+            ->setName(self::COMMAND_NAME);
     }
 
     /**
