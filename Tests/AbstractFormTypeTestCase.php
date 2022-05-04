@@ -36,7 +36,7 @@ abstract class AbstractFormTypeTestCase extends AbstractTestCase {
      *
      * @var array
      */
-    protected $defaults;
+    protected $defaults = [];
 
     /**
      * Form
@@ -93,17 +93,19 @@ abstract class AbstractFormTypeTestCase extends AbstractTestCase {
 
         // Set a setDefaults() callback.
         $setDefaults = function(array $defaults): OptionsResolver {
-
-            if (null === $this->defaults) {
-                $this->defaults = [];
-            }
-
             $this->defaults = array_merge($this->defaults, $defaults);
+            return $this->resolver;
+        };
+
+        // Set a setDefault() callback.
+        $setDefault = function(string $option, $value): OptionsResolver {
+            $this->defaults[$option] = $value;
             return $this->resolver;
         };
 
         // Set an Options resolver mock.
         $this->resolver = $this->getMockBuilder(OptionsResolver::class)->getMock();
+        $this->resolver->expects($this->any())->method("setDefault")->willReturnCallback($setDefault);
         $this->resolver->expects($this->any())->method("setDefaults")->willReturnCallback($setDefaults);
     }
 }
