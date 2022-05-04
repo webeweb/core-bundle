@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.6.1](https://github.com/webeweb/core-bundle/tree/v3.6.1) (2022-05-04)
+
+- Fix setDefault() into abstract form type test case
+
 ### [3.6.0](https://github.com/webeweb/core-bundle/tree/v3.6.0) (2022-05-03)
 
 - Add formatCommandHelp() into Console helper
