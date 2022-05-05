@@ -24,7 +24,7 @@ use WBW\Library\Symfony\Provider\ColorProviderInterface;
 class ColorProviderCompilerPass extends AbstractProviderCompilerPass {
 
     /**
-     *{@inheritDoc}
+     *{@inheritdoc}
      */
     public function process(ContainerBuilder $container): void {
         $this->processing($container, ColorManager::SERVICE_NAME, ColorProviderInterface::COLOR_PROVIDER_TAG_NAME);

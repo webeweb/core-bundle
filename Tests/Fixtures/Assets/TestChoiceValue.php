@@ -22,7 +22,7 @@ use WBW\Library\Symfony\Assets\ChoiceValueInterface;
 class TestChoiceValue implements ChoiceValueInterface {
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getChoiceValue(): ?string {
         return null;

@@ -35,98 +35,98 @@ use WBW\Library\Symfony\Response\DefaultJsonResponseDataInterface;
 class TestAbstractController extends AbstractController {
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getContainer(): ?Container {
         return parent::getContainer();
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getEventDispatcher(): ?EventDispatcherInterface {
         return parent::getEventDispatcher();
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getFormHelper(): ?FormHelper {
         return parent::getFormHelper();
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getKernelEventListener(): ?KernelEventListener {
         return parent::getKernelEventListener();
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getLogger(): ?LoggerInterface {
         return parent::getLogger();
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getRepositoryHelper(): ?RepositoryHelper {
         return parent::getRepositoryHelper();
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getRouter(): ?RouterInterface {
         return parent::getRouter();
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getSession(): ?SessionInterface {
         return parent::getSession();
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getTranslator() {
         return parent::getTranslator();
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function hasRolesOrRedirect(array $roles, bool $or, string $redirectUrl, string $originUrl = ""): bool {
         return parent::hasRolesOrRedirect($roles, $or, $redirectUrl, $originUrl);
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function newDefaultJsonResponseData(bool $success, array $data, string $message = null): DefaultJsonResponseDataInterface {
         return parent::newDefaultJsonResponseData($success, $data, $message);
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function notify(string $eventName, NotificationInterface $notification): ?NotificationEvent {
         return parent::notify($eventName, $notification);
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function toast(string $eventName, ToastInterface $toast): ?ToastEvent {
         return parent::toast($eventName, $toast);
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function translate(string $id, array $parameters = [], string $domain = null, string $locale = null): string {
         return parent::translate($id, $parameters, $domain, $locale);

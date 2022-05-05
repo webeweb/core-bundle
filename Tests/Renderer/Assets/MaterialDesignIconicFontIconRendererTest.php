@@ -32,7 +32,7 @@ class MaterialDesignIconicFontIconRendererTest extends AbstractTestCase {
     private $icon;
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     protected function setUp(): void {
         parent::setUp();

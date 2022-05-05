@@ -23,21 +23,21 @@ use WBW\Bundle\CoreBundle\Command\CopySkeletonCommand;
 class TestCopySkeletonCommand extends CopySkeletonCommand {
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function displayFooter(StyleInterface $io, int $exitCode, int $count): void {
         parent::displayFooter($io, $exitCode, $count);
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function displayResult(StyleInterface $io, array $results): int {
         return parent::displayResult($io, $results);
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getResourcesDirectory(): string {
         return parent::getResourcesDirectory();

@@ -90,7 +90,7 @@ class FontAwesomeTwigExtension extends AbstractFontAwesomeTwigExtension implemen
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function renderIcon(?string $name, ?string $style): string {
         return $this->fontAwesomeIconFunction(["name" => $name, "style" => $style]);

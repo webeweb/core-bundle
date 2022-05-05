@@ -44,7 +44,7 @@ class CopySkeletonCommand extends AbstractCommand {
     const SERVICE_NAME = "wbw.core.command.copy_skeleton";
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     protected function configure(): void {
         $this
@@ -110,7 +110,7 @@ class CopySkeletonCommand extends AbstractCommand {
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     protected function execute(InputInterface $input, OutputInterface $output): int {
 

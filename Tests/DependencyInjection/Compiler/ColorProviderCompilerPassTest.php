@@ -40,7 +40,7 @@ class ColorProviderCompilerPassTest extends AbstractTestCase {
     private $colorProvider;
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     protected function setUp(): void {
         parent::setUp();

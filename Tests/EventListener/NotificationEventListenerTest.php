@@ -27,7 +27,7 @@ use WBW\Library\Symfony\Assets\NotificationInterface;
 class NotificationEventListenerTest extends AbstractTestCase {
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     protected function setUp(): void {
         parent::setUp();

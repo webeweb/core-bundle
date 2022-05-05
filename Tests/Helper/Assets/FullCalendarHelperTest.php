@@ -32,7 +32,7 @@ class FullCalendarHelperTest extends AbstractTestCase {
     private $request;
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     protected function setUp(): void {
         parent::setUp();

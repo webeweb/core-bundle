@@ -33,7 +33,7 @@ class TestDateTimeDataTransformer extends AbstractDateTimeDataTransformer {
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function newDateTimeZone(): ?DateTimeZone {
         return parent::newDateTimeZone();

@@ -34,7 +34,7 @@ class RepositoryServiceTest extends AbstractWebTestCase {
     private $service;
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     protected function setUp(): void {
         parent::setUp();
@@ -44,7 +44,7 @@ class RepositoryServiceTest extends AbstractWebTestCase {
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public static function setUpBeforeClass(): void {
         parent::setUpBeforeClass();

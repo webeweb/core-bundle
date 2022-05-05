@@ -23,7 +23,7 @@ use DateTime;
 abstract class AbstractTimestampDataTransformer extends AbstractDateTimeDataTransformer {
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function reverseTransform($value) {
 
@@ -37,7 +37,7 @@ abstract class AbstractTimestampDataTransformer extends AbstractDateTimeDataTran
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function transform($value) {
 

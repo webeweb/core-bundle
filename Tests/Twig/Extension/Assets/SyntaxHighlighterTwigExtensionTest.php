@@ -52,7 +52,7 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
     private $syntaxHighlighterStrings;
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     protected function setUp(): void {
         parent::setUp();

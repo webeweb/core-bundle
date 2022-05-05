@@ -36,21 +36,21 @@ class StatementService implements StatementServiceInterface {
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function executeQuery(string $sql, array $values): Result {
         return $this->prepareStatement($sql, $values)->executeQuery();
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function executeStatement(string $sql, array $values): int {
         return $this->prepareStatement($sql, $values)->executeStatement();
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function prepareStatement(string $sql, array $values): Statement {
 

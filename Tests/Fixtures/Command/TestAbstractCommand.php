@@ -26,42 +26,42 @@ use WBW\Bundle\CoreBundle\Command\AbstractCommand;
 class TestAbstractCommand extends AbstractCommand {
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     protected function configure(): void {
         $this->setName("wbw:core:abstract");
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function displayHeader(StyleInterface $io, string $header): void {
         parent::displayHeader($io, $header);
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function displayTitle(StyleInterface $io, string $title): void {
         parent::displayTitle($io, $title);
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getCheckbox(bool $checked): string {
         return parent::getCheckbox($checked);
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getKernel(): ?KernelInterface {
         return parent::getKernel();
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function newStyle(InputInterface $input, OutputInterface $output): StyleInterface {
         return parent::newStyle($input, $output);

@@ -23,14 +23,14 @@ use WBW\Bundle\CoreBundle\Factory\FormFactory;
 class TestFormFactory extends FormFactory {
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public static function getChoiceLabelClosure(array $options): Closure {
         return parent::getChoiceLabelClosure($options);
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public static function getChoiceValueClosure(): Closure {
         return parent::getChoiceValueClosure();

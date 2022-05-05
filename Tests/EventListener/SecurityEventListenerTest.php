@@ -26,7 +26,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class SecurityEventListenerTest extends AbstractTestCase {
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     protected function setUp(): void {
         parent::setUp();

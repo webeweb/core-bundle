@@ -65,7 +65,7 @@ class RepositoryService implements RepositoryServiceInterface {
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function findRepositoriesReports(): array {
 

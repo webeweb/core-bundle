@@ -40,7 +40,7 @@ class TestUser implements UserInterface {
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function eraseCredentials() {
         // NOTHING TO DO

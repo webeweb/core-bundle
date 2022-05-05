@@ -26,7 +26,7 @@ use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
 class WBWCoreBundle extends Bundle implements AssetsProviderInterface {
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function build(ContainerBuilder $container): void {
         $container->addCompilerPass(new ColorProviderCompilerPass());
@@ -34,7 +34,7 @@ class WBWCoreBundle extends Bundle implements AssetsProviderInterface {
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getAssetsRelativeDirectory(): string {
         return self::ASSETS_RELATIVE_DIRECTORY;

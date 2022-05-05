@@ -32,7 +32,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
     private $icon;
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     protected function setUp(): void {
         parent::setUp();

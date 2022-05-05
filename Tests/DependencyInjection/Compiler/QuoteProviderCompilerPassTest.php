@@ -39,7 +39,7 @@ class QuoteProviderCompilerPassTest extends AbstractTestCase {
     private $quoteProvider;
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     protected function setUp(): void {
         parent::setUp();
