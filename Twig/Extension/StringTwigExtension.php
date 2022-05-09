@@ -55,6 +55,8 @@ class StringTwigExtension extends AbstractTwigExtension {
             new TwigFilter("htmlEntityDecode", [$this, "htmlEntityDecode"], ["is_safe" => ["html"]]),
             new TwigFilter("htmlEntityEncode", [$this, "htmlEntityEncode"], ["is_safe" => ["html"]]),
 
+            new TwigFilter("jsonDecode", [$this, "jsonDecode"], ["is_safe" => ["html"]]),
+
             new TwigFilter("md5", [$this, "md5"], ["is_safe" => ["html"]]),
 
             new TwigFilter("stringExtractUpperCase", [$this, "stringExtractUpperCase"], ["is_safe" => ["html"]]),
@@ -77,6 +79,8 @@ class StringTwigExtension extends AbstractTwigExtension {
 
             new TwigFunction("htmlEntityDecode", [$this, "htmlEntityDecode"], ["is_safe" => ["html"]]),
             new TwigFunction("htmlEntityEncode", [$this, "htmlEntityEncode"], ["is_safe" => ["html"]]),
+
+            new TwigFunction("jsonDecode", [$this, "jsonDecode"], ["is_safe" => ["html"]]),
 
             new TwigFunction("md5", [$this, "md5"], ["is_safe" => ["html"]]),
 
@@ -117,6 +121,21 @@ class StringTwigExtension extends AbstractTwigExtension {
         }
 
         return htmlentities($string);
+    }
+
+    /**
+     * Decodes a JSON string.
+     *
+     * @param string|null $string The string.
+     * @return array|null Returns the decoded JSON string.
+     */
+    public function jsonDecode(?string $string): ?array {
+
+        if (null === $string) {
+            return null;
+        }
+
+        return json_decode($string, true);
     }
 
     /**

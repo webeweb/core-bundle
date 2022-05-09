@@ -52,7 +52,7 @@ class StringTwigExtensionTest extends AbstractTestCase {
         $obj = new StringTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFilters();
-        $this->assertCount(10, $res);
+        $this->assertCount(11, $res);
 
         $i = -1;
 
@@ -69,6 +69,11 @@ class StringTwigExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(TwigFilter::class, $res[++$i]);
         $this->assertEquals("htmlEntityEncode", $res[$i]->getName());
         $this->assertEquals([$obj, "htmlEntityEncode"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFilter::class, $res[++$i]);
+        $this->assertEquals("jsonDecode", $res[$i]->getName());
+        $this->assertEquals([$obj, "jsonDecode"], $res[$i]->getCallable());
         $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
         $this->assertInstanceOf(TwigFilter::class, $res[++$i]);
@@ -117,7 +122,7 @@ class StringTwigExtensionTest extends AbstractTestCase {
         $obj = new StringTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-        $this->assertCount(10, $res);
+        $this->assertCount(11, $res);
 
         $i = -1;
 
@@ -134,6 +139,11 @@ class StringTwigExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
         $this->assertEquals("htmlEntityEncode", $res[$i]->getName());
         $this->assertEquals([$obj, "htmlEntityEncode"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("jsonDecode", $res[$i]->getName());
+        $this->assertEquals([$obj, "jsonDecode"], $res[$i]->getCallable());
         $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
         $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
@@ -196,6 +206,19 @@ class StringTwigExtensionTest extends AbstractTestCase {
 
         $this->assertNull($obj->htmlEntityEncode(null));
         $this->assertEquals("&amp;", $obj->htmlEntityEncode("&"));
+    }
+
+    /**
+     * Tests jsonDecode()
+     *
+     * @return void
+     */
+    public function testJsonDecode(): void {
+
+        $obj = new StringTwigExtension($this->twigEnvironment);
+
+        $this->assertNull($obj->jsonDecode(null));
+        $this->assertEquals([], $obj->jsonDecode("{}"));
     }
 
     /**
