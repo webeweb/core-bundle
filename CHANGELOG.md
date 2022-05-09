@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.7.0](https://github.com/webeweb/core-bundle/tree/v3.7.0) (2022-05-09)
+
+- Add JSON decode Twig filter/function
+
 ### [3.6.1](https://github.com/webeweb/core-bundle/tree/v3.6.1) (2022-05-04)
 
 - Fix setDefault() into abstract form type test case
