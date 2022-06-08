@@ -183,7 +183,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
         $obj = new AssetsTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-        $this->assertCount(4, $res);
+        $this->assertCount(5, $res);
 
         $i = -1;
 
@@ -203,6 +203,11 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
         $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("coreRenderIcon", $res[$i]->getName());
+        $this->assertEquals([$obj, "coreRenderIconFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
         $this->assertEquals("cssRgba", $res[$i]->getName());
         $this->assertEquals([$obj, "cssRgba"], $res[$i]->getCallable());
         $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
@@ -217,6 +222,19 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
 
         $this->assertNull(AssetsTwigExtension::renderIcon($this->twigEnvironment, null));
         $this->assertNull(AssetsTwigExtension::renderIcon($this->twigEnvironment, "::"));
+    }
+
+    /**
+     * Tests coreRenderIconFunction()
+     *
+     * @return void
+     */
+    public function testCoreRenderIconRender(): void {
+
+        $obj = new AssetsTwigExtension($this->twigEnvironment);
+
+        $this->assertNull($obj->coreRenderIconFunction(null));
+        $this->assertNull($obj->coreRenderIconFunction("::"));
     }
 
     /**

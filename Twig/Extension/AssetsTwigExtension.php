@@ -98,6 +98,17 @@ class AssetsTwigExtension extends AbstractTwigExtension {
     }
 
     /**
+     * Displays an icon.
+     *
+     * @param string|null $name The name.
+     * @param string|null $style The style.
+     * @return string|null Returns the icon.
+     */
+    public function coreRenderIconFunction(?string $name, string $style = null): ?string {
+        return static::renderIcon($this->getTwigEnvironment(), $name, $style);
+    }
+
+    /**
      * Displays a script.
      *
      * @param string $content The content.
@@ -167,6 +178,7 @@ class AssetsTwigExtension extends AbstractTwigExtension {
             new TwigFunction("assetExists", [$this, "assetExists"], ["is_safe" => ["html"]]),
             new TwigFunction("coreGtag", [$this, "coreGtag"], ["is_safe" => ["html"]]),
             new TwigFunction("coreImage", [$this, "coreImageFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("coreRenderIcon", [$this, "coreRenderIconFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("cssRgba", [$this, "cssRgba"], ["is_safe" => ["html"]]),
         ];
     }
