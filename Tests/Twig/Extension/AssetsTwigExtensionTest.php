@@ -26,6 +26,21 @@ use WBW\Bundle\CoreBundle\Twig\Extension\AssetsTwigExtension;
 class AssetsTwigExtensionTest extends AbstractTestCase {
 
     /**
+     * Tests assetExists()
+     *
+     * @return void
+     */
+    public function testAssetExists(): void {
+
+        $obj = new AssetsTwigExtension($this->twigEnvironment);
+        $obj->setPublicDirectory(__DIR__ . "/../../Fixtures/app/public");
+
+        $this->assertNull($obj->assetExists(null));
+        $this->assertFalse($obj->assetExists("/.gitignore"));
+        $this->assertTrue($obj->assetExists("/.gitkeep"));
+    }
+
+    /**
      * Tests coreGtag()
      *
      * @returns void
@@ -79,6 +94,19 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
+     * Tests coreRenderIconFunction()
+     *
+     * @return void
+     */
+    public function testCoreRenderIconRender(): void {
+
+        $obj = new AssetsTwigExtension($this->twigEnvironment);
+
+        $this->assertNull($obj->coreRenderIconFunction(null));
+        $this->assertNull($obj->coreRenderIconFunction("::"));
+    }
+
+    /**
      * Tests coreScriptFilter()
      *
      * @return void
@@ -89,21 +117,6 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
 
         $res = file_get_contents(__DIR__ . "/AssetsTwigExtensionTest.testCoreScriptFilter.html.txt");
         $this->assertEquals($res, $obj->coreScriptFilter("content") . "\n");
-    }
-
-    /**
-     * Tests assetExistsFunction()
-     *
-     * @return void
-     */
-    public function testAssetExists(): void {
-
-        $obj = new AssetsTwigExtension($this->twigEnvironment);
-        $obj->setPublicDirectory(__DIR__ . "/../../Fixtures/app/public");
-
-        $this->assertNull($obj->assetExists(null));
-        $this->assertFalse($obj->assetExists("/.gitignore"));
-        $this->assertTrue($obj->assetExists("/.gitkeep"));
     }
 
     /**
@@ -222,19 +235,6 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
 
         $this->assertNull(AssetsTwigExtension::renderIcon($this->twigEnvironment, null));
         $this->assertNull(AssetsTwigExtension::renderIcon($this->twigEnvironment, "::"));
-    }
-
-    /**
-     * Tests coreRenderIconFunction()
-     *
-     * @return void
-     */
-    public function testCoreRenderIconRender(): void {
-
-        $obj = new AssetsTwigExtension($this->twigEnvironment);
-
-        $this->assertNull($obj->coreRenderIconFunction(null));
-        $this->assertNull($obj->coreRenderIconFunction("::"));
     }
 
     /**
