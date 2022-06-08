@@ -1,8 +1,9 @@
 CHANGELOG
 =========
 
-### master
+### [3.8.0](https://github.com/webeweb/core-bundle/tree/v3.8.0) (2022-06-08)
 
+- Add coreRenderIcon() Twig function
 - Update typed.js to 2.0.12
 
 ### [3.7.0](https://github.com/webeweb/core-bundle/tree/v3.7.0) (2022-05-09)
