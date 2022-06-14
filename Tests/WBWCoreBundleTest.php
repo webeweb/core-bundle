@@ -85,7 +85,7 @@ class WBWCoreBundleTest extends AbstractTestCase {
         $this->assertRegExp("/animate\.css-" . preg_quote($plugins["animate_css"]["version"]) . "\.zip$/", $res[++$i]);
         $this->assertRegExp("/clippy\.js\.zip$/", $res[++$i]);
         $this->assertRegExp("/fontawesome-" . preg_quote($plugins["font_awesome"]["version"]) . "\.zip$/", $res[++$i]);
-        $this->assertRegExp("/fontawesome-6\.0\.0\.zip$/", $res[++$i]);
+        $this->assertRegExp("/fontawesome-6\.1\.1\.zip$/", $res[++$i]);
         $this->assertRegExp("/fullcalendar-" . preg_quote($plugins["full_calendar"]["version"]) . "\.zip$/", $res[++$i]);
         $this->assertRegExp("/jquery-" . preg_quote($plugins["jquery"]["version"]) . "\.zip$/", $res[++$i]);
         $this->assertRegExp("/jquery-contextmenu-" . preg_quote($plugins["jquery_context_menu"]["version"]) . "\.zip$/", $res[++$i]);
