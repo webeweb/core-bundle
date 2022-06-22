@@ -1,5 +1,5 @@
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123456789-0"></script>
-<script>
+<script src="https://www.googletagmanager.com/gtag/js?id=UA-123456789-0" async></script>
+<script type="text/javascript">
     window.dataLayer = window.dataLayer || [];
 
     function gtag() {
