@@ -70,9 +70,9 @@ class AssetsTwigExtension extends AbstractTwigExtension {
             return null;
         }
 
-        $content = file_get_contents(__DIR__ . "/AssetsTwigExtension.coreGtag.html");
+        $template = file_get_contents(__DIR__ . "/AssetsTwigExtension.coreGtag.html");
 
-        return str_replace("{id}", $id, $content);
+        return str_replace("{id}", $id, $template);
     }
 
     /**

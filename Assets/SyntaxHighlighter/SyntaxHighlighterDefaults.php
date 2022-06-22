@@ -69,7 +69,7 @@ class SyntaxHighlighterDefaults {
     private $htmlScript;
 
     /**
-     * Samrt tabs.
+     * Smart tabs.
      *
      * @var bool|null
      */
@@ -153,7 +153,7 @@ class SyntaxHighlighterDefaults {
     /**
      * Get the highlight.
      *
-     * @return array Returns the hightlight.
+     * @return array Returns the highlight.
      */
     public function getHighlight(): array {
         return $this->highlight;

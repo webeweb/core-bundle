@@ -27,7 +27,7 @@ class SyntaxHighlighterConfig {
     private $bloggerMode;
 
     /**
-     * Strings
+     * Strings.
      *
      * @var SyntaxHighlighterStrings|null
      */

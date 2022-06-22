@@ -35,7 +35,7 @@ class IconFactory {
     }
 
     /**
-     * Creates a Material Design Iconic Font icon
+     * Creates a Material Design Iconic Font icon.
      *
      * @return MaterialDesignIconicFontIconInterface Returns the Material Design Iconic Font icon.
      */
