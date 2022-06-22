@@ -3,6 +3,8 @@ CHANGELOG
 
 ### master
 
+- Improve code quality
+- Improve PHPDoc
 - Update FontAwesome to 6.1.1
 
 ### [3.8.0](https://github.com/webeweb/core-bundle/tree/v3.8.0) (2022-06-08)
