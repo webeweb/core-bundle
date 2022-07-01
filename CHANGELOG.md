@@ -3,6 +3,7 @@ CHANGELOG
 
 ### master
 
+- Add CSS classes view (contains basic CSS classes) 
 - Improve code quality
 - Improve PHPDoc
 - Update FontAwesome to 6.1.1
