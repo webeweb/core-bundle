@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Controller;
 
+use Doctrine\ORM\EntityManagerInterface;
 use Exception;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\DependencyInjection\Container;
@@ -98,6 +99,21 @@ class AbstractControllerTest extends AbstractTestCase {
         $res = $obj->getEventDispatcher();
         $this->assertInstanceOf(EventDispatcherInterface::class, $res);
         $this->assertSame($this->eventDispatcher, $res);
+    }
+
+    /**
+     * Tests getEntityManager()
+     *
+     * @return void
+     */
+    public function testGetEntityManager(): void {
+
+        $obj = new TestAbstractController();
+        $obj->setContainer($this->containerBuilder);
+
+        $res = $obj->getEntityManager();
+        $this->assertInstanceOf(EntityManagerInterface::class, $res);
+        $this->assertSame($this->entityManager, $res);
     }
 
     /**

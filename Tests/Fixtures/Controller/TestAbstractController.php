@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Controller;
 
+use Doctrine\ORM\EntityManagerInterface;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
@@ -21,7 +22,6 @@ use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\Event\ToastEvent;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Helper\FormHelper;
-use WBW\Bundle\CoreBundle\Repository\RepositoryHelper;
 use WBW\Library\Symfony\Assets\NotificationInterface;
 use WBW\Library\Symfony\Assets\ToastInterface;
 use WBW\Library\Symfony\Response\DefaultJsonResponseDataInterface;
@@ -39,6 +39,13 @@ class TestAbstractController extends AbstractController {
      */
     public function getContainer(): ?Container {
         return parent::getContainer();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getEntityManager(): ?EntityManagerInterface {
+        return parent::getEntityManager();
     }
 
     /**

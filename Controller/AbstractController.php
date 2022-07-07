@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Controller;
 
+use Doctrine\ORM\EntityManagerInterface;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
@@ -64,6 +65,15 @@ abstract class AbstractController extends BaseController {
      */
     protected function getContainer(): ?Container {
         return $this->get("service_container");
+    }
+
+    /**
+     * Get the entity manager.
+     *
+     * @return EntityManagerInterface|null Returns the entity manager.
+     */
+    protected function getEntityManager(): ?EntityManagerInterface {
+        return $this->get("doctrine.orm.entity_manager");
     }
 
     /**
