@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Update CSS classes view (contains basic CSS classes) 
+
 ### [3.9.0](https://github.com/webeweb/core-bundle/tree/v3.9.0) (2022-07-07)
 
 - Add CSS classes view (contains basic CSS classes) 
