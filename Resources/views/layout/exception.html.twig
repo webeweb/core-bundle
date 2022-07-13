@@ -1,5 +1,29 @@
 {# Resources/views/email.html.twig #}
-{% import "@WBWCore/layout/exception.html.twig" as myself %}
+
+{#
+# Prints a stack trace.
+#
+# @param Exception $ex The exception.
+# @return string Returns the stack trace.
+#}
+{% macro printStackTrace(ex, isChild) %}
+
+    {% set _heading = '' %}
+
+    <h1>{{ true == isChild ? "Caused by: " : "" }}{{ ex.message }}:</h1>
+    <p>
+        <strong>at</strong> {{ ex.file }}:{{ ex.line }}<br/>
+        {% for _trace in ex.trace %}
+            <strong>at</strong> {{ _trace.class }}{{ _trace.type }}{{ _trace.function }}()<br/>
+            &nbsp;&nbsp;&nbsp;<span class="caption">({{ _trace.file }}:{{ _trace.line }})</span><br/>
+        {% endfor %}
+    </p>
+
+    {% if (null != ex.previous) %}
+        {{ _self.printStackTrace(ex.previous, true) }}
+    {% endif %}
+{% endmacro %}
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -27,7 +51,7 @@
                                 <tbody>
                                     <tr>
                                         <td class="padded">
-                                            {{ myself.printStackTrace(exception) }}
+                                            {{ _self.printStackTrace(exception) }}
                                         </td>
                                     </tr>
                                 </tbody>
@@ -42,20 +66,3 @@
         </center>
     </body>
 </html>
-{% macro printStackTrace(ex, isChild) %}
-
-    {% set _heading = '' %}
-
-    <h1>{{ true == isChild ? "Caused by: " : "" }}{{ ex.message }}:</h1>
-    <p>
-        <strong>at</strong> {{ ex.file }}:{{ ex.line }}<br/>
-        {% for stackTrace in ex.trace %}
-            <strong>at</strong> {{ stackTrace.class }}{{ stackTrace.type }}{{ stackTrace.function }}()<br/>
-            &nbsp;&nbsp;&nbsp;<span class="caption">({{ stackTrace.file }}:{{ stackTrace.line }})</span><br/>
-        {% endfor %}
-    </p>
-
-    {% if (null != ex.previous) %}
-        {{ myself.printStackTrace(ex.previous, true) }}
-    {% endif %}
-{% endmacro %}
