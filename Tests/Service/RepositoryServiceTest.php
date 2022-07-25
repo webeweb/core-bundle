@@ -16,7 +16,6 @@ use WBW\Bundle\CoreBundle\Service\RepositoryService;
 use WBW\Bundle\CoreBundle\Service\RepositoryServiceInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestGroup;
-use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser;
 
 /**
  * Repository service test.

@@ -3,11 +3,11 @@ CHANGELOG
 
 ### master
 
-- Update CSS classes view (contains basic CSS classes) 
+- Update CSS classes view (contains basic CSS classes)
 
 ### [3.9.0](https://github.com/webeweb/core-bundle/tree/v3.9.0) (2022-07-07)
 
-- Add CSS classes view (contains basic CSS classes) 
+- Add CSS classes view (contains basic CSS classes)
 - Add getEntityManager() into abstract controller
 - Improve code quality
 - Improve PHPDoc

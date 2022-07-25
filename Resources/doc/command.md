@@ -17,7 +17,7 @@ commands.
 
 `getCheckbox()` method returns a string containing a boolean representation
 to output a command result into a console.
- 
+
 `newStyle()` method returns a `StyleInterface` like this used by Symfony to
 produce elegant output into a console.
 

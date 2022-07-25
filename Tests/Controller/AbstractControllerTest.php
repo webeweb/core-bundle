@@ -87,21 +87,6 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getEventDispatcher()
-     *
-     * @return void
-     */
-    public function testGetEventDispatcher(): void {
-
-        $obj = new TestAbstractController();
-        $obj->setContainer($this->containerBuilder);
-
-        $res = $obj->getEventDispatcher();
-        $this->assertInstanceOf(EventDispatcherInterface::class, $res);
-        $this->assertSame($this->eventDispatcher, $res);
-    }
-
-    /**
      * Tests getEntityManager()
      *
      * @return void
@@ -114,6 +99,21 @@ class AbstractControllerTest extends AbstractTestCase {
         $res = $obj->getEntityManager();
         $this->assertInstanceOf(EntityManagerInterface::class, $res);
         $this->assertSame($this->entityManager, $res);
+    }
+
+    /**
+     * Tests getEventDispatcher()
+     *
+     * @return void
+     */
+    public function testGetEventDispatcher(): void {
+
+        $obj = new TestAbstractController();
+        $obj->setContainer($this->containerBuilder);
+
+        $res = $obj->getEventDispatcher();
+        $this->assertInstanceOf(EventDispatcherInterface::class, $res);
+        $this->assertSame($this->eventDispatcher, $res);
     }
 
     /**
