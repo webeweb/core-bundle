@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\CoreBundle\Tests;
 
-use Closure;
 use Doctrine\ORM\EntityManagerInterface;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\LoggerInterface;
@@ -186,9 +185,9 @@ abstract class AbstractTestCase extends TestCase {
     /**
      * Get the dispatch() method for an EventDispatcher.
      *
-     * @return Closure Returns the dispatch() method for an EventDispatcher.
+     * @return callable Returns the dispatch() method for an EventDispatcher.
      */
-    public static function getEventDispatcherDispatchFunction(): Closure {
+    public static function getEventDispatcherDispatchFunction(): callable {
         return TestCaseHelper::getEventDispatcherDispatchFunction();
     }
 

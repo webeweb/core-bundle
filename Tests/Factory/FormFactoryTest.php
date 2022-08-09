@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Factory;
 
-use Closure;
 use WBW\Bundle\CoreBundle\Factory\FormFactory;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Assets\TestChoiceValue;
@@ -79,14 +78,14 @@ class FormFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getChoiceLabelClosure()
+     * Tests getChoiceLabelCallback()
      *
      * @return void
      */
-    public function testGetChoiceLabelClosure(): void {
+    public function testGetChoiceLabelCallback(): void {
 
-        $res = TestFormFactory::getChoiceLabelClosure([]);
-        $this->assertInstanceOf(Closure::class, $res);
+        $res = TestFormFactory::getChoiceLabelCallback([]);
+        $this->assertIsCallable($res);
 
         $this->assertEquals("This option must implements [Translated]ChoiceLabelInterface", $res($this->choiceValues[0]));
         $this->assertEquals("This option must implements [Translated]ChoiceLabelInterface", $res($this->choiceValues[1]));
@@ -101,14 +100,14 @@ class FormFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getChoiceValueClosure()
+     * Tests getChoiceValueCallback()
      *
      * @return void
      */
-    public function testGetChoiceValueClosure(): void {
+    public function testGetChoiceValueCallback(): void {
 
-        $res = TestFormFactory::getChoiceValueClosure();
-        $this->assertInstanceOf(Closure::class, $res);
+        $res = TestFormFactory::getChoiceValueCallback();
+        $this->assertIsCallable($res);
 
         $this->assertEquals("", $res($this->choiceValues[0]));
         $this->assertEquals("value", $res($this->choiceValues[1]));
@@ -176,7 +175,7 @@ class FormFactoryTest extends AbstractTestCase {
         $this->assertSame($this->entities[1], $res["choices"][1]);
         $this->assertSame($this->entities[2], $res["choices"][2]);
 
-        $this->assertInstanceOf(Closure::class, $res["choice_label"]);
+        $this->assertIsCallable($res["choice_label"]);
         $this->assertEquals("─ This option must implements [Translated]ChoiceLabelInterface", $res["choice_label"]($res["choices"][0]));
         $this->assertEquals("─ This option must implements [Translated]ChoiceLabelInterface", $res["choice_label"]($res["choices"][1]));
         $this->assertEquals("─ This option must implements [Translated]ChoiceLabelInterface", $res["choice_label"]($res["choices"][2]));
@@ -207,9 +206,9 @@ class FormFactoryTest extends AbstractTestCase {
         $this->assertSame($arg[0], $res["choices"][0]);
         $this->assertSame($arg[1], $res["choices"][1]);
 
-        $this->assertInstanceOf(Closure::class, $res["choice_label"]);
+        $this->assertIsCallable($res["choice_label"]);
 
-        $this->assertInstanceOf(Closure::class, $res["choice_value"]);
+        $this->assertIsCallable($res["choice_value"]);
     }
 
     /**
@@ -233,7 +232,7 @@ class FormFactoryTest extends AbstractTestCase {
         $this->assertSame($this->entities[1], $res["choices"][2]);
         $this->assertSame($this->entities[2], $res["choices"][3]);
 
-        $this->assertInstanceOf(Closure::class, $res["choice_label"]);
+        $this->assertIsCallable($res["choice_label"]);
     }
 
     /**

@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Factory;
 
-use Closure;
 use WBW\Bundle\CoreBundle\Factory\FormFactory;
 
 /**
@@ -25,14 +24,14 @@ class TestFormFactory extends FormFactory {
     /**
      * {@inheritdoc}
      */
-    public static function getChoiceLabelClosure(array $options): Closure {
-        return parent::getChoiceLabelClosure($options);
+    public static function getChoiceLabelCallback(array $options): callable {
+        return parent::getChoiceLabelCallback($options);
     }
 
     /**
      * {@inheritdoc}
      */
-    public static function getChoiceValueClosure(): Closure {
-        return parent::getChoiceValueClosure();
+    public static function getChoiceValueCallback(): callable {
+        return parent::getChoiceValueCallback();
     }
 }

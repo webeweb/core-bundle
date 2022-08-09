@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\CoreBundle\Factory;
 
-use Closure;
 use ReflectionClass;
 use ReflectionException;
 use WBW\Bundle\CoreBundle\Renderer\FormRenderer;
@@ -27,12 +26,12 @@ use WBW\Library\Types\Helper\ArrayHelper;
 class FormFactory {
 
     /**
-     * Get a choice label closure.
+     * Get a choice label callback.
      *
      * @param array $options The options
-     * @return Closure Returns the choice label closure.
+     * @return callable Returns the choice label callback.
      */
-    protected static function getChoiceLabelClosure(array $options): Closure {
+    protected static function getChoiceLabelCallback(array $options): callable {
 
         $options["translator"] = ArrayHelper::get($options, "translator");
 
@@ -42,11 +41,11 @@ class FormFactory {
     }
 
     /**
-     * Get a choice value closure.
+     * Get a choice value callback.
      *
-     * @return Closure Returns the choice value closure.
+     * @return callable Returns the choice value callback.
      */
-    protected static function getChoiceValueClosure(): Closure {
+    protected static function getChoiceValueCallback(): callable {
         return function(ChoiceValueInterface $entity = null): ?string {
             return null !== $entity ? $entity->getChoiceValue() : "";
         };
@@ -104,11 +103,11 @@ class FormFactory {
         $output = [
             "class"        => $class,
             "choices"      => [],
-            "choice_label" => static::getChoiceLabelClosure($options),
+            "choice_label" => static::getChoiceLabelCallback($options),
         ];
 
         if (true === static::isChoiceValueInterface($class)) {
-            $output["choice_value"] = static::getChoiceValueClosure();
+            $output["choice_value"] = static::getChoiceValueCallback();
         }
 
         $options["empty"] = ArrayHelper::get($options, "empty", false);

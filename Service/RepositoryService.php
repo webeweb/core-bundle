@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\CoreBundle\Service;
 
-use Closure;
 use Doctrine\DBAL\DBALException;
 use Doctrine\DBAL\Exception;
 use Doctrine\DBAL\Statement;
@@ -83,7 +82,7 @@ class RepositoryService implements RepositoryServiceInterface {
             $reports = array_merge($reports, $this->findRepositoryReports($current));
         }
 
-        usort($reports, static::getRepositoryReportSortClosure());
+        usort($reports, static::getRepositoryReportSortCallback());
 
         return $reports;
     }
@@ -126,11 +125,11 @@ class RepositoryService implements RepositoryServiceInterface {
     }
 
     /**
-     * Get a repository report sort closure.
+     * Get a repository report sort callback.
      *
-     * @return Closure Returns the repository report sort closure.
+     * @return callable Returns the repository report sort callback.
      */
-    public static function getRepositoryReportSortClosure(): Closure {
+    public static function getRepositoryReportSortCallback(): callable {
 
         return function(RepositoryReport $a, RepositoryReport $b): int {
 

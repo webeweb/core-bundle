@@ -11,9 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Tests;
 
-use Closure;
 use Symfony\Component\HttpKernel\Kernel;
-use Symfony\Component\Routing\RouterInterface;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 /**
  * Test case helper.
@@ -26,9 +25,9 @@ class TestCaseHelper {
     /**
      * Get dispatch() function for an event dispatcher.
      *
-     * @return Closure Returns dispatch() function for an event dispatcher.
+     * @return callable Returns dispatch() function for an event dispatcher.
      */
-    public static function getEventDispatcherDispatchFunction(): Closure {
+    public static function getEventDispatcherDispatchFunction(): callable {
 
         if (Kernel::VERSION_ID < 40300) {
             return function($eventName, $event) {
@@ -44,10 +43,10 @@ class TestCaseHelper {
     /**
      * Get generate() function for a router.
      *
-     * @return Closure Returns generate() function for a router.
+     * @return callable Returns generate() function for a router.
      */
-    public static function getRouterGenerateFunction(): Closure {
-        return function($name, array $parameters = [], int $referenceType = RouterInterface::ABSOLUTE_PATH) {
+    public static function getRouterGenerateFunction(): callable {
+        return function($name, array $parameters = [], int $referenceType = UrlGeneratorInterface::ABSOLUTE_PATH) {
             return $name;
         };
     }
@@ -55,10 +54,10 @@ class TestCaseHelper {
     /**
      * Get a trans() function for a translator.
      *
-     * @return Closure Returns the trans() function for a translator.
+     * @return callable Returns the trans() function for a translator.
      */
-    public static function getTranslatorTransFunction(): Closure {
-        return function($id, array $parameters = [], string $domain = null, string $locale = null) {
+    public static function getTranslatorTransFunction(): callable {
+        return function($id, array $parameters = [], string $domain = null, string $locale = null): ?string {
             return $id;
         };
     }
