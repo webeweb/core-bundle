@@ -46,6 +46,7 @@ class TestCaseHelper {
      * @return callable Returns generate() function for a router.
      */
     public static function getRouterGenerateFunction(): callable {
+
         return function($name, array $parameters = [], int $referenceType = UrlGeneratorInterface::ABSOLUTE_PATH) {
             return $name;
         };
@@ -57,6 +58,7 @@ class TestCaseHelper {
      * @return callable Returns the trans() function for a translator.
      */
     public static function getTranslatorTransFunction(): callable {
+
         return function($id, array $parameters = [], string $domain = null, string $locale = null): ?string {
             return $id;
         };

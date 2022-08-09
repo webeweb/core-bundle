@@ -100,12 +100,12 @@ class FormHelperTest extends AbstractTestCase {
      */
     public function testCheckCollectionWithRedirectResponseException(): void {
 
-        // Set a dispatch function.
-        $dispatchFunction = TestCaseHelper::getEventDispatcherDispatchFunction();
+        // Set a dispatch() callback.
+        $dispatchCallback = TestCaseHelper::getEventDispatcherDispatchFunction();
 
         // Set the Event dispatcher mock.
         $this->eventDispatcher->expects($this->any())->method("hasListeners")->willReturn(true);
-        $this->eventDispatcher->expects($this->any())->method("dispatch")->willReturnCallback($dispatchFunction);
+        $this->eventDispatcher->expects($this->any())->method("dispatch")->willReturnCallback($dispatchCallback);
 
         $obj = new FormHelper($this->entityManager, $this->eventDispatcher);
 

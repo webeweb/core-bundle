@@ -24,7 +24,6 @@ use WBW\Bundle\CoreBundle\Event\ToastEvent;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
 use WBW\Bundle\CoreBundle\Helper\FormHelper;
-use WBW\Bundle\CoreBundle\Repository\RepositoryHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Controller\TestAbstractController;
 use WBW\Bundle\CoreBundle\Tests\TestCaseHelper;
@@ -275,12 +274,12 @@ class AbstractControllerTest extends AbstractTestCase {
         // Set a Notification mock.
         $notification = $this->getMockBuilder(NotificationInterface::class)->getMock();
 
-        // Set a dispatch function.
-        $dispatchFunction = TestCaseHelper::getEventDispatcherDispatchFunction();
+        // Set a dispatch() callback.
+        $dispatchCallback = TestCaseHelper::getEventDispatcherDispatchFunction();
 
         // Set the Event dispatcher mock.
         $this->eventDispatcher->expects($this->any())->method("hasListeners")->willReturn(true);
-        $this->eventDispatcher->expects($this->any())->method("dispatch")->willReturnCallback($dispatchFunction);
+        $this->eventDispatcher->expects($this->any())->method("dispatch")->willReturnCallback($dispatchCallback);
 
         $obj = new TestAbstractController();
         $obj->setContainer($this->containerBuilder);
@@ -323,12 +322,12 @@ class AbstractControllerTest extends AbstractTestCase {
         // Set a Toast mock.
         $toast = $this->getMockBuilder(ToastInterface::class)->getMock();
 
-        // Set a dispatch function.
-        $dispatchFunction = TestCaseHelper::getEventDispatcherDispatchFunction();
+        // Set a dispatch() callback.
+        $dispatchCallback = TestCaseHelper::getEventDispatcherDispatchFunction();
 
         // Set the Event dispatcher mock.
         $this->eventDispatcher->expects($this->any())->method("hasListeners")->willReturn(true);
-        $this->eventDispatcher->expects($this->any())->method("dispatch")->willReturnCallback($dispatchFunction);
+        $this->eventDispatcher->expects($this->any())->method("dispatch")->willReturnCallback($dispatchCallback);
 
         $obj = new TestAbstractController();
         $obj->setContainer($this->containerBuilder);
