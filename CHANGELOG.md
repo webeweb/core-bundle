@@ -1,8 +1,9 @@
 CHANGELOG
 =========
 
-### master
+### [3.10.0](https://github.com/webeweb/core-bundle/tree/v3.10.0) (2022-08-09)
 
+- Improve code quality
 - Update CSS classes view (contains basic CSS classes)
 
 ### [3.9.0](https://github.com/webeweb/core-bundle/tree/v3.9.0) (2022-07-07)
