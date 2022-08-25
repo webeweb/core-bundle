@@ -66,6 +66,7 @@ use WBW\Library\Symfony\Manager\QuoteManager;
 use WBW\Library\Symfony\Provider\Quote\WorldsWisdomQuoteProvider;
 use WBW\Library\Symfony\Provider\Quote\YamlQuoteProvider;
 use WBW\Library\Symfony\Service\TokenGeneratorService;
+use WBW\Library\Symfony\Service\TokenGeneratorServiceInterface;
 
 /**
  * Core extension test.
@@ -207,7 +208,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(RepositoryService::class, $this->containerBuilder->get("wbw.core.repository.repository_helper"));
         $this->assertInstanceOf(RepositoryService::class, $this->containerBuilder->get(RepositoryServiceInterface::SERVICE_NAME));
         $this->assertInstanceOf(StatementService::class, $this->containerBuilder->get(StatementServiceInterface::SERVICE_NAME));
-        $this->assertInstanceOf(TokenGeneratorService::class, $this->containerBuilder->get(TokenGeneratorService::SERVICE_NAME));
+        $this->assertInstanceOf(TokenGeneratorService::class, $this->containerBuilder->get(TokenGeneratorServiceInterface::SERVICE_NAME));
 
         // Twig extensions
         $this->assertInstanceOf(AssetsTwigExtension::class, $this->containerBuilder->get(AssetsTwigExtension::SERVICE_NAME));
