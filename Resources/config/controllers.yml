@@ -1,0 +1,11 @@
+# Resources/config/controllers.yml
+services:
+
+    wbw.core.controller.twig:
+        class: WBW\Bundle\CoreBundle\Controller\TwigController
+        calls:
+            - [ "setContainer", [ "@service_container" ] ]
+
+    WBW\Bundle\CoreBundle\Controller\TwigController:
+        alias:  "wbw.core.controller.twig"
+        public: true
