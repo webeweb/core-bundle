@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Add controllers configuration
+
 ### [3.11.0](https://github.com/webeweb/core-bundle/tree/v3.11.0) (2022-08-11)
 
 - Update CSS classes view (contains basic CSS classes)
