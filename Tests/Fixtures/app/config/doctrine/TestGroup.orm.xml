@@ -7,10 +7,10 @@
     <entity name="WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestGroup" table="wbw_core_group">
 
         <id name="id" column="id" type="integer">
-            <generator strategy="AUTO"/>
+            <generator/>
         </id>
 
-        <field name="name" column="name" type="string"/>
+        <field name="name" column="name"/>
 
     </entity>
 

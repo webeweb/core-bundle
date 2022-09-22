@@ -7,13 +7,13 @@
     <entity name="WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser" table="wbw_core_user">
 
         <id name="id" column="id" type="integer">
-            <generator strategy="AUTO"/>
+            <generator/>
         </id>
 
-        <field name="password" column="password" type="string"/>
+        <field name="password" column="password"/>
         <field name="roles" column="roles" type="array"/>
-        <field name="salt" column="salt" type="string"/>
-        <field name="username" column="username" type="string"/>
+        <field name="salt" column="salt"/>
+        <field name="username" column="username"/>
 
     </entity>
 
