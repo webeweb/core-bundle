@@ -49,6 +49,7 @@ class StringTwigExtension extends AbstractTwigExtension {
      * @return TwigFilter[] Returns the Twig filters.
      */
     public function getFilters(): array {
+
         return [
             new TwigFilter("dateFormat", [$this, "dateFormat"], ["is_safe" => ["html"]]),
 
@@ -74,6 +75,7 @@ class StringTwigExtension extends AbstractTwigExtension {
      * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions(): array {
+
         return [
             new TwigFunction("dateFormat", [$this, "dateFormat"], ["is_safe" => ["html"]]),
 

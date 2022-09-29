@@ -28,6 +28,7 @@ class FOSUserNavigationFactory {
      * @return BreadcrumbNode[] Returns the FOSUser breadcrumb nodes.
      */
     public static function newFontAwesomeBreadcrumbNodes(): array {
+
         return [
             new BreadcrumbNode("label.edit_profile", "fa:user", "fos_user_profile_edit", NavigationNodeInterface::MATCHER_ROUTER),
             new BreadcrumbNode("label.show_profile", "fa:user", "fos_user_profile_show", NavigationNodeInterface::MATCHER_ROUTER),
@@ -41,6 +42,7 @@ class FOSUserNavigationFactory {
      * @return BreadcrumbNode[] Returns the FOSUser breadcrumb nodes.
      */
     public static function newMaterialDesignIconicFontBreadcrumbNodes(): array {
+
         return [
             new BreadcrumbNode("label.edit_profile", "zmdi:account", "fos_user_profile_edit", NavigationNodeInterface::MATCHER_ROUTER),
             new BreadcrumbNode("label.show_profile", "zmdi:account", "fos_user_profile_show", NavigationNodeInterface::MATCHER_ROUTER),

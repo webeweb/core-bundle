@@ -80,6 +80,7 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
      * @return string[] Returns the animations enumeration.
      */
     public static function enumAnimations(): array {
+
         return [
             self::FONT_AWESOME_ANIMATION_PULSE,
             self::FONT_AWESOME_ANIMATION_SPIN,
@@ -92,6 +93,7 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
      * @return string[] Returns the fonts enumeration.
      */
     public static function enumFonts(): array {
+
         return [
             self::FONT_AWESOME_FONT,
             self::FONT_AWESOME_FONT_BOLD,
@@ -107,6 +109,7 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
      * @return string[] Returns the pulls enumeration.
      */
     public static function enumPulls(): array {
+
         return [
             self::FONT_AWESOME_PULL_LEFT,
             self::FONT_AWESOME_PULL_RIGHT,
@@ -119,6 +122,7 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
      * @return string[] Returns the sizes enumeration.
      */
     public static function enumSizes(): array {
+
         return [
             self::FONT_AWESOME_SIZE_LG,
             self::FONT_AWESOME_SIZE_SM,

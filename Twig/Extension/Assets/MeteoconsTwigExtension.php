@@ -36,6 +36,7 @@ class MeteoconsTwigExtension extends AbstractMeteoconsTwigExtension implements I
      * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions(): array {
+
         return [
             new TwigFunction("meteoconsIcon", [$this, "meteoconsIconFunction"], ["is_safe" => ["html"]]),
         ];

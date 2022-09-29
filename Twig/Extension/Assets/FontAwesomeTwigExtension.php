@@ -68,6 +68,7 @@ class FontAwesomeTwigExtension extends AbstractFontAwesomeTwigExtension implemen
      * @return TwigFilter[] Returns the Twig filters.
      */
     public function getFilters(): array {
+
         return [
             new TwigFilter("fontAwesomeList", [$this, "fontAwesomeListFilter"], ["is_safe" => ["html"]]),
             new TwigFilter("faList", [$this, "fontAwesomeListFilter"], ["is_safe" => ["html"]]),
@@ -83,6 +84,7 @@ class FontAwesomeTwigExtension extends AbstractFontAwesomeTwigExtension implemen
      * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions(): array {
+
         return [
             new TwigFunction("fontAwesomeIcon", [$this, "fontAwesomeIconFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("faIcon", [$this, "fontAwesomeIconFunction"], ["is_safe" => ["html"]]),

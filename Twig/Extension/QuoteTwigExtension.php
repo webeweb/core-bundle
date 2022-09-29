@@ -56,6 +56,7 @@ class QuoteTwigExtension extends AbstractTwigExtension {
      * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions(): array {
+
         return [
             new TwigFunction("quote", [$this, "quoteFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("quoteAuthor", [$this, "quoteAuthorFunction"], ["is_safe" => ["html"]]),

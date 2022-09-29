@@ -23,6 +23,7 @@ class TestKernel extends AbstractKernel {
      * {@inheritdoc}
      */
     public function registerBundles(): array {
+
         return [
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),

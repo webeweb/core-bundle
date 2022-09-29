@@ -78,6 +78,7 @@ class ContainerTwigExtension extends AbstractTwigExtension {
      * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions(): array {
+
         return [
             new TwigFunction("getContainerParameter", [$this, "getContainerParameterFunction"]),
             new TwigFunction("coreStaticMethod", [$this, "coreStaticMethodFunction"], ["is_safe" => ["html"]]),

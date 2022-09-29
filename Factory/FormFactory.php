@@ -46,6 +46,7 @@ class FormFactory {
      * @return callable Returns the choice value callback.
      */
     protected static function getChoiceValueCallback(): callable {
+
         return function(ChoiceValueInterface $entity = null): ?string {
             return null !== $entity ? $entity->getChoiceValue() : "";
         };

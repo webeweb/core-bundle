@@ -85,6 +85,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
      * @return string[] Returns the borders enumeration.
      */
     public static function enumBorders(): array {
+
         return [
             self::MATERIAL_DESIGN_ICONIC_FONT_BORDER,
             self::MATERIAL_DESIGN_ICONIC_FONT_BORDER_CIRCLE,
@@ -97,6 +98,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
      * @return string[] Returns the flips enumeration.
      */
     public static function enumFlips(): array {
+
         return [
             self::MATERIAL_DESIGN_ICONIC_FONT_FLIP_HORIZONTAL,
             self::MATERIAL_DESIGN_ICONIC_FONT_FLIP_VERTICAL,
@@ -109,6 +111,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
      * @return string[] Returns the pulls enumeration.
      */
     public static function enumPulls(): array {
+
         return [
             self::MATERIAL_DESIGN_ICONIC_FONT_PULL_LEFT,
             self::MATERIAL_DESIGN_ICONIC_FONT_PULL_RIGHT,
@@ -121,6 +124,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
      * @return string[] Returns the rotates enumeration.
      */
     public static function enumRotates(): array {
+
         return [
             self::MATERIAL_DESIGN_ICONIC_FONT_ROTATE_90,
             self::MATERIAL_DESIGN_ICONIC_FONT_ROTATE_180,
@@ -134,6 +138,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
      * @return string[] Returns the sizes enumeration.
      */
     public static function enumSizes(): array {
+
         return [
             self::MATERIAL_DESIGN_ICONIC_FONT_SIZE_LG,
             self::MATERIAL_DESIGN_ICONIC_FONT_SIZE_2X,
@@ -149,6 +154,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
      * @return string[] Returns the spins enumeration.
      */
     public static function enumSpins(): array {
+
         return [
             self::MATERIAL_DESIGN_ICONIC_FONT_SPIN,
             self::MATERIAL_DESIGN_ICONIC_FONT_SPIN_REVERSE,

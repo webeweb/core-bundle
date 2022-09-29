@@ -159,6 +159,7 @@ class AssetsTwigExtension extends AbstractTwigExtension {
      * @return TwigFilter[] Returns the Twig filters.
      */
     public function getFilters(): array {
+
         return [
             new TwigFilter("assetExists", [$this, "assetExists"], ["is_safe" => ["html"]]),
             new TwigFilter("coreGtag", [$this, "coreGtag"], ["is_safe" => ["html"]]),
@@ -174,6 +175,7 @@ class AssetsTwigExtension extends AbstractTwigExtension {
      * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions(): array {
+
         return [
             new TwigFunction("assetExists", [$this, "assetExists"], ["is_safe" => ["html"]]),
             new TwigFunction("coreGtag", [$this, "coreGtag"], ["is_safe" => ["html"]]),

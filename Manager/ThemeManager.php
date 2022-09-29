@@ -122,6 +122,7 @@ class ThemeManager extends AbstractThemeManager {
      * {@inheritdoc}
      */
     protected function initIndex(): array {
+
         return [
             ApplicationThemeProviderInterface::class           => null,
             BreadcrumbsThemeProviderInterface::class           => null,

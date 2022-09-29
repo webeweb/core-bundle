@@ -43,6 +43,7 @@ class TestThemeManager extends AbstractThemeManager {
      * {@inheritdoc}
      */
     protected function initIndex(): array {
+
         return [
             ThemeProviderInterface::class => null,
         ];

@@ -34,6 +34,7 @@ class TestFixtures {
      * @return string[]
      */
     public static function getImages(): array {
+
         return [
             __DIR__ . "/Model/TestImage_1920x1037.jpg",
             __DIR__ . "/Model/TestImage_1920x1037.png",
