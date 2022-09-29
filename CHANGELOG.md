@@ -4,6 +4,7 @@ CHANGELOG
 ### master
 
 - Add controllers configuration
+- Improve code quality
 
 ### [3.11.0](https://github.com/webeweb/core-bundle/tree/v3.11.0) (2022-08-11)
 
