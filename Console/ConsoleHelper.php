@@ -47,10 +47,10 @@ EOT;
     /**
      * Get a checkbox.
      *
-     * @param bool $checked Checked ?
+     * @param bool|null $checked Checked ?
      * @return string Returns the checkbox.
      */
-    public static function getCheckbox(bool $checked): string {
+    public static function getCheckbox(?bool $checked): string {
 
         if (true === $checked) {
             return sprintf("<fg=green;options=bold>%s</>", OSHelper::isWindows() ? "OK" : "\xE2\x9C\x94");

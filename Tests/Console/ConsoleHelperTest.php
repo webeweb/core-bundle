@@ -56,10 +56,12 @@ EOT;
 
             $this->assertEquals("<fg=green;options=bold>\xE2\x9C\x94</>", ConsoleHelper::getCheckbox(true));
             $this->assertEquals("<fg=yellow;options=bold>!</>", ConsoleHelper::getCheckbox(false));
+            $this->assertEquals("<fg=yellow;options=bold>!</>", ConsoleHelper::getCheckbox(null));
         } else {
 
             $this->assertEquals("<fg=green;options=bold>OK</>", ConsoleHelper::getCheckbox(true));
             $this->assertEquals("<fg=yellow;options=bold>WARNING</>", ConsoleHelper::getCheckbox(false));
+            $this->assertEquals("<fg=yellow;options=bold>WARNING</>", ConsoleHelper::getCheckbox(null));
         }
     }
 
