@@ -97,6 +97,7 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
         return [
             self::FONT_AWESOME_FONT,
             self::FONT_AWESOME_FONT_BOLD,
+            self::FONT_AWESOME_FONT_DUOTONE,
             self::FONT_AWESOME_FONT_LIGHT,
             self::FONT_AWESOME_FONT_REGULAR,
             self::FONT_AWESOME_FONT_SOLID,

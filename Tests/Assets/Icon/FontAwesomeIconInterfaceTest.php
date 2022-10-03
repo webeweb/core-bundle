@@ -34,6 +34,7 @@ class FontAwesomeIconInterfaceTest extends AbstractTestCase {
 
         $this->assertEquals("", FontAwesomeIconInterface::FONT_AWESOME_FONT);
         $this->assertEquals("b", FontAwesomeIconInterface::FONT_AWESOME_FONT_BOLD);
+        $this->assertEquals("d", FontAwesomeIconInterface::FONT_AWESOME_FONT_DUOTONE);
         $this->assertEquals("l", FontAwesomeIconInterface::FONT_AWESOME_FONT_LIGHT);
         $this->assertEquals("r", FontAwesomeIconInterface::FONT_AWESOME_FONT_REGULAR);
         $this->assertEquals("s", FontAwesomeIconInterface::FONT_AWESOME_FONT_SOLID);

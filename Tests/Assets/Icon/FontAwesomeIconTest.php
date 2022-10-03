@@ -47,6 +47,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
         $res = [
             FontAwesomeIconInterface::FONT_AWESOME_FONT,
             FontAwesomeIconInterface::FONT_AWESOME_FONT_BOLD,
+            FontAwesomeIconInterface::FONT_AWESOME_FONT_DUOTONE,
             FontAwesomeIconInterface::FONT_AWESOME_FONT_LIGHT,
             FontAwesomeIconInterface::FONT_AWESOME_FONT_REGULAR,
             FontAwesomeIconInterface::FONT_AWESOME_FONT_SOLID,

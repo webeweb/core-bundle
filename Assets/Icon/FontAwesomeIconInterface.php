@@ -50,6 +50,13 @@ interface FontAwesomeIconInterface extends IconInterface {
     const FONT_AWESOME_FONT_BOLD = "b";
 
     /**
+     * Font Awesome font "duotone".
+     *
+     * @var string
+     */
+    const FONT_AWESOME_FONT_DUOTONE = "d";
+
+    /**
      * Font Awesome font "light".
      *
      * @var string
