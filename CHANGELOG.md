@@ -1,10 +1,12 @@
 CHANGELOG
 =========
 
-### master
+### [3.12.0](https://github.com/webeweb/core-bundle/tree/v3.12.0) (2022-10-03)
 
 - Add controllers configuration
+- Add duotone support forFontAwesome
 - Improve code quality
+- Update FontAwesome to 6.2.0
 
 ### [3.11.0](https://github.com/webeweb/core-bundle/tree/v3.11.0) (2022-08-11)
 
