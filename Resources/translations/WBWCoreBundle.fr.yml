@@ -5,6 +5,9 @@ email:
     unsubscribe:       "Se désinscrire"
     with_best_regards: "Cordialement"
 
+label:
+    cancel: "Annuler"
+
 message:
     welcome: "Bienvenue {{ username }}"
 
@@ -36,3 +39,14 @@ syntax_highlighter:
         no_brush:                       "Ne trouve pas d'interpréteur pour:"
         print:                          "imprimer"
         view_source:                    "voir le source"
+
+swal:
+    delete:
+        title: "Êtes-vous sûr ?"
+        text:  "Cette action est définitive et irréversible."
+    error:
+        title: "Oups !"
+        text:  "Une erreur est survenue"
+
+wait_me:
+    text: "Veuillez patienter"

@@ -1,0 +1,210 @@
+{# Resources/views/assets/_bundle_js.html.twig #}
+{% set _DOMAIN = constant("WBW\\Bundle\\CoreBundle\\Translation\\TranslatorInterface::DOMAIN") %}
+<script type="text/javascript">
+    /**
+     * Leaflet.
+     */
+    class wbwCoreLeaflet {
+
+        /**
+         * Creates a map.
+         *
+         * @param {String} id The id.
+         * @param {Array} center The center.
+         * @param {int} zoom The zoom.
+         * @param {Array<Object>} markers The markers.
+         * @returns {undefined}
+         */
+        static map(id, center, zoom, markers) {
+
+            const map = L.map(id).setView(center, zoom);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors',
+            }).addTo(map);
+
+            markers.forEach((marker) => {
+
+                if (null === marker.latitude || null === marker.longitude) {
+                    return;
+                }
+
+                L.marker([marker.latitude, marker.longitude])
+                    .bindPopup(marker.popup)
+                    .addTo(map);
+            });
+        }
+    }
+
+    /**
+     * Material Design Color Palette.
+     */
+    class wbwCoreMaterialDesignColorPalette {
+
+        /**
+         * Palette.
+         *
+         * @type {String}
+         */
+        static palette = "{{ coreStaticMethod("WBW\\Library\\Symfony\\Factory\\ColorFactory", "newMaterialDesignColorPalette")|json_encode|e("js") }}";
+
+        /**
+         * Get the colors.
+         *
+         * @param {int} number The number.
+         * @returns {Array} Returns the colors.
+         */
+        static getColors(number) {
+
+            let colors    = [];
+            const palette = wbwCoreMaterialDesignColorPalette.getPalette();
+
+            for (let j = 7; 0 <= j; --j) {
+
+                for (let i = 0; i <= 18; ++i) {
+
+                    let variant = Object.keys(palette[i]["colors"])[j];
+
+                    colors.push(palette[i]["colors"][variant]);
+                }
+            }
+
+            if (0 < number && number <= colors.length) {
+                return colors.slice(0, number);
+            }
+
+            return colors;
+        }
+
+        /**
+         * Get the palette.
+         *
+         * @returns {Array<Object>} Returns the palette.
+         */
+        static getPalette() {
+            return JSON.parse(wbwCoreMaterialDesignColorPalette.palette);
+        }
+    }
+
+    /**
+     * Sweet alert.
+     */
+    class wbwCoreSweetAlert {
+
+        /**
+         * Get the options "delete".
+         *
+         * @returns {Object} Returns the options.
+         */
+        static getOptionsDelete() {
+
+            return {
+                icon      : "warning",
+                title     : "{{ "swal.delete.title"|trans([], _DOMAIN) }}",
+                text      : "{{ "swal.delete.text"|trans([], _DOMAIN) }}",
+                buttons   : {
+                    cancel : {
+                        text   : "{{ "label.cancel"|trans([], _DOMAIN) }}",
+                        visible: true,
+                    },
+                    confirm: true,
+                },
+                dangerMode: true,
+                className : "wbwCoreSweetAlertDelete",
+            };
+        }
+
+        /**
+         * Get the options "error".
+         *
+         * @returns {Object} Returns the options.
+         */
+        static getOptionsError() {
+
+            return {
+                icon      : "error",
+                title     : "{{ "swal.error.title"|trans([], _DOMAIN)|e("js") }}",
+                text      : "{{ "swal.error.text"|trans([], _DOMAIN)|e("js") }}",
+                dangerMode: true,
+                className : "wbwCoreSweetAlertError",
+            };
+        }
+
+        /**
+         * Render an error.
+         *
+         * @returns {undefined}
+         */
+        static renderError() {
+
+            if ("function" === typeof swal) {
+                swal(wbwCoreSweetAlert.getOptionsError());
+            }
+        }
+    }
+
+    /**
+     * Wait me.
+     */
+    class wbwCoreWaitMe {
+
+        /**
+         * Get the options by default.
+         *
+         * @returns {Object} Returns the options.
+         */
+        static getOptionsDefault() {
+
+            return {
+                effect: "stretch",
+                text  : "{{ "wait_me.text"|trans([], _DOMAIN) }}",
+                bg    : "rgba(255, 255, 255, 0.75)",
+            };
+        }
+
+        /**
+         * Get the options for an element.
+         *
+         * @returns {Object} Returns the optons.
+         */
+        static getOptionsElement() {
+
+            let options    = wbwCoreWaitMe.getOptionsDefault();
+            options.effect = "progressBar";
+            delete options.text;
+
+            return options;
+        }
+
+        /**
+         * Get the options for Octopus.
+         *
+         * @returns {Object} Returns the options.
+         */
+        static getOptionsOctopus() {
+
+            return {
+                effect : "img",
+                text   : "{{ "wait_me.text"|trans([], _DOMAIN) }}",
+                bg     : "rgba(255, 255, 255, 0.98)",
+                color  : "#36d9a9",
+                maxSize: 180,
+                source : "{{ asset("bundles/wbwcore/img/octo-loader.gif") }}",
+            };
+        }
+
+        /**
+         * Render a wait me inside an element.
+         *
+         * @param {jQuery} $el The element.
+         * @param {Object} opts The options.
+         * @returns {jQuery} Returns the wait me.
+         */
+        static render($el, opts = null) {
+
+            opts = null !== opts ? opts : DataTablesServerSide.waitMeOptionsDefault();
+
+            return $el.waitMe(opts);
+        }
+    }
+</script>

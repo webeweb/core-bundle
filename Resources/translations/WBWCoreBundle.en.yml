@@ -5,6 +5,9 @@ email:
     unsubscribe:       "Unsubscribe"
     with_best_regards: "With best regards"
 
+label:
+    cancel: "Cancel"
+
 message:
     welcome: "Welcome {{ username }}"
 
@@ -36,3 +39,14 @@ syntax_highlighter:
         no_brush:                       "Can't find brush for:"
         print:                          "print"
         view_source:                    "view source"
+
+swal:
+    delete:
+        title: "Are you sure ?"
+        text:  "This action is final and irreversible."
+    error:
+        title: "Oups !"
+        text:  "An error occurs"
+
+wait_me:
+    text: "Please wait"
