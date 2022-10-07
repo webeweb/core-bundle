@@ -15,6 +15,7 @@ use WBW\Bundle\CoreBundle\DependencyInjection\Compiler\ColorProviderCompilerPass
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Library\Symfony\Color\MaterialDesignColorPalette\RedColorProvider;
 use WBW\Library\Symfony\Manager\ColorManager;
+use WBW\Library\Symfony\Provider\Color\RedColorProviderInterface;
 use WBW\Library\Symfony\Provider\ColorProviderInterface;
 
 /**
@@ -74,7 +75,7 @@ class ColorProviderCompilerPassTest extends AbstractTestCase {
         $this->assertFalse($this->containerBuilder->getDefinition(ColorManager::SERVICE_NAME)->hasMethodCall("addProvider"));
 
         // Register the Color provider.
-        $this->containerBuilder->register(RedColorProvider::SERVICE_NAME, $this->colorProvider)->addTag(RedColorProvider::COLOR_PROVIDER_TAG_NAME);
+        $this->containerBuilder->register(RedColorProvider::SERVICE_NAME, $this->colorProvider)->addTag(ColorProviderInterface::COLOR_PROVIDER_TAG_NAME);
 
         $this->assertTrue($this->containerBuilder->hasDefinition(ColorManager::SERVICE_NAME));
         $this->assertTrue($this->containerBuilder->hasDefinition(RedColorProvider::SERVICE_NAME));
