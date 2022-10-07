@@ -22,7 +22,7 @@ use WBW\Bundle\CoreBundle\Translation\TranslatorTrait;
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Provider
  */
-class SyntaxHighlighterProvider {
+class SyntaxHighlighterProvider implements SyntaxHighlighterProviderInterface {
 
     use TranslatorTrait;
 

@@ -13,7 +13,9 @@ namespace WBW\Bundle\CoreBundle\Tests\Provider;
 
 use WBW\Bundle\CoreBundle\Assets\SyntaxHighlighter\SyntaxHighlighterStrings;
 use WBW\Bundle\CoreBundle\Provider\SyntaxHighlighterProvider;
+use WBW\Bundle\CoreBundle\Provider\SyntaxHighlighterProviderInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
+use WBW\Library\Symfony\Provider\ProviderInterface;
 
 /**
  * SyntaxHighlighter provider test.
@@ -22,16 +24,6 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
  * @package WBW\Bundle\CoreBundle\Tests\Provider
  */
 class SyntaxHighlighterProviderTest extends AbstractTestCase {
-
-    /**
-     * @{inheritdoc}
-     */
-    protected function setUp(): void {
-        parent::setUp();
-
-        // Set the Translator mock.
-        $this->translator->expects($this->any())->method("trans")->willReturn("");
-    }
 
     /**
      * Tests getSyntaxHighlighterStrings()
@@ -53,5 +45,10 @@ class SyntaxHighlighterProviderTest extends AbstractTestCase {
     public function test__construct(): void {
 
         $this->assertEquals("wbw.core.provider.syntax_highlighter", SyntaxHighlighterProvider::SERVICE_NAME);
+
+        $obj = new SyntaxHighlighterProvider($this->translator);
+
+        $this->assertInstanceOf(ProviderInterface::class, $obj);
+        $this->assertInstanceOf(SyntaxHighlighterProviderInterface::class, $obj);
     }
 }
