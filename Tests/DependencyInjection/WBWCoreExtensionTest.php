@@ -64,6 +64,7 @@ use WBW\Library\Symfony\Color\MaterialDesignColorPalette\YellowColorProvider;
 use WBW\Library\Symfony\Manager\ColorManager;
 use WBW\Library\Symfony\Manager\JavascriptManager;
 use WBW\Library\Symfony\Manager\QuoteManager;
+use WBW\Library\Symfony\Manager\StylesheetManager;
 use WBW\Library\Symfony\Provider\Quote\WorldsWisdomQuoteProvider;
 use WBW\Library\Symfony\Provider\Quote\YamlQuoteProvider;
 use WBW\Library\Symfony\Service\TokenGeneratorService;
@@ -173,6 +174,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(ColorManager::class, $this->containerBuilder->get(ColorManager::SERVICE_NAME));
         $this->assertInstanceOf(JavascriptManager::class, $this->containerBuilder->get(JavascriptManager::SERVICE_NAME));
         $this->assertInstanceOf(QuoteManager::class, $this->containerBuilder->get(QuoteManager::SERVICE_NAME));
+        $this->assertInstanceOf(StylesheetManager::class, $this->containerBuilder->get(StylesheetManager::SERVICE_NAME));
         $this->assertInstanceOf(ThemeManager::class, $this->containerBuilder->get(ThemeManager::SERVICE_NAME));
 
         // Providers

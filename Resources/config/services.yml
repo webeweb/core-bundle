@@ -25,6 +25,11 @@ services:
         arguments: [ "@logger" ]
         public: true
 
+    wbw.core.manager.stylesheet:
+        class:  WBW\Library\Symfony\Manager\StylesheetManager
+        arguments: [ "@logger" ]
+        public: true
+
     wbw.core.manager.theme:
         class:  WBW\Bundle\CoreBundle\Manager\ThemeManager
         arguments: [ "@logger", "@twig" ]
