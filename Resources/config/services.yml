@@ -15,6 +15,11 @@ services:
         arguments: [ "@logger" ]
         public: true
 
+    wbw.core.manager.javascript:
+        class:  WBW\Library\Symfony\Manager\JavascriptManager
+        arguments: [ "@logger" ]
+        public: true
+
     wbw.core.manager.quote:
         class:  WBW\Library\Symfony\Manager\QuoteManager
         arguments: [ "@logger" ]
