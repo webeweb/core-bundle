@@ -13,8 +13,8 @@ namespace WBW\Bundle\CoreBundle\Tests\Provider;
 
 use WBW\Bundle\CoreBundle\Provider\JavascriptProvider;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
-use WBW\Library\Symfony\Provider\ProviderInterface;
 use WBW\Library\Symfony\Provider\JavascriptProviderInterface;
+use WBW\Library\Symfony\Provider\ProviderInterface;
 
 /**
  * Javascript provider test.
@@ -23,6 +23,25 @@ use WBW\Library\Symfony\Provider\JavascriptProviderInterface;
  * @package WBW\Bundle\CoreBundle\Tests\Provider
  */
 class JavascriptProviderTest extends AbstractTestCase {
+
+    /**
+     * Tests getJavascripts()
+     *
+     * @return void
+     */
+    public function testGetJaavscripts(): void {
+
+        $obj = new JavascriptProvider();
+
+        $res = [
+            "wbwCoreLeaflet"                    => "@WBWCore/assets/wbwCoreLeaflet.js.twig",
+            "wbwCoreMaterialDesignColorPalette" => "@WBWCore/assets/wbwCoreMaterialDesignColorPalette.js.twig",
+            "wbwCoreSweetAlert"                 => "@WBWCore/assets/wbwCoreSweetAlert.js.twig",
+            "wbwCoreWaitMe"                     => "@WBWCore/assets/wbwCoreWaitMe.js.twig",
+        ];
+
+        $this->assertEquals($res, $obj->getJavascripts());
+    }
 
     /**
      * Tests __construct()

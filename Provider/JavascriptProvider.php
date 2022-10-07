@@ -32,6 +32,12 @@ class JavascriptProvider implements JavascriptProviderInterface {
      * {@inheritdoc}
      */
     public function getJavascripts(): array {
-        return [];
+
+        return [
+            "wbwCoreLeaflet"                    => "@WBWCore/assets/wbwCoreLeaflet.js.twig",
+            "wbwCoreMaterialDesignColorPalette" => "@WBWCore/assets/wbwCoreMaterialDesignColorPalette.js.twig",
+            "wbwCoreSweetAlert"                 => "@WBWCore/assets/wbwCoreSweetAlert.js.twig",
+            "wbwCoreWaitMe"                     => "@WBWCore/assets/wbwCoreWaitMe.js.twig",
+        ];
     }
 }
