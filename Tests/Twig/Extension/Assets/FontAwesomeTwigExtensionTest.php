@@ -44,9 +44,9 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
             "animation"  => "spin",
             "style"      => "color: #FFFFFF;",
         ];
+        $exp = '<i class="fas fa-camera-retro fa-lg fa-fw fa-border fa-pull-left fa-spin" style="color: #FFFFFF;"></i>';
 
-        $res = '<i class="fas fa-camera-retro fa-lg fa-fw fa-border fa-pull-left fa-spin" style="color: #FFFFFF;"></i>';
-        $this->assertEquals($res, $obj->fontAwesomeIconFunction($arg));
+        $this->assertEquals($exp, $obj->fontAwesomeIconFunction($arg));
     }
 
     /**
@@ -56,12 +56,12 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
      */
     public function testFontAwesomeIconFunctionWithoutArguments(): void {
 
-        $arg = [];
-
         $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
 
-        $res = '<i class="fa fa-home"></i>';
-        $this->assertEquals($res, $obj->fontAwesomeIconFunction($arg));
+        $arg = [];
+        $exp = '<i class="fa fa-home"></i>';
+
+        $this->assertEquals($exp, $obj->fontAwesomeIconFunction($arg));
     }
 
     /**
@@ -74,9 +74,9 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
         $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
 
         $arg = $obj->fontAwesomeListIconFilter($obj->fontAwesomeIconFunction([]), "content");
+        $exp = '<ul class="fa-ul"><li><span class="fa-li"><i class="fa fa-home"></i></span>content</li></ul>';
 
-        $res = '<ul class="fa-ul"><li><span class="fa-li"><i class="fa fa-home"></i></span>content</li></ul>';
-        $this->assertEquals($res, $obj->fontAwesomeListFilter($arg));
+        $this->assertEquals($exp, $obj->fontAwesomeListFilter($arg));
     }
 
     /**
@@ -89,9 +89,9 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
         $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
 
         $arg = $obj->fontAwesomeIconFunction([]);
+        $exp = '<li><span class="fa-li"><i class="fa fa-home"></i></span></li>';
 
-        $res = '<li><span class="fa-li"><i class="fa fa-home"></i></span></li>';
-        $this->assertEquals($res, $obj->fontAwesomeListIconFilter($arg, null));
+        $this->assertEquals($exp, $obj->fontAwesomeListIconFilter($arg, null));
     }
 
     /**
@@ -104,9 +104,9 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
         $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
 
         $arg = $obj->fontAwesomeIconFunction([]);
+        $exp = '<li><span class="fa-li"><i class="fa fa-home"></i></span>content</li>';
 
-        $res = '<li><span class="fa-li"><i class="fa fa-home"></i></span>content</li>';
-        $this->assertEquals($res, $obj->fontAwesomeListIconFilter($arg, "content"));
+        $this->assertEquals($exp, $obj->fontAwesomeListIconFilter($arg, "content"));
     }
 
     /**
@@ -178,8 +178,9 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
 
         $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
 
-        $res = '<i class="fa fa-camera-retro" style="color: #FFFFFF;"></i>';
-        $this->assertEquals($res, $obj->renderIcon("camera-retro", "color: #FFFFFF;"));
+        $exp = '<i class="fa fa-camera-retro" style="color: #FFFFFF;"></i>';
+
+        $this->assertEquals($exp, $obj->renderIcon("camera-retro", "color: #FFFFFF;"));
     }
 
     /**

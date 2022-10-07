@@ -171,8 +171,9 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
 
         $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
-        $res = file_get_contents(__DIR__ . "/testSyntaxHighlighterConfigFunction.html.txt");
-        $this->assertEquals($res, $obj->syntaxHighlighterConfigFunction($this->syntaxHighlighterConfig) . "\n");
+        $exp = file_get_contents(__DIR__ . "/testSyntaxHighlighterConfigFunction.html.txt");
+
+        $this->assertEquals($exp, $obj->syntaxHighlighterConfigFunction($this->syntaxHighlighterConfig) . "\n");
     }
 
     /**
@@ -191,8 +192,9 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
 
         $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
-        $res = file_get_contents(__DIR__ . "/testSyntaxHighlighterConfigFunctionWithStrings.html.txt");
-        $this->assertEquals($res, $obj->syntaxHighlighterConfigFunction($this->syntaxHighlighterConfig) . "\n");
+        $exp = file_get_contents(__DIR__ . "/testSyntaxHighlighterConfigFunctionWithStrings.html.txt");
+
+        $this->assertEquals($exp, $obj->syntaxHighlighterConfigFunction($this->syntaxHighlighterConfig) . "\n");
     }
 
     /**
@@ -209,9 +211,9 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
             "content"  => "<span>span</span>",
             "language" => "html",
         ];
+        $exp = file_get_contents(__DIR__ . "/testSyntaxHighlighterContentFunction.html.txt");
 
-        $res = file_get_contents(__DIR__ . "/testSyntaxHighlighterContentFunction.html.txt");
-        $this->assertEquals($res, $obj->syntaxHighlighterContentFunction($arg) . "\n");
+        $this->assertEquals($exp, $obj->syntaxHighlighterContentFunction($arg) . "\n");
     }
 
     /**
@@ -257,9 +259,9 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
             "filename" => $filename,
             "language" => "php",
         ];
+        $exp = file_get_contents(__DIR__ . "/testSyntaxHighlighterContentFunctionWithFilename.html.txt");
 
-        $res = file_get_contents(__DIR__ . "/testSyntaxHighlighterContentFunctionWithFilename.html.txt");
-        $this->assertEquals($res, $obj->syntaxHighlighterContentFunction($arg) . "\n");
+        $this->assertEquals($exp, $obj->syntaxHighlighterContentFunction($arg) . "\n");
     }
 
     /**
@@ -283,8 +285,9 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
 
         $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
-        $res = file_get_contents(__DIR__ . "/testSyntaxHighlighterDefaultsFunction.html.txt");
-        $this->assertEquals($res, $obj->syntaxHighlighterDefaultsFunction($this->syntaxHighlighterDefaults) . "\n");
+        $exp = file_get_contents(__DIR__ . "/testSyntaxHighlighterDefaultsFunction.html.txt");
+
+        $this->assertEquals($exp, $obj->syntaxHighlighterDefaultsFunction($this->syntaxHighlighterDefaults) . "\n");
     }
 
     /**
@@ -296,8 +299,9 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
 
         $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
-        $res = "<script type=\"text/javascript\">\ncontent\n</script>";
-        $this->assertEquals($res, $obj->syntaxHighlighterScriptFilter("content"));
+        $exp = "<script type=\"text/javascript\">\ncontent\n</script>";
+
+        $this->assertEquals($exp, $obj->syntaxHighlighterScriptFilter("content"));
     }
 
     /**
@@ -320,8 +324,9 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
 
         $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
 
-        $res = file_get_contents(__DIR__ . "/testSyntaxHighlighterStringsFunction.html.txt");
-        $this->assertEquals($res, $obj->syntaxHighlighterStringsFunction($this->syntaxHighlighterStrings) . "\n");
+        $exp = file_get_contents(__DIR__ . "/testSyntaxHighlighterStringsFunction.html.txt");
+
+        $this->assertEquals($exp, $obj->syntaxHighlighterStringsFunction($this->syntaxHighlighterStrings) . "\n");
     }
 
     /**

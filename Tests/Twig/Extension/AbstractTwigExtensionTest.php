@@ -33,9 +33,9 @@ class AbstractTwigExtensionTest extends AbstractTestCase {
         $arg = [
             "type" => "text/javascript",
         ];
+        $exp = file_get_contents(__DIR__ . "/AbstractTwigExtensionTest.testCoreHtmlElement.html.txt");
 
-        $res = file_get_contents(__DIR__ . "/AbstractTwigExtensionTest.testCoreHtmlElement.html.txt");
-        $this->assertEquals($res, TestTwigExtension::coreHtmlElement("script", "\n    $(document).ready(function() {});\n", $arg) . "\n");
+        $this->assertEquals($exp, TestTwigExtension::coreHtmlElement("script", "\n    $(document).ready(function() {});\n", $arg) . "\n");
     }
 
     /**

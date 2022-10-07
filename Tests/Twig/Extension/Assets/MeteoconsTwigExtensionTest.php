@@ -70,9 +70,9 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
             "name"  => "B",
             "style" => "color: #FFFFFF;",
         ];
+        $exp = '<i class="meteocons" data-meteocons="B" style="color: #FFFFFF;"></i>';
 
-        $res = '<i class="meteocons" data-meteocons="B" style="color: #FFFFFF;"></i>';
-        $this->assertEquals($res, $obj->meteoconsIconFunction($arg));
+        $this->assertEquals($exp, $obj->meteoconsIconFunction($arg));
     }
 
     /**
@@ -87,9 +87,9 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
         $arg = [
             "name" => "B",
         ];
+        $exp = '<i class="meteocons" data-meteocons="B"></i>';
 
-        $res = '<i class="meteocons" data-meteocons="B"></i>';
-        $this->assertEquals($res, $obj->meteoconsIconFunction($arg));
+        $this->assertEquals($exp, $obj->meteoconsIconFunction($arg));
     }
 
     /**
@@ -104,9 +104,9 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
         $arg = [
             "style" => "color: #FFFFFF;",
         ];
+        $exp = '<i class="meteocons" data-meteocons="A" style="color: #FFFFFF;"></i>';
 
-        $res = '<i class="meteocons" data-meteocons="A" style="color: #FFFFFF;"></i>';
-        $this->assertEquals($res, $obj->meteoconsIconFunction($arg));
+        $this->assertEquals($exp, $obj->meteoconsIconFunction($arg));
     }
 
     /**
@@ -119,9 +119,9 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
         $obj = new MeteoconsTwigExtension($this->twigEnvironment);
 
         $arg = [];
+        $exp = '<i class="meteocons" data-meteocons="A"></i>';
 
-        $res = '<i class="meteocons" data-meteocons="A"></i>';
-        $this->assertEquals($res, $obj->meteoconsIconFunction($arg));
+        $this->assertEquals($exp, $obj->meteoconsIconFunction($arg));
     }
 
     /**
@@ -133,8 +133,9 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
 
         $obj = new MeteoconsTwigExtension($this->twigEnvironment);
 
-        $res = '<i class="meteocons" data-meteocons="B" style="color: #FFFFFF;"></i>';
-        $this->assertEquals($res, $obj->renderIcon("B", "color: #FFFFFF;"));
+        $exp = '<i class="meteocons" data-meteocons="B" style="color: #FFFFFF;"></i>';
+
+        $this->assertEquals($exp, $obj->renderIcon("B", "color: #FFFFFF;"));
     }
 
     /**

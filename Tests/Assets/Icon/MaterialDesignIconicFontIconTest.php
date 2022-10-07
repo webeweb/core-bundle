@@ -30,11 +30,12 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
      */
     public function testEnumBorders(): void {
 
-        $res = [
+        $exp = [
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_BORDER,
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_BORDER_CIRCLE,
         ];
-        $this->assertEquals($res, MaterialDesignIconicFontIcon::enumBorders());
+
+        $this->assertEquals($exp, MaterialDesignIconicFontIcon::enumBorders());
     }
 
     /**
@@ -44,11 +45,12 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
      */
     public function testEnumFlips(): void {
 
-        $res = [
+        $exp = [
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_FLIP_HORIZONTAL,
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_FLIP_VERTICAL,
         ];
-        $this->assertEquals($res, MaterialDesignIconicFontIcon::enumFlips());
+
+        $this->assertEquals($exp, MaterialDesignIconicFontIcon::enumFlips());
     }
 
     /**
@@ -58,11 +60,12 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
      */
     public function testEnumPulls(): void {
 
-        $res = [
+        $exp = [
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_PULL_LEFT,
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_PULL_RIGHT,
         ];
-        $this->assertEquals($res, MaterialDesignIconicFontIcon::enumPulls());
+
+        $this->assertEquals($exp, MaterialDesignIconicFontIcon::enumPulls());
     }
 
     /**
@@ -72,12 +75,13 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
      */
     public function testEnumRotates(): void {
 
-        $res = [
+        $exp = [
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_ROTATE_90,
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_ROTATE_180,
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_ROTATE_270,
         ];
-        $this->assertEquals($res, MaterialDesignIconicFontIcon::enumRotates());
+
+        $this->assertEquals($exp, MaterialDesignIconicFontIcon::enumRotates());
     }
 
     /**
@@ -87,14 +91,15 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
      */
     public function testEnumSizes(): void {
 
-        $res = [
+        $exp = [
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SIZE_LG,
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SIZE_2X,
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SIZE_3X,
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SIZE_4X,
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SIZE_5X,
         ];
-        $this->assertEquals($res, MaterialDesignIconicFontIcon::enumSizes());
+
+        $this->assertEquals($exp, MaterialDesignIconicFontIcon::enumSizes());
     }
 
     /**
@@ -104,11 +109,12 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
      */
     public function testEnumSpins(): void {
 
-        $res = [
+        $exp = [
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SPIN,
             MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SPIN_REVERSE,
         ];
-        $this->assertEquals($res, MaterialDesignIconicFontIcon::enumSpins());
+
+        $this->assertEquals($exp, MaterialDesignIconicFontIcon::enumSpins());
     }
 
     /**
@@ -120,8 +126,8 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
 
         $obj = new MaterialDesignIconicFontIcon();
 
-        $obj->setBorder(MaterialDesignIconicFontIcon::MATERIAL_DESIGN_ICONIC_FONT_BORDER);
-        $this->assertEquals(MaterialDesignIconicFontIcon::MATERIAL_DESIGN_ICONIC_FONT_BORDER, $obj->getBorder());
+        $obj->setBorder(MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_BORDER);
+        $this->assertEquals(MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_BORDER, $obj->getBorder());
     }
 
     /**
@@ -159,8 +165,8 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
 
         $obj = new MaterialDesignIconicFontIcon();
 
-        $obj->setFlip(MaterialDesignIconicFontIcon::MATERIAL_DESIGN_ICONIC_FONT_FLIP_HORIZONTAL);
-        $this->assertEquals(MaterialDesignIconicFontIcon::MATERIAL_DESIGN_ICONIC_FONT_FLIP_HORIZONTAL, $obj->getFlip());
+        $obj->setFlip(MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_FLIP_HORIZONTAL);
+        $this->assertEquals(MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_FLIP_HORIZONTAL, $obj->getFlip());
     }
 
     /**
@@ -185,8 +191,8 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
 
         $obj = new MaterialDesignIconicFontIcon();
 
-        $obj->setPull(MaterialDesignIconicFontIcon::MATERIAL_DESIGN_ICONIC_FONT_PULL_LEFT);
-        $this->assertEquals(MaterialDesignIconicFontIcon::MATERIAL_DESIGN_ICONIC_FONT_PULL_LEFT, $obj->getPull());
+        $obj->setPull(MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_PULL_LEFT);
+        $this->assertEquals(MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_PULL_LEFT, $obj->getPull());
     }
 
     /**
@@ -211,8 +217,8 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
 
         $obj = new MaterialDesignIconicFontIcon();
 
-        $obj->setRotate(MaterialDesignIconicFontIcon::MATERIAL_DESIGN_ICONIC_FONT_ROTATE_90);
-        $this->assertEquals(MaterialDesignIconicFontIcon::MATERIAL_DESIGN_ICONIC_FONT_ROTATE_90, $obj->getRotate());
+        $obj->setRotate(MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_ROTATE_90);
+        $this->assertEquals(MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_ROTATE_90, $obj->getRotate());
     }
 
     /**
@@ -237,8 +243,8 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
 
         $obj = new MaterialDesignIconicFontIcon();
 
-        $obj->setSize(MaterialDesignIconicFontIcon::MATERIAL_DESIGN_ICONIC_FONT_SIZE_LG);
-        $this->assertEquals(MaterialDesignIconicFontIcon::MATERIAL_DESIGN_ICONIC_FONT_SIZE_LG, $obj->getSize());
+        $obj->setSize(MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SIZE_LG);
+        $this->assertEquals(MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SIZE_LG, $obj->getSize());
     }
 
     /**
@@ -263,8 +269,8 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
 
         $obj = new MaterialDesignIconicFontIcon();
 
-        $obj->setSpin(MaterialDesignIconicFontIcon::MATERIAL_DESIGN_ICONIC_FONT_SPIN);
-        $this->assertEquals(MaterialDesignIconicFontIcon::MATERIAL_DESIGN_ICONIC_FONT_SPIN, $obj->getSpin());
+        $obj->setSpin(MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SPIN);
+        $this->assertEquals(MaterialDesignIconicFontIconInterface::MATERIAL_DESIGN_ICONIC_FONT_SPIN, $obj->getSpin());
     }
 
     /**

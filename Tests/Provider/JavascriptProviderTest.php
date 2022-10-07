@@ -29,18 +29,18 @@ class JavascriptProviderTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetJaavscripts(): void {
+    public function testGetJavascripts(): void {
 
         $obj = new JavascriptProvider();
 
-        $res = [
+        $exp = [
             "wbwCoreLeaflet"                    => "@WBWCore/assets/wbwCoreLeaflet.js.twig",
             "wbwCoreMaterialDesignColorPalette" => "@WBWCore/assets/wbwCoreMaterialDesignColorPalette.js.twig",
             "wbwCoreSweetAlert"                 => "@WBWCore/assets/wbwCoreSweetAlert.js.twig",
             "wbwCoreWaitMe"                     => "@WBWCore/assets/wbwCoreWaitMe.js.twig",
         ];
 
-        $this->assertEquals($res, $obj->getJavascripts());
+        $this->assertEquals($exp, $obj->getJavascripts());
     }
 
     /**

@@ -78,7 +78,7 @@ class AbstractCommandTest extends AbstractCommandTestCase {
      */
     public function testGetKernel(): void {
 
-        // Set an Helper set mock.
+        // Set a Helper set mock.
         $helperSet = $this->getMockBuilder(HelperSet::class)->disableOriginalConstructor()->getMock();
 
         // Set an Application mock.
@@ -101,7 +101,7 @@ class AbstractCommandTest extends AbstractCommandTestCase {
      */
     public function testGetKernelWithBaseApplication(): void {
 
-        // Set an Helper set mock.
+        // Set a Helper set mock.
         $helperSet = $this->getMockBuilder(HelperSet::class)->disableOriginalConstructor()->getMock();
 
         // Set an Application mock.
@@ -124,7 +124,8 @@ class AbstractCommandTest extends AbstractCommandTestCase {
         $obj = new TestAbstractCommand();
 
         $res = $obj->newStyle($this->input, $this->output);
-        $this->assertNotNull($res);
         $this->assertInstanceOf(StyleInterface::class, $res);
+
+        $this->assertNotNull($res);
     }
 }

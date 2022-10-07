@@ -30,11 +30,12 @@ class FontAwesomeIconTest extends AbstractTestCase {
      */
     public function testEnumAnimations(): void {
 
-        $res = [
+        $exp = [
             FontAwesomeIconInterface::FONT_AWESOME_ANIMATION_PULSE,
             FontAwesomeIconInterface::FONT_AWESOME_ANIMATION_SPIN,
         ];
-        $this->assertEquals($res, FontAwesomeIcon::enumAnimations());
+
+        $this->assertEquals($exp, FontAwesomeIcon::enumAnimations());
     }
 
     /**
@@ -44,7 +45,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
      */
     public function testEnumFonts(): void {
 
-        $res = [
+        $exp = [
             FontAwesomeIconInterface::FONT_AWESOME_FONT,
             FontAwesomeIconInterface::FONT_AWESOME_FONT_BOLD,
             FontAwesomeIconInterface::FONT_AWESOME_FONT_DUOTONE,
@@ -52,7 +53,8 @@ class FontAwesomeIconTest extends AbstractTestCase {
             FontAwesomeIconInterface::FONT_AWESOME_FONT_REGULAR,
             FontAwesomeIconInterface::FONT_AWESOME_FONT_SOLID,
         ];
-        $this->assertEquals($res, FontAwesomeIcon::enumFonts());
+
+        $this->assertEquals($exp, FontAwesomeIcon::enumFonts());
     }
 
     /**
@@ -62,11 +64,12 @@ class FontAwesomeIconTest extends AbstractTestCase {
      */
     public function testEnumPulls(): void {
 
-        $res = [
+        $exp = [
             FontAwesomeIconInterface::FONT_AWESOME_PULL_LEFT,
             FontAwesomeIconInterface::FONT_AWESOME_PULL_RIGHT,
         ];
-        $this->assertEquals($res, FontAwesomeIcon::enumPulls());
+
+        $this->assertEquals($exp, FontAwesomeIcon::enumPulls());
     }
 
     /**
@@ -76,7 +79,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
      */
     public function testEnumSizes(): void {
 
-        $res = [
+        $exp = [
             FontAwesomeIconInterface::FONT_AWESOME_SIZE_LG,
             FontAwesomeIconInterface::FONT_AWESOME_SIZE_SM,
             FontAwesomeIconInterface::FONT_AWESOME_SIZE_XS,
@@ -90,7 +93,8 @@ class FontAwesomeIconTest extends AbstractTestCase {
             FontAwesomeIconInterface::FONT_AWESOME_SIZE_9X,
             FontAwesomeIconInterface::FONT_AWESOME_SIZE_10X,
         ];
-        $this->assertEquals($res, FontAwesomeIcon::enumSizes());
+
+        $this->assertEquals($exp, FontAwesomeIcon::enumSizes());
     }
 
     /**
@@ -154,8 +158,8 @@ class FontAwesomeIconTest extends AbstractTestCase {
 
         $obj = new FontAwesomeIcon();
 
-        $obj->setFont(FontAwesomeIcon::FONT_AWESOME_FONT);
-        $this->assertEquals(FontAwesomeIcon::FONT_AWESOME_FONT, $obj->getFont());
+        $obj->setFont(FontAwesomeIconInterface::FONT_AWESOME_FONT);
+        $this->assertEquals(FontAwesomeIconInterface::FONT_AWESOME_FONT, $obj->getFont());
     }
 
     /**
@@ -180,8 +184,8 @@ class FontAwesomeIconTest extends AbstractTestCase {
 
         $obj = new FontAwesomeIcon();
 
-        $obj->setPull(FontAwesomeIcon::FONT_AWESOME_PULL_LEFT);
-        $this->assertEquals(FontAwesomeIcon::FONT_AWESOME_PULL_LEFT, $obj->getPull());
+        $obj->setPull(FontAwesomeIconInterface::FONT_AWESOME_PULL_LEFT);
+        $this->assertEquals(FontAwesomeIconInterface::FONT_AWESOME_PULL_LEFT, $obj->getPull());
     }
 
     /**
@@ -206,8 +210,8 @@ class FontAwesomeIconTest extends AbstractTestCase {
 
         $obj = new FontAwesomeIcon();
 
-        $obj->setSize(FontAwesomeIcon::FONT_AWESOME_SIZE_LG);
-        $this->assertEquals(FontAwesomeIcon::FONT_AWESOME_SIZE_LG, $obj->getSize());
+        $obj->setSize(FontAwesomeIconInterface::FONT_AWESOME_SIZE_LG);
+        $this->assertEquals(FontAwesomeIconInterface::FONT_AWESOME_SIZE_LG, $obj->getSize());
     }
 
     /**
@@ -235,7 +239,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
         $this->assertNull($obj->getAnimation());
         $this->assertFalse($obj->getBordered());
         $this->assertFalse($obj->getFixedWidth());
-        $this->assertEquals(FontAwesomeIcon::FONT_AWESOME_FONT, $obj->getFont());
+        $this->assertEquals(FontAwesomeIconInterface::FONT_AWESOME_FONT, $obj->getFont());
         $this->assertNull($obj->getPull());
         $this->assertNull($obj->getSize());
     }

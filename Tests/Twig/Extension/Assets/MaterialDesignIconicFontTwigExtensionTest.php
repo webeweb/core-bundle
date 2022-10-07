@@ -105,9 +105,9 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
             "flip"       => "horizontal",
             "style"      => "color: #FFFFFF;",
         ];
+        $exp = '<i class="zmdi zmdi-camera-retro zmdi-hc-lg zmdi-hc-fw zmdi-hc-border-circle pull-left zmdi-hc-spin zmdi-hc-rotate-180 zmdi-hc-flip-horizontal" style="color: #FFFFFF;"></i>';
 
-        $res = '<i class="zmdi zmdi-camera-retro zmdi-hc-lg zmdi-hc-fw zmdi-hc-border-circle pull-left zmdi-hc-spin zmdi-hc-rotate-180 zmdi-hc-flip-horizontal" style="color: #FFFFFF;"></i>';
-        $this->assertEquals($res, $obj->materialDesignIconicFontIconFunction($arg));
+        $this->assertEquals($exp, $obj->materialDesignIconicFontIconFunction($arg));
     }
 
     /**
@@ -120,9 +120,9 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
         $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
 
         $arg = [];
+        $exp = '<i class="zmdi zmdi-home"></i>';
 
-        $res = '<i class="zmdi zmdi-home"></i>';
-        $this->assertEquals($res, $obj->materialDesignIconicFontIconFunction($arg));
+        $this->assertEquals($exp, $obj->materialDesignIconicFontIconFunction($arg));
     }
 
     /**
@@ -135,9 +135,9 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
         $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
 
         $arg = $obj->materialDesignIconicFontListIconFilter($obj->materialDesignIconicFontIconFunction([]), "content");
+        $exp = '<ul class="zmdi-hc-ul"><li><i class="zmdi-hc-li zmdi zmdi-home"></i>content</li></ul>';
 
-        $res = '<ul class="zmdi-hc-ul"><li><i class="zmdi-hc-li zmdi zmdi-home"></i>content</li></ul>';
-        $this->assertEquals($res, $obj->materialDesignIconicFontListFilter($arg));
+        $this->assertEquals($exp, $obj->materialDesignIconicFontListFilter($arg));
     }
 
     /**
@@ -150,9 +150,9 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
         $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
 
         $arg = $obj->materialDesignIconicFontIconFunction([]);
+        $exp = '<li><i class="zmdi-hc-li zmdi zmdi-home"></i></li>';
 
-        $res = '<li><i class="zmdi-hc-li zmdi zmdi-home"></i></li>';
-        $this->assertEquals($res, $obj->materialDesignIconicFontListIconFilter($arg, null));
+        $this->assertEquals($exp, $obj->materialDesignIconicFontListIconFilter($arg, null));
     }
 
     /**
@@ -165,9 +165,9 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
         $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
 
         $arg = $obj->materialDesignIconicFontIconFunction([]);
+        $exp = '<li><i class="zmdi-hc-li zmdi zmdi-home"></i>content</li>';
 
-        $res = '<li><i class="zmdi-hc-li zmdi zmdi-home"></i>content</li>';
-        $this->assertEquals($res, $obj->materialDesignIconicFontListIconFilter($arg, "content"));
+        $this->assertEquals($exp, $obj->materialDesignIconicFontListIconFilter($arg, "content"));
     }
 
     /**
@@ -179,8 +179,9 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
 
         $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
 
-        $res = '<i class="zmdi zmdi-camera-retro" style="color: #FFFFFF;"></i>';
-        $this->assertEquals($res, $obj->renderIcon("camera-retro", "color: #FFFFFF;"));
+        $exp = '<i class="zmdi zmdi-camera-retro" style="color: #FFFFFF;"></i>';
+
+        $this->assertEquals($exp, $obj->renderIcon("camera-retro", "color: #FFFFFF;"));
     }
 
     /**

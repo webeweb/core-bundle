@@ -15,7 +15,6 @@ use WBW\Bundle\CoreBundle\DependencyInjection\Compiler\ColorProviderCompilerPass
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Library\Symfony\Color\MaterialDesignColorPalette\RedColorProvider;
 use WBW\Library\Symfony\Manager\ColorManager;
-use WBW\Library\Symfony\Provider\Color\RedColorProviderInterface;
 use WBW\Library\Symfony\Provider\ColorProviderInterface;
 
 /**

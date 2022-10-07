@@ -49,9 +49,9 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
 
         $obj = new AssetsTwigExtension($this->twigEnvironment);
 
-        $res = file_get_contents(__DIR__ . "/AssetsTwigExtensionTest.testCoreGtag.js.txt");
+        $exp = file_get_contents(__DIR__ . "/AssetsTwigExtensionTest.testCoreGtag.js.txt");
 
-        $this->assertEquals($res, $obj->coreGtag("UA-123456789-0"));
+        $this->assertEquals($exp, $obj->coreGtag("UA-123456789-0"));
         $this->assertNull($obj->coreGtag(null));
         $this->assertNull($obj->coreGtag(""));
     }
@@ -63,8 +63,6 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
      */
     public function testCoreImageFunction(): void {
 
-        $obj = new AssetsTwigExtension($this->twigEnvironment);
-
         $arg = [
             "src"    => "src",
             "alt"    => "alt",
@@ -73,9 +71,11 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
             "class"  => "class",
             "usemap" => "#usemap",
         ];
-        $res = '<img src="src" alt="alt" width="1024" height="768" class="class" usemap="#usemap"/>';
+        $exp = '<img src="src" alt="alt" width="1024" height="768" class="class" usemap="#usemap"/>';
 
-        $this->assertEquals($res, $obj->coreImageFunction($arg));
+        $obj = new AssetsTwigExtension($this->twigEnvironment);
+
+        $this->assertEquals($exp, $obj->coreImageFunction($arg));
     }
 
     /**
@@ -85,12 +85,12 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
      */
     public function testCoreImageFunctionWithoutArguments(): void {
 
+        $arg = [];
+        $exp = "<img />";
+
         $obj = new AssetsTwigExtension($this->twigEnvironment);
 
-        $arg = [];
-        $res = "<img />";
-
-        $this->assertEquals($res, $obj->coreImageFunction($arg));
+        $this->assertEquals($exp, $obj->coreImageFunction($arg));
     }
 
     /**
@@ -113,10 +113,11 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
      */
     public function testCoreScriptFilter(): void {
 
+        $exp = file_get_contents(__DIR__ . "/AssetsTwigExtensionTest.testCoreScriptFilter.html.txt");
+
         $obj = new AssetsTwigExtension($this->twigEnvironment);
 
-        $res = file_get_contents(__DIR__ . "/AssetsTwigExtensionTest.testCoreScriptFilter.html.txt");
-        $this->assertEquals($res, $obj->coreScriptFilter("content") . "\n");
+        $this->assertEquals($exp, $obj->coreScriptFilter("content") . "\n");
     }
 
     /**
@@ -126,10 +127,11 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
      */
     public function testCoreStyleFilter(): void {
 
+        $exp = file_get_contents(__DIR__ . "/AssetsTwigExtensionTest.testCoreStyleFilter.html.txt");
+
         $obj = new AssetsTwigExtension($this->twigEnvironment);
 
-        $res = file_get_contents(__DIR__ . "/AssetsTwigExtensionTest.testCoreStyleFilter.html.txt");
-        $this->assertEquals($res, $obj->coreStyleFilter("content") . "\n");
+        $this->assertEquals($exp, $obj->coreStyleFilter("content") . "\n");
     }
 
     /**
@@ -258,8 +260,9 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
      */
     public function testRenderIconWithMaterialDesignIconicFont(): void {
 
-        $res = '<i class="zmdi zmdi-home"></i>';
-        $this->assertEquals($res, AssetsTwigExtension::renderIcon($this->twigEnvironment, "zmdi:home"));
+        $exp = '<i class="zmdi zmdi-home"></i>';
+
+        $this->assertEquals($exp, AssetsTwigExtension::renderIcon($this->twigEnvironment, "zmdi:home"));
     }
 
     /**
@@ -269,8 +272,9 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
      */
     public function testRenderIconWithMeteocons(): void {
 
-        $res = '<i class="meteocons" data-meteocons="A"></i>';
-        $this->assertEquals($res, AssetsTwigExtension::renderIcon($this->twigEnvironment, "mc:A"));
+        $exp = '<i class="meteocons" data-meteocons="A"></i>';
+
+        $this->assertEquals($exp, AssetsTwigExtension::renderIcon($this->twigEnvironment, "mc:A"));
     }
 
     /**
