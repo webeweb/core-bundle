@@ -1,10 +1,19 @@
 CHANGELOG
 =========
 
+### master
+
+- Add Javascript manager
+- Add Javascript provider
+- Add Javascript provider compiler pass
+- Add Stylesheet manager
+- Add Stylesheet provider compiler pass
+- Improve code quality
+
 ### [3.12.0](https://github.com/webeweb/core-bundle/tree/v3.12.0) (2022-10-03)
 
 - Add controllers configuration
-- Add duotone support forFontAwesome
+- Add duotone support for FontAwesome
 - Improve code quality
 - Update FontAwesome to 6.2.0
 
