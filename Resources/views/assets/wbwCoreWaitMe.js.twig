@@ -1,0 +1,65 @@
+{# Resources/views/assets/wbwCoreWaitMe.js.twig #}
+/**
+ * Wait me.
+ */
+class WBWCoreWaitMe {
+
+    /**
+     * Get the options by default.
+     *
+     * @returns {Object} Returns the options.
+     */
+    static getOptionsDefault() {
+
+        return {
+            effect: "stretch",
+            text  : "{{ "wait_me.text"|trans([], "WBWCoreBundle") }}",
+            bg    : "rgba(255, 255, 255, 0.75)",
+        };
+    }
+
+    /**
+     * Get the options for an element.
+     *
+     * @returns {Object} Returns the optons.
+     */
+    static getOptionsElement() {
+
+        let options    = WBWCoreWaitMe.getOptionsDefault();
+        options.effect = "progressBar";
+        delete options.text;
+
+        return options;
+    }
+
+    /**
+     * Get the options for Octopus.
+     *
+     * @returns {Object} Returns the options.
+     */
+    static getOptionsOctopus() {
+
+        return {
+            effect : "img",
+            text   : "{{ "wait_me.text"|trans([], "WBWCoreBundle") }}",
+            bg     : "rgba(255, 255, 255, 0.98)",
+            color  : "#36d9a9",
+            maxSize: 180,
+            source : "{{ asset("bundles/wbwcore/img/octo-loader.gif") }}",
+        };
+    }
+
+    /**
+     * Render a wait me inside an element.
+     *
+     * @param {jQuery} $el The element.
+     * @param {Object} opts The options.
+     * @returns {jQuery} Returns the wait me.
+     */
+    static render($el, opts = null) {
+
+        opts = null !== opts ? opts : WBWCoreWaitMe.getOptionsDefault();
+
+        return $el.waitMe(opts);
+    }
+}

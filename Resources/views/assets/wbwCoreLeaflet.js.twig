@@ -1,0 +1,35 @@
+{# Resources/views/assets/wbwCoreLeaflet.js.twig #}
+/**
+ * Leaflet.
+ */
+class WBWCoreLeaflet {
+
+    /**
+     * Creates a map.
+     *
+     * @param {String} id The id.
+     * @param {Array} center The center.
+     * @param {int} zoom The zoom.
+     * @param {Array<Object>} markers The markers.
+     * @returns {undefined}
+     */
+    static map(id, center, zoom, markers) {
+
+        const map = L.map(id).setView(center, zoom);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors',
+        }).addTo(map);
+
+        markers.forEach((marker) => {
+
+            if (null === marker.latitude || null === marker.longitude) {
+                return;
+            }
+
+            L.marker([marker.latitude, marker.longitude])
+                .bindPopup(marker.popup)
+                .addTo(map);
+        });
+    }
+}

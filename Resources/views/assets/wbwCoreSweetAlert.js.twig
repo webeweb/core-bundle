@@ -1,0 +1,57 @@
+{# Resources/views/assets/wbwCoreSweetAlert.js.twig #}
+/**
+ * Sweet alert.
+ */
+class WBWCoreSweetAlert {
+
+    /**
+     * Get the options "delete".
+     *
+     * @returns {Object} Returns the options.
+     */
+    static getOptionsDelete() {
+
+        return {
+            icon      : "warning",
+            title     : "{{ "swal.delete.title"|trans([], "WBWCoreBundle") }}",
+            text      : "{{ "swal.delete.text"|trans([], "WBWCoreBundle") }}",
+            buttons   : {
+                cancel : {
+                    text   : "{{ "label.cancel"|trans([], "WBWCoreBundle") }}",
+                    visible: true,
+                },
+                confirm: true,
+            },
+            dangerMode: true,
+            className : "wbwCoreSweetAlertDelete",
+        };
+    }
+
+    /**
+     * Get the options "error".
+     *
+     * @returns {Object} Returns the options.
+     */
+    static getOptionsError() {
+
+        return {
+            icon      : "error",
+            title     : "{{ "swal.error.title"|trans([], "WBWCoreBundle") }}",
+            text      : "{{ "swal.error.text"|trans([], "WBWCoreBundle") }}",
+            dangerMode: true,
+            className : "wbwCoreSweetAlertError",
+        };
+    }
+
+    /**
+     * Render an error.
+     *
+     * @returns {undefined}
+     */
+    static renderError() {
+
+        if ("function" === typeof swal) {
+            swal(WBWCoreSweetAlert.getOptionsError());
+        }
+    }
+}

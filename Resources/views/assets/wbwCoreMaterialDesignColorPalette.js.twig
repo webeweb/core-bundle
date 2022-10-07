@@ -1,0 +1,50 @@
+{# Resources/views/assets/wbwCoreMaterialDesignColorPalette.js.twig #}
+/**
+ * Material Design Color Palette.
+ */
+class WBWCoreMaterialDesignColorPalette {
+
+    /**
+     * Palette.
+     *
+     * @type {String}
+     */
+    static palette = "{{ coreStaticMethod("WBW\\Library\\Symfony\\Factory\\ColorFactory", "newMaterialDesignColorPalette")|json_encode|e("js") }}";
+
+    /**
+     * Get the colors.
+     *
+     * @param {int} number The number.
+     * @returns {Array} Returns the colors.
+     */
+    static getColors(number) {
+
+        let colors    = [];
+        const palette = WBWCoreMaterialDesignColorPalette.getPalette();
+
+        for (let j = 7; 0 <= j; --j) {
+
+            for (let i = 0; i <= 18; ++i) {
+
+                let variant = Object.keys(palette[i]["colors"])[j];
+
+                colors.push(palette[i]["colors"][variant]);
+            }
+        }
+
+        if (0 < number && number <= colors.length) {
+            return colors.slice(0, number);
+        }
+
+        return colors;
+    }
+
+    /**
+     * Get the palette.
+     *
+     * @returns {Array<Object>} Returns the palette.
+     */
+    static getPalette() {
+        return JSON.parse(WBWCoreMaterialDesignColorPalette.palette);
+    }
+}
