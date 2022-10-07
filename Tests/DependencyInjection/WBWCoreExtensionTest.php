@@ -25,6 +25,7 @@ use WBW\Bundle\CoreBundle\EventListener\SecurityEventListener;
 use WBW\Bundle\CoreBundle\EventListener\ToastEventListener;
 use WBW\Bundle\CoreBundle\Helper\FormHelper;
 use WBW\Bundle\CoreBundle\Manager\ThemeManager;
+use WBW\Bundle\CoreBundle\Provider\JavascriptProvider;
 use WBW\Bundle\CoreBundle\Provider\SyntaxHighlighterProvider;
 use WBW\Bundle\CoreBundle\Service\RepositoryService;
 use WBW\Bundle\CoreBundle\Service\RepositoryServiceInterface;
@@ -178,7 +179,6 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(ThemeManager::class, $this->containerBuilder->get(ThemeManager::SERVICE_NAME));
 
         // Providers
-        $this->assertInstanceOf(SyntaxHighlighterProvider::class, $this->containerBuilder->get(SyntaxHighlighterProvider::SERVICE_NAME));
         $this->assertInstanceOf(AmberColorProvider::class, $this->containerBuilder->get(AmberColorProvider::SERVICE_NAME));
         $this->assertInstanceOf(BlueColorProvider::class, $this->containerBuilder->get(BlueColorProvider::SERVICE_NAME));
         $this->assertInstanceOf(BlueGreyColorProvider::class, $this->containerBuilder->get(BlueGreyColorProvider::SERVICE_NAME));
@@ -198,6 +198,9 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(RedColorProvider::class, $this->containerBuilder->get(RedColorProvider::SERVICE_NAME));
         $this->assertInstanceOf(TealColorProvider::class, $this->containerBuilder->get(TealColorProvider::SERVICE_NAME));
         $this->assertInstanceOf(YellowColorProvider::class, $this->containerBuilder->get(YellowColorProvider::SERVICE_NAME));
+
+        $this->assertInstanceOf(JavascriptProvider::class, $this->containerBuilder->get(JavascriptProvider::SERVICE_NAME));
+        $this->assertInstanceOf(SyntaxHighlighterProvider::class, $this->containerBuilder->get(SyntaxHighlighterProvider::SERVICE_NAME));
 
         try {
 
