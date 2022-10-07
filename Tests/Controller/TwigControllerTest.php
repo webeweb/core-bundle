@@ -59,6 +59,34 @@ class TwigControllerTest extends AbstractWebTestCase {
     }
 
     /**
+     * Tests resourceAction()
+     *
+     * @return void
+     */
+    public function testResourceAction(): void {
+
+        $client = $this->client;
+
+        $client->request("GET", "/twig/resource/js/wbwCoreLeaflet");
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals("application/javascript", $client->getResponse()->headers->get("Content-Type"));
+    }
+
+    /**
+     * Tests resourceAction()
+     *
+     * @return void
+     */
+    public function testResourceActionWithStatus404(): void {
+
+        $client = $this->client;
+
+        $client->request("GET", "/twig/resource/html/wbwCoreLeaflet");
+        $this->assertEquals(404, $client->getResponse()->getStatusCode());
+        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
+    }
+
+    /**
      * Tests __construct()
      *
      * @return void

@@ -17,6 +17,8 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Twig\Environment;
 use Twig\TwigFunction;
+use WBW\Library\Symfony\Manager\JavascriptManager;
+use WBW\Library\Symfony\Manager\StylesheetManager;
 
 /**
  * Twig controller.
@@ -63,5 +65,50 @@ class TwigController extends AbstractController {
         } catch (Exception $ex) {
             return new JsonResponse([], 500);
         }
+    }
+
+    /**
+     * Resource.
+     *
+     * @param Request $request The request.
+     * @param string $type The type.
+     * @param string $name The name.
+     * @return Response Returns the response.
+     */
+    public function resourceAction(Request $request, string $type, string $name): Response {
+
+        $resources   = [];
+        $contentType = null;
+
+        switch ($type) {
+
+            case "css":
+
+                /** @var StylesheetManager $manager */
+                $manager   = $this->get(StylesheetManager::SERVICE_NAME);
+                $resources = $manager->getStylesheets();
+
+                $contentType = "text/css; charset=utf-8";
+                break;
+
+            case "js":
+
+                /** @var JavascriptManager $manager */
+                $manager   = $this->get(JavascriptManager::SERVICE_NAME);
+                $resources = $manager->getJavascripts();
+
+                $contentType = "application/javascript";
+                break;
+        }
+
+        if (false === array_key_exists($name, $resources)) {
+            throw $this->createNotFoundException();
+        }
+
+        $content = $this->renderView($resources[$name], $request->query->all());
+
+        return new Response($content, 200, [
+            "Content-Type" => $contentType,
+        ]);
     }
 }
