@@ -23,7 +23,7 @@ class WBWCoreSweetAlert {
                 confirm: true,
             },
             dangerMode: true,
-            className : "wbwCoreSweetAlertDelete",
+            className : "WBWCoreSweetAlertDelete",
         };
     }
 
@@ -39,16 +39,16 @@ class WBWCoreSweetAlert {
             title     : "{{ "swal.error.title"|trans([], "WBWCoreBundle") }}",
             text      : "{{ "swal.error.text"|trans([], "WBWCoreBundle") }}",
             dangerMode: true,
-            className : "wbwCoreSweetAlertError",
+            className : "WBWCoreSweetAlertError",
         };
     }
 
     /**
-     * Render an error.
+     * Displays a SweetAlert "error".
      *
      * @returns {undefined}
      */
-    static renderError() {
+    static swalError() {
 
         if ("function" === typeof swal) {
             swal(WBWCoreSweetAlert.getOptionsError());

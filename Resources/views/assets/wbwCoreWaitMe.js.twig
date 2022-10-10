@@ -7,15 +7,22 @@ class WBWCoreWaitMe {
     /**
      * Get the options by default.
      *
+     * @param {String} color The color.
      * @returns {Object} Returns the options.
      */
-    static getOptionsDefault() {
+    static getOptionsDefault(color = null) {
 
-        return {
+        const options = {
             effect: "stretch",
             text  : "{{ "wait_me.text"|trans([], "WBWCoreBundle") }}",
             bg    : "rgba(255, 255, 255, 0.75)",
         };
+
+        if (null !== color) {
+            options.color = color;
+        }
+
+        return options;
     }
 
     /**
@@ -50,16 +57,16 @@ class WBWCoreWaitMe {
     }
 
     /**
-     * Render a wait me inside an element.
+     * Displays a wait me inside an element.
      *
      * @param {jQuery} $el The element.
-     * @param {Object} opts The options.
+     * @param {Object} options The options.
      * @returns {jQuery} Returns the wait me.
      */
-    static render($el, opts = null) {
+    static waitMeError($el, options = null) {
 
-        opts = null !== opts ? opts : WBWCoreWaitMe.getOptionsDefault();
+        options = null !== options ? options : WBWCoreWaitMe.getOptionsDefault();
 
-        return $el.waitMe(opts);
+        return $el.waitMe(options);
     }
 }
