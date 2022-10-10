@@ -32,7 +32,7 @@ class JQueryInputMaskTwigExtensionTraitTest extends AbstractTestCase {
     public function testSetJQueryInputMaskTwigExtension(): void {
 
         // Set an Assets Twig extension mock.
-        $assetsTwigExtension = new AssetsTwigExtension($this->twigEnvironment, $this->router);
+        $assetsTwigExtension = new AssetsTwigExtension($this->twigEnvironment);
 
         // Set a jQuery InputMask Twig extension mock.
         $jQueryInputMaskTwigExtension = new JQueryInputMaskTwigExtension($this->twigEnvironment, $assetsTwigExtension);

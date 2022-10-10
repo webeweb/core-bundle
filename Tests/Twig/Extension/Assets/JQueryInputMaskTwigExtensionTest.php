@@ -39,7 +39,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
         parent::setUp();
 
         // Set a Assets Twig extension mock.
-        $this->rendererTwigExtension = new AssetsTwigExtension($this->twigEnvironment, $this->router);
+        $this->rendererTwigExtension = new AssetsTwigExtension($this->twigEnvironment);
     }
 
     /**

@@ -31,7 +31,9 @@ use WBW\Library\Types\Helper\StringHelper;
  */
 class AssetsTwigExtension extends AbstractTwigExtension {
 
-    use RouterTrait;
+    use RouterTrait {
+        setRouter as public;
+    }
 
     /**
      * Service name.
@@ -46,17 +48,6 @@ class AssetsTwigExtension extends AbstractTwigExtension {
      * @var string|null
      */
     protected $publicDirectory;
-
-    /**
-     * Constructor.
-     *
-     * @param Environment $twigEnvironment The Twig environment.
-     */
-    public function __construct(Environment $twigEnvironment, RouterInterface $router) {
-        parent::__construct($twigEnvironment);
-
-        $this->setRouter($router);
-    }
 
     /**
      * Determines if an asset exists.
@@ -129,9 +120,13 @@ class AssetsTwigExtension extends AbstractTwigExtension {
      * @param string $type The type.
      * @param string $name The name.
      * @param array $query The query.
-     * @return string Returns the resource path.
+     * @return string|null Returns the resource path.
      */
-    public function coreResourcePath(string $type, string $name, array $query = []): string {
+    public function coreResourcePath(string $type, string $name, array $query = []): ?string {
+
+        if (null === $this->getRouter()) {
+            return null;
+        }
 
         return $this->getRouter()->generate("wbw_core_twig_resource", array_merge([
             "type" => $type,

@@ -33,7 +33,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
      */
     public function testAssetExists(): void {
 
-        $obj = new AssetsTwigExtension($this->twigEnvironment, $this->router);
+        $obj = new AssetsTwigExtension($this->twigEnvironment);
         $obj->setPublicDirectory(__DIR__ . "/../../Fixtures/app/public");
 
         $this->assertNull($obj->assetExists(null));
@@ -48,7 +48,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
      */
     public function testCoreGtag(): void {
 
-        $obj = new AssetsTwigExtension($this->twigEnvironment, $this->router);
+        $obj = new AssetsTwigExtension($this->twigEnvironment);
 
         $exp = file_get_contents(__DIR__ . "/AssetsTwigExtensionTest.testCoreGtag.js.txt");
 
@@ -74,7 +74,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
         ];
         $exp = '<img src="src" alt="alt" width="1024" height="768" class="class" usemap="#usemap"/>';
 
-        $obj = new AssetsTwigExtension($this->twigEnvironment, $this->router);
+        $obj = new AssetsTwigExtension($this->twigEnvironment);
 
         $this->assertEquals($exp, $obj->coreImageFunction($arg));
     }
@@ -89,7 +89,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
         $arg = [];
         $exp = "<img />";
 
-        $obj = new AssetsTwigExtension($this->twigEnvironment, $this->router);
+        $obj = new AssetsTwigExtension($this->twigEnvironment);
 
         $this->assertEquals($exp, $obj->coreImageFunction($arg));
     }
@@ -101,7 +101,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
      */
     public function testCoreRenderIconFunction(): void {
 
-        $obj = new AssetsTwigExtension($this->twigEnvironment, $this->router);
+        $obj = new AssetsTwigExtension($this->twigEnvironment);
 
         $this->assertNull($obj->coreRenderIconFunction(null));
         $this->assertNull($obj->coreRenderIconFunction("::"));
@@ -116,7 +116,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
 
         $exp = file_get_contents(__DIR__ . "/AssetsTwigExtensionTest.testCoreScriptFilter.html.txt");
 
-        $obj = new AssetsTwigExtension($this->twigEnvironment, $this->router);
+        $obj = new AssetsTwigExtension($this->twigEnvironment);
 
         $this->assertEquals($exp, $obj->coreScriptFilter("content") . "\n");
     }
@@ -130,7 +130,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
 
         $exp = file_get_contents(__DIR__ . "/AssetsTwigExtensionTest.testCoreStyleFilter.html.txt");
 
-        $obj = new AssetsTwigExtension($this->twigEnvironment, $this->router);
+        $obj = new AssetsTwigExtension($this->twigEnvironment);
 
         $this->assertEquals($exp, $obj->coreStyleFilter("content") . "\n");
     }
@@ -142,7 +142,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
      */
     public function testCssRgba(): void {
 
-        $obj = new AssetsTwigExtension($this->twigEnvironment, $this->router);
+        $obj = new AssetsTwigExtension($this->twigEnvironment);
 
         $this->assertNull($obj->cssRgba(null));
         $this->assertNull($obj->cssRgba(""));
@@ -156,7 +156,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
      */
     public function testGetFilters(): void {
 
-        $obj = new AssetsTwigExtension($this->twigEnvironment, $this->router);
+        $obj = new AssetsTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFilters();
         $this->assertCount(5, $res);
@@ -196,7 +196,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
      */
     public function testGetFunctions(): void {
 
-        $obj = new AssetsTwigExtension($this->twigEnvironment, $this->router);
+        $obj = new AssetsTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
         $this->assertCount(7, $res);
@@ -298,7 +298,8 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
         // Set the Router mock.
         $this->router->expects($this->any())->method("generate")->willReturnCallback($generate);
 
-        $obj = new AssetsTwigExtension($this->twigEnvironment, $this->router);
+        $obj = new AssetsTwigExtension($this->twigEnvironment);
+        $obj->setRouter($this->router);
 
         $this->assertEquals('<link type="text/css" rel="stylesheet" href="wbw_core_twig_resource">', $obj->twigResourceFunction("css", "test", ["v" => 1]));
         $this->assertEquals('<script type="text/javascript" src="wbw_core_twig_resource"></script>', $obj->twigResourceFunction("js", "test", ["v" => 1]));
@@ -314,7 +315,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
 
         $this->assertEquals("wbw.core.twig.extension.assets", AssetsTwigExtension::SERVICE_NAME);
 
-        $obj = new AssetsTwigExtension($this->twigEnvironment, $this->router);
+        $obj = new AssetsTwigExtension($this->twigEnvironment);
 
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
         $this->assertNull($obj->getPublicDirectory());

@@ -3,10 +3,11 @@ services:
 
     wbw.core.twig.extension.assets:
         class:  WBW\Bundle\CoreBundle\Twig\Extension\AssetsTwigExtension
-        arguments: [ "@twig", "@router" ]
+        arguments: [ "@twig" ]
         public: true
         calls:
             - [ "setPublicDirectory", [ "%kernel.project_dir%/public" ] ]
+            - [ "setRouter",          [ "@router" ] ]
         tags:
             - { name: "twig.extension" }
 
