@@ -11,7 +11,7 @@ class WBWCoreLeaflet {
      * @param {Array} center The center.
      * @param {int} zoom The zoom.
      * @param {Array<Object>} markers The markers.
-     * @returns {undefined}
+     * @returns {Map} Returns the map.
      */
     static map(id, center, zoom, markers) {
 
@@ -31,5 +31,7 @@ class WBWCoreLeaflet {
                 .bindPopup(marker.popup)
                 .addTo(map);
         });
+
+        return map;
     }
 }

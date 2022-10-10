@@ -46,12 +46,9 @@ class WBWCoreSweetAlert {
     /**
      * Displays a sweet alert "error".
      *
-     * @returns {undefined}
+     * @returns {SweetAlert} Returns the sweet alert.
      */
     static swalError() {
-
-        if ("function" === typeof swal) {
-            swal(WBWCoreSweetAlert.getOptionsError());
-        }
+        return swal(WBWCoreSweetAlert.getOptionsError());
     }
 }
