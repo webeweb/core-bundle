@@ -34,6 +34,7 @@ class JavascriptProvider implements JavascriptProviderInterface {
     public function getJavascripts(): array {
 
         return [
+            "wbwCoreJQueryInputMask"            => "@WBWCore/assets/wbwCoreJQueryInputMask.js.twig",
             "wbwCoreLeaflet"                    => "@WBWCore/assets/wbwCoreLeaflet.js.twig",
             "wbwCoreMaterialDesignColorPalette" => "@WBWCore/assets/wbwCoreMaterialDesignColorPalette.js.twig",
             "wbwCoreSweetAlert"                 => "@WBWCore/assets/wbwCoreSweetAlert.js.twig",
