@@ -142,7 +142,7 @@ class AssetsTwigExtension extends AbstractTwigExtension {
      * @param array $query The query.
      * @return string Returns the resource "script".
      */
-    public function coreResourceScriptFunction(string $name, array $query): string {
+    public function coreResourceScriptFunction(string $name, array $query = []): string {
 
         $attributes = [
             "type" => "text/javascript",
@@ -159,7 +159,7 @@ class AssetsTwigExtension extends AbstractTwigExtension {
      * @param array $query The query.
      * @return string Returns the resource "style".
      */
-    public function coreResourceStyleFunction(string $name, array $query): string {
+    public function coreResourceStyleFunction(string $name, array $query = []): string {
 
         $template   = "<link {{ attributes }}>";
         $attributes = [
