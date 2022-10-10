@@ -64,7 +64,9 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
      * @return string Returns the jQuery input mask "phone number".
      */
     public function jQueryInputMaskPhoneNumberFunction(array $args = []): string {
+
         $defaultMask = "99 99 99 99 99";
+
         return $this->jQueryInputMask(ArrayHelper::get($args, "selector"), $defaultMask, $this->prepareOptions($args, $defaultMask), ArrayHelper::get($args, "scriptTag", false));
     }
 
@@ -75,7 +77,9 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
      * @return string Returns the jQuery input mask "SIRET number".
      */
     public function jQueryInputMaskSIRETNumberFunction(array $args = []): string {
+
         $defaultMask = "999 999 999 99999";
+
         return $this->jQueryInputMask(ArrayHelper::get($args, "selector"), $defaultMask, $this->prepareOptions($args, $defaultMask), ArrayHelper::get($args, "scriptTag", false));
     }
 
@@ -86,7 +90,9 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
      * @return string Returns the jQuery input mask "social security number".
      */
     public function jQueryInputMaskSocialSecurityNumberFunction(array $args = []): string {
+
         $defaultMask = "9 99 99 99 999 999 99";
+
         return $this->jQueryInputMask(ArrayHelper::get($args, "selector"), $defaultMask, $this->prepareOptions($args, $defaultMask), ArrayHelper::get($args, "scriptTag", false));
     }
 
@@ -97,7 +103,9 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
      * @return string Returns the jQuery input mask "time 12 hour".
      */
     public function jQueryInputMaskTime12Function(array $args = []): string {
+
         $defaultMask = "hh:mm t";
+
         return $this->jQueryInputMask(ArrayHelper::get($args, "selector"), $defaultMask, array_merge($this->prepareOptions($args, null), ["hourFormat" => "12", "placeholder" => "__:__ _m"]), ArrayHelper::get($args, "scriptTag", false));
     }
 
@@ -108,7 +116,9 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
      * @return string Returns the jQuery input mask "time 24 hour".
      */
     public function jQueryInputMaskTime24Function(array $args = []): string {
+
         $defaultMask = "hh:mm";
+
         return $this->jQueryInputMask(ArrayHelper::get($args, "selector"), $defaultMask, array_merge($this->prepareOptions($args, null), ["hourFormat" => "24", "placeholder" => "__:__"]), ArrayHelper::get($args, "scriptTag", false));
     }
 
@@ -119,7 +129,9 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
      * @return string Returns the jQuery input mask "VAT number".
      */
     public function jQueryInputMaskVATNumberFunction(array $args = []): string {
+
         $defaultMask = "**999 999 999 99";
+
         return $this->jQueryInputMask(ArrayHelper::get($args, "selector"), $defaultMask, $this->prepareOptions($args, $defaultMask), ArrayHelper::get($args, "scriptTag", false));
     }
 

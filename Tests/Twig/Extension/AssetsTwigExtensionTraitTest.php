@@ -31,7 +31,7 @@ class AssetsTwigExtensionTraitTest extends AbstractTestCase {
     public function testSetAssetsTwigExtension(): void {
 
         // Set an Assets Twig extension mock.
-        $assetsTwigExtension = new AssetsTwigExtension($this->twigEnvironment);
+        $assetsTwigExtension = new AssetsTwigExtension($this->twigEnvironment, $this->router);
 
         $obj = new TestAssetsTwigExtensionTrait();
 
