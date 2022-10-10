@@ -69,4 +69,15 @@ class WBWCoreWaitMe {
 
         return $el.waitMe(options);
     }
+
+    /**
+     * Displays a wait me inside a select.
+     *
+     * @param {jQuery} $select The select.
+     * @param {Object} options The options.
+     * @return {jQuery} Returns the wait me.
+     */
+    static waitMeSelect($select, options = null) {
+        return WBWCoreWaitMe.waitMe($select.parent(), options);
+    }
 }
