@@ -108,6 +108,38 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
+     * Tests coreResourceScriptFunction()
+     */
+    public function testCoreResourceScriptFunction(): void {
+
+        $generate = TestCaseHelper::getRouterGenerateFunction();
+
+        // Set the Router mock.
+        $this->router->expects($this->any())->method("generate")->willReturnCallback($generate);
+
+        $obj = new AssetsTwigExtension($this->twigEnvironment);
+        $obj->setRouter($this->router);
+
+        $this->assertEquals('<script type="text/javascript" src="wbw_core_twig_resource"></script>', $obj->coreResourceScriptFunction("test", ["v" => 1]));
+    }
+
+    /**
+     * Tests coreResourceStyleFunction()
+     */
+    public function testCoreResourceStyleFunction(): void {
+
+        $generate = TestCaseHelper::getRouterGenerateFunction();
+
+        // Set the Router mock.
+        $this->router->expects($this->any())->method("generate")->willReturnCallback($generate);
+
+        $obj = new AssetsTwigExtension($this->twigEnvironment);
+        $obj->setRouter($this->router);
+
+        $this->assertEquals('<link type="text/css" rel="stylesheet" href="wbw_core_twig_resource">', $obj->coreResourceStyleFunction("test", ["v" => 1]));
+    }
+
+    /**
      * Tests coreScriptFilter()
      *
      * @return void
@@ -199,7 +231,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
         $obj = new AssetsTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-        $this->assertCount(7, $res);
+        $this->assertCount(8, $res);
 
         $i = -1;
 
@@ -229,13 +261,18 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
         $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
-        $this->assertEquals("cssRgba", $res[$i]->getName());
-        $this->assertEquals([$obj, "cssRgba"], $res[$i]->getCallable());
+        $this->assertEquals("coreResourceScript", $res[$i]->getName());
+        $this->assertEquals([$obj, "coreResourceScriptFunction"], $res[$i]->getCallable());
         $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
         $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
-        $this->assertEquals("twigResource", $res[$i]->getName());
-        $this->assertEquals([$obj, "twigResourceFunction"], $res[$i]->getCallable());
+        $this->assertEquals("coreResourceStyle", $res[$i]->getName());
+        $this->assertEquals([$obj, "coreResourceStyleFunction"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("cssRgba", $res[$i]->getName());
+        $this->assertEquals([$obj, "cssRgba"], $res[$i]->getCallable());
         $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
     }
 
@@ -286,24 +323,6 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
         $exp = '<i class="meteocons" data-meteocons="A"></i>';
 
         $this->assertEquals($exp, AssetsTwigExtension::renderIcon($this->twigEnvironment, "mc:A"));
-    }
-
-    /**
-     * Tests twigResourceFunction()
-     */
-    public function testTwigResourceFunction(): void {
-
-        $generate = TestCaseHelper::getRouterGenerateFunction();
-
-        // Set the Router mock.
-        $this->router->expects($this->any())->method("generate")->willReturnCallback($generate);
-
-        $obj = new AssetsTwigExtension($this->twigEnvironment);
-        $obj->setRouter($this->router);
-
-        $this->assertEquals('<link type="text/css" rel="stylesheet" href="wbw_core_twig_resource">', $obj->twigResourceFunction("css", "test", ["v" => 1]));
-        $this->assertEquals('<script type="text/javascript" src="wbw_core_twig_resource"></script>', $obj->twigResourceFunction("js", "test", ["v" => 1]));
-        $this->assertNull($obj->twigResourceFunction("png", "test", ["v" => 1]));
     }
 
     /**

@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\CoreBundle\Twig\Extension;
 
-use Symfony\Component\Routing\RouterInterface;
 use Twig\Environment;
 use Twig\TwigFilter;
 use Twig\TwigFunction;
@@ -20,6 +19,8 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Assets\FontAwesomeTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\Assets\MaterialDesignIconicFontTwigExtension;
 use WBW\Bundle\CoreBundle\Twig\Extension\Assets\MeteoconsTwigExtension;
 use WBW\Library\Symfony\Helper\ColorHelper;
+use WBW\Library\Symfony\Provider\JavascriptProviderInterface;
+use WBW\Library\Symfony\Provider\StylesheetProviderInterface;
 use WBW\Library\Types\Helper\ArrayHelper;
 use WBW\Library\Types\Helper\StringHelper;
 
@@ -135,6 +136,42 @@ class AssetsTwigExtension extends AbstractTwigExtension {
     }
 
     /**
+     * Resource "script".
+     *
+     * @param string $name The name.
+     * @param array $query The query.
+     * @return string Returns the resource "script".
+     */
+    public function coreResourceScriptFunction(string $name, array $query): string {
+
+        $attributes = [
+            "type" => "text/javascript",
+            "src"  => $this->coreResourcePath(JavascriptProviderInterface::JAVASCRIPT_PROVIDER_EXTENSION, $name, $query),
+        ];
+
+        return static::coreHtmlElement("script", null, $attributes);
+    }
+
+    /**
+     * Resource "style".
+     *
+     * @param string $name The name.
+     * @param array $query The query.
+     * @return string Returns the resource "style".
+     */
+    public function coreResourceStyleFunction(string $name, array $query): string {
+
+        $template   = "<link {{ attributes }}>";
+        $attributes = [
+            "type" => "text/css",
+            "rel"  => "stylesheet",
+            "href" => $this->coreResourcePath(StylesheetProviderInterface::STYLESHEET_PROVIDER_EXTENSION, $name, $query),
+        ];
+
+        return str_replace("{{ attributes }}", StringHelper::parseArray($attributes), $template);
+    }
+
+    /**
      * Displays a script.
      *
      * @param string $content The content.
@@ -208,8 +245,9 @@ class AssetsTwigExtension extends AbstractTwigExtension {
             new TwigFunction("coreImage", [$this, "coreImageFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("coreRenderIcon", [$this, "coreRenderIconFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("coreResourcePath", [$this, "coreResourcePathFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("coreResourceScript", [$this, "coreResourceScriptFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("coreResourceStyle", [$this, "coreResourceStyleFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("cssRgba", [$this, "cssRgba"], ["is_safe" => ["html"]]),
-            new TwigFunction("twigResource", [$this, "twigResourceFunction"], ["is_safe" => ["html"]]),
         ];
     }
 
@@ -272,63 +310,5 @@ class AssetsTwigExtension extends AbstractTwigExtension {
     public function setPublicDirectory(?string $publicDirectory): AssetsTwigExtension {
         $this->publicDirectory = $publicDirectory;
         return $this;
-    }
-
-    /**
-     * Twig resource.
-     *
-     * @param string $type The type.
-     * @param string $name The name.
-     * @param array $query The query.
-     * @return string|null Returns the Twig resource.
-     */
-    public function twigResourceFunction(string $type, string $name, array $query = []): ?string {
-
-        switch ($type) {
-
-            case "css":
-                return $this->twigResourceStylesheet($name, $query);
-
-            case "js":
-                return $this->twigResourceJavascript($name, $query);
-        }
-
-        return null;
-    }
-
-    /**
-     * Twig resource "javascript".
-     *
-     * @param string $name The name.
-     * @param array $query The query.
-     * @return string Returns the Twig resource "javascript".
-     */
-    protected function twigResourceJavascript(string $name, array $query): string {
-
-        $attributes = [
-            "type" => "text/javascript",
-            "src"  => $this->coreResourcePath("js", $name, $query),
-        ];
-
-        return static::coreHtmlElement("script", null, $attributes);
-    }
-
-    /**
-     * Twig resource "stylesheet".
-     *
-     * @param string $name The name.
-     * @param array $query The query.
-     * @return string Returns the Twig resource "stylesheet".
-     */
-    protected function twigResourceStylesheet(string $name, array $query): string {
-
-        $template   = "<link {{ attributes }}>";
-        $attributes = [
-            "type" => "text/css",
-            "rel"  => "stylesheet",
-            "href" => $this->coreResourcePath("css", $name, $query),
-        ];
-
-        return str_replace("{{ attributes }}", StringHelper::parseArray($attributes), $template);
     }
 }

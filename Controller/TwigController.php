@@ -19,6 +19,8 @@ use Twig\Environment;
 use Twig\TwigFunction;
 use WBW\Library\Symfony\Manager\JavascriptManager;
 use WBW\Library\Symfony\Manager\StylesheetManager;
+use WBW\Library\Symfony\Provider\JavascriptProviderInterface;
+use WBW\Library\Symfony\Provider\StylesheetProviderInterface;
 
 /**
  * Twig controller.
@@ -82,22 +84,22 @@ class TwigController extends AbstractController {
 
         switch ($type) {
 
-            case "css":
-
-                /** @var StylesheetManager $manager */
-                $manager   = $this->get(StylesheetManager::SERVICE_NAME);
-                $resources = $manager->getStylesheets();
-
-                $contentType = "text/css; charset=utf-8";
-                break;
-
-            case "js":
+            case JavascriptProviderInterface::JAVASCRIPT_PROVIDER_EXTENSION:
 
                 /** @var JavascriptManager $manager */
                 $manager   = $this->get(JavascriptManager::SERVICE_NAME);
                 $resources = $manager->getJavascripts();
 
-                $contentType = "application/javascript";
+                $contentType = JavascriptProviderInterface::JAVASCRIPT_PROVIDER_CONTENT_TYPE;
+                break;
+
+            case StylesheetProviderInterface::STYLESHEET_PROVIDER_EXTENSION:
+
+                /** @var StylesheetManager $manager */
+                $manager   = $this->get(StylesheetManager::SERVICE_NAME);
+                $resources = $manager->getStylesheets();
+
+                $contentType = StylesheetProviderInterface::STYLESHEET_PROVIDER_CONTENT_TYPE;
                 break;
         }
 
