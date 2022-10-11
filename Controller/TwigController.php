@@ -56,17 +56,12 @@ class TwigController extends AbstractController {
 
         $callable = $function->getCallable();
 
-        try {
+        $content = call_user_func_array([
+            $callable[0],
+            $callable[1],
+        ], $request->get("args", []));
 
-            $content = call_user_func_array([
-                $callable[0],
-                $callable[1],
-            ], $request->get("args", []));
-
-            return new JsonResponse(true === is_array($content) ? $content : [$content]);
-        } catch (Exception $ex) {
-            return new JsonResponse([], 500);
-        }
+        return new JsonResponse(true === is_array($content) ? $content : [$content]);
     }
 
     /**
