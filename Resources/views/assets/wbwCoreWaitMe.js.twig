@@ -43,9 +43,10 @@ class WBWCoreWaitMe {
      */
     static getOptionsElement() {
 
-        let options    = WBWCoreWaitMe.getOptionsDefault();
-        options.effect = "progressBar";
+        const options = WBWCoreWaitMe.getOptionsDefault();
+
         delete options.text;
+        options.effect = "progressBar";
 
         return options;
     }
