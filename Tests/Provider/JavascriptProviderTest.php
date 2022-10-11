@@ -34,7 +34,6 @@ class JavascriptProviderTest extends AbstractTestCase {
         $obj = new JavascriptProvider();
 
         $exp = [
-            "wbwCoreFontAwesome"                => "@WBWCore/assets/wbwCoreFontAwesome.js.twig",
             "wbwCoreJQueryInputMask"            => "@WBWCore/assets/wbwCoreJQueryInputMask.js.twig",
             "wbwCoreLeaflet"                    => "@WBWCore/assets/wbwCoreLeaflet.js.twig",
             "wbwCoreMaterialDesignColorPalette" => "@WBWCore/assets/wbwCoreMaterialDesignColorPalette.js.twig",
