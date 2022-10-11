@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.14.1](https://github.com/webeweb/core-bundle/tree/v3.14.1) (2022-10-11)
+
+- Remove javascript headers
+
 ### [3.14.0](https://github.com/webeweb/core-bundle/tree/v3.14.0) (2022-10-11)
 
 - Add javascript jQuery InputMask class
