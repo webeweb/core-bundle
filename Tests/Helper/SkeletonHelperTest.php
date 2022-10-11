@@ -68,7 +68,7 @@ class SkeletonHelperTest extends AbstractTestCase {
     public function testCopySkeleton(): void {
 
         $res = SkeletonHelper::copySkeleton($this->directorySkeleton, $this->directoryResources);
-        $this->assertCount(15, $res);
+        $this->assertCount(16, $res);
 
         foreach ($res as $current) {
             $this->assertTrue($current);
@@ -84,13 +84,14 @@ class SkeletonHelperTest extends AbstractTestCase {
     public function testListSkeleton(): void {
 
         $res = SkeletonHelper::listSkeleton($this->directorySkeleton);
-        $this->assertCount(15, $res);
+        $this->assertCount(16, $res);
 
         $i = -1;
 
         $this->assertEquals($this->directorySkeleton . "/assets/_helper_css.html.twig", $res[++$i]);
         $this->assertEquals($this->directorySkeleton . "/assets/_javascripts.html.twig", $res[++$i]);
         $this->assertEquals($this->directorySkeleton . "/assets/_stylesheets.html.twig", $res[++$i]);
+        $this->assertEquals($this->directorySkeleton . "/assets/wbwCoreFontAwesome.js.twig", $res[++$i]);
         $this->assertEquals($this->directorySkeleton . "/assets/wbwCoreJQueryInputMask.js.twig", $res[++$i]);
         $this->assertEquals($this->directorySkeleton . "/assets/wbwCoreLeaflet.js.twig", $res[++$i]);
         $this->assertEquals($this->directorySkeleton . "/assets/wbwCoreMaterialDesignColorPalette.js.twig", $res[++$i]);
