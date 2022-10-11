@@ -51,7 +51,7 @@ class TwigController extends AbstractController {
 
         $function = $twig->getFunction($name);
         if (false === ($function instanceof TwigFunction)) {
-            return new JsonResponse([], 500);
+            return new JsonResponse([], 404);
         }
 
         $callable = $function->getCallable();

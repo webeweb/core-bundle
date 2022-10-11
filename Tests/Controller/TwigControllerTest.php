@@ -49,12 +49,12 @@ class TwigControllerTest extends AbstractWebTestCase {
      *
      * @return void
      */
-    public function testFunctionActionWithStatus500(): void {
+    public function testFunctionActionWithStatus404(): void {
 
         $client = $this->client;
 
         $client->request("POST", "/twig/function/exception");
-        $this->assertEquals(500, $client->getResponse()->getStatusCode());
+        $this->assertEquals(404, $client->getResponse()->getStatusCode());
         $this->assertEquals("application/json", $client->getResponse()->headers->get("Content-Type"));
     }
 
