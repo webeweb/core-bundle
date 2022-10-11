@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Improve javascripts
+
 ### [3.14.1](https://github.com/webeweb/core-bundle/tree/v3.14.1) (2022-10-11)
 
 - Remove javascript headers
