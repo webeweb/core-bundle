@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+### [3.14.0](https://github.com/webeweb/core-bundle/tree/v3.14.0) (2022-10-10)
+
+- Add javascript jQuery InputMask class
+- Improve javascript classes
+- Improve Twig controller
+
 ### [3.13.0](https://github.com/webeweb/core-bundle/tree/v3.13.0) (2022-10-10)
 
 - Add Javascript manager
@@ -8,10 +14,10 @@ CHANGELOG
 - Add Javascript provider compiler pass
 - Add Stylesheet manager
 - Add Stylesheet provider compiler pass
-- Add Javascript Leaflet class
-- Add Javascript Material Design Color Palette class
-- Add Javascript Sweet alert class
-- Add Javascript Wait me class
+- Add javascript Leaflet class
+- Add javascript Material Design Color Palette class
+- Add javascript Sweet alert class
+- Add javascript Wait me class
 - Improve code quality
 
 ### [3.12.0](https://github.com/webeweb/core-bundle/tree/v3.12.0) (2022-10-03)
