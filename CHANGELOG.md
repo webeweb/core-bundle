@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### master
+### [3.14.2](https://github.com/webeweb/core-bundle/tree/v3.14.2) (2022-10-12)
 
 - Improve javascripts
 
