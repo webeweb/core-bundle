@@ -5,6 +5,16 @@
 class WBWCoreLeaflet {
 
     /**
+     * Options.
+     *
+     * @type {Object}
+     */
+    static options = {
+        url        : 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors',
+    }
+
+    /**
      * Displays a Leaflet map.
      *
      * @param {String} id The id.
@@ -19,19 +29,23 @@ class WBWCoreLeaflet {
 
         const map = L.map(id).setView(center, zoom);
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors',
+        L.tileLayer(WBWCoreLeaflet.options.url, {
+            attribution: WBWCoreLeaflet.options.attribution,
         }).addTo(map);
 
-        markers.forEach((marker) => {
+        markers.forEach((m) => {
 
-            if (null === marker.latitude || null === marker.longitude) {
+            if (null === m.latitude || null === m.longitude) {
                 return;
             }
 
-            L.marker([marker.latitude, marker.longitude])
-                .bindPopup(marker.popup)
-                .addTo(map);
+            const marker = L.marker([m.latitude, m.longitude]);
+
+            if (true === m.hasOwnProperty("popup")) {
+                marker.bindPopup(m.popup);
+            }
+
+            marker.addTo(map);
         });
 
         return map;
