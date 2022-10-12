@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.14.6](https://github.com/webeweb/core-bundle/tree/v3.14.6) (2022-10-12)
+
+- Replace console.log() by console.debug()
+
 ### [3.14.5](https://github.com/webeweb/core-bundle/tree/v3.14.5) (2022-10-12)
 
 - Improve javascripts
