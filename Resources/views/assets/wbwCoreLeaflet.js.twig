@@ -25,7 +25,7 @@ class WBWCoreLeaflet {
      */
     static map(id, center, zoom, markers) {
 
-        console.log({id, center, zoom, markers});
+        console.debug({id, center, zoom, markers});
 
         const map = L.map(id).setView(center, zoom);
 
