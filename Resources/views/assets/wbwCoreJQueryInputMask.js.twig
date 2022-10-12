@@ -27,8 +27,6 @@ class WBWCoreJQueryInputMask {
      */
     static inputMaskDate(id) {
 
-        console.log({id});
-
         return WBWCoreJQueryInputMask.inputMask($(id), "99/99/9999", {
             autoUnmask        : true,
             removeMaskOnSubmit: true,
@@ -43,8 +41,6 @@ class WBWCoreJQueryInputMask {
      * @return {Inputmask} Returns the input mask.
      */
     static inputMaskDateTime(id) {
-
-        console.log({id});
 
         return WBWCoreJQueryInputMask.inputMask($(id), "99/99/9999 99:99", {
             autoUnmask        : true,
@@ -61,8 +57,6 @@ class WBWCoreJQueryInputMask {
      */
     static inputMaskIban(id) {
 
-        console.log({id});
-
         return WBWCoreJQueryInputMask.inputMask($(id), "AA99 99999 99999 99999999999 99", {
             autoUnmask        : true,
             removeMaskOnSubmit: true,
@@ -77,8 +71,6 @@ class WBWCoreJQueryInputMask {
      * @return {Inputmask} Returns the input mask.
      */
     static inputMaskNafCode(id) {
-
-        console.log({id});
 
         return WBWCoreJQueryInputMask.inputMask($(id), "9999A", {
             autoUnmask        : true,
@@ -95,8 +87,6 @@ class WBWCoreJQueryInputMask {
      */
     static inputMaskPhone(id) {
 
-        console.log({id});
-
         return WBWCoreJQueryInputMask.inputMask($(id), "+99 9 99 99 99 99", {
             autoUnmask        : true,
             removeMaskOnSubmit: true,
@@ -111,8 +101,6 @@ class WBWCoreJQueryInputMask {
      * @return {Inputmask} Returns the input mask.
      */
     static inputMaskSiretNumber(id) {
-
-        console.log({id});
 
         return WBWCoreJQueryInputMask.inputMask($(id), "999 999 999 99999", {
             autoUnmask        : true,
@@ -129,8 +117,6 @@ class WBWCoreJQueryInputMask {
      */
     static inputMaskTime(id) {
 
-        console.log({id});
-
         return WBWCoreJQueryInputMask.inputMask($(id), "99:99", {
             autoUnmask        : true,
             removeMaskOnSubmit: true,
@@ -146,8 +132,6 @@ class WBWCoreJQueryInputMask {
      */
     static inputMaskVatNumber(id) {
 
-        console.log({id});
-
         return WBWCoreJQueryInputMask.inputMask($(id), "AA99 999 999 999", {
             autoUnmask        : true,
             removeMaskOnSubmit: true,
@@ -162,9 +146,6 @@ class WBWCoreJQueryInputMask {
      * @return {jQuery} Returns the element.
      */
     static unmask($el) {
-
-        console.log({$el});
-
         return $el.inputmask("remove");
     }
 }

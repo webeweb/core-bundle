@@ -81,9 +81,6 @@ class WBWCoreWaitMe {
      * @return {jQuery} Returns the wait me.
      */
     static waitMeSelect($select, options = null) {
-
-        console.log({$select, options});
-
         return WBWCoreWaitMe.waitMe($select.parent(), options);
     }
 }
