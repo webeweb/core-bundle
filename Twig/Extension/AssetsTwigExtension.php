@@ -283,8 +283,8 @@ class AssetsTwigExtension extends AbstractTwigExtension {
             case "fas":
             case "far":
             case "fal":
-            case "fad":
             case "fab":
+            case "fad":
                 $output = (new FontAwesomeTwigExtension($twigEnvironment))->renderIcon($handler[1], $style);
                 $output = str_replace('class="fa', 'class="' . $handler[0], $output);
                 break;
