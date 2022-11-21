@@ -1,6 +1,15 @@
 # Resources/config/controllers.yml
 services:
 
+    WBW\Bundle\CoreBundle\Controller\HostController:
+        alias:  "wbw.core.controller.host"
+        public: true
+
+    wbw.core.controller.host:
+        class: WBW\Bundle\CoreBundle\Controller\HostController
+        calls:
+            - [ "setContainer", [ "@service_container" ] ]
+
     WBW\Bundle\CoreBundle\Controller\TwigController:
         alias:  "wbw.core.controller.twig"
         public: true

@@ -16,6 +16,7 @@ use Exception;
 use Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
 use WBW\Bundle\CoreBundle\Command\CopySkeletonCommand;
 use WBW\Bundle\CoreBundle\Command\UnzipAssetsCommand;
+use WBW\Bundle\CoreBundle\Controller\HostController;
 use WBW\Bundle\CoreBundle\Controller\TwigController;
 use WBW\Bundle\CoreBundle\DependencyInjection\Configuration;
 use WBW\Bundle\CoreBundle\DependencyInjection\WBWCoreExtension;
@@ -152,6 +153,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(UnzipAssetsCommand::class, $this->containerBuilder->get(UnzipAssetsCommand::SERVICE_NAME));
 
         // Controllers
+        $this->assertInstanceOf(HostController::class, $this->containerBuilder->get(HostController::SERVICE_NAME));
         $this->assertInstanceOf(TwigController::class, $this->containerBuilder->get(TwigController::SERVICE_NAME));
 
         // Event listeners
