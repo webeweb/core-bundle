@@ -1,6 +1,13 @@
 CHANGELOG
 =========
 
+### master
+
+- Add Chart.js 4.0.1
+- Add Host controller
+- Improve assets configuration
+- Improve controllers configuration
+
 ### [3.14.6](https://github.com/webeweb/core-bundle/tree/v3.14.6) (2022-10-12)
 
 - Replace console.log() by console.debug()
