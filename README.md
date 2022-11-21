@@ -16,6 +16,7 @@ into all our bundles and Symfony applications.
 Includes:
 
 - [Animate.css 3.7.0](https://daneden.github.io/animate.css)
+- [Chart.js 4.0.1](https://www.chartjs.org)
 - [Clippy JS](https://www.smore.com/clippy-js)
 - [Font Awesome 5.15.2](https://fontawesome.com)
 - [FullCalendar 5.9.0](https://fullcalendar.io)
