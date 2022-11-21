@@ -78,11 +78,12 @@ class WBWCoreBundleTest extends AbstractTestCase {
         $plugins = $config["assets"]["wbw.core.asset.core"]["plugins"];
 
         $res = AssetsHelper::listAssets($assets);
-        $this->assertCount(24, $res);
+        $this->assertCount(25, $res);
 
         $i = -1;
 
         $this->assertRegExp("/animate\.css-" . preg_quote($plugins["animate_css"]["version"]) . "\.zip$/", $res[++$i]);
+        $this->assertRegExp("/chart.js-" . preg_quote($plugins["chart_js"]["version"]) . "\.zip$/", $res[++$i]);
         $this->assertRegExp("/clippy\.js\.zip$/", $res[++$i]);
         $this->assertRegExp("/fontawesome-" . preg_quote($plugins["font_awesome"]["version"]) . "\.zip$/", $res[++$i]);
         $this->assertRegExp("/fontawesome-6\.2\.0\.zip$/", $res[++$i]);
