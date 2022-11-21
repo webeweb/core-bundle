@@ -14,7 +14,7 @@ assets:
                 description: "Chart.js"
                 stylesheets:
                 javascripts:
-                    - "/chart.js-{{ version }}/chart.js"
+                    - "/chart.js-{{ version }}/chart.umd.js"
             clippy_js:
                 version:
                 description: "Clippy.js"
