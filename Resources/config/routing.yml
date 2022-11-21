@@ -1,4 +1,8 @@
 # Resources/config/routing.yml
+wbw_core_host:
+    prefix:   "/host"
+    resource: "@WBWCoreBundle/Resources/config/routing/host.yml"
+
 wbw_core_twig:
     prefix:   "/twig"
     resource: "@WBWCoreBundle/Resources/config/routing/twig.yml"

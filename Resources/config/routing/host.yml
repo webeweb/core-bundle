@@ -1,0 +1,10 @@
+# Resources/config/routing/host.yml
+wbw_core_host_cpu:
+    path: "/cpu"
+    defaults: { _controller: "WBW\\Bundle\\CoreBundle\\Controller\\HostController::cpuAction" }
+    methods: [ "GET" ]
+
+wbw_core_host_memory:
+    path: "/memory"
+    defaults: { _controller: "WBW\\Bundle\\CoreBundle\\Controller\\HostController::memoryAction" }
+    methods: [ "GET" ]
