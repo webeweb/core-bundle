@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### master
+### [3.15.0](https://github.com/webeweb/core-bundle/tree/v3.15.0) (2022-11-24)
 
 - Add app logo AnyDesk
 - Add app logo Apple Safari
