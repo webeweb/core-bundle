@@ -88,14 +88,14 @@ class SkeletonHelperTest extends AbstractTestCase {
 
         $i = -1;
 
+        $this->assertEquals($this->directorySkeleton . "/assets/WBWCoreJQueryInputMask.js.twig", $res[++$i]);
+        $this->assertEquals($this->directorySkeleton . "/assets/WBWCoreLeaflet.js.twig", $res[++$i]);
+        $this->assertEquals($this->directorySkeleton . "/assets/WBWCoreMaterialDesignColorPalette.js.twig", $res[++$i]);
+        $this->assertEquals($this->directorySkeleton . "/assets/WBWCoreSweetAlert.js.twig", $res[++$i]);
+        $this->assertEquals($this->directorySkeleton . "/assets/WBWCoreWaitMe.js.twig", $res[++$i]);
         $this->assertEquals($this->directorySkeleton . "/assets/_helper_css.html.twig", $res[++$i]);
         $this->assertEquals($this->directorySkeleton . "/assets/_javascripts.html.twig", $res[++$i]);
         $this->assertEquals($this->directorySkeleton . "/assets/_stylesheets.html.twig", $res[++$i]);
-        $this->assertEquals($this->directorySkeleton . "/assets/wbwCoreJQueryInputMask.js.twig", $res[++$i]);
-        $this->assertEquals($this->directorySkeleton . "/assets/wbwCoreLeaflet.js.twig", $res[++$i]);
-        $this->assertEquals($this->directorySkeleton . "/assets/wbwCoreMaterialDesignColorPalette.js.twig", $res[++$i]);
-        $this->assertEquals($this->directorySkeleton . "/assets/wbwCoreSweetAlert.js.twig", $res[++$i]);
-        $this->assertEquals($this->directorySkeleton . "/assets/wbwCoreWaitMe.js.twig", $res[++$i]);
         $this->assertEquals($this->directorySkeleton . "/email/_content.html.twig", $res[++$i]);
         $this->assertEquals($this->directorySkeleton . "/email/_footer.html.twig", $res[++$i]);
         $this->assertEquals($this->directorySkeleton . "/email/_header.html.twig", $res[++$i]);

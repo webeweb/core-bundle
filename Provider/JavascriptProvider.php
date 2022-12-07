@@ -34,11 +34,11 @@ class JavascriptProvider implements JavascriptProviderInterface {
     public function getJavascripts(): array {
 
         return [
-            "wbwCoreJQueryInputMask"            => "@WBWCore/assets/wbwCoreJQueryInputMask.js.twig",
-            "wbwCoreLeaflet"                    => "@WBWCore/assets/wbwCoreLeaflet.js.twig",
-            "wbwCoreMaterialDesignColorPalette" => "@WBWCore/assets/wbwCoreMaterialDesignColorPalette.js.twig",
-            "wbwCoreSweetAlert"                 => "@WBWCore/assets/wbwCoreSweetAlert.js.twig",
-            "wbwCoreWaitMe"                     => "@WBWCore/assets/wbwCoreWaitMe.js.twig",
+            "WBWCoreJQueryInputMask"            => "@WBWCore/assets/WBWCoreJQueryInputMask.js.twig",
+            "WBWCoreLeaflet"                    => "@WBWCore/assets/WBWCoreLeaflet.js.twig",
+            "WBWCoreMaterialDesignColorPalette" => "@WBWCore/assets/WBWCoreMaterialDesignColorPalette.js.twig",
+            "WBWCoreSweetAlert"                 => "@WBWCore/assets/WBWCoreSweetAlert.js.twig",
+            "WBWCoreWaitMe"                     => "@WBWCore/assets/WBWCoreWaitMe.js.twig",
         ];
     }
 }
