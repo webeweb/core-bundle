@@ -86,14 +86,13 @@ class HostControllerTest extends AbstractWebTestCase {
         $this->assertTrue($res["success"]);
         $this->assertNull($res["message"]);
         $this->assertNull($res["errors"]);
-        $this->assertCount(6, $res["data"]);
+        $this->assertNotCount(0, $res["data"]);
 
-        $this->assertArrayHasKey("total", $res["data"]);
-        $this->assertArrayHasKey("used", $res["data"]);
-        $this->assertArrayHasKey("free", $res["data"]);
-        $this->assertArrayHasKey("shared", $res["data"]);
-        $this->assertArrayHasKey("buffCache", $res["data"]);
-        $this->assertArrayHasKey("available", $res["data"]);
+        $this->assertArrayHasKey("MemAvailable", $res["data"]);
+        $this->assertArrayHasKey("MemFree", $res["data"]);
+        $this->assertArrayHasKey("MemTotal", $res["data"]);
+        $this->assertArrayHasKey("SwapFree", $res["data"]);
+        $this->assertArrayHasKey("SwapTotal", $res["data"]);
     }
 
     /**
@@ -125,7 +124,7 @@ class HostControllerTest extends AbstractWebTestCase {
     public function testRetrieveInformationServer(): void {
 
         // Set a Request mock.
-        $request = $this->getMockBuilder(Request::class)->disableOriginalConstructor()->getMock();
+        $request         = $this->getMockBuilder(Request::class)->disableOriginalConstructor()->getMock();
         $request->server = $this->getMockBuilder(ServerBag::class)->disableOriginalConstructor()->getMock();
 
         $obj = new HostController();

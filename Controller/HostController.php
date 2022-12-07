@@ -15,7 +15,7 @@ use Doctrine\DBAL\Connection;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use WBW\Library\Core\Helper\OSHelper;
+use WBW\Library\System\System;
 use WBW\Library\Types\Helper\ArrayHelper;
 
 /**
@@ -40,7 +40,7 @@ class HostController extends AbstractController {
      */
     public function cpuAction(): Response {
 
-        $info = OSHelper::getCpu();
+        $info = System::getCpu();
         $data = $this->newDefaultJsonResponseData(true, $info->jsonSerialize());
 
         return new JsonResponse($data);
@@ -53,7 +53,7 @@ class HostController extends AbstractController {
      */
     public function memoryAction(): Response {
 
-        $info = OSHelper::getMemory();
+        $info = System::getMemory();
         $data = $this->newDefaultJsonResponseData(true, $info->jsonSerialize());
 
         return new JsonResponse($data);
@@ -76,7 +76,7 @@ class HostController extends AbstractController {
             "host"          => $parameters["host"],
             "port"          => $parameters["port"],
             "user"          => $parameters["user"],
-            "serverVersion" =>  ArrayHelper::get($parameters,"serverVersion"),
+            "serverVersion" => ArrayHelper::get($parameters, "serverVersion"),
         ];
     }
 
