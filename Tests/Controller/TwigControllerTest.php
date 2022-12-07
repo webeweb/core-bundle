@@ -67,7 +67,7 @@ class TwigControllerTest extends AbstractWebTestCase {
 
         $client = $this->client;
 
-        $client->request("GET", "/twig/resource/js/wbwCoreLeaflet");
+        $client->request("GET", "/twig/resource/WBWCoreLeaflet.js");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals("application/javascript", $client->getResponse()->headers->get("Content-Type"));
     }

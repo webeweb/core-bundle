@@ -5,6 +5,6 @@ wbw_core_twig_function:
     methods: [ "POST" ]
 
 wbw_core_twig_resource:
-    path: "/resource/{type}/{name}"
+    path: "/resource/{name}.{type}"
     defaults: { _controller: "WBW\\Bundle\\CoreBundle\\Controller\\TwigController::resourceAction" }
     methods: [ "GET" ]
