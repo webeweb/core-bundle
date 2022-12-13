@@ -10,6 +10,30 @@ CHANGELOG
 - Improve controllers configuration
 - Improve unit tests
 
+### [3.15.0](https://github.com/webeweb/core-bundle/tree/v3.15.0) (2022-11-24)
+
+- Add app logo AnyDesk
+- Add app logo Apple Safari
+- Add app logo Brave browser
+- Add app logo Chromium
+- Add app logo Gnome Web
+- Add app logo Google Chrome
+- Add app logo Icecat
+- Add app logo IceWeasel
+- Add app logo Konqueror
+- Add app logo Microsoft Edge
+- Add app logo Microsoft Internet Explorer
+- Add app logo Midori
+- Add app logo Mozilla Firefox
+- Add app logo Opera
+- Add app logo Opera GX
+- Add app logo Opera Mini
+- Add app logo SeaMonkey
+- Add app logo Vivaldi
+- Add Chart.js 4.0.1
+- Improve assets configuration
+- Improve controllers configuration
+
 ### [3.14.6](https://github.com/webeweb/core-bundle/tree/v3.14.6) (2022-10-12)
 
 - Replace console.log() by console.debug()
