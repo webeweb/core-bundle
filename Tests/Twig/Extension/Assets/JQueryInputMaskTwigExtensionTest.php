@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension\Assets;
 
+use Twig\Extension\ExtensionInterface;
 use Twig\Node\Node;
 use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
@@ -256,6 +257,8 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("wbw.core.twig.extension.assets.jquery_inputmask", JQueryInputMaskTwigExtension::SERVICE_NAME);
 
         $obj = new JQueryInputMaskTwigExtension($this->twigEnvironment, $this->rendererTwigExtension);
+
+        $this->assertInstanceOf(ExtensionInterface::class, $obj);
 
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
         $this->assertSame($this->rendererTwigExtension, $obj->getAssetsTwigExtension());

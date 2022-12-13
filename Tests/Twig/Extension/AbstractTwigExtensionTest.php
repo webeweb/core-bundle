@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension;
 
+use Twig\Extension\ExtensionInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Twig\Extension\TestTwigExtension;
 use WBW\Library\Symfony\Assets\NavigationNodeInterface;
@@ -59,6 +60,8 @@ class AbstractTwigExtensionTest extends AbstractTestCase {
     public function test__constructor(): void {
 
         $obj = new TestTwigExtension($this->twigEnvironment);
+
+        $this->assertInstanceOf(ExtensionInterface::class, $obj);
 
         $this->assertEquals("&nbsp;", TestTwigExtension::DEFAULT_CONTENT);
         $this->assertEquals(NavigationNodeInterface::DEFAULT_HREF, TestTwigExtension::DEFAULT_HREF);

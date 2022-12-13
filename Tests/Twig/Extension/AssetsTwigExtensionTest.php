@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension;
 
+use Twig\Extension\ExtensionInterface;
 use Twig\Node\Node;
 use Twig\TwigFilter;
 use Twig\TwigFunction;
@@ -335,6 +336,8 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("wbw.core.twig.extension.assets", AssetsTwigExtension::SERVICE_NAME);
 
         $obj = new AssetsTwigExtension($this->twigEnvironment);
+
+        $this->assertInstanceOf(ExtensionInterface::class, $obj);
 
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
         $this->assertNull($obj->getPublicDirectory());

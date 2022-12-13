@@ -13,6 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension\Assets;
 
 use Exception;
 use Symfony\Component\Filesystem\Exception\FileNotFoundException;
+use Twig\Extension\ExtensionInterface;
 use Twig\Node\Node;
 use Twig\TwigFilter;
 use Twig\TwigFunction;
@@ -339,6 +340,8 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("wbw.core.twig.extension.assets.syntax_highlighter", SyntaxHighlighterTwigExtension::SERVICE_NAME);
 
         $obj = new SyntaxHighlighterTwigExtension($this->twigEnvironment);
+
+        $this->assertInstanceOf(ExtensionInterface::class, $obj);
 
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }

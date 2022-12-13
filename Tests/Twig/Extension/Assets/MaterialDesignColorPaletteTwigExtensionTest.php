@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension\Assets;
 
+use Twig\Extension\ExtensionInterface;
 use Twig\Node\Node;
 use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
@@ -216,6 +217,8 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("wbw.core.twig.extension.assets.material_design_color_palette", MaterialDesignColorPaletteTwigExtension::SERVICE_NAME);
 
         $obj = new MaterialDesignColorPaletteTwigExtension($this->twigEnvironment);
+
+        $this->assertInstanceOf(ExtensionInterface::class, $obj);
 
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }

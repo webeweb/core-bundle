@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension\Assets;
 
+use Twig\Extension\ExtensionInterface;
 use Twig\Node\Node;
 use Twig\TwigFilter;
 use Twig\TwigFunction;
@@ -193,6 +194,8 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("wbw.core.twig.extension.assets.font_awesome", FontAwesomeTwigExtension::SERVICE_NAME);
 
         $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
+
+        $this->assertInstanceOf(ExtensionInterface::class, $obj);
 
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }

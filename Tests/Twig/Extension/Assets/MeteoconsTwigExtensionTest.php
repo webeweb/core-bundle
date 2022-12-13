@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension\Assets;
 
+use Twig\Extension\ExtensionInterface;
 use Twig\Node\Node;
 use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
@@ -148,6 +149,8 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("wbw.core.twig.extension.assets.meteocons", MeteoconsTwigExtension::SERVICE_NAME);
 
         $obj = new MeteoconsTwigExtension($this->twigEnvironment);
+
+        $this->assertInstanceOf(ExtensionInterface::class, $obj);
 
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }

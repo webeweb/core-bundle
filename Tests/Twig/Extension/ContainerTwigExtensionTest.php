@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension;
 
+use Twig\Extension\ExtensionInterface;
 use Twig\Node\Node;
 use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
@@ -86,6 +87,8 @@ class ContainerTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("wbw.core.twig.extension.container", ContainerTwigExtension::SERVICE_NAME);
 
         $obj = new ContainerTwigExtension($this->twigEnvironment, $this->containerBuilder);
+
+        $this->assertInstanceOf(ExtensionInterface::class, $obj);
 
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
         $this->assertSame($this->containerBuilder, $obj->getContainer());

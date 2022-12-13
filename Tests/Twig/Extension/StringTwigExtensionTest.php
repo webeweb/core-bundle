@@ -13,6 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension;
 
 use DateTime;
 use Exception;
+use Twig\Extension\ExtensionInterface;
 use Twig\Node\Node;
 use Twig\TwigFilter;
 use Twig\TwigFunction;
@@ -332,6 +333,8 @@ class StringTwigExtensionTest extends AbstractTestCase {
         $this->assertEquals("wbw.core.twig.extension.string", StringTwigExtension::SERVICE_NAME);
 
         $obj = new StringTwigExtension($this->twigEnvironment);
+
+        $this->assertInstanceOf(ExtensionInterface::class, $obj);
 
         $this->assertSame($this->twigEnvironment, $obj->getTwigEnvironment());
     }
