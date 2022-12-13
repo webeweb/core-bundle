@@ -5,6 +5,7 @@ CHANGELOG
 
 - Add Chart.js 4.0.1
 - Add Host controller
+- Add getTwig() into abstract controller
 - Improve assets configuration
 - Improve controllers configuration
 - Improve unit tests
