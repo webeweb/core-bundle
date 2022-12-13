@@ -17,6 +17,7 @@ use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\RouterInterface;
+use Twig\Environment;
 use WBW\Bundle\CoreBundle\Controller\AbstractController;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\Event\ToastEvent;
@@ -102,6 +103,13 @@ class TestAbstractController extends AbstractController {
      */
     public function getTranslator() {
         return parent::getTranslator();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getTwig(): ?Environment {
+        return parent::getTwig();
     }
 
     /**

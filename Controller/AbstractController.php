@@ -18,6 +18,7 @@ use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Security\Core\User\User;
+use Twig\Environment;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\Event\ToastEvent;
 use WBW\Bundle\CoreBundle\EventDispatcher\BaseEvent;
@@ -137,6 +138,15 @@ abstract class AbstractController extends BaseController {
      */
     protected function getTranslator() {
         return $this->get("translator");
+    }
+
+    /**
+     * Get Twig.
+     *
+     * @return BaseTranslatorInterface|null Returns Twig.
+     */
+    protected function getTwig(): ?Environment {
+        return $this->get("twig");
     }
 
     /**

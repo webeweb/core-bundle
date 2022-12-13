@@ -19,6 +19,7 @@ use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Twig\Environment;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\Event\ToastEvent;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
@@ -203,6 +204,21 @@ class AbstractControllerTest extends AbstractTestCase {
         $res = $obj->getTranslator();
         $this->assertInstanceOf(BaseTranslatorInterface::class, $res);
         $this->assertSame($this->translator, $res);
+    }
+
+    /**
+     * Tests getTwig()
+     *
+     * @return void
+     */
+    public function testGetTwig(): void {
+
+        $obj = new TestAbstractController();
+        $obj->setContainer($this->containerBuilder);
+
+        $res = $obj->getTwig();
+        $this->assertInstanceOf(Environment::class, $res);
+        $this->assertSame($this->twigEnvironment, $res);
     }
 
     /**
