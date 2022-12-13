@@ -7,6 +7,7 @@ CHANGELOG
 - Add Host controller
 - Improve assets configuration
 - Improve controllers configuration
+- Improve unit tests
 
 ### [3.14.6](https://github.com/webeweb/core-bundle/tree/v3.14.6) (2022-10-12)
 
