@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.16.0](https://github.com/webeweb/core-bundle/tree/v3.16.0) (2022-12-19)
+
+- Update jQuery to 3.6.2
+
 ### [3.15.0](https://github.com/webeweb/core-bundle/tree/v3.15.0) (2022-11-24)
 
 - Add app logo AnyDesk
