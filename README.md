@@ -20,7 +20,7 @@ Includes:
 - [Clippy JS](https://www.smore.com/clippy-js)
 - [Font Awesome 5.15.2](https://fontawesome.com)
 - [FullCalendar 5.9.0](https://fullcalendar.io)
-- [jQuery 3.5.1](http://jquery.com)
+- [jQuery 3.6.2](http://jquery.com)
 - [jQuery contextMenu 2.9.2](http://swisnl.github.io/jQuery-contextMenu/docs.html) (jQuery plug-in)
 - [jQuery EasyAutocomplete 1.3.5](http://www.easyautocomplete.com) (jQuery plug-in)
 - [jQuery FancyBox 3.5.7](http://fancybox.net) (jQuery plug-in)
