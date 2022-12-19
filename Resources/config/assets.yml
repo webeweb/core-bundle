@@ -116,11 +116,11 @@ assets:
                     - "zh-cn"
                     - "zh-tw"
             jquery:
-                version:     "3.5.1"
+                version:     "3.6.2"
                 description: "jQuery"
                 stylesheets:
                 javascripts:
-                    - "/jquery-{{ version }}/jquery-3.5.1.min.js"
+                    - "/jquery-{{ version }}/jquery-3.6.2.min.js"
             jquery_context_menu:
                 version:     "2.9.2"
                 description: "jQuery contextMenu"
