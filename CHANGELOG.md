@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.17.0](https://github.com/webeweb/core-bundle/tree/v3.17.0) (2022-12-20)
+
+- Add PHP 8.2 support
+
 ### [3.16.0](https://github.com/webeweb/core-bundle/tree/v3.16.0) (2022-12-19)
 
 - Update jQuery to 3.6.2
