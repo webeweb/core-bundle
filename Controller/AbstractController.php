@@ -143,7 +143,7 @@ abstract class AbstractController extends BaseController {
     /**
      * Get Twig.
      *
-     * @return BaseTranslatorInterface|null Returns Twig.
+     * @return Environment|null Returns Twig.
      */
     protected function getTwig(): ?Environment {
         return $this->get("twig");

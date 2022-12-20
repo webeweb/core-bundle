@@ -11,6 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Controller;
 
+use DateTime;
+use Exception;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -64,12 +66,36 @@ class TwigController extends AbstractController {
     }
 
     /**
+     * Get the last modified.
+     *
+     * @param string $view The view.
+     * @return DateTime|null Returns the last modified.
+     * @throws Exception Throws an exception if an error occurs.
+     */
+    protected function getLastModified(string $view): ?DateTime {
+
+        $twig = $this->getTwig();
+        if (null === $twig) {
+            return null;
+        }
+
+        $path = $twig->getLoader()->getSourceContext($view)->getPath();
+        $time = filemtime($path);
+        if (false === $time) {
+            return null;
+        }
+
+        return new DateTime("@$time");
+    }
+
+    /**
      * Resource.
      *
      * @param Request $request The request.
      * @param string $type The type.
      * @param string $name The name.
      * @return Response Returns the response.
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function resourceAction(Request $request, string $type, string $name): Response {
 
@@ -101,10 +127,16 @@ class TwigController extends AbstractController {
             throw $this->createNotFoundException();
         }
 
+        $modified = $this->getLastModified($resources[$name]);
+        if (null === $modified) {
+            $modified = new DateTime();
+        }
+
         $content = $this->renderView($resources[$name], $request->query->all());
 
         return new Response($content, 200, [
-            "Content-Type" => $contentType,
+            "Content-Type"  => $contentType,
+            "Last-Modified" => $modified->format("D, d M Y H:i:s T"),
         ]);
     }
 }
