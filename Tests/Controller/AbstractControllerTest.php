@@ -17,6 +17,7 @@ use Psr\Log\LoggerInterface;
 use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Twig\Environment;
@@ -159,6 +160,21 @@ class AbstractControllerTest extends AbstractTestCase {
         $res = $obj->getLogger();
         $this->assertInstanceOf(LoggerInterface::class, $res);
         $this->assertSame($this->logger, $res);
+    }
+
+    /**
+     * Tests getMailer()
+     *
+     * @return void
+     */
+    public function testGetMailer(): void {
+
+        $obj = new TestAbstractController();
+        $obj->setContainer($this->containerBuilder);
+
+        $res = $obj->getMailer();
+        $this->assertInstanceOf(MailerInterface::class, $res);
+        $this->assertSame($this->mailer, $res);
     }
 
     /**

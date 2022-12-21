@@ -284,6 +284,7 @@ abstract class AbstractTestCase extends TestCase {
         $this->containerBuilder->set("form.factory", $this->formFactory);
         $this->containerBuilder->set("kernel", $this->kernel);
         $this->containerBuilder->set("logger", $this->logger);
+        $this->containerBuilder->set("mailer", $this->mailer);
         $this->containerBuilder->set("router", $this->router);
         $this->containerBuilder->set("session", $this->session);
         $this->containerBuilder->set("security.csrf.token_manager", $this->csrfTokenManager);

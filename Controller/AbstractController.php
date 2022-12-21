@@ -16,6 +16,7 @@ use Psr\Log\LoggerInterface;
 use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Security\Core\User\User;
 use Twig\Environment;
@@ -111,6 +112,15 @@ abstract class AbstractController extends BaseController {
      */
     protected function getLogger(): ?LoggerInterface {
         return $this->get("logger");
+    }
+
+    /**
+     * Get the mailer.
+     *
+     * @return MailerInterface|null Returns the mailer.
+     */
+    protected function getMailer(): ?MailerInterface {
+        return $this->get("mailer");
     }
 
     /**

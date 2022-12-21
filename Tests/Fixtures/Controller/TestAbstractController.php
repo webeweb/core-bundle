@@ -16,6 +16,7 @@ use Psr\Log\LoggerInterface;
 use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Routing\RouterInterface;
 use Twig\Environment;
 use WBW\Bundle\CoreBundle\Controller\AbstractController;
@@ -75,6 +76,13 @@ class TestAbstractController extends AbstractController {
      */
     public function getLogger(): ?LoggerInterface {
         return parent::getLogger();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getMailer(): ?MailerInterface {
+        return parent::getMailer();
     }
 
     /**
