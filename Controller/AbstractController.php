@@ -165,7 +165,7 @@ abstract class AbstractController extends BaseController {
         if (false === UserHelper::hasRoles($user, $roles, $or)) {
 
             // Throw a bad user role exception with an anonymous user if user is null.
-            $user = null !== $user ? $user : new User("anonymous", "");
+            $user = null === $user ? new User("anonymous", "") : $user;
             throw new BadUserRoleException($user, $roles, $redirectUrl, $originUrl);
         }
 
