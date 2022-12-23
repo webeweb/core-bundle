@@ -49,4 +49,4 @@ swal:
         text:  "Une erreur est survenue"
 
 wait_me:
-    text: "Veuillez patienter"
+    text: "Veuillez patienter..."
