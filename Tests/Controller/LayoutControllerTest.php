@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
 class LayoutControllerTest extends AbstractWebTestCase {
 
     /**
-     * Tests assets
+     * Tests assets.
      *
      * @return void
      */
