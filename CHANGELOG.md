@@ -9,6 +9,7 @@ CHANGELOG
 - Add getTwig() into abstract controller
 - Improve assets configuration
 - Improve controllers configuration
+- Improve functional tests
 - Improve unit tests
 
 ### [3.17.0](https://github.com/webeweb/core-bundle/tree/v3.17.0) (2022-12-20)
