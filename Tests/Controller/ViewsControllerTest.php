@@ -16,37 +16,23 @@ use WBW\Bundle\CoreBundle\Provider\JavascriptProvider;
 use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
 
 /**
- * Layout controller test.
+ * Views controller test.
  *
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Controller
  */
-class LayoutControllerTest extends AbstractWebTestCase {
+class ViewsControllerTest extends AbstractWebTestCase {
 
     /**
-     * Tests emailAction()
+     * Tests assetsJavascriptsAction()
      *
      * @return void
      */
-    public function testEmailAction(): void {
+    public function testAssetsJavascriptsAction(): void {
 
         $client = $this->client;
 
-        $client->request("GET", "/email");
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
-    }
-
-    /**
-     * Tests javascriptsAction()
-     *
-     * @return void
-     */
-    public function testJavascriptsAction(): void {
-
-        $client = $this->client;
-
-        $client->request("GET", "/javascripts");
+        $client->request("GET", "/assets/javascripts");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
 
@@ -65,6 +51,34 @@ class LayoutControllerTest extends AbstractWebTestCase {
     }
 
     /**
+     * Tests assetsStylesheetsAction()
+     *
+     * @return void
+     */
+    public function testAssetsStylesheetsAction(): void {
+
+        $client = $this->client;
+
+        $client->request("GET", "/assets/stylesheets");
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
+    }
+
+    /**
+     * Tests emailLayoutAction()
+     *
+     * @return void
+     */
+    public function testEmailLayoutAction(): void {
+
+        $client = $this->client;
+
+        $client->request("GET", "/email/layout");
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
+    }
+
+    /**
      * Tests kernelExceptionAction()
      *
      * @return void
@@ -75,20 +89,6 @@ class LayoutControllerTest extends AbstractWebTestCase {
 
         $client->request("GET", "/kernel-exception");
         $this->assertEquals(500, $client->getResponse()->getStatusCode());
-        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
-    }
-
-    /**
-     * Tests stylesheetsAction()
-     *
-     * @return void
-     */
-    public function testStylesheetsAction(): void {
-
-        $client = $this->client;
-
-        $client->request("GET", "/stylesheets");
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
     }
 }

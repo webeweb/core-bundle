@@ -3,22 +3,22 @@ wbw_core:
     prefix:   "/"
     resource: "@WBWCoreBundle/Resources/config/routing.yml"
 
-wbw_core_javascripts:
-    path: "/javascripts"
-    defaults: { _controller: "WBW\\Bundle\\CoreBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::javascriptsAction" }
+wbw_core_assets_javascripts:
+    path: "/assets/javascripts"
+    defaults: { _controller: "WBW\\Bundle\\CoreBundle\\Tests\\Fixtures\\Controller\\TestViewsController::assetsJavascriptsAction" }
     methods: [ "GET" ]
 
-wbw_core_stylesheets:
-    path: "/stylesheets"
-    defaults: { _controller: "WBW\\Bundle\\CoreBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::stylesheetsAction" }
+wbw_core_assets_stylesheets:
+    path: "/assets/stylesheets"
+    defaults: { _controller: "WBW\\Bundle\\CoreBundle\\Tests\\Fixtures\\Controller\\TestViewsController::assetsStylesheetsAction" }
     methods: [ "GET" ]
 
-wbw_core_email:
-    path: "/email"
-    defaults: { _controller: "WBW\\Bundle\\CoreBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::emailAction" }
+wbw_core_email_layout:
+    path: "/email/layout"
+    defaults: { _controller: "WBW\\Bundle\\CoreBundle\\Tests\\Fixtures\\Controller\\TestViewsController::emailLayoutAction" }
     methods: [ "GET" ]
 
 wbw_core_kernel_exception:
     path: "/kernel-exception"
-    defaults: { _controller: "WBW\\Bundle\\CoreBundle\\Tests\\Fixtures\\Controller\\TestLayoutController::kernelExceptionAction" }
+    defaults: { _controller: "WBW\\Bundle\\CoreBundle\\Tests\\Fixtures\\Controller\\TestViewsController::kernelExceptionAction" }
     methods: [ "GET" ]

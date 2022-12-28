@@ -16,29 +16,38 @@ use Symfony\Component\HttpFoundation\Response;
 use WBW\Bundle\CoreBundle\Controller\AbstractController;
 
 /**
- * Test layout controller.
+ * Test views controller.
  *
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Controller
  */
-class TestLayoutController extends AbstractController {
+class TestViewsController extends AbstractController {
 
     /**
-     * Displays an email template.
+     * Render assets/_javascripts.html.twig.
      *
      * @return Response Returns the response.
      */
-    public function emailAction(): Response {
-        return $this->render("@WBWCore/email/layout.html.twig");
+    public function assetsJavascriptsAction(): Response {
+        return $this->render("@WBWCore/assets/_javascripts.html.twig");
     }
 
     /**
-     * Displays a javascripts template.
+     * Render assets/_stylesheets.html.twig.
      *
      * @return Response Returns the response.
      */
-    public function javascriptsAction(): Response {
-        return $this->render("@WBWCore/assets/_javascripts.html.twig");
+    public function assetsStylesheetsAction(): Response {
+        return $this->render("@WBWCore/assets/_stylesheets.html.twig");
+    }
+
+    /**
+     * Render email/layout.html.twig.
+     *
+     * @return Response Returns the response.
+     */
+    public function emailLayoutAction(): Response {
+        return $this->render("@WBWCore/email/layout.html.twig");
     }
 
     /**
@@ -48,14 +57,5 @@ class TestLayoutController extends AbstractController {
      */
     public function kernelExceptionAction(): Response {
         throw new RuntimeException();
-    }
-
-    /**
-     * Displays a stylesheets template.
-     *
-     * @return Response Returns the response.
-     */
-    public function stylesheetsAction(): Response {
-        return $this->render("@WBWCore/assets/_stylesheets.html.twig");
     }
 }
