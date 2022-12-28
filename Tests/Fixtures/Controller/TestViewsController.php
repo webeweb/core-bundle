@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Controller\AbstractController;
 class TestViewsController extends AbstractController {
 
     /**
-     * Render assets/_javascripts.html.twig.
+     * Render assets/_javascripts.html.twig
      *
      * @return Response Returns the response.
      */
@@ -33,7 +33,7 @@ class TestViewsController extends AbstractController {
     }
 
     /**
-     * Render assets/_stylesheets.html.twig.
+     * Render assets/_stylesheets.html.twig
      *
      * @return Response Returns the response.
      */
@@ -42,7 +42,7 @@ class TestViewsController extends AbstractController {
     }
 
     /**
-     * Render email/layout.html.twig.
+     * Render email/layout.html.twig
      *
      * @return Response Returns the response.
      */
