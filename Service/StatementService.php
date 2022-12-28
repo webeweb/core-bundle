@@ -14,6 +14,7 @@ namespace WBW\Bundle\CoreBundle\Service;
 use Doctrine\DBAL\Result;
 use Doctrine\DBAL\Statement;
 use Doctrine\ORM\EntityManagerInterface;
+use InvalidArgumentException;
 use WBW\Bundle\CoreBundle\Doctrine\ORM\EntityManagerTrait;
 
 /**
@@ -38,6 +39,28 @@ class StatementService implements StatementServiceInterface {
     /**
      * {@inheritdoc}
      */
+    public function executeQueries(string $sql, array $values): array {
+
+        $queries = preg_split(self::QUERY_SEPARATOR, $sql);
+        $results = [];
+
+        for ($i = 0; $i < count($queries); ++$i) {
+            $results[] = $this->executeQuery($queries[$i], $values[$i]);
+        }
+
+        return $results;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function executeQueriesFile(string $filename, array $values): array {
+        return $this->executeQueries($this->readStatementFile($filename), $values);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function executeQuery(string $sql, array $values): Result {
         return $this->prepareStatement($sql, $values)->executeQuery();
     }
@@ -45,8 +68,44 @@ class StatementService implements StatementServiceInterface {
     /**
      * {@inheritdoc}
      */
+    public function executeQueryFile(string $filename, array $values): Result {
+        return $this->executeQuery($this->readStatementFile($filename), $values);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function executeStatement(string $sql, array $values): int {
         return $this->prepareStatement($sql, $values)->executeStatement();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function executeStatementFile(string $filename, array $values): int {
+        return $this->executeStatement($this->readStatementFile($filename), $values);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function executeStatements(string $sql, array $values): array {
+
+        $queries = preg_split(self::QUERY_SEPARATOR, $sql);
+        $results = [];
+
+        for ($i = 0; $i < count($queries); ++$i) {
+            $results[] = $this->executeStatement($queries[$i], $values[$i]);
+        }
+
+        return $results;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function executeStatementsFile(string $filename, array $values): array {
+        return $this->executeStatements($this->readStatementFile($filename), $values);
     }
 
     /**
@@ -61,5 +120,17 @@ class StatementService implements StatementServiceInterface {
         }
 
         return $stmt;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function readStatementFile(string $filename): string {
+
+        if (true === file_exists($filename)) {
+            return file_get_contents(realpath($filename));
+        }
+
+        throw new InvalidArgumentException(sprintf('The file "%s" was not found', $filename));
     }
 }

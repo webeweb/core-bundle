@@ -15,6 +15,7 @@ use Doctrine\DBAL\Exception;
 use Doctrine\DBAL\Result;
 use Doctrine\DBAL\Statement;
 use Doctrine\ORM\EntityManagerInterface;
+use InvalidArgumentException;
 
 /**
  * Statement service interface.
@@ -25,11 +26,41 @@ use Doctrine\ORM\EntityManagerInterface;
 interface StatementServiceInterface {
 
     /**
+     * Query separator.
+     *
+     * @var string
+     */
+    const QUERY_SEPARATOR = '/\-{2}\ =+\n/';
+
+    /**
      * Service name.
      *
      * @var string
      */
     const SERVICE_NAME = "wbw.core.service.statement";
+
+    /**
+     * Executes the queries.
+     *
+     * @param string $sql The SQL.
+     * @param array $values The values.
+     * @return Result[] Returns the results.
+     * @throws Exception Throws a DBAL exception if an error occurs.
+     * @throws \Doctrine\DBAL\Driver\Exception Throws a driver exception if an error occurs.
+     */
+    public function executeQueries(string $sql, array $values): array;
+
+    /**
+     * Executes the queries.
+     *
+     * @param string $filename The filename.
+     * @param array $values The values.
+     * @return Result[] Returns the results.
+     * @throws InvalidArgumentException Throws an invalid argument exception if the file was not found.
+     * @throws Exception Throws a DBAL exception if an error occurs.
+     * @throws \Doctrine\DBAL\Driver\Exception Throws a driver exception if an error occurs.
+     */
+    public function executeQueriesFile(string $filename, array $values): array;
 
     /**
      * Executes a query.
@@ -43,6 +74,18 @@ interface StatementServiceInterface {
     public function executeQuery(string $sql, array $values): Result;
 
     /**
+     * Executes a query.
+     *
+     * @param string $filename The filename.
+     * @param array $values The values.
+     * @return Result Returns the result.
+     * @throws InvalidArgumentException Throws an invalid argument exception if the file was not found.
+     * @throws Exception Throws a DBAL exception if an error occurs.
+     * @throws \Doctrine\DBAL\Driver\Exception Throws a driver exception if an error occurs.
+     */
+    public function executeQueryFile(string $filename, array $values): Result;
+
+    /**
      * Executes a statement.
      *
      * @param string $sql The SQL.
@@ -52,6 +95,41 @@ interface StatementServiceInterface {
      * @throws \Doctrine\DBAL\Driver\Exception Throws a driver exception if an error occurs.
      */
     public function executeStatement(string $sql, array $values): int;
+
+    /**
+     * Executes a statement.
+     *
+     * @param string $filename The filename.
+     * @param array $values The values.
+     * @return int Returns the affected rows.
+     * @throws InvalidArgumentException Throws an invalid argument exception if the file was not found.
+     * @throws Exception Throws a DBAL exception if an error occurs.
+     * @throws \Doctrine\DBAL\Driver\Exception Throws a driver exception if an error occurs.
+     */
+    public function executeStatementFile(string $filename, array $values): int;
+
+    /**
+     * Executes the statements.
+     *
+     * @param string $sql The SQL.
+     * @param array $values The values.
+     * @return int[] Returns the affected rows.
+     * @throws Exception Throws a DBAL exception if an error occurs.
+     * @throws \Doctrine\DBAL\Driver\Exception Throws a driver exception if an error occurs.
+     */
+    public function executeStatements(string $sql, array $values): array;
+
+    /**
+     * Executes the statements.
+     *
+     * @param string $filename The filename.
+     * @param array $values The values.
+     * @return int[] Returns the affected rows.
+     * @throws InvalidArgumentException Throws an invalid argument exception if the file was not found.
+     * @throws Exception Throws a DBAL exception if an error occurs.
+     * @throws \Doctrine\DBAL\Driver\Exception Throws a driver exception if an error occurs.
+     */
+    public function executeStatementsFile(string $filename, array $values): array;
 
     /**
      * Get the entity manager.
@@ -69,4 +147,13 @@ interface StatementServiceInterface {
      * @throws Exception Throws a DBAL exception if an error occurs.
      */
     public function prepareStatement(string $sql, array $values): Statement;
+
+    /**
+     * Reads a statement file.
+     *
+     * @param string $filename The filename.
+     * @return string Returns the statement.
+     * @throws InvalidArgumentException Throws an invalid argument exception if the file was not found.
+     */
+    public function readStatementFile(string $filename): string;
 }
