@@ -154,21 +154,19 @@ class RepositoryService implements RepositoryServiceInterface {
      */
     protected function prepareStatement(string $table, string $entity, string $column, string $field, int $available): Statement {
 
-        $template = file_get_contents(__DIR__ . "/RepositoryService.sql");
+        $template = $this->getStatementService()->readStatementFile(__DIR__ . "/RepositoryService.sql");
 
         $searches = ["{{ column }}", "{{ table }}"];
         $replaces = [$column, $table];
 
         $sql = str_replace($searches, $replaces, $template);
 
-        $values = [
+        return $this->getStatementService()->prepareStatement($sql, [
             ":available" => [$available, PDO::PARAM_INT],
             ":column"    => [$column, PDO::PARAM_STR],
             ":entity"    => [$entity, PDO::PARAM_STR],
             ":field"     => [$field, PDO::PARAM_STR],
             ":table"     => [$table, PDO::PARAM_STR],
-        ];
-
-        return $this->getStatementService()->prepareStatement($sql, $values);
+        ]);
     }
 }
