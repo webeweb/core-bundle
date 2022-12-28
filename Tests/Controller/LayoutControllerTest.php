@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Controller;
 
+use WBW\Bundle\CoreBundle\Provider\JavascriptProvider;
 use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
 
 /**
@@ -20,6 +21,25 @@ use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
  * @package WBW\Bundle\CoreBundle\Tests\Controller
  */
 class LayoutControllerTest extends AbstractWebTestCase {
+
+    /**
+     * Tests assets
+     *
+     * @return void
+     */
+    public function testAssets(): void {
+
+        $client = $this->client;
+
+        $provider = new JavascriptProvider();
+
+        foreach ($provider->getJavascripts() as $k => $v) {
+
+            $client->request("GET", "/twig/resource/$k.js");
+            $this->assertEquals(200, $client->getResponse()->getStatusCode(), $v);
+            $this->assertEquals("application/javascript", $client->getResponse()->headers->get("Content-Type"), $v);
+        }
+    }
 
     /**
      * Tests emailAction()
