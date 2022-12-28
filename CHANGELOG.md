@@ -11,6 +11,7 @@ CHANGELOG
 - Improve controllers configuration
 - Improve functional tests
 - Improve unit tests
+- Improve Statement service with useful methods
 
 ### [3.17.0](https://github.com/webeweb/core-bundle/tree/v3.17.0) (2022-12-20)
 
