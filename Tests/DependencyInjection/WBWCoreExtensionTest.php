@@ -29,9 +29,7 @@ use WBW\Bundle\CoreBundle\Manager\ThemeManager;
 use WBW\Bundle\CoreBundle\Provider\JavascriptProvider;
 use WBW\Bundle\CoreBundle\Provider\SyntaxHighlighterProvider;
 use WBW\Bundle\CoreBundle\Service\RepositoryService;
-use WBW\Bundle\CoreBundle\Service\RepositoryServiceInterface;
 use WBW\Bundle\CoreBundle\Service\StatementService;
-use WBW\Bundle\CoreBundle\Service\StatementServiceInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser;
 use WBW\Bundle\CoreBundle\Twig\Extension\Assets\FontAwesomeTwigExtension;
@@ -70,7 +68,6 @@ use WBW\Library\Symfony\Manager\StylesheetManager;
 use WBW\Library\Symfony\Provider\Quote\WorldsWisdomQuoteProvider;
 use WBW\Library\Symfony\Provider\Quote\YamlQuoteProvider;
 use WBW\Library\Symfony\Service\TokenGeneratorService;
-use WBW\Library\Symfony\Service\TokenGeneratorServiceInterface;
 
 /**
  * Core extension test.
@@ -215,9 +212,9 @@ class WBWCoreExtensionTest extends AbstractTestCase {
 
         // Services
         $this->assertInstanceOf(RepositoryService::class, $this->containerBuilder->get("wbw.core.repository.repository_helper"));
-        $this->assertInstanceOf(RepositoryService::class, $this->containerBuilder->get(RepositoryServiceInterface::SERVICE_NAME));
-        $this->assertInstanceOf(StatementService::class, $this->containerBuilder->get(StatementServiceInterface::SERVICE_NAME));
-        $this->assertInstanceOf(TokenGeneratorService::class, $this->containerBuilder->get(TokenGeneratorServiceInterface::SERVICE_NAME));
+        $this->assertInstanceOf(RepositoryService::class, $this->containerBuilder->get(RepositoryService::SERVICE_NAME));
+        $this->assertInstanceOf(StatementService::class, $this->containerBuilder->get(StatementService::SERVICE_NAME));
+        $this->assertInstanceOf(TokenGeneratorService::class, $this->containerBuilder->get(TokenGeneratorService::SERVICE_NAME));
 
         // Twig extensions
         $this->assertInstanceOf(AssetsTwigExtension::class, $this->containerBuilder->get(AssetsTwigExtension::SERVICE_NAME));
