@@ -25,6 +25,18 @@ use WBW\Library\Symfony\Provider\StylesheetProviderInterface;
 class StylesheetProviderTest extends AbstractTestCase {
 
     /**
+     * Tests getStylesheets()
+     *
+     * @return void
+     */
+    public function testGetStylesheets(): void {
+
+        $obj = new StylesheetProvider();
+
+        $this->assertEquals([], $obj->getStylesheets());
+    }
+
+    /**
      * Tests __construct()
      *
      * @return void
