@@ -10,6 +10,11 @@ services:
         calls:
             - [ "setContainer", [ "@service_container" ] ]
 
+    wbw.core.tests.fixtures.provider.test_stylesheet:
+        class: WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\TestStylesheetProvider
+        tags:
+            - { name: "wbw.core.provider.stylesheet" }
+
     wbw.core.provider.theme.application:
         class: WBW\Library\Symfony\Theme\DefaultApplicationThemeProvider
 
