@@ -67,6 +67,20 @@ class TwigControllerTest extends AbstractWebTestCase {
 
         $client = $this->client;
 
+        $client->request("GET", "/twig/resource/404.js");
+        $this->assertEquals(404, $client->getResponse()->getStatusCode());
+        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
+    }
+
+    /**
+     * Tests resourceAction()
+     *
+     * @return void
+     */
+    public function testResourceActionWithJavascript(): void {
+
+        $client = $this->client;
+
         $client->request("GET", "/twig/resource/WBWCoreLeaflet.js");
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertEquals("application/javascript", $client->getResponse()->headers->get("Content-Type"));
@@ -78,13 +92,14 @@ class TwigControllerTest extends AbstractWebTestCase {
      *
      * @return void
      */
-    public function testResourceActionWithStatus404(): void {
+    public function testResourceActionWithStylesheet(): void {
 
         $client = $this->client;
 
-        $client->request("GET", "/twig/resource/html/wbwCoreLeaflet");
-        $this->assertEquals(404, $client->getResponse()->getStatusCode());
-        $this->assertEquals("text/html; charset=UTF-8", $client->getResponse()->headers->get("Content-Type"));
+        $client->request("GET", "/twig/resource/WBWCoreTest.css");
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals("text/css; charset=utf-8", $client->getResponse()->headers->get("Content-Type"));
+        $this->assertNotNull($client->getResponse()->headers->get("Last-Modified"));
     }
 
     /**
