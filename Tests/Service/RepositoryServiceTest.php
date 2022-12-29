@@ -39,7 +39,7 @@ class RepositoryServiceTest extends AbstractWebTestCase {
         parent::setUp();
 
         // Set a Repository service.
-        $this->service = static::$kernel->getContainer()->get(RepositoryServiceInterface::SERVICE_NAME);
+        $this->service = static::$kernel->getContainer()->get(RepositoryService::SERVICE_NAME);
     }
 
     /**
@@ -81,6 +81,8 @@ class RepositoryServiceTest extends AbstractWebTestCase {
      * @return void
      */
     public function test__construct(): void {
+
+        $this->assertEquals("wbw.core.service.repository", RepositoryService::SERVICE_NAME);
 
         $obj = new RepositoryService();
 

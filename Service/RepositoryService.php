@@ -34,6 +34,13 @@ class RepositoryService implements RepositoryServiceInterface {
     }
 
     /**
+     * Service name.
+     *
+     * @var string
+     */
+    const SERVICE_NAME = "wbw.core.service.repository";
+
+    /**
      * Executes a statement.
      *
      * @param Statement $statement The statement.

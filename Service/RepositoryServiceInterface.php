@@ -24,13 +24,6 @@ use WBW\Library\Symfony\Model\RepositoryReportInterface;
 interface RepositoryServiceInterface {
 
     /**
-     * Service name.
-     *
-     * @var string
-     */
-    const SERVICE_NAME = "wbw.core.service.repository";
-
-    /**
      * Find all repositories reports.
      *
      * @return RepositoryReportInterface[] Returns the repositories reports.
