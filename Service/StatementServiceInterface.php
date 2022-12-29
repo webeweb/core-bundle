@@ -30,14 +30,7 @@ interface StatementServiceInterface {
      *
      * @var string
      */
-    const QUERY_SEPARATOR = '/\-{2}\ =+\n/';
-
-    /**
-     * Service name.
-     *
-     * @var string
-     */
-    const SERVICE_NAME = "wbw.core.service.statement";
+    const QUERY_SEPARATOR = '/\n\-{2}\ =+\n/';
 
     /**
      * Executes the queries.
@@ -156,4 +149,12 @@ interface StatementServiceInterface {
      * @throws InvalidArgumentException Throws an invalid argument exception if the file was not found.
      */
     public function readStatementFile(string $filename): string;
+
+    /**
+     * Split statements.
+     *
+     * @param string $sql The SQL.
+     * @return string[] Returns the statements.
+     */
+    public function splitStatements(string $sql): array;
 }

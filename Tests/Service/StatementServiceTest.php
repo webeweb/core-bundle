@@ -44,7 +44,7 @@ class StatementServiceTest extends AbstractWebTestCase {
         parent::setUp();
 
         // Set a Statement service.
-        $this->service = static::$kernel->getContainer()->get(StatementServiceInterface::SERVICE_NAME);
+        $this->service = static::$kernel->getContainer()->get(StatementService::SERVICE_NAME);
     }
 
     /**
@@ -64,10 +64,12 @@ class StatementServiceTest extends AbstractWebTestCase {
      */
     public function testExecuteQueries(): void {
 
+        $filename = __DIR__ . "/StatementServiceTest.testExecuteQueriesFile.sql";
+
         $values  = array_pad([], 2, [
             ":date" => [(new DateTime())->format("Y-m-d"), PDO::PARAM_STR],
         ]);
-        $queries = $this->service->readStatementFile(__DIR__ . "/StatementServiceTest.testExecuteQueriesFile.sql");
+        $queries = $this->service->readStatementFile($filename);
 
         $obj = $this->service;
 
@@ -86,13 +88,15 @@ class StatementServiceTest extends AbstractWebTestCase {
      */
     public function testExecuteQueriesFile(): void {
 
+        $filename = __DIR__ . "/StatementServiceTest.testExecuteQueriesFile.sql";
+
         $values = array_pad([], 2, [
             ":date" => [(new DateTime())->format("Y-m-d"), PDO::PARAM_STR],
         ]);
 
         $obj = $this->service;
 
-        $res = $obj->executeQueriesFile(__DIR__ . "/StatementServiceTest.testExecuteQueriesFile.sql", $values);
+        $res = $obj->executeQueriesFile($filename, $values);
         $this->assertCount(2, $res);
 
         $this->assertInstanceOf(Result::class, $res[0]);
@@ -107,10 +111,12 @@ class StatementServiceTest extends AbstractWebTestCase {
      */
     public function testExecuteQuery(): void {
 
+        $filename = __DIR__ . "/StatementServiceTest.testExecuteQueryFile.sql";
+
         $values = [
             ":date" => [(new DateTime())->format("Y-m-d"), PDO::PARAM_STR],
         ];
-        $query  = $this->service->readStatementFile(__DIR__ . "/StatementServiceTest.testExecuteQueryFile.sql");
+        $query  = $this->service->readStatementFile($filename);
 
         $obj = $this->service;
 
@@ -126,13 +132,15 @@ class StatementServiceTest extends AbstractWebTestCase {
      */
     public function testExecuteQueryFile(): void {
 
+        $filename = __DIR__ . "/StatementServiceTest.testExecuteQueryFile.sql";
+
         $values = [
             ":date" => [(new DateTime())->format("Y-m-d"), PDO::PARAM_STR],
         ];
 
         $obj = $this->service;
 
-        $res = $obj->executeQueryFile(__DIR__ . "/StatementServiceTest.testExecuteQueryFile.sql", $values);
+        $res = $obj->executeQueryFile($filename, $values);
         $this->assertInstanceOf(Result::class, $res);
     }
 
@@ -144,10 +152,12 @@ class StatementServiceTest extends AbstractWebTestCase {
      */
     public function testExecuteStatement(): void {
 
+        $filename = __DIR__ . "/StatementServiceTest.testExecuteStatementFile.sql";
+
         $values = [
             ":id" => [1, PDO::PARAM_INT],
         ];
-        $query  = $this->service->readStatementFile(__DIR__ . "/StatementServiceTest.testExecuteStatementFile.sql");
+        $query  = $this->service->readStatementFile($filename);
 
         $obj = $this->service;
 
@@ -163,13 +173,15 @@ class StatementServiceTest extends AbstractWebTestCase {
      */
     public function testExecuteStatementFile(): void {
 
+        $filename = __DIR__ . "/StatementServiceTest.testExecuteStatementFile.sql";
+
         $values = [
             ":id" => [1, PDO::PARAM_INT],
         ];
 
         $obj = $this->service;
 
-        $res = $obj->executeStatementFile(__DIR__ . "/StatementServiceTest.testExecuteStatementFile.sql", $values);
+        $res = $obj->executeStatementFile($filename, $values);
         $this->assertEquals(0, $res);
     }
 
@@ -181,10 +193,12 @@ class StatementServiceTest extends AbstractWebTestCase {
      */
     public function testExecuteStatements(): void {
 
+        $filename = __DIR__ . "/StatementServiceTest.testExecuteStatementsFile.sql";
+
         $values  = array_pad([], 2, [
             ":id" => [1, PDO::PARAM_INT],
         ]);
-        $queries = $this->service->readStatementFile(__DIR__ . "/StatementServiceTest.testExecuteStatementsFile.sql");
+        $queries = $this->service->readStatementFile($filename);
 
         $obj = $this->service;
 
@@ -203,13 +217,15 @@ class StatementServiceTest extends AbstractWebTestCase {
      */
     public function testExecuteStatementsFile(): void {
 
+        $filename = __DIR__ . "/StatementServiceTest.testExecuteStatementsFile.sql";
+
         $values = array_pad([], 2, [
             ":id" => [1, PDO::PARAM_INT],
         ]);
 
         $obj = $this->service;
 
-        $res = $obj->executeStatementsFile(__DIR__ . "/StatementServiceTest.testExecuteStatementsFile.sql", $values);
+        $res = $obj->executeStatementsFile($filename, $values);
         $this->assertCount(2, $res);
 
         $this->assertEquals(0, $res[0]);
@@ -224,11 +240,14 @@ class StatementServiceTest extends AbstractWebTestCase {
      */
     public function testPrepareStatement(): void {
 
+        $values = [
+            ":date" => [(new DateTime())->format("Y-m-d"), PDO::PARAM_STR],
+        ];
+        $query  = "SELECT :date";
+
         $obj = $this->service;
 
-        $res = $obj->prepareStatement("SELECT :date", [
-            ":date" => [(new DateTime())->format("Y-m-d"), PDO::PARAM_STR],
-        ]);
+        $res = $obj->prepareStatement($query, $values);
         $this->assertInstanceOf(Statement::class, $res);
     }
 
@@ -269,6 +288,26 @@ class StatementServiceTest extends AbstractWebTestCase {
     }
 
     /**
+     * Tests splitStatements()
+     *
+     * @return void
+     */
+    public function testSplitStatements(): void {
+
+        $filename = __DIR__ . "/StatementServiceTest.testExecuteQueriesFile.sql";
+
+        $queries = $this->service->readStatementFile($filename);
+
+        $obj = $this->service;
+
+        $res = $obj->splitStatements($queries);
+        $this->assertCount(2, $res);
+
+        $this->assertEquals("SELECT :date;", $res[0]);
+        $this->assertEquals("SELECT :date;", $res[1]);
+    }
+
+    /**
      * Tests __construct()
      *
      * @return void
@@ -277,6 +316,8 @@ class StatementServiceTest extends AbstractWebTestCase {
 
         // Set an Entity manager mock.
         $entityManager = $this->getMockBuilder(EntityManagerInterface::class)->getMock();
+
+        $this->assertEquals("wbw.core.service.statement", StatementService::SERVICE_NAME);
 
         $obj = new StatementService($entityManager);
 

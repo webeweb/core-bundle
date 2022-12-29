@@ -28,6 +28,13 @@ class StatementService implements StatementServiceInterface {
     use EntityManagerTrait;
 
     /**
+     * Service name.
+     *
+     * @var string
+     */
+    const SERVICE_NAME = "wbw.core.service.statement";
+
+    /**
      * Constructor.
      *
      * @param EntityManagerInterface $em The entity manager.
@@ -91,9 +98,9 @@ class StatementService implements StatementServiceInterface {
      */
     public function executeStatements(string $sql, array $values): array {
 
-        $queries = preg_split(self::QUERY_SEPARATOR, $sql);
         $results = [];
 
+        $queries = $this->splitStatements($sql);
         for ($i = 0; $i < count($queries); ++$i) {
             $results[] = $this->executeStatement($queries[$i], $values[$i]);
         }
@@ -132,5 +139,20 @@ class StatementService implements StatementServiceInterface {
         }
 
         throw new InvalidArgumentException(sprintf('The file "%s" was not found', $filename));
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function splitStatements(string $sql): array {
+
+        $queries = preg_split(self::QUERY_SEPARATOR, $sql);
+        if (false === $queries) {
+            return [];
+        }
+
+        return array_map(function($query) {
+            return trim($query);
+        }, $queries);
     }
 }

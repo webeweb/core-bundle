@@ -29,7 +29,6 @@ class StatementServiceInterfaceTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $this->assertEquals('/\-{2}\ =+\n/', StatementServiceInterface::QUERY_SEPARATOR);
-        $this->assertEquals("wbw.core.service.statement", StatementServiceInterface::SERVICE_NAME);
+        $this->assertEquals('/\n\-{2}\ =+\n/', StatementServiceInterface::QUERY_SEPARATOR);
     }
 }
