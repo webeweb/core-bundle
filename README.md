@@ -29,6 +29,7 @@ Includes:
 - [Leaflet 1.7.1](https://leafletjs.com)
 - [Leaflet Color Markers 1.0.0](https://github.com/pointhi/leaflet-color-markers) (Leaflet plug-in)
 - [Leaflet Marker Cluster 1.4.1](http://leaflet.github.io/Leaflet.markercluster) (Leaflet plug-in)
+- [lightGallery 2.7.0](https://github.com/sachinchoolur/lightGallery)
 - [Material Design Color Palette 1.1.0](http://zavoloklom.github.io/material-design-color-palette)
 - [Material Design Hierarchical Display 1.0.1](http://zavoloklom.github.io/material-design-hierarchical-display)
 - [Material Design Iconic Font 2.2.0](http://zavoloklom.github.io/material-design-iconic-font)

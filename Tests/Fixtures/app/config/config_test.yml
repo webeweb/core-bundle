@@ -73,6 +73,7 @@ wbw_core:
         - "leaflet"
         - "leaflet_color_markers"
         - "leaflet_marker_cluster"
+        - "light_gallery"
         - "material_design_color_palette"
         - "material_design_hierarchical_display"
         - "material_design_iconic_font"

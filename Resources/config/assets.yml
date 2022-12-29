@@ -233,6 +233,27 @@ assets:
                     - "/leaflet-markercluster-{{ version }}/MarkerCluster.Default.css"
                 javascripts:
                     - "/leaflet-markercluster-{{ version }}/leaflet.markercluster.js"
+            light_gallery:
+                version:     "2.7.0"
+                description: "lightGallery"
+                stylesheets:
+                    - "/lightgallery-{{ version }}/css/lightgallery.css"
+                javascripts:
+                    - "/lightgallery-{{ version }}/lightgallery.min.js"
+                plugins:
+                    - "autoplay"
+                    - "comment"
+                    - "fullscreen"
+                    - "hash"
+                    - "mediumZoom"
+                    - "pager"
+                    - "relativeCaption"
+                    - "rotate"
+                    - "share"
+                    - "thumbnail"
+                    - "video"
+                    - "videoThumbnail"
+                    - "zoom"
             material_design_color_palette:
                 version:     "1.1.0"
                 description: "Material Design Color Palette"

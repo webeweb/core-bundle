@@ -78,7 +78,7 @@ class WBWCoreBundleTest extends AbstractTestCase {
         $plugins = $config["assets"]["wbw.core.asset.core"]["plugins"];
 
         $res = AssetsHelper::listAssets($assets);
-        $this->assertCount(25, $res);
+        $this->assertCount(26, $res);
 
         $i = -1;
 
@@ -97,6 +97,7 @@ class WBWCoreBundleTest extends AbstractTestCase {
         $this->assertRegExp("/leaflet-" . preg_quote($plugins["leaflet"]["version"]) . "\.zip$/", $res[++$i]);
         $this->assertRegExp("/leaflet-color-markers-" . preg_quote($plugins["leaflet_color_markers"]["version"]) . "\.zip$/", $res[++$i]);
         $this->assertRegExp("/leaflet-markercluster-" . preg_quote($plugins["leaflet_marker_cluster"]["version"]) . "\.zip$/", $res[++$i]);
+        $this->assertRegExp("/lightgallery-" . preg_quote($plugins["light_gallery"]["version"]) . "\.zip$/", $res[++$i]);
         $this->assertRegExp("/material-design-color-palette-" . preg_quote($plugins["material_design_color_palette"]["version"]) . "\.zip$/", $res[++$i]);
         $this->assertRegExp("/material-design-hierarchical-display-" . preg_quote($plugins["material_design_hierarchical_display"]["version"]) . "\.zip$/", $res[++$i]);
         $this->assertRegExp("/material-design-iconic-font-" . preg_quote($plugins["material_design_iconic_font"]["version"]) . "\.zip$/", $res[++$i]);
