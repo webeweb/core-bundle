@@ -48,9 +48,9 @@ class StatementService implements StatementServiceInterface {
      */
     public function executeQueries(string $sql, array $values): array {
 
-        $queries = preg_split(self::QUERY_SEPARATOR, $sql);
         $results = [];
 
+        $queries = $this->splitStatements($sql);
         for ($i = 0; $i < count($queries); ++$i) {
             $results[] = $this->executeQuery($queries[$i], $values[$i]);
         }
