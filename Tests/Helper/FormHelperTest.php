@@ -13,9 +13,9 @@ namespace WBW\Bundle\CoreBundle\Tests\Helper;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
-use Exception;
 use InvalidArgumentException;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Throwable;
 use WBW\Bundle\CoreBundle\Helper\FormHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser;
@@ -64,7 +64,7 @@ class FormHelperTest extends AbstractTestCase {
      * Tests checkCollection()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testCheckCollection(): void {
 
@@ -86,7 +86,7 @@ class FormHelperTest extends AbstractTestCase {
         try {
 
             $obj->checkCollection(null, "notification", "redirectURL");
-        } catch (Exception $ex) {
+        } catch (Throwable $ex) {
 
             $this->assertInstanceOf(InvalidArgumentException::class, $ex);
             $this->assertEquals("The collection must be a countable", $ex->getMessage());
@@ -112,7 +112,7 @@ class FormHelperTest extends AbstractTestCase {
         try {
 
             $obj->checkCollection($this->collection, "notification", "redirectURL", 11);
-        } catch (Exception $ex) {
+        } catch (Throwable $ex) {
 
             $this->assertInstanceOf(RedirectResponseException::class, $ex);
             $this->assertEquals("redirectURL", $ex->getRedirectURL());

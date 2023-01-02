@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Form\DataTransformer;
 
 use DateTime;
 use DateTimeZone;
-use Exception;
+use Throwable;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Form\DataTransformer\TestTimestampDataTransformer;
 
@@ -29,7 +29,7 @@ class AbstractTimestampDataTransformerTest extends AbstractTestCase {
      * Tests reverseTransform()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testReverseTransform(): void {
 
@@ -50,7 +50,7 @@ class AbstractTimestampDataTransformerTest extends AbstractTestCase {
      * Tests transform()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testTransform(): void {
 

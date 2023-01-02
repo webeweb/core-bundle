@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Service;
 
-use Exception;
+use Throwable;
 use WBW\Bundle\CoreBundle\Service\RepositoryService;
 use WBW\Bundle\CoreBundle\Service\RepositoryServiceInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
@@ -55,7 +55,7 @@ class RepositoryServiceTest extends AbstractWebTestCase {
      * Tests findRepositoriesReports()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testFindRepositoriesReports(): void {
 

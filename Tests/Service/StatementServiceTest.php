@@ -15,9 +15,9 @@ use DateTime;
 use Doctrine\DBAL\Result;
 use Doctrine\DBAL\Statement;
 use Doctrine\ORM\EntityManagerInterface;
-use Exception;
 use InvalidArgumentException;
 use PDO;
+use Throwable;
 use WBW\Bundle\CoreBundle\Service\StatementService;
 use WBW\Bundle\CoreBundle\Service\StatementServiceInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
@@ -60,7 +60,7 @@ class StatementServiceTest extends AbstractWebTestCase {
      * Tests executeQueries()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testExecuteQueries(): void {
 
@@ -84,7 +84,7 @@ class StatementServiceTest extends AbstractWebTestCase {
      * Tests executeQueriesFile()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testExecuteQueriesFile(): void {
 
@@ -107,7 +107,7 @@ class StatementServiceTest extends AbstractWebTestCase {
      * Tests executeQuery()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testExecuteQuery(): void {
 
@@ -128,7 +128,7 @@ class StatementServiceTest extends AbstractWebTestCase {
      * Tests executeQueryFile()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testExecuteQueryFile(): void {
 
@@ -148,7 +148,7 @@ class StatementServiceTest extends AbstractWebTestCase {
      * Tests executeStatement()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testExecuteStatement(): void {
 
@@ -169,7 +169,7 @@ class StatementServiceTest extends AbstractWebTestCase {
      * Tests executeStatementFile()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testExecuteStatementFile(): void {
 
@@ -189,7 +189,7 @@ class StatementServiceTest extends AbstractWebTestCase {
      * Tests executeStatements()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testExecuteStatements(): void {
 
@@ -213,7 +213,7 @@ class StatementServiceTest extends AbstractWebTestCase {
      * Tests executeStatementsFile()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testExecuteStatementsFile(): void {
 
@@ -236,7 +236,7 @@ class StatementServiceTest extends AbstractWebTestCase {
      * Tests prepareStatement()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testPrepareStatement(): void {
 
@@ -255,7 +255,7 @@ class StatementServiceTest extends AbstractWebTestCase {
      * Tests readStatementFile()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testReadStatementFile(): void {
 
@@ -280,7 +280,7 @@ class StatementServiceTest extends AbstractWebTestCase {
         try {
 
             $obj->readStatementFile($filename);
-        } catch (Exception $ex) {
+        } catch (Throwable $ex) {
 
             $this->assertInstanceOf(InvalidArgumentException::class, $ex);
             $this->assertEquals('The file "' . $filename . '" was not found', $ex->getMessage());

@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures;
 
-use Exception;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Throwable;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser;
 use WBW\Library\Symfony\Assets\Navigation\DividerNode;
 use WBW\Library\Symfony\Assets\Navigation\HeaderNode;
@@ -97,7 +97,7 @@ class TestFixtures {
      * Get the users.
      *
      * @return UserInterface[] Returns the users.
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public static function getUsers(): array {
 

@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Twig\Extension;
 
 use DateTime;
-use Exception;
+use Throwable;
 use Twig\Environment;
 use Twig\TwigFunction;
 use WBW\Library\Symfony\Manager\QuoteManager;
@@ -88,7 +88,7 @@ class QuoteTwigExtension extends AbstractTwigExtension {
      *
      * @param string|null $domain The domain.
      * @return string Returns the quote author.
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function quoteAuthorFunction(string $domain = null): string {
 
@@ -105,7 +105,7 @@ class QuoteTwigExtension extends AbstractTwigExtension {
      *
      * @param string|null $domain The domain.
      * @return string Returns the quote content.
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function quoteContentFunction(string $domain = null): ?string {
 
@@ -122,7 +122,7 @@ class QuoteTwigExtension extends AbstractTwigExtension {
      *
      * @param string|null $domain The domain.
      * @return QuoteInterface|null Returns the quote.
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function quoteFunction(string $domain = null): ?QuoteInterface {
 

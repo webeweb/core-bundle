@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Manager;
 
-use Exception;
+use Throwable;
 use WBW\Bundle\CoreBundle\Manager\ThemeManager;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Library\Symfony\Provider\Theme\ApplicationThemeProviderInterface;
@@ -36,7 +36,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * Tests addGlobal()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testAddGlobal(): void {
 
@@ -90,7 +90,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * Tests hasProviders()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testHasProviders(): void {
 
@@ -106,7 +106,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * Tests setApplicationThemeProvider()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testSetApplicationThemeProvider(): void {
 
@@ -126,7 +126,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * Tests setBreadcrumbsThemeProvider()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testSetBreadcrumbsThemeProvider(): void {
 
@@ -143,7 +143,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * Tests setFooterThemeProvider()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testSetFooterThemeProvider(): void {
 
@@ -160,7 +160,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * Tests setHookDropdownThemeProvider()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testSetHookDropdownThemeProvider(): void {
 
@@ -177,7 +177,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * Tests setNavigationThemeProvider()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testSetNavigationThemeProvider(): void {
 
@@ -194,7 +194,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * Tests setNotificationsDropdownThemeProvider()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testSetNotificationsDropdownThemeProvider(): void {
 
@@ -211,7 +211,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * Tests setSearchThemeProvider()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testSetSearchThemeProvider(): void {
 
@@ -228,7 +228,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * Tests setTasksDropdownThemeProvider()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testSetTasksDropdownThemeProvider(): void {
 
@@ -245,7 +245,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * Tests setUserInfoThemeProvider()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testSetUserInfoThemeProvider(): void {
 
@@ -262,7 +262,7 @@ class ThemeManagerTest extends AbstractTestCase {
      * Tests __construct()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function test__construct(): void {
 

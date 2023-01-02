@@ -12,7 +12,6 @@
 namespace WBW\Bundle\CoreBundle\Tests\Controller;
 
 use Doctrine\ORM\EntityManagerInterface;
-use Exception;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
@@ -20,6 +19,7 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Throwable;
 use Twig\Environment;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\Event\ToastEvent;
@@ -241,7 +241,7 @@ class AbstractControllerTest extends AbstractTestCase {
      * Tests hasRoleOrRedirect()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testHasRoleOrRedirect(): void {
 
@@ -272,7 +272,7 @@ class AbstractControllerTest extends AbstractTestCase {
         try {
 
             $obj->hasRolesOrRedirect(["ROLE_GITHUB"], false, "redirectUrl");
-        } catch (Exception $ex) {
+        } catch (Throwable $ex) {
 
             $this->assertInstanceOf(BadUserRoleException::class, $ex);
             $this->assertEquals('User "anonymous" is not allowed to access to "" with roles [ROLE_GITHUB]', $ex->getMessage());

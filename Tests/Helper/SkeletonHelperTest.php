@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Helper;
 
-use Exception;
 use InvalidArgumentException;
 use Symfony\Component\Filesystem\Filesystem;
+use Throwable;
 use WBW\Bundle\CoreBundle\Helper\SkeletonHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
@@ -79,7 +79,7 @@ class SkeletonHelperTest extends AbstractTestCase {
      * Tests listSkeleton()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testListSkeleton(): void {
 
@@ -115,7 +115,7 @@ class SkeletonHelperTest extends AbstractTestCase {
         try {
 
             SkeletonHelper::listSkeleton($this->directoryIllegal);
-        } catch (Exception $ex) {
+        } catch (Throwable $ex) {
 
             $this->assertInstanceOf(InvalidArgumentException::class, $ex);
         }

@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests;
 
-use Exception;
+use Throwable;
 use WBW\Bundle\CoreBundle\Config\ConfigurationHelper;
 use WBW\Bundle\CoreBundle\DependencyInjection\WBWCoreExtension;
 use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
@@ -66,7 +66,7 @@ class WBWCoreBundleTest extends AbstractTestCase {
      * Tests listAssets()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testListAssets(): void {
 

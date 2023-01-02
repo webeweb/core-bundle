@@ -12,10 +12,10 @@
 namespace WBW\Bundle\CoreBundle\Controller;
 
 use DateTime;
-use Exception;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Throwable;
 use Twig\Environment;
 use Twig\TwigFunction;
 use WBW\Library\Symfony\Manager\JavascriptManager;
@@ -70,7 +70,7 @@ class TwigController extends AbstractController {
      *
      * @param string $view The view.
      * @return DateTime|null Returns the last modified.
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     protected function getLastModified(string $view): ?DateTime {
 
@@ -95,7 +95,7 @@ class TwigController extends AbstractController {
      * @param string $type The type.
      * @param string $name The name.
      * @return Response Returns the response.
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function resourceAction(Request $request, string $type, string $name): Response {
 

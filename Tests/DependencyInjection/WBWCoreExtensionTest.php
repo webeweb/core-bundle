@@ -12,8 +12,8 @@
 namespace WBW\Bundle\CoreBundle\Tests\DependencyInjection;
 
 use Doctrine\Persistence\Mapping\ClassMetadata;
-use Exception;
 use Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
+use Throwable;
 use WBW\Bundle\CoreBundle\Command\CopySkeletonCommand;
 use WBW\Bundle\CoreBundle\Command\UnzipAssetsCommand;
 use WBW\Bundle\CoreBundle\Controller\HostController;
@@ -137,7 +137,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
      * Tests load()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testLoad(): void {
 
@@ -161,7 +161,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         try {
 
             $this->containerBuilder->get(SecurityEventListener::SERVICE_NAME);
-        } catch (Exception $ex) {
+        } catch (Throwable $ex) {
 
             $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
             $this->assertStringContainsString(SecurityEventListener::SERVICE_NAME, $ex->getMessage());
@@ -204,7 +204,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         try {
 
             $this->containerBuilder->get(WorldsWisdomQuoteProvider::SERVICE_NAME);
-        } catch (Exception $ex) {
+        } catch (Throwable $ex) {
 
             $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
             $this->assertStringContainsString(WorldsWisdomQuoteProvider::SERVICE_NAME, $ex->getMessage());
@@ -235,7 +235,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
      * Tests load()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testLoadWithSecurity(): void {
 
@@ -253,7 +253,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
      * Tests load()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testLoadWithWorldsWisdomQuote(): void {
 
@@ -284,7 +284,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         try {
 
             $this->containerBuilder->get(UnzipAssetsCommand::SERVICE_NAME);
-        } catch (Exception $ex) {
+        } catch (Throwable $ex) {
 
             $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
             $this->assertStringContainsString(UnzipAssetsCommand::SERVICE_NAME, $ex->getMessage());
@@ -308,7 +308,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         try {
 
             $this->containerBuilder->get(KernelEventListener::SERVICE_NAME);
-        } catch (Exception $ex) {
+        } catch (Throwable $ex) {
 
             $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
             $this->assertStringContainsString(KernelEventListener::SERVICE_NAME, $ex->getMessage());
@@ -332,7 +332,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         try {
 
             $this->containerBuilder->get(RedColorProvider::SERVICE_NAME);
-        } catch (Exception $ex) {
+        } catch (Throwable $ex) {
 
             $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
             $this->assertStringContainsString(RedColorProvider::SERVICE_NAME, $ex->getMessage());
@@ -356,7 +356,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         try {
 
             $this->containerBuilder->get(QuoteTwigExtension::SERVICE_NAME);
-        } catch (Exception $ex) {
+        } catch (Throwable $ex) {
 
             $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
             $this->assertStringContainsString(QuoteTwigExtension::SERVICE_NAME, $ex->getMessage());

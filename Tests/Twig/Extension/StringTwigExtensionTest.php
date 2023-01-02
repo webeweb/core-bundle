@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension;
 
 use DateTime;
-use Exception;
+use Throwable;
 use Twig\Extension\ExtensionInterface;
 use Twig\Node\Node;
 use Twig\TwigFilter;
@@ -32,7 +32,7 @@ class StringTwigExtensionTest extends AbstractTestCase {
      * Tests dateFormat()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testDateFormat(): void {
 
@@ -239,7 +239,7 @@ class StringTwigExtensionTest extends AbstractTestCase {
      * Tests the stringExtractUpperCase() method
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testStringExtractUpperCase() {
 
@@ -254,7 +254,7 @@ class StringTwigExtensionTest extends AbstractTestCase {
      * Tests the stringFormat() method
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testStringFormat() {
 
@@ -270,7 +270,7 @@ class StringTwigExtensionTest extends AbstractTestCase {
      * Tests the stringHumanReadable() method
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testStringHumanReadable() {
 
@@ -284,7 +284,7 @@ class StringTwigExtensionTest extends AbstractTestCase {
      * Tests the stringLowerCamelCase() method
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testStringLowerCamelCase() {
 
@@ -298,7 +298,7 @@ class StringTwigExtensionTest extends AbstractTestCase {
      * Tests the stringSnakeCase() method
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testStringSnakeCase() {
 
@@ -313,7 +313,7 @@ class StringTwigExtensionTest extends AbstractTestCase {
      * Tests the stringUpperCamelCase() method
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testStringUpperCamelCase() {
 

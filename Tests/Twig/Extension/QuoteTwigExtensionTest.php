@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension;
 
-use Exception;
+use Throwable;
 use Twig\Extension\ExtensionInterface;
 use Twig\Node\Node;
 use Twig\TwigFunction;
@@ -81,7 +81,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
      * Tests quoteAuthorFunction()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testQuoteAuthorFunction(): void {
 
@@ -94,7 +94,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
      * Tests quoteAuthorFunction()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testQuoteAuthorFunctionWithBadDomain(): void {
 
@@ -107,7 +107,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
      * Tests quoteContentFunction()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testQuoteContentFunction(): void {
 
@@ -120,7 +120,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
      * Tests quoteContentFunction()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testQuoteContentFunctionWithBadDomain(): void {
 
@@ -133,7 +133,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
      * Tests quoteFunction()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testQuoteFunction(): void {
 
@@ -150,7 +150,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
      * Tests quoteFunction()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testQuoteFunctionWithBadDomain(): void {
 
@@ -163,7 +163,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
      * Tests quoteFunction()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testQuoteFunctionWithoutProvider(): void {
 

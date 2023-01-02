@@ -13,7 +13,6 @@ namespace WBW\Bundle\CoreBundle\Tests;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Tools\SchemaTool;
-use Exception;
 use Symfony\Bundle\FrameworkBundle\KernelBrowser;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\BrowserKit\Cookie;
@@ -23,6 +22,7 @@ use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 use Symfony\Component\Security\Core\User\UserInterface;
 use TestKernel;
+use Throwable;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\TestFixtures;
 
 /**
@@ -103,7 +103,7 @@ abstract class AbstractWebTestCase extends WebTestCase {
      * Set up the schema tool.
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     protected static function setUpSchemaTool(): void {
 
@@ -121,7 +121,7 @@ abstract class AbstractWebTestCase extends WebTestCase {
      * Set up the user fixtures.
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     protected static function setUpUserFixtures(): void {
 

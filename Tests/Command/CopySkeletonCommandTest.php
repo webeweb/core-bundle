@@ -11,11 +11,11 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Command;
 
-use Exception;
 use InvalidArgumentException;
 use Symfony\Bundle\FrameworkBundle\Console\Application;
 use Symfony\Component\Console\Helper\HelperSet;
 use Symfony\Component\HttpKernel\Kernel;
+use Throwable;
 use WBW\Bundle\CoreBundle\Command\CopySkeletonCommand;
 use WBW\Bundle\CoreBundle\Tests\AbstractCommandTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Command\TestCopySkeletonCommand;
@@ -147,7 +147,7 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
         try {
 
             $obj->getResourcesDirectory();
-        } catch (Exception $ex) {
+        } catch (Throwable $ex) {
 
             $this->assertInstanceOf(InvalidArgumentException::class, $ex);
             $this->assertEquals("The application kernel is null", $ex->getMessage());
