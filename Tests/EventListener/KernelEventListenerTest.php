@@ -11,11 +11,11 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\EventListener;
 
-use Exception;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Throwable;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
 use WBW\Bundle\CoreBundle\HttpKernel\Event\BaseExceptionEvent;
@@ -72,9 +72,12 @@ class KernelEventListenerTest extends AbstractTestCase {
      */
     public function testOnKernelException(): void {
 
+        // Set a Throwable mock.
+        $throwable = $this->getMockBuilder(Throwable::class)->getMock();
+
         $obj = new KernelEventListener($this->tokenStorage, $this->themeManager);
 
-        $arg = new BaseExceptionEvent($this->kernel, new Request(), HttpKernelInterface::MASTER_REQUEST, new Exception());
+        $arg = new BaseExceptionEvent($this->kernel, new Request(), HttpKernelInterface::MASTER_REQUEST, $throwable);
         $this->assertSame($arg, $obj->onKernelException($arg));
     }
 
