@@ -1,10 +1,10 @@
 CHANGELOG
 =========
 
-### master
+### [3.18.0](https://github.com/webeweb/core-bundle/tree/v3.18.0) (2023-01-06)
 
 - Add Chart.js 4.0.1
-- Add Host controller
+- Add Host controller (CPU/hard disks/memory)
 - Add lightGallery 2.7.0
 - Add getMailer() into abstract controller
 - Add getTwig() into abstract controller
