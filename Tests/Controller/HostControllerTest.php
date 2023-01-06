@@ -96,6 +96,42 @@ class HostControllerTest extends AbstractWebTestCase {
     }
 
     /**
+     * Tests hardDisksAction()
+     *
+     * @return void
+     */
+    public function testHardDisksAction(): void {
+
+        $client = $this->client;
+
+        $client->request("GET", "/host/hard-disks");
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals("application/json", $client->getResponse()->headers->get("Content-Type"));
+
+        // Check the JSON response.
+        $res = json_decode($client->getResponse()->getContent(), true);
+        $this->assertCount(4, $res);
+
+        $this->assertArrayHasKey("success", $res);
+        $this->assertArrayHasKey("message", $res);
+        $this->assertArrayHasKey("errors", $res);
+        $this->assertArrayHasKey("data", $res);
+
+        $this->assertTrue($res["success"]);
+        $this->assertNull($res["message"]);
+        $this->assertNull($res["errors"]);
+        $this->assertNotCount(0, $res["data"]);
+
+        $this->assertArrayHasKey("available", $res["data"][0]);
+        $this->assertArrayHasKey("fileSystem", $res["data"][0]);
+        $this->assertArrayHasKey("mountedOn", $res["data"][0]);
+        $this->assertArrayHasKey("name", $res["data"][0]);
+        $this->assertArrayHasKey("type", $res["data"][0]);
+        $this->assertArrayHasKey("used", $res["data"][0]);
+        $this->assertArrayHasKey("usePercent", $res["data"][0]);
+    }
+
+    /**
      * Tests retrieveInformationDatabase()
      *
      * @return void

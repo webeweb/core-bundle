@@ -47,6 +47,19 @@ class HostController extends AbstractController {
     }
 
     /**
+     * Hard disks.
+     *
+     * @return Response Returns the response.
+     */
+    public function hardDisksAction(): Response {
+
+        $info = System::getHardDisks();
+        $data = $this->newDefaultJsonResponseData(true, $info);
+
+        return new JsonResponse($data);
+    }
+
+    /**
      * Memory.
      *
      * @return Response Returns the response.
