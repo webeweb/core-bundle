@@ -405,91 +405,10 @@
     }
 
     {# === Width =========================================================== #}
-    .width-5p {
-        width: 5%;
+    {% for i in 1..100 -%}
+    .width-{{ i }}p {
+        width: {{ i }}%;
     }
 
-    .width-10p {
-        width: 10%;
-    }
-
-    .width-15p {
-        width: 15%;
-    }
-
-    .width-20p {
-        width: 20%;
-    }
-
-    .width-25p {
-        width: 25%;
-    }
-
-    .width-30p {
-        width: 30%;
-    }
-
-    .width-33p {
-        width: 33%;
-    }
-
-    .width-35p {
-        width: 35%;
-    }
-
-    .width-45p {
-        width: 45%;
-    }
-
-    .width-40p {
-        width: 40%;
-    }
-
-    .width-50p {
-        width: 50%;
-    }
-
-    .width-55p {
-        width: 55%;
-    }
-
-    .width-60p {
-        width: 60%;
-    }
-
-    .width-65p {
-        width: 65%;
-    }
-
-    .width-66p {
-        width: 66%;
-    }
-
-    .width-70p {
-        width: 70%;
-    }
-
-    .width-75p {
-        width: 75%;
-    }
-
-    .width-80p {
-        width: 80%;
-    }
-
-    .width-85p {
-        width: 85%;
-    }
-
-    .width-90p {
-        width: 90%;
-    }
-
-    .width-95p {
-        width: 95%;
-    }
-
-    .width-100p {
-        width: 100%;
-    }
+    {% endfor %}
 </style>
