@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Add SimpleMDE Markdown Editor
+
 ### [3.18.0](https://github.com/webeweb/core-bundle/tree/v3.18.0) (2023-01-06)
 
 - Add Chart.js 4.0.1
