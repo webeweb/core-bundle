@@ -35,6 +35,7 @@ Includes:
 - [Material Design Iconic Font 2.2.0](https://github.com/zavoloklom/material-design-iconic-font)
 - [Meteocons](https://www.alessioatzeni.com/meteocons)
 - [SimpleMDE Markdown Editor 1.11.2](https://github.com/sparksuite/simplemde-markdown-editor)
+- [SweetAlert 2.1.2](https://github.com/t4t5/sweetalert)
 - [SweetAlert2 11.3.1](https://github.com/sweetalert2/sweetalert2)
 - [SyntaxHighlighter 3.0.83](https://github.com/syntaxhighlighter/syntaxhighlighter)
 - [twemoji 14.0.2](https://github.com/twitter/twemoji)
