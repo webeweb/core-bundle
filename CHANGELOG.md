@@ -4,6 +4,7 @@ CHANGELOG
 ### master
 
 - Add SimpleMDE Markdown Editor
+- Improve helper CSS
 
 ### [3.18.0](https://github.com/webeweb/core-bundle/tree/v3.18.0) (2023-01-06)
 
