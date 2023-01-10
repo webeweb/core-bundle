@@ -280,6 +280,13 @@ assets:
                     - "/meteocons/stylesheet.css"
                     - "/css/meteocons.css"
                 javascripts:
+            simplemde_markdown_editor:
+                version:     "1.11.2"
+                description: "SimpleMDE Markdown Editor"
+                stylesheets:
+                    - "/simplemde-markdown-editor-{{ version }}/simplemde.min.css"
+                javascripts:
+                    - "/simplemde-markdown-editor-{{ version }}/simplemde.min.js"
             sweet_alert:
                 version:     "2.1.2"
                 description: "SweetAlert"

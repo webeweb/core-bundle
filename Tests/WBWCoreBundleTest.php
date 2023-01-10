@@ -78,7 +78,7 @@ class WBWCoreBundleTest extends AbstractTestCase {
         $plugins = $config["assets"]["wbw.core.asset.core"]["plugins"];
 
         $res = AssetsHelper::listAssets($assets);
-        $this->assertCount(26, $res);
+        $this->assertCount(27, $res);
 
         $i = -1;
 
@@ -102,6 +102,7 @@ class WBWCoreBundleTest extends AbstractTestCase {
         $this->assertRegExp("/material-design-hierarchical-display-" . preg_quote($plugins["material_design_hierarchical_display"]["version"]) . "\.zip$/", $res[++$i]);
         $this->assertRegExp("/material-design-iconic-font-" . preg_quote($plugins["material_design_iconic_font"]["version"]) . "\.zip$/", $res[++$i]);
         $this->assertRegExp("/meteocons\.zip$/", $res[++$i]);
+        $this->assertRegExp("/simplemde-markdown-editor-" . preg_quote($plugins["simplemde_markdown_editor"]["version"]) . "\.zip$/", $res[++$i]);
         $this->assertRegExp("/sweetalert-" . preg_quote($plugins["sweet_alert"]["version"]) . "\.zip$/", $res[++$i]);
         $this->assertRegExp("/sweetalert2-" . preg_quote($plugins["sweet_alert2"]["version"]) . "\.zip$/", $res[++$i]);
         $this->assertRegExp("/syntaxhighlighter-" . preg_quote($plugins["syntax_highlighter"]["version"]) . "\.zip$/", $res[++$i]);
