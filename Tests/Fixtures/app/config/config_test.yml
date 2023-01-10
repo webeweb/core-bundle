@@ -78,6 +78,7 @@ wbw_core:
         - "material_design_hierarchical_display"
         - "material_design_iconic_font"
         - "meteocons"
+        - "simplemde_markdown_editor"
         - "sweet_alert"
         - "sweet_alert2"
         - "syntax_highlighter"
