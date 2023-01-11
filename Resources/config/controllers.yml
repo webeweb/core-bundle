@@ -2,19 +2,19 @@
 services:
 
     WBW\Bundle\CoreBundle\Controller\HostController:
-        alias:  "wbw.core.controller.host"
+        alias: "wbw.core.controller.host"
 
     wbw.core.controller.host:
-        class: WBW\Bundle\CoreBundle\Controller\HostController
+        class:  WBW\Bundle\CoreBundle\Controller\HostController
         public: true
         calls:
             - [ "setContainer", [ "@service_container" ] ]
 
     WBW\Bundle\CoreBundle\Controller\TwigController:
-        alias:  "wbw.core.controller.twig"
+        alias: "wbw.core.controller.twig"
 
     wbw.core.controller.twig:
-        class: WBW\Bundle\CoreBundle\Controller\TwigController
+        class:  WBW\Bundle\CoreBundle\Controller\TwigController
         public: true
         calls:
             - [ "setContainer", [ "@service_container" ] ]
