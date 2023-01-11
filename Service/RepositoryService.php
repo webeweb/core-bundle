@@ -136,7 +136,7 @@ class RepositoryService implements RepositoryServiceInterface {
      *
      * @return callable Returns the repository report sort callback.
      */
-    public static function getRepositoryReportSortCallback(): callable {
+    protected static function getRepositoryReportSortCallback(): callable {
 
         return function(RepositoryReport $a, RepositoryReport $b): int {
 
