@@ -3,38 +3,47 @@ services:
 
     WBW\Bundle\CoreBundle\Tests\Fixtures\Controller\TestViewsController:
         alias: "wbw.core.tests.fixtures.controller.test_views"
+        public: true
 
     wbw.core.tests.fixtures.controller.test_views:
         class:  WBW\Bundle\CoreBundle\Tests\Fixtures\Controller\TestViewsController
-        public: true
         calls:
             - [ "setContainer", [ "@service_container" ] ]
 
     wbw.core.tests.fixtures.provider.test_stylesheet:
         class: WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\TestStylesheetProvider
+        public: true
         tags:
             - { name: "wbw.core.provider.stylesheet" }
 
     wbw.core.provider.theme.application:
         class: WBW\Library\Symfony\Theme\DefaultApplicationThemeProvider
+        public: true
 
     wbw.core.provider.theme.breadcrumbs:
         class: WBW\Library\Symfony\Theme\DefaultBreadcrumbsThemeProvider
+        public: true
 
     wbw.core.provider.theme.footer:
         class: WBW\Library\Symfony\Theme\DefaultFooterThemeProvider
+        public: true
 
     wbw.core.provider.theme.hook_dropdown:
         class: WBW\Library\Symfony\Theme\DefaultHookDropdownThemeProvider
+        public: true
 
     wbw.core.provider.theme.notifications_dropdown:
         class: WBW\Library\Symfony\Theme\DefaultNotificationsDropdownThemeProvider
+        public: true
 
     wbw.core.provider.theme.search:
         class: WBW\Library\Symfony\Theme\DefaultSearchThemeProvider
+        public: true
 
     wbw.core.provider.theme.tasks_dropdown:
         class: WBW\Library\Symfony\Theme\DefaultTasksDropdownThemeProvider
+        public: true
 
     wbw.core.provider.theme.user_info:
         class: WBW\Library\Symfony\Theme\DefaultUserInfoThemeProvider
+        public: true

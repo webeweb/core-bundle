@@ -123,5 +123,5 @@ services:
 
     wbw.core.provider.syntax_highlighter:
         class:  WBW\Bundle\CoreBundle\Provider\SyntaxHighlighterProvider
-        arguments: [ "@translator" ]
         public: true
+        arguments: [ "@translator" ]

@@ -7,33 +7,33 @@ services:
 
     wbw.core.helper.form:
         class:  WBW\Bundle\CoreBundle\Helper\FormHelper
-        arguments: [ "@doctrine.orm.entity_manager", "@event_dispatcher" ]
         public: true
+        arguments: [ "@doctrine.orm.entity_manager", "@event_dispatcher" ]
 
     wbw.core.manager.color:
         class:  WBW\Library\Symfony\Manager\ColorManager
-        arguments: [ "@logger" ]
         public: true
+        arguments: [ "@logger" ]
 
     wbw.core.manager.javascript:
         class:  WBW\Library\Symfony\Manager\JavascriptManager
-        arguments: [ "@logger" ]
         public: true
+        arguments: [ "@logger" ]
 
     wbw.core.manager.quote:
         class:  WBW\Library\Symfony\Manager\QuoteManager
-        arguments: [ "@logger" ]
         public: true
+        arguments: [ "@logger" ]
 
     wbw.core.manager.stylesheet:
         class:  WBW\Library\Symfony\Manager\StylesheetManager
-        arguments: [ "@logger" ]
         public: true
+        arguments: [ "@logger" ]
 
     wbw.core.manager.theme:
         class:  WBW\Bundle\CoreBundle\Manager\ThemeManager
-        arguments: [ "@logger", "@twig" ]
         public: true
+        arguments: [ "@logger", "@twig" ]
         calls:
             - [ "setApplicationThemeProvider",           [ "@?wbw.core.provider.theme.application" ] ]
             - [ "setBreadcrumbsThemeProvider",           [ "@?wbw.core.provider.theme.breadcrumbs" ] ]
@@ -57,8 +57,8 @@ services:
 
     wbw.core.service.statement:
         class:  WBW\Bundle\CoreBundle\Service\StatementService
-        arguments: [ "@doctrine.orm.entity_manager" ]
         public: true
+        arguments: [ "@doctrine.orm.entity_manager" ]
 
     wbw.core.service.token_generator:
         class:  WBW\Library\Symfony\Service\TokenGeneratorService
@@ -66,7 +66,7 @@ services:
 
     wbw.core.twig.extension.container:
         class:  WBW\Bundle\CoreBundle\Twig\Extension\ContainerTwigExtension
-        arguments: [ "@twig", "@service_container" ]
         public: true
+        arguments: [ "@twig", "@service_container" ]
         tags:
             - { name: "twig.extension" }
