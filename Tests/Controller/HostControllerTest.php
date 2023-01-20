@@ -62,40 +62,6 @@ class HostControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests memoryAction()
-     *
-     * @return void
-     */
-    public function testMemoryAction(): void {
-
-        $client = $this->client;
-
-        $client->request("GET", "/host/memory");
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-        $this->assertEquals("application/json", $client->getResponse()->headers->get("Content-Type"));
-
-        // Check the JSON response.
-        $res = json_decode($client->getResponse()->getContent(), true);
-        $this->assertCount(4, $res);
-
-        $this->assertArrayHasKey("success", $res);
-        $this->assertArrayHasKey("message", $res);
-        $this->assertArrayHasKey("errors", $res);
-        $this->assertArrayHasKey("data", $res);
-
-        $this->assertTrue($res["success"]);
-        $this->assertNull($res["message"]);
-        $this->assertNull($res["errors"]);
-        $this->assertNotCount(0, $res["data"]);
-
-        $this->assertArrayHasKey("MemAvailable", $res["data"]);
-        $this->assertArrayHasKey("MemFree", $res["data"]);
-        $this->assertArrayHasKey("MemTotal", $res["data"]);
-        $this->assertArrayHasKey("SwapFree", $res["data"]);
-        $this->assertArrayHasKey("SwapTotal", $res["data"]);
-    }
-
-    /**
      * Tests hardDisksAction()
      *
      * @return void
@@ -129,6 +95,40 @@ class HostControllerTest extends AbstractWebTestCase {
         $this->assertArrayHasKey("type", $res["data"][0]);
         $this->assertArrayHasKey("used", $res["data"][0]);
         $this->assertArrayHasKey("usePercent", $res["data"][0]);
+    }
+
+    /**
+     * Tests memoryAction()
+     *
+     * @return void
+     */
+    public function testMemoryAction(): void {
+
+        $client = $this->client;
+
+        $client->request("GET", "/host/memory");
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals("application/json", $client->getResponse()->headers->get("Content-Type"));
+
+        // Check the JSON response.
+        $res = json_decode($client->getResponse()->getContent(), true);
+        $this->assertCount(4, $res);
+
+        $this->assertArrayHasKey("success", $res);
+        $this->assertArrayHasKey("message", $res);
+        $this->assertArrayHasKey("errors", $res);
+        $this->assertArrayHasKey("data", $res);
+
+        $this->assertTrue($res["success"]);
+        $this->assertNull($res["message"]);
+        $this->assertNull($res["errors"]);
+        $this->assertNotCount(0, $res["data"]);
+
+        $this->assertArrayHasKey("MemAvailable", $res["data"]);
+        $this->assertArrayHasKey("MemFree", $res["data"]);
+        $this->assertArrayHasKey("MemTotal", $res["data"]);
+        $this->assertArrayHasKey("SwapFree", $res["data"]);
+        $this->assertArrayHasKey("SwapTotal", $res["data"]);
     }
 
     /**
