@@ -3,8 +3,9 @@ CHANGELOG
 
 ### master
 
+- Add TRANSLATION_DOMAIN constant
+- Add getTranslationDomain()
 - Improve code quality
-- Replace TranslatorInterface::DOMAIN by WBWCoreBundle::getTranslationDomain()
 
 ### [3.19.0](https://github.com/webeweb/core-bundle/tree/v3.19.0) (2023-01-10)
 
