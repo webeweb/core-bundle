@@ -63,6 +63,16 @@ class WBWCoreBundleTest extends AbstractTestCase {
     }
 
     /**
+     * Tests getTranslationDomain()
+     *
+     * @return void
+     */
+    public function testGetTranslationDomain(): void {
+
+        $this->assertEquals(WBWCoreBundle::TRANSLATION_DOMAIN, WBWCoreBundle::getTranslationDomain());
+    }
+
+    /**
      * Tests listAssets()
      *
      * @return void
@@ -109,5 +119,15 @@ class WBWCoreBundleTest extends AbstractTestCase {
         $this->assertRegExp("/twemoji-" . preg_quote($plugins["twemoji"]["version"]) . "\.zip$/", $res[++$i]);
         $this->assertRegExp("/typed\.js-" . preg_quote($plugins["typed_js"]["version"]) . "\.zip$/", $res[++$i]);
         $this->assertRegExp("/waitme-" . preg_quote($plugins["wait_me"]["version"]) . "\.zip$/", $res[++$i]);
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct(): void {
+
+        $this->assertEquals("WBWCoreBundle", WBWCoreBundle::TRANSLATION_DOMAIN);
     }
 }

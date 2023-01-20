@@ -1,5 +1,4 @@
 {# Resources/views/email/_footer.html.twig #}
-{% set _domain = constant("WBW\\Bundle\\CoreBundle\\Translation\\TranslatorInterface::DOMAIN") %}
 <table class="footer center" width="602" border="0" cellspacing="0" cellpadding="0">
     <tbody>
         <tr>
@@ -8,12 +7,12 @@
         <tr>
             <td class="signature" width="300">
                 <p>
-                    {{ emailLayout.bestRegards|default("email.with_best_regards"|trans([], _domain)) }},<br/>
+                    {{ emailLayout.bestRegards|default("email.with_best_regards"|trans([], "WBWCoreBundle")) }},<br/>
                     {{ emailLayout.companyName|default("WEBEWEB") }}<br/>
-                    {{ emailLayout.supportPhone|default("") }}, {{ emailLayout.supportName|default("email.support"|trans([], _domain)) }}<br/>
+                    {{ emailLayout.supportPhone|default("") }}, {{ emailLayout.supportName|default("email.support"|trans([], "WBWCoreBundle")) }}<br/>
                 </p>
                 <p>
-                    {{ "email.support"|trans([], _domain) }}: <a class="strong" href="{{ emailLayout.supportEmail|default("https://github.com/webeweb/core-bundle/issues") }}" target="_blank">
+                    {{ "email.support"|trans([], "WBWCoreBundle") }}: <a class="strong" href="{{ emailLayout.supportEmail|default("https://github.com/webeweb/core-bundle/issues") }}" target="_blank">
                         {{ emailLayout.supportName|default("https://github.com/webeweb") }}
                     </a>
                 </p>
@@ -26,11 +25,11 @@
                 </div>
                 <p>
                     <a class="strong block" href="{{ emailLayout.unsubscribeUrl|default("#") }}" target="_blank">
-                        {{ "email.unsubscribe"|trans([], _domain) }}
+                        {{ "email.unsubscribe"|trans([], "WBWCoreBundle") }}
                     </a>
                     <span class="hide">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                     <a class="strong block" href="{{ emailLayout.accountSettingsUrl|default("#") }}" target="_blank">
-                        {{ "email.account_settings"|trans([], _domain) }}
+                        {{ "email.account_settings"|trans([], "WBWCoreBundle") }}
                     </a>
                 </p>
             </td>

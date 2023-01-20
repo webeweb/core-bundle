@@ -13,8 +13,8 @@ namespace WBW\Bundle\CoreBundle\Provider;
 
 use WBW\Bundle\CoreBundle\Assets\SyntaxHighlighter\SyntaxHighlighterStrings;
 use WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface;
-use WBW\Bundle\CoreBundle\Translation\TranslatorInterface;
 use WBW\Bundle\CoreBundle\Translation\TranslatorTrait;
+use WBW\Bundle\CoreBundle\WBWCoreBundle;
 
 /**
  * SyntaxHighlighter provider.
@@ -70,6 +70,6 @@ class SyntaxHighlighterProvider implements SyntaxHighlighterProviderInterface {
      * @return string Returns the translation.
      */
     protected function translate(string $id): string {
-        return $this->getTranslator()->trans($id, [], TranslatorInterface::DOMAIN);
+        return $this->getTranslator()->trans($id, [], WBWCoreBundle::getTranslationDomain());
     }
 }

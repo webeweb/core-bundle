@@ -28,6 +28,13 @@ use WBW\Bundle\CoreBundle\Provider\AssetsProviderInterface;
 class WBWCoreBundle extends Bundle implements AssetsProviderInterface {
 
     /**
+     * Translation domain.
+     *
+     * @var string
+     */
+    const TRANSLATION_DOMAIN = "WBWCoreBundle";
+
+    /**
      * {@inheritdoc}
      */
     public function build(ContainerBuilder $container): void {
@@ -42,5 +49,14 @@ class WBWCoreBundle extends Bundle implements AssetsProviderInterface {
      */
     public function getAssetsRelativeDirectory(): string {
         return self::ASSETS_RELATIVE_DIRECTORY;
+    }
+
+    /**
+     * Get the translation domain.
+     *
+     * @return string Returns the translation domain.
+     */
+    public static function getTranslationDomain(): string {
+        return self::TRANSLATION_DOMAIN;
     }
 }
