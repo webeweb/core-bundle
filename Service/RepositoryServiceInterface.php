@@ -11,8 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Service;
 
-use Doctrine\DBAL\DBALException;
-use Doctrine\ORM\Mapping\MappingException;
+use Throwable;
 use WBW\Library\Symfony\Model\RepositoryReportInterface;
 
 /**
@@ -27,9 +26,7 @@ interface RepositoryServiceInterface {
      * Find all repositories reports.
      *
      * @return RepositoryReportInterface[] Returns the repositories reports.
-     * @throws MappingException Throws a mapping exception if an error occurs.
-     * @throws DBALException Throws a DBAL exception if an error occurs.
-     * @throws \Doctrine\DBAL\Driver\Exception Throws a driver exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
-    public function findRepositoriesReports(): array;
+    public function findAll(): array;
 }

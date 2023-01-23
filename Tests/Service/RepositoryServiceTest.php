@@ -16,6 +16,7 @@ use WBW\Bundle\CoreBundle\Service\RepositoryService;
 use WBW\Bundle\CoreBundle\Service\RepositoryServiceInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestGroup;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser;
 
 /**
  * Repository service test.
@@ -52,27 +53,36 @@ class RepositoryServiceTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests findRepositoriesReports()
+     * Tests findAll()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
      */
-    public function testFindRepositoriesReports(): void {
+    public function testFindAll(): void {
 
         $obj = $this->service;
 
-        $res = $obj->findRepositoriesReports();
-        $this->assertCount(4, $res);
+        $res = $obj->findAll();
+        $this->assertCount(2, $res);
 
         $this->assertEquals("wbw_core_group", $res[0]->getTable());
         $this->assertEquals(TestGroup::class, $res[0]->getEntity());
-        $this->assertEquals("name", $res[0]->getColumn());
-        $this->assertEquals("name", $res[0]->getField());
         $this->assertEquals(0, $res[0]->getCount());
-        $this->assertEquals(-1, $res[0]->getAvailable());
-        $this->assertEquals(0, $res[0]->getAverage());
-        $this->assertEquals(0, $res[0]->getMinimum());
-        $this->assertEquals(0, $res[0]->getMaximum());
+
+        $this->assertCount(1, $res[0]->getDetails());
+
+        $this->assertEquals("name", $res[0]->getDetails()[0]->getColumn());
+        $this->assertEquals("name", $res[0]->getDetails()[0]->getField());
+        $this->assertEquals(-1, $res[0]->getDetails()[0]->getAvailable());
+        $this->assertEquals(0, $res[0]->getDetails()[0]->getAverage());
+        $this->assertEquals(0, $res[0]->getDetails()[0]->getMinimum());
+        $this->assertEquals(0, $res[0]->getDetails()[0]->getMaximum());
+
+        $this->assertEquals("wbw_core_user", $res[1]->getTable());
+        $this->assertEquals(TestUser::class, $res[1]->getEntity());
+        $this->assertEquals(0, $res[1]->getCount());
+
+        $this->assertCount(3, $res[1]->getDetails());
     }
 
     /**

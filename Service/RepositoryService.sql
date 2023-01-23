@@ -1,10 +1,9 @@
 SELECT :table AS 'table',
-       :entity AS 'entity',
        :column AS 'column',
+       :entity AS 'entity',
        :field AS 'field',
        :available AS 'available',
-       MIN(LENGTH(`{{ column }}`)) AS 'minimum',
-       MAX(LENGTH(`{{ column }}`)) AS 'maximum',
        AVG(LENGTH(`{{ column }}`)) AS 'average',
-       COUNT(`{{ column }}`) AS 'count'
+       MIN(LENGTH(`{{ column }}`)) AS 'minimum',
+       MAX(LENGTH(`{{ column }}`)) AS 'maximum'
 FROM `{{ table }}`

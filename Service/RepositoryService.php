@@ -11,12 +11,10 @@
 
 namespace WBW\Bundle\CoreBundle\Service;
 
-use Doctrine\DBAL\DBALException;
-use Doctrine\DBAL\Exception;
-use Doctrine\DBAL\Statement;
 use Doctrine\ORM\Mapping\ClassMetadata;
-use Doctrine\ORM\Mapping\MappingException;
 use PDO;
+use Throwable;
+use WBW\Library\Symfony\Model\RepositoryDetail;
 use WBW\Library\Symfony\Model\RepositoryReport;
 use WBW\Library\Symfony\Model\RepositoryReportInterface;
 use WBW\Library\Types\Helper\ArrayHelper;
@@ -41,39 +39,9 @@ class RepositoryService implements RepositoryServiceInterface {
     const SERVICE_NAME = "wbw.core.service.repository";
 
     /**
-     * Executes a statement.
-     *
-     * @param Statement $statement The statement.
-     * @return RepositoryReportInterface|null Returns the repository report.
-     * @throws \Doctrine\DBAL\Driver\Exception Throws a driver exception if an error occurs.
-     */
-    protected function executeQuery(Statement $statement): ?RepositoryReportInterface {
-
-        $result = $statement->executeQuery();
-
-        $row = $result->fetchAllAssociative()[0];
-        if (false === $row) {
-            return null;
-        }
-
-        $model = new RepositoryReport();
-        $model->setAvailable(intval($row["available"]));
-        $model->setAverage(floatval($row["average"]));
-        $model->setColumn($row["column"]);
-        $model->setCount(intval($row["count"]));
-        $model->setEntity($row["entity"]);
-        $model->setField($row["field"]);
-        $model->setMaximum(intval($row["maximum"]));
-        $model->setMinimum(intval($row["minimum"]));
-        $model->setTable($row["table"]);
-
-        return $model;
-    }
-
-    /**
      * {@inheritdoc}
      */
-    public function findRepositoriesReports(): array {
+    public function findAll(): array {
 
         /** @var RepositoryReportInterface[] $reports */
         $reports = [];
@@ -86,26 +54,24 @@ class RepositoryService implements RepositoryServiceInterface {
                 continue;
             }
 
-            $reports = array_merge($reports, $this->findRepositoryReports($current));
+            $reports[] = $this->findReport($current);
         }
 
-        usort($reports, static::getRepositoryReportSortCallback());
+        usort($reports, static::usortRepositoryReportCallback());
 
         return $reports;
     }
 
     /**
-     * Find repository reports.
+     * Find all repository details.
      *
      * @param ClassMetadata $classMetadata The class metadata.
-     * @return RepositoryReportInterface[] Returns the repository reports.
-     * @throws MappingException Throws a mapping exception if an error occurs.
-     * @throws DBALException Throws a DBAL exception if an error occurs.
-     * @throws \Doctrine\DBAL\Driver\Exception Throws a driver exception if an error occurs.
+     * @return RepositoryDetail[] Returns the repository details.
+     * @throws Throwable Throws an exception if an error occurs.
      */
-    protected function findRepositoryReports(ClassMetadata $classMetadata): array {
+    protected function findDetails(ClassMetadata $classMetadata): array {
 
-        /** @var RepositoryReportInterface[] $models */
+        /** @var RepositoryDetail[] $models */
         $models = [];
 
         foreach ($classMetadata->getFieldNames() as $current) {
@@ -123,57 +89,97 @@ class RepositoryService implements RepositoryServiceInterface {
                 ArrayHelper::get($fieldMapping, "length", -1),
             ];
 
-            $stmt = $this->prepareStatement($args[0], $args[1], $args[2], $args[3], $args[4]);
-
-            $models[] = $this->executeQuery($stmt);
+            $model = $this->newRepositoryDetail($args[0], $args[1], $args[2], $args[3], $args[4]);
+            if (null !== $model) {
+                $models[] = $model;
+            }
         }
 
         return $models;
     }
 
     /**
-     * Get a repository report sort callback.
+     * Find one repository report.
      *
-     * @return callable Returns the repository report sort callback.
+     * @param ClassMetadata $classMetadata The class metadata.
+     * @return RepositoryReportInterface Returns the repository report.
+     * @throws Throwable Throws an exception if an error occurs.
      */
-    protected static function getRepositoryReportSortCallback(): callable {
+    protected function findReport(ClassMetadata $classMetadata): RepositoryReportInterface {
 
-        return function(RepositoryReport $a, RepositoryReport $b): int {
+        $query = "SELECT COUNT(*) FROM {$classMetadata->getTableName()}";
+        $result = $this->getStatementService()->executeQuery($query, []);
 
-            if ($a->getEntity() === $b->getEntity()) {
-                return strcmp($a->getField(), $b->getField());
+        $count = intval($result->fetchOne());
+
+        $model = new RepositoryReport();
+        $model->setTable($classMetadata->getTableName());
+        $model->setEntity($classMetadata->getName());
+        $model->setCount($count);
+
+        $details = $this->findDetails($classMetadata);
+        foreach ($details as $current) {
+
+            if (null !== $current) {
+                $model->addDetail($current->setRepositoryReport($model));
             }
+        }
 
-            return strcmp($a->getEntity(), $b->getEntity());
-        };
+        return $model;
     }
 
     /**
-     * Prepare a statement.
+     * Creates a repository detail.
      *
      * @param string $table The table.
      * @param string $entity The entity.
      * @param string $column The column.
      * @param string $field The field.
      * @param int $available The available.
-     * @return Statement Returns the statement.
-     * @throws Exception Throws a DBAL exception if an error occurs.
+     * @return RepositoryDetail|null Returns the repository detail.
+     * @throws Throwable Throws an exception if an error occurs.
      */
-    protected function prepareStatement(string $table, string $entity, string $column, string $field, int $available): Statement {
+    protected function newRepositoryDetail(string $table, string $entity, string $column, string $field, int $available): ?RepositoryDetail {
 
         $template = $this->getStatementService()->readStatementFile(__DIR__ . "/RepositoryService.sql");
 
-        $searches = ["{{ column }}", "{{ table }}"];
-        $replaces = [$column, $table];
+        $searches = ["{{ table }}", "{{ column }}"];
+        $replaces = [$table, $column];
 
         $sql = str_replace($searches, $replaces, $template);
 
-        return $this->getStatementService()->prepareStatement($sql, [
+        $stmt = $this->getStatementService()->prepareStatement($sql, [
             ":available" => [$available, PDO::PARAM_INT],
             ":column"    => [$column, PDO::PARAM_STR],
             ":entity"    => [$entity, PDO::PARAM_STR],
             ":field"     => [$field, PDO::PARAM_STR],
             ":table"     => [$table, PDO::PARAM_STR],
         ]);
+
+        $result = $stmt->executeQuery();
+
+        $row = $result->fetchAllAssociative()[0];
+
+        $model = new RepositoryDetail();
+        $model->setAvailable(intval($row["available"]));
+        $model->setAverage(floatval($row["average"]));
+        $model->setColumn($row["column"]);
+        $model->setField($row["field"]);
+        $model->setMaximum(intval($row["maximum"]));
+        $model->setMinimum(intval($row["minimum"]));
+
+        return $model;
+    }
+
+    /**
+     * Usort repository report callback.
+     *
+     * @return callable Returns the usort repository report callback.
+     */
+    protected static function usortRepositoryReportCallback(): callable {
+
+        return function(RepositoryReport $a, RepositoryReport $b): int {
+            return strcmp($a->getEntity(), $b->getEntity());
+        };
     }
 }
