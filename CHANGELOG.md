@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### master
+### [3.20.0](https://github.com/webeweb/core-bundle/tree/v3.20.0) (2023-01-24)
 
 - Add TRANSLATION_DOMAIN constant
 - Add getTranslationDomain()
