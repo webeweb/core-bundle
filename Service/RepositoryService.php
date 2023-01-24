@@ -81,7 +81,7 @@ class RepositoryService implements RepositoryServiceInterface {
                 continue;
             }
 
-            $args = [
+            $params = [
                 $classMetadata->getTableName(),
                 $classMetadata->getName(),
                 $fieldMapping["columnName"],
@@ -89,10 +89,7 @@ class RepositoryService implements RepositoryServiceInterface {
                 ArrayHelper::get($fieldMapping, "length", -1),
             ];
 
-            $model = $this->newRepositoryDetail($args[0], $args[1], $args[2], $args[3], $args[4]);
-            if (null !== $model) {
-                $models[] = $model;
-            }
+            $models[] = $this->newRepositoryDetail($params[0], $params[1], $params[2], $params[3], $params[4]);
         }
 
         return $models;
@@ -107,7 +104,7 @@ class RepositoryService implements RepositoryServiceInterface {
      */
     protected function findReport(ClassMetadata $classMetadata): RepositoryReportInterface {
 
-        $query = "SELECT COUNT(*) FROM {$classMetadata->getTableName()}";
+        $query  = "SELECT COUNT(*) FROM {$classMetadata->getTableName()}";
         $result = $this->getStatementService()->executeQuery($query, []);
 
         $count = intval($result->fetchOne());
@@ -136,10 +133,10 @@ class RepositoryService implements RepositoryServiceInterface {
      * @param string $column The column.
      * @param string $field The field.
      * @param int $available The available.
-     * @return RepositoryDetail|null Returns the repository detail.
+     * @return RepositoryDetail Returns the repository detail.
      * @throws Throwable Throws an exception if an error occurs.
      */
-    protected function newRepositoryDetail(string $table, string $entity, string $column, string $field, int $available): ?RepositoryDetail {
+    protected function newRepositoryDetail(string $table, string $entity, string $column, string $field, int $available): RepositoryDetail {
 
         $template = $this->getStatementService()->readStatementFile(__DIR__ . "/RepositoryService.sql");
 
