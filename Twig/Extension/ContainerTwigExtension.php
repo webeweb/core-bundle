@@ -66,7 +66,7 @@ class ContainerTwigExtension extends AbstractTwigExtension {
      *
      * @param string|null $classname The classname.
      * @param string|null $method The method.
-     * @param array|null $arguments The arguments.
+     * @param array $arguments The arguments.
      * @return mixed|null Returns the static method result.
      */
     public function coreStaticMethodFunction(?string $classname, ?string $method, array $arguments = []) {
