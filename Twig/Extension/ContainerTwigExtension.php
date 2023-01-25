@@ -66,7 +66,7 @@ class ContainerTwigExtension extends AbstractTwigExtension {
      *
      * @param string|null $classname The classname.
      * @param string|null $method The method.
-     * @param array|null $arguments The arguments.
+     * @param array $arguments The arguments.
      * @return mixed|null Returns the static method result.
      */
     public function coreStaticMethodFunction(?string $classname, ?string $method, array $arguments = []) {
@@ -97,8 +97,8 @@ class ContainerTwigExtension extends AbstractTwigExtension {
 
         return [
             new TwigFunction("getContainerParameter", [$this, "getContainerParameterFunction"]),
-            new TwigFunction("coreNativeMethod", [$this, "coreNativeMethodFunction"]),
-            new TwigFunction("coreStaticMethod", [$this, "coreStaticMethodFunction"]),
+            new TwigFunction("coreNativeMethod", [$this, "coreNativeMethodFunction"], ["is_safe" => ["html"]]),
+            new TwigFunction("coreStaticMethod", [$this, "coreStaticMethodFunction"], ["is_safe" => ["html"]]),
         ];
     }
 }
