@@ -86,6 +86,72 @@ class RepositoryServiceTest extends AbstractWebTestCase {
     }
 
     /**
+     * Tests findOneByEntity()
+     *
+     * @return void
+     * @throws Throwable Throws an exception if an error occurs.
+     */
+    public function testFindOneByEntity(): void {
+
+        $obj = $this->service;
+
+        $res = $obj->findOneByEntity(TestGroup::class);
+
+        $this->assertEquals("wbw_core_group", $res->getTable());
+        $this->assertEquals(TestGroup::class, $res->getEntity());
+        $this->assertEquals(0, $res->getCount());
+
+        $this->assertCount(1, $res->getDetails());
+
+        $this->assertEquals("name", $res->getDetails()[0]->getColumn());
+        $this->assertEquals("name", $res->getDetails()[0]->getField());
+        $this->assertEquals(-1, $res->getDetails()[0]->getAvailable());
+        $this->assertEquals(0, $res->getDetails()[0]->getAverage());
+        $this->assertEquals(0, $res->getDetails()[0]->getMinimum());
+        $this->assertEquals(0, $res->getDetails()[0]->getMaximum());
+    }
+
+    /**
+     * Tests findOneByTable()
+     *
+     * @return void
+     * @throws Throwable Throws an exception if an error occurs.
+     */
+    public function testFindOneByTable(): void {
+
+        $obj = $this->service;
+
+        $res = $obj->findOneByTable("wbw_core_user");
+
+        $this->assertEquals("wbw_core_user", $res->getTable());
+        $this->assertEquals(TestUser::class, $res->getEntity());
+        $this->assertEquals(0, $res->getCount());
+
+        $this->assertCount(3, $res->getDetails());
+
+        $this->assertEquals("password", $res->getDetails()[0]->getColumn());
+        $this->assertEquals("password", $res->getDetails()[0]->getField());
+        $this->assertEquals(-1, $res->getDetails()[0]->getAvailable());
+        $this->assertEquals(0, $res->getDetails()[0]->getAverage());
+        $this->assertEquals(0, $res->getDetails()[0]->getMinimum());
+        $this->assertEquals(0, $res->getDetails()[0]->getMaximum());
+
+        $this->assertEquals("salt", $res->getDetails()[1]->getColumn());
+        $this->assertEquals("salt", $res->getDetails()[1]->getField());
+        $this->assertEquals(-1, $res->getDetails()[1]->getAvailable());
+        $this->assertEquals(0, $res->getDetails()[1]->getAverage());
+        $this->assertEquals(0, $res->getDetails()[1]->getMinimum());
+        $this->assertEquals(0, $res->getDetails()[1]->getMaximum());
+
+        $this->assertEquals("username", $res->getDetails()[2]->getColumn());
+        $this->assertEquals("username", $res->getDetails()[2]->getField());
+        $this->assertEquals(-1, $res->getDetails()[2]->getAvailable());
+        $this->assertEquals(0, $res->getDetails()[2]->getAverage());
+        $this->assertEquals(0, $res->getDetails()[2]->getMinimum());
+        $this->assertEquals(0, $res->getDetails()[2]->getMaximum());
+    }
+
+    /**
      * Tests __construct()
      *
      * @return void

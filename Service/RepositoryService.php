@@ -50,11 +50,9 @@ class RepositoryService implements RepositoryServiceInterface {
         $allMetadata = $this->getStatementService()->getEntityManager()->getMetadataFactory()->getAllMetadata();
         foreach ($allMetadata as $current) {
 
-            if (true === $current->isMappedSuperclass) {
-                continue;
+            if (false === $current->isMappedSuperclass) {
+                $reports[] = $this->findReport($current);
             }
-
-            $reports[] = $this->findReport($current);
         }
 
         usort($reports, static::usortRepositoryReportCallback());
@@ -93,6 +91,52 @@ class RepositoryService implements RepositoryServiceInterface {
         }
 
         return $models;
+    }
+
+    /**
+     * Find one repository report.
+     *
+     * @param callable $criteria The criteria.
+     * @param string $value The value.
+     * @return RepositoryReportInterface|null Returns the repository report.
+     * @throws Throwable Throws an exception if an error occurs.
+     */
+    protected function findOneBy(callable $criteria, string $value): ?RepositoryReportInterface {
+
+        /** @var ClassMetadata[] $allMetadata */
+        $allMetadata = $this->getStatementService()->getEntityManager()->getMetadataFactory()->getAllMetadata();
+        foreach ($allMetadata as $current) {
+
+            if (false === $current->isMappedSuperclass && $value === $criteria($current)) {
+                return $this->findReport($current);
+            }
+        }
+
+        return null;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function findOneByEntity(string $entity): ?RepositoryReportInterface {
+
+        $criteria = function(ClassMetadata $classMetadata) {
+            return $classMetadata->getName();
+        };
+
+        return $this->findOneBy($criteria, $entity);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function findOneByTable(string $table): ?RepositoryReportInterface {
+
+        $criteria = function(ClassMetadata $classMetadata) {
+            return $classMetadata->getTableName();
+        };
+
+        return $this->findOneBy($criteria, $table);
     }
 
     /**
@@ -176,7 +220,7 @@ class RepositoryService implements RepositoryServiceInterface {
     protected static function usortRepositoryReportCallback(): callable {
 
         return function(RepositoryReport $a, RepositoryReport $b): int {
-            return strcmp($a->getEntity(), $b->getEntity());
+            return strcmp($a->getTable(), $b->getTable());
         };
     }
 }

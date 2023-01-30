@@ -29,4 +29,22 @@ interface RepositoryServiceInterface {
      * @throws Throwable Throws an exception if an error occurs.
      */
     public function findAll(): array;
+
+    /**
+     * Find one repository report.
+     *
+     * @param string $entity The entity.
+     * @return RepositoryReportInterface|null Returns the repository report.
+     * @throws Throwable Throws an exception if an error occurs.
+     */
+    public function findOneByEntity(string $entity): ?RepositoryReportInterface;
+
+    /**
+     * Find one repository report.
+     *
+     * @param string $table The table.
+     * @return RepositoryReportInterface|null Returns the repository report.
+     * @throws Throwable Throws an exception if an error occurs.
+     */
+    public function findOneByTable(string $table): ?RepositoryReportInterface;
 }
