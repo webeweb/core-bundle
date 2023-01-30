@@ -79,15 +79,16 @@ class RepositoryService implements RepositoryServiceInterface {
                 continue;
             }
 
-            $params = [
+            $p = [
                 $classMetadata->getTableName(),
                 $classMetadata->getName(),
                 $fieldMapping["columnName"],
                 $fieldMapping["fieldName"],
+                $fieldMapping["type"],
                 ArrayHelper::get($fieldMapping, "length", -1),
             ];
 
-            $models[] = $this->newRepositoryDetail($params[0], $params[1], $params[2], $params[3], $params[4]);
+            $models[] = $this->newRepositoryDetail($p[0], $p[1], $p[2], $p[3], $p[4], $p[5]);
         }
 
         return $models;
@@ -176,11 +177,12 @@ class RepositoryService implements RepositoryServiceInterface {
      * @param string $entity The entity.
      * @param string $column The column.
      * @param string $field The field.
+     * @param string $type The type.
      * @param int $available The available.
      * @return RepositoryDetail Returns the repository detail.
      * @throws Throwable Throws an exception if an error occurs.
      */
-    protected function newRepositoryDetail(string $table, string $entity, string $column, string $field, int $available): RepositoryDetail {
+    protected function newRepositoryDetail(string $table, string $entity, string $column, string $field, string $type, int $available): RepositoryDetail {
 
         $template = $this->getStatementService()->readStatementFile(__DIR__ . "/RepositoryService.sql");
 
@@ -195,6 +197,7 @@ class RepositoryService implements RepositoryServiceInterface {
             ":entity"    => [$entity, PDO::PARAM_STR],
             ":field"     => [$field, PDO::PARAM_STR],
             ":table"     => [$table, PDO::PARAM_STR],
+            ":type"      => [$type, PDO::PARAM_STR],
         ]);
 
         $result = $stmt->executeQuery();
@@ -208,6 +211,7 @@ class RepositoryService implements RepositoryServiceInterface {
         $model->setField($row["field"]);
         $model->setMaximum(intval($row["maximum"]));
         $model->setMinimum(intval($row["minimum"]));
+        $model->setType($row["type"]);
 
         return $model;
     }

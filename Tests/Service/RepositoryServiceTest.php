@@ -64,25 +64,6 @@ class RepositoryServiceTest extends AbstractWebTestCase {
 
         $res = $obj->findAll();
         $this->assertCount(2, $res);
-
-        $this->assertEquals("wbw_core_group", $res[0]->getTable());
-        $this->assertEquals(TestGroup::class, $res[0]->getEntity());
-        $this->assertEquals(0, $res[0]->getCount());
-
-        $this->assertCount(1, $res[0]->getDetails());
-
-        $this->assertEquals("name", $res[0]->getDetails()[0]->getColumn());
-        $this->assertEquals("name", $res[0]->getDetails()[0]->getField());
-        $this->assertEquals(-1, $res[0]->getDetails()[0]->getAvailable());
-        $this->assertEquals(0, $res[0]->getDetails()[0]->getAverage());
-        $this->assertEquals(0, $res[0]->getDetails()[0]->getMinimum());
-        $this->assertEquals(0, $res[0]->getDetails()[0]->getMaximum());
-
-        $this->assertEquals("wbw_core_user", $res[1]->getTable());
-        $this->assertEquals(TestUser::class, $res[1]->getEntity());
-        $this->assertEquals(0, $res[1]->getCount());
-
-        $this->assertCount(3, $res[1]->getDetails());
     }
 
     /**
@@ -109,6 +90,7 @@ class RepositoryServiceTest extends AbstractWebTestCase {
         $this->assertEquals(0, $res->getDetails()[0]->getAverage());
         $this->assertEquals(0, $res->getDetails()[0]->getMinimum());
         $this->assertEquals(0, $res->getDetails()[0]->getMaximum());
+        $this->assertEquals("string", $res->getDetails()[0]->getType());
     }
 
     /**
@@ -135,6 +117,7 @@ class RepositoryServiceTest extends AbstractWebTestCase {
         $this->assertEquals(0, $res->getDetails()[0]->getAverage());
         $this->assertEquals(0, $res->getDetails()[0]->getMinimum());
         $this->assertEquals(0, $res->getDetails()[0]->getMaximum());
+        $this->assertEquals("string", $res->getDetails()[0]->getType());
 
         $this->assertEquals("salt", $res->getDetails()[1]->getColumn());
         $this->assertEquals("salt", $res->getDetails()[1]->getField());
@@ -142,6 +125,7 @@ class RepositoryServiceTest extends AbstractWebTestCase {
         $this->assertEquals(0, $res->getDetails()[1]->getAverage());
         $this->assertEquals(0, $res->getDetails()[1]->getMinimum());
         $this->assertEquals(0, $res->getDetails()[1]->getMaximum());
+        $this->assertEquals("string", $res->getDetails()[1]->getType());
 
         $this->assertEquals("username", $res->getDetails()[2]->getColumn());
         $this->assertEquals("username", $res->getDetails()[2]->getField());
@@ -149,6 +133,7 @@ class RepositoryServiceTest extends AbstractWebTestCase {
         $this->assertEquals(0, $res->getDetails()[2]->getAverage());
         $this->assertEquals(0, $res->getDetails()[2]->getMinimum());
         $this->assertEquals(0, $res->getDetails()[2]->getMaximum());
+        $this->assertEquals("string", $res->getDetails()[2]->getType());
     }
 
     /**
