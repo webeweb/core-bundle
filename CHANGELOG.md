@@ -5,6 +5,7 @@ CHANGELOG
 
 - Add coreNativeMethod() Twig function
 - Improve coreStaticMethod() Twig function
+- Improve Repository service
 
 ### [3.20.0](https://github.com/webeweb/core-bundle/tree/v3.20.0) (2023-01-24)
 
