@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Renderer;
 
+use Symfony\Contracts\Translation\TranslatorInterface;
 use WBW\Bundle\CoreBundle\Assets\TranslatedChoiceLabelInterface;
-use WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface;
 use WBW\Library\Sorter\Helper\AlphabeticalTreeNodeHelper;
 use WBW\Library\Sorter\Model\AlphabeticalTreeNodeInterface;
 use WBW\Library\Symfony\Assets\ChoiceLabelInterface;
@@ -29,7 +29,7 @@ class FormRenderer {
      * Render an option.
      *
      * @param mixed $option The option.
-     * @param BaseTranslatorInterface|null $translator The translator service.
+     * @param TranslatorInterface|null $translator The translator service.
      * @return string Returns the rendered option.
      */
     public static function renderOption($option, $translator = null): string {

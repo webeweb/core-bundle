@@ -19,6 +19,7 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Contracts\Translation\TranslatorInterface;
 use Throwable;
 use Twig\Environment;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
@@ -29,7 +30,6 @@ use WBW\Bundle\CoreBundle\Helper\FormHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Controller\TestAbstractController;
 use WBW\Bundle\CoreBundle\Tests\TestCaseHelper;
-use WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface;
 use WBW\Library\Symfony\Assets\NotificationInterface;
 use WBW\Library\Symfony\Assets\ToastInterface;
 
@@ -218,7 +218,7 @@ class AbstractControllerTest extends AbstractTestCase {
         $obj->setContainer($this->containerBuilder);
 
         $res = $obj->getTranslator();
-        $this->assertInstanceOf(BaseTranslatorInterface::class, $res);
+        $this->assertInstanceOf(TranslatorInterface::class, $res);
         $this->assertSame($this->translator, $res);
     }
 

@@ -13,8 +13,8 @@ namespace WBW\Bundle\CoreBundle\EventListener;
 
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Http\Event\InteractiveLoginEvent;
+use Symfony\Contracts\Translation\TranslatorInterface;
 use WBW\Bundle\CoreBundle\Security\Core\User\UserTrait;
-use WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface;
 use WBW\Bundle\CoreBundle\Translation\TranslatorTrait;
 use WBW\Bundle\CoreBundle\WBWCoreBundle;
 
@@ -39,7 +39,7 @@ class SecurityEventListener {
     /**
      * Constructor.
      *
-     * @param BaseTranslatorInterface $translator The translator.
+     * @param TranslatorInterface $translator The translator.
      * @param UserInterface|null $user The user.
      */
     public function __construct($translator, UserInterface $user = null) {

@@ -29,9 +29,9 @@ use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Encoder\EncoderFactoryInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Csrf\CsrfTokenManagerInterface;
+use Symfony\Contracts\Translation\TranslatorInterface;
 use Twig\Environment;
 use Twig\Loader\LoaderInterface;
-use WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface;
 
 /**
  * Abstract test case.
@@ -150,7 +150,7 @@ abstract class AbstractTestCase extends TestCase {
     /**
      * Translator.
      *
-     * @var BaseTranslatorInterface
+     * @var TranslatorInterface
      */
     protected $translator;
 
@@ -237,7 +237,7 @@ abstract class AbstractTestCase extends TestCase {
         $trans = TestCaseHelper::getTranslatorTransFunction();
 
         // Set a Translator mock.
-        $this->translator = $this->getMockBuilder(BaseTranslatorInterface::class)->getMock();
+        $this->translator = $this->getMockBuilder(TranslatorInterface::class)->getMock();
         $this->translator->expects($this->any())->method("trans")->willReturnCallback($trans);
 
         // Set getUser() callback.
