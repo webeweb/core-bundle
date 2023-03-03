@@ -11,20 +11,21 @@
 
 namespace WBW\Bundle\CoreBundle\Assets;
 
-use WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * Translated choice renderer.
  *
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Assets
+ * @deprecated
  */
 interface TranslatedChoiceLabelInterface {
 
     /**
      * Get the translated choice label.
      *
-     * @param BaseTranslatorInterface|null $translator The translator service.
+     * @param TranslatorInterface|null $translator The translator service.
      * @return string|null Returns the translated choice label.
      */
     public function getTranslatedChoiceLabel($translator): ?string;
