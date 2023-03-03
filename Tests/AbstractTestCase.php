@@ -18,9 +18,11 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\Form\FormFactoryInterface;
+use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Session\Flash\FlashBagInterface;
 use Symfony\Component\HttpFoundation\Session\SessionBagInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Routing\RouterInterface;
@@ -111,6 +113,13 @@ abstract class AbstractTestCase extends TestCase {
      * @var MailerInterface
      */
     protected $mailer;
+
+    /**
+     * Request stack.
+     *
+     * @var RequestStack
+     */
+    protected $requestStack;
 
     /**
      * Router.
@@ -224,11 +233,17 @@ abstract class AbstractTestCase extends TestCase {
         // Set a Mailer mock.
         $this->mailer = $this->getMockBuilder(MailerInterface::class)->getMock();
 
+        // Set a Request stack.
+        $this->requestStack = $this->getMockBuilder(RequestStack::class)->disableOriginalConstructor()->getMock();
+
         // Set a Router mock.
         $this->router = $this->getMockBuilder(RouterInterface::class)->getMock();
 
         // Set a Session mock.
         $this->session = $this->getMockBuilder(SessionInterface::class)->getMock();
+        if (6 <= Kernel::MAJOR_VERSION) {
+            $this->requestStack->expects($this->any())->method("getSession")->willReturn($this->session);
+        }
 
         // Set a Session bag mock.
         $this->sessionBag = $this->getMockBuilder(SessionBagInterface::class)->getMock();
@@ -286,6 +301,7 @@ abstract class AbstractTestCase extends TestCase {
         $this->containerBuilder->set("logger", $this->logger);
         $this->containerBuilder->set("mailer", $this->mailer);
         $this->containerBuilder->set("router", $this->router);
+        $this->containerBuilder->set("request_stack", $this->requestStack);
         $this->containerBuilder->set("session", $this->session);
         $this->containerBuilder->set("security.csrf.token_manager", $this->csrfTokenManager);
         $this->containerBuilder->set("security.encoder_factory", $this->encoderFactory);
