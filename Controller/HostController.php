@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Controller;
 
 use Doctrine\DBAL\Connection;
+use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -79,8 +80,11 @@ class HostController extends AbstractController {
      */
     public function retrieveInformationDatabase(): array {
 
+        /** @var ManagerRegistry $doctrine */
+        $doctrine = $this->container->get("doctrine");
+
         /** @var Connection $connection */
-        $connection = $this->getDoctrine()->getConnection();
+        $connection = $doctrine->getConnection();
         $parameters = $connection->getParams();
 
         return [
