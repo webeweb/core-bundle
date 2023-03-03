@@ -19,7 +19,9 @@ use Throwable;
 use Twig\Environment;
 use Twig\TwigFunction;
 use WBW\Library\Symfony\Manager\JavascriptManager;
+use WBW\Library\Symfony\Manager\JavascriptManagerInterface;
 use WBW\Library\Symfony\Manager\StylesheetManager;
+use WBW\Library\Symfony\Manager\StylesheetManagerInterface;
 use WBW\Library\Symfony\Provider\JavascriptProviderInterface;
 use WBW\Library\Symfony\Provider\StylesheetProviderInterface;
 
@@ -48,7 +50,7 @@ class TwigController extends AbstractController {
     public function functionAction(Request $request, string $name): Response {
 
         /** @var Environment $twig */
-        $twig = $this->get("twig");
+        $twig = $this->getTwig();
 
         $function = $twig->getFunction($name);
         if (false === ($function instanceof TwigFunction)) {
@@ -63,6 +65,16 @@ class TwigController extends AbstractController {
         ], $request->get("args", []));
 
         return new JsonResponse(true === is_array($content) ? $content : [$content]);
+    }
+
+    /**
+     * Get the javascript manager.
+     *
+     * @return JavascriptManagerInterface Returns the javascript manager.
+     * @throws Throwable Throws an exception if an error occurs.
+     */
+    protected function getJavascriptManager(): JavascriptManagerInterface {
+        return $this->container->get(JavascriptManager::SERVICE_NAME);
     }
 
     /**
@@ -89,6 +101,16 @@ class TwigController extends AbstractController {
     }
 
     /**
+     * Get the stylesheet manager.
+     *
+     * @return StylesheetManagerInterface Returns the stylesheet manager.
+     * @throws Throwable Throws an exception if an error occurs.
+     */
+    protected function getStylesheetManager(): StylesheetManagerInterface {
+        return $this->container->get(StylesheetManager::SERVICE_NAME);
+    }
+
+    /**
      * Resource.
      *
      * @param Request $request The request.
@@ -107,7 +129,7 @@ class TwigController extends AbstractController {
             case JavascriptProviderInterface::JAVASCRIPT_PROVIDER_EXTENSION:
 
                 /** @var JavascriptManager $manager */
-                $manager   = $this->get(JavascriptManager::SERVICE_NAME);
+                $manager   = $this->getJavascriptManager();
                 $resources = $manager->getJavascripts();
 
                 $contentType = JavascriptProviderInterface::JAVASCRIPT_PROVIDER_CONTENT_TYPE;
@@ -116,7 +138,7 @@ class TwigController extends AbstractController {
             case StylesheetProviderInterface::STYLESHEET_PROVIDER_EXTENSION:
 
                 /** @var StylesheetManager $manager */
-                $manager   = $this->get(StylesheetManager::SERVICE_NAME);
+                $manager   = $this->getStylesheetManager();
                 $resources = $manager->getStylesheets();
 
                 $contentType = StylesheetProviderInterface::STYLESHEET_PROVIDER_CONTENT_TYPE;
