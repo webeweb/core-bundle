@@ -13,12 +13,14 @@ namespace WBW\Bundle\CoreBundle\Controller;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Psr\Log\LoggerInterface;
-use Symfony\Component\DependencyInjection\Container;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Security\Core\User\User;
+use Symfony\Contracts\Translation\TranslatorInterface;
+use Throwable;
 use Twig\Environment;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\Event\ToastEvent;
@@ -28,7 +30,6 @@ use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
 use WBW\Bundle\CoreBundle\Helper\FormHelper;
 use WBW\Bundle\CoreBundle\Security\Core\User\UserHelper;
-use WBW\Bundle\CoreBundle\Translation\BaseTranslatorInterface;
 use WBW\Library\Symfony\Assets\NotificationInterface;
 use WBW\Library\Symfony\Assets\ToastInterface;
 use WBW\Library\Symfony\Response\DefaultJsonResponseData;
@@ -63,100 +64,110 @@ abstract class AbstractController extends BaseController {
     /**
      * Get the container.
      *
-     * @return Container|null Returns the container.
+     * @return ContainerInterface|null Returns the container.
      */
-    protected function getContainer(): ?Container {
-        return $this->get("service_container");
+    protected function getContainer(): ?ContainerInterface {
+        return $this->container;
     }
 
     /**
      * Get the entity manager.
      *
      * @return EntityManagerInterface|null Returns the entity manager.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     protected function getEntityManager(): ?EntityManagerInterface {
-        return $this->get("doctrine.orm.entity_manager");
+        return $this->container->get("doctrine.orm.entity_manager");
     }
 
     /**
      * Get the event dispatcher.
      *
      * @return EventDispatcherInterface|null Returns the event dispatcher.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     protected function getEventDispatcher(): ?EventDispatcherInterface {
-        return $this->get("event_dispatcher");
+        return $this->container->get("event_dispatcher");
     }
 
     /**
      * Get the form helper.
      *
      * @return FormHelper|null Returns the form helper.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     protected function getFormHelper(): ?FormHelper {
-        return $this->get(FormHelper::SERVICE_NAME);
+        return $this->container->get(FormHelper::SERVICE_NAME);
     }
 
     /**
      * Get the kernel event listener.
      *
      * @return KernelEventListener|null Returns the kernel event listener.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     protected function getKernelEventListener(): ?KernelEventListener {
-        return $this->get(KernelEventListener::SERVICE_NAME);
+        return $this->container->get(KernelEventListener::SERVICE_NAME);
     }
 
     /**
      * Get the logger.
      *
      * @return LoggerInterface|null Returns the logger.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     protected function getLogger(): ?LoggerInterface {
-        return $this->get("logger");
+        return $this->container->get("logger");
     }
 
     /**
      * Get the mailer.
      *
      * @return MailerInterface|null Returns the mailer.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     protected function getMailer(): ?MailerInterface {
-        return $this->get("mailer");
+        return $this->container->get("mailer");
     }
 
     /**
      * Get the router.
      *
      * @return RouterInterface|null Returns the router.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     protected function getRouter(): ?RouterInterface {
-        return $this->get("router");
+        return $this->container->get("router");
     }
 
     /**
      * Get the session.
      *
      * @return SessionInterface|null Returns the session.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     protected function getSession(): ?SessionInterface {
-        return $this->get("session");
+        return $this->container->get("session");
     }
 
     /**
      * Get the translator.
      *
-     * @return BaseTranslatorInterface|null Returns the translator.
+     * @return TranslatorInterface|null Returns the translator.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     protected function getTranslator() {
-        return $this->get("translator");
+        return $this->container->get("translator");
     }
 
     /**
      * Get Twig.
      *
      * @return Environment|null Returns Twig.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     protected function getTwig(): ?Environment {
-        return $this->get("twig");
+        return $this->container->get("twig");
     }
 
     /**

@@ -11,10 +11,4 @@
 
 namespace WBW\Bundle\CoreBundle\Controller;
 
-use Symfony\Component\HttpKernel\Kernel;
-
-if (Kernel::VERSION_ID < 40200) {
-    class_alias("Symfony\Bundle\FrameworkBundle\Controller\Controller", "WBW\Bundle\CoreBundle\Controller\BaseController");
-} else {
-    class_alias("Symfony\Bundle\FrameworkBundle\Controller\AbstractController", "WBW\Bundle\CoreBundle\Controller\BaseController");
-}
+class_alias("Symfony\Bundle\FrameworkBundle\Controller\AbstractController", "WBW\Bundle\CoreBundle\Controller\BaseController");

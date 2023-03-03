@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Controller;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Psr\Log\LoggerInterface;
-use Symfony\Component\DependencyInjection\Container;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Mailer\MailerInterface;
@@ -39,7 +39,7 @@ class TestAbstractController extends AbstractController {
     /**
      * {@inheritdoc}
      */
-    public function getContainer(): ?Container {
+    public function getContainer(): ?ContainerInterface {
         return parent::getContainer();
     }
 
