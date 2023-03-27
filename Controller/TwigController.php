@@ -46,6 +46,7 @@ class TwigController extends AbstractController {
      * @param Request $request The request.
      * @param string $name The name.
      * @return Response Returns the response.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function functionAction(Request $request, string $name): Response {
 
