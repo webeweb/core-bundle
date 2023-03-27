@@ -220,6 +220,7 @@ abstract class AbstractController extends BaseController {
      * @param string $eventName The event name.
      * @param NotificationInterface $notification The notification.
      * @return NotificationEvent|null Returns the event.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     protected function notify(string $eventName, NotificationInterface $notification): ?NotificationEvent {
         return $this->dispatchEvent($eventName, new NotificationEvent($eventName, $notification));
@@ -231,6 +232,7 @@ abstract class AbstractController extends BaseController {
      * @param string $eventName The event name.
      * @param ToastInterface $toast The toast.
      * @return ToastEvent|null Returns the event.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     protected function toast(string $eventName, ToastInterface $toast): ?ToastEvent {
         return $this->dispatchEvent($eventName, new ToastEvent($eventName, $toast));

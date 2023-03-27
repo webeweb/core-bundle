@@ -74,7 +74,7 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
 
         $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
 
-        $arg = $obj->fontAwesomeListIconFilter($obj->fontAwesomeIconFunction([]), "content");
+        $arg = $obj->fontAwesomeListIconFilter($obj->fontAwesomeIconFunction(), "content");
         $exp = '<ul class="fa-ul"><li><span class="fa-li"><i class="fa fa-home"></i></span>content</li></ul>';
 
         $this->assertEquals($exp, $obj->fontAwesomeListFilter($arg));
@@ -89,7 +89,7 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
 
         $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
 
-        $arg = $obj->fontAwesomeIconFunction([]);
+        $arg = $obj->fontAwesomeIconFunction();
         $exp = '<li><span class="fa-li"><i class="fa fa-home"></i></span></li>';
 
         $this->assertEquals($exp, $obj->fontAwesomeListIconFilter($arg, null));
@@ -104,7 +104,7 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
 
         $obj = new FontAwesomeTwigExtension($this->twigEnvironment);
 
-        $arg = $obj->fontAwesomeIconFunction([]);
+        $arg = $obj->fontAwesomeIconFunction();
         $exp = '<li><span class="fa-li"><i class="fa fa-home"></i></span>content</li>';
 
         $this->assertEquals($exp, $obj->fontAwesomeListIconFilter($arg, "content"));

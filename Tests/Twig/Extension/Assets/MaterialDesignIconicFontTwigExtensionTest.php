@@ -135,7 +135,7 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
 
         $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
 
-        $arg = $obj->materialDesignIconicFontListIconFilter($obj->materialDesignIconicFontIconFunction([]), "content");
+        $arg = $obj->materialDesignIconicFontListIconFilter($obj->materialDesignIconicFontIconFunction(), "content");
         $exp = '<ul class="zmdi-hc-ul"><li><i class="zmdi-hc-li zmdi zmdi-home"></i>content</li></ul>';
 
         $this->assertEquals($exp, $obj->materialDesignIconicFontListFilter($arg));
@@ -150,7 +150,7 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
 
         $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
 
-        $arg = $obj->materialDesignIconicFontIconFunction([]);
+        $arg = $obj->materialDesignIconicFontIconFunction();
         $exp = '<li><i class="zmdi-hc-li zmdi zmdi-home"></i></li>';
 
         $this->assertEquals($exp, $obj->materialDesignIconicFontListIconFilter($arg, null));
@@ -165,7 +165,7 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
 
         $obj = new MaterialDesignIconicFontTwigExtension($this->twigEnvironment);
 
-        $arg = $obj->materialDesignIconicFontIconFunction([]);
+        $arg = $obj->materialDesignIconicFontIconFunction();
         $exp = '<li><i class="zmdi-hc-li zmdi zmdi-home"></i>content</li>';
 
         $this->assertEquals($exp, $obj->materialDesignIconicFontListIconFilter($arg, "content"));

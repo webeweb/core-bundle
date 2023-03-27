@@ -106,8 +106,8 @@ class FontAwesomeIconTest extends AbstractTestCase {
 
         $obj = new FontAwesomeIcon();
 
-        $obj->setAnimation(FontAwesomeIcon::FONT_AWESOME_ANIMATION_PULSE);
-        $this->assertEquals(FontAwesomeIcon::FONT_AWESOME_ANIMATION_PULSE, $obj->getAnimation());
+        $obj->setAnimation(FontAwesomeIconInterface::FONT_AWESOME_ANIMATION_PULSE);
+        $this->assertEquals(FontAwesomeIconInterface::FONT_AWESOME_ANIMATION_PULSE, $obj->getAnimation());
     }
 
     /**

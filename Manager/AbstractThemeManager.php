@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Manager;
 
 use Psr\Log\LoggerInterface;
+use Throwable;
 use Twig\Environment;
 use WBW\Bundle\CoreBundle\Twig\Environment\TwigEnvironmentTrait;
 use WBW\Library\Symfony\Manager\AbstractManager;
@@ -115,6 +116,7 @@ abstract class AbstractThemeManager extends AbstractManager {
      * @param string $name The name.
      * @param ThemeProviderInterface $provider The provider.
      * @return ManagerInterface Returns this manager.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     protected function setProvider(string $name, ThemeProviderInterface $provider): ManagerInterface {
 
