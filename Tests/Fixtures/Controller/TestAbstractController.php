@@ -88,13 +88,6 @@ class TestAbstractController extends AbstractController {
     /**
      * {@inheritdoc}
      */
-    public function getRepositoryHelper(): ?RepositoryHelper {
-        return parent::getRepositoryHelper();
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function getRouter(): ?RouterInterface {
         return parent::getRouter();
     }

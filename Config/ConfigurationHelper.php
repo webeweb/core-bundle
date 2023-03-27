@@ -14,7 +14,7 @@ namespace WBW\Bundle\CoreBundle\Config;
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 use Symfony\Component\Config\Definition\Builder\NodeDefinition;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
-use Symfony\Component\DependencyInjection\Container;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Yaml\Yaml;
 use WBW\Library\Types\Helper\ArrayHelper;
 
@@ -67,14 +67,14 @@ class ConfigurationHelper {
     /**
      * Register a container parameter.
      *
-     * @param Container $container The container.
+     * @param ContainerInterface $container The container.
      * @param array $config The configuration.
      * @param string $alias The alias.
      * @param string $key The key.
      * @param bool $tree Tree ?
      * @return void
      */
-    public static function registerContainerParameter(Container $container, array $config, string $alias, string $key, bool $tree = true): void {
+    public static function registerContainerParameter(ContainerInterface $container, array $config, string $alias, string $key, bool $tree = true): void {
 
         if (false === array_key_exists($key, $config)) {
             return;
@@ -96,11 +96,11 @@ class ConfigurationHelper {
     /**
      * Register the container parameters.
      *
-     * @param Container $container The container.
+     * @param ContainerInterface $container The container.
      * @param array $config The configuration.
      * @return void
      */
-    public static function registerContainerParameters(Container $container, array $config): void {
+    public static function registerContainerParameters(ContainerInterface $container, array $config): void {
         foreach ($config as $k => $v) {
             $container->setParameter($k, $v);
         }

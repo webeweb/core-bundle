@@ -13,7 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Controller;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Psr\Log\LoggerInterface;
-use Symfony\Component\DependencyInjection\Container;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Mailer\MailerInterface;
@@ -83,7 +83,7 @@ class AbstractControllerTest extends AbstractTestCase {
         $obj->setContainer($this->containerBuilder);
 
         $res = $obj->getContainer();
-        $this->assertInstanceOf(Container::class, $res);
+        $this->assertInstanceOf(ContainerInterface::class, $res);
         $this->assertSame($this->containerBuilder, $res);
     }
 

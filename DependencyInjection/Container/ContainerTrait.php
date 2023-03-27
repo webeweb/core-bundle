@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\DependencyInjection\Container;
 
-use Symfony\Component\DependencyInjection\Container;
+use Psr\Container\ContainerInterface;
 
 /**
  * Container trait.
@@ -24,26 +24,26 @@ trait ContainerTrait {
     /**
      * Container.
      *
-     * @var Container|null
+     * @var ContainerInterface|null
      */
     private $container;
 
     /**
      * Get the container.
      *
-     * @return Container|null Returns the container.
+     * @return ContainerInterface|null Returns the container.
      */
-    public function getContainer(): ?Container {
+    public function getContainer(): ?ContainerInterface {
         return $this->container;
     }
 
     /**
      * Set the container.
      *
-     * @param Container|null $container The container.
+     * @param ContainerInterface|null $container The container.
      * @return self Returns this instance.
      */
-    protected function setContainer(?Container $container): self {
+    protected function setContainer(?ContainerInterface $container): self {
         $this->container = $container;
         return $this;
     }
