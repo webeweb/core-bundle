@@ -91,6 +91,7 @@ class AbstractControllerTest extends AbstractTestCase {
      * Tests getEntityManager()
      *
      * @return void
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testGetEntityManager(): void {
 
@@ -106,6 +107,7 @@ class AbstractControllerTest extends AbstractTestCase {
      * Tests getEventDispatcher()
      *
      * @return void
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testGetEventDispatcher(): void {
 
@@ -121,6 +123,7 @@ class AbstractControllerTest extends AbstractTestCase {
      * Tests getFormHelper()
      *
      * @return void
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testGetFormHelper(): void {
 
@@ -136,6 +139,7 @@ class AbstractControllerTest extends AbstractTestCase {
      * Tests getKernelEventListener()
      *
      * @return void
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testGetKernelEventListener(): void {
 
@@ -151,6 +155,7 @@ class AbstractControllerTest extends AbstractTestCase {
      * Tests getLogger()
      *
      * @return void
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testGetLogger(): void {
 
@@ -166,6 +171,7 @@ class AbstractControllerTest extends AbstractTestCase {
      * Tests getMailer()
      *
      * @return void
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testGetMailer(): void {
 
@@ -181,6 +187,7 @@ class AbstractControllerTest extends AbstractTestCase {
      * Tests getRouter()
      *
      * @return void
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testGetRouter(): void {
 
@@ -196,6 +203,7 @@ class AbstractControllerTest extends AbstractTestCase {
      * Tests getSession()
      *
      * @return void
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testGetSession(): void {
 
@@ -211,6 +219,7 @@ class AbstractControllerTest extends AbstractTestCase {
      * Tests getTranslator()
      *
      * @return void
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testGetTranslator(): void {
 
@@ -226,6 +235,7 @@ class AbstractControllerTest extends AbstractTestCase {
      * Tests getTwig()
      *
      * @return void
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testGetTwig(): void {
 
