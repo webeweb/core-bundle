@@ -18,12 +18,12 @@ use Throwable;
 use WBW\Bundle\CoreBundle\DependencyInjection\Container\ContainerTrait;
 
 /**
- * Session service.
+ * Compatibility service.
  *
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Service
  */
-class SessionService {
+class CompatibilityService {
 
     use ContainerTrait;
 
@@ -32,7 +32,7 @@ class SessionService {
      *
      * @var string
      */
-    const SERVICE_NAME = "wbw.core.service.session";
+    const SERVICE_NAME = "wbw.core.service.compatibility";
 
     /**
      * Constructor.

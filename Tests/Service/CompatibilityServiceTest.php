@@ -12,16 +12,16 @@
 namespace WBW\Bundle\CoreBundle\Tests\Service;
 
 use Throwable;
-use WBW\Bundle\CoreBundle\Service\SessionService;
+use WBW\Bundle\CoreBundle\Service\CompatibilityService;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
- * Session service test.
+ * Compatibility service test.
  *
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Service
  */
-class SessionServiceTest extends AbstractTestCase {
+class CompatibilityServiceTest extends AbstractTestCase {
 
     /**
      * Tests getSession()
@@ -31,7 +31,7 @@ class SessionServiceTest extends AbstractTestCase {
      */
     public function testGetSession(): void {
 
-        $obj = new SessionService($this->containerBuilder);
+        $obj = new CompatibilityService($this->containerBuilder);
 
         $this->assertSame($this->session, $obj->getSession());
     }
@@ -43,9 +43,9 @@ class SessionServiceTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $this->assertEquals("wbw.core.service.session", SessionService::SERVICE_NAME);
+        $this->assertEquals("wbw.core.service.compatibility", CompatibilityService::SERVICE_NAME);
 
-        $obj = new SessionService($this->containerBuilder);
+        $obj = new CompatibilityService($this->containerBuilder);
 
         $this->assertSame($this->containerBuilder, $obj->getContainer());
     }
