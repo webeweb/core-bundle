@@ -309,6 +309,7 @@ abstract class AbstractTestCase extends TestCase {
         $this->containerBuilder->set("swiftmailer.mailer", $this->mailer);
         $this->containerBuilder->set("translator", $this->translator);
         $this->containerBuilder->set("twig", $this->twigEnvironment);
-        $this->containerBuilder->set("wbw.core.twig.environment", $this->twigEnvironment);
+
+        $this->containerBuilder->set("Psr\\Container\\ContainerInterface", $this->containerBuilder);
     }
 }

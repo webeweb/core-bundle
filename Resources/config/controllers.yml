@@ -8,7 +8,9 @@ services:
     wbw.core.controller.host:
         class: WBW\Bundle\CoreBundle\Controller\HostController
         calls:
-            - [ "setContainer", [ "@service_container" ] ]
+            - [ "setContainer", [ "@Psr\\Container\\ContainerInterface" ] ]
+        tags:
+            - { name: "container.service_subscriber" }
 
     WBW\Bundle\CoreBundle\Controller\TwigController:
         alias:  "wbw.core.controller.twig"
@@ -17,6 +19,8 @@ services:
     wbw.core.controller.twig:
         class: WBW\Bundle\CoreBundle\Controller\TwigController
         calls:
-            - [ "setContainer",         [ "@service_container" ] ]
+            - [ "setContainer",         [ "@Psr\\Container\\ContainerInterface" ] ]
             - [ "setJavascriptManager", [ "@wbw.core.manager.javascript" ] ]
             - [ "setStylesheetManager", [ "@wbw.core.manager.stylesheet" ] ]
+        tags:
+            - { name: "container.service_subscriber" }

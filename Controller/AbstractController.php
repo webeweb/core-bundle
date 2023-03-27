@@ -169,7 +169,7 @@ abstract class AbstractController extends BaseController {
      * @throws Throwable Throws an exception if an error occurs.
      */
     protected function getTwig(): ?Environment {
-        return $this->container->get("wbw.core.twig.environment");
+        return $this->container->get("twig");
     }
 
     /**

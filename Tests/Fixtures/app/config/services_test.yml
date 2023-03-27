@@ -8,7 +8,9 @@ services:
     wbw.core.tests.fixtures.controller.test_views:
         class: WBW\Bundle\CoreBundle\Tests\Fixtures\Controller\TestViewsController
         calls:
-            - [ "setContainer", [ "@service_container" ] ]
+            - [ "setContainer", [ "@Psr\\Container\\ContainerInterface" ] ]
+        tags:
+            - { name: "container.service_subscriber" }
 
     wbw.core.tests.fixtures.provider.test_stylesheet:
         class:  WBW\Bundle\CoreBundle\Tests\Fixtures\Provider\TestStylesheetProvider
