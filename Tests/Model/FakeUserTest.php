@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Model;
 
-use WBW\Bundle\CoreBundle\Model\DefaultUser;
+use WBW\Bundle\CoreBundle\Model\FakeUser;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
@@ -20,7 +20,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Model
  */
-class DefaultUserTest extends AbstractTestCase {
+class FakeUserTest extends AbstractTestCase {
 
     /**
      * Tests __construct()
@@ -29,11 +29,11 @@ class DefaultUserTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $obj = new DefaultUser();
+        $obj = new FakeUser("username", "password", ["ROLE_USER"]);
 
-        $this->assertNull($obj->getPassword());
-        $this->assertEquals([], $obj->getRoles());
+        $this->assertEquals("password", $obj->getPassword());
+        $this->assertEquals(["ROLE_USER"], $obj->getRoles());
         $this->assertNull($obj->getSalt());
-        $this->assertNull($obj->getUsername());
+        $this->assertEquals("username", $obj->getUsername());
     }
 }

@@ -19,12 +19,12 @@ use WBW\Library\Traits\Strings\StringSaltTrait;
 use WBW\Library\Traits\Strings\StringUsernameTrait;
 
 /**
- * Default user.
+ * Fake user.
  *
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Model
  */
-class DefaultUser implements UserInterface {
+class FakeUser implements UserInterface {
 
     use ArrayRolesTrait;
     use IntegerIdTrait;
@@ -34,9 +34,15 @@ class DefaultUser implements UserInterface {
 
     /**
      * Constructor.
+     *
+     * @param string|null $username The username.
+     * @param string|null $password The password.
+     * @param array $roles The roles.
      */
-    public function __construct() {
-        $this->setRoles([]);
+    public function __construct(?string $username = null, ?string $password = null, array $roles = []) {
+        $this->setPassword($password);
+        $this->setRoles($roles);
+        $this->setUsername($username);
     }
 
     /**
