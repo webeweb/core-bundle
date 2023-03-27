@@ -12,7 +12,9 @@
 namespace WBW\Bundle\CoreBundle\Exception;
 
 use Symfony\Component\Security\Core\User\UserInterface;
+use WBW\Bundle\CoreBundle\Helper\UserHelper;
 use WBW\Bundle\CoreBundle\Security\Core\User\UserTrait;
+use WBW\Library\Traits\Strings\ArrayRolesTrait;
 use WBW\Library\Traits\Strings\StringOriginUrlTrait;
 use WBW\Library\Traits\Strings\StringRedirectUrlTrait;
 
@@ -24,16 +26,10 @@ use WBW\Library\Traits\Strings\StringRedirectUrlTrait;
  */
 class BadUserRoleException extends AbstractException {
 
+    use ArrayRolesTrait;
     use StringOriginUrlTrait;
     use StringRedirectUrlTrait;
     use UserTrait;
-
-    /**
-     * Roles.
-     *
-     * @var array
-     */
-    private $roles;
 
     /**
      * Constructor.
@@ -46,7 +42,7 @@ class BadUserRoleException extends AbstractException {
     public function __construct(UserInterface $user, array $roles, string $redirectUrl, string $originUrl) {
 
         $format  = 'User "%s" is not allowed to access to "%s" with roles [%s]';
-        $message = sprintf($format, $user->getUsername(), $originUrl, implode(",", $roles));
+        $message = sprintf($format, UserHelper::getIdentifier($user), $originUrl, implode(",", $roles));
 
         parent::__construct($message, 403);
 
@@ -54,25 +50,5 @@ class BadUserRoleException extends AbstractException {
         $this->setRedirectUrl($redirectUrl);
         $this->setRoles($roles);
         $this->setUser($user);
-    }
-
-    /**
-     * Get the roles.
-     *
-     * @return array Returns the roles.
-     */
-    public function getRoles(): array {
-        return $this->roles;
-    }
-
-    /**
-     * Set the roles;
-     *
-     * @param array $roles The roles.
-     * @return BadUserRoleException Returns this bad user role exception.
-     */
-    protected function setRoles(array $roles): BadUserRoleException {
-        $this->roles = $roles;
-        return $this;
     }
 }
