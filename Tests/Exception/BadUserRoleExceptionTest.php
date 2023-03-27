@@ -12,7 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\Exception;
 
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
-use WBW\Bundle\CoreBundle\Model\FakeUser;
+use WBW\Bundle\CoreBundle\Model\User;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
@@ -30,7 +30,7 @@ class BadUserRoleExceptionTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $user        = new FakeUser("anonymous");
+        $user        = new User("anonymous");
         $roles       = ["ROLE_ADMIN", "ROLE_USER"];
         $originUrl   = "https://github.com/webeweb";
         $redirectUrl = "https://github.com";

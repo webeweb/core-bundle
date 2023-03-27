@@ -19,12 +19,12 @@ use WBW\Library\Traits\Strings\StringSaltTrait;
 use WBW\Library\Traits\Strings\StringUsernameTrait;
 
 /**
- * Fake user.
+ * User.
  *
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Model
  */
-class FakeUser implements UserInterface {
+class User implements UserInterface {
 
     use ArrayRolesTrait;
     use IntegerIdTrait;
