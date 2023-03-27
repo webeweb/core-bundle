@@ -15,7 +15,6 @@ use InvalidArgumentException;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\StyleInterface;
-use Symfony\Component\HttpKernel\Kernel;
 use WBW\Bundle\CoreBundle\Console\ConsoleHelper;
 use WBW\Bundle\CoreBundle\Helper\SkeletonHelper;
 use WBW\Bundle\CoreBundle\HttpKernel\KernelHelper;
@@ -156,10 +155,6 @@ class CopySkeletonCommand extends AbstractCommand {
 
         $rootDir = KernelHelper::getProjectDir($kernel);
 
-        if (40000 <= Kernel::VERSION_ID) {
-            return $rootDir . "/templates/bundles";
-        }
-
-        return $rootDir . "/app/Resources";
+        return $rootDir . "/templates/bundles";
     }
 }
