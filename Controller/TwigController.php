@@ -19,9 +19,9 @@ use Throwable;
 use Twig\Environment;
 use Twig\TwigFunction;
 use WBW\Library\Symfony\Manager\JavascriptManager;
-use WBW\Library\Symfony\Manager\JavascriptManagerInterface;
+use WBW\Library\Symfony\Manager\JavascriptManagerTrait;
 use WBW\Library\Symfony\Manager\StylesheetManager;
-use WBW\Library\Symfony\Manager\StylesheetManagerInterface;
+use WBW\Library\Symfony\Manager\StylesheetManagerTrait;
 use WBW\Library\Symfony\Provider\JavascriptProviderInterface;
 use WBW\Library\Symfony\Provider\StylesheetProviderInterface;
 
@@ -32,6 +32,13 @@ use WBW\Library\Symfony\Provider\StylesheetProviderInterface;
  * @package WBW\Bundle\CoreBundle\Controller
  */
 class TwigController extends AbstractController {
+
+    use JavascriptManagerTrait {
+        setJavascriptManager as public;
+    }
+    use StylesheetManagerTrait {
+        setStylesheetManager as public;
+    }
 
     /**
      * Service name.
@@ -69,16 +76,6 @@ class TwigController extends AbstractController {
     }
 
     /**
-     * Get the javascript manager.
-     *
-     * @return JavascriptManagerInterface Returns the javascript manager.
-     * @throws Throwable Throws an exception if an error occurs.
-     */
-    protected function getJavascriptManager(): JavascriptManagerInterface {
-        return $this->container->get(JavascriptManager::SERVICE_NAME);
-    }
-
-    /**
      * Get the last modified.
      *
      * @param string $view The view.
@@ -99,16 +96,6 @@ class TwigController extends AbstractController {
         }
 
         return new DateTime("@$time");
-    }
-
-    /**
-     * Get the stylesheet manager.
-     *
-     * @return StylesheetManagerInterface Returns the stylesheet manager.
-     * @throws Throwable Throws an exception if an error occurs.
-     */
-    protected function getStylesheetManager(): StylesheetManagerInterface {
-        return $this->container->get(StylesheetManager::SERVICE_NAME);
     }
 
     /**

@@ -17,4 +17,6 @@ services:
     wbw.core.controller.twig:
         class: WBW\Bundle\CoreBundle\Controller\TwigController
         calls:
-            - [ "setContainer", [ "@service_container" ] ]
+            - [ "setContainer",         [ "@service_container" ] ]
+            - [ "setJavascriptManager", [ "@wbw.core.manager.javascript" ] ]
+            - [ "setStylesheetManager", [ "@wbw.core.manager.stylesheet" ] ]
