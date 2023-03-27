@@ -1,10 +1,6 @@
 # Resources/config/services.yml
 services:
 
-    logger:
-        alias:  "monolog.logger"
-        public: true
-
     wbw.core.helper.form:
         class:  WBW\Bundle\CoreBundle\Helper\FormHelper
         public: true
