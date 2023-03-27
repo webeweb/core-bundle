@@ -13,17 +13,18 @@ namespace WBW\Bundle\CoreBundle\Controller;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Psr\Log\LoggerInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController as BaseController;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Routing\RouterInterface;
+use Symfony\Contracts\EventDispatcher\Event;
 use Symfony\Contracts\Translation\TranslatorInterface;
 use Throwable;
 use Twig\Environment;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\Event\ToastEvent;
-use WBW\Bundle\CoreBundle\EventDispatcher\BaseEvent;
 use WBW\Bundle\CoreBundle\EventDispatcher\EventDispatcherHelper;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
@@ -48,10 +49,11 @@ abstract class AbstractController extends BaseController {
      * Dispatch an event.
      *
      * @param string $eventName The event name.
-     * @param BaseEvent $event The event.
-     * @return BaseEvent|null Returns the event.
+     * @param Event $event The event.
+     * @return Event|null Returns the event.
+     * @throws Throwable Throws an exception if an error occurs.
      */
-    protected function dispatchEvent(string $eventName, $event) {
+    protected function dispatchEvent(string $eventName, Event $event): Event {
 
         $this->getLogger()->debug(sprintf('A controller dispatch an event with name "%s"', $eventName), [
             "_controller" => get_class($this),
@@ -167,7 +169,7 @@ abstract class AbstractController extends BaseController {
      * @throws Throwable Throws an exception if an error occurs.
      */
     protected function getTwig(): ?Environment {
-        return $this->container->get("twig");
+        return $this->container->get("wbw.core.twig.environment");
     }
 
     /**
@@ -178,6 +180,7 @@ abstract class AbstractController extends BaseController {
      * @param string $redirectUrl The redirect URL.
      * @param string $originUrl The origin URL.
      * @return bool Returns true.
+     * @throws Throwable Throws an exception if an error occurs.
      * @throws BadUserRoleException Throws a bad user role exception.
      */
     protected function hasRolesOrRedirect(array $roles, bool $or, string $redirectUrl, string $originUrl = ""): bool {
@@ -241,6 +244,7 @@ abstract class AbstractController extends BaseController {
      * @param string|null $domain The domain.
      * @param string|null $locale The locale.
      * @return string Returns the translation in case of success, $id otherwise.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     protected function translate(string $id, array $parameters = [], string $domain = null, string $locale = null): string {
         return $this->getTranslator()->trans($id, $parameters, $domain, $locale);
