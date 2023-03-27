@@ -12,13 +12,13 @@
 namespace WBW\Bundle\CoreBundle\EventListener;
 
 use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpKernel\Event\ExceptionEvent;
+use Symfony\Component\HttpKernel\Event\RequestEvent;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Throwable;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
 use WBW\Bundle\CoreBundle\HttpFoundation\RequestTrait;
-use WBW\Bundle\CoreBundle\HttpKernel\Event\BaseExceptionEvent;
-use WBW\Bundle\CoreBundle\HttpKernel\Event\BaseRequestEvent;
 use WBW\Bundle\CoreBundle\Mailer\MailerTrait;
 use WBW\Bundle\CoreBundle\Manager\ThemeManager;
 use WBW\Bundle\CoreBundle\Manager\ThemeManagerTrait;
@@ -86,11 +86,11 @@ class KernelEventListener {
     /**
      * Handle a bad user role exception.
      *
-     * @param BaseExceptionEvent $event The event.
+     * @param ExceptionEvent $event The event.
      * @param BadUserRoleException $ex The exception.
      * @return void
      */
-    protected function handleBadUserRoleException($event, BadUserRoleException $ex): void {
+    protected function handleBadUserRoleException(ExceptionEvent $event, BadUserRoleException $ex): void {
         if (null !== $ex->getRedirectUrl()) {
             $event->setResponse(new RedirectResponse($ex->getRedirectUrl()));
         }
@@ -99,11 +99,11 @@ class KernelEventListener {
     /**
      * Handle a redirect response exception.
      *
-     * @param BaseExceptionEvent $event The event.
+     * @param ExceptionEvent $event The event.
      * @param RedirectResponseException $ex The exception.
      * @return void
      */
-    protected function handleRedirectResponseException($event, RedirectResponseException $ex): void {
+    protected function handleRedirectResponseException(ExceptionEvent $event, RedirectResponseException $ex): void {
         if (null !== $ex->getRedirectUrl()) {
             $event->setResponse(new RedirectResponse($ex->getRedirectUrl()));
         }
@@ -112,21 +112,21 @@ class KernelEventListener {
     /**
      * Handle an unexpected exception.
      *
-     * @param BaseExceptionEvent $event The event.
+     * @param ExceptionEvent $event The event.
      * @param Throwable $ex The exception.
      * @return void
      */
-    protected function handleUnexpectedException($event, Throwable $ex): void {
+    protected function handleUnexpectedException(ExceptionEvent $event, Throwable $ex): void {
 
     }
 
     /**
      * On kernel exception.
      *
-     * @param BaseExceptionEvent $event The event.
-     * @return BaseExceptionEvent Returns the event.
+     * @param ExceptionEvent $event The event.
+     * @return ExceptionEvent Returns the event.
      */
-    public function onKernelException($event) {
+    public function onKernelException(ExceptionEvent $event): ExceptionEvent {
 
         $ex = $event->getThrowable();
 
@@ -148,10 +148,10 @@ class KernelEventListener {
     /**
      * On kernel request.
      *
-     * @param BaseRequestEvent $event The event.
-     * @return BaseRequestEvent Returns the event.
+     * @param RequestEvent $event The event.
+     * @return RequestEvent Returns the event.
      */
-    public function onKernelRequest($event) {
+    public function onKernelRequest(RequestEvent $event): RequestEvent {
 
         $this->setRequest($event->getRequest());
 

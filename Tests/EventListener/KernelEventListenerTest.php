@@ -13,6 +13,8 @@ namespace WBW\Bundle\CoreBundle\Tests\EventListener;
 
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpKernel\Event\ExceptionEvent;
+use Symfony\Component\HttpKernel\Event\RequestEvent;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Throwable;
@@ -77,7 +79,7 @@ class KernelEventListenerTest extends AbstractTestCase {
 
         $obj = new KernelEventListener($this->tokenStorage, $this->themeManager);
 
-        $arg = new BaseExceptionEvent($this->kernel, new Request(), HttpKernelInterface::MASTER_REQUEST, $throwable);
+        $arg = new ExceptionEvent($this->kernel, new Request(), HttpKernelInterface::MASTER_REQUEST, $throwable);
         $this->assertSame($arg, $obj->onKernelException($arg));
     }
 
@@ -96,7 +98,7 @@ class KernelEventListenerTest extends AbstractTestCase {
 
         $obj = new KernelEventListener($this->tokenStorage, $this->themeManager);
 
-        $arg = new BaseExceptionEvent($this->kernel, new Request(), HttpKernelInterface::MASTER_REQUEST, $ex);
+        $arg = new ExceptionEvent($this->kernel, new Request(), HttpKernelInterface::MASTER_REQUEST, $ex);
         $this->assertSame($arg, $obj->onKernelException($arg));
         $this->assertInstanceOf(RedirectResponse::class, $arg->getResponse());
         $this->assertEquals("redirectUrl", $arg->getResponse()->getTargetUrl());
@@ -114,7 +116,7 @@ class KernelEventListenerTest extends AbstractTestCase {
 
         $obj = new KernelEventListener($this->tokenStorage, $this->themeManager);
 
-        $arg = new BaseExceptionEvent($this->kernel, new Request(), HttpKernelInterface::MASTER_REQUEST, $ex);
+        $arg = new ExceptionEvent($this->kernel, new Request(), HttpKernelInterface::MASTER_REQUEST, $ex);
         $this->assertSame($arg, $obj->onKernelException($arg));
         $this->assertInstanceOf(RedirectResponse::class, $arg->getResponse());
         $this->assertEquals("redirectUrl", $arg->getResponse()->getTargetUrl());
@@ -129,7 +131,7 @@ class KernelEventListenerTest extends AbstractTestCase {
 
         $obj = new KernelEventListener($this->tokenStorage, $this->themeManager);
 
-        $obj->onKernelRequest(new BaseRequestEvent($this->kernel, new Request(), HttpKernelInterface::MASTER_REQUEST));
+        $obj->onKernelRequest(new RequestEvent($this->kernel, new Request(), HttpKernelInterface::MASTER_REQUEST));
         $this->assertInstanceOf(Request::class, $obj->getRequest());
     }
 
