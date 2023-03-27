@@ -8,7 +8,7 @@ core-bundle
 [![License](https://img.shields.io/packagist/l/webeweb/core-bundle.svg?style=flat-square)](https://packagist.org/packages/webeweb/core-bundle)
 [![composer.lock](https://img.shields.io/badge/.lock-uncommited-important.svg?style=flat-square)](https://packagist.org/packages/webeweb/core-bundle)
 
-Core bundle for Symfony 2 and more.
+Core bundle for Symfony 4 and more.
 
 `core-bundle` provides some useful classes to build another bundles. We use it
 into all our bundles and Symfony applications.
@@ -48,7 +48,7 @@ If you like this package, pay me a beer (or a coffee)
 ## Compatibility
 
 [![PHP](https://img.shields.io/packagist/php-v/webeweb/core-bundle.svg?style=flat-square)](http://php.net)
-[![Symfony](https://img.shields.io/badge/symfony-%5E4.4%7C%5E5.0-brightness.svg?style=flat-square)](https://symfony.com)
+[![Symfony](https://img.shields.io/badge/symfony-%5E4.4%7C%5E5.0%7C%5E6.0-brightness.svg?style=flat-square)](https://symfony.com)
 
 ## Installation
 
