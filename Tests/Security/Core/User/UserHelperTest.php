@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Security\Core\User;
 
-use WBW\Bundle\CoreBundle\Model\User;
 use WBW\Bundle\CoreBundle\Security\Core\User\UserHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser;
 
 /**
  * User helper test.
@@ -31,7 +31,7 @@ class UserHelperTest extends AbstractTestCase {
     public function testHasRoles(): void {
 
         // Set a User mock.
-        $user = new User("github", "github", ["ROLE_USER"]);
+        $user = new TestUser("github", "github", ["ROLE_USER"]);
 
         $this->assertFalse(UserHelper::hasRoles(null, ""));
         $this->assertFalse(UserHelper::hasRoles(null, null));

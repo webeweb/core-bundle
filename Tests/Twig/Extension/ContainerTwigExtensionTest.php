@@ -12,7 +12,6 @@
 namespace WBW\Bundle\CoreBundle\Tests\Twig\Extension;
 
 use Twig\Extension\ExtensionInterface;
-use Twig\Node\Node;
 use Twig\TwigFunction;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Twig\Extension\ContainerTwigExtension;

@@ -11,10 +11,9 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Helper;
 
-use Symfony\Component\HttpKernel\Kernel;
-use Symfony\Component\Security\Core\User\UserInterface;
 use WBW\Bundle\CoreBundle\Helper\UserHelper;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
+use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser;
 
 /**
  * User helper test.
@@ -31,16 +30,9 @@ class UserHelperTest extends AbstractTestCase {
      */
     public function testGetIdentifier(): void {
 
-        $identifier = "identifier";
-
         // Set a User mock.
-        $user = $this->getMockBuilder(UserInterface::class)->getMock();
-        if (Kernel::MAJOR_VERSION < 6) {
-            $user->expects($this->any())->method("getUsername")->willReturn($identifier);
-        } else {
-            $user->expects($this->any())->method("getUserIdentifier")->willReturn($identifier);
-        }
+        $user = new TestUser("username");
 
-        $this->assertEquals($identifier, UserHelper::getIdentifier($user));
+        $this->assertEquals("username", UserHelper::getIdentifier($user));
     }
 }
