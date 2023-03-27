@@ -55,6 +55,11 @@ services:
         calls:
             - [ "setStatementService", [ "@wbw.core.service.statement" ] ]
 
+    wbw.core.service.session:
+        class:  WBW\Bundle\CoreBundle\Service\SessionService
+        public: true
+        arguments: [ "@service_container" ]
+
     wbw.core.service.statement:
         class:  WBW\Bundle\CoreBundle\Service\StatementService
         public: true

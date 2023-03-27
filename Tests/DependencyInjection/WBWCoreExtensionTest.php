@@ -29,6 +29,7 @@ use WBW\Bundle\CoreBundle\Manager\ThemeManager;
 use WBW\Bundle\CoreBundle\Provider\JavascriptProvider;
 use WBW\Bundle\CoreBundle\Provider\SyntaxHighlighterProvider;
 use WBW\Bundle\CoreBundle\Service\RepositoryService;
+use WBW\Bundle\CoreBundle\Service\SessionService;
 use WBW\Bundle\CoreBundle\Service\StatementService;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser;
@@ -213,6 +214,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         // Services
         $this->assertInstanceOf(RepositoryService::class, $this->containerBuilder->get("wbw.core.repository.repository_helper"));
         $this->assertInstanceOf(RepositoryService::class, $this->containerBuilder->get(RepositoryService::SERVICE_NAME));
+        $this->assertInstanceOf(SessionService::class, $this->containerBuilder->get(SessionService::SERVICE_NAME));
         $this->assertInstanceOf(StatementService::class, $this->containerBuilder->get(StatementService::SERVICE_NAME));
         $this->assertInstanceOf(TokenGeneratorService::class, $this->containerBuilder->get(TokenGeneratorService::SERVICE_NAME));
 
