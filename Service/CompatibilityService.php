@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\DependencyInjection\Container\ContainerTrait;
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Service
  */
-class CompatibilityService {
+class CompatibilityService implements CompatibilityServiceInterface {
 
     use ContainerTrait;
 
@@ -44,10 +44,7 @@ class CompatibilityService {
     }
 
     /**
-     * Get the sessions.
-     *
-     * @return SessionInterface|null Returns the session.
-     * @throws Throwable Throws an exception if an error occurs.
+     * {@inheritdoc}
      */
     public function getSession(): ?SessionInterface {
 

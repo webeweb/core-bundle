@@ -13,6 +13,7 @@ namespace WBW\Bundle\CoreBundle\Tests\Service;
 
 use Throwable;
 use WBW\Bundle\CoreBundle\Service\CompatibilityService;
+use WBW\Bundle\CoreBundle\Service\CompatibilityServiceInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
@@ -46,6 +47,8 @@ class CompatibilityServiceTest extends AbstractTestCase {
         $this->assertEquals("wbw.core.service.compatibility", CompatibilityService::SERVICE_NAME);
 
         $obj = new CompatibilityService($this->containerBuilder);
+
+        $this->assertInstanceOf(CompatibilityServiceInterface::class, $obj);
 
         $this->assertSame($this->containerBuilder, $obj->getContainer());
     }
