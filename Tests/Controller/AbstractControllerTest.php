@@ -351,7 +351,7 @@ class AbstractControllerTest extends AbstractTestCase {
         $obj->setContainer($this->containerBuilder);
 
         $res = $obj->notify("eventName", $notification);
-        $this->assertNull($res);
+        $this->assertNotNull($res);
     }
 
     /**
@@ -399,13 +399,14 @@ class AbstractControllerTest extends AbstractTestCase {
         $obj->setContainer($this->containerBuilder);
 
         $res = $obj->toast("eventName", $toast);
-        $this->assertNull($res);
+        $this->assertNotNull($res);
     }
 
     /**
      * Tests translate()
      *
      * @return void
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testTranslate(): void {
 

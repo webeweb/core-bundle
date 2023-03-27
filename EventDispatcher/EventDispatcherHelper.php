@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\EventDispatcher;
 
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
+use Symfony\Contracts\EventDispatcher\Event;
 
 /**
  * Event dispatcher helper.
@@ -26,13 +27,13 @@ class EventDispatcherHelper {
      *
      * @param EventDispatcherInterface|null $eventDispatcher The event dispatcher.
      * @param string $eventName The event name.
-     * @param BaseEvent $event The event.
-     * @return BaseEvent|null Returns the event in case of success, null otherwise.
+     * @param Event $event The event.
+     * @return Event Returns the event.
      */
-    public static function dispatch(?EventDispatcherInterface $eventDispatcher, string $eventName, $event) {
+    public static function dispatch(?EventDispatcherInterface $eventDispatcher, string $eventName, Event $event): Event {
 
         if (null === $eventDispatcher || false === $eventDispatcher->hasListeners($eventName)) {
-            return null;
+            return $event;
         }
 
         return $eventDispatcher->dispatch($event, $eventName);
