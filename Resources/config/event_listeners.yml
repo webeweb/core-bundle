@@ -12,7 +12,7 @@ services:
     wbw.core.event_listener.notification:
         class:  WBW\Bundle\CoreBundle\EventListener\NotificationEventListener
         public: false
-        arguments: [ "@session" ]
+        arguments: [ "@=service('wbw.core.service.session').getSession()" ]
         tags:
             - { name: "kernel.event_listener", event: "wbw.core.event.notification.danger",  method: "onNotify" }
             - { name: "kernel.event_listener", event: "wbw.core.event.notification.info",    method: "onNotify" }
@@ -22,7 +22,7 @@ services:
     wbw.core.event_listener.toast:
         class:  WBW\Bundle\CoreBundle\EventListener\ToastEventListener
         public: false
-        arguments: [ "@session" ]
+        arguments: [ "@=service('wbw.core.service.session').getSession()" ]
         tags:
             - { name: "kernel.event_listener", event: "wbw.core.event.toast.danger",  method: "onToast" }
             - { name: "kernel.event_listener", event: "wbw.core.event.toast.info",    method: "onToast" }
