@@ -14,6 +14,7 @@ namespace WBW\Bundle\CoreBundle\EventListener;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Http\Event\InteractiveLoginEvent;
 use Symfony\Contracts\Translation\TranslatorInterface;
+use WBW\Bundle\CoreBundle\Helper\UserHelper;
 use WBW\Bundle\CoreBundle\Security\Core\User\UserTrait;
 use WBW\Bundle\CoreBundle\Translation\TranslatorTrait;
 use WBW\Bundle\CoreBundle\WBWCoreBundle;
@@ -56,7 +57,7 @@ class SecurityEventListener {
     public function onInteractiveLogin(InteractiveLoginEvent $event): InteractiveLoginEvent {
 
         $message = $this->getTranslator()->trans("message.welcome", [
-            "{{ username }}" => $this->getUser()->getUsername(),
+            "{{ identifier }}" => UserHelper::getIdentifier($this->getUser()),
         ], WBWCoreBundle::getTranslationDomain());
 
         $event->getRequest()->getSession()->getBag("flashes")->add("welcome", $message);
