@@ -14,7 +14,6 @@ namespace WBW\Bundle\CoreBundle\Service;
 use Psr\Container\ContainerInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\HttpKernel\Kernel;
-use Throwable;
 use WBW\Bundle\CoreBundle\DependencyInjection\Container\ContainerTrait;
 
 /**
