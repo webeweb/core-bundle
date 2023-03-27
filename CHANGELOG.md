@@ -4,6 +4,11 @@ CHANGELOG
 ### master
 
 - Add Symfony 6.x support
+- Improve code quality
+- Improve controllers configuration
+- Improve functional tests
+- Improve PHPDoc
+- Improve unit tests
 - Update dependencies
 
 ### [3.21.0](https://github.com/webeweb/core-bundle/tree/v3.21.0) (2023-02-03)
