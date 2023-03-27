@@ -47,10 +47,10 @@ class CompatibilityService implements CompatibilityServiceInterface {
      */
     public function getSession(): ?SessionInterface {
 
-        if (Kernel::MAJOR_VERSION < 6) {
-            return $this->getContainer()->get("session");
+        if (6 <= Kernel::MAJOR_VERSION) {
+            return $this->getContainer()->get("request_stack")->getSession();
         }
 
-        return $this->getContainer()->get("request_stack")->getSession();
+        return $this->getContainer()->get("session");
     }
 }

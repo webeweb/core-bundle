@@ -30,10 +30,10 @@ class UserHelper {
      */
     public static function getIdentifier(UserInterface $user): ?string {
 
-        if (Kernel::MAJOR_VERSION < 6) {
-            return $user->getUsername();
+        if (6 <= Kernel::MAJOR_VERSION) {
+            return $user->getUserIdentifier();
         }
 
-        return $user->getUserIdentifier();
+        return $user->getUsername();
     }
 }

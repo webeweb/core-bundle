@@ -107,10 +107,10 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
         };
 
         // Set the Kernel mock.
-        if (Kernel::VERSION_ID < 50000) {
-            $this->kernel->expects($this->any())->method("getRootDir")->willReturnCallback($getProjectDir);
-        } else {
+        if (5 < Kernel::MAJOR_VERSION) {
             $this->kernel->expects($this->any())->method("getProjectDir")->willReturnCallback($getProjectDir);
+        } else {
+            $this->kernel->expects($this->any())->method("getRootDir")->willReturnCallback($getProjectDir);
         }
 
         // Set a Helper set mock.

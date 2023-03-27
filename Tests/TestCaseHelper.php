@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\CoreBundle\Tests;
 
-use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
+use Symfony\Contracts\EventDispatcher\Event;
 
 /**
  * Test case helper.
@@ -29,13 +29,7 @@ class TestCaseHelper {
      */
     public static function getEventDispatcherDispatchFunction(): callable {
 
-        if (Kernel::VERSION_ID < 40300) {
-            return function($eventName, $event) {
-                return $event;
-            };
-        }
-
-        return function($event, $eventName) {
+        return function(Event $event, string $eventName): Event {
             return $event;
         };
     }
