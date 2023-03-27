@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+### master
+
+- Add Symfony 6.x support
+- Update dependencies
+
 ### [3.21.0](https://github.com/webeweb/core-bundle/tree/v3.21.0) (2023-02-03)
 
 - Add coreNativeMethod() Twig function
