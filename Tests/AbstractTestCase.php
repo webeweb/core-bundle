@@ -292,7 +292,7 @@ abstract class AbstractTestCase extends TestCase {
             "kernel.project_dir" => realpath(__DIR__ . "/Fixtures/app"),
         ]);
 
-        // We set a container builder with only the necessary.
+        // Set a Container builder with only the necessary.
         $this->containerBuilder = new ContainerBuilder($parameterBag);
         $this->containerBuilder->set("doctrine.orm.entity_manager", $this->entityManager);
         $this->containerBuilder->set("event_dispatcher", $this->eventDispatcher);
@@ -309,5 +309,6 @@ abstract class AbstractTestCase extends TestCase {
         $this->containerBuilder->set("swiftmailer.mailer", $this->mailer);
         $this->containerBuilder->set("translator", $this->translator);
         $this->containerBuilder->set("twig", $this->twigEnvironment);
+        $this->containerBuilder->set("wbw.core.twig.environment", $this->twigEnvironment);
     }
 }
