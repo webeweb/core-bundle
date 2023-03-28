@@ -47,7 +47,7 @@ class CompatibilityService implements CompatibilityServiceInterface {
      */
     public function getSession(): ?SessionInterface {
 
-        if (6 <= Kernel::MAJOR_VERSION) {
+        if (50300 <= Kernel::VERSION_ID) {
             return $this->getContainer()->get("request_stack")->getSession();
         }
 
