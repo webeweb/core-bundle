@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.22.3](https://github.com/webeweb/core-bundle/tree/v3.22.3) (2023-03-28)
+
+- Improve code quality
+
 ### [3.22.2](https://github.com/webeweb/core-bundle/tree/v3.22.2) (2023-03-28)
 
 - Improve functional tests
