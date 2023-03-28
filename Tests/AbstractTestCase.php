@@ -241,7 +241,7 @@ abstract class AbstractTestCase extends TestCase {
 
         // Set a Session mock.
         $this->session = $this->getMockBuilder(SessionInterface::class)->getMock();
-        if (6 <= Kernel::MAJOR_VERSION) {
+        if (50300 <= Kernel::VERSION_ID) {
             $this->requestStack->expects($this->any())->method("getSession")->willReturn($this->session);
         }
 
