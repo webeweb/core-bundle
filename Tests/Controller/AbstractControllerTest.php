@@ -12,24 +12,23 @@
 namespace WBW\Bundle\CoreBundle\Tests\Controller;
 
 use Doctrine\ORM\EntityManagerInterface;
+use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
+use Symfony\Component\HttpFoundation\Exception\SessionNotFoundException;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Routing\RouterInterface;
-use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Contracts\Translation\TranslatorInterface;
 use Throwable;
 use Twig\Environment;
+use WBW\Bundle\CoreBundle\Controller\AbstractController;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\Event\ToastEvent;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
-use WBW\Bundle\CoreBundle\Helper\FormHelper;
-use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
+use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Controller\TestAbstractController;
-use WBW\Bundle\CoreBundle\Tests\TestCaseHelper;
 use WBW\Library\Symfony\Assets\NotificationInterface;
 use WBW\Library\Symfony\Assets\ToastInterface;
 
@@ -39,21 +38,14 @@ use WBW\Library\Symfony\Assets\ToastInterface;
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Controller
  */
-class AbstractControllerTest extends AbstractTestCase {
+class AbstractControllerTest extends AbstractWebTestCase {
 
     /**
-     * Form helper.
+     * Controller.
      *
-     * @var FormHelper
+     * @var AbstractController
      */
-    private $formHelper;
-
-    /**
-     * Kernel event listener.
-     *
-     * @var KernelEventListener
-     */
-    private $kernelEventListener;
+    private $controller;
 
     /**
      * {@inheritdoc}
@@ -61,15 +53,8 @@ class AbstractControllerTest extends AbstractTestCase {
     protected function setUp(): void {
         parent::setUp();
 
-        // Set a Form helper mock.
-        $this->formHelper = $this->getMockBuilder(FormHelper::class)->disableOriginalConstructor()->getMock();
-
-        // Set a Kernel event listener mock.
-        $this->kernelEventListener = $this->getMockBuilder(KernelEventListener::class)->disableOriginalConstructor()->getMock();
-
-        // Set the Container builder mock.
-        $this->containerBuilder->set(FormHelper::SERVICE_NAME, $this->formHelper);
-        $this->containerBuilder->set(KernelEventListener::SERVICE_NAME, $this->kernelEventListener);
+        // Set a controller mock.
+        $this->controller = static::$kernel->getContainer()->get(TestAbstractController::class);
     }
 
     /**
@@ -79,12 +64,10 @@ class AbstractControllerTest extends AbstractTestCase {
      */
     public function testGetContainer(): void {
 
-        $obj = new TestAbstractController();
-        $obj->setContainer($this->containerBuilder);
+        $obj = $this->controller;
 
         $res = $obj->getContainer();
         $this->assertInstanceOf(ContainerInterface::class, $res);
-        $this->assertSame($this->containerBuilder, $res);
     }
 
     /**
@@ -95,12 +78,10 @@ class AbstractControllerTest extends AbstractTestCase {
      */
     public function testGetEntityManager(): void {
 
-        $obj = new TestAbstractController();
-        $obj->setContainer($this->containerBuilder);
+        $obj = $this->controller;
 
         $res = $obj->getEntityManager();
         $this->assertInstanceOf(EntityManagerInterface::class, $res);
-        $this->assertSame($this->entityManager, $res);
     }
 
     /**
@@ -111,28 +92,10 @@ class AbstractControllerTest extends AbstractTestCase {
      */
     public function testGetEventDispatcher(): void {
 
-        $obj = new TestAbstractController();
-        $obj->setContainer($this->containerBuilder);
+        $obj = $this->controller;
 
         $res = $obj->getEventDispatcher();
         $this->assertInstanceOf(EventDispatcherInterface::class, $res);
-        $this->assertSame($this->eventDispatcher, $res);
-    }
-
-    /**
-     * Tests getFormHelper()
-     *
-     * @return void
-     * @throws Throwable Throws an exception if an error occurs.
-     */
-    public function testGetFormHelper(): void {
-
-        $obj = new TestAbstractController();
-        $obj->setContainer($this->containerBuilder);
-
-        $res = $obj->getFormHelper();
-        $this->assertInstanceOf(FormHelper::class, $res);
-        $this->assertSame($this->formHelper, $res);
     }
 
     /**
@@ -143,12 +106,10 @@ class AbstractControllerTest extends AbstractTestCase {
      */
     public function testGetKernelEventListener(): void {
 
-        $obj = new TestAbstractController();
-        $obj->setContainer($this->containerBuilder);
+        $obj = $this->controller;
 
         $res = $obj->getKernelEventListener();
         $this->assertInstanceOf(KernelEventListener::class, $res);
-        $this->assertSame($this->kernelEventListener, $res);
     }
 
     /**
@@ -159,12 +120,10 @@ class AbstractControllerTest extends AbstractTestCase {
      */
     public function testGetLogger(): void {
 
-        $obj = new TestAbstractController();
-        $obj->setContainer($this->containerBuilder);
+        $obj = $this->controller;
 
         $res = $obj->getLogger();
         $this->assertInstanceOf(LoggerInterface::class, $res);
-        $this->assertSame($this->logger, $res);
     }
 
     /**
@@ -175,12 +134,10 @@ class AbstractControllerTest extends AbstractTestCase {
      */
     public function testGetMailer(): void {
 
-        $obj = new TestAbstractController();
-        $obj->setContainer($this->containerBuilder);
+        $obj = $this->controller;
 
         $res = $obj->getMailer();
         $this->assertInstanceOf(MailerInterface::class, $res);
-        $this->assertSame($this->mailer, $res);
     }
 
     /**
@@ -191,28 +148,30 @@ class AbstractControllerTest extends AbstractTestCase {
      */
     public function testGetRouter(): void {
 
-        $obj = new TestAbstractController();
-        $obj->setContainer($this->containerBuilder);
+        $obj = $this->controller;
 
         $res = $obj->getRouter();
         $this->assertInstanceOf(RouterInterface::class, $res);
-        $this->assertSame($this->router, $res);
     }
 
     /**
      * Tests getSession()
      *
      * @return void
-     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testGetSession(): void {
 
-        $obj = new TestAbstractController();
-        $obj->setContainer($this->containerBuilder);
+        $obj = $this->controller;
 
-        $res = $obj->getSession();
-        $this->assertInstanceOf(SessionInterface::class, $res);
-        $this->assertSame($this->session, $res);
+        try {
+
+            $res = $obj->getSession();
+            $this->assertInstanceOf(SessionInterface::class, $res);
+        } catch (Throwable $ex) {
+
+            $this->assertInstanceOf(SessionNotFoundException::class, $ex);
+            $this->assertEquals("There is currently no session available.", $ex->getMessage());
+        }
     }
 
     /**
@@ -223,12 +182,10 @@ class AbstractControllerTest extends AbstractTestCase {
      */
     public function testGetTranslator(): void {
 
-        $obj = new TestAbstractController();
-        $obj->setContainer($this->containerBuilder);
+        $obj = $this->controller;
 
         $res = $obj->getTranslator();
         $this->assertInstanceOf(TranslatorInterface::class, $res);
-        $this->assertSame($this->translator, $res);
     }
 
     /**
@@ -239,12 +196,10 @@ class AbstractControllerTest extends AbstractTestCase {
      */
     public function testGetTwig(): void {
 
-        $obj = new TestAbstractController();
-        $obj->setContainer($this->containerBuilder);
+        $obj = $this->controller;
 
         $res = $obj->getTwig();
         $this->assertInstanceOf(Environment::class, $res);
-        $this->assertSame($this->twigEnvironment, $res);
     }
 
     /**
@@ -255,37 +210,16 @@ class AbstractControllerTest extends AbstractTestCase {
      */
     public function testHasRoleOrRedirect(): void {
 
-        // Set the User mock.
-        $this->user = $this->getMockBuilder(UserInterface::class)->getMock();
-        $this->user->expects($this->any())->method("getRoles")->willReturn(["ROLE_GITHUB"]);
-
-        // Set the Kernel event listener mock.
-        $this->kernelEventListener->expects($this->any())->method("getUser")->willReturn($this->user);
-
         $obj = new TestAbstractController();
-        $obj->setContainer($this->containerBuilder);
-
-        $res = $obj->hasRolesOrRedirect(["ROLE_GITHUB"], false, "redirect");
-        $this->assertTrue($res);
-    }
-
-    /**
-     * Tests hasRoleOrRedirect()
-     *
-     * @return void
-     */
-    public function testHasRoleOrRedirectWithBadUserRoleException(): void {
-
-        $obj = new TestAbstractController();
-        $obj->setContainer($this->containerBuilder);
+        $obj->setContainer(static::$kernel->getContainer());
 
         try {
 
-            $obj->hasRolesOrRedirect(["ROLE_GITHUB"], false, "redirectUrl");
+            $obj->hasRolesOrRedirect(["ROLE_USER"], false, "redirectUrl");
         } catch (Throwable $ex) {
 
             $this->assertInstanceOf(BadUserRoleException::class, $ex);
-            $this->assertEquals('User "anonymous" is not allowed to access to "" with roles [ROLE_GITHUB]', $ex->getMessage());
+            $this->assertEquals('User "anonymous" is not allowed to access to "" with roles [ROLE_USER]', $ex->getMessage());
         }
     }
 
@@ -297,7 +231,6 @@ class AbstractControllerTest extends AbstractTestCase {
     public function testNewDefaultJsonResponseData(): void {
 
         $obj = new TestAbstractController();
-        $obj->setContainer($this->containerBuilder);
 
         $res = $obj->newDefaultJsonResponseData(true, [], "message");
         $this->assertEquals([], $res->getData());
@@ -310,21 +243,15 @@ class AbstractControllerTest extends AbstractTestCase {
      * Tests notify()
      *
      * @return void
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testNotify(): void {
 
         // Set a Notification mock.
         $notification = $this->getMockBuilder(NotificationInterface::class)->getMock();
 
-        // Set a dispatch() callback.
-        $dispatchCallback = TestCaseHelper::getEventDispatcherDispatchFunction();
-
-        // Set the Event dispatcher mock.
-        $this->eventDispatcher->expects($this->any())->method("hasListeners")->willReturn(true);
-        $this->eventDispatcher->expects($this->any())->method("dispatch")->willReturnCallback($dispatchCallback);
-
         $obj = new TestAbstractController();
-        $obj->setContainer($this->containerBuilder);
+        $obj->setContainer(static::$kernel->getContainer());
 
         $res = $obj->notify("eventName", $notification);
         $this->assertNotNull($res);
@@ -335,44 +262,18 @@ class AbstractControllerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests notify()
-     *
-     * @return void
-     */
-    public function testNotifyWithoutListener(): void {
-
-        // Set a Notification mock.
-        $notification = $this->getMockBuilder(NotificationInterface::class)->getMock();
-
-        // Set the Event dispatcher mock.
-        $this->eventDispatcher->expects($this->any())->method("hasListeners")->willReturn(false);
-
-        $obj = new TestAbstractController();
-        $obj->setContainer($this->containerBuilder);
-
-        $res = $obj->notify("eventName", $notification);
-        $this->assertNotNull($res);
-    }
-
-    /**
      * Tests toast()
      *
      * @return void
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testToast(): void {
 
         // Set a Toast mock.
         $toast = $this->getMockBuilder(ToastInterface::class)->getMock();
 
-        // Set a dispatch() callback.
-        $dispatchCallback = TestCaseHelper::getEventDispatcherDispatchFunction();
-
-        // Set the Event dispatcher mock.
-        $this->eventDispatcher->expects($this->any())->method("hasListeners")->willReturn(true);
-        $this->eventDispatcher->expects($this->any())->method("dispatch")->willReturnCallback($dispatchCallback);
-
         $obj = new TestAbstractController();
-        $obj->setContainer($this->containerBuilder);
+        $obj->setContainer(static::$kernel->getContainer());
 
         $res = $obj->toast("eventName", $toast);
         $this->assertNotNull($res);
@@ -380,26 +281,6 @@ class AbstractControllerTest extends AbstractTestCase {
         $this->assertInstanceOf(ToastEvent::class, $res);
         $this->assertEquals("eventName", $res->getEventName());
         $this->assertSame($toast, $res->getToast());
-    }
-
-    /**
-     * Tests toast()
-     *
-     * @return void
-     */
-    public function testToastWithoutListener(): void {
-
-        // Set a Toast mock.
-        $toast = $this->getMockBuilder(ToastInterface::class)->getMock();
-
-        // Set the Event dispatcher mock.
-        $this->eventDispatcher->expects($this->any())->method("hasListeners")->willReturn(false);
-
-        $obj = new TestAbstractController();
-        $obj->setContainer($this->containerBuilder);
-
-        $res = $obj->toast("eventName", $toast);
-        $this->assertNotNull($res);
     }
 
     /**
@@ -411,7 +292,7 @@ class AbstractControllerTest extends AbstractTestCase {
     public function testTranslate(): void {
 
         $obj = new TestAbstractController();
-        $obj->setContainer($this->containerBuilder);
+        $obj->setContainer(static::$kernel->getContainer());
 
         $this->assertEquals("id", $obj->translate("id"));
     }

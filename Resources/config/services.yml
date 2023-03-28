@@ -1,6 +1,10 @@
 # Resources/config/services.yml
 services:
 
+    logger:
+        alias:  "monolog.logger"
+        public: true
+
     wbw.core.helper.form:
         class:  WBW\Bundle\CoreBundle\Helper\FormHelper
         public: true
@@ -40,6 +44,9 @@ services:
             - [ "setSearchThemeProvider",                [ "@?wbw.core.provider.theme.search" ] ]
             - [ "setTasksDropdownThemeProvider",         [ "@?wbw.core.provider.theme.tasks_dropdown" ] ]
             - [ "setUserInfoThemeProvider",              [ "@?wbw.core.provider.theme.user_info" ] ]
+
+    WBW\Bundle\CoreBundle\Service\CompatibilityService:
+        alias: "wbw.core.service.compatibility"
 
     wbw.core.service.compatibility:
         class:  WBW\Bundle\CoreBundle\Service\CompatibilityService

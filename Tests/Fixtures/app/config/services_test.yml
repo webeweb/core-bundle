@@ -1,12 +1,15 @@
 # Tests/Fixtures/App/config/services_test.yml
 services:
 
-    WBW\Bundle\CoreBundle\Tests\Fixtures\Controller\TestViewsController:
-        alias:  "wbw.core.tests.fixtures.controller.test_views"
+    WBW\Bundle\CoreBundle\Tests\Fixtures\Controller\TestAbstractController:
         public: true
+        calls:
+            - [ "setContainer", [ "@Psr\\Container\\ContainerInterface" ] ]
+        tags:
+            - { name: "container.service_subscriber" }
 
-    wbw.core.tests.fixtures.controller.test_views:
-        class: WBW\Bundle\CoreBundle\Tests\Fixtures\Controller\TestViewsController
+    WBW\Bundle\CoreBundle\Tests\Fixtures\Controller\TestViewsController:
+        public: true
         calls:
             - [ "setContainer", [ "@Psr\\Container\\ContainerInterface" ] ]
         tags:

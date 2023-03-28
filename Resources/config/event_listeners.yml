@@ -1,6 +1,9 @@
 # Resources/config/event_listeners.yml
 services:
 
+    WBW\Bundle\CoreBundle\EventListener\KernelEventListener:
+        alias: "wbw.core.event_listener.kernel"
+
     wbw.core.event_listener.kernel:
         class:  WBW\Bundle\CoreBundle\EventListener\KernelEventListener
         public: true

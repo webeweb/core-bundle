@@ -12,9 +12,9 @@
 namespace WBW\Bundle\CoreBundle\Controller;
 
 use Doctrine\ORM\EntityManagerInterface;
+use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController as BaseController;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Mailer\MailerInterface;
@@ -28,9 +28,9 @@ use WBW\Bundle\CoreBundle\Event\ToastEvent;
 use WBW\Bundle\CoreBundle\EventDispatcher\EventDispatcherHelper;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
-use WBW\Bundle\CoreBundle\Helper\FormHelper;
 use WBW\Bundle\CoreBundle\Model\User;
 use WBW\Bundle\CoreBundle\Security\Core\User\UserHelper;
+use WBW\Bundle\CoreBundle\Service\CompatibilityService;
 use WBW\Library\Symfony\Assets\NotificationInterface;
 use WBW\Library\Symfony\Assets\ToastInterface;
 use WBW\Library\Symfony\Response\DefaultJsonResponseData;
@@ -79,7 +79,7 @@ abstract class AbstractController extends BaseController {
      * @throws Throwable Throws an exception if an error occurs.
      */
     protected function getEntityManager(): ?EntityManagerInterface {
-        return $this->container->get("doctrine.orm.entity_manager");
+        return $this->container->get("doctrine.orm.manager");
     }
 
     /**
@@ -90,16 +90,6 @@ abstract class AbstractController extends BaseController {
      */
     protected function getEventDispatcher(): ?EventDispatcherInterface {
         return $this->container->get("event_dispatcher");
-    }
-
-    /**
-     * Get the form helper.
-     *
-     * @return FormHelper|null Returns the form helper.
-     * @throws Throwable Throws an exception if an error occurs.
-     */
-    protected function getFormHelper(): ?FormHelper {
-        return $this->container->get(FormHelper::SERVICE_NAME);
     }
 
     /**
@@ -149,7 +139,27 @@ abstract class AbstractController extends BaseController {
      * @throws Throwable Throws an exception if an error occurs.
      */
     protected function getSession(): ?SessionInterface {
-        return $this->container->get("session");
+
+        /** @var CompatibilityService $service */
+        $service = $this->container->get(CompatibilityService::SERVICE_NAME);
+
+        return null === $service ? null : $service->getSession();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public static function getSubscribedServices(): array {
+
+        return array_merge([
+            "doctrine.orm.manager"             => "?" . EntityManagerInterface::class,
+            "event_dispatcher"                 => "?" . EventDispatcherInterface::class,
+            "logger"                           => "?" . LoggerInterface::class,
+            "mailer"                           => "?" . MailerInterface::class,
+            "translator"                       => "?" . TranslatorInterface::class,
+            KernelEventListener::SERVICE_NAME  => "?" . KernelEventListener::class,
+            CompatibilityService::SERVICE_NAME => "?" . CompatibilityService::class,
+        ], parent::getSubscribedServices());
     }
 
     /**
@@ -158,7 +168,7 @@ abstract class AbstractController extends BaseController {
      * @return TranslatorInterface|null Returns the translator.
      * @throws Throwable Throws an exception if an error occurs.
      */
-    protected function getTranslator() {
+    protected function getTranslator(): TranslatorInterface {
         return $this->container->get("translator");
     }
 
@@ -173,17 +183,17 @@ abstract class AbstractController extends BaseController {
     }
 
     /**
-     * Determines if the connected user have roles or redirect.
+     * Determines if the connected user has roles or redirect.
      *
      * @param array $roles The roles.
      * @param bool $or OR ?
      * @param string $redirectUrl The redirect URL.
      * @param string $originUrl The origin URL.
-     * @return bool Returns true.
+     * @return void
      * @throws Throwable Throws an exception if an error occurs.
      * @throws BadUserRoleException Throws a bad user role exception.
      */
-    protected function hasRolesOrRedirect(array $roles, bool $or, string $redirectUrl, string $originUrl = ""): bool {
+    protected function hasRolesOrRedirect(array $roles, bool $or, string $redirectUrl, string $originUrl = ""): void {
 
         $user = $this->getKernelEventListener()->getUser();
         if (false === UserHelper::hasRoles($user, $roles, $or)) {
@@ -192,8 +202,6 @@ abstract class AbstractController extends BaseController {
             $user = null === $user ? new User("anonymous", "") : $user;
             throw new BadUserRoleException($user, $roles, $redirectUrl, $originUrl);
         }
-
-        return true;
     }
 
     /**

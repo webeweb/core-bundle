@@ -12,18 +12,18 @@
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Controller;
 
 use Doctrine\ORM\EntityManagerInterface;
+use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Routing\RouterInterface;
+use Symfony\Contracts\Translation\TranslatorInterface;
 use Twig\Environment;
 use WBW\Bundle\CoreBundle\Controller\AbstractController;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\Event\ToastEvent;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
-use WBW\Bundle\CoreBundle\Helper\FormHelper;
 use WBW\Library\Symfony\Assets\NotificationInterface;
 use WBW\Library\Symfony\Assets\ToastInterface;
 use WBW\Library\Symfony\Response\DefaultJsonResponseDataInterface;
@@ -55,13 +55,6 @@ class TestAbstractController extends AbstractController {
      */
     public function getEventDispatcher(): ?EventDispatcherInterface {
         return parent::getEventDispatcher();
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getFormHelper(): ?FormHelper {
-        return parent::getFormHelper();
     }
 
     /**
@@ -102,7 +95,7 @@ class TestAbstractController extends AbstractController {
     /**
      * {@inheritdoc}
      */
-    public function getTranslator() {
+    public function getTranslator(): TranslatorInterface {
         return parent::getTranslator();
     }
 
