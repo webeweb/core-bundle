@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### master
+### [3.22.0](https://github.com/webeweb/core-bundle/tree/v3.22.0) (2023-03-28)
 
 > IMPORTANT NOTICE: The following packages has been removed
 > - WBW\Bundle\CoreBundle\Assets\Navigation\FontAwesome
