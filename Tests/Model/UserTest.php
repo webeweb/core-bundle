@@ -35,5 +35,7 @@ class UserTest extends AbstractTestCase {
         $this->assertEquals(["ROLE_USER"], $obj->getRoles());
         $this->assertNull($obj->getSalt());
         $this->assertEquals("username", $obj->getUsername());
+
+        $this->assertEquals("username", $obj->getUserIdentifier());
     }
 }
