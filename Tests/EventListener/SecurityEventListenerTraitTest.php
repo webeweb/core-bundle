@@ -31,7 +31,7 @@ class SecurityEventListenerTraitTest extends AbstractTestCase {
      */
     public function testSetSecurityEventListener(): void {
 
-        // Set an User mock.
+        // Set a User mock.
         $this->user = $this->getMockBuilder(UserInterface::class)->getMock();
 
         // Set a Security event listener mock.

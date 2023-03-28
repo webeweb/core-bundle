@@ -20,8 +20,6 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use Throwable;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
-use WBW\Bundle\CoreBundle\HttpKernel\Event\BaseExceptionEvent;
-use WBW\Bundle\CoreBundle\HttpKernel\Event\BaseRequestEvent;
 use WBW\Bundle\CoreBundle\Manager\ThemeManager;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Library\Symfony\Exception\RedirectResponseException;
@@ -90,7 +88,7 @@ class KernelEventListenerTest extends AbstractTestCase {
      */
     public function testOnKernelExceptionWithBadUserRoleException(): void {
 
-        // Set an User mock.
+        // Set a User mock.
         $this->user = $this->getMockBuilder(UserInterface::class)->getMock();
 
         // Set a Bad user role exception mock.

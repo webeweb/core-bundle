@@ -31,7 +31,7 @@ class SecurityEventListenerTest extends AbstractTestCase {
     protected function setUp(): void {
         parent::setUp();
 
-        // Set an User mock.
+        // Set a User mock.
         $this->user = $this->getMockBuilder(UserInterface::class)->getMock();
     }
 
