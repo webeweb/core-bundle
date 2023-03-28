@@ -3,6 +3,10 @@ CHANGELOG
 
 ### master
 
+> IMPORTANT NOTICE: The following packages has been removed
+> - WBW\Bundle\CoreBundle\Assets\Navigation\FontAwesome
+> - WBW\Bundle\CoreBundle\Assets\Navigation\MaterialDesignIconicFont
+
 - Add Symfony 6.x support
 - Improve code quality
 - Improve controllers configuration
