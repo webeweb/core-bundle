@@ -6,7 +6,8 @@ services:
         public: true
 
     wbw.core.controller.host:
-        class: WBW\Bundle\CoreBundle\Controller\HostController
+        class:  WBW\Bundle\CoreBundle\Controller\HostController
+        public: true
         calls:
             - [ "setContainer", [ "@Psr\\Container\\ContainerInterface" ] ]
         tags:
@@ -17,7 +18,8 @@ services:
         public: true
 
     wbw.core.controller.twig:
-        class: WBW\Bundle\CoreBundle\Controller\TwigController
+        class:  WBW\Bundle\CoreBundle\Controller\TwigController
+        public: true
         calls:
             - [ "setContainer",         [ "@Psr\\Container\\ContainerInterface" ] ]
             - [ "setJavascriptManager", [ "@wbw.core.manager.javascript" ] ]
