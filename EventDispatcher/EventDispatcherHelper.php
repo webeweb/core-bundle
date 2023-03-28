@@ -31,11 +31,6 @@ class EventDispatcherHelper {
      * @return Event Returns the event.
      */
     public static function dispatch(?EventDispatcherInterface $eventDispatcher, string $eventName, Event $event): Event {
-
-        if (null === $eventDispatcher || false === $eventDispatcher->hasListeners($eventName)) {
-            return $event;
-        }
-
-        return $eventDispatcher->dispatch($event, $eventName);
+        return null === $eventDispatcher ? $event : $eventDispatcher->dispatch($event, $eventName);
     }
 }
