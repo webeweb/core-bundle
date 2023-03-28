@@ -79,7 +79,7 @@ abstract class AbstractController extends BaseController {
      * @throws Throwable Throws an exception if an error occurs.
      */
     protected function getEntityManager(): ?EntityManagerInterface {
-        return $this->container->get("doctrine.orm.manager");
+        return $this->container->get("doctrine.orm.entity_manager");
     }
 
     /**
@@ -152,7 +152,7 @@ abstract class AbstractController extends BaseController {
     public static function getSubscribedServices(): array {
 
         return array_merge([
-            "doctrine.orm.manager"             => "?" . EntityManagerInterface::class,
+            "doctrine.orm.entity_manager"      => "?" . EntityManagerInterface::class,
             "event_dispatcher"                 => "?" . EventDispatcherInterface::class,
             "logger"                           => "?" . LoggerInterface::class,
             "mailer"                           => "?" . MailerInterface::class,
