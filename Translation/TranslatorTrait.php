@@ -33,7 +33,7 @@ trait TranslatorTrait {
      *
      * @return TranslatorInterface|null Returns the translator.
      */
-    public function getTranslator() {
+    public function getTranslator(): TranslatorInterface {
         return $this->translator;
     }
 
