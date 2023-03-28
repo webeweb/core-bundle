@@ -56,7 +56,7 @@ class FormHelper {
     /**
      * Check a collection.
      *
-     * @param Countable $collection The collection.
+     * @param Countable|null $collection The collection.
      * @param string $notification The notification.
      * @param string $redirectUrl The redirect URL.
      * @param int $expected The expected count.

@@ -28,5 +28,5 @@ interface TranslatedChoiceLabelInterface {
      * @param TranslatorInterface|null $translator The translator service.
      * @return string|null Returns the translated choice label.
      */
-    public function getTranslatedChoiceLabel($translator): ?string;
+    public function getTranslatedChoiceLabel(?TranslatorInterface $translator): ?string;
 }

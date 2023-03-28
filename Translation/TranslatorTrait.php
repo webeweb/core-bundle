@@ -43,7 +43,7 @@ trait TranslatorTrait {
      * @param TranslatorInterface|null $translator The translator.
      * @return self Returns this instance.
      */
-    protected function setTranslator($translator): self {
+    protected function setTranslator(?TranslatorInterface $translator): self {
         $this->translator = $translator;
         return $this;
     }

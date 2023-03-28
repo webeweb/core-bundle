@@ -15,7 +15,6 @@ use Doctrine\ORM\EntityManagerInterface;
 use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
-use Symfony\Component\HttpFoundation\Exception\SessionNotFoundException;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Routing\RouterInterface;
@@ -169,7 +168,7 @@ class AbstractControllerTest extends AbstractWebTestCase {
             $this->assertInstanceOf(SessionInterface::class, $res);
         } catch (Throwable $ex) {
 
-            $this->assertInstanceOf(SessionNotFoundException::class, $ex);
+            $this->assertInstanceOf("Symfony\\Component\\HttpFoundation\\Exception\\SessionNotFoundException", $ex);
             $this->assertEquals("There is currently no session available.", $ex->getMessage());
         }
     }

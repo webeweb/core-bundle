@@ -109,8 +109,8 @@ class TestAbstractController extends AbstractController {
     /**
      * {@inheritdoc}
      */
-    public function hasRolesOrRedirect(array $roles, bool $or, string $redirectUrl, string $originUrl = ""): bool {
-        return parent::hasRolesOrRedirect($roles, $or, $redirectUrl, $originUrl);
+    public function hasRolesOrRedirect(array $roles, bool $or, string $redirectUrl, string $originUrl = ""): void {
+        parent::hasRolesOrRedirect($roles, $or, $redirectUrl, $originUrl);
     }
 
     /**
