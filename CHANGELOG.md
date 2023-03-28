@@ -3,7 +3,7 @@ CHANGELOG
 
 ### [3.22.1](https://github.com/webeweb/core-bundle/tree/v3.22.1) (2023-03-28)
 
-- Fix getEntityManager() into abstract controlller
+- Fix getEntityManager() into abstract controller
 
 ### [3.22.0](https://github.com/webeweb/core-bundle/tree/v3.22.0) (2023-03-28)
 
