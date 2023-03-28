@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+### [3.22.2](https://github.com/webeweb/core-bundle/tree/v3.22.2) (2023-03-28)
+
+- Improve functional tests
+- Improve unit tests
+
 ### [3.22.1](https://github.com/webeweb/core-bundle/tree/v3.22.1) (2023-03-28)
 
 - Fix getEntityManager() into abstract controller
