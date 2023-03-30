@@ -9,7 +9,7 @@ label:
     cancel: "Cancel"
 
 message:
-    welcome: "Welcome {{ username }}"
+    welcome: "Welcome {{ identifier }}"
 
 navigation:
     node:
