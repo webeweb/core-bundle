@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.22.4](https://github.com/webeweb/core-bundle/tree/v3.22.4) (2023-03-30)
+
+- Fix translations
+
 ### [3.22.3](https://github.com/webeweb/core-bundle/tree/v3.22.3) (2023-03-28)
 
 - Improve code quality
