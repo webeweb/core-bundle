@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+### [3.24.0](https://github.com/webeweb/core-bundle/tree/v3.24.0) (2023-04-05)
+
+- Improve Symfony backward compatibilty
+- Fix possible issues with Symfony 5.3 and more
+
 ### [3.23.0](https://github.com/webeweb/core-bundle/tree/v3.23.0) (2023-04-05)
 
 - Improve services configuration
