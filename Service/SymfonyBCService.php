@@ -17,12 +17,12 @@ use Symfony\Component\HttpKernel\Kernel;
 use WBW\Bundle\CoreBundle\DependencyInjection\Container\ContainerTrait;
 
 /**
- * Compatibility service.
+ * Symfony backward compatibility service.
  *
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Service
  */
-class CompatibilityService implements CompatibilityServiceInterface {
+class SymfonyBCService implements SymfonyBCServiceInterface {
 
     use ContainerTrait;
 

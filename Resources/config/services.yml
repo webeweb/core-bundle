@@ -10,12 +10,12 @@ services:
         public: false
         arguments: [ "@doctrine.orm.entity_manager", "@event_dispatcher" ]
 
-    WBW\Bundle\CoreBundle\Service\CompatibilityService:
+    WBW\Bundle\CoreBundle\Service\SymfonyBCService:
         alias:  "wbw.core.service.compatibility"
         public: false
 
     wbw.core.service.compatibility:
-        class:  WBW\Bundle\CoreBundle\Service\CompatibilityService
+        class:  WBW\Bundle\CoreBundle\Service\SymfonyBCService
         public: true
         arguments: [ "@service_container" ]
 

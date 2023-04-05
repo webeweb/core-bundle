@@ -11,17 +11,17 @@
 
 namespace WBW\Bundle\CoreBundle\Tests\Fixtures\Service;
 
-use WBW\Bundle\CoreBundle\Service\CompatibilityServiceTrait;
+use WBW\Bundle\CoreBundle\Service\SymfonyBCServiceTrait;
 
 /**
- * Test compatibility service trait.
+ * Test Symfony backward compatibility service trait.
  *
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Fixtures\Service
  */
-class TestCompatibilityServiceTrait {
+class TestSymfonyBCServiceTrait {
 
-    use CompatibilityServiceTrait {
-        setCompatibilityService as public;
+    use SymfonyBCServiceTrait {
+        setSymfonyBCService as public;
     }
 }

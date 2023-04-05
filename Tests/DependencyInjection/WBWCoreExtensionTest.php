@@ -28,9 +28,9 @@ use WBW\Bundle\CoreBundle\Helper\FormHelper;
 use WBW\Bundle\CoreBundle\Manager\ThemeManager;
 use WBW\Bundle\CoreBundle\Provider\JavascriptProvider;
 use WBW\Bundle\CoreBundle\Provider\SyntaxHighlighterProvider;
-use WBW\Bundle\CoreBundle\Service\CompatibilityService;
 use WBW\Bundle\CoreBundle\Service\RepositoryService;
 use WBW\Bundle\CoreBundle\Service\StatementService;
+use WBW\Bundle\CoreBundle\Service\SymfonyBCService;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser;
 use WBW\Bundle\CoreBundle\Twig\Extension\Assets\FontAwesomeTwigExtension;
@@ -208,9 +208,9 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         }
 
         // Services
-        $this->assertInstanceOf(CompatibilityService::class, $this->containerBuilder->get(CompatibilityService::SERVICE_NAME));
         $this->assertInstanceOf(RepositoryService::class, $this->containerBuilder->get(RepositoryService::SERVICE_NAME));
         $this->assertInstanceOf(StatementService::class, $this->containerBuilder->get(StatementService::SERVICE_NAME));
+        $this->assertInstanceOf(SymfonyBCService::class, $this->containerBuilder->get(SymfonyBCService::SERVICE_NAME));
         $this->assertInstanceOf(TokenGeneratorService::class, $this->containerBuilder->get(TokenGeneratorService::SERVICE_NAME));
 
         // Twig extensions

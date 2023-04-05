@@ -12,17 +12,17 @@
 namespace WBW\Bundle\CoreBundle\Tests\Service;
 
 use Throwable;
-use WBW\Bundle\CoreBundle\Service\CompatibilityService;
-use WBW\Bundle\CoreBundle\Service\CompatibilityServiceInterface;
+use WBW\Bundle\CoreBundle\Service\SymfonyBCService;
+use WBW\Bundle\CoreBundle\Service\SymfonyBCServiceInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 
 /**
- * Compatibility service test.
+ * Symfony backward compatibility service test.
  *
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Tests\Service
  */
-class CompatibilityServiceTest extends AbstractTestCase {
+class SymfonyBCServiceTest extends AbstractTestCase {
 
     /**
      * Tests getSession()
@@ -32,7 +32,7 @@ class CompatibilityServiceTest extends AbstractTestCase {
      */
     public function testGetSession(): void {
 
-        $obj = new CompatibilityService($this->containerBuilder);
+        $obj = new SymfonyBCService($this->containerBuilder);
 
         $this->assertSame($this->session, $obj->getSession());
     }
@@ -44,11 +44,11 @@ class CompatibilityServiceTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $this->assertEquals("wbw.core.service.compatibility", CompatibilityService::SERVICE_NAME);
+        $this->assertEquals("wbw.core.service.compatibility", SymfonyBCService::SERVICE_NAME);
 
-        $obj = new CompatibilityService($this->containerBuilder);
+        $obj = new SymfonyBCService($this->containerBuilder);
 
-        $this->assertInstanceOf(CompatibilityServiceInterface::class, $obj);
+        $this->assertInstanceOf(SymfonyBCServiceInterface::class, $obj);
 
         $this->assertSame($this->containerBuilder, $obj->getContainer());
     }

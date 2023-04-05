@@ -30,7 +30,7 @@ use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
 use WBW\Bundle\CoreBundle\Model\User;
 use WBW\Bundle\CoreBundle\Security\Core\User\UserHelper;
-use WBW\Bundle\CoreBundle\Service\CompatibilityService;
+use WBW\Bundle\CoreBundle\Service\SymfonyBCService;
 use WBW\Library\Symfony\Assets\NotificationInterface;
 use WBW\Library\Symfony\Assets\ToastInterface;
 use WBW\Library\Symfony\Response\DefaultJsonResponseData;
@@ -140,8 +140,8 @@ abstract class AbstractController extends BaseController {
      */
     protected function getSession(): ?SessionInterface {
 
-        /** @var CompatibilityService $service */
-        $service = $this->container->get(CompatibilityService::SERVICE_NAME);
+        /** @var SymfonyBCService $service */
+        $service = $this->container->get(SymfonyBCService::SERVICE_NAME);
 
         return null === $service ? null : $service->getSession();
     }
@@ -152,13 +152,13 @@ abstract class AbstractController extends BaseController {
     public static function getSubscribedServices(): array {
 
         return array_merge([
-            "doctrine.orm.entity_manager"      => "?" . EntityManagerInterface::class,
-            "event_dispatcher"                 => "?" . EventDispatcherInterface::class,
-            "logger"                           => "?" . LoggerInterface::class,
-            "mailer"                           => "?" . MailerInterface::class,
-            "translator"                       => "?" . TranslatorInterface::class,
-            KernelEventListener::SERVICE_NAME  => "?" . KernelEventListener::class,
-            CompatibilityService::SERVICE_NAME => "?" . CompatibilityService::class,
+            "doctrine.orm.entity_manager"     => "?" . EntityManagerInterface::class,
+            "event_dispatcher"                => "?" . EventDispatcherInterface::class,
+            "logger"                          => "?" . LoggerInterface::class,
+            "mailer"                          => "?" . MailerInterface::class,
+            "translator"                      => "?" . TranslatorInterface::class,
+            KernelEventListener::SERVICE_NAME => "?" . KernelEventListener::class,
+            SymfonyBCService::SERVICE_NAME    => "?" . SymfonyBCService::class,
         ], parent::getSubscribedServices());
     }
 

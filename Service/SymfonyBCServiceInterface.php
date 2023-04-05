@@ -15,12 +15,12 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Throwable;
 
 /**
- * Compatibility service interface.
+ * Symfony backward compatibility service interface.
  *
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\CoreBundle\Service
  */
-interface CompatibilityServiceInterface {
+interface SymfonyBCServiceInterface {
 
     /**
      * Get the session.
