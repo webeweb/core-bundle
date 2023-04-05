@@ -11,10 +11,10 @@
 
 namespace WBW\Bundle\CoreBundle\EventListener;
 
-use Symfony\Component\HttpFoundation\Session\Session;
-use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Throwable;
 use WBW\Bundle\CoreBundle\Event\ToastEvent;
-use WBW\Bundle\CoreBundle\HttpFoundation\Session\SessionTrait;
+use WBW\Bundle\CoreBundle\Service\SymfonyBCServiceInterface;
+use WBW\Bundle\CoreBundle\Service\SymfonyBCServiceTrait;
 
 /**
  * Toast event listener.
@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\HttpFoundation\Session\SessionTrait;
  */
 class ToastEventListener {
 
-    use SessionTrait;
+    use SymfonyBCServiceTrait;
 
     /**
      * Service name.
@@ -36,10 +36,10 @@ class ToastEventListener {
     /**
      * Constructor.
      *
-     * @param SessionInterface $session The session.
+     * @param SymfonyBCServiceInterface $symfonyBC The Symfony backward compatibility service.
      */
-    public function __construct(SessionInterface $session) {
-        $this->setSession($session);
+    public function __construct(SymfonyBCServiceInterface $symfonyBC) {
+        $this->setSymfonyBCService($symfonyBC);
     }
 
     /**
@@ -47,13 +47,10 @@ class ToastEventListener {
      *
      * @param ToastEvent $event The event.
      * @return ToastEvent Returns the event.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function onToast(ToastEvent $event): ToastEvent {
-
-        if (true === ($this->getSession() instanceof Session)) {
-            $this->getSession()->getFlashBag()->add($event->getToast()->getType(), $event->getToast()->getContent());
-        }
-
+        $this->getSymfonyBCService()->getSession()->getFlashBag()->add($event->getToast()->getType(), $event->getToast()->getContent());
         return $event;
     }
 }

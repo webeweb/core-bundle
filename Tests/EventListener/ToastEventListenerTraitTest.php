@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\EventListener;
 
 use WBW\Bundle\CoreBundle\EventListener\ToastEventListener;
+use WBW\Bundle\CoreBundle\Service\SymfonyBCServiceInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\EventListener\TestToastEventListenerTrait;
 
@@ -30,8 +31,11 @@ class ToastEventListenerTraitTest extends AbstractTestCase {
      */
     public function testSetToastEventListener(): void {
 
+        // Set a Symfony backward compatibility service mock.
+        $symfonyBCService = $this->getMockBuilder(SymfonyBCServiceInterface::class)->getMock();
+
         // Set a Toast event listener mock.
-        $toastEventListener = new ToastEventListener($this->session);
+        $toastEventListener = new ToastEventListener($symfonyBCService);
 
         $obj = new TestToastEventListenerTrait();
 

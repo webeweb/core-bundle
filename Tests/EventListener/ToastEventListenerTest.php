@@ -13,8 +13,10 @@ namespace WBW\Bundle\CoreBundle\Tests\EventListener;
 
 use Symfony\Component\HttpFoundation\Session\Flash\FlashBag;
 use Symfony\Component\HttpFoundation\Session\Session;
+use Throwable;
 use WBW\Bundle\CoreBundle\Event\ToastEvent;
 use WBW\Bundle\CoreBundle\EventListener\ToastEventListener;
+use WBW\Bundle\CoreBundle\Service\SymfonyBCServiceInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Library\Symfony\Assets\ToastInterface;
 
@@ -27,28 +29,42 @@ use WBW\Library\Symfony\Assets\ToastInterface;
 class ToastEventListenerTest extends AbstractTestCase {
 
     /**
+     * Symfony backward compatibility.
+     *
+     * @var SymfonyBCServiceInterface
+     */
+    private $symfonyBCService;
+
+    /**
      * {@inheritdoc}
      */
     protected function setUp(): void {
         parent::setUp();
 
-        // Set a Session mock.
-        $this->session = $this->getMockBuilder(Session::class)->getMock();
-        $this->session->expects($this->any())->method("getFlashBag")->willReturn(new FlashBag());
+        // Set a Symfony backward compatibility service mock.
+        $this->symfonyBCService = $this->getMockBuilder(SymfonyBCServiceInterface::class)->getMock();
     }
 
     /**
      * Tests onToast()
      *
      * @return void
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testOnToast(): void {
+
+        // Set a Session mock.
+        $this->session = $this->getMockBuilder(Session::class)->getMock();
+        $this->session->expects($this->any())->method("getFlashBag")->willReturn(new FlashBag());
+
+        // Set the Symfony backward compatibility service mock.
+        $this->symfonyBCService->expects($this->any())->method("getSession")->willReturn($this->session);
 
         // Set a Toast mock.
         $toast = $this->getMockBuilder(ToastInterface::class)->getMock();
         $toast->expects($this->any())->method("getType")->willReturn("type");
 
-        $obj = new ToastEventListener($this->session);
+        $obj = new ToastEventListener($this->symfonyBCService);
 
         $arg = new ToastEvent("eventName", $toast);
 
@@ -64,8 +80,8 @@ class ToastEventListenerTest extends AbstractTestCase {
 
         $this->assertEquals("wbw.core.event_listener.toast", ToastEventListener::SERVICE_NAME);
 
-        $obj = new ToastEventListener($this->session);
+        $obj = new ToastEventListener($this->symfonyBCService);
 
-        $this->assertSame($this->session, $obj->getSession());
+        $this->assertSame($this->symfonyBCService, $obj->getSymfonyBCService());
     }
 }
