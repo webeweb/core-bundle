@@ -40,7 +40,7 @@ class RepositoryServiceTest extends AbstractWebTestCase {
         parent::setUp();
 
         // Set a Repository service.
-        $this->service = static::$kernel->getContainer()->get(RepositoryService::SERVICE_NAME);
+        $this->service = static::$kernel->getContainer()->get(RepositoryService::SERVICE_NAME . ".alias");
     }
 
     /**

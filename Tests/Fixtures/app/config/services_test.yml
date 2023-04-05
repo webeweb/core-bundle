@@ -21,6 +21,18 @@ services:
         tags:
             - { name: "wbw.core.provider.stylesheet" }
 
+    wbw.core.manager.theme.alias:
+        alias:  "wbw.core.manager.theme"
+        public: true
+
+    wbw.core.service.statement.alias:
+        alias:  "wbw.core.service.statement"
+        public: true
+
+    wbw.core.service.repository.alias:
+        alias:  "wbw.core.service.repository"
+        public: true
+
     wbw.core.provider.theme.application:
         class:  WBW\Library\Symfony\Theme\DefaultApplicationThemeProvider
         public: true

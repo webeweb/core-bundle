@@ -37,7 +37,7 @@ class ThemeManagerWebTest extends AbstractWebTestCase {
      */
     public function testDependencyInjection(): void {
 
-        $obj = static::$kernel->getContainer()->get(ThemeManager::SERVICE_NAME);
+        $obj = static::$kernel->getContainer()->get(ThemeManager::SERVICE_NAME . ".alias");
 
         $this->assertInstanceOf(ApplicationThemeProviderInterface::class, $obj->getApplicationThemeProvider());
         $this->assertInstanceOf(BreadcrumbsThemeProviderInterface::class, $obj->getBreadcrumbsThemeProvider());

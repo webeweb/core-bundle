@@ -44,7 +44,7 @@ class StatementServiceTest extends AbstractWebTestCase {
         parent::setUp();
 
         // Set a Statement service.
-        $this->service = static::$kernel->getContainer()->get(StatementService::SERVICE_NAME);
+        $this->service = static::$kernel->getContainer()->get(StatementService::SERVICE_NAME . ".alias");
     }
 
     /**
