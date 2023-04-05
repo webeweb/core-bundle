@@ -41,43 +41,29 @@ class WBWCoreExtension extends Extension {
         $fileLocator = new FileLocator(__DIR__ . "/../Resources/config");
 
         $serviceLoader = new YamlFileLoader($container, $fileLocator);
+        $serviceLoader->load("colors.yml");
+        $serviceLoader->load("commands.yml");
         $serviceLoader->load("controllers.yml");
+        $serviceLoader->load("event_listeners.yml");
+        $serviceLoader->load("managers.yml");
+        $serviceLoader->load("providers.yml");
         $serviceLoader->load("services.yml");
+        $serviceLoader->load("twig.yml");
 
         /** @var ConfigurationInterface $configuration */
         $configuration = $this->getConfiguration($configs, $container);
 
         $config = $this->processConfiguration($configuration, $configs);
 
-        if (true === $config["commands"]) {
-            $serviceLoader->load("commands.yml");
-        }
-
-        if (true === $config["event_listeners"]) {
-            $serviceLoader->load("event_listeners.yml");
-        }
-
-        if (true === $config["providers"]) {
-            $serviceLoader->load("providers.yml");
-        }
-
         if (true === $config["security"]) {
             $serviceLoader->load("security.yml");
-        }
-
-        if (true === $config["twig"]) {
-            $serviceLoader->load("twig.yml");
         }
 
         if (true === $config["quote"]["worlds_wisdom"]) {
             $serviceLoader->load("quote/worlds_wisdom.yml");
         }
 
-        ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "commands");
-        ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "event_listeners");
-        ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "providers");
         ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "security");
-        ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "twig");
         ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "quote");
         ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "plugins");
         ConfigurationHelper::registerContainerParameter($container, $config, $this->getAlias(), "locales");

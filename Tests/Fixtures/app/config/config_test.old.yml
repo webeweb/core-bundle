@@ -53,11 +53,7 @@ twig:
 
 # Core configuration
 wbw_core:
-    commands:        true
-    event_listeners: true
-    providers:       true
-    security:        true
-    twig:            true
+    security: true
     quote:
         worlds_wisdom: true
     plugins:

@@ -94,11 +94,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         // Set a configs array mock.
         $this->configs = [
             WBWCoreExtension::EXTENSION_ALIAS => [
-                "commands"        => true,
-                "event_listeners" => true,
-                "providers"       => true,
-                "twig"            => true,
-                "quote"           => [],
+                "quote" => [],
             ],
         ];
 
@@ -266,101 +262,5 @@ class WBWCoreExtensionTest extends AbstractTestCase {
         $this->assertNull($obj->load($this->configs, $this->containerBuilder));
 
         $this->assertInstanceOf(YamlQuoteProvider::class, $this->containerBuilder->get(WorldsWisdomQuoteProvider::SERVICE_NAME));
-    }
-
-    /**
-     * Tests load()
-     *
-     * @return void
-     */
-    public function testLoadWithoutCommands(): void {
-
-        // Set the configs mock.
-        $this->configs[WBWCoreExtension::EXTENSION_ALIAS]["commands"] = false;
-
-        $obj = new WBWCoreExtension();
-
-        $this->assertNull($obj->load($this->configs, $this->containerBuilder));
-
-        try {
-
-            $this->containerBuilder->get(UnzipAssetsCommand::SERVICE_NAME);
-        } catch (Throwable $ex) {
-
-            $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
-            $this->assertStringContainsString(UnzipAssetsCommand::SERVICE_NAME, $ex->getMessage());
-        }
-    }
-
-    /**
-     * Tests load()
-     *
-     * @return void
-     */
-    public function testLoadWithoutEventListeners(): void {
-
-        // Set the configs mock.
-        $this->configs[WBWCoreExtension::EXTENSION_ALIAS]["event_listeners"] = false;
-
-        $obj = new WBWCoreExtension();
-
-        $this->assertNull($obj->load($this->configs, $this->containerBuilder));
-
-        try {
-
-            $this->containerBuilder->get(KernelEventListener::SERVICE_NAME);
-        } catch (Throwable $ex) {
-
-            $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
-            $this->assertStringContainsString(KernelEventListener::SERVICE_NAME, $ex->getMessage());
-        }
-    }
-
-    /**
-     * Tests load()
-     *
-     * @return void
-     */
-    public function testLoadWithoutProviders(): void {
-
-        // Set the configs mock.
-        $this->configs[WBWCoreExtension::EXTENSION_ALIAS]["providers"] = false;
-
-        $obj = new WBWCoreExtension();
-
-        $this->assertNull($obj->load($this->configs, $this->containerBuilder));
-
-        try {
-
-            $this->containerBuilder->get(RedColorProvider::SERVICE_NAME);
-        } catch (Throwable $ex) {
-
-            $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
-            $this->assertStringContainsString(RedColorProvider::SERVICE_NAME, $ex->getMessage());
-        }
-    }
-
-    /**
-     * Tests load()
-     *
-     * @return void
-     */
-    public function testLoadWithoutTwig(): void {
-
-        // Set the configs mock.
-        $this->configs[WBWCoreExtension::EXTENSION_ALIAS]["twig"] = false;
-
-        $obj = new WBWCoreExtension();
-
-        $this->assertNull($obj->load($this->configs, $this->containerBuilder));
-
-        try {
-
-            $this->containerBuilder->get(QuoteTwigExtension::SERVICE_NAME);
-        } catch (Throwable $ex) {
-
-            $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
-            $this->assertStringContainsString(QuoteTwigExtension::SERVICE_NAME, $ex->getMessage());
-        }
     }
 }
