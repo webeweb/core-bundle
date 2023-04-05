@@ -1,0 +1,37 @@
+# Resources/config/managers.yml
+services:
+
+    wbw.core.manager.color:
+        class:  WBW\Library\Symfony\Manager\ColorManager
+        public: false
+        arguments: [ "@logger" ]
+
+    wbw.core.manager.javascript:
+        class:  WBW\Library\Symfony\Manager\JavascriptManager
+        public: false
+        arguments: [ "@logger" ]
+
+    wbw.core.manager.quote:
+        class:  WBW\Library\Symfony\Manager\QuoteManager
+        public: false
+        arguments: [ "@logger" ]
+
+    wbw.core.manager.stylesheet:
+        class:  WBW\Library\Symfony\Manager\StylesheetManager
+        public: false
+        arguments: [ "@logger" ]
+
+    wbw.core.manager.theme:
+        class:  WBW\Bundle\CoreBundle\Manager\ThemeManager
+        public: false
+        arguments: [ "@logger", "@twig" ]
+        calls:
+            - [ "setApplicationThemeProvider",           [ "@?wbw.core.provider.theme.application" ] ]
+            - [ "setBreadcrumbsThemeProvider",           [ "@?wbw.core.provider.theme.breadcrumbs" ] ]
+            - [ "setHookDropdownThemeProvider",          [ "@?wbw.core.provider.theme.hook_dropdown" ] ]
+            - [ "setFooterThemeProvider",                [ "@?wbw.core.provider.theme.footer" ] ]
+            - [ "setNavigationThemeProvider",            [ "@?wbw.core.provider.theme.navigation" ] ]
+            - [ "setNotificationsDropdownThemeProvider", [ "@?wbw.core.provider.theme.notifications_dropdown" ] ]
+            - [ "setSearchThemeProvider",                [ "@?wbw.core.provider.theme.search" ] ]
+            - [ "setTasksDropdownThemeProvider",         [ "@?wbw.core.provider.theme.tasks_dropdown" ] ]
+            - [ "setUserInfoThemeProvider",              [ "@?wbw.core.provider.theme.user_info" ] ]

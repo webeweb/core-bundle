@@ -7,46 +7,12 @@ services:
 
     wbw.core.helper.form:
         class:  WBW\Bundle\CoreBundle\Helper\FormHelper
-        public: true
+        public: false
         arguments: [ "@doctrine.orm.entity_manager", "@event_dispatcher" ]
 
-    wbw.core.manager.color:
-        class:  WBW\Library\Symfony\Manager\ColorManager
-        public: true
-        arguments: [ "@logger" ]
-
-    wbw.core.manager.javascript:
-        class:  WBW\Library\Symfony\Manager\JavascriptManager
-        public: true
-        arguments: [ "@logger" ]
-
-    wbw.core.manager.quote:
-        class:  WBW\Library\Symfony\Manager\QuoteManager
-        public: true
-        arguments: [ "@logger" ]
-
-    wbw.core.manager.stylesheet:
-        class:  WBW\Library\Symfony\Manager\StylesheetManager
-        public: true
-        arguments: [ "@logger" ]
-
-    wbw.core.manager.theme:
-        class:  WBW\Bundle\CoreBundle\Manager\ThemeManager
-        public: true
-        arguments: [ "@logger", "@twig" ]
-        calls:
-            - [ "setApplicationThemeProvider",           [ "@?wbw.core.provider.theme.application" ] ]
-            - [ "setBreadcrumbsThemeProvider",           [ "@?wbw.core.provider.theme.breadcrumbs" ] ]
-            - [ "setHookDropdownThemeProvider",          [ "@?wbw.core.provider.theme.hook_dropdown" ] ]
-            - [ "setFooterThemeProvider",                [ "@?wbw.core.provider.theme.footer" ] ]
-            - [ "setNavigationThemeProvider",            [ "@?wbw.core.provider.theme.navigation" ] ]
-            - [ "setNotificationsDropdownThemeProvider", [ "@?wbw.core.provider.theme.notifications_dropdown" ] ]
-            - [ "setSearchThemeProvider",                [ "@?wbw.core.provider.theme.search" ] ]
-            - [ "setTasksDropdownThemeProvider",         [ "@?wbw.core.provider.theme.tasks_dropdown" ] ]
-            - [ "setUserInfoThemeProvider",              [ "@?wbw.core.provider.theme.user_info" ] ]
-
     WBW\Bundle\CoreBundle\Service\CompatibilityService:
-        alias: "wbw.core.service.compatibility"
+        alias:  "wbw.core.service.compatibility"
+        public: false
 
     wbw.core.service.compatibility:
         class:  WBW\Bundle\CoreBundle\Service\CompatibilityService
@@ -55,26 +21,22 @@ services:
 
     wbw.core.service.repository:
         class:  WBW\Bundle\CoreBundle\Service\RepositoryService
-        public: true
+        public: false
         calls:
             - [ "setStatementService", [ "@wbw.core.service.statement" ] ]
 
     wbw.core.service.statement:
         class:  WBW\Bundle\CoreBundle\Service\StatementService
-        public: true
+        public: false
         arguments: [ "@doctrine.orm.entity_manager" ]
 
     wbw.core.service.token_generator:
         class:  WBW\Library\Symfony\Service\TokenGeneratorService
-        public: true
-
-    wbw.core.twig.environment:
-        alias:  "twig"
-        public: true
+        public: false
 
     wbw.core.twig.extension.container:
         class:  WBW\Bundle\CoreBundle\Twig\Extension\ContainerTwigExtension
-        public: true
+        public: false
         arguments: [ "@twig", "@service_container" ]
         tags:
             - { name: "twig.extension" }
