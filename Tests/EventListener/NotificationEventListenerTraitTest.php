@@ -12,6 +12,7 @@
 namespace WBW\Bundle\CoreBundle\Tests\EventListener;
 
 use WBW\Bundle\CoreBundle\EventListener\NotificationEventListener;
+use WBW\Bundle\CoreBundle\Service\SymfonyBCServiceInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\EventListener\TestNotificationEventListenerTrait;
 
@@ -30,8 +31,11 @@ class NotificationEventListenerTraitTest extends AbstractTestCase {
      */
     public function testSetNotificationEventListener(): void {
 
+        // Set a Symfony backward compatibility service mock.
+        $symfonyBCService = $this->getMockBuilder(SymfonyBCServiceInterface::class)->getMock();
+
         // Set a Notification event listener mock.
-        $notificationEventListener = new NotificationEventListener($this->session);
+        $notificationEventListener = new NotificationEventListener($symfonyBCService);
 
         $obj = new TestNotificationEventListenerTrait();
 

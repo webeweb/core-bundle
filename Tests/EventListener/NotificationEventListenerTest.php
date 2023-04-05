@@ -13,8 +13,11 @@ namespace WBW\Bundle\CoreBundle\Tests\EventListener;
 
 use Symfony\Component\HttpFoundation\Session\Flash\FlashBag;
 use Symfony\Component\HttpFoundation\Session\Session;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Throwable;
 use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\EventListener\NotificationEventListener;
+use WBW\Bundle\CoreBundle\Service\SymfonyBCServiceInterface;
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 use WBW\Library\Symfony\Assets\NotificationInterface;
 
@@ -27,28 +30,42 @@ use WBW\Library\Symfony\Assets\NotificationInterface;
 class NotificationEventListenerTest extends AbstractTestCase {
 
     /**
+     * Symfony backward compatibility.
+     *
+     * @var SymfonyBCServiceInterface
+     */
+    private $symfonyBCService;
+
+    /**
      * {@inheritdoc}
      */
     protected function setUp(): void {
         parent::setUp();
 
-        // Set a Session mock.
-        $this->session = $this->getMockBuilder(Session::class)->getMock();
-        $this->session->expects($this->any())->method("getFlashBag")->willReturn(new FlashBag());
+        // Set a Symfony backward compatibility service mock.
+        $this->symfonyBCService = $this->getMockBuilder(SymfonyBCServiceInterface::class)->getMock();
     }
 
     /**
      * Tests onNotify()
      *
      * @return void
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testOnNotify(): void {
+
+        // Set a Session mock.
+        $this->session = $this->getMockBuilder(Session::class)->getMock();
+        $this->session->expects($this->any())->method("getFlashBag")->willReturn(new FlashBag());
+
+        // Set the Symfony backward compatibility service mock.
+        $this->symfonyBCService->expects($this->any())->method("getSession")->willReturn($this->session);
 
         // Set a Notification mock.
         $notification = $this->getMockBuilder(NotificationInterface::class)->getMock();
         $notification->expects($this->any())->method("getType")->willReturn("type");
 
-        $obj = new NotificationEventListener($this->session);
+        $obj = new NotificationEventListener($this->symfonyBCService);
 
         $arg = new NotificationEvent("eventName", $notification);
 
@@ -64,8 +81,8 @@ class NotificationEventListenerTest extends AbstractTestCase {
 
         $this->assertEquals("wbw.core.event_listener.notification", NotificationEventListener::SERVICE_NAME);
 
-        $obj = new NotificationEventListener($this->session);
+        $obj = new NotificationEventListener($this->symfonyBCService);
 
-        $this->assertSame($this->session, $obj->getSession());
+        $this->assertSame($this->symfonyBCService, $obj->getSymfonyBCService());
     }
 }
