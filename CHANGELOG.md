@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+### [3.23.0](https://github.com/webeweb/core-bundle/tree/v3.23.0) (2023-04-05)
+
+- Improve services configuration
+- Remove unneeded configuration parameters
+- Set Twig extensions as private
+
 ### [3.22.4](https://github.com/webeweb/core-bundle/tree/v3.22.4) (2023-03-30)
 
 - Fix translations
