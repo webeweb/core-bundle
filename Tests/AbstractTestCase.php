@@ -241,6 +241,8 @@ abstract class AbstractTestCase extends TestCase {
 
         // Set a Session mock.
         $this->session = $this->getMockBuilder(SessionInterface::class)->getMock();
+
+        // TODO: Remove when dropping support for Symfony 5.2
         if (50300 <= Kernel::VERSION_ID) {
             $this->requestStack->expects($this->any())->method("getSession")->willReturn($this->session);
         }

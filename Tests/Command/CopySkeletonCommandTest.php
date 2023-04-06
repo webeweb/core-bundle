@@ -106,7 +106,7 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
             return __DIR__ . "/../Fixtures/app";
         };
 
-        // Set the Kernel mock.
+        // TODO: Remove when dropping support for Symfony 4
         if (5 <= Kernel::MAJOR_VERSION) {
             $this->kernel->expects($this->any())->method("getProjectDir")->willReturnCallback($getProjectDir);
         } else {
