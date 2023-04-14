@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [3.25.0](https://github.com/webeweb/core-bundle/tree/v3.25.0) (2023-04-14)
+
+- Update Chart.js to 4.2.1
+
 ### [3.24.0](https://github.com/webeweb/core-bundle/tree/v3.24.0) (2023-04-05)
 
 - Improve Symfony backward compatibility
