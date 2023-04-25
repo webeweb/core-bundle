@@ -77,7 +77,7 @@ class FormHelper {
         $notification = NotificationFactory::newWarningNotification($notification);
         $event        = new NotificationEvent($eventName, $notification);
 
-        EventDispatcherHelper::dispatch($this->getEventDispatcher(), $eventName, $event);
+        EventDispatcherHelper::dispatch($this->getEventDispatcher(), $event, $eventName);
 
         throw new RedirectResponseException($redirectUrl, null);
     }

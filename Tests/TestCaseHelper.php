@@ -29,7 +29,7 @@ class TestCaseHelper {
      */
     public static function getEventDispatcherDispatchFunction(): callable {
 
-        return function(Event $event, string $eventName): Event {
+        return function(Event $event, string $eventName = null): Event {
             return $event;
         };
     }

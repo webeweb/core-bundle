@@ -60,7 +60,7 @@ abstract class AbstractController extends BaseController {
             "_event"      => get_class($event),
         ]);
 
-        return EventDispatcherHelper::dispatch($this->getEventDispatcher(), $eventName, $event);
+        return EventDispatcherHelper::dispatch($this->getEventDispatcher(), $event, $eventName);
     }
 
     /**

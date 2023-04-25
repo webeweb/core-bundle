@@ -26,11 +26,11 @@ class EventDispatcherHelper {
      * Dispatch an event.
      *
      * @param EventDispatcherInterface|null $eventDispatcher The event dispatcher.
-     * @param string $eventName The event name.
      * @param Event $event The event.
+     * @param string|null $eventName The event name.
      * @return Event Returns the event.
      */
-    public static function dispatch(?EventDispatcherInterface $eventDispatcher, string $eventName, Event $event): Event {
+    public static function dispatch(?EventDispatcherInterface $eventDispatcher, Event $event, string $eventName = null): Event {
         return null === $eventDispatcher ? $event : $eventDispatcher->dispatch($event, $eventName);
     }
 }
