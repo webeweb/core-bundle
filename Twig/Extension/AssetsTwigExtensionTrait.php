@@ -41,7 +41,7 @@ trait AssetsTwigExtensionTrait {
      * @param AssetsTwigExtension|null $assetsTwigExtension The assets Twig extension.
      * @return self Returns this instance.
      */
-    protected function setAssetsTwigExtension(?AssetsTwigExtension $assetsTwigExtension): ?self {
+    protected function setAssetsTwigExtension(?AssetsTwigExtension $assetsTwigExtension): self {
         $this->assetsTwigExtension = $assetsTwigExtension;
         return $this;
     }

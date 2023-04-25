@@ -43,7 +43,7 @@ trait UserTrait {
      * @param UserInterface|null $user The user.
      * @return self Returns this instance.
      */
-    protected function setUser(?UserInterface $user): ?self {
+    protected function setUser(?UserInterface $user): self {
         $this->user = $user;
         return $this;
     }
