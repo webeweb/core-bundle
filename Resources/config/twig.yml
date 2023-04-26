@@ -53,6 +53,13 @@ services:
         tags:
             - { name: "twig.extension" }
 
+    wbw.core.twig.extension.container:
+        class:  WBW\Bundle\CoreBundle\Twig\Extension\ContainerTwigExtension
+        public: false
+        arguments: [ "@twig", "@service_container" ]
+        tags:
+            - { name: "twig.extension" }
+
     wbw.core.twig.extension.quote:
         class:  WBW\Bundle\CoreBundle\Twig\Extension\QuoteTwigExtension
         public: false

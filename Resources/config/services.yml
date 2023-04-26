@@ -33,10 +33,3 @@ services:
     wbw.core.service.token_generator:
         class:  WBW\Library\Symfony\Service\TokenGeneratorService
         public: false
-
-    wbw.core.twig.extension.container:
-        class:  WBW\Bundle\CoreBundle\Twig\Extension\ContainerTwigExtension
-        public: false
-        arguments: [ "@twig", "@service_container" ]
-        tags:
-            - { name: "twig.extension" }
