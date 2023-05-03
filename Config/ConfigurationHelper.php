@@ -55,7 +55,7 @@ class ConfigurationHelper {
     }
 
     /**
-     * Creates a tree builder.
+     * Create a tree builder.
      *
      * @param string $nodeName The node name.
      * @return TreeBuilder Returns the tree builder.

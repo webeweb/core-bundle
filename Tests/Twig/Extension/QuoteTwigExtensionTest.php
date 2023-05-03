@@ -50,7 +50,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -78,7 +78,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests quoteAuthorFunction()
+     * Test quoteAuthorFunction()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -91,7 +91,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests quoteAuthorFunction()
+     * Test quoteAuthorFunction()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -104,7 +104,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests quoteContentFunction()
+     * Test quoteContentFunction()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -117,7 +117,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests quoteContentFunction()
+     * Test quoteContentFunction()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -130,7 +130,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests quoteFunction()
+     * Test quoteFunction()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -147,7 +147,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests quoteFunction()
+     * Test quoteFunction()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -160,7 +160,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests quoteFunction()
+     * Test quoteFunction()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -173,7 +173,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

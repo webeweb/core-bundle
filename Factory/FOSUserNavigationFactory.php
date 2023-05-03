@@ -23,7 +23,7 @@ use WBW\Library\Symfony\Assets\NavigationNodeInterface;
 class FOSUserNavigationFactory {
 
     /**
-     * Creates the FOSUser breadcrumb nodes with Font Awesome icons.
+     * Create the FOSUser breadcrumb nodes with Font Awesome icons.
      *
      * @return BreadcrumbNode[] Returns the FOSUser breadcrumb nodes.
      */
@@ -37,7 +37,7 @@ class FOSUserNavigationFactory {
     }
 
     /**
-     * Creates the FOSUser breadcrumb nodes with Material Design Iconic Font icons.
+     * Create the FOSUser breadcrumb nodes with Material Design Iconic Font icons.
      *
      * @return BreadcrumbNode[] Returns the FOSUser breadcrumb nodes.
      */

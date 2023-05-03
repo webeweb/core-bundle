@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Assets\MaterialDesignColorPaletteTwigEx
 class MaterialDesignColorPaletteTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setMaterialDesignColorPaletteTwigExtension()
+     * Test setMaterialDesignColorPaletteTwigExtension()
      *
      * @return void
      */

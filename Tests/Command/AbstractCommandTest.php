@@ -26,7 +26,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Command\TestAbstractCommand;
 class AbstractCommandTest extends AbstractCommandTestCase {
 
     /**
-     * Tests displayHeader()
+     * Test displayHeader()
      *
      * @return void
      */
@@ -38,7 +38,7 @@ class AbstractCommandTest extends AbstractCommandTestCase {
     }
 
     /**
-     * Tests displayTitle()
+     * Test displayTitle()
      *
      * @return void
      */
@@ -50,7 +50,7 @@ class AbstractCommandTest extends AbstractCommandTestCase {
     }
 
     /**
-     * Tests getCheckbox()
+     * Test getCheckbox()
      *
      * @return void
      */
@@ -71,7 +71,7 @@ class AbstractCommandTest extends AbstractCommandTestCase {
     }
 
     /**
-     * Tests getKernel()
+     * Test getKernel()
      *
      * @return void
      */
@@ -92,7 +92,7 @@ class AbstractCommandTest extends AbstractCommandTestCase {
     }
 
     /**
-     * Tests newStyle()
+     * Test newStyle()
      *
      * @return void
      */

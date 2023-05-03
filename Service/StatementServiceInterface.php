@@ -33,7 +33,7 @@ interface StatementServiceInterface {
     const QUERY_SEPARATOR = '/\n\-{2}\ =+\n/';
 
     /**
-     * Executes the queries.
+     * Execute the queries.
      *
      * @param string $sql The SQL.
      * @param array $values The values.
@@ -44,7 +44,7 @@ interface StatementServiceInterface {
     public function executeQueries(string $sql, array $values): array;
 
     /**
-     * Executes the queries.
+     * Execute the queries.
      *
      * @param string $filename The filename.
      * @param array $values The values.
@@ -56,7 +56,7 @@ interface StatementServiceInterface {
     public function executeQueriesFile(string $filename, array $values): array;
 
     /**
-     * Executes a query.
+     * Execute a query.
      *
      * @param string $sql The SQL.
      * @param array $values The values.
@@ -67,7 +67,7 @@ interface StatementServiceInterface {
     public function executeQuery(string $sql, array $values): Result;
 
     /**
-     * Executes a query.
+     * Execute a query.
      *
      * @param string $filename The filename.
      * @param array $values The values.
@@ -79,7 +79,7 @@ interface StatementServiceInterface {
     public function executeQueryFile(string $filename, array $values): Result;
 
     /**
-     * Executes a statement.
+     * Execute a statement.
      *
      * @param string $sql The SQL.
      * @param array $values The values.
@@ -90,7 +90,7 @@ interface StatementServiceInterface {
     public function executeStatement(string $sql, array $values): int;
 
     /**
-     * Executes a statement.
+     * Execute a statement.
      *
      * @param string $filename The filename.
      * @param array $values The values.
@@ -102,7 +102,7 @@ interface StatementServiceInterface {
     public function executeStatementFile(string $filename, array $values): int;
 
     /**
-     * Executes the statements.
+     * Execute the statements.
      *
      * @param string $sql The SQL.
      * @param array $values The values.
@@ -113,7 +113,7 @@ interface StatementServiceInterface {
     public function executeStatements(string $sql, array $values): array;
 
     /**
-     * Executes the statements.
+     * Execute the statements.
      *
      * @param string $filename The filename.
      * @param array $values The values.
@@ -132,7 +132,7 @@ interface StatementServiceInterface {
     public function getEntityManager(): ?EntityManagerInterface;
 
     /**
-     * Prepares a statement.
+     * Prepare a statement.
      *
      * @param string $sql The SQL.
      * @param array $values The values.
@@ -142,7 +142,7 @@ interface StatementServiceInterface {
     public function prepareStatement(string $sql, array $values): Statement;
 
     /**
-     * Reads a statement file.
+     * Read a statement file.
      *
      * @param string $filename The filename.
      * @return string Returns the statement.

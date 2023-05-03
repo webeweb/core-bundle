@@ -51,7 +51,7 @@ class AssetsTwigExtension extends AbstractTwigExtension {
     protected $publicDirectory;
 
     /**
-     * Determines if an asset exists.
+     * Determine if an asset exists.
      *
      * @param string|null $filename The filename.
      * @return bool|null Returns true in case of success, false otherwise.
@@ -66,7 +66,7 @@ class AssetsTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a Google tag manager.
+     * Display a Google tag manager.
      *
      * @param string|null $id The id.
      * @return string|null Returns the Google tag manager.
@@ -83,7 +83,7 @@ class AssetsTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays an image.
+     * Display an image.
      *
      * @param array $args The arguments.
      * @return string Returns the image.
@@ -105,7 +105,7 @@ class AssetsTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays an icon.
+     * Display an icon.
      *
      * @param string|null $name The name.
      * @param string|null $style The style.
@@ -172,7 +172,7 @@ class AssetsTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a script.
+     * Display a script.
      *
      * @param string $content The content.
      * @return string Returns a script.
@@ -189,7 +189,7 @@ class AssetsTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a style.
+     * Display a style.
      *
      * @param string $content The content.
      * @return string Returns a style.
@@ -206,7 +206,7 @@ class AssetsTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a rgba().
+     * Display a rgba().
      *
      * @param string|null $color The hexadecimal color.
      * @param float $alpha The alpha channel.

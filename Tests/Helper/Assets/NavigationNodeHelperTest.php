@@ -43,7 +43,7 @@ class NavigationNodeHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests activeTree()
+     * Test activeTree()
      *
      * @return void
      */
@@ -76,7 +76,7 @@ class NavigationNodeHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getBreadcrumbs()
+     * Test getBreadcrumbs()
      *
      * @return void
      */

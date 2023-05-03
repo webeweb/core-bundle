@@ -24,11 +24,11 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Mailer\TestMailerTrait;
 class MailerTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setSwiftMailer()
+     * Test setMailer()
      *
      * @return void
      */
-    public function testSetSwiftMailer(): void {
+    public function testSetMailer(): void {
 
         // Set a Mailer mock.
         $mailer = $this->getMockBuilder(MailerInterface::class)->getMock();

@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Service\TestSymfonyBCServiceTrait;
 class SymfonyBCServiceTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setSymfonyBCService()
+     * Test setSymfonyBCService()
      *
      * @return void
      */

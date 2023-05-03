@@ -53,7 +53,7 @@ class JavascriptProviderCompilerPassTest extends AbstractTestCase {
     }
 
     /**
-     * Tests process()
+     * Test process()
      *
      * @return void
      */

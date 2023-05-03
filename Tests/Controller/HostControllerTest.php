@@ -25,7 +25,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
 class HostControllerTest extends AbstractWebTestCase {
 
     /**
-     * Tests cpuAction()
+     * Test cpuAction()
      *
      * @return void
      */
@@ -62,7 +62,7 @@ class HostControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests hardDisksAction()
+     * Test hardDisksAction()
      *
      * @return void
      */
@@ -98,7 +98,7 @@ class HostControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests memoryAction()
+     * Test memoryAction()
      *
      * @return void
      */
@@ -132,7 +132,7 @@ class HostControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests retrieveInformationDatabase()
+     * Test retrieveInformationDatabase()
      *
      * @return void
      */
@@ -153,7 +153,7 @@ class HostControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests retrieveInformationServer()
+     * Test retrieveInformationServer()
      *
      * @return void
      */
@@ -177,7 +177,7 @@ class HostControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

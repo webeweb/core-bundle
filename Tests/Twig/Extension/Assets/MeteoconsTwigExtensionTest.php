@@ -26,7 +26,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Assets\MeteoconsTwigExtension;
 class MeteoconsTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests getFilters()
+     * Test getFilters()
      *
      * @return void
      */
@@ -39,7 +39,7 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -59,7 +59,7 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests meteoconsIconFunction()
+     * Test meteoconsIconFunction()
      *
      * @return void
      */
@@ -77,7 +77,7 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests meteoconsIconFunction()
+     * Test meteoconsIconFunction()
      *
      * @return void
      */
@@ -94,7 +94,7 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests meteoconsIconFunction()
+     * Test meteoconsIconFunction()
      *
      * @return void
      */
@@ -111,7 +111,7 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests meteoconsIconFunction()
+     * Test meteoconsIconFunction()
      *
      * @return void
      */
@@ -126,7 +126,7 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderIcon()
+     * Test renderIcon()
      *
      * @return void
      */
@@ -140,7 +140,7 @@ class MeteoconsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

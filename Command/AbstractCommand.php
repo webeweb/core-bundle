@@ -29,7 +29,7 @@ use WBW\Bundle\CoreBundle\Console\ConsoleHelper;
 abstract class AbstractCommand extends Command {
 
     /**
-     * Displays the header.
+     * Display the header.
      *
      * @param StyleInterface $io The I/O.
      * @param string $header The header.
@@ -41,7 +41,7 @@ abstract class AbstractCommand extends Command {
     }
 
     /**
-     * Displays the title.
+     * Display the title.
      *
      * @param StyleInterface $io The I/O.
      * @param string $title The title.

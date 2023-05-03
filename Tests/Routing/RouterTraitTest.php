@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Routing\TestRouterTrait;
 class RouterTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setRouter()
+     * Test setRouter()
      *
      * @return void
      */

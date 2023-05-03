@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Assets\FontAwesomeTwigExtension;
 class FontAwesomeTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setFontAwesomeTwigExtension()
+     * Test setFontAwesomeTwigExtension()
      *
      * @return void
      */

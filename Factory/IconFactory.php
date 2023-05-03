@@ -26,7 +26,7 @@ use WBW\Library\Types\Helper\ArrayHelper;
 class IconFactory {
 
     /**
-     * Creates a Font Awesome icon.
+     * Create a Font Awesome icon.
      *
      * @return FontAwesomeIconInterface Returns the Font Awesome icon.
      */
@@ -35,7 +35,7 @@ class IconFactory {
     }
 
     /**
-     * Creates a Material Design Iconic Font icon.
+     * Create a Material Design Iconic Font icon.
      *
      * @return MaterialDesignIconicFontIconInterface Returns the Material Design Iconic Font icon.
      */
@@ -44,7 +44,7 @@ class IconFactory {
     }
 
     /**
-     * Parses a Font Awesome icon.
+     * Parse a Font Awesome icon.
      *
      * @param array $args The arguments.
      * @return FontAwesomeIconInterface Returns the parsed Font Awesome icon.
@@ -67,7 +67,7 @@ class IconFactory {
     }
 
     /**
-     * Parses a Material Design Iconic Font icon.
+     * Parse a Material Design Iconic Font icon.
      *
      * @param array $args The arguments.
      * @return MaterialDesignIconicFontIconInterface Returns the parsed Material Design Iconic Font icon.

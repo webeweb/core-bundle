@@ -57,7 +57,7 @@ class AbstractControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests getContainer()
+     * Test getContainer()
      *
      * @return void
      */
@@ -70,7 +70,7 @@ class AbstractControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests getEntityManager()
+     * Test getEntityManager()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -84,7 +84,7 @@ class AbstractControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests getEventDispatcher()
+     * Test getEventDispatcher()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -98,7 +98,7 @@ class AbstractControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests getKernelEventListener()
+     * Test getKernelEventListener()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -112,7 +112,7 @@ class AbstractControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests getLogger()
+     * Test getLogger()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -126,7 +126,7 @@ class AbstractControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests getMailer()
+     * Test getMailer()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -140,7 +140,7 @@ class AbstractControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests getRouter()
+     * Test getRouter()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -154,7 +154,7 @@ class AbstractControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests getSession()
+     * Test getSession()
      *
      * @return void
      */
@@ -174,7 +174,7 @@ class AbstractControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests getTranslator()
+     * Test getTranslator()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -188,7 +188,7 @@ class AbstractControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests getTwig()
+     * Test getTwig()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -202,7 +202,7 @@ class AbstractControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests hasRoleOrRedirect()
+     * Test hasRoleOrRedirect()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -223,7 +223,7 @@ class AbstractControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests newDefaultJsonResponseData()
+     * Test newDefaultJsonResponseData()
      *
      * @return void
      */
@@ -239,7 +239,7 @@ class AbstractControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests notify()
+     * Test notify()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -261,7 +261,7 @@ class AbstractControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests toast()
+     * Test toast()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -283,7 +283,7 @@ class AbstractControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests translate()
+     * Test translate()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.

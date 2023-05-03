@@ -26,7 +26,7 @@ use WBW\Library\Symfony\Assets\NavigationNodeInterface;
 class AbstractTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests coreHtmlElement()
+     * Test coreHtmlElement()
      *
      * @return void
      */
@@ -41,7 +41,7 @@ class AbstractTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFilters()
+     * Test getFilters()
      *
      * @return void
      */
@@ -54,7 +54,7 @@ class AbstractTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

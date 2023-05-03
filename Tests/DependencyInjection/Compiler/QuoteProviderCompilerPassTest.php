@@ -52,7 +52,7 @@ class QuoteProviderCompilerPassTest extends AbstractTestCase {
     }
 
     /**
-     * Tests process()
+     * Test process()
      *
      * @return void
      */

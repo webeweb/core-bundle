@@ -29,7 +29,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\StringTwigExtension;
 class StringTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests dateFormat()
+     * Test dateFormat()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -44,7 +44,7 @@ class StringTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFilters()
+     * Test getFilters()
      *
      * @return void
      */
@@ -114,7 +114,7 @@ class StringTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -184,7 +184,7 @@ class StringTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests htmlEntityDecode()
+     * Test htmlEntityDecode()
      *
      * @return void
      */
@@ -197,7 +197,7 @@ class StringTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests htmlEntityEncode()
+     * Test htmlEntityEncode()
      *
      * @return void
      */
@@ -210,7 +210,7 @@ class StringTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests jsonDecode()
+     * Test jsonDecode()
      *
      * @return void
      */
@@ -223,7 +223,7 @@ class StringTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests md5()
+     * Test md5()
      *
      * @return void
      */
@@ -236,7 +236,7 @@ class StringTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the stringExtractUpperCase() method
+     * Test the stringExtractUpperCase() method
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -251,7 +251,7 @@ class StringTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the stringFormat() method
+     * Test the stringFormat() method
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -267,7 +267,7 @@ class StringTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the stringHumanReadable() method
+     * Test the stringHumanReadable() method
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -281,7 +281,7 @@ class StringTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the stringLowerCamelCase() method
+     * Test the stringLowerCamelCase() method
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -295,7 +295,7 @@ class StringTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the stringSnakeCase() method
+     * Test the stringSnakeCase() method
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -310,7 +310,7 @@ class StringTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the stringUpperCamelCase() method
+     * Test the stringUpperCamelCase() method
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -324,7 +324,7 @@ class StringTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

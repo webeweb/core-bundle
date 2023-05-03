@@ -68,7 +68,7 @@ abstract class AbstractDateTimeDataTransformer implements DataTransformerInterfa
     }
 
     /**
-     * Creates the date/timezone.
+     * Create the date/timezone.
      *
      * @return DateTimeZone|null Returns the date/timezone.
      */

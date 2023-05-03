@@ -26,7 +26,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Form\DataTransformer\TestDateTimeDataTr
 class AbstractDateTimeDataTransformerTest extends AbstractTestCase {
 
     /**
-     * Tests newDateTimeZone()
+     * Test newDateTimeZone()
      *
      * @return void
      */
@@ -39,7 +39,7 @@ class AbstractDateTimeDataTransformerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newDateTimeZone()
+     * Test newDateTimeZone()
      *
      * @return void
      */
@@ -51,7 +51,7 @@ class AbstractDateTimeDataTransformerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests reverseTransform()
+     * Test reverseTransform()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -73,7 +73,7 @@ class AbstractDateTimeDataTransformerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setFormat()
+     * Test setFormat()
      *
      * @return void
      */
@@ -86,7 +86,7 @@ class AbstractDateTimeDataTransformerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setTimezone()
+     * Test setTimezone()
      *
      * @return void
      */
@@ -99,7 +99,7 @@ class AbstractDateTimeDataTransformerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests transform()
+     * Test transform()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -119,7 +119,7 @@ class AbstractDateTimeDataTransformerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

@@ -96,7 +96,7 @@ class StringTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Decodes HTML entities.
+     * Decode HTML entities.
      *
      * @param string|null $string The string.
      * @return string|null Returns the decoded HTML entities.
@@ -111,7 +111,7 @@ class StringTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Encodes HTML entities.
+     * Encode HTML entities.
      *
      * @param string|null $string The string.
      * @return string|null Returns the encoded HTML entities.
@@ -126,7 +126,7 @@ class StringTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Decodes a JSON string.
+     * Decode a JSON string.
      *
      * @param string|null $string The string.
      * @return array|null Returns the decoded JSON string.
@@ -156,7 +156,7 @@ class StringTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays the extracted upper case letters.
+     * Display the extracted upper case letters.
      *
      * @param string|null $str The string.
      * @param bool $lower Lower case ?
@@ -167,7 +167,7 @@ class StringTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a formatted string.
+     * Display a formatted string.
      *
      * @param string|null $string The string.
      * @param string|null $format The format.
@@ -178,7 +178,7 @@ class StringTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays an human readable string.
+     * Display an human readable string.
      *
      * @param string|null $str The string.
      * @return string|null Returns the human readable string.
@@ -188,7 +188,7 @@ class StringTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a lower camel case string.
+     * Display a lower camel case string.
      *
      * @param string|null $str The string.
      * @return string|null Returns the lower camel case string.
@@ -198,7 +198,7 @@ class StringTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a snake case string.
+     * Display a snake case string.
      *
      * @param string|null $str The string.
      * @param string $sep The separator.
@@ -209,7 +209,7 @@ class StringTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays an upper camel case string.
+     * Display an upper camel case string.
      *
      * @param string|null $str The string.
      * @return string|null Returns the upper camel case string.

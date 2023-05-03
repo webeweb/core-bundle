@@ -25,7 +25,7 @@ use WBW\Library\Symfony\Manager\QuoteManager;
 class QuoteTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setQuoteTwigExtension()
+     * Test setQuoteTwigExtension()
      *
      * @return void
      */

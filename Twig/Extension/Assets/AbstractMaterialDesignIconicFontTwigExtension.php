@@ -25,7 +25,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
 abstract class AbstractMaterialDesignIconicFontTwigExtension extends AbstractTwigExtension {
 
     /**
-     * Displays a Material Design Iconic Font icon.
+     * Display a Material Design Iconic Font icon.
      *
      * @param MaterialDesignIconicFontIconInterface $icon The icon.
      * @return string Returns the Material Design Iconic Font icon.
@@ -51,7 +51,7 @@ abstract class AbstractMaterialDesignIconicFontTwigExtension extends AbstractTwi
     }
 
     /**
-     * Displays a Material Design Iconic Font list.
+     * Display a Material Design Iconic Font list.
      *
      * @param array|string $items The items.
      * @return string Returns the Material Design Iconic Font list.
@@ -64,7 +64,7 @@ abstract class AbstractMaterialDesignIconicFontTwigExtension extends AbstractTwi
     }
 
     /**
-     * Displays a Material Design Iconic Font list icon.
+     * Display a Material Design Iconic Font list icon.
      *
      * @param string|null $icon The icon.
      * @param string|null $content The content.

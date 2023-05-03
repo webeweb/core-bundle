@@ -25,7 +25,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
 class UnzipAssetsCommandWebTest extends AbstractWebTestCase {
 
     /**
-     * Tests execute()
+     * Test execute()
      *
      * @return void
      */

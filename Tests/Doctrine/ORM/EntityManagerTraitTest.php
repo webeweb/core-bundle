@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Doctrine\ORM\TestEntityManagerTrait;
 class EntityManagerTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setEntityManager()
+     * Test setEntityManager()
      *
      * @return void
      */

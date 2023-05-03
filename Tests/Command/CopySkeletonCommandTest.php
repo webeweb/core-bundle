@@ -29,7 +29,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Command\TestCopySkeletonCommand;
 class CopySkeletonCommandTest extends AbstractCommandTestCase {
 
     /**
-     * Tests displayFooter()
+     * Test displayFooter()
      *
      * @return void
      */
@@ -41,7 +41,7 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
     }
 
     /**
-     * Tests displayFooter()
+     * Test displayFooter()
      *
      * @return void
      */
@@ -53,7 +53,7 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
     }
 
     /**
-     * Tests displayFooter()
+     * Test displayFooter()
      *
      * @return void
      */
@@ -65,7 +65,7 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
     }
 
     /**
-     * Tests displayResult()
+     * Test displayResult()
      *
      * @return void
      */
@@ -78,7 +78,7 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
     }
 
     /**
-     * Tests displayResult()
+     * Test displayResult()
      *
      * @return void
      */
@@ -95,7 +95,7 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
     }
 
     /**
-     * Tests getResourcesDirectory()
+     * Test getResourcesDirectory()
      *
      * @return void
      */
@@ -128,7 +128,7 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
     }
 
     /**
-     * Tests getResourcesDirectory()
+     * Test getResourcesDirectory()
      *
      * @return void
      */
@@ -155,7 +155,7 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

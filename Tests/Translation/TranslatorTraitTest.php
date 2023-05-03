@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Translation\TestTranslatorTrait;
 class TranslatorTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setTranslator()
+     * Test setTranslator()
      *
      * @return void
      */

@@ -52,7 +52,7 @@ abstract class AbstractTwigExtension extends AbstractExtension {
     }
 
     /**
-     * Displays an HTML element.
+     * Display an HTML element.
      *
      * @param string $element The object.
      * @param string|null $content The content.

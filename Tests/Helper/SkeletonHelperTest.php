@@ -61,7 +61,7 @@ class SkeletonHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests copySkeleton()
+     * Test copySkeleton()
      *
      * @return void
      */
@@ -76,7 +76,7 @@ class SkeletonHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests listSkeleton()
+     * Test listSkeleton()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -106,7 +106,7 @@ class SkeletonHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests listSkeleton()
+     * Test listSkeleton()
      *
      * @return void
      */

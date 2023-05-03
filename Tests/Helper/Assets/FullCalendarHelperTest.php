@@ -45,7 +45,7 @@ class FullCalendarHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseEndDateTime()
+     * Test parseEndDateTime()
      *
      * @return void
      */
@@ -58,7 +58,7 @@ class FullCalendarHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parseStartDateTime()
+     * Test parseStartDateTime()
      *
      * @return void
      */

@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\StringTwigExtension;
 class StringTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setStringTwigExtension()
+     * Test setStringTwigExtension()
      *
      * @return void
      */

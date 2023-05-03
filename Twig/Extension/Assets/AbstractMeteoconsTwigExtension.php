@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
 abstract class AbstractMeteoconsTwigExtension extends AbstractTwigExtension {
 
     /**
-     * Displays a Meteocons icon.
+     * Display a Meteocons icon.
      *
      * @param string $name The name.
      * @param string|null $style The style.

@@ -80,7 +80,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
     }
 
     /**
-     * Enumerates the borders.
+     * Enumerate the borders.
      *
      * @return string[] Returns the borders enumeration.
      */
@@ -93,7 +93,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
     }
 
     /**
-     * Enumerates the flips.
+     * Enumerate the flips.
      *
      * @return string[] Returns the flips enumeration.
      */
@@ -106,7 +106,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
     }
 
     /**
-     * Enumerates the pulls.
+     * Enumerate the pulls.
      *
      * @return string[] Returns the pulls enumeration.
      */
@@ -119,7 +119,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
     }
 
     /**
-     * Enumerates the rotates.
+     * Enumerate the rotates.
      *
      * @return string[] Returns the rotates enumeration.
      */
@@ -133,7 +133,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
     }
 
     /**
-     * Enumerates the sizes.
+     * Enumerate the sizes.
      *
      * @return string[] Returns the sizes enumeration.
      */
@@ -149,7 +149,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
     }
 
     /**
-     * Enumerates the spins.
+     * Enumerate the spins.
      *
      * @return string[] Returns the spins enumeration.
      */

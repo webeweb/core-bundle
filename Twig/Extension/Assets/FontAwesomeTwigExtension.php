@@ -32,7 +32,7 @@ class FontAwesomeTwigExtension extends AbstractFontAwesomeTwigExtension implemen
     const SERVICE_NAME = "wbw.core.twig.extension.assets.font_awesome";
 
     /**
-     * Displays a Font Awesome icon.
+     * Display a Font Awesome icon.
      *
      * @param array $args The arguments.
      * @return string Returns the Font Awesome icon.
@@ -42,7 +42,7 @@ class FontAwesomeTwigExtension extends AbstractFontAwesomeTwigExtension implemen
     }
 
     /**
-     * Displays a Font Awesome list.
+     * Display a Font Awesome list.
      *
      * @param array|string $items The items.
      * @return string Returns the Font Awesome list.
@@ -52,7 +52,7 @@ class FontAwesomeTwigExtension extends AbstractFontAwesomeTwigExtension implemen
     }
 
     /**
-     * Displays a Font Awesome list icon.
+     * Display a Font Awesome list icon.
      *
      * @param string $icon The icon.
      * @param string|null $content The content.

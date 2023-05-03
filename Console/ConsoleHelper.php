@@ -60,7 +60,7 @@ EOT;
     }
 
     /**
-     * Creates a Symfony style.
+     * Create a Symfony style.
      *
      * @param InputInterface $input The input.
      * @param OutputInterface $output The output.

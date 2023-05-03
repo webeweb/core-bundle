@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\DependencyInjection\Container\TestConta
 class ContainerTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setContainer()
+     * Test setContainer()
      *
      * @return void
      */

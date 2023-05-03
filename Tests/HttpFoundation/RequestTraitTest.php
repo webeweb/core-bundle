@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\HttpFoundation\TestRequestTrait;
 class RequestTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setRequest()
+     * Test setRequest()
      *
      * @return void
      */

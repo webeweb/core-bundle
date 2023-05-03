@@ -27,7 +27,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Assets\MaterialDesignIconicFontTwigExte
 class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests getFilters()
+     * Test getFilters()
      *
      * @return void
      */
@@ -62,7 +62,7 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -87,7 +87,7 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests materialDesignIconicFontIconFunction()
+     * Test materialDesignIconicFontIconFunction()
      *
      * @return void
      */
@@ -112,7 +112,7 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests materialDesignIconicFontIconFunction()
+     * Test materialDesignIconicFontIconFunction()
      *
      * @return void
      */
@@ -127,7 +127,7 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests materialDesignIconicFontListFilter()
+     * Test materialDesignIconicFontListFilter()
      *
      * @return void
      */
@@ -142,7 +142,7 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests materialDesignIconicFontListIconFilter()
+     * Test materialDesignIconicFontListIconFilter()
      *
      * @return void
      */
@@ -157,7 +157,7 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests materialDesignIconicFontListIconFilter()
+     * Test materialDesignIconicFontListIconFilter()
      *
      * @return void
      */
@@ -172,7 +172,7 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderIcon()
+     * Test renderIcon()
      *
      * @return void
      */
@@ -186,7 +186,7 @@ class MaterialDesignIconicFontTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

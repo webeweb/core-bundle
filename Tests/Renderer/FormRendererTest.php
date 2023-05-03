@@ -26,7 +26,7 @@ use WBW\Library\Symfony\Assets\ChoiceLabelInterface;
 class FormRendererTest extends AbstractTestCase {
 
     /**
-     * Tests renderOption()
+     * Test renderOption()
      *
      * @return void
      */
@@ -36,7 +36,7 @@ class FormRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderOption()
+     * Test renderOption()
      *
      * @return void
      */
@@ -50,7 +50,7 @@ class FormRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderOption()
+     * Test renderOption()
      *
      * @return void
      */
@@ -64,7 +64,7 @@ class FormRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderOption()
+     * Test renderOption()
      *
      * @return void
      */
@@ -74,7 +74,7 @@ class FormRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderOption()
+     * Test renderOption()
      *
      * @return void
      */

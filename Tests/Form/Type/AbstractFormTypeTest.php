@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Form\Type\TestFormType;
 class AbstractFormTypeTest extends AbstractTestCase {
 
     /**
-     * Tests getBlockPrefix()
+     * Test getBlockPrefix()
      *
      * @erturn void
      */

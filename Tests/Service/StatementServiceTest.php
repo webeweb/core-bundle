@@ -57,7 +57,7 @@ class StatementServiceTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests executeQueries()
+     * Test executeQueries()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -81,7 +81,7 @@ class StatementServiceTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests executeQueriesFile()
+     * Test executeQueriesFile()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -104,7 +104,7 @@ class StatementServiceTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests executeQuery()
+     * Test executeQuery()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -125,7 +125,7 @@ class StatementServiceTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests executeQueryFile()
+     * Test executeQueryFile()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -145,7 +145,7 @@ class StatementServiceTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests executeStatement()
+     * Test executeStatement()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -166,7 +166,7 @@ class StatementServiceTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests executeStatementFile()
+     * Test executeStatementFile()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -186,7 +186,7 @@ class StatementServiceTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests executeStatements()
+     * Test executeStatements()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -210,7 +210,7 @@ class StatementServiceTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests executeStatementsFile()
+     * Test executeStatementsFile()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -233,7 +233,7 @@ class StatementServiceTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests prepareStatement()
+     * Test prepareStatement()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -252,7 +252,7 @@ class StatementServiceTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests readStatementFile()
+     * Test readStatementFile()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -266,7 +266,7 @@ class StatementServiceTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests readStatementFile()
+     * Test readStatementFile()
      *
      * @return void
      */
@@ -288,7 +288,7 @@ class StatementServiceTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests splitStatements()
+     * Test splitStatements()
      *
      * @return void
      */
@@ -308,7 +308,7 @@ class StatementServiceTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

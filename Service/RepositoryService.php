@@ -171,7 +171,7 @@ class RepositoryService implements RepositoryServiceInterface {
     }
 
     /**
-     * Creates a repository detail.
+     * Create a repository detail.
      *
      * @param string $table The table.
      * @param string $entity The entity.

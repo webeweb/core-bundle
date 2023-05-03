@@ -46,7 +46,7 @@ class ToastEventListenerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests onToast()
+     * Test onToast()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -72,7 +72,7 @@ class ToastEventListenerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

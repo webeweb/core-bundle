@@ -46,7 +46,7 @@ class ContainerTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Calls a native function.
+     * Call a native function.
      *
      * @param string|null $function The function.
      * @param array $arguments The arguments.
@@ -62,7 +62,7 @@ class ContainerTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Calls a static method.
+     * Call a static method.
      *
      * @param string|null $classname The classname.
      * @param string|null $method The method.

@@ -27,7 +27,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Assets\FontAwesomeTwigExtension;
 class FontAwesomeTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests fontAwesomeIconFunction()
+     * Test fontAwesomeIconFunction()
      *
      * @return void
      */
@@ -51,7 +51,7 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests fontAwesomeIconFunction()
+     * Test fontAwesomeIconFunction()
      *
      * @return void
      */
@@ -66,7 +66,7 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests fontAwesomeListFilter()
+     * Test fontAwesomeListFilter()
      *
      * @return void
      */
@@ -81,7 +81,7 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests fontAwesomeListIconFilter()
+     * Test fontAwesomeListIconFilter()
      *
      * @return void
      */
@@ -96,7 +96,7 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests fontAwesomeListIconFilter()
+     * Test fontAwesomeListIconFilter()
      *
      * @return void
      */
@@ -111,7 +111,7 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFilters()
+     * Test getFilters()
      *
      * @return void
      */
@@ -146,7 +146,7 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -171,7 +171,7 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderIcon()
+     * Test renderIcon()
      *
      * @return void
      */
@@ -185,7 +185,7 @@ class FontAwesomeTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

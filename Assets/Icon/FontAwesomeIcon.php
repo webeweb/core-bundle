@@ -75,7 +75,7 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
     }
 
     /**
-     * Enumerates the animations.
+     * Enumerate the animations.
      *
      * @return string[] Returns the animations enumeration.
      */
@@ -88,7 +88,7 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
     }
 
     /**
-     * Enumerates the fonts.
+     * Enumerate the fonts.
      *
      * @return string[] Returns the fonts enumeration.
      */
@@ -105,7 +105,7 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
     }
 
     /**
-     * Enumerates the pulls.
+     * Enumerate the pulls.
      *
      * @return string[] Returns the pulls enumeration.
      */
@@ -118,7 +118,7 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
     }
 
     /**
-     * Enumerates the sizes.
+     * Enumerate the sizes.
      *
      * @return string[] Returns the sizes enumeration.
      */

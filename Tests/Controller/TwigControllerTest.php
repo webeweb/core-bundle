@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
 class TwigControllerTest extends AbstractWebTestCase {
 
     /**
-     * Tests functionAction()
+     * Test functionAction()
      *
      * @return void
      */
@@ -45,7 +45,7 @@ class TwigControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests functionAction()
+     * Test functionAction()
      *
      * @return void
      */
@@ -59,7 +59,7 @@ class TwigControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests resourceAction()
+     * Test resourceAction()
      *
      * @return void
      */
@@ -73,7 +73,7 @@ class TwigControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests resourceAction()
+     * Test resourceAction()
      *
      * @return void
      */
@@ -88,7 +88,7 @@ class TwigControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests resourceAction()
+     * Test resourceAction()
      *
      * @return void
      */
@@ -103,7 +103,7 @@ class TwigControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Assets\MaterialDesignIconicFontTwigExte
 class MaterialDesignIconicFontTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setMaterialDesignIconicFontTwigExtension()
+     * Test setMaterialDesignIconicFontTwigExtension()
      *
      * @return void
      */

@@ -31,7 +31,7 @@ use WBW\Library\Symfony\Provider\Theme\UserInfoThemeProviderInterface;
 class ThemeManagerWebTest extends AbstractWebTestCase {
 
     /**
-     * Tests the dependency injection.
+     * Test the dependency injection.
      *
      * @return void
      */

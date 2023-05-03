@@ -53,7 +53,7 @@ class FormFactory {
     }
 
     /**
-     * Determines if a class is a choice value interface.
+     * Determine if a class is a choice value interface.
      *
      * @param string $class The class.
      * @return bool Returns true in case of success, false otherwise.

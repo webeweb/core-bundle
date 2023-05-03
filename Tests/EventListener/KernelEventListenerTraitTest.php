@@ -42,7 +42,7 @@ class KernelEventListenerTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setEventDispatcher()
+     * Test setEventDispatcher()
      *
      * @return void
      */

@@ -78,7 +78,7 @@ class FormFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getChoiceLabelCallback()
+     * Test getChoiceLabelCallback()
      *
      * @return void
      */
@@ -100,7 +100,7 @@ class FormFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getChoiceValueCallback()
+     * Test getChoiceValueCallback()
      *
      * @return void
      */
@@ -114,7 +114,7 @@ class FormFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newChoiceType()
+     * Test newChoiceType()
      *
      * @return void
      */
@@ -135,7 +135,7 @@ class FormFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newChoiceType()
+     * Test newChoiceType()
      *
      * @return void
      */
@@ -156,7 +156,7 @@ class FormFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newEntityType method.
+     * Test the newEntityType method.
      *
      * @return void
      */
@@ -182,7 +182,7 @@ class FormFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newEntityType method.
+     * Test the newEntityType method.
      *
      * @return void
      */
@@ -212,7 +212,7 @@ class FormFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newEntityType method.
+     * Test the newEntityType method.
      *
      * @return void
      */
@@ -236,7 +236,7 @@ class FormFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newEntityType method.
+     * Test the newEntityType method.
      *
      * @return void
      */

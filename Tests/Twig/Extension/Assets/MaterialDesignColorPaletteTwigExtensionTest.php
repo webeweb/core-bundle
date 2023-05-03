@@ -26,7 +26,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\Assets\MaterialDesignColorPaletteTwigEx
 class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests getFilters()
+     * Test getFilters()
      *
      * @return void
      */
@@ -39,7 +39,7 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -74,7 +74,7 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests materialDesignColorPaletteBackgroundFunction()
+     * Test materialDesignColorPaletteBackgroundFunction()
      *
      * @return void
      */
@@ -92,7 +92,7 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests materialDesignColorPaletteBackgroundFunction()
+     * Test materialDesignColorPaletteBackgroundFunction()
      *
      * @return void
      */
@@ -109,7 +109,7 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests materialDesignColorPaletteBackgroundFunction()
+     * Test materialDesignColorPaletteBackgroundFunction()
      *
      * @return void
      */
@@ -126,7 +126,7 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests materialDesignColorPaletteBackgroundFunction()
+     * Test materialDesignColorPaletteBackgroundFunction()
      *
      * @return void
      */
@@ -141,7 +141,7 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests materialDesignColorPaletteTextFunction()
+     * Test materialDesignColorPaletteTextFunction()
      *
      * @return void
      */
@@ -159,7 +159,7 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests materialDesignColorPaletteTextFunction()
+     * Test materialDesignColorPaletteTextFunction()
      *
      * @return void
      */
@@ -176,7 +176,7 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests materialDesignColorPaletteTextFunction()
+     * Test materialDesignColorPaletteTextFunction()
      *
      * @return void
      */
@@ -193,7 +193,7 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests materialDesignColorPaletteTextFunction()
+     * Test materialDesignColorPaletteTextFunction()
      *
      * @return void
      */
@@ -208,7 +208,7 @@ class MaterialDesignColorPaletteTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

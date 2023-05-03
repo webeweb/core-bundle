@@ -84,7 +84,7 @@ class QuoteTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a quote author.
+     * Display a quote author.
      *
      * @param string|null $domain The domain.
      * @return string Returns the quote author.
@@ -101,7 +101,7 @@ class QuoteTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a quote content.
+     * Display a quote content.
      *
      * @param string|null $domain The domain.
      * @return string Returns the quote content.

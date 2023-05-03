@@ -48,7 +48,7 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
     }
 
     /**
-     * Displays a jQuery input mask.
+     * Display a jQuery input mask.
      *
      * @param array $args The arguments.
      * @return string Returns the jQuery input mask.
@@ -58,7 +58,7 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
     }
 
     /**
-     * Displays a jQuery input mask "phone number".
+     * Display a jQuery input mask "phone number".
      *
      * @param array $args The arguments.
      * @return string Returns the jQuery input mask "phone number".
@@ -71,7 +71,7 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
     }
 
     /**
-     * Displays a jQuery input mask "SIRET number".
+     * Display a jQuery input mask "SIRET number".
      *
      * @param array $args The arguments.
      * @return string Returns the jQuery input mask "SIRET number".
@@ -84,7 +84,7 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
     }
 
     /**
-     * Displays a jQuery input mask "social security number".
+     * Display a jQuery input mask "social security number".
      *
      * @param array $args The arguments.
      * @return string Returns the jQuery input mask "social security number".
@@ -97,7 +97,7 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
     }
 
     /**
-     * Displays a jQuery input mask "time 12 hour".
+     * Display a jQuery input mask "time 12 hour".
      *
      * @param array $args The arguments.
      * @return string Returns the jQuery input mask "time 12 hour".
@@ -110,7 +110,7 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
     }
 
     /**
-     * Displays a jQuery input mask "time 24 hour".
+     * Display a jQuery input mask "time 24 hour".
      *
      * @param array $args The arguments.
      * @return string Returns the jQuery input mask "time 24 hour".
@@ -123,7 +123,7 @@ class JQueryInputMaskTwigExtension extends AbstractJQueryInputMaskTwigExtension 
     }
 
     /**
-     * Displays a jQuery input mask "VAT number".
+     * Display a jQuery input mask "VAT number".
      *
      * @param array $args The arguments.
      * @return string Returns the jQuery input mask "VAT number".

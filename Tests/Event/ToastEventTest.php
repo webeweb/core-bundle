@@ -24,7 +24,7 @@ use WBW\Library\Symfony\Assets\ToastInterface;
 class ToastEventTest extends AbstractTestCase {
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

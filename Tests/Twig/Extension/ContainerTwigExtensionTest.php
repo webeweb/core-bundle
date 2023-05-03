@@ -25,7 +25,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\ContainerTwigExtension;
 class ContainerTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests coreNativeMethodFunction()
+     * Test coreNativeMethodFunction()
      *
      * @return void
      */
@@ -41,7 +41,7 @@ class ContainerTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests coreStaticMethodFunction()
+     * Test coreStaticMethodFunction()
      *
      * @return void
      */
@@ -58,7 +58,7 @@ class ContainerTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getContainerParameterFunction()
+     * Test getContainerParameterFunction()
      *
      * @return void
      */
@@ -70,7 +70,7 @@ class ContainerTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -97,7 +97,7 @@ class ContainerTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

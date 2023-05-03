@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class FontAwesomeIconTest extends AbstractTestCase {
 
     /**
-     * Tests enumAnimations()
+     * Test enumAnimations()
      *
      * @return void
      */
@@ -39,7 +39,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests enumFonts()
+     * Test enumFonts()
      *
      * @return void
      */
@@ -58,7 +58,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests enumPulls()
+     * Test enumPulls()
      *
      * @return void
      */
@@ -73,7 +73,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the enumSizes() mmethod.
+     * Test the enumSizes() mmethod.
      *
      * @return void
      */
@@ -98,7 +98,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setAnimation()
+     * Test setAnimation()
      *
      * @return void
      */
@@ -111,7 +111,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setAnimation()
+     * Test setAnimation()
      *
      * @return void
      */
@@ -124,7 +124,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setBordered()
+     * Test setBordered()
      *
      * @return void
      */
@@ -137,7 +137,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setFixedWidth()
+     * Test setFixedWidth()
      *
      * @return void
      */
@@ -150,7 +150,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setFont()
+     * Test setFont()
      *
      * @return void
      */
@@ -163,7 +163,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setFont()
+     * Test setFont()
      *
      * @return void
      */
@@ -176,7 +176,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setPull()
+     * Test setPull()
      *
      * @return void
      */
@@ -189,7 +189,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setPull()
+     * Test setPull()
      *
      * @return void
      */
@@ -202,7 +202,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setSize()
+     * Test setSize()
      *
      * @return void
      */
@@ -215,7 +215,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setSize()
+     * Test setSize()
      *
      * @return void
      */
@@ -228,7 +228,7 @@ class FontAwesomeIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

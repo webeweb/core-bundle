@@ -53,7 +53,7 @@ abstract class AbstractMaterialDesignColorPaletteTwigExtension extends AbstractT
     }
 
     /**
-     * Displays a Material Design Color Palette.
+     * Display a Material Design Color Palette.
      *
      * @param string $type The type.
      * @param string|null $name The name.

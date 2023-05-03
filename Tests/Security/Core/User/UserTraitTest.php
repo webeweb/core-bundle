@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Security\Core\User\TestUserTrait;
 class UserTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setUser()
+     * Test setUser()
      *
      * @return void
      */

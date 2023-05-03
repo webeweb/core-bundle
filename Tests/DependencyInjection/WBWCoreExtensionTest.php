@@ -107,7 +107,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getAlias()
+     * Test getAlias()
      *
      * @return void
      */
@@ -119,7 +119,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getConfiguration()
+     * Test getConfiguration()
      *
      * @return void
      */
@@ -131,7 +131,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests load()
+     * Test load()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -229,7 +229,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests load()
+     * Test load()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -247,7 +247,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests load()
+     * Test load()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.

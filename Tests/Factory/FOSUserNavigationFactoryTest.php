@@ -25,7 +25,7 @@ use WBW\Library\Symfony\Assets\NavigationNodeInterface;
 class FOSUserNavigationFactoryTest extends AbstractTestCase {
 
     /**
-     * Tests newFontAwesomeBreadcrumbNodes()
+     * Test newFontAwesomeBreadcrumbNodes()
      *
      * @return void
      */
@@ -54,7 +54,7 @@ class FOSUserNavigationFactoryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests newMaterialDesignIconicFontBreadcrumbNodes()
+     * Test newMaterialDesignIconicFontBreadcrumbNodes()
      *
      * @return void
      */

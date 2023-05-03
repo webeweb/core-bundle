@@ -76,7 +76,7 @@ class CopySkeletonCommand extends AbstractCommand {
     }
 
     /**
-     * Displays the result.
+     * Display the result.
      *
      * @param StyleInterface $io The I/O.
      * @param array $results The results.

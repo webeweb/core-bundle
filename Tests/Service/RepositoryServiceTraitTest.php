@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Service\TestRepositoryServiceTrait;
 class RepositoryServiceTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setRepositoryService()
+     * Test setRepositoryService()
      *
      * @return void
      */

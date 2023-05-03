@@ -73,7 +73,7 @@ class SyntaxHighlighterTwigExtension extends AbstractSyntaxHighlighterTwigExtens
     }
 
     /**
-     * Displays a SyntaxHighlighter config.
+     * Display a SyntaxHighlighter config.
      *
      * @param SyntaxHighlighterConfig $config The SyntaxHighlighter config.
      * @return string Returns the SyntaxHighlighter config.
@@ -83,7 +83,7 @@ class SyntaxHighlighterTwigExtension extends AbstractSyntaxHighlighterTwigExtens
     }
 
     /**
-     * Displays a SyntaxHighlighter content.
+     * Display a SyntaxHighlighter content.
      *
      * @param array $args The arguments.
      * @return string Returns the SyntaxHighlighter content.
@@ -107,7 +107,7 @@ class SyntaxHighlighterTwigExtension extends AbstractSyntaxHighlighterTwigExtens
     }
 
     /**
-     * Displays a SyntaxHighlighter defaults.
+     * Display a SyntaxHighlighter defaults.
      *
      * @param SyntaxHighlighterDefaults $defaults The SyntaxHighlighter defaults.
      * @return string Returns the SyntaxHighlighter defaults.
@@ -117,7 +117,7 @@ class SyntaxHighlighterTwigExtension extends AbstractSyntaxHighlighterTwigExtens
     }
 
     /**
-     * Displays a SyntaxHighlighter script.
+     * Display a SyntaxHighlighter script.
      *
      * @param string $content The content.
      * @return string Returns the SyntaxHighlighter script.
@@ -127,7 +127,7 @@ class SyntaxHighlighterTwigExtension extends AbstractSyntaxHighlighterTwigExtens
     }
 
     /**
-     * Displays a SyntaxHighlighter strings.
+     * Display a SyntaxHighlighter strings.
      *
      * @param SyntaxHighlighterStrings $strings The SyntaxHighlighter strings.
      * @return string Returns the SyntaxHighlighter strings.

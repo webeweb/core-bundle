@@ -25,7 +25,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\AbstractTwigExtension;
 abstract class AbstractFontAwesomeTwigExtension extends AbstractTwigExtension {
 
     /**
-     * Displays a Font Awesome icon.
+     * Display a Font Awesome icon.
      *
      * @param FontAwesomeIconInterface $icon The icon.
      * @return string Returns the Font Awesome icon.
@@ -49,7 +49,7 @@ abstract class AbstractFontAwesomeTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a Font Awesome list.
+     * Display a Font Awesome list.
      *
      * @param array|string $items The items.
      * @return string Returns the Font Awesome list.
@@ -62,7 +62,7 @@ abstract class AbstractFontAwesomeTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Displays a Font Awesome list icon.
+     * Display a Font Awesome list icon.
      *
      * @param string $icon The icon.
      * @param string|null $content The content.

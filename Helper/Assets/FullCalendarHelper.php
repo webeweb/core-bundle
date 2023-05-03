@@ -23,7 +23,7 @@ use Symfony\Component\HttpFoundation\Request;
 class FullCalendarHelper {
 
     /**
-     * Parses a date/time.
+     * Parse a date/time.
      *
      * @param Request $request The request.
      * @param string $key The key.
@@ -37,7 +37,7 @@ class FullCalendarHelper {
     }
 
     /**
-     * Parses the end date/time.
+     * Parse the end date/time.
      *
      * @param Request $request The request.
      * @return DateTime|null Returns the end date/time.
@@ -47,7 +47,7 @@ class FullCalendarHelper {
     }
 
     /**
-     * Parses the start date/time.
+     * Parse the start date/time.
      *
      * @param Request $request The request.
      * @return DateTime|null Returns the start date/time.

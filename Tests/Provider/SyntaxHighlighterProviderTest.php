@@ -26,7 +26,7 @@ use WBW\Library\Symfony\Provider\ProviderInterface;
 class SyntaxHighlighterProviderTest extends AbstractTestCase {
 
     /**
-     * Tests getSyntaxHighlighterStrings()
+     * Test getSyntaxHighlighterStrings()
      *
      * @return void
      */
@@ -38,7 +38,7 @@ class SyntaxHighlighterProviderTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

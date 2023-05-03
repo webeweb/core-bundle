@@ -25,7 +25,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\AssetsTwigExtension;
 class JQueryInputMaskTwigExtensionTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setJQueryInputMaskTwigExtension()
+     * Test setJQueryInputMaskTwigExtension()
      *
      * @return void
      */

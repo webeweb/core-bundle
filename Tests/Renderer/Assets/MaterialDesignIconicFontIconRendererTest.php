@@ -52,7 +52,7 @@ class MaterialDesignIconicFontIconRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderBorder()
+     * Test renderBorder()
      *
      * @return void
      */
@@ -63,7 +63,7 @@ class MaterialDesignIconicFontIconRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderFixedWidth()
+     * Test renderFixedWidth()
      *
      * @return void
      */
@@ -74,7 +74,7 @@ class MaterialDesignIconicFontIconRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderFlip()
+     * Test renderFlip()
      *
      * @return void
      */
@@ -85,7 +85,7 @@ class MaterialDesignIconicFontIconRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderName()
+     * Test renderName()
      *
      * @return void
      */
@@ -96,7 +96,7 @@ class MaterialDesignIconicFontIconRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderPull()
+     * Test renderPull()
      *
      * @return void
      */
@@ -107,7 +107,7 @@ class MaterialDesignIconicFontIconRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderRotate()
+     * Test renderRotate()
      *
      * @return void
      */
@@ -118,7 +118,7 @@ class MaterialDesignIconicFontIconRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderSize()
+     * Test renderSize()
      *
      * @return void
      */
@@ -129,7 +129,7 @@ class MaterialDesignIconicFontIconRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderSpin()
+     * Test renderSpin()
      *
      * @return void
      */

@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class MaterialDesignIconicFontIconTest extends AbstractTestCase {
 
     /**
-     * Tests enumBorders()
+     * Test enumBorders()
      *
      * @return void.
      */
@@ -39,7 +39,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests enumFlips()
+     * Test enumFlips()
      *
      * @return void
      */
@@ -54,7 +54,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests enumPulls()
+     * Test enumPulls()
      *
      * @return void
      */
@@ -69,7 +69,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests enumRotates()
+     * Test enumRotates()
      *
      * @return void
      */
@@ -85,7 +85,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests enumSizes()
+     * Test enumSizes()
      *
      * @return void
      */
@@ -103,7 +103,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests enumSpins()
+     * Test enumSpins()
      *
      * @return void
      */
@@ -118,7 +118,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setBorder()
+     * Test setBorder()
      *
      * @return void
      */
@@ -131,7 +131,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setBorder()
+     * Test setBorder()
      *
      * @return void
      */
@@ -144,7 +144,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setFixedWidth()
+     * Test setFixedWidth()
      *
      * @return void
      */
@@ -157,7 +157,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setFlip()
+     * Test setFlip()
      *
      * @return void
      */
@@ -170,7 +170,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setFlip()
+     * Test setFlip()
      *
      * @return void
      */
@@ -183,7 +183,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setPull()
+     * Test setPull()
      *
      * @return void
      */
@@ -196,7 +196,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setPull()
+     * Test setPull()
      *
      * @return void
      */
@@ -209,7 +209,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setRotate()
+     * Test setRotate()
      *
      * @return void
      */
@@ -222,7 +222,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setRotate()
+     * Test setRotate()
      *
      * @return void
      */
@@ -235,7 +235,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setSize()
+     * Test setSize()
      *
      * @return void
      */
@@ -248,7 +248,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setSize()
+     * Test setSize()
      *
      * @return void
      */
@@ -261,7 +261,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setSpin()
+     * Test setSpin()
      *
      * @return void
      */
@@ -274,7 +274,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setSpin()
+     * Test setSpin()
      *
      * @return void
      */
@@ -287,7 +287,7 @@ class MaterialDesignIconicFontIconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Service\TestStatementServiceTrait;
 class StatementServiceTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setStatementService()
+     * Test setStatementService()
      *
      * @return void
      */

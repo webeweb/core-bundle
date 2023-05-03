@@ -25,7 +25,7 @@ use WBW\Library\Symfony\Provider\StylesheetProviderInterface;
 class StylesheetProviderTest extends AbstractTestCase {
 
     /**
-     * Tests getStylesheets()
+     * Test getStylesheets()
      *
      * @return void
      */
@@ -37,7 +37,7 @@ class StylesheetProviderTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

@@ -46,7 +46,7 @@ class MaterialDesignColorPaletteTwigExtension extends AbstractMaterialDesignColo
     }
 
     /**
-     * Displays a Material Design Color Palette background.
+     * Display a Material Design Color Palette background.
      *
      * @param array $args The arguments.
      * @return string Returns the Material Design Color Palette background.
@@ -56,7 +56,7 @@ class MaterialDesignColorPaletteTwigExtension extends AbstractMaterialDesignColo
     }
 
     /**
-     * Displays a Material Design Color Palette text.
+     * Display a Material Design Color Palette text.
      *
      * @param array $args The arguments.
      * @return string Returns the Material Design Color Palette text.

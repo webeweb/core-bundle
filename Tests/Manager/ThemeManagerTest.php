@@ -33,7 +33,7 @@ use WBW\Library\Symfony\Provider\Theme\UserInfoThemeProviderInterface;
 class ThemeManagerTest extends AbstractTestCase {
 
     /**
-     * Tests addGlobal()
+     * Test addGlobal()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -87,7 +87,7 @@ class ThemeManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests hasProviders()
+     * Test hasProviders()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -103,7 +103,7 @@ class ThemeManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setApplicationThemeProvider()
+     * Test setApplicationThemeProvider()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -123,7 +123,7 @@ class ThemeManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setBreadcrumbsThemeProvider()
+     * Test setBreadcrumbsThemeProvider()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -140,7 +140,7 @@ class ThemeManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setFooterThemeProvider()
+     * Test setFooterThemeProvider()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -157,7 +157,7 @@ class ThemeManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setHookDropdownThemeProvider()
+     * Test setHookDropdownThemeProvider()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -174,7 +174,7 @@ class ThemeManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setNavigationThemeProvider()
+     * Test setNavigationThemeProvider()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -191,7 +191,7 @@ class ThemeManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setNotificationsDropdownThemeProvider()
+     * Test setNotificationsDropdownThemeProvider()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -208,7 +208,7 @@ class ThemeManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setSearchThemeProvider()
+     * Test setSearchThemeProvider()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -225,7 +225,7 @@ class ThemeManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setTasksDropdownThemeProvider()
+     * Test setTasksDropdownThemeProvider()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -242,7 +242,7 @@ class ThemeManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setUserInfoThemeProvider()
+     * Test setUserInfoThemeProvider()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -259,7 +259,7 @@ class ThemeManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.

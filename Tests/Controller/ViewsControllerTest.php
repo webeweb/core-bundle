@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
 class ViewsControllerTest extends AbstractWebTestCase {
 
     /**
-     * Tests Resources/views/assets/_javascripts.html.twig
+     * Test Resources/views/assets/_javascripts.html.twig
      *
      * @return void
      */
@@ -51,7 +51,7 @@ class ViewsControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests Resources/views/assets/_stylesheets.html.twig
+     * Test Resources/views/assets/_stylesheets.html.twig
      *
      * @return void
      */
@@ -65,7 +65,7 @@ class ViewsControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests Resources/views/email/layout.html.twig
+     * Test Resources/views/email/layout.html.twig
      *
      * @return void
      */
@@ -79,7 +79,7 @@ class ViewsControllerTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests kernelExceptionAction()
+     * Test kernelExceptionAction()
      *
      * @return void
      */

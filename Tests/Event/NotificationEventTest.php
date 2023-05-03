@@ -24,7 +24,7 @@ use WBW\Library\Symfony\Assets\NotificationInterface;
 class NotificationEventTest extends AbstractTestCase {
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

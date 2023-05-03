@@ -40,7 +40,7 @@ abstract class AbstractJQueryInputMaskTwigExtension extends AbstractTwigExtensio
     }
 
     /**
-     * Displays a jQuery input mask.
+     * Display a jQuery input mask.
      *
      * @param string $selector The selector.
      * @param string $mask The mask.

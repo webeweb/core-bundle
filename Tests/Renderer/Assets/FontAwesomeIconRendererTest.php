@@ -51,7 +51,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderAnimation()
+     * Test renderAnimation()
      *
      * @return void
      */
@@ -62,7 +62,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderBordered()
+     * Test renderBordered()
      *
      * @return void
      */
@@ -73,7 +73,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderFixedWidth()
+     * Test renderFixedWidth()
      *
      * @return void
      */
@@ -84,7 +84,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderFont()
+     * Test renderFont()
      *
      * @return void
      */
@@ -95,7 +95,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderName()
+     * Test renderName()
      *
      * @return void
      */
@@ -106,7 +106,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderPull()
+     * Test renderPull()
      *
      * @return void
      */
@@ -117,7 +117,7 @@ class FontAwesomeIconRendererTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderSize()
+     * Test renderSize()
      *
      * @return void
      */

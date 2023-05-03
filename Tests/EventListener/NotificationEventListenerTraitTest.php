@@ -25,7 +25,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\EventListener\TestNotificationEventList
 class NotificationEventListenerTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setNotificationEventListener()
+     * Test setNotificationEventListener()
      *
      * @return void
      */

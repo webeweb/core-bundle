@@ -23,7 +23,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Event\TestEvent;
 class AbstractEventTest extends AbstractTestCase {
 
     /**
-     * Tests __construct() method.
+     * Test __construct() method.
      *
      * @return void
      */

@@ -25,7 +25,7 @@ use WBW\Bundle\CoreBundle\Tests\AbstractTestCase;
 class SymfonyBCServiceTest extends AbstractTestCase {
 
     /**
-     * Tests getSession()
+     * Test getSession()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -38,7 +38,7 @@ class SymfonyBCServiceTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

@@ -28,7 +28,7 @@ use WBW\Bundle\CoreBundle\Twig\Extension\AssetsTwigExtension;
 class AssetsTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests assetExists()
+     * Test assetExists()
      *
      * @return void
      */
@@ -43,7 +43,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests coreGtag()
+     * Test coreGtag()
      *
      * @returns void
      */
@@ -59,7 +59,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests coreImageFunction()
+     * Test coreImageFunction()
      *
      * @return void
      */
@@ -81,7 +81,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests coreImageFunction()
+     * Test coreImageFunction()
      *
      * @return void
      */
@@ -96,7 +96,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests coreRenderIconFunction()
+     * Test coreRenderIconFunction()
      *
      * @return void
      */
@@ -109,7 +109,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests coreResourceScriptFunction()
+     * Test coreResourceScriptFunction()
      */
     public function testCoreResourceScriptFunction(): void {
 
@@ -125,7 +125,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests coreResourceStyleFunction()
+     * Test coreResourceStyleFunction()
      */
     public function testCoreResourceStyleFunction(): void {
 
@@ -141,7 +141,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests coreScriptFilter()
+     * Test coreScriptFilter()
      *
      * @return void
      */
@@ -155,7 +155,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests coreStyleFilter()
+     * Test coreStyleFilter()
      *
      * @return void
      */
@@ -169,7 +169,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests cssRgba()
+     * Test cssRgba()
      *
      * @return void
      */
@@ -183,7 +183,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFilters()
+     * Test getFilters()
      *
      * @return void
      */
@@ -223,7 +223,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -278,7 +278,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderIcon()
+     * Test renderIcon()
      *
      * @return void
      */
@@ -289,7 +289,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderIcon()
+     * Test renderIcon()
      *
      * @return void
      */
@@ -303,7 +303,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderIcon()
+     * Test renderIcon()
      *
      * @return void
      */
@@ -315,7 +315,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests renderIcon()
+     * Test renderIcon()
      *
      * @return void
      */
@@ -327,7 +327,7 @@ class AssetsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

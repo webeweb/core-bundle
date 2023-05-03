@@ -23,7 +23,7 @@ use WBW\Library\Symfony\Provider\ProviderInterface;
 interface AssetsProviderInterface extends ProviderInterface, BundleInterface {
 
     /**
-     * Assets relative directory.
+     * Asset relative directory.
      *
      * @var string
      */

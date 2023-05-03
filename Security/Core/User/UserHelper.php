@@ -22,7 +22,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 class UserHelper {
 
     /**
-     * Determines if the connected user entity has role $roles.
+     * Determine if the connected user entity has roles.
      *
      * @param mixed|null $user The user.
      * @param string|array $roles The role or roles.

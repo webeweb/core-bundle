@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Model\TestUser;
 class UserHelperTest extends AbstractTestCase {
 
     /**
-     * Tests hasRoles()
+     * Test hasRoles()
      *
      * @return void
      */

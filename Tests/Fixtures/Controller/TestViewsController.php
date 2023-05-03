@@ -51,7 +51,7 @@ class TestViewsController extends AbstractController {
     }
 
     /**
-     * Throws an exception.
+     * Throw an exception.
      *
      * @return Response Returns the response.
      */

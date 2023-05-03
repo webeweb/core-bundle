@@ -53,7 +53,7 @@ class RepositoryServiceTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests findAll()
+     * Test findAll()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -67,7 +67,7 @@ class RepositoryServiceTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests findOneByEntity()
+     * Test findOneByEntity()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -94,7 +94,7 @@ class RepositoryServiceTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests findOneByTable()
+     * Test findOneByTable()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -137,7 +137,7 @@ class RepositoryServiceTest extends AbstractWebTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

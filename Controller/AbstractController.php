@@ -183,7 +183,7 @@ abstract class AbstractController extends BaseController {
     }
 
     /**
-     * Determines if the connected user has roles or redirect.
+     * Determine if the connected user has roles or redirect.
      *
      * @param array $roles The roles.
      * @param bool $or OR ?
@@ -205,7 +205,7 @@ abstract class AbstractController extends BaseController {
     }
 
     /**
-     * Creates a default JSON response data.
+     * Create a default JSON response data.
      *
      * @param bool $success The success.
      * @param array $data The data.

@@ -28,7 +28,7 @@ use WBW\Library\Symfony\Assets\NavigationNodeInterface;
 class NavigationNodeHelper {
 
     /**
-     * Actives the navigation nodes.
+     * Active the navigation nodes.
      *
      * @param Request $request The request.
      * @param AbstractNavigationNode[] $nodes The navigation nodes.
@@ -58,7 +58,7 @@ class NavigationNodeHelper {
     }
 
     /**
-     * Actives a tree.
+     * Active a tree.
      *
      * @param NavigationTree $tree The tree.
      * @param Request $request The request.
@@ -90,7 +90,7 @@ class NavigationNodeHelper {
     }
 
     /**
-     * Determines if a navigation node match a URL.
+     * Determine if a navigation node match a URL.
      *
      * @param AbstractNavigationNode $node The navigation node.
      * @param Request $request The request.

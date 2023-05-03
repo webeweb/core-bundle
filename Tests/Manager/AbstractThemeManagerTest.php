@@ -25,7 +25,7 @@ use WBW\Library\Symfony\Provider\ThemeProviderInterface;
 class AbstractThemeManagerTest extends AbstractTestCase {
 
     /**
-     * Tests addGlobal()
+     * Test addGlobal()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -48,7 +48,7 @@ class AbstractThemeManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests addGlobal()
+     * Test addGlobal()
      *
      * @return void
      */
@@ -63,7 +63,7 @@ class AbstractThemeManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setProvider()
+     * Test setProvider()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -80,7 +80,7 @@ class AbstractThemeManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setProvider()
+     * Test setProvider()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -101,7 +101,7 @@ class AbstractThemeManagerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.

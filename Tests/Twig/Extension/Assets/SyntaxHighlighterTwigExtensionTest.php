@@ -69,7 +69,7 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFilters()
+     * Test getFilters()
      *
      * @return void
      */
@@ -94,7 +94,7 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests getFunctions()
+     * Test getFunctions()
      *
      * @return void
      */
@@ -159,7 +159,7 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests syntaxHighlighterConfigFunction()
+     * Test syntaxHighlighterConfigFunction()
      *
      * @return void
      */
@@ -178,7 +178,7 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests syntaxHighlighterConfigFunction()
+     * Test syntaxHighlighterConfigFunction()
      *
      * @return void
      */
@@ -199,7 +199,7 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests syntaxHighlighterContentFunction()
+     * Test syntaxHighlighterContentFunction()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -218,7 +218,7 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests syntaxHighlighterContentFunction()
+     * Test syntaxHighlighterContentFunction()
      *
      * @return void
      */
@@ -244,7 +244,7 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests syntaxHighlighterContentFunction()
+     * Test syntaxHighlighterContentFunction()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -266,7 +266,7 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests syntaxHighlighterDefaultsFunction()
+     * Test syntaxHighlighterDefaultsFunction()
      *
      * @return void
      */
@@ -292,7 +292,7 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests syntaxHighlighterScriptFilter()
+     * Test syntaxHighlighterScriptFilter()
      *
      * @return void
      */
@@ -306,7 +306,7 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests syntaxHighlighterStringsFunction()
+     * Test syntaxHighlighterStringsFunction()
      *
      * @return void
      */
@@ -331,7 +331,7 @@ class SyntaxHighlighterTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

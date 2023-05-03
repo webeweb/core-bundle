@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\Tests\Fixtures\Command\TestUnzipAssetsCommand;
 class UnzipAssetsCommandTest extends AbstractCommandTestCase {
 
     /**
-     * Tests displayFooter()
+     * Test displayFooter()
      *
      * @return void
      */
@@ -36,7 +36,7 @@ class UnzipAssetsCommandTest extends AbstractCommandTestCase {
     }
 
     /**
-     * Tests displayFooter()
+     * Test displayFooter()
      *
      * @return void
      */
@@ -48,7 +48,7 @@ class UnzipAssetsCommandTest extends AbstractCommandTestCase {
     }
 
     /**
-     * Tests displayFooter()
+     * Test displayFooter()
      *
      * @return void
      */
@@ -60,7 +60,7 @@ class UnzipAssetsCommandTest extends AbstractCommandTestCase {
     }
 
     /**
-     * Tests displayResult()
+     * Test displayResult()
      *
      * @return void
      */
@@ -73,7 +73,7 @@ class UnzipAssetsCommandTest extends AbstractCommandTestCase {
     }
 
     /**
-     * Tests displayResult()
+     * Test displayResult()
      *
      * @return void
      */
@@ -90,7 +90,7 @@ class UnzipAssetsCommandTest extends AbstractCommandTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */
