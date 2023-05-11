@@ -46,7 +46,7 @@ class ConfigurationHelper {
      */
     public static function loadYamlConfig(string $directory, string $filename): array {
 
-        $pathname = realpath($directory . "/../Resources/config/" . $filename . ".yml");
+        $pathname = realpath("$directory/../Resources/config/$filename.yml");
         if (false === $pathname) {
             return [];
         }
