@@ -31,10 +31,10 @@ class UserHelper {
     public static function getIdentifier(UserInterface $user): ?string {
 
         // TODO: Remove when dropping support for Symfony 5
-        if (6 <= Kernel::MAJOR_VERSION) {
-            return $user->getUserIdentifier();
+        if (Kernel::MAJOR_VERSION < 6) {
+            return $user->getUsername();
         }
 
-        return $user->getUsername();
+        return $user->getUserIdentifier();
     }
 }

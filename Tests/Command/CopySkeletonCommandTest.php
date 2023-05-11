@@ -107,10 +107,10 @@ class CopySkeletonCommandTest extends AbstractCommandTestCase {
         };
 
         // TODO: Remove when dropping support for Symfony 4
-        if (5 <= Kernel::MAJOR_VERSION) {
-            $this->kernel->expects($this->any())->method("getProjectDir")->willReturnCallback($getProjectDir);
-        } else {
+        if (Kernel::MAJOR_VERSION < 5) {
             $this->kernel->expects($this->any())->method("getRootDir")->willReturnCallback($getProjectDir);
+        } else {
+            $this->kernel->expects($this->any())->method("getProjectDir")->willReturnCallback($getProjectDir);
         }
 
         // Set a Helper set mock.

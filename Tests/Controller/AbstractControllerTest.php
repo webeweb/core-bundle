@@ -26,6 +26,7 @@ use WBW\Bundle\CoreBundle\Event\NotificationEvent;
 use WBW\Bundle\CoreBundle\Event\ToastEvent;
 use WBW\Bundle\CoreBundle\EventListener\KernelEventListener;
 use WBW\Bundle\CoreBundle\Exception\BadUserRoleException;
+use WBW\Bundle\CoreBundle\Service\SymfonyBCService;
 use WBW\Bundle\CoreBundle\Tests\AbstractWebTestCase;
 use WBW\Bundle\CoreBundle\Tests\Fixtures\Controller\TestAbstractController;
 use WBW\Library\Symfony\Assets\NotificationInterface;
@@ -171,6 +172,24 @@ class AbstractControllerTest extends AbstractWebTestCase {
             $this->assertInstanceOf("Symfony\\Component\\HttpFoundation\\Exception\\SessionNotFoundException", $ex);
             $this->assertEquals("There is currently no session available.", $ex->getMessage());
         }
+    }
+
+    /**
+     * Test getSubscribedServices()
+     *
+     * @return void
+     */
+    public function testGetSubscribedServices(): void {
+
+        $res = AbstractController::getSubscribedServices();
+
+        $this->assertArrayHasKey("doctrine.orm.entity_manager", $res);
+        $this->assertArrayHasKey("event_dispatcher", $res);
+        $this->assertArrayHasKey("logger", $res);
+        $this->assertArrayHasKey("mailer", $res);
+        $this->assertArrayHasKey("translator", $res);
+        $this->assertArrayHasKey(KernelEventListener::SERVICE_NAME, $res);
+        $this->assertArrayHasKey(SymfonyBCService::SERVICE_NAME, $res);
     }
 
     /**

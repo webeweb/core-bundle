@@ -48,10 +48,10 @@ class SymfonyBCService implements SymfonyBCServiceInterface {
     public function getSession(): ?SessionInterface {
 
         // TODO: Remove when dropping support for Symfony 5.3
-        if (50300 <= Kernel::VERSION_ID) {
-            return $this->getContainer()->get("request_stack")->getSession();
+        if (Kernel::VERSION_ID < 50300) {
+            return $this->getContainer()->get("session");
         }
 
-        return $this->getContainer()->get("session");
+        return $this->getContainer()->get("request_stack")->getSession();
     }
 }

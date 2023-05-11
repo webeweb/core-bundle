@@ -42,11 +42,11 @@ class TestKernel extends AbstractKernel {
     public function registerContainerConfiguration(LoaderInterface $loader): void {
 
         // TODO: Remove when dropping support for Symfony 5
-        if (6 <= Kernel::MAJOR_VERSION) {
-            parent::registerContainerConfiguration($loader);
+        if (Kernel::MAJOR_VERSION < 6) {
+            $loader->load(getcwd() . "/Tests/Fixtures/app/config/config_test.old.yml");
             return;
         }
 
-        $loader->load(getcwd() . "/Tests/Fixtures/app/config/config_test.old.yml");
+        parent::registerContainerConfiguration($loader);
     }
 }
