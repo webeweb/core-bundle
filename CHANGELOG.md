@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+### master
+
+- Improve code quality
+- Improve PHPDoc
+- Update dependencies
+
 ### [3.25.0](https://github.com/webeweb/core-bundle/tree/v3.25.0) (2023-04-14)
 
 - Update Chart.js to 4.2.1
