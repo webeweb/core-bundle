@@ -123,7 +123,7 @@ class StringTwigExtensionTest extends AbstractTestCase {
         $obj = new StringTwigExtension($this->twigEnvironment);
 
         $res = $obj->getFunctions();
-        $this->assertCount(11, $res);
+        $this->assertCount(12, $res);
 
         $i = -1;
 
@@ -175,6 +175,11 @@ class StringTwigExtensionTest extends AbstractTestCase {
         $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
         $this->assertEquals("stringSnakeCase", $res[$i]->getName());
         $this->assertEquals([$obj, "stringSnakeCase"], $res[$i]->getCallable());
+        $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
+
+        $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
+        $this->assertEquals("stringUniqid", $res[$i]->getName());
+        $this->assertEquals([$obj, "stringUniqidFunction"], $res[$i]->getCallable());
         $this->assertEquals(["html"], $res[$i]->getSafe(new Node()));
 
         $this->assertInstanceOf(TwigFunction::class, $res[++$i]);
@@ -307,6 +312,31 @@ class StringTwigExtensionTest extends AbstractTestCase {
         $this->assertNull($obj->stringSnakeCase(null));
         $this->assertEquals("string_twig_extension", $obj->stringSnakeCase("StringTwigExtension"));
         $this->assertEquals("string-twig-extension", $obj->stringSnakeCase("StringTwigExtension", "-"));
+    }
+
+    /**
+     * Test the stringUniqidFunction() method
+     *
+     * @return void
+     * @throws Throwable Throws an exception if an error occurs.
+     */
+    public function testStringUniqidFunction() {
+
+        $obj = new StringTwigExtension($this->twigEnvironment);
+
+        $this->assertNull($obj->stringUniqidFunction(-1));
+
+        $res = $obj->stringUniqidFunction();
+        $this->assertRegExp("/^[a-z0-9]{13}$/", $res);
+
+        $map = [];
+        for ($i = 0; $i < 20; ++$i) {
+
+            $tmp = $obj->stringUniqidFunction();
+            $this->assertArrayNotHasKey($tmp, $map);
+
+            $map[$tmp] = $tmp;
+        }
     }
 
     /**

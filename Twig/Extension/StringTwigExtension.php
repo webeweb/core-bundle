@@ -12,6 +12,8 @@
 namespace WBW\Bundle\CoreBundle\Twig\Extension;
 
 use DateTime;
+use RuntimeException;
+use Throwable;
 use Twig\TwigFilter;
 use Twig\TwigFunction;
 use WBW\Library\Types\Helper\DateTimeHelper;
@@ -91,6 +93,7 @@ class StringTwigExtension extends AbstractTwigExtension {
             new TwigFunction("stringHumanReadable", [$this, "stringHumanReadable"], ["is_safe" => ["html"]]),
             new TwigFunction("stringLowerCamelCase", [$this, "stringLowerCamelCase"], ["is_safe" => ["html"]]),
             new TwigFunction("stringSnakeCase", [$this, "stringSnakeCase"], ["is_safe" => ["html"]]),
+            new TwigFunction("stringUniqid", [$this, "stringUniqidFunction"], ["is_safe" => ["html"]]),
             new TwigFunction("stringUpperCamelCase", [$this, "stringUpperCamelCase"], ["is_safe" => ["html"]]),
         ];
     }
@@ -178,10 +181,10 @@ class StringTwigExtension extends AbstractTwigExtension {
     }
 
     /**
-     * Display an human readable string.
+     * Display an human-readable string.
      *
      * @param string|null $str The string.
-     * @return string|null Returns the human readable string.
+     * @return string|null Returns the human-readable string.
      */
     public function stringHumanReadable(?string $str): ?string {
         return StringHelper::toHumanReadable($str);
@@ -206,6 +209,32 @@ class StringTwigExtension extends AbstractTwigExtension {
      */
     public function stringSnakeCase(?string $str, string $sep = "_"): ?string {
         return StringHelper::toSnakeCase($str, $sep);
+    }
+
+    /**
+     * Display a unique id.
+     *
+     * @param int $length The length.
+     * @return string|null Returns the unique id.
+     * @throws Throwable Throws an exception if an error occurs.
+     */
+    public function stringUniqidFunction(int $length = 13): ?string {
+
+        if ($length < 1) {
+            return null;
+        }
+
+        if (true === function_exists("random_bytes")) {
+            $bytes = random_bytes(ceil($length / 2));
+        } else if (true === function_exists("openssl_random_pseudo_bytes")) {
+            $bytes = openssl_random_pseudo_bytes(ceil($length / 2));
+        } else {
+            throw new RuntimeException("random_bytes() and openssl_random_pseudo_bytes() are not available");
+        }
+
+        $hex = bin2hex($bytes);
+
+        return substr($hex, 0, $length);
     }
 
     /**
