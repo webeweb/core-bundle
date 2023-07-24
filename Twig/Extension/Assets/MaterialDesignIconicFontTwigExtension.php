@@ -92,7 +92,7 @@ class MaterialDesignIconicFontTwigExtension extends AbstractMaterialDesignIconic
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function renderIcon(?string $name, ?string $style): string {
         return $this->materialDesignIconicFontIconFunction(["name" => $name, "style" => $style]);

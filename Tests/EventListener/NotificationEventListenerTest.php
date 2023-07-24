@@ -36,7 +36,7 @@ class NotificationEventListenerTest extends AbstractTestCase {
     private $symfonyBCService;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp(): void {
         parent::setUp();

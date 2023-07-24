@@ -46,14 +46,14 @@ class User implements UserInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function eraseCredentials(): void {
         // NOTHING TO DO
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getUserIdentifier(): string {
         return $this->username;

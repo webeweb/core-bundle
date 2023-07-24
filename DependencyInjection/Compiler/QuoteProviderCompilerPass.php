@@ -24,7 +24,7 @@ use WBW\Library\Symfony\Provider\QuoteProviderInterface;
 class QuoteProviderCompilerPass extends AbstractProviderCompilerPass {
 
     /**
-     *{@inheritdoc}
+     *{@inheritDoc}
      */
     public function process(ContainerBuilder $container): void {
         $this->processing($container, QuoteManager::SERVICE_NAME, QuoteProviderInterface::QUOTE_PROVIDER_TAG_NAME);

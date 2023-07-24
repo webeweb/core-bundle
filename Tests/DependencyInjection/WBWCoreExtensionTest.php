@@ -86,7 +86,7 @@ class WBWCoreExtensionTest extends AbstractTestCase {
     private $configs;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp(): void {
         parent::setUp();

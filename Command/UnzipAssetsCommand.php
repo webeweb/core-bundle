@@ -41,7 +41,7 @@ class UnzipAssetsCommand extends AbstractCommand {
     const SERVICE_NAME = "wbw.core.command.unzip_assets";
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function configure(): void {
         $this
@@ -108,7 +108,7 @@ class UnzipAssetsCommand extends AbstractCommand {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function execute(InputInterface $input, OutputInterface $output): int {
 

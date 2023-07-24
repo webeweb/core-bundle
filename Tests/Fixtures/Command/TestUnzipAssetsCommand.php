@@ -23,14 +23,14 @@ use WBW\Bundle\CoreBundle\Command\UnzipAssetsCommand;
 class TestUnzipAssetsCommand extends UnzipAssetsCommand {
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function displayFooter(StyleInterface $io, int $exitCode, int $count): void {
         parent::displayFooter($io, $exitCode, $count);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function displayResult(StyleInterface $io, array $results): int {
         return parent::displayResult($io, $results);

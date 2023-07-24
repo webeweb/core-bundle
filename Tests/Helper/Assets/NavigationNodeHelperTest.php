@@ -33,7 +33,7 @@ class NavigationNodeHelperTest extends AbstractTestCase {
     private $tree;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp(): void {
         parent::setUp();

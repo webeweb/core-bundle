@@ -40,7 +40,7 @@ class JavascriptProviderCompilerPassTest extends AbstractTestCase {
     private $javascriptProvider;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp(): void {
         parent::setUp();

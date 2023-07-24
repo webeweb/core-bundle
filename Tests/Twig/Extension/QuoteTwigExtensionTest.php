@@ -36,7 +36,7 @@ class QuoteTwigExtensionTest extends AbstractTestCase {
     private $quoteManager;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp(): void {
         parent::setUp();

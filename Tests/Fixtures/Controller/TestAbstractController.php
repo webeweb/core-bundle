@@ -37,105 +37,105 @@ use WBW\Library\Symfony\Response\DefaultJsonResponseDataInterface;
 class TestAbstractController extends AbstractController {
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getContainer(): ?ContainerInterface {
         return parent::getContainer();
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getEntityManager(): ?EntityManagerInterface {
         return parent::getEntityManager();
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getEventDispatcher(): ?EventDispatcherInterface {
         return parent::getEventDispatcher();
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getKernelEventListener(): ?KernelEventListener {
         return parent::getKernelEventListener();
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getLogger(): ?LoggerInterface {
         return parent::getLogger();
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getMailer(): ?MailerInterface {
         return parent::getMailer();
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getRouter(): ?RouterInterface {
         return parent::getRouter();
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getSession(): ?SessionInterface {
         return parent::getSession();
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getTranslator(): TranslatorInterface {
         return parent::getTranslator();
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getTwig(): ?Environment {
         return parent::getTwig();
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function hasRolesOrRedirect(array $roles, bool $or, string $redirectUrl, string $originUrl = ""): void {
         parent::hasRolesOrRedirect($roles, $or, $redirectUrl, $originUrl);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function newDefaultJsonResponseData(bool $success, array $data, string $message = null): DefaultJsonResponseDataInterface {
         return parent::newDefaultJsonResponseData($success, $data, $message);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function notify(string $eventName, NotificationInterface $notification): ?NotificationEvent {
         return parent::notify($eventName, $notification);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function toast(string $eventName, ToastInterface $toast): ?ToastEvent {
         return parent::toast($eventName, $toast);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function translate(string $id, array $parameters = [], string $domain = null, string $locale = null): string {
         return parent::translate($id, $parameters, $domain, $locale);

@@ -24,7 +24,7 @@ use WBW\Library\Symfony\Provider\StylesheetProviderInterface;
 class StylesheetProviderCompilerPass extends AbstractProviderCompilerPass {
 
     /**
-     *{@inheritdoc}
+     *{@inheritDoc}
      */
     public function process(ContainerBuilder $container): void {
         $this->processing($container, StylesheetManager::SERVICE_NAME, StylesheetProviderInterface::STYLESHEET_PROVIDER_TAG_NAME);

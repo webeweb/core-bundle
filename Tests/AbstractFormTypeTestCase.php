@@ -60,7 +60,7 @@ abstract class AbstractFormTypeTestCase extends AbstractTestCase {
     protected $resolver;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp(): void {
         parent::setUp();

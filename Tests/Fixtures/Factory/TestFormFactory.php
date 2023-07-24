@@ -22,14 +22,14 @@ use WBW\Bundle\CoreBundle\Factory\FormFactory;
 class TestFormFactory extends FormFactory {
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public static function getChoiceLabelCallback(array $options): callable {
         return parent::getChoiceLabelCallback($options);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public static function getChoiceValueCallback(): callable {
         return parent::getChoiceValueCallback();

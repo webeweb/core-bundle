@@ -48,7 +48,7 @@ class FormFactoryTest extends AbstractTestCase {
     private $entities;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp(): void {
         parent::setUp();

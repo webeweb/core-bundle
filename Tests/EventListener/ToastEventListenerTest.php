@@ -36,7 +36,7 @@ class ToastEventListenerTest extends AbstractTestCase {
     private $symfonyBCService;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp(): void {
         parent::setUp();

@@ -141,49 +141,49 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getAnimation(): ?string {
         return $this->animation;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getBordered(): ?bool {
         return $this->bordered;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getFixedWidth(): ?bool {
         return $this->fixedWidth;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getFont(): ?string {
         return $this->font;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getPull(): ?string {
         return $this->pull;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getSize(): ?string {
         return $this->size;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setAnimation(?string $animation): FontAwesomeIconInterface {
 
@@ -196,7 +196,7 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setBordered(?bool $bordered): FontAwesomeIconInterface {
         $this->bordered = $bordered;
@@ -204,7 +204,7 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setFixedWidth(?bool $fixedWidth): FontAwesomeIconInterface {
         $this->fixedWidth = $fixedWidth;
@@ -212,7 +212,7 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setFont(?string $font): FontAwesomeIconInterface {
 
@@ -225,7 +225,7 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setPull(?string $pull): FontAwesomeIconInterface {
 
@@ -238,7 +238,7 @@ class FontAwesomeIcon extends AbstractIcon implements FontAwesomeIconInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setSize(?string $size): FontAwesomeIconInterface {
 

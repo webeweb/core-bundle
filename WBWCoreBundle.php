@@ -35,7 +35,7 @@ class WBWCoreBundle extends Bundle implements AssetsProviderInterface {
     const TRANSLATION_DOMAIN = "WBWCoreBundle";
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function build(ContainerBuilder $container): void {
         $container->addCompilerPass(new ColorProviderCompilerPass());
@@ -45,7 +45,7 @@ class WBWCoreBundle extends Bundle implements AssetsProviderInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getAssetsRelativeDirectory(): string {
         return self::ASSETS_RELATIVE_DIRECTORY;

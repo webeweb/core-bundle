@@ -29,7 +29,7 @@ class TestStylesheetProvider implements StylesheetProviderInterface {
     const SERVICE_NAME = "wbw.core.tests.fixtures.provider.test_stylesheet";
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getStylesheets(): array {
 

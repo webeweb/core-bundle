@@ -43,7 +43,7 @@ class SymfonyBCService implements SymfonyBCServiceInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getSession(): ?SessionInterface {
 

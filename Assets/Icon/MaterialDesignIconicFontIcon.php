@@ -162,56 +162,56 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getBorder(): ?string {
         return $this->border;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getFixedWidth(): ?bool {
         return $this->fixedWidth;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getFlip(): ?string {
         return $this->flip;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getPull(): ?string {
         return $this->pull;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getRotate(): ?string {
         return $this->rotate;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getSize(): ?string {
         return $this->size;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getSpin(): ?string {
         return $this->spin;
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setBorder(?string $border): MaterialDesignIconicFontIconInterface {
 
@@ -224,7 +224,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setFixedWidth(?bool $fixedWidth): MaterialDesignIconicFontIconInterface {
         $this->fixedWidth = $fixedWidth;
@@ -232,7 +232,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
     }
 
     /**
-     *{@inheritdoc}
+     *{@inheritDoc}
      */
     public function setFlip(?string $flip): MaterialDesignIconicFontIconInterface {
 
@@ -245,7 +245,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setPull(?string $pull): MaterialDesignIconicFontIconInterface {
 
@@ -258,7 +258,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setRotate(?string $rotate): MaterialDesignIconicFontIconInterface {
 
@@ -271,7 +271,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setSize(?string $size): MaterialDesignIconicFontIconInterface {
 
@@ -284,7 +284,7 @@ class MaterialDesignIconicFontIcon extends AbstractIcon implements MaterialDesig
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setSpin(?string $spin): MaterialDesignIconicFontIconInterface {
 

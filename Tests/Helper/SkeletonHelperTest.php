@@ -47,7 +47,7 @@ class SkeletonHelperTest extends AbstractTestCase {
     private $directorySkeleton;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp(): void {
         parent::setUp();

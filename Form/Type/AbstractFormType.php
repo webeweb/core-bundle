@@ -24,7 +24,7 @@ use WBW\Bundle\CoreBundle\DependencyInjection\WBWCoreExtension;
 abstract class AbstractFormType extends AbstractType {
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getBlockPrefix(): string {
         return WBWCoreExtension::EXTENSION_ALIAS;

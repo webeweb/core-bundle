@@ -34,7 +34,7 @@ class JQueryInputMaskTwigExtensionTest extends AbstractTestCase {
     private $rendererTwigExtension;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp(): void {
         parent::setUp();

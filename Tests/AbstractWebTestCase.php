@@ -41,7 +41,7 @@ abstract class AbstractWebTestCase extends WebTestCase {
     protected $client;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected static function getKernelClass(): string {
         require_once realpath(getcwd() . "/Tests/Fixtures/app/TestKernel.php");
@@ -49,7 +49,7 @@ abstract class AbstractWebTestCase extends WebTestCase {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp(): void {
         parent::setUp();
@@ -61,7 +61,7 @@ abstract class AbstractWebTestCase extends WebTestCase {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public static function setUpBeforeClass(): void {
         parent::setUpBeforeClass();
@@ -133,7 +133,7 @@ abstract class AbstractWebTestCase extends WebTestCase {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function tearDown(): void {
         static::$kernel->shutdown();

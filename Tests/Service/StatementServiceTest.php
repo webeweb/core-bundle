@@ -38,7 +38,7 @@ class StatementServiceTest extends AbstractWebTestCase {
     private $service;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp(): void {
         parent::setUp();
@@ -48,7 +48,7 @@ class StatementServiceTest extends AbstractWebTestCase {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public static function setUpBeforeClass(): void {
         parent::setUpBeforeClass();

@@ -39,7 +39,7 @@ class RepositoryService implements RepositoryServiceInterface {
     const SERVICE_NAME = "wbw.core.service.repository";
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function findAll(): array {
 
@@ -117,7 +117,7 @@ class RepositoryService implements RepositoryServiceInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function findOneByEntity(string $entity): ?RepositoryReportInterface {
 
@@ -129,7 +129,7 @@ class RepositoryService implements RepositoryServiceInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function findOneByTable(string $table): ?RepositoryReportInterface {
 

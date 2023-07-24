@@ -127,7 +127,7 @@ class Configuration implements ConfigurationInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @see https://github.com/webeweb/core-bundle/blob/master/Tests/Fixtures/app/config/config_test.yml
      */

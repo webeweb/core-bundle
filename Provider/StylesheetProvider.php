@@ -29,7 +29,7 @@ class StylesheetProvider implements StylesheetProviderInterface {
     const SERVICE_NAME = "wbw.core.provider.stylesheet";
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getStylesheets(): array {
         return [];

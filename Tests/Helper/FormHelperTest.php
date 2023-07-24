@@ -45,7 +45,7 @@ class FormHelperTest extends AbstractTestCase {
     private $element;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp(): void {
         parent::setUp();

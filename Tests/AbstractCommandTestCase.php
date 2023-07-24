@@ -47,7 +47,7 @@ abstract class AbstractCommandTestCase extends AbstractTestCase {
     protected $style;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp(): void {
         parent::setUp();

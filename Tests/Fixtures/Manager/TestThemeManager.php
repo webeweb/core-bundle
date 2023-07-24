@@ -26,21 +26,21 @@ use WBW\Library\Symfony\Provider\ThemeProviderInterface;
 class TestThemeManager extends AbstractThemeManager {
 
     /**
-     * {@inheritdoc}.
+     * {@inheritDoc}.
      */
     public function __construct(LoggerInterface $logger, Environment $twigEnvironment) {
         parent::__construct($logger, $twigEnvironment);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getProvider(string $name): ?ThemeProviderInterface {
         return parent::getProvider($name);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function initIndex(): array {
 
@@ -50,7 +50,7 @@ class TestThemeManager extends AbstractThemeManager {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setProvider(string $name, ?ThemeProviderInterface $provider): ManagerInterface {
         return parent::setProvider($name, $provider);

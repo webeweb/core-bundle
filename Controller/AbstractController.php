@@ -147,7 +147,7 @@ abstract class AbstractController extends BaseController {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public static function getSubscribedServices(): array {
 

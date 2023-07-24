@@ -48,7 +48,7 @@ class AbstractControllerTest extends AbstractWebTestCase {
     private $controller;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp(): void {
         parent::setUp();

@@ -32,7 +32,7 @@ class KernelEventListenerTraitTest extends AbstractTestCase {
     private $themeManager;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp(): void {
         parent::setUp();

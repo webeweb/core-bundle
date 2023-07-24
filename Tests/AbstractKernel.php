@@ -24,28 +24,28 @@ use Symfony\Component\HttpKernel\Kernel;
 abstract class AbstractKernel extends Kernel {
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getCacheDir(): string {
         return getcwd() . "/Tests/Fixtures/app/var/cache";
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getLogDir(): string {
         return getcwd() . "/Tests/Fixtures/app/var/logs";
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getProjectDir(): string {
         return getcwd() . "/Tests/Fixtures/app";
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function registerContainerConfiguration(LoaderInterface $loader): void {
         $loader->load(getcwd() . "/Tests/Fixtures/app/config/config_test.yml");

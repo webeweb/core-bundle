@@ -44,7 +44,7 @@ class StatementService implements StatementServiceInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function executeQueries(string $sql, array $values): array {
 
@@ -59,42 +59,42 @@ class StatementService implements StatementServiceInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function executeQueriesFile(string $filename, array $values): array {
         return $this->executeQueries($this->readStatementFile($filename), $values);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function executeQuery(string $sql, array $values): Result {
         return $this->prepareStatement($sql, $values)->executeQuery();
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function executeQueryFile(string $filename, array $values): Result {
         return $this->executeQuery($this->readStatementFile($filename), $values);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function executeStatement(string $sql, array $values): int {
         return $this->prepareStatement($sql, $values)->executeStatement();
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function executeStatementFile(string $filename, array $values): int {
         return $this->executeStatement($this->readStatementFile($filename), $values);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function executeStatements(string $sql, array $values): array {
 
@@ -109,14 +109,14 @@ class StatementService implements StatementServiceInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function executeStatementsFile(string $filename, array $values): array {
         return $this->executeStatements($this->readStatementFile($filename), $values);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function prepareStatement(string $sql, array $values): Statement {
 
@@ -130,7 +130,7 @@ class StatementService implements StatementServiceInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function readStatementFile(string $filename): string {
 
@@ -142,7 +142,7 @@ class StatementService implements StatementServiceInterface {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function splitStatements(string $sql): array {
 

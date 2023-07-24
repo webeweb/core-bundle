@@ -24,7 +24,7 @@ use WBW\Library\Symfony\Provider\JavascriptProviderInterface;
 class JavascriptProviderCompilerPass extends AbstractProviderCompilerPass {
 
     /**
-     *{@inheritdoc}
+     *{@inheritDoc}
      */
     public function process(ContainerBuilder $container): void {
         $this->processing($container, JavascriptManager::SERVICE_NAME, JavascriptProviderInterface::JAVASCRIPT_PROVIDER_TAG_NAME);

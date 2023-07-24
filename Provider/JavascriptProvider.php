@@ -29,7 +29,7 @@ class JavascriptProvider implements JavascriptProviderInterface {
     const SERVICE_NAME = "wbw.core.provider.javascript";
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getJavascripts(): array {
 

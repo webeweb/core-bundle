@@ -34,7 +34,7 @@ class WBWCoreExtension extends Extension {
     const EXTENSION_ALIAS = "wbw_core";
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function load(array $configs, ContainerBuilder $container): void {
 
