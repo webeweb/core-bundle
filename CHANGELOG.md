@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Improve PHPDoc
+
 ### [3.27.0](https://github.com/webeweb/core-bundle/tree/v3.27.0) (2023-06-26)
 
 - Add stringUniqidFunction() into String Twig extension
