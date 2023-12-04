@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### [3.2_.0](https://github.com/webeweb/core-bundle/tree/v3.2_.0) (2023-12-04)
+### [3.28.0](https://github.com/webeweb/core-bundle/tree/v3.28.0) (2023-12-04)
 
 - Add Symfony 6.4 support
 - Improve PHPDoc
