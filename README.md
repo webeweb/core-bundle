@@ -1,12 +1,13 @@
 core-bundle
 ===========
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/webeweb/core-bundle/build.yml?style=flat-square)](https://github.com/webeweb/core-bundle/actions)
-[![Coverage Status](https://img.shields.io/coveralls/github/webeweb/core-bundle/master.svg?style=flat-square)](https://coveralls.io/github/webeweb/core-bundle?branch=master)
-[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/quality/g/webeweb/core-bundle/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/webeweb/core-bundle/?branch=master)
-[![Latest Stable Version](https://img.shields.io/packagist/v/webeweb/core-bundle.svg?style=flat-square)](https://packagist.org/packages/webeweb/core-bundle)
-[![License](https://img.shields.io/packagist/l/webeweb/core-bundle.svg?style=flat-square)](https://packagist.org/packages/webeweb/core-bundle)
-[![composer.lock](https://img.shields.io/badge/.lock-uncommited-important.svg?style=flat-square)](https://packagist.org/packages/webeweb/core-bundle)
+[![Github actions workflow status](https://img.shields.io/github/actions/workflow/status/webeweb/core-bundle/build.yml?style=for-the-badge&color2088FF&logo=github)](https://github.com/webeweb/core-bundle/actions)
+[![Coveralls](https://img.shields.io/coveralls/github/webeweb/core-bundle/master.svg?style=for-the-badge&color=3F5767&logo=coveralls)](https://coveralls.io/github/webeweb/core-bundle?branch=master)
+[![Scrutinizer quality](https://img.shields.io/scrutinizer/quality/g/webeweb/core-bundle/master.svg?style=for-the-badge&color=8A9296&logo=scrutinizer)](https://scrutinizer-ci.com/g/webeweb/core-bundle/?branch=master)
+[![Packagist version](https://img.shields.io/packagist/v/webeweb/core-bundle.svg?style=for-the-badge&color=F28D1A&logo=packagist)](https://packagist.org/packages/webeweb/core-bundle)
+
+[![Packagist license](https://img.shields.io/packagist/l/webeweb/core-bundle.svg?style=for-the-badge&colorF28D1A&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGRiIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgZD0ibTMgNiAzIDFtMCAwLTMgOWE1LjAwMiA1LjAwMiAwIDAgMCA2LjAwMSAwTTYgN2wzIDlNNiA3bDYtMm02IDIgMy0xbS0zIDEtMyA5YTUuMDAyIDUuMDAyIDAgMCAwIDYuMDAxIDBNMTggN2wzIDltLTMtOS02LTJtMC0ydjJtMCAxNlY1bTAgMTZIOW0zIDBoMyIvPjwvc3ZnPg==)](./LICENSE)
+[![composer.lock](https://img.shields.io/badge/.lock-uncommited-important.svg?style=for-the-badge&color=885630&logo=composer)](.)
 
 Core bundle for Symfony 4 and more.
 
@@ -47,8 +48,8 @@ If you like this package, pay me a beer (or a coffee)
 
 ## Compatibility
 
-[![PHP](https://img.shields.io/packagist/php-v/webeweb/core-bundle.svg?style=flat-square)](http://php.net)
-[![Symfony](https://img.shields.io/badge/symfony-%5E4.4%7C%5E5.0%7C%5E6.0-brightness.svg?style=flat-square)](https://symfony.com)
+[![PHP](https://img.shields.io/packagist/php-v/webeweb/core-bundle.svg?style=for-the-badge&logo=php&color=777bb4)](https://php.net)
+[![Symfony](https://img.shields.io/badge/symfony-%5E4.4%7C%5E5.0%7C%5E6.0-000000.svg?style=for-the-badge&logo=symfony)](https://symfony.com)
 
 ## Installation
 
@@ -56,7 +57,7 @@ Open a command console, enter your project directory and execute the following
 command to download the latest stable version of this package:
 
 ```bash
-$ composer require webeweb/core-bundle
+composer require webeweb/core-bundle
 ```
 
 This command requires you to have Composer installed globally, as explained in
@@ -82,8 +83,8 @@ in the `app/AppKernel.php` file of your project:
 Once the bundle is added then do:
 
 ```bash
-$ php bin/console wbw:core:unzip-assets
-$ php bin/console assets:install
+php bin/console wbw:core:unzip-assets
+php bin/console assets:install
 ```
 
 ## Usage
@@ -97,15 +98,15 @@ Open a command console and execute the following commands to download the latest
 stable version of this package:
 
 ```bash
-$ git clone https://github.com/webeweb/core-bundle.git
-$ cd core-bundle
-$ composer install
+git clone https://github.com/webeweb/core-bundle.git
+cd core-bundle
+composer install
 ```
 
 Once all required libraries are installed then do:
 
 ```bash
-$ vendor/bin/phpunit
+vendor/bin/phpunit
 ```
 
 ## License
