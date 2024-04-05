@@ -95,8 +95,8 @@ class AssetsTwigExtension extends AbstractTwigExtension {
         $attributes = [
             "src"    => ArrayHelper::get($args, "src"),
             "alt"    => ArrayHelper::get($args, "alt"),
-            "width"  => ArrayHelper::get($args, "width"),
-            "height" => ArrayHelper::get($args, "height"),
+            "width"  => (string) ArrayHelper::get($args, "width"),
+            "height" => (string) ArrayHelper::get($args, "height"),
             "class"  => ArrayHelper::get($args, "class"),
             "usemap" => ArrayHelper::get($args, "usemap"),
         ];
